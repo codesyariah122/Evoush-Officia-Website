@@ -1,0 +1,99 @@
+<template>
+	<div>	
+		<div class="parallax" :style="parallax.style">
+			<div class="row justify-content-center">
+				<div class="caption">
+					<h2 v-html="parallax.caption"></h2>
+					<br>
+          <Logo/>
+          <br>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<style></style>
+
+<script>
+	import ParallaxImg from '~/assets/images/banner/banner_1_9.jpg'
+  import Logo from '../Logo.vue'
+
+	export default {
+		data(){
+			return {
+				parallax: {
+					style: {
+						'background-image': `url('${ParallaxImg}')`,
+					},
+					caption: `Kami adalah sarana bagi semangat anda untuk membangung <br/> bisnis yang cemerlang`
+				}
+			}
+		}
+	}
+</script>
+
+<style>
+	
+  .parallax{
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0;
+  }
+
+  .caption {
+    background:rgba(255,255,255,0.3);
+    /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+    position: absolute;
+    margin-top: 12rem;
+    width: 50%;
+    text-align: center;
+    color: tomato;
+  }
+  .caption h2 {
+    font-family: 'Poiret One', cursive;font-weight:bold;
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: .9rem;
+    font-size: 21px;
+  }
+  .caption a{
+    font-size: 18px;
+  }
+
+ /*DESKTOP VERSION*/
+@media (min-width: 992px) { 
+	  /* all parallax top and bottom */
+    .parallax{
+      min-height: 800px; 
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin:0;
+    }
+
+    .caption {
+      background:rgba(255,255,255,0.3);
+      /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+      position: absolute;
+      margin-top: 17.5rem;
+      width: 75%;
+      text-align: center;
+      color: #fff;
+    }
+    .caption h2 {
+      font-family:SpringSakura !important;
+      font-weight:600;
+      text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+      margin-bottom: .9rem;
+      font-size: 41px;
+      margin-top: .2rem;
+    }
+    .caption a{
+      font-size: 18px;
+    }
+}
+</style>
