@@ -1,9 +1,12 @@
 <template>
 	<nav class="navbar navbar-expand navbar-light sticky-top">
 		<div class="collapse navbar-collapse">
-			<ul class="navbar-nav mx-auto">
+			<ul class="navbar-nav">
 				<li class="nav-item"><nuxt-link to="/about" class="nav-link">About</nuxt-link></li>
 				<li class="nav-item"><nuxt-link to="/product" class="nav-link">Product</nuxt-link></li>
+				<li>
+					<nuxt-link to="/"><img :src="logo" class="img-responsive"></nuxt-link>
+				</li>
 				<li class="nav-item"><nuxt-link to="/articles" class="nav-link">Articles</nuxt-link></li>
 				<li class="nav-item"><nuxt-link to="/contact" class="nav-link">Contact</nuxt-link></li>
 			</ul>
@@ -12,7 +15,21 @@
 </template>
 
 <script>
-	
+	import Logo from '~/assets/images/logo/fav_evoush.png'
+
+	export default {
+		data(){
+			return {
+				logo: Logo,
+				style: {
+					logo: {
+						'width': '250px',
+						'height': '100px'
+					}
+				}
+			}
+		}
+	}
 </script>
 
 <style scoped>
@@ -82,4 +99,9 @@
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 }
 }
+
+  @media screen and (max-width: 760px) {
+   ul.navbar-nav li.nav-item{display: block;}
+ }
+
 </style>

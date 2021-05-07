@@ -47,6 +47,19 @@
     bottom: 25px;
     visibility: hidden;
     z-index: 1;
+    
+   /* visibility: hidden;
+  		position: fixed;
+  		bottom: 20px;
+  		right: 0;
+  		z-index: 99;
+  		font-size: 18px;
+  		border: none;
+  		outline: none;
+  		color: white;
+  		cursor: pointer;
+  		padding: 5px;
+  		border-radius: 4px;*/
 }
 /* DESKTOP VERSION */
   @media (min-width: 992px) { 
@@ -54,7 +67,7 @@
   		visibility: hidden;
   		position: fixed;
   		bottom: 20px;
-  		right: 30px;
+  		right: 5px;
   		z-index: 99;
   		font-size: 18px;
   		border: none;

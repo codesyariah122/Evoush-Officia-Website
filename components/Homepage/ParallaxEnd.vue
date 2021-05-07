@@ -34,7 +34,7 @@
 </script>
 
 <style>
-	
+  
   .parallax{
     min-height: 500px; 
     background-attachment: fixed;
@@ -48,26 +48,37 @@
     background:rgba(255,255,255,0.3);
     /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
     position: absolute;
-    margin-top: 12rem;
+    margin-top: 17rem;
     width: 50%;
     text-align: center;
-    color: tomato;
+    color: #fff;
   }
   .caption h2 {
     font-family: 'Poiret One', cursive;font-weight:bold;
     text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
     margin-bottom: .9rem;
-    font-size: 21px;
+    font-size: 18px;
+  }
+  .caption p{
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+    font-weight: 700;
+    width: 90%;
+    font-size: 14px;
+    text-align: justify;
   }
   .caption a{
     font-size: 18px;
   }
-
+  @media only screen and (max-device-width: 812px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
  /*DESKTOP VERSION*/
 @media (min-width: 992px) { 
-	  /* all parallax top and bottom */
+    /* all parallax top and bottom */
     .parallax{
-      min-height: 800px; 
+      min-height: 500px; 
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -82,7 +93,7 @@
       margin-top: 17.5rem;
       width: 75%;
       text-align: center;
-      color: #fff;
+      color: tomato;
     }
     .caption h2 {
       font-family:SpringSakura !important;
@@ -90,7 +101,7 @@
       text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
       margin-bottom: .9rem;
       font-size: 41px;
-      margin-top: .2rem;
+      margin-top: -2rem;
     }
     .caption a{
       font-size: 18px;

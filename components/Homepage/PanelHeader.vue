@@ -3,8 +3,8 @@
 		<!-- introd -->
 		<div id="introduction" v-for="panel in panels">
 			<div data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="1500">
-				<div class="panel panel-default">
-					<div class="panel-body">
+				<div class="panel panel-default panel-header" style="margin-top: -5rem;">
+					<div class="panel-body panel-body-header">
 						<div class="row">
 							<div data-aos="fade-left">
 								<div class="col-md-3">
@@ -51,30 +51,160 @@
 </script>
 
 <style>
-.panel{
-	margin-left: 8rem;
+/*panel*/
+.panel-header{
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  padding: 12px;
+  background-color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: justify-content-center;
+  width: 90%;
+  margin-left: 1rem;
 }
-.panel-body{
-	margin-left: 2rem;
-	margin-top: 2rem;
+.panel-body-header {
+  margin-top: 1rem;
+  padding: 5px;
 }
-.panel-body img{
-	margin-left: -.3rem!important;
+.panel-body-header img{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important; color: rgb(255,228,181);border-radius:0%;
+  margin-bottom: 2rem;
+  margin-top: -1rem;
 }
-.panel-body h2 p{
-	margin-left: 2rem!important;
+.panel-body-header h1{
+  margin-top: 2rem;
+  margin-left: -1rem;
+  font-family: 'SpringSakura';
+  font-size: 21px;
 }
-/*mobile*/
+.panel-body-header p{
+  line-height: 25px;
+  font-size: 12px;
+  text-indent: 21px;
+  text-align: justify;
+  margin-left: .1rem!important;
+  width: 100%;
+}
+.panel-body-header a {
+  margin-left: 5rem;
+  margin-bottom: 2rem;
+}
+
+/*end panel;*/
+/* polaroid */
+.polaroid{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+  color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top:2rem;
+}
+
+.polaroid img{
+  width: 350px;
+  height: 300px;
+  margin-top: 1rem;
+}
+.polaroid-body p{
+  padding: 15px;
+  color:black;
+  font-family: 'Poiret One', cursive;font-weight:bold;
+  font-size: 25px; 
+}
+
+.polaroid-body h2{
+  padding: 25px;
+  color:black;
+  font-family: 'Poiret One', cursive;font-weight:bold;
+  font-size: 25px;
+}
+/* end polaroid */
+
+/*mobile setup*/
 @media only screen and (max-device-width: 812px) {
-	.panel{
-		width: 91%;
-		height: 95vh;
-		margin-left: 1rem;
-	}
-	.panel-body img{
-		margin-left: -1.1rem!important;
-		width: 280px!important;
-		margin-top: -1.3rem;
+	.panel-header img{
+		width: 290px!important;
+		height: 270px!important;
 	}
 }
+/*end mobile*/
+/* DESKTOP VERSION */
+  @media (min-width: 992px) { 
+
+    /*panel*/
+    .panel-header{
+      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      margin-top: -7rem!important;
+      padding: 12px;
+      background-color: white;
+      margin-left: 7rem!important;
+      width: 85%;
+      /*height: 50vh;*/
+    }
+    .panel-body-header {
+      margin-top: 2rem!important;
+      padding: 15px;
+    }
+    .panel-body-header img{
+      width: 400px;
+      height: 500px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important; color: rgb(255,228,181);
+    }
+    .panel-body-header h1{
+      margin-left: 3rem;
+      font-family: 'SpringSakura';
+    }
+    .panel-body-header p{
+      margin-left: 1rem !important;
+      font-size: 16px;
+      text-align: justify;
+    }
+    .panel-body-header a {
+      margin-left: 5rem;
+    }
+    .panel-body-header .anim{
+      width: 330px;
+      height: 300px;
+      margin-left: 3rem;
+      margin-top: -.7rem;
+    }
+    /*end panel;*/
+    /* content */
+
+    /*polaroid*/
+    .polaroid{
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+      color: rgba(0,0,0,0.7);
+      position: relative;
+      text-align: center;
+      margin-bottom: 3rem;
+      margin-top:2rem;
+    }
+
+    .polaroid-body h2{
+      padding: 15px;
+      color:black;
+      font-family: 'Poiret One', cursive;font-weight:bold;
+      font-size: 25px;
+    }
+
+    .polaroid-body p{
+      padding: 15px;
+      color:black;
+      font-family: 'Poiret One', cursive;font-weight:bold;
+      font-size: 25px; 
+    }
+
+    .polaroid-vector{
+      width: 500px;
+      height: 600px;
+      margin-top: 1rem;
+      margin-left: .1rem;
+    }
+    /*end polaroid*/
+
+  }
 </style>

@@ -7,7 +7,7 @@
 						<div class="col-md-12">
 							<div class="copyright-text">
 								<p>&copy;{{year}}
-									<a href="https://evoush.co.id" class="brand"> {{brand}} <span class="text-white"> {{country}} </span> </a>. <br> 
+									<a href="https://evoush.vercel.app" class="brand"> {{brand}} <span class="text-white"> {{country}} </span> </a>. <br> 
 									{{cops}} <a href="https://evoush.vercel.app"> {{comp}} </a>
 								</p>
 							</div>
