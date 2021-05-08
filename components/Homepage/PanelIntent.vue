@@ -88,7 +88,7 @@
 		margin-left: 1rem;
 	}
 	.intents-img{
-		width: 300px !important;
+		width: 320px !important;
 		margin-left: -.1rem;
 	}
 
@@ -105,6 +105,10 @@
 		margin-left: 1.3rem;
 		text-align: justify;
 		text-indent: 18px;
+	}
+	.intents-img{
+		width: 800px !important;
+		margin-left: -.1rem;
 	}
 }
 </style>
