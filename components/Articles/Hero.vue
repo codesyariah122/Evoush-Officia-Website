@@ -1,7 +1,7 @@
 <template>
 	<div class="jumbotron jumbotron-fluid jumbotron-content" :style="image">
 		<div class="container">
-			<div class="row no-gutters justify-content-end">
+			<div class="row no-gutters justify-content-end mt-5">
 				<div class="col-md-4 col-xs-4 col-sm-4">
 					<h1 class="display-4 text-center" style='font-family:SpringSakura;'>
 						<div v-html="home.brand"></div>
@@ -92,11 +92,12 @@
 /* DESKTOP VERSION */
 @media (min-width: 992px) { 
 	/* jumbotron */
-	.jumbotron{
+	.jumbotron-content{
 		margin-top: -75px;
 		height: 840px;
 	}
-	.jumbotron .display-4{
+
+	.jumbotron-content .display-4{
 		text-transform: capitalize;
 	}
 }
