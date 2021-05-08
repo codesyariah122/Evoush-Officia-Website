@@ -75,7 +75,15 @@
 
 <style >
 .card img{
-  height: 230px;
-  width: 180px;
+  width: 330px!important;
+  height: 180px!important;
+}
+
+/* DESKTOP VERSION */
+@media (min-width: 992px) { 
+  .card img{
+    height: 230px;
+    width: 180px;
+  }
 }
 </style>
