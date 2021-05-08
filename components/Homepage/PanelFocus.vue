@@ -232,7 +232,7 @@
 	import Vector3 from '~/assets/images/vector_image/vector7.jpg'
 	import Vector4 from '~/assets/images/vector_image/vector22.jpg'
 	import Anim1 from '~/assets/images/animated/anim37.gif'
-	import Anim2 from '~/assets/images/animated/anim36.gif'
+	import Anim2 from '~/assets/images/vector_image/vector15.jpg'
 
 	export default {
 		data(){

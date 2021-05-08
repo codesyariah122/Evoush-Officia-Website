@@ -16,7 +16,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Evoush Indonesia Official Website' },
+      { hid: 'description', name: 'Evoush Indonesia', content: 'Your Eternal Future' },
       { name: 'description', content: 'Bisnis Evoush Indonesia'},
       { name: 'keyword', content: 'Bisnis Evoush Bisnis Menjanjikan'},
       { property: 'og-title', content: 'Evoush Indonesia'},

@@ -23,6 +23,28 @@
 	import Hero from '~/components/Contactpage/Hero'
 
 	export default {
+		data(){
+			return {
+				title: 'Evoush::Contact'
+			}
+		},
+		components: {
+			Hero
+		},
+		head(){
+			return {
+				title: this.title,
+				meta: [
+				{ hid: 'description', name: 'Evoush Indonesia', content: 'Your Eternal Future' },
+				{ name: 'description', content: 'Bisnis Evoush Indonesia'},
+				{ name: 'keyword', content: 'Bisnis Evoush Bisnis Menjanjikan'},
+				{ property: 'og-title', content: 'Evoush Indonesia'},
+				{ property: 'og-description', content: 'Kami akan selalu terhubung untuk anda dan bisnis anda bersama evoush'},
+				{ property: 'og-image', content: '~/assets/images/vector_image/vector7.jpg'},
+				{ property: 'og-url', content: 'https://evoush.vercel.app'}
+				]
+			}
+		},
 		components: {
 			Hero
 		}

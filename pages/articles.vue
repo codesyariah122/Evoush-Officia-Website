@@ -34,8 +34,27 @@
 <script>
   import Hero from '~/components/Articles/Hero'
   export default {
+    data(){
+      return {
+        title: 'Evoush::Articles'
+      }
+    },
     components: {
       Hero
+    },
+    head(){
+      return {
+        title: this.title,
+        meta: [
+          { hid: 'description', name: 'Evoush Indonesia', content: 'Your Eternal Future' },
+          { name: 'description', content: 'Bisnis Evoush Indonesia'},
+          { name: 'keyword', content: 'Bisnis Evoush Bisnis Menjanjikan'},
+          { property: 'og-title', content: 'Evoush Indonesia'},
+          { property: 'og-description', content: 'Kumpulan Artikel Menarik Seputar Bisnis Evoush'},
+          { property: 'og-image', content: '~/assets/images/vector_image/vector9.jpg'},
+          { property: 'og-url', content: 'https://evoush.vercel.app'}
+        ]
+      }
     },
     async asyncData({ $content, params }) {
       const articles = await $content('articles', params.slug)
