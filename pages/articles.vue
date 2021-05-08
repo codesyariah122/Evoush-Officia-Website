@@ -24,10 +24,31 @@
             </div>
         </div>
       </div>
+
+      <hr class="mb-3 mt-2"/>
+
+      <div class="row">
+        <div class="col-12">
+          <h3 class="text-info mb-3 text-center">Topics</h3>
+          <div class="row justify-content-center">
+            <div class="col-md-3 col-sm-12 col-xs-12" v-for="tag of tags" :key="tag.slug">
+              <NuxtLink :to="`/blog/tag/${tag.slug}`" class="">
+                <p class="text-secondary text-center" style="font-weight: 900;">
+                 {{ tag.name }}
+               </p>
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <h1 class="underline" style="margin-top: 2rem;"></h1>
     <br>
+
+
+
   </div>
 </template>
 
@@ -82,8 +103,8 @@
 /* DESKTOP VERSION */
 @media (min-width: 992px) { 
   .card img{
-    height: 230px;
-    width: 180px;
+    height: 235px!important;
+    width: 180px!important;
   }
 }
 </style>
