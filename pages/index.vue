@@ -38,6 +38,30 @@
 	import ParallaxEnd from '~/components/Homepage/ParallaxEnd.vue'
 	
 	export default {
+		data(){
+			return {
+				title: 'Evoush::Official'
+			}
+		},
+		components: {
+			Hero
+		},
+		head(){
+			return {
+				title: this.title,
+				meta: [
+					{ charset: 'utf-8' },
+					{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+					{ hid: 'description', name: 'Evoush Indonesia', content: 'Your Eternal Future' },
+					{ name: 'description', content: 'Bisnis Evoush Indonesia'},
+					{ name: 'keyword', content: 'Bisnis Evoush Bisnis Menjanjikan'},
+					{ property: 'og-title', content: 'Evoush Indonesia'},
+					{ property: 'og-description', content: 'Bisnis MultiLevel Zaman Now'},
+					{ property: 'og-image', content: 'https://evoush.vercel.app/_nuxt/img/vector9.4a85b35.jpg'},
+					{ property: 'og-url', content: 'https://evoush.vercel.app'}
+				]
+			}
+		},
 		
 		components: {
 			Hero,
