@@ -8,7 +8,7 @@
 							<div class="row">
 								<div class="col-md-4 col-xs-12 col-sm-12">
 									<div data-aos="zoom-out-left" data-aos-easing="ease-in-sine" data-aos-duration="1500">
-										<img :src="panel.vector" class="img-responsive" style="width: 450px;">
+										<img :src="panel.vector" class="img-responsive" style="width: 500px;">
 									</div>
 								</div>
 								<div class="col-md-6 col-xs-12 col-sm-12 content ganjil">
@@ -21,7 +21,7 @@
 
 							<div v-if="panel.anim" class="row justify-content-end mt-2 mb-2">
 								<div class="p-2">
-									<img :src="panel.anim" class="img-responsive">
+									<img :src="panel.anim" class="img-responsive anim">
 								</div>
 							</div>
 							<h1 class="underline"></h1>
@@ -37,7 +37,7 @@
 								</div>
 								<div class="col-md-6 col-xs-12 col-sm-12 content">
 									<div data-aos="zoom-out-right" data-aos-easing="ease-out-sine" data-aos-duration="1500">
-										<img :src="panel.vector" class="img-responsive" style="width: 450px;">
+										<img :src="panel.vector" class="img-responsive" style="width: 500px;">
 									</div>
 								</div>
 							</div>
@@ -89,7 +89,6 @@
   margin-left: 5rem;
   margin-bottom: 2rem;
 }
-
 /*end panel;*/
 /* polaroid */
 .polaroid{
@@ -164,6 +163,9 @@
     }
     .panel-body-focus a {
       margin-left: 5rem;
+    }
+    .panel-body-focus .anim{
+      width: 550px;
     }
 
     /*end panel;*/

@@ -26,7 +26,7 @@
 					style: {
 						'background-image': `url('${ParallaxImg}')`,
 					},
-					caption: `Kami adalah sarana bagi semangat anda untuk membangung <br/> bisnis yang cemerlang`
+					caption: `Kami adalah sarana bagi semangat anda <br/> untuk membangung bisnis yang cemerlang`
 				}
 			}
 		}
@@ -90,10 +90,10 @@
       background:rgba(255,255,255,0.3);
       /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
       position: absolute;
-      margin-top: 17.5rem;
+      margin-top: 15.5rem;
       width: 75%;
       text-align: center;
-      color: tomato;
+      color: #fff;
     }
     .caption h2 {
       font-family:SpringSakura !important;
@@ -101,7 +101,6 @@
       text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
       margin-bottom: .9rem;
       font-size: 41px;
-      margin-top: -2rem;
     }
     .caption a{
       font-size: 18px;

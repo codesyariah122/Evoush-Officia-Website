@@ -35,7 +35,7 @@
 					{
 						id:1,
 						context: {
-							header: `Buat Rencana Besar Bersama <span style="font-family: 'Reey Regular'; color: tomato;">Evoush</span>`,
+							header: `Buat Rencana Besar Bersama <span style="font-family: 'Reey Regular'; color: firebrick;">Evoush</span>`,
 							paragraph: `Mulailah berkembang bersama <b><u></u>Evoush</b>.  Buat kejutan dengan menentukan rencana <i class="fas fa-tags text-info"></i> penjualan anda diawal, jual produk, kreativitas dan kemampuan anda bersama team terhebat anda di Evoush. <b><u>Tunjukkan Pada Dunia</u></b> , bahwa anda mampu menciptakan sesuatu yang dapat membantu orang lain.`
 						},
 						vector: {
@@ -141,12 +141,14 @@
       padding: 12px;
       background-color: white;
       margin-left: 7rem!important;
-      width: 85%;
-      /*height: 50vh;*/
+      width: 80%;
+      height: 53vh;
     }
     .panel-body-header {
       margin-top: 2rem!important;
       padding: 15px;
+      margin-left: 2rem;
+      width: 100%;
     }
     .panel-body-header img{
       width: 400px;
@@ -168,8 +170,8 @@
     .panel-body-header .anim{
       width: 330px;
       height: 300px;
-      margin-left: 3rem;
-      margin-top: -.7rem;
+      margin-right: 1.5rem;
+      margin-top: -2rem;
     }
     /*end panel;*/
     /* content */

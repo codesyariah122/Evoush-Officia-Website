@@ -1,7 +1,7 @@
 <template>
 	<nav class="navbar navbar-expand navbar-light sticky-top">
 		<div class="collapse navbar-collapse">
-			<ul class="navbar-nav">
+			<ul class="navbar-nav mx-auto">
 				<li class="nav-item"><nuxt-link to="/about" class="nav-link">About</nuxt-link></li>
 				<li class="nav-item"><nuxt-link to="/product" class="nav-link">Product</nuxt-link></li>
 				<li>

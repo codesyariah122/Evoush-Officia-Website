@@ -6,7 +6,7 @@
     <BackToTop/>
     <!-- End Scroll Top -->
 
-    <!-- <Footer/> -->
+    <Footer/>
   </div>
 </template>
 
@@ -87,7 +87,12 @@
 Design by Puji Ermanto 
 Made With Love
 */
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
 #home h1, h2 {
   font-family:'Poiret One' !important;
   font-weight: 700;
