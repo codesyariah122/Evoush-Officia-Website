@@ -62,6 +62,7 @@
   align-content: justify-content-center;
   width: 90%;
   margin-left: 1rem;
+  z-index: 1!important;
 }
 .panel-body-header {
   margin-top: 1rem;
@@ -143,6 +144,7 @@
       margin-left: 7rem!important;
       width: 80%;
       height: 53vh;
+      z-index: 1!important;
     }
     .panel-body-header {
       margin-top: 2rem!important;

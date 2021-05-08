@@ -51,6 +51,7 @@
   background-size: cover;
   position: relative;
   clip-path: polygon(50% 0%, 100% 0, 100% 89%, 92% 92%, 84% 94%, 50% 100%, 0 100%, 0 59%, 0 0);
+  z-index: -1!important;
 }
 
 .jumbotron-content .container {
@@ -95,11 +96,12 @@
 /* DESKTOP VERSION */
 @media (min-width: 992px) { 
 	/* jumbotron */
-	.jumbotron{
+	.jumbotron-content{
 		margin-top: -75px;
 		height: 840px;
+		z-index: -1!important;
 	}
-	.jumbotron .display-4{
+	.jumbotron-content .display-4{
 		text-transform: capitalize;
 	}
 }
