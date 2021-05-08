@@ -14,7 +14,7 @@
 </template>
 
 <script>
-	import HeroImg from '~/assets/images/banner/header4.jpg'
+	import HeroImg from '~/assets/images/banner/reduce/header4.jpg'
 
 	export default{
 		data(){

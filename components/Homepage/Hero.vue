@@ -18,7 +18,7 @@
 </template>
 
 <script>
-	import HeroImg from '~/assets/images/banner/evoush_banner.jpg'
+	import HeroImg from '~/assets/images/banner/reduce/evoush_banner.jpg'
 	import LogoEvoush from '../Logo.vue'
 
 	export default{
@@ -47,8 +47,6 @@
   background-color: #17234E;
   min-height: 100vh;
   width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
   -webkit-background-size: cover;
   background-size: cover;
   position: relative;

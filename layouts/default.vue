@@ -22,7 +22,7 @@
       Footer
     },
     mounted(){
-      AOS.init(),
+      AOS.init({disable: 'mobile'}),
       this.scrollNav()
     },
 
