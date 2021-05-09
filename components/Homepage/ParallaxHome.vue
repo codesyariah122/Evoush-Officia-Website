@@ -33,13 +33,13 @@
 </script>
 
 <style>
-	
   .parallax-home{
     min-height: 600px; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+     -webkit-background-size: cover;
     margin:0;
   }
 
