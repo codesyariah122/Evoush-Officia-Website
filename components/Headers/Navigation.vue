@@ -5,7 +5,10 @@
 				<li class="nav-item"><nuxt-link to="/about" class="nav-link">About</nuxt-link></li>
 				<li class="nav-item"><nuxt-link to="/product" class="nav-link">Product</nuxt-link></li>
 				<li>
-					<nuxt-link to="/"><img :src="logo" class="img-responsive"></nuxt-link>
+					<nuxt-link to="/">
+						<!-- <img :src="logo" class="img-responsive"> -->
+						<Logo/>
+					</nuxt-link>
 				</li>
 				<li class="nav-item"><nuxt-link to="/articles" class="nav-link">Articles</nuxt-link></li>
 				<li class="nav-item"><nuxt-link to="/contact" class="nav-link">Contact</nuxt-link></li>
@@ -15,9 +18,12 @@
 </template>
 
 <script>
-	import Logo from '~/assets/images/logo/fav_evoush.png'
+	import Logo from './brand.vue'
 
 	export default {
+		components: {
+			Logo
+		},
 		data(){
 			return {
 				logo: Logo,

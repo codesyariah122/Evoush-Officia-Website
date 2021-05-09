@@ -1,5 +1,5 @@
 <template>
- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="170px" height="70px" viewBox="0 0 170 70" enable-background="new 0 0 170 70" xml:space="preserve">  <image id="image0" width="170" height="70" x="0" y="0"
+ <svg class="NuxtLogo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="170px" height="70px" viewBox="0 0 170 70" enable-background="new 0 0 170 70" xml:space="preserve">  <image id="image0" width="170" height="70" x="0" y="0"
   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAABGCAYAAABc8A97AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
   AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAl
   jklEQVR42u19eZxdRZn2875V55x7b+9Jd5oskISwJRCWEEhAQUAJyI4ruCEwjjiOjIDOb/jGBZ3x
