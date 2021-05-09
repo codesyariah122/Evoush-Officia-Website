@@ -11,9 +11,10 @@
 	</div>
 </template>
 
+<style></style>
 
 <script>
-	import ParallaxImg from '~/assets/images/banner/reduce/model1.jpg'
+	import ParallaxImg from '~/assets/images/banner/jumbotron5.jpg'
 
 	export default {
 		data(){
@@ -24,7 +25,7 @@
 					},
 					context: {
             title: `<span style="font-family: Walkway; color: red;">Evoush</span> <span style="font-family:'Reey Regular'; color: #fff">Indonesia</span>`,
-            paragraph: '<span style="font-family: Walkway;">Your Eternal</span> <span style="font-family: Reey Regular; color: red;">Future</span>.'
+            paragraph: '<span style="font-family: Walkway;"> JANGAN TAKUT GAGAL </span> <br/> <span style="font-family: Poiret One;">Karena <b>Orang</b> yang tidak pernah <b>Gagal Hanyalah </b> Orang yang todak pernah  <span style="font-family: Reey Regular; color: red;">Melangkah</span>.'
           }
 				}
 			}

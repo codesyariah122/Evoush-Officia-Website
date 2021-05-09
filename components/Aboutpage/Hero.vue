@@ -1,7 +1,7 @@
 <template>
 	<div class="jumbotron jumbotron-fluid jumbotron-content" :style="image">
 		<div class="container">
-			<div class="row no-gutters justify-content-end">
+			<div class="row no-gutters justify-content-center">
 				<div class="col-md-4 col-xs-4 col-sm-4">
 					<h1 class="display-4 text-center" style='font-family:SpringSakura;'>
 						<div v-html="home.brand"></div>
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-	import HeroImg from '~/assets/images/banner/jumbotron5.jpg'
+	import HeroImg from '~/assets/images/kantor/Masuk.jpg'
 
 	export default{
 		data(){
@@ -23,9 +23,10 @@
 					backgroundImage: `url(${HeroImg})`
 				},
 				home: {
-					brand: ` <span style="font-family: SpringSakura; color: red;">About</span> <span style="font-family: SpringSakura; color: #fff;">Evoush</span>`,
+					brand: ` <span style="font-family: SpringSakura; color: red;">About</span> <span style="font-family: Walkway; color: #fff; font-weight: 900;">Evoush</span>`,
 					title: "Product",
-					context: `<span style="font-family: Reey Regular; color: crimson;">Evoush</span> adalah merk dagang dari PT. Pineleng Indah Cemerlang.`
+					context: `<span style="font-family: Walkway; color: red; font-weight: 900;">Evoush</span> adalah merupakan sebuah merk dagang dari <br> 
+          <span style="font-family: Walkway;">PT. Pineleng Indah Cemerlang</span>.`
 
 				}
 			}
@@ -53,6 +54,7 @@
 .jumbotron-content .container {
   z-index: 1;
   position: relative;
+  margin-top: 2rem;
 }
 
 .jumbotron-content::after {
@@ -71,7 +73,7 @@
   /*text-align: center;*/
   margin-top: 9rem;
   font-weight: 200;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1.9);
   margin-bottom: 30px;
   font-family: "Poppins", sans-serif;
 }
@@ -92,12 +94,16 @@
 /* DESKTOP VERSION */
 @media (min-width: 992px) { 
 	/* jumbotron */
-	.jumbotron{
+	.jumbotron-content{
 		margin-top: -75px;
 		height: 840px;
 	}
-	.jumbotron .display-4{
+  .jumbotron-content .container{
+    margin-top: 3.5rem;
+  }
+	.jumbotron-content .display-4{
 		text-transform: capitalize;
+     text-shadow: 0 3px 20px rgba(0, 0, 0, 1.9)
 	}
 }
 </style>
