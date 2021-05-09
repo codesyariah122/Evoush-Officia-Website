@@ -87,7 +87,7 @@
 
 .jumbotron-content p {
   font-weight: 500;
-  font-size: 35px;
+  font-size: 21px;
   color: #FFFFF0;
   font-family: "Poiret One", cursive;
   font-weight: bold;

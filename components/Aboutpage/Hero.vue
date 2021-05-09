@@ -54,7 +54,7 @@
 .jumbotron-content .container {
   z-index: 1;
   position: relative;
-  margin-top: 2rem;
+  margin-top: 35rem;
 }
 
 .jumbotron-content::after {
@@ -69,9 +69,9 @@
 }
 
 .jumbotron-content .display-4 {
+  width: 100%;
   color: white;
   /*text-align: center;*/
-  margin-top: 9rem;
   font-weight: 200;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 1.9);
   margin-bottom: 30px;

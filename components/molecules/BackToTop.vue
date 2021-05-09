@@ -27,7 +27,7 @@
 			scrollTop(){
 				window.addEventListener('scroll', function(){
 					const scrolly = window.scrollY
-					console.log(scrolly)
+					// console.log(scrolly)
 					const mybutton = document.querySelector('#myBtn');
 					if(scrolly > 20){
 						mybutton.style.visibility = "visible";

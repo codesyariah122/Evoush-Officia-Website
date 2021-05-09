@@ -43,9 +43,6 @@
 				title: 'Evoush::Official'
 			}
 		},
-		components: {
-			Hero
-		},
 		head(){
 			return {
 				title: this.title,
