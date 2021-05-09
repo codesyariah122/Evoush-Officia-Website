@@ -47,8 +47,6 @@
 			return {
 				title: this.title,
 				meta: [
-					{ charset: 'utf-8' },
-					{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 					{ hid: 'description', name: 'Evoush Indonesia', content: 'Your Eternal Future' },
 					{ name: 'description', content: 'Bisnis Evoush Indonesia'},
 					{ name: 'keyword', content: 'Bisnis Evoush Bisnis Menjanjikan'},
