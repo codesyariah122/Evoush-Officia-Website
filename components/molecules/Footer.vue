@@ -39,10 +39,10 @@
 			<div class="footer-copyright">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-12 text-center">
+						<div class="col-md-12 text-center text-danger">
 							<p>&copy;{{year}}
 								<a href="https://evoush.vercel.app" class="brand"> {{brand}} <span class="text-white"> {{country}} </span> </a>. <br> 
-								{{cops}} <a href="https://evoush.vercel.app"> {{comp}} </a>
+								{{cops}} <br/> <a href="https://evoush.vercel.app"> {{comp}} </a>
 							</p>
 						</div>
 					</div>
@@ -142,6 +142,10 @@ footer.light .footer-copyright{ background: none repeat scroll 0 0 rgba(255, 255
 .typo-light div,
 .typo-light span,
 .typo-light small{  color: #fff;}
-
+@media only screen and (max-device-width: 812px) {
+	.footer-copyright {
+		margin-bottom: 2rem!important;
+	}
+}
 </style>
 

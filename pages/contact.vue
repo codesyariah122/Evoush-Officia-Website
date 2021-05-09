@@ -40,7 +40,7 @@
 				{ name: 'keyword', content: 'Bisnis Evoush Bisnis Menjanjikan'},
 				{ property: 'og-title', content: 'Evoush Indonesia'},
 				{ property: 'og-description', content: 'Kami akan selalu terhubung untuk anda dan bisnis anda bersama evoush'},
-				{ property: 'og-image', content: '~/assets/images/vector_image/vector7.jpg'},
+				{ property: 'og-image', content: 'https://evoush.vercel.app/_nuxt/img/vector22.938bebb.jpg'},
 				{ property: 'og-url', content: 'https://evoush.vercel.app'}
 				]
 			}

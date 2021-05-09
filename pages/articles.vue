@@ -72,7 +72,7 @@
           { name: 'keyword', content: 'Bisnis Evoush Bisnis Menjanjikan'},
           { property: 'og-title', content: 'Evoush Indonesia'},
           { property: 'og-description', content: 'Kumpulan Artikel Menarik Seputar Bisnis Evoush'},
-          { property: 'og-image', content: '~/assets/images/vector_image/vector9.jpg'},
+          { property: 'og-image', content: 'https://evoush.vercel.app/_nuxt/img/vector15.05196e7.jpg'},
           { property: 'og-url', content: 'https://evoush.vercel.app'}
         ]
       }

@@ -47,7 +47,7 @@
     background:rgba(255,255,255,0.3);
     /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
     position: absolute;
-    margin-top: 15rem!important;
+    margin-top: 20rem!important;
     width: 50%;
     text-align: center;
     color: #fff;
@@ -72,9 +72,9 @@
     .parallax {
       background-attachment: scroll;
     }
-    .caption-parallax-home{
+/*    .caption-parallax-home{
       margin-top: 22rem!important;
-    }
+    }*/
   }
  /*DESKTOP VERSION*/
 @media (min-width: 992px) { 

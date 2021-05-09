@@ -74,7 +74,7 @@
 				{ name: 'keyword', content: 'Bisnis Evoush Bisnis Menjanjikan'},
 				{ property: 'og-title', content: 'Evoush Indonesia'},
 				{ property: 'og-description', content: 'Your Eternal Future'},
-				{ property: 'og-image', content: '~/assets/images/vector_image/vector8.jpg'},
+				{ property: 'og-image', content: 'https://evoush.vercel.app/_nuxt/img/vector8.a653b7c.jpg'},
 				{ property: 'og-url', content: 'https://evoush.vercel.app'}
 				]
 			}
