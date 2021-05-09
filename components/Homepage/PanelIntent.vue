@@ -59,7 +59,7 @@
 					{
 						id: 2,
 						context: {
-							header: `Bergabung  dan bersinarlah bersama <span style="font-family: 'Reey Regular'; font-size: 37px; color: firebrick; margin-left: 1rem;">Evoush`,
+							header: `Bergabung  dan bersinarlah bersama <span style="font-family: 'Walkway'; font-size: 37px; color: red; margin-left: 1rem;">Evoush`,
 							paragraph: `Berbisnis di Evoush merupakan sebuah investasi yang menjanjikan . Setelah anda bergabung  <i class="fas fa-mobile-alt"></i>, anda akan menjadi bagian dalam bisnis Bersama kami.Bersama kami merupakan  pilihan yang tepat. Karena, anda akan memiliki pengalaman baru yang mengesankan dalam dunia bisnis. <br/> Evoush dengan rangkaian produk kesehatan dan kecantikan yang merupakan sebuah modal lengkap bagi diri dan bisnis anda .`
 						},
 						vector: ImgPanelDua,

@@ -4,9 +4,8 @@
 			<div class="row justify-content-center">
 				<div class="caption">
 					<h2 v-html="parallax.caption"></h2>
+          <h1 v-html="parallax.company"></h1>
 					<br>
-          <Logo/>
-          <br>
 				</div>
 			</div>
 		</div>
@@ -17,7 +16,6 @@
 
 <script>
 	import ParallaxImg from '~/assets/images/banner/banner_1_9.jpg'
-  import Logo from '../Logo.vue'
 
 	export default {
 		data(){
@@ -26,7 +24,8 @@
 					style: {
 						'background-image': `url('${ParallaxImg}')`,
 					},
-					caption: `Kami adalah sarana bagi semangat anda <br/> untuk membangung bisnis yang cemerlang`
+					caption: `Kami adalah sarana bagi semangat anda <br/> untuk membangung bisnis yang cemerlang`,
+          company: `<span style="font-family: 'walkway';color: red; font-weight: 900;">Evoush</span> <span style="color: #fff;text-shadow: 0 3px 20px rgba(0, 0, 0, 1.5);">Indonesia</span>`
 				}
 			}
 		}

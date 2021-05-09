@@ -3,13 +3,13 @@
 		<div class="container">
 			<div class="row no-gutters justify-content-center">
 				<div class="col-md-6 col-xs-12 col-sm-12">
-					<h1 class="display-4 text-center" style='font-family:SpringSakura;'>
-						<nuxt-link to="/">
-							<Logo/>
-						</nuxt-link> {{home.title}}
-					</h1>
-					<p class="blockquote-text text-center" style="font-size: 18px; font-family:Reey Regular;color: firebrick;"> 
-						<span style="font-family:'Poiret One'; font-size: 21px; color: white;"> Official Website </span>
+					<nuxt-link to="/">
+						<h1 class="display-4 text-center" style='font-family:Reey Regular; color: #fff;' v-html="home.title"></h1>
+					</nuxt-link>
+					<p class="blockquote-text text-center" style="font-family:Reey Regular;color: firebrick;"> 
+						<span style="font-family: SpringSakura;color:#ffcccc;">]</span>
+							<span style="font-family:'Poiret One'; color: white;"> Official Website </span>
+						<span style="font-family: SpringSakura;color:#ffcccc;">[</span>
 					</p>
 				</div>
 			</div>
@@ -29,7 +29,7 @@
 					backgroundImage: `url(${HeroImg})`
 				},
 				home: {
-					title: "Indonesia"
+					title: `<span style="font-family:'Walkway'; color: red; font-weight: 900;">Evoush</span> Indonesia`
 
 				}
 			}
@@ -103,6 +103,9 @@
 	}
 	.jumbotron-content .display-4{
 		text-transform: capitalize;
+	}
+	.jumbotron-content p{
+		font-size: 31px!important;
 	}
 }
 </style>

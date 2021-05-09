@@ -35,7 +35,7 @@
 					{
 						id:1,
 						context: {
-							header: `Buat Rencana Besar Bersama <span style="font-family: 'Reey Regular'; color: firebrick;">Evoush</span>`,
+							header: `Buat Rencana Besar Bersama <span style="font-family: 'Walkway'; color: firebrick;">Evoush</span>`,
 							paragraph: `Mulailah berkembang bersama <b><u></u>Evoush</b>.  Buat kejutan dengan menentukan rencana <i class="fas fa-tags text-info"></i> penjualan anda diawal, jual produk, kreativitas dan kemampuan anda bersama team terhebat anda di Evoush. <b><u>Tunjukkan Pada Dunia</u></b> , bahwa anda mampu menciptakan sesuatu yang dapat membantu orang lain.`
 						},
 						vector: {

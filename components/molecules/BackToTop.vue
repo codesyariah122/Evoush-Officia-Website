@@ -47,7 +47,7 @@
     bottom: 25px;
     visibility: hidden;
     z-index: 1;
-    
+    color: red !important;
    /* visibility: hidden;
   		position: fixed;
   		bottom: 20px;
@@ -76,6 +76,7 @@
   		cursor: pointer;
   		padding: 15px;
   		border-radius: 4px;
+      color: red !important;
   	}
 
   	#myBtn:hover {

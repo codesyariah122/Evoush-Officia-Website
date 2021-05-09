@@ -75,6 +75,7 @@
 </script>
 
 <style>
+/*Setup Web Font*/
 @font-face {
   font-family: "SpringSakura";
   src: local("SpringSakura"), url("https://codesyariah122.github.io/assets/fonts/SpringSakura-3z1m8.woff") format("woff");
@@ -83,6 +84,13 @@
   font-family: "Reey Regular";
   src: local("Reey Regular"), url("https://codesyariah122.github.io/assets/fonts/Reey-Regular.woff") format("woff");
 }
+@font-face {
+   font-family: 'Walkway';
+    src:  url('~/assets/fonts/walkway/Walkway.ttf.woff') format('woff'); 
+    font-weight: normal;
+    font-style: normal;
+}
+/* End Setup */
 /*
 Design by Puji Ermanto 
 Made With Love
