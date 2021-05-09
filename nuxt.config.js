@@ -11,6 +11,9 @@ export default {
     script: [
       {
         src: 'https://unpkg.com/aos@2.3.1/dist/aos.js'
+      },
+      {
+         src: '//code.tidio.co/dxlufvwtvzz7xt4rwpkahdlzepgacn6q.js'
       }
     ],
     meta: [],
