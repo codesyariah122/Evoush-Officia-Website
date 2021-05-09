@@ -44,7 +44,8 @@
 <style>
 #myBtn {
     position: fixed;
-    bottom: 25px;
+    bottom: 35px;
+    margin-left: 1rem;
     visibility: hidden;
     z-index: 1;
     color: red !important;
