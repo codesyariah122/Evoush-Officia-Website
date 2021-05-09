@@ -24,8 +24,8 @@
 						'background-image': `url('${ParallaxImg}')`,
 					},
 					context: {
-            title: `<span style="font-family: SpringSakura; color: firebrick;">Evoush</span> <span style="font-family: SpringSakura; color: #fff">Indonesia</span>`,
-            paragraph: '<span style="font-family: Poiret One;">Your </span> <span style="font-family: SpringSakura; color: crimson;">Eternal</span> <span style="font-family: Poiret One;">Future</span>.'
+            title: `<span style="font-family: Walkway; color: red;">Evoush</span> <span style="font-family:'Reey Regular'; color: #fff">Indonesia</span>`,
+            paragraph: '<span style="font-family: Walkway;">Your Eternal</span> <span style="font-family: Reey Regular; color: red;">Future</span>.'
           }
 				}
 			}
@@ -55,12 +55,12 @@
   }
   .caption-parallax-home h2 {
     font-family: 'Poiret One', cursive;font-weight:bold;
-    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 1.7);
     margin-bottom: .9rem;
     font-size: 18px;
   }
   .caption-parallax-home p{
-    text-shadow: 0 3px 20px rgba(0, 0, 0, 1);
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 1.7);
     font-weight: 700;
     width: 90%;
     font-size: 14px;
@@ -101,7 +101,7 @@
     .caption-parallax-home h2 {
       font-family:SpringSakura !important;
       font-weight:600;
-      text-shadow: 0 3px 20px rgba(0, 0, 0, 0.7);
+      text-shadow: 0 3px 20px rgba(0, 0, 0, 1.7);
       margin-bottom: .9rem;
       font-size: 41px;
       margin-top: 1rem;
@@ -112,6 +112,7 @@
     .caption-parallax-home p{
     font-size: 31px;
     text-align: center;
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 1.7);
   }
 }
 </style>
