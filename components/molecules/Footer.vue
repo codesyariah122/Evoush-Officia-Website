@@ -8,7 +8,7 @@
 						<div class="col-xs-12 col-sm-6 col-md-3">
 							<div class="widget subscribe no-box">
 								<Logo/>
-								<p style="font-family:'SpringSakura'; font-size: 31px; font-weight: 800;" v-html="slogan"></p>
+								<p style="font-family:'Reey Regular'; color: red; font-size: 31px; font-weight: 800;" v-html="slogan"></p>
 							</div>
 						</div>
 
@@ -71,7 +71,7 @@
 				brand: "Evoush",
 				country: "Indonesia",
 				year: "",
-				slogan: `<span style="font-family: 'Walkway'; color: tomato; font-size: 27px;">Your Eternal</span> Future`
+				slogan: `<span style="font-family: 'Walkway'; color: white; font-size: 27px;">Your Eternal</span> Future`
 			}
 		},
 		mounted(){

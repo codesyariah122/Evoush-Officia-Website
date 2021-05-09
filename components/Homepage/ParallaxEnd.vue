@@ -24,8 +24,8 @@
 					style: {
 						'background-image': `url('${ParallaxImg}')`,
 					},
-					caption: `Kami adalah sarana bagi semangat anda <br/> untuk membangung bisnis yang cemerlang`,
-          company: `<span style="font-family: 'walkway';color: red; font-weight: 900;">Evoush</span> <span style="color: #fff;text-shadow: 0 3px 20px rgba(0, 0, 0, 1.5);">Indonesia</span>`
+					caption: `Kami adalah sarana bagi <span style="font-family: SpringSakura;">Semangat</span> Anda <br/> untuk <span style="font-family: SpringSakura;"> Membangun </span> <span style="font-family: SpringSakura; color: tomato;">Bisnis</span> yang <span style="font-family: SpringSakura; color: coral;"> Cemerlang</span>`,
+          company: `<span style="font-family: 'walkway';color: red; font-weight: 900;">Evoush</span> <span style="font-family: 'Reey Regular'; color: #fff;text-shadow: 0 3px 20px rgba(0, 0, 0, 1.5);">Indonesia</span>`
 				}
 			}
 		}
@@ -53,8 +53,8 @@
     color: #fff;
   }
   .caption h2 {
-    font-family: 'Poiret One', cursive;font-weight:bold;
-    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    font-family: 'Walkway', cursive;font-weight:bold;
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 1.7);
     margin-bottom: .9rem;
     font-size: 18px;
   }
@@ -95,9 +95,9 @@
       color: #fff;
     }
     .caption h2 {
-      font-family:SpringSakura !important;
+      font-family:Walkway !important;
       font-weight:600;
-      text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+      text-shadow: 0 3px 20px rgba(0, 0, 0, 1.7);
       margin-bottom: .9rem;
       font-size: 41px;
     }
