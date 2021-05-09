@@ -35,7 +35,7 @@
 <style>
 	
   .parallax-home{
-    min-height: 500px; 
+    min-height: 600px; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -47,7 +47,7 @@
     background:rgba(255,255,255,0.3);
     /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
     position: absolute;
-    margin-top: 20rem;
+    margin-top: 15rem!important;
     width: 50%;
     text-align: center;
     color: #fff;

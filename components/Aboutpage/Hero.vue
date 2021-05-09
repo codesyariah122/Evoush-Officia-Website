@@ -54,7 +54,7 @@
 .jumbotron-content .container {
   z-index: 1;
   position: relative;
-  margin-top: 35rem;
+  margin-top: 10rem;
 }
 
 .jumbotron-content::after {
@@ -99,7 +99,7 @@
 		height: 840px;
 	}
   .jumbotron-content .container{
-    margin-top: 3.5rem;
+    margin-top: 12rem!important;
   }
 	.jumbotron-content .display-4{
 		text-transform: capitalize;
