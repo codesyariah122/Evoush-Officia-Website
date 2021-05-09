@@ -14,7 +14,7 @@
 <style></style>
 
 <script>
-	import ParallaxImg from '~/assets/images/banner/jumbotron5.jpg'
+	import ParallaxImg from '~/assets/images/banner/model1.jpg'
 
 	export default {
 		data(){
@@ -48,7 +48,7 @@
     background:rgba(255,255,255,0.3);
     /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
     position: absolute;
-    margin-top: 13rem;
+    margin-top: 22rem!important;
     width: 50%;
     text-align: center;
     color: #fff;
@@ -73,9 +73,6 @@
     .parallax {
       background-attachment: scroll;
     }
-    .caption-parallax-home{
-      margin-top: 22rem!important;
-    }
   }
  /*DESKTOP VERSION*/
 @media (min-width: 992px) { 
@@ -93,7 +90,7 @@
       background:rgba(255,255,255,0.3);
       /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
       position: absolute;
-      margin-top: 16.5rem;
+      margin-top: 16.5rem!important;
       width: 75%;
       text-align: center;
       color: #fff;

@@ -13,7 +13,7 @@
 
 
 <script>
-	import ParallaxImg from '~/assets/images/banner/model1.jpg'
+	import ParallaxImg from '~/assets/images/banner/jumbotron5.jpg'
 
 	export default {
 		data(){
