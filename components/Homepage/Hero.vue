@@ -18,7 +18,7 @@
 </template>
 
 <script>
-	import HeroImg from '~/assets/images/banner/reduce/evoush_banner.jpg'
+	import HeroImg from '~/assets/images/banner/evoush_banner.jpg'
 	import LogoEvoush from '../Logo.vue'
 
 	export default{
