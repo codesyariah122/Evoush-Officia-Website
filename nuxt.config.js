@@ -19,7 +19,10 @@ export default {
         src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-609818ffd946e881'
       }
     ],
-    meta: [],
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    ],
     link: [
       { 
         rel: 'icon', type: 'image/png', href: '/fav_evoush.png' 
@@ -75,5 +78,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+     extend(config, { isClient }) {
+      if (isClient) {
+        config.optimization.splitChunks.maxSize = 200000
+      }
+    }
   }
 }
