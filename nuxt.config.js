@@ -14,6 +14,9 @@ export default {
       },
       {
          src: '//code.tidio.co/dxlufvwtvzz7xt4rwpkahdlzepgacn6q.js'
+      },
+      {
+        src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-609818ffd946e881'
       }
     ],
     meta: [],

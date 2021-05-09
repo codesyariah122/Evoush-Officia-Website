@@ -3,7 +3,7 @@
 		<Hero/>
 		<section id="about">
 			<!-- intro -->
-			<h1 class="text-center underline">About Evoush</h1>
+			<h1 class="text-center underline"></h1>
 			
 			<!-- intent -->
 			<PanelIntent/>
