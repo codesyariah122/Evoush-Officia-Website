@@ -53,6 +53,7 @@
 .jumbotron-content .container {
   z-index: 1;
   position: relative;
+  margin-top: 20rem!important;
 }
 
 .jumbotron-content::after {
