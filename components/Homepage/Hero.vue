@@ -26,7 +26,6 @@
 	export default{
 		data(){
 			return {
-				Logo: LogoEvoush,
 				image: {
 					backgroundImage: `url(${HeroImg})`
 				},
