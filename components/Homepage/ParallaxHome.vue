@@ -14,7 +14,7 @@
 
 <script>
 	import ParallaxImg from '~/assets/images/banner/new-model-1.jpg'
-
+  
 	export default {
 		data(){
 			return {
