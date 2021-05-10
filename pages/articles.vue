@@ -8,7 +8,7 @@
             <div class="card mb-3"  style="max-width: 540px;">
               <div class="row no-gutters">
                 <div class="col-md-4">
-                  <img v-if="article.img" :src="article.img" alt="test" class="img-responsive">
+                  <img v-if="article.img" :src="`../assets/blog/images/${article.img}`" alt="test" class="img-responsive">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">

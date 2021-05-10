@@ -1,12 +1,12 @@
 ---
-title: Article about me
-description: This is a description for the article about me
-img: https://images.unsplash.com/photo-1580752300992-559f8e0734e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80
-alt: nice image
+title: Apa itu Bisnis Evoush
+description: Membangun bisnis yang sukses bersama Evoush
+img: post-1/Masuk.jpg
+alt: Evoush Office
 author: 
-  name: Peter
-  bio: All about Peter and what he does and where he works
-  img: https://images.unsplash.com/photo-1533636721434-0e2d61030955?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80
+  name: Puji Evoush
+  bio: Freelancer Web Developer Evoush Indonesia
+  img: https://avatars.githubusercontent.com/u/13291805?v=4
 tags: 
   - web development
 ---

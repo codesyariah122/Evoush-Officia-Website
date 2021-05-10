@@ -1,19 +1,30 @@
 <template>
 	<div>
 		<Hero/>
-		<section id="contact">
-			<h1>Evoush Product</h1>
+		<section id="product">
+			<div class="container">
+				<div class="row justify-content-end">
+					<div class="col-12">
+					 	<h1 style="font-family: Walkway;"> {{ merchant.business_name }} <span style="font-family: Poiret One;"> Product</span> </h1>				
+					</div>
+				</div>
+				
+			 <h3>
+			 	<n-link to="/products">Products</n-link>
+			 </h3>
+			 <product-list :products="products"></product-list>
+			 </div>
 		</section>
 	</div>
 </template>
 
 <style scoped>
-#contact{
+#product{
 	width: 100%;
 }
 /* DESKTOP VERSION */
 @media (min-width: 992px) { 
-	#contact{
+	#product{
 		width: 100%;
 	}
 }
@@ -31,6 +42,17 @@
 		components: {
 			Hero
 		},
+
+		async asyncData({ $commerce }) {
+			const merchant = await $commerce.merchants.about();
+			const { data: categories } = await $commerce.categories.list();
+			const { data: products } = await $commerce.products.list();
+			return {
+				merchant,
+				categories,
+				products,
+			};
+		},
 		head(){
 			return {
 				title: this.title,
@@ -45,8 +67,5 @@
 				]
 			}
 		},
-		components: {
-			Hero
-		}
 	}
 </script>
