@@ -34,14 +34,6 @@
 					}
 				}
 			}
-		},
-		mounted(){
-			this.backToHome()
-		},
-		methods: {
-			backToHome(){
-				location.reload()
-			}
 		}
 	}
 </script>
