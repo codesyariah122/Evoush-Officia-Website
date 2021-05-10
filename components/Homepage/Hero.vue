@@ -4,7 +4,9 @@
 			<div class="row no-gutters justify-content-center">
 				<div class="col-md-6 col-xs-12 col-sm-12">
 					<nuxt-link to="/">
-						<h1 class="display-4 text-center" style='font-family:Reey Regular; color: #fff;' v-html="home.title"></h1>
+						<h1 class="display-4 text-center" style="font-family:'Walkway'; color: red; font-weight: 900;">
+							<BrandIcon/> {{home.brand}} <span style="font-family: 'Reey Regular'; color: #fff;"> {{home.country}} </span>
+						</h1>
 					</nuxt-link>
 					<p class="blockquote-text text-center" style="font-family:Reey Regular;color: firebrick;"> 
 						<!-- <span style="font-family: SpringSakura;color:#ffcccc;">]</span> -->
@@ -19,7 +21,7 @@
 
 <script>
 	import HeroImg from '~/assets/images/banner/evoush_banner.jpg'
-	import LogoEvoush from '../Logo.vue'
+	import BrandIcon from '../Headers/brand.vue'
 
 	export default{
 		data(){
@@ -29,7 +31,8 @@
 					backgroundImage: `url(${HeroImg})`
 				},
 				home: {
-					title: `<span style="font-family:'Walkway'; color: red; font-weight: 900;">Evoush</span> Indonesia`
+					brand: "voush",
+					country: "Indonesia"
 
 				}
 			}
