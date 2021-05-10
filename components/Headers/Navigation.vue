@@ -5,9 +5,9 @@
 				<li class="nav-item"><nuxt-link to="/about" class="nav-link">About</nuxt-link></li>
 				<li class="nav-item"><nuxt-link to="/product" class="nav-link">Product</nuxt-link></li>
 				<li>
-					<nuxt-link>
+					<nuxt-link v-on:click="backToHome()">
 						<!-- <img :src="logo" class="img-responsive"> -->
-						<Logo v-on:click="backToHome()"/>
+						<Logo/>
 					</nuxt-link>
 				</li>
 				<li class="nav-item"><nuxt-link to="/articles" class="nav-link">Articles</nuxt-link></li>
