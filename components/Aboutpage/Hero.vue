@@ -3,9 +3,9 @@
 		<div class="container">
 			<div class="row no-gutters justify-content-center">
 				<div class="col-md-4 col-xs-4 col-sm-4">
-					<h1 class="display-4 text-center" style='font-family:SpringSakura;'>
+					<!-- <h1 class="display-4 text-center" style='font-family:SpringSakura;'>
 						<div v-html="home.brand"></div>
-					</h1>
+					</h1> -->
 					<p class="blockquote-text text-justify" style="font-family:'Poiret One'; font-size: 21px; color: white;" v-html="home.context"> </p>
 				</div>
 			</div>

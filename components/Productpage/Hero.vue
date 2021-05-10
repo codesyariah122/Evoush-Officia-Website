@@ -3,9 +3,9 @@
 		<div class="container">
 			<div class="row no-gutters justify-content-start">
 				<div class="col-md-4 col-xs-4 col-sm-4">
-					<h1 class="display-4 text-center" style='font-family:SpringSakura;'>
+					<!-- <h1 class="display-4 text-center" style='font-family:SpringSakura;'>
 						<div v-html="home.brand"></div>
-					</h1>
+					</h1> -->
 					<p class="blockquote-text text-justify" style="font-family:'Poiret One'; font-size: 21px; color: white;" v-html="home.context"> </p>
 				</div>
 			</div>
@@ -25,7 +25,7 @@
 				home: {
 					brand: `<span style="font-family: SpringSakura; color: red;">Evoush</span> <span style="font-family: SpringSakura; color: #fff;">Product</span>`,
 					title: "Product",
-					context: `Rangkaian product terbaik kami siap menjadi amunisi untuk melengkapi strategi bisnis anda di <span style="font-family: Reey Regular; color: crimson;">Evoush</span>`
+					context: `Rangkaian product terbaik kami siap menjadi amunisi untuk melengkapi strategi bisnis anda di <span style="font-family: Walkway; color: crimson;">Evoush</span>`
 
 				}
 			}
