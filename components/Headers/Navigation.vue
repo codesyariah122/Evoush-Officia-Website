@@ -5,9 +5,9 @@
 				<li class="nav-item"><nuxt-link to="/about" class="nav-link">About</nuxt-link></li>
 				<li class="nav-item"><nuxt-link to="/product" class="nav-link">Product</nuxt-link></li>
 				<li>
-					<nuxt-link to="/">
+					<nuxt-link>
 						<!-- <img :src="logo" class="img-responsive"> -->
-						<Logo/>
+						<Logo v-on:click="backToHome()"/>
 					</nuxt-link>
 				</li>
 				<li class="nav-item"><nuxt-link to="/articles" class="nav-link">Articles</nuxt-link></li>
@@ -33,6 +33,12 @@
 						'height': '100px'
 					}
 				}
+			}
+		},
+
+		methods: {
+			backToHome(){
+				window.location.href="/"
 			}
 		}
 	}
