@@ -5,7 +5,7 @@
 				<div class="col-md-6 col-xs-12 col-sm-12">
 					<nuxt-link to="/">
 						<h1 class="display-4 text-center" style="font-family:'Walkway'; color: red; font-weight: 900;">
-							<BrandIcon/> {{home.brand}} <span style="font-family: 'Reey Regular'; color: #fff;"> {{home.country}} </span>
+							<BrandIcon/>{{home.brand}} <span style="font-family: 'Reey Regular'; color: #fff;"> {{home.country}} </span>
 						</h1>
 					</nuxt-link>
 					<p class="blockquote-text text-center" style="font-family:Reey Regular;color: firebrick;"> 
