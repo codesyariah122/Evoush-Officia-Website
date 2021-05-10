@@ -18,10 +18,10 @@
   import BrandIcon from '../Headers/brand.vue'
 
 	export default{
+    components: {
+      BrandIcon
+    },
 		data(){
-      components: {
-        BrandIcon
-      },
 			return {
 				image: {
 					backgroundImage: `url(${HeroImg})`

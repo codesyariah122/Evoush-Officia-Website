@@ -21,9 +21,6 @@
     components: {
       BrandIcon
     },
-    components: {
-      BrandIcon
-    },
 		data(){
 			return {
 				image: {
