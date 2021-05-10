@@ -7,9 +7,9 @@
 						<h1 class="display-4 text-center" style='font-family:Reey Regular; color: #fff;' v-html="home.title"></h1>
 					</nuxt-link>
 					<p class="blockquote-text text-center" style="font-family:Reey Regular;color: firebrick;"> 
-						<span style="font-family: SpringSakura;color:#ffcccc;">]</span>
+						<!-- <span style="font-family: SpringSakura;color:#ffcccc;">]</span> -->
 							<span style="font-family:'Poiret One'; color: white;"> Official Website </span>
-						<span style="font-family: SpringSakura;color:#ffcccc;">[</span>
+						<!-- <span style="font-family: SpringSakura;color:#ffcccc;">[</span> -->
 					</p>
 				</div>
 			</div>
