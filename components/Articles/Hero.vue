@@ -102,7 +102,7 @@
 	}
 
   .jumbotron-content .container{
-    margin-top: 11rem!important;
+    margin-top: 7rem!important;
   }
 
 	.jumbotron-content .display-4{

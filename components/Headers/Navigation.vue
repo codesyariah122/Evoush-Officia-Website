@@ -5,7 +5,7 @@
 				<li class="nav-item"><nuxt-link to="/about" class="nav-link">About</nuxt-link></li>
 				<li class="nav-item"><nuxt-link to="/product" class="nav-link">Product</nuxt-link></li>
 				<li>
-					<nuxt-link v-on:click="backToHome()">
+					<nuxt-link to="/">
 						<!-- <img :src="logo" class="img-responsive"> -->
 						<Logo/>
 					</nuxt-link>
@@ -35,10 +35,12 @@
 				}
 			}
 		},
-
+		mounted(){
+			this.backToHome()
+		},
 		methods: {
 			backToHome(){
-				window.location.href="/"
+				location.reload()
 			}
 		}
 	}
