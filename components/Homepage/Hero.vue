@@ -24,6 +24,9 @@
 	import BrandIcon from '../Headers/brand.vue'
 
 	export default{
+		components: {
+			BrandIcon
+		},
 		data(){
 			return {
 				image: {
