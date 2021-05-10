@@ -3,9 +3,9 @@
 		<div class="container">
 			<div class="row no-gutters justify-content-start">
 				<div class="col-md-4 col-xs-4 col-sm-4">
-					<!-- <h1 class="display-4 text-center" style='font-family:SpringSakura;'>
-						<div v-html="home.brand"></div>
-					</h1> -->
+					<h1 class="display-4 text-center" style="font-family:'Walkway'; text-transform: lowercase!important; color: red; font-weight: 900;">
+            <BrandIcon/>{{home.brand}} <span style="font-family: 'Reey Regular'; text-transform: capitalize; color: #fff;"> {{home.title}} </span>
+          </h1>
 					<p class="blockquote-text text-justify" style="font-family:'Poiret One'; font-size: 21px; color: white;" v-html="home.context"> </p>
 				</div>
 			</div>
@@ -15,16 +15,20 @@
 
 <script>
 	import HeroImg from '~/assets/images/banner/header3.jpg'
+  import BrandIcon from '../Headers/brand.vue'
 
 	export default{
+    components: {
+      BrandIcon
+    },
 		data(){
 			return {
 				image: {
 					backgroundImage: `url(${HeroImg})`
 				},
 				home: {
-					brand: `<span style="font-family: SpringSakura; color: red;">Evoush</span> <span style="font-family: SpringSakura; color: #fff;">Contact</span>`,
-					title: "Product",
+					brand: "voush",
+					title: "Contact",
 					context: `Saat ini Anda bisa menghubungi contact customer <span style="font-family: Walkway; color: crimson;">Evoush</span> di halaman ini guna mempermudah informasi yang anda perlukan dalam menjalankan Bisnis Evoush.`
 
 				}
@@ -53,7 +57,6 @@
 .jumbotron-content .container {
   z-index: 1;
   position: relative;
-  margin-top: 20rem!important;
 }
 
 .jumbotron-content::after {
@@ -93,11 +96,14 @@
 /* DESKTOP VERSION */
 @media (min-width: 992px) { 
 	/* jumbotron */
-	.jumbotron{
+	.jumbotron-content{
 		margin-top: -75px;
 		height: 840px;
 	}
-	.jumbotron .display-4{
+  .jumbotron-content .container{
+    margin-top: 20rem!important;
+  }
+	.jumbotron-content .display-4{
 		text-transform: capitalize;
 	}
 }

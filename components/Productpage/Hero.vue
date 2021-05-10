@@ -28,7 +28,7 @@
 				},
 				home: {
 					brand: "voush",
-					title: `<span style="font-family: SpringSakura; color: #fff; text-transform: capitalize;">Product</span>`,
+					title: "Product",
 					context: `Rangkaian product terbaik kami siap menjadi amunisi untuk melengkapi strategi bisnis anda di <span style="font-family: Walkway; color: crimson;">Evoush</span>`
 
 				}
@@ -57,7 +57,6 @@
 .jumbotron-content .container {
   z-index: 1;
   position: relative;
-  margin-top: 20rem!important;
 }
 
 .jumbotron-content::after {
@@ -97,11 +96,14 @@
 /* DESKTOP VERSION */
 @media (min-width: 992px) { 
 	/* jumbotron */
-	.jumbotron{
+	.jumbotron-content{
 		margin-top: -75px;
 		height: 840px;
 	}
-	.jumbotron .display-4{
+  .jumbotron-content .container{
+    margin-top: 20rem!important;
+  }
+	.jumbotron-content .display-4{
 		text-transform: capitalize;
 	}
 }
