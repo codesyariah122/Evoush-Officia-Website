@@ -24,6 +24,7 @@
     "@chec/commerce.js": "^2.4.1",
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/stylelint-module": "^4.0.0",
     "@nuxtjs/tailwindcss": "^3.2.0",
     "aos": "^3.0.0-beta.6",

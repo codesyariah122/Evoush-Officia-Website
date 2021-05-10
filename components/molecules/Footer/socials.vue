@@ -58,8 +58,8 @@ ul.social-footer2 { margin: 0;padding: 0; width: auto;}
 ul.social-footer2 li {display: inline-block;padding: 0;}
 ul.social-footer2 li a:hover {background-color:#ff8d1e;}
 ul.social-footer2 li a {display: block; height:30px;width: 30px;text-align: center;}
-.btn{background-color: #ff8d1e; color:#fff;}
-.btn:hover, .btn:focus, .btn.active {background: #4b92dc;color: #fff;
+.btn-social{background-color: #ff8d1e; color:#fff;}
+.btn-social:hover, .btn-social:focus, .btn-social.active {background: #4b92dc;color: #fff;
 -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 -moz-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 -ms-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);

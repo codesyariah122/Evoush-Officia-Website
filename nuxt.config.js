@@ -4,7 +4,8 @@ export default {
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Evoush::Official',
+    title: process.env.NAME,
+    description: process.env.SLOGAN,
     htmlAttrs: {
       lang: 'en'
     },
@@ -47,7 +48,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["~/plugins/commerce.js"],
+  plugins: ['~/plugins/commerce.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -68,7 +69,8 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/dotenv'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

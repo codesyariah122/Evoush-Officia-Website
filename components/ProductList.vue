@@ -1,18 +1,22 @@
 <template>
-	<ul>
-		<li v-for="product in products" :key="product.permalink">
-			<n-link :to="{
-				name: 'products-permalink',
-				params: {permalink: product.permalink}
-			}">
-			<product-view :product="product"></product-view>
-			</n-link>
-		</li>
-	</ul>
+  <div>
+    <div class="row" v-for="product in products" :key="product.permalink">
+      <div class="col-12">
+        <h3>
+        <n-link :to="product.categories[0].slug">
+          {{product.categories[0].name}}
+        </n-link>
+      </h3>
+      </div>
+      <div class="col-md-6">
+        <product-view :product="product"></product-view>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-	export default{
-		props: ["products"],
-	}
+export default {
+  props: ["products"],
+};
 </script>

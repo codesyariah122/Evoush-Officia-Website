@@ -24,7 +24,7 @@
 					style: {
 						'background-image': `url('${ParallaxImg}')`,
 					},
-					caption: `Kami adalah sarana bagi <span style="font-family: SpringSakura;">Semangat</span> Anda <br/> untuk <span style="font-family: SpringSakura;"> Membangun </span> <span style="font-family: SpringSakura; color: tomato;">Bisnis</span> yang <span style="font-family: SpringSakura; color: coral;"> Cemerlang</span>`,
+					caption: `Kami adalah sarana bagi <span style="font-family: SpringSakura;">Semangat</span> Anda <br/> untuk <span style="font-family: SpringSakura;"> Membangun </span> <span style="font-family: SpringSakura;">Bisnis</span> yang <span style="font-family: SpringSakura; color: coral;"> Cemerlang</span>`,
           company: `<span style="font-family: 'walkway';color: red; font-weight: 900;">Evoush</span> 
                     <span style="font-family: 'Reey Regular'; color: #fff;text-shadow: 0 3px 20px rgba(0, 0, 0, 1.5);">Indonesia</span>`
 				}

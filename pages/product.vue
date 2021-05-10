@@ -2,16 +2,24 @@
 	<div>
 		<Hero/>
 		<section id="product">
+			<!-- <div class="col-12 ml-5">
+				<pre>
+					{{JSON.stringify(merchant, null, 2)}}
+				</pre>
+				<pre>
+					{{JSON.stringify(products, null, 2)}}
+				</pre>
+				<pre>
+					{{JSON.stringify(categories, null, 2)}}
+				</pre>
+			</div> -->
 			<div class="container">
 				<div class="row justify-content-end">
 					<div class="col-12">
-					 	<h1 style="font-family: Walkway;"> {{ merchant.business_name }} <span style="font-family: Poiret One;"> Product</span> </h1>				
+					 	<h1 class="text-center" style="font-family: Walkway;"> {{ merchant.business_name }} <span style="font-family: Poiret One;"> Product</span> </h1>				
 					</div>
 				</div>
 				
-			 <h3>
-			 	<n-link to="/products">Products</n-link>
-			 </h3>
 			 <product-list :products="products"></product-list>
 			 </div>
 		</section>
