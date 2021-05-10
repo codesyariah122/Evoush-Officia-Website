@@ -5,10 +5,10 @@
 				<div class="container">
 					<div class="row mx-auto">
 
-						<div class="col-xs-12 col-sm-6 col-md-3">
+						<div class="col-12 col-xs-12 col-sm-6 col-md-3">
 							<div class="widget subscribe no-box">
 								<Logo/>
-								<p style="font-family:'Reey Regular'; color: red; font-size: 31px; font-weight: 800;" v-html="slogan"></p>
+								<p style="font-family:'Reey Regular'; color: red; font-size: 27px; font-weight: 800;" v-html="slogan"></p>
 							</div>
 						</div>
 
