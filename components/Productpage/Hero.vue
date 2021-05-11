@@ -27,7 +27,7 @@
 					backgroundImage: `url(${HeroImg})`
 				},
 				home: {
-					brand: "voush",
+					brand: "evoush",
 					title: "Product",
 					context: `Rangkaian product terbaik kami siap menjadi amunisi untuk melengkapi strategi bisnis anda di <span style="font-family: Walkway; color: crimson;">Evoush</span>`
 

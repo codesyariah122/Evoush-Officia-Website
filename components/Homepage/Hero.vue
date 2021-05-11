@@ -33,7 +33,7 @@
 					backgroundImage: `url(${HeroImg})`
 				},
 				home: {
-					brand: "voush",
+					brand: "evoush",
 					country: "Indonesia"
 
 				}

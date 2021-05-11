@@ -27,7 +27,7 @@
 					backgroundImage: `url(${HeroImg})`
 				},
 				home: {
-					brand: "voush",
+					brand: "evoush",
 					title: "About",
 					context: `<span style="font-family: Walkway; color: red; font-weight: 900;">Evoush</span> adalah merupakan sebuah merk dagang dari <br> 
           <span style="font-family: Walkway;">PT. Pineleng Indah Cemerlang</span>.`

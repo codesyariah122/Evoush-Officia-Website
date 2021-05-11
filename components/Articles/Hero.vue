@@ -27,7 +27,7 @@
 					backgroundImage: `url(${HeroImg})`
 				},
 				home: {
-					brand: "voush",
+					brand: "evoush",
           title: "Articles",
 					context: `<span style="font-family: Walkway; color: red;">Evoush</span> artcile page.`
 

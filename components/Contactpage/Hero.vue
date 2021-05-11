@@ -27,7 +27,7 @@
 					backgroundImage: `url(${HeroImg})`
 				},
 				home: {
-					brand: "voush",
+					brand: "evoush",
 					title: "Contact",
 					context: `Saat ini Anda bisa menghubungi contact customer <span style="font-family: Walkway; color: crimson;">Evoush</span> di halaman ini guna mempermudah informasi yang anda perlukan dalam menjalankan Bisnis Evoush.`
 
