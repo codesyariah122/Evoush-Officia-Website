@@ -101,7 +101,7 @@
 		height: 840px;
 	}
   .jumbotron-content .container{
-    margin-top: 8rem!important;
+    margin-top: 2rem!important;
   }
 	.jumbotron-content .display-4{
 		text-transform: capitalize;
