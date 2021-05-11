@@ -1,9 +1,6 @@
 export default {
   mode: 'universal',
-  loading: {
-    color: 'blue',
-    height: '5px'
-  },
+  loading: false,
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
