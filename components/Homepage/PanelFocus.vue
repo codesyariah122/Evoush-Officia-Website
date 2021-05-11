@@ -65,11 +65,8 @@
           {
             id:1,
             context: {
-              header: `Focus1 <span style="font-family: 'SpringSakura'; color: tomato;"> Label </span> title content 1`,
-              paragraph: `<b><u>Lorem ipsum</u></b> dolor sit amet <i class="fas fa-air-freshener" style="font-size: 18px;"></i> consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.<i class="far fa-calendar-check text-success"></i>.`
+              header: `Undang semua orang yang <span style="font-family: SpringSakura; color:tomato;">Berpotensi</span> untuk membangun jaringan bisnis mandiri dan meraih kesuksesan bersama.`,
+              paragraph: `Undang semua orang yang berpotensi untuk bisa membangun bisnis jaringan bersama dengan ide-ide sederhana namun membawa dampak besar untuk menemukan kebebasan finansial dan fleksibilitas penghasilan. Sehingga dapat terwujudnya peluang kesuksesan bersama. <i class="far fa-calendar-check text-success"></i>.`
             },
             anim: Anim1,
             vector: Vector1,
@@ -77,22 +74,16 @@
           {
             id:2,
             context: {
-              header: `Focus2 <span style="font-family: 'SpringSakura'; color: tomato;"> Label </span> title content 2`,
-              paragraph: `<b><u>Lorem ipsum</u></b> dolor sit amet <i class="fas fa-air-freshener" style="font-size: 18px;"></i> consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.<i class="far fa-calendar-check text-success"></i>.`
+              header: `Membangun Kerjasama dan menciptakan pengaruh positif dengan memberdayakan satu dengan yang lain untuk menemukan peluang <span style="font-family: SpringSakura; color: tomato;"> potensi </span> bersama.`,
+              paragraph: `Bangun kerjsama dan komunikasi yang baik untuk menciptakan pengaruh positif dengan memberdayakan orang untuk memaksimal potensi mereka dalam mewujudkan masa depan <span style="font-family: SpringSakura; color: tomato">bisnis</span> dan juga <span style="font-family: SpringSakura; color: tomato">finansial</span> yang lebih baik..`
             },
             vector: Vector2,
           },
           {
             id:3,
             context: {
-              header: `Focus3 <span style="font-family: 'SpringSakura'; color: tomato;"> Label </span> title content 3`,
-              paragraph: `<b><u>Lorem ipsum</u></b> dolor sit amet <i class="fas fa-air-freshener" style="font-size: 18px;"></i> consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.<i class="far fa-calendar-check text-success"></i>.`
+              header: `Membantu dan membimbing anda dalam memaksimalkan potensi bisnis jaringan untuk meraih <span style="font-family: SpringSakura; color:tomato;">income growth</span> yang maksimal`,
+              paragraph: `<span style="font-family: Walkway; color:#ff3b40;">Evoush</span> membantu serta membimbing anda dalam memaksimalkan potensi jaringan bisnis secara professional, sehingga anda bisa mengembangkan dan mengaplikasikan kemampuan bisnis anda kepada orang lain untuk meraih income growth yang lebih baik.`
             },
             anim: Anim2,
             vector: Vector3,
@@ -100,11 +91,8 @@
           {
             id:4,
             context: {
-              header: `Focus4 <span style="font-family: 'SpringSakura'; color: tomato;"> Label </span> title content 4`,
-              paragraph: `<b><u>Lorem ipsum</u></b> dolor sit amet <i class="fas fa-air-freshener" style="font-size: 18px;"></i> consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.<i class="far fa-calendar-check text-success"></i>.`
+              header: `Wujudkan komitmen untuk meraih impian bersama dan <span style="font-family: SpringSakura; color: tomato;">Masa depan</span> yang lebih baik.`,
+              paragraph: `<span style="font-family: Walkway; color:#ff3b40;">Evoush</span> menjalakan misi untuk membantu tiap individu untuk menjalani kehidupan yang lebih baik, maka dari itu kami ingin mewujudkan impian bersama dan masa depan dengan membuka peluang kesempatan untuk mengembangkan kemampuan untuk memajukan bisnis jaringan dan karir anda.`
             },
             vector: Vector4,
           }
@@ -212,7 +200,7 @@
       padding: 15px;
     }
     .panel-body-focus img{
-      height: 400px;
+      height: 300px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important; color: rgb(255,228,181);
     }
     .panel-body-focus h1{
@@ -281,7 +269,7 @@
 
     .polaroid-vector{
       width: 500px;
-      height: 600px;
+      height: 500px;
       margin-top: 1rem;
       margin-left: .1rem;
     }

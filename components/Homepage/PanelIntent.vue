@@ -43,7 +43,6 @@
 <script>
 	import ImgPanelSatu from '~/assets/images/animated/anim32.gif'
 	import ImgPanelDua	from '~/assets/images/animated/anim33.gif'
-
 	export default {
 		data(){
 			return {

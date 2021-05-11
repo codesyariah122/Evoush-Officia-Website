@@ -16,7 +16,6 @@
   import Footer from '~/components/molecules/Footer'
 
   export default {
-    loading: false,
     components: {
       Navigation,
       BackToTop,
