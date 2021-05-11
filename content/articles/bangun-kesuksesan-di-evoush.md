@@ -1,7 +1,7 @@
 ---
 title: Bangun Kesuksesan di evoush
 description: Faktor yang mendorong kesuksesan anda dalam berbisnis
-dir_img: ''
+dir_img: post-10
 img: ''
 slug: bangun-kesuksesan-di-evoush
 alt: Bisnis Evoush

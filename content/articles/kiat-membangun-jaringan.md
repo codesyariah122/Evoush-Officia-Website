@@ -1,7 +1,7 @@
 ---
 title: Kiat membangun jaringan
 description: Jaringan yang luas merupakan faktor yang unggul dalam meraih kesuksesan dalam berbisnis
-dir_img: ''
+dir_img: post-3
 img: ''
 slug: kiat-membangun-jaringan
 alt: Bisnis Evoush

@@ -1,7 +1,7 @@
 ---
 title: Team Anda Keluarga Anda
 description: Keluarga menjadi sebuah penggerak yang memacu kita untuk terus berjalan meraih target sukses kita
-dir_img: ''
+dir_img: post-5
 img: ''
 slug: team-anda-keluarga-anda
 alt: Bisnis Evoush

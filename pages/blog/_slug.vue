@@ -2,8 +2,11 @@
   <article>
     <div class="container-fluid h-100">
       <div class="row justify-content-start h-100">
-        <div class="col-sm-4 hidden-md-down">
+        <div v-if="article.img" class="col-sm-4 hidden-md-down">
           <img :src="require(`~/assets/blog/images/${article.dir_img}/${article.img}`)" class="img-responsive" :alt="article.alt">
+        </div>
+        <div v-else class="col-sm-4 hidden-md-down">
+          <img :src="`https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60`" class="img-responsive">
         </div>
         <div class="col-sm-8 col-lg-8 col-xl-8">
           <h1 class="ml-5">{{article.title}}</h1>

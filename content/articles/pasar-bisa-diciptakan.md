@@ -1,7 +1,7 @@
 ---
 title: Pasar bisa di ciptakan
 description: Selera pasar menjadi target dalam pemasaran produk
-dir_img: ''
+dir_img: post-4
 img: ''
 slug: pasar-bisa-di-ciptakan
 alt: Bisnis Evoush

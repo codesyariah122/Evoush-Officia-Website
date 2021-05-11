@@ -5,9 +5,6 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-6" v-for="article in articles" :key="article.slug">
-          <pre>
-            {{article.slug}}
-          </pre>
             <div class="card mb-3"  style="max-width: 540px;">
               <div class="row no-gutters">
                 <div class="col-md-4">
