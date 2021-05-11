@@ -16,7 +16,8 @@
 			<div class="container">
 				<div class="row justify-content-end">
 					<div class="col-12">
-					 	<h1 class="text-center" style="font-family: Walkway;"> {{ merchant.business_name }} <span style="font-family: Poiret One;"> Products</span> </h1>				
+					 	<h1 class="text-center" style="font-family: Walkway;"> {{ merchant.business_name }} <span style="font-family: Poiret One;"> Products</span> </h1>
+					 	<h1 class="underline" style="margin-top: 1rem;"></h1>		
 					</div>
 				</div>
 				
