@@ -65,7 +65,7 @@
 <script>
 export default {
   async asyncData({ $content, params }) {
-    const articles = await $content('articles', params.slug)
+    const articles = await $content('blog', params.slug)
       .where({
         'author.name': {
           $regex: [params.author, 'i']

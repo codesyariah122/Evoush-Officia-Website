@@ -6,7 +6,7 @@
 					<h1 class="display-4 text-center" style="font-family:'Walkway'; text-transform: lowercase!important; color: #ff3b40; font-weight: 900;">
               <BrandIcon style="width:70px; height:70px;"/>{{home.brand}} <span style="font-family: 'Reey Regular'; text-transform: capitalize; color: #fff;"> {{home.country}} </span>
             </h1>
-					<p class="blockquote-text text-justify" style="font-family:'Poiret One'; font-size: 21px; color: white;" v-html="home.context"> </p>
+					<p class="blockquote-text text-justify" style="font-family:'Poiret One'; font-size: 21px; color: white;" v-html="home.context"></p>
 				</div>
 			</div>
 		</div>

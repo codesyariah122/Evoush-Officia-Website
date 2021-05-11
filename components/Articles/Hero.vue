@@ -29,7 +29,7 @@
 				home: {
 					brand: "evoush",
           title: "Articles",
-					context: `<span style="font-family: Walkway; color: red;">evoush</span> artcile page.`
+					context: `Kumpulan artikel menarik seputar tips berbisnis di <span style="font-family: Walkway; color: red;">evoush</span> bisa kalian dapatkan di official website <span style="font-family: Walkway; color: red;">evoush</span>, pastikan anda update terus informasi dari kami.`
 
 				}
 			}
@@ -102,7 +102,7 @@
 	}
 
   .jumbotron-content .container{
-    margin-top: .1rem!important;
+    margin-top: -3rem!important;
   }
 
 	.jumbotron-content .display-4{

@@ -1,14 +1,17 @@
 ---
-title: Great Article
-description: I am a description of a great article
-img: https://images.unsplash.com/photo-1588514727390-91fd5ebaef81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=639&q=80
-alt: article 7
+title: Bangun Kesuksesan di evoush
+description: Faktor yang mendorong kesuksesan anda dalam berbisnis
+dir_img: ''
+img: ''
+slug: bangun-kesuksesan-di-evoush
+alt: Bisnis Evoush
 author: 
-  name: Maria
-  bio: All about Maria and where she works and what she does
-  img: https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2551&q=80
+	name: Puji Evoush
+	bio: Freelancer Web Developer Evoush Indonesia
+	img: https://avatars.githubusercontent.com/u/13291805?v=4
 tags: 
-  - web development
+  - produk_evoush
+  - bisnis_evoush
 ---
 ## Hello this article is great
 

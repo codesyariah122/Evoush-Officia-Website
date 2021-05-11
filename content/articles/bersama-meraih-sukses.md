@@ -1,18 +1,20 @@
 ---
-title: My First Blog Post
-description: Learning how to use @nuxt/content to create a blog
-img: https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60
-alt: my first blog post
+title: Bersama meraih sukses
+description: Membangun jaringan dan menjadi sukses bersama team adalah sebuah nikmat
+dir_img: ''
+img: ''
+slug: bersama-meraih-sukses
+alt: Bisnis Evoush
 author: 
-  name: Peter
-  bio: All about Peter and what he does and where he works
-  img: https://images.unsplash.com/photo-1533636721434-0e2d61030955?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80
+	name: Puji Evoush
+	bio: Freelancer Web Developer Evoush Indonesia
+	img: https://avatars.githubusercontent.com/u/13291805?v=4
 tags: 
-  - nuxtjs
-  - javascript
+  - produk_evoush
+  - bisnis_evoush
 ---
 
-Welcome to my first blog post using content module
+## Welcome to my second blog post using content module
 
 ## This is a heading
 This is some more info

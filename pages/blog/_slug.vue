@@ -1,87 +1,26 @@
 <template>
-  <article
-    class="flex lg:h-screen w-screen lg:overflow-hidden xs:flex-col lg:flex-row"
-  >
-    <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
-      <img
-        :src="article.img"
-        :alt="article.alt"
-        class="absolute h-full w-full object-cover"
-      />
-      <div class="overlay"></div>
-      <div class="absolute top-32 left-32 text-white">
-        <NuxtLink to="/"><Logo /></NuxtLink>
-        <div class="mt-16 -mb-3 flex uppercase text-sm">
-          <p class="mr-3">
-            {{ formatDate(article.updatedAt) }}
-          </p>
-          <span class="mr-3">•</span>
-          <p>{{ article.author.name }}</p>
+  <article>
+    <div class="container-fluid h-100">
+      <div class="row justify-content-start h-100">
+        <div class="col-sm-4 hidden-md-down">
+          <img :src="require(`~/assets/blog/images/${article.dir_img}/${article.img}`)" class="img-responsive" :alt="article.alt">
         </div>
-        <h1 class="text-6xl font-bold">{{ article.title }}</h1>
-        <span v-for="(tag, id) in article.tags" :key="id">
-          <NuxtLink :to="`/blog/tag/${tags[tag].slug}`">
-            <span
-              class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
-            >
-              {{ tags[tag].name }}
-            </span>
-          </NuxtLink>
-        </span>
+        <div class="col-sm-8 col-lg-8 col-xl-8">
+          <h1 class="ml-5">{{article.title}}</h1>
+          <div class="ml-5">
+             <!-- content from markdown -->
+             <nuxt-content :document="article" />
+             <!-- content author component -->
+             <author :author="article.author" />
+             <!-- prevNext component -->
+             <PrevNext :prev="prev" :next="next" class="mt-8" />
+          </div>
+        </div>
       </div>
-      <div class="flex absolute top-3rem right-3rem">
-        <NuxtLink
-          to="/"
-          class="mr-8 self-center text-white font-bold hover:underline"
-        >
-          All articles
-        </NuxtLink>
-        <a
-          href="https://nuxtjs.org/blog/creating-blog-with-nuxt-content"
-          class="mr-8 self-center text-white font-bold hover:underline"
-        >
-          Tutorial
-        </a>
-        <AppSearchInput />
-      </div>
-    </div>
-    <div
-      class="relative xs:py-8 xs:px-8 lg:py-32 lg:px-16 lg:w-1/2 xs:w-full h-full overflow-y-scroll markdown-body post-right custom-scroll"
-    >
-      <h1 class="font-bold text-4xl">{{ article.title }}</h1>
-      <p>{{ article.description }}</p>
-      <p class="pb-4">Post last updated: {{ formatDate(article.updatedAt) }}</p>
-      <!-- table of contents -->
-      <nav class="pb-6">
-        <ul>
-          <li
-            v-for="link of article.toc"
-            :key="link.id"
-            :class="{
-              'font-semibold': link.depth === 2
-            }"
-          >
-            <nuxtLink
-              :to="`#${link.id}`"
-              class="hover:underline"
-              :class="{
-                'py-2': link.depth === 2,
-                'ml-2 pb-2': link.depth === 3
-              }"
-              >{{ link.text }}</nuxtLink
-            >
-          </li>
-        </ul>
-      </nav>
-      <!-- content from markdown -->
-      <nuxt-content :document="article" />
-      <!-- content author component -->
-      <author :author="article.author" />
-      <!-- prevNext component -->
-      <PrevNext :prev="prev" :next="next" class="mt-8" />
     </div>
   </article>
 </template>
+
 <script>
 export default {
   async asyncData({ $content, params }) {
@@ -103,31 +42,46 @@ export default {
       next
     }
   },
+
+
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
-    }
-  }
+    },
+
+   
+  },
+
+  head(){
+      return {
+        title: `Evosuh::Article - ${this.article.title}`,
+        meta: [
+          { hid: 'description', name: 'Evoush Indonesia', content: 'Your Eternal Future' },
+          { name: 'description', content: 'Bisnis Evoush Indonesia'},
+          { name: 'keyword', content: 'Bisnis Evoush Bisnis Menjanjikan'},
+          { property: 'og-title', content: 'Evoush Indonesia'},
+          { property: 'og-description', content: 'Kumpulan Artikel Menarik Seputar Bisnis Evoush'},
+          { property: 'og-image', content: 'https://evoush.vercel.app/_nuxt/img/vector15.05196e7.jpg'},
+          { property: 'og-url', content: 'https://evoush.vercel.app'}
+        ]
+      }
+    },
 }
 </script>
-<style>
-.nuxt-content p {
-  margin-bottom: 20px;
+
+
+<style scoped>
+article{
+  height: 100%;
 }
-.nuxt-content h2 {
-  font-weight: bold;
-  font-size: 28px;
-}
-.nuxt-content h3 {
-  font-weight: bold;
-  font-size: 22px;
-}
-.icon.icon-link {
-  background-image: url('~assets/svg/icon-hashtag.svg');
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-size: 20px 20px;
+
+
+
+/* DESKTOP VERSION */
+@media (min-width: 992px) { 
+  .context{
+    margin-left: 2rem;
+  }
 }
 </style>

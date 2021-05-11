@@ -5,19 +5,27 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-6" v-for="article in articles" :key="article.slug">
+          <pre>
+            {{article.slug}}
+          </pre>
             <div class="card mb-3"  style="max-width: 540px;">
               <div class="row no-gutters">
                 <div class="col-md-4">
-                  <img v-if="article.img" :src="`../assets/blog/images/${article.img}`" alt="test" class="img-responsive">
+                  <div v-if="article.img">
+                    <img :src="require(`~/assets/blog/images/${article.dir_img}/${article.img}`)" :alt="article.alt" class="img-responsive">
+                  </div>
+                  <div v-else>
+                    <img :src="`https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60`" class="img-responsive">
+                  </div>
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <nuxt-link :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-                    <h5 class="card-title">{{ article.title }}</h5>
-                    <p>by {{ article.author.name }}</p>
-                    <p class="card-text">{{ article.description }}</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </nuxt-link>
+                    <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+                      <h5 class="card-title">{{ article.title }}</h5>
+                      <p>by {{ article.author.name }}</p>
+                      <p class="card-text">{{ article.description }}</p>
+                      <p class="card-text"><small class="text-muted"> {{article.created_at}} </small></p>
+                    </NuxtLink>
                   </div>
                 </div>
               </div>
@@ -54,6 +62,7 @@
 
 <script>
   import Hero from '~/components/Articles/Hero'
+
   export default {
     data(){
       return {
@@ -79,11 +88,11 @@
     },
     async asyncData({ $content, params }) {
       const articles = await $content('articles', params.slug)
-      .only(['title', 'description', 'img', 'slug', 'author'])
+      .only(['title', 'description', 'dir_img', 'img', 'slug', 'author'])
       .sortBy('createdAt', 'desc')
       .fetch()
       const tags = await $content('tags', params.slug)
-      .only(['name', 'description', 'img', 'slug'])
+      .only(['name', 'description',  'img', 'slug'])
       .sortBy('createdAt', 'asc')
       .fetch()
       return {

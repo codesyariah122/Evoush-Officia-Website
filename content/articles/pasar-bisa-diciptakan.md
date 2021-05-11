@@ -1,17 +1,20 @@
 ---
-title: My Second Blog Post
-description: Learning how to use @nuxt/content to create a blog
-img: https://images.unsplash.com/photo-1588432415392-51f6e1a61d5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80
-alt: my second blog post
+title: Pasar bisa di ciptakan
+description: Selera pasar menjadi target dalam pemasaran produk
+dir_img: ''
+img: ''
+slug: pasar-bisa-di-ciptakan
+alt: Bisnis Evoush
 author: 
-  name: Maria
-  bio: All about Maria and where she works and what she does
-  img: https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2551&q=80
+  name: Puji Evoush
+  bio: Freelancer Web Developer Evoush Indonesia
+  img: https://avatars.githubusercontent.com/u/13291805?v=4
 tags: 
-  - nuxtjs
+  - produk_evoush
+  - bisnis_evoush
 ---
 
-## Welcome to my second blog post using content module
+Welcome to my first blog post using content module
 
 ## This is a heading
 This is some more info

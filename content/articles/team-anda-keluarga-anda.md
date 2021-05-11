@@ -1,15 +1,17 @@
 ---
-title: My Third Blog Post
-description: Learning how to use @nuxt/content to create a blog
-img: https://images.unsplash.com/photo-1588010986054-727675e6f36a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60
-alt: my third blog post
+title: Team Anda Keluarga Anda
+description: Keluarga menjadi sebuah penggerak yang memacu kita untuk terus berjalan meraih target sukses kita
+dir_img: ''
+img: ''
+slug: team-anda-keluarga-anda
+alt: Bisnis Evoush
 author: 
-  name: Alexandra
-  bio: All about Alexandra and where she works and what she does
-  img: https://images.unsplash.com/photo-1506956191951-7a88da4435e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60
+  name: Puji Evoush
+  bio: Freelancer Web Developer Evoush Indonesia
+  img: https://avatars.githubusercontent.com/u/13291805?v=4
 tags: 
-  - javascript
-  - web development
+  - produk_evoush
+  - bisnis_evoush
 ---
 
 ## Welcome to my third blog post using content module
