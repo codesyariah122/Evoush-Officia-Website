@@ -3,9 +3,9 @@
 		<div class="container">
 			<div class="row no-gutters justify-content-center">
 				<div class="col-md-4 col-xs-4 col-sm-4">
-          <h1 class="display-4 text-center" style="font-family:'Walkway'; text-transform: lowercase!important; color: red; font-weight: 900;">
-            <BrandIcon/>{{home.brand}} <span style="font-family: 'Reey Regular'; text-transform: capitalize; color: #fff;"> {{home.title}} </span>
-          </h1>
+          <h1 class="display-4 text-center" style="font-family:'Walkway'; text-transform: lowercase!important; color: #ff3b40; font-weight: 900;">
+              <BrandIcon style="width:70px; height:70px;"/>{{home.brand}} <span style="font-family: 'Reey Regular'; text-transform: capitalize; color: #fff;"> {{home.country}} </span>
+            </h1>
 					<p class="blockquote-text text-justify" style="font-family:'Poiret One'; font-size: 21px; color: white;" v-html="home.context"> </p>
 				</div>
 			</div>
@@ -29,7 +29,7 @@
 				home: {
 					brand: "evoush",
 					title: "About",
-					context: `<span style="font-family: Walkway; color: red; font-weight: 900;">Evoush</span> adalah merupakan sebuah merk dagang dari <br> 
+					context: `<span style="font-family: Walkway; color: red; font-weight: 900;">evoush</span> adalah merupakan sebuah merk dagang dari <br> 
           <span style="font-family: Walkway;">PT. Pineleng Indah Cemerlang</span>.`
 
 				}

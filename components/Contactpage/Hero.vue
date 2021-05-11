@@ -3,9 +3,9 @@
 		<div class="container">
 			<div class="row no-gutters justify-content-start">
 				<div class="col-md-4 col-xs-4 col-sm-4">
-					<h1 class="display-4 text-center" style="font-family:'Walkway'; text-transform: lowercase!important; color: red; font-weight: 900;">
-            <BrandIcon/>{{home.brand}} <span style="font-family: 'Reey Regular'; text-transform: capitalize; color: #fff;"> {{home.title}} </span>
-          </h1>
+					<h1 class="display-4 text-center" style="font-family:'Walkway'; text-transform: lowercase!important; color: #ff3b40; font-weight: 900;">
+              <BrandIcon style="width:70px; height:70px;"/>{{home.brand}} <span style="font-family: 'Reey Regular'; text-transform: capitalize; color: #fff;"> {{home.country}} </span>
+            </h1>
 					<p class="blockquote-text text-justify" style="font-family:'Poiret One'; font-size: 21px; color: white;" v-html="home.context"> </p>
 				</div>
 			</div>
@@ -29,7 +29,7 @@
 				home: {
 					brand: "evoush",
 					title: "Contact",
-					context: `Saat ini Anda bisa menghubungi contact customer <span style="font-family: Walkway; color: crimson;">Evoush</span> di halaman ini guna mempermudah informasi yang anda perlukan dalam menjalankan Bisnis Evoush.`
+					context: `Saat ini Anda bisa menghubungi contact customer <span style="font-family: Walkway; color: crimson;">evoush</span> di halaman ini guna mempermudah informasi yang anda perlukan dalam menjalankan Bisnis Evoush.`
 
 				}
 			}
