@@ -27,12 +27,15 @@
 								</small></h4>
 							</div>
 							<div class="col-md-8">
-								<n-link :to="{
+								<!-- <n-link :to="{
 									name: 'checkout-url',
 									params: {prod}
 								}" class="btn btn-primary"> 
 								Order Now
-							</n-link>	
+							</n-link> -->
+							<a :href="product.checkout_url.display" class="btn btn-primary"> 
+								Order Now
+							</a>	
 						</div>
 					</div>
 
