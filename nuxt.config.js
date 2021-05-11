@@ -4,8 +4,8 @@ export default {
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: process.env.NAME,
-    description: process.env.SLOGAN,
+    title: "Evoush::Oficial",
+    // description: process.env.SLOGAN,
     htmlAttrs: {
       lang: 'en'
     },
