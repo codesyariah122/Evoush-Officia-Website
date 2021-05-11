@@ -5,10 +5,10 @@
 				<li class="nav-item"><nuxt-link to="/about" class="nav-link">About</nuxt-link></li>
 				<li class="nav-item"><nuxt-link to="/product" class="nav-link">Product</nuxt-link></li>
 				<li>
-					<nuxt-link to="/">
+					<a href="/">
 						<!-- <img :src="logo" class="img-responsive"> -->
 						<Logo/>
-					</nuxt-link>
+					</a>
 				</li>
 				<li class="nav-item"><nuxt-link to="/articles" class="nav-link">Articles</nuxt-link></li>
 				<li class="nav-item"><nuxt-link to="/contact" class="nav-link">Contact</nuxt-link></li>
