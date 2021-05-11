@@ -1,10 +1,13 @@
 export default {
   mode: 'universal',
-  loading: false,
+  loading: {
+    color: 'blue',
+    height: '5px'
+  },
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Evoush::Oficial",
+    // title: "Evoush::Oficial",
     // description: process.env.SLOGAN,
     htmlAttrs: {
       lang: 'en'
