@@ -3,7 +3,7 @@
 		<div class="parallax" :style="parallax.style">
 			<div class="row justify-content-center">
 				<div class="caption">
-					<h2 v-html="parallax.caption"></h2>
+					<!-- <h2 v-html="parallax.caption"></h2> -->
           <h1 v-html="parallax.company"></h1>
 					<br>
 				</div>
@@ -15,7 +15,7 @@
 <style></style>
 
 <script>
-	import HeroImg from '~/assets/images/model/evoush_model1.png'
+	import ParallaxImg from '~/assets/images/model/model2.jpg'
 
 	export default {
 		data(){

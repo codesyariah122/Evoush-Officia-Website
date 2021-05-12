@@ -16,6 +16,12 @@
 			<h1 class="underline" style="margin-top: 5rem;"></h1>
 			<!-- focus -->
 			<PanelFocus/>
+			<h1 class="underline" style="margin-top: 5rem;"></h1>
+
+			<!-- parallax end -->
+			<ParallaxEnd/>
+
+
 
 		</section>
 	</div>
@@ -38,6 +44,7 @@
 	import PanelIntent from "~/components/Aboutpage/PanelIntent.vue"
 	import PanelFocus from "~/components/Aboutpage/PanelFocus.vue"
 	import ParallaxAbout from '~/components/Aboutpage/ParallaxAbout.vue'
+	import ParallaxEnd from '~/components/Aboutpage/ParallaxEnd.vue'
 
 	export default {
 		data(){
@@ -49,7 +56,8 @@
 			Hero,
 			ParallaxAbout,
 			PanelIntent,
-			PanelFocus
+			PanelFocus,
+			ParallaxEnd
 		},
 		head(){
 			return {

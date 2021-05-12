@@ -14,7 +14,7 @@
 </template>
 
 <script>
-	import HeroImg from '~/assets/images/banner/reduce/header4.jpg'
+	import HeroImg from '~/assets/images/model/model3.jpg'
   import BrandIcon from '../Headers/brand.vue'
 
 	export default{
@@ -102,7 +102,7 @@
 		height: 840px;
 	}
   .jumbotron-content .container{
-    margin-top: 2rem!important;
+    margin-top: .1rem!important;
   }
 	.jumbotron-content .display-4{
 		text-transform: capitalize;
