@@ -3,22 +3,21 @@
 		<div class="row no-gutters">
 			<div class="col-md-4">
 				<img :src="product.assets[0].url" :alt="product.name" class="img-responsive">
-				<div class="container">
+			</div>
+			<div class="col-md-6">
+				<div class="card-body">
+					<h5 class="card-title"> {{product.name}} </h5> 
 					<n-link
 					:to="{
 						name: 'products-permalink',
 						params: { permalink: product.permalink },
-					}" class="btn btn-success"
+					}" class="btn btn-success btn-sm"
 					> View Product </n-link>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="card-body">
-					<h5 class="card-title"> {{product.name}} </h5>
-					<p class="card-text" v-html="product.seo.description"></p>
 					<p class="card-text"><small class="text-muted">
 						Category : {{product.categories[0].name}}
 					</small></p>
+					<p class="card-text" v-html="product.seo.description"></p>
+					
 					<footer>
 						<div class="row">
 							<div class="col-md-4">
@@ -27,16 +26,10 @@
 								</small></h4>
 							</div>
 							<div class="col-md-8">
-								<!-- <n-link :to="{
-									name: 'checkout-url',
-									params: {prod}
-								}" class="btn btn-primary"> 
-								Order Now
-							</n-link> -->
-							<a :href="product.checkout_url.display" class="btn btn-primary"> 
-								Order Now
-							</a>	
-						</div>
+								<a :href="product.checkout_url.display" class="btn btn-primary btn-sm"> 
+									Order Now
+								</a>	
+							</div>
 					</div>
 				</footer>
 			</div>
