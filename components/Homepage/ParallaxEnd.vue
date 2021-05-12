@@ -15,7 +15,7 @@
 <style></style>
 
 <script>
-	import HeroImg from '~/assets/images/model/evoush_model1.png'
+	import ParallaxImg from '~/assets/images/model/evoush_model1.png'
 
 	export default {
 		data(){
