@@ -8,8 +8,11 @@
         </n-link>
       </h3>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 mb-3">
         <product-view :product="product"></product-view>
+      </div>
+      <div class="col-12">
+        <hr>
       </div>
     </div>
   </div>

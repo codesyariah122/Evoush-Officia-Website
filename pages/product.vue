@@ -22,6 +22,7 @@
 				</div>
 				
 				<product-list :products="products"></product-list>
+				<h1 class="underline" style="margin-top: 1rem;"></h1>		
 			</div>
 		</section>
 	</div>

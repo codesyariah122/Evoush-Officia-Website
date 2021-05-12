@@ -38,7 +38,6 @@
 							</a>	
 						</div>
 					</div>
-
 				</footer>
 			</div>
 		</div>
