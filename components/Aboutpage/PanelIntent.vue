@@ -8,7 +8,7 @@
 			</div>
 
 			<div class="col-md-6 ml-2">
-				<h2>Evoush Office</h2>
+				<h2 style="font-family: Walkway;">Your Eternal <span style="font-family: Reey Regular;"> Future </span></h2>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
