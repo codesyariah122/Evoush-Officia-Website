@@ -13,7 +13,7 @@
 
 
 <script>
-	import ParallaxImg from '~/assets/images/model/evoush_model2.jpg'
+	import ParallaxImg from '~/assets/images/model/evoush_model2.png'
   
 	export default {
 		data(){
