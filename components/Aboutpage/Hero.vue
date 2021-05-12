@@ -59,7 +59,7 @@
 .jumbotron-content .container {
   z-index: 1;
   position: relative;
-  margin-left: 5rem!important;
+  margin-left: 1rem!important;
 }
 
 .jumbotron-content::after {
@@ -90,7 +90,7 @@
 
 .jumbotron-content p {
   font-weight: 500;
-  font-size: 35px;
+  font-size: 23px;
   color: #FFFFF0;
   font-family: "Poiret One", cursive;
   font-weight: bold;
