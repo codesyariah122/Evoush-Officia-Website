@@ -2,7 +2,7 @@
 	<nav class="navbar navbar-expand navbar-light sticky-top">
 		<div class="collapse navbar-collapse">
 			<ul class="navbar-nav mx-auto">
-				<li class="nav-item"><nuxt-link to="/about" class="nav-link">About</nuxt-link></li>
+				<li class="nav-item"><a href="/about" class="nav-link">About</a></li>
 				<li class="nav-item"><a href="/product" class="nav-link">Product</a></li>
 				<li>
 					<a href="/">
