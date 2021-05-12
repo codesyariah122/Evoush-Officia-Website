@@ -43,7 +43,7 @@
 
 			<div class="row justify-content-center mb-5 mt-3">
 				<div class="col-4">
-					<n-link to="/product" class="btn btn-info">Kembali</n-link>
+					<a to="/product" class="btn btn-info">Kembali</a>
 				</div>
 				<div class="col-6">
 					<a :href="product.checkout_url.checkout" class="btn btn-primary"> 
