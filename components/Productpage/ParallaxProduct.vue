@@ -1,22 +1,20 @@
 <template>
 	<div>	
-		<div class="parallax" :style="parallax.style">
+		<div class="parallax-home" :style="parallax.style">
 			<div class="row justify-content-center">
-				<div class="caption">
-					<h2 v-html="parallax.caption"></h2>
-          <h1 v-html="parallax.company"></h1>
-					<br>
+				<div class="caption-parallax-home">
+          <p v-html="parallax.context.paragraph" class="mt-2"></p>
+					<h2 v-html="parallax.context.title"></h2>
 				</div>
 			</div>
 		</div>
 	</div>
 </template>
 
-<style></style>
 
 <script>
-	import ParallaxImg from '~/assets/images/banner/header4.jpg'
-
+	import ParallaxImg from '~/assets/images/model/model5.1.jpg'
+  
 	export default {
 		data(){
 			return {
@@ -24,9 +22,10 @@
 					style: {
 						'background-image': `url('${ParallaxImg}')`,
 					},
-					caption: `Kami adalah sarana bagi <span style="font-family: SpringSakura;">Semangat</span> Anda <br/> untuk <span style="font-family: SpringSakura;"> Membangun </span> <span style="font-family: SpringSakura;">Bisnis</span> yang <span style="font-family: SpringSakura; color: coral;"> Cemerlang</span>`,
-          company: `<span style="font-family: 'walkway';color: red; font-weight: 900;">Evoush</span> 
-                    <span style="font-family: 'Reey Regular'; color: #fff;text-shadow: 0 3px 20px rgba(0, 0, 0, 1.5);">Indonesia</span>`
+					context: {
+            title: `<span style="font-family: Walkway; color: red;">Evoush</span> <span style="font-family:'Reey Regular'; color: #fff">Indonesia</span>`,
+            paragraph: '<span style="font-family: Walkway;">Your Eternal</span> <span style="font-family: Reey Regular; color: red;">Future</span>.'
+          }
 				}
 			}
 		}
@@ -34,50 +33,53 @@
 </script>
 
 <style>
-  
-  .parallax{
-    min-height: 500px; 
+  .parallax-home{
+    min-height: 600px; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+     -webkit-background-size: cover;
     margin:0;
   }
 
-  .caption {
+  .caption-parallax-home {
     background:rgba(255,255,255,0.3);
     /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
     position: absolute;
-    margin-top: 15rem;
+    margin-top: 20rem!important;
     width: 50%;
     text-align: center;
     color: #fff;
   }
-  .caption h2 {
-    font-family: 'Walkway', cursive;font-weight:bold;
+  .caption-parallax-home h2 {
+    font-family: 'Poiret One', cursive;font-weight:bold;
     text-shadow: 0 3px 20px rgba(0, 0, 0, 1.7);
     margin-bottom: .9rem;
     font-size: 18px;
   }
-  .caption p{
-    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+  .caption-parallax-home p{
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 1.7);
     font-weight: 700;
     width: 90%;
     font-size: 14px;
-    text-align: justify;
+    text-align: center;
   }
-  .caption a{
+  .caption-parallax-home a{
     font-size: 18px;
   }
   @media only screen and (max-device-width: 812px) {
     .parallax {
       background-attachment: scroll;
     }
+/*    .caption-parallax-home{
+      margin-top: 22rem!important;
+    }*/
   }
  /*DESKTOP VERSION*/
 @media (min-width: 992px) { 
-    /* all parallax top and bottom */
-    .parallax{
+	  /* all parallax top and bottom */
+    .parallax-home{
       min-height: 500px; 
       background-attachment: fixed;
       background-position: center;
@@ -86,24 +88,30 @@
       margin:0;
     }
 
-    .caption {
+    .caption-parallax-home {
       background:rgba(255,255,255,0.3);
       /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
       position: absolute;
-      margin-top: 15.5rem;
+      margin-top: 16.5rem!important;
       width: 75%;
       text-align: center;
       color: #fff;
     }
-    .caption h2 {
-      font-family:Walkway !important;
+    .caption-parallax-home h2 {
+      font-family:SpringSakura !important;
       font-weight:600;
       text-shadow: 0 3px 20px rgba(0, 0, 0, 1.7);
       margin-bottom: .9rem;
       font-size: 41px;
+      margin-top: 1rem;
     }
-    .caption a{
+    .caption-parallax-home a{
       font-size: 18px;
     }
+    .caption-parallax-home p{
+    font-size: 31px;
+    text-align: center;
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 1.7);
+  }
 }
 </style>

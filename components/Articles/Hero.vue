@@ -52,6 +52,7 @@
   -webkit-background-size: cover;
   background-size: cover;
   position: relative;
+  clip-path: polygon(50% 0%, 100% 0, 100% 89%, 92% 92%, 84% 94%, 50% 100%, 0 100%, 0 59%, 0 0);
 }
 
 .jumbotron-content .container {

@@ -1,7 +1,7 @@
 <template>
 	<div class="jumbotron jumbotron-fluid jumbotron-content" :style="image">
 		<div class="container">
-			<div class="row no-gutters justify-content-start">
+			<div class="row no-gutters justify-content-end ml-5">
 				<div class="col-md-4 col-xs-4 col-sm-4">
 					<h1 class="display-4 text-center" style="font-family:'Walkway'; text-transform: lowercase!important; color: #ff3b40; font-weight: 900;">
               <BrandIcon style="width:70px; height:70px;"/>{{home.brand}} <span style="font-family: 'Reey Regular'; text-transform: capitalize; color: #fff;"> {{home.country}} </span>
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-	import HeroImg from '~/assets/images/banner/header3.jpg'
+	import HeroImg from '~/assets/images/model/model2.jpg'
   import BrandIcon from '../Headers/brand.vue'
 
 	export default{
@@ -52,6 +52,7 @@
   -webkit-background-size: cover;
   background-size: cover;
   position: relative;
+  clip-path: polygon(50% 0%, 100% 0, 100% 89%, 92% 92%, 84% 94%, 50% 100%, 0 100%, 0 59%, 0 0);
 }
 
 .jumbotron-content .container {

@@ -1,42 +1,45 @@
 <template>
-	<div class="container">
-		<div class="row mb-5">
-			<div class="col-md-4 mx-auto intent-start">
-				<div class="polaroid">
-					<img :src="image1" class="img-responsive polaroid-vector">
+	<div>
+		<!-- <pre>
+			{{merchant}}
+		</pre> -->
+
+		<!-- introd -->
+		<div id="introduction">
+			<div data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="1500">
+				<div class="panel panel-default panel-header" style="margin-top: -5rem;">
+					<div class="panel-body panel-body-header">
+						<div class="row">
+							<div data-aos="fade-left">
+								<div class="col-md-3">
+									<img :src="merchant.logo" class="img-responsive anim">
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<h2 class="ml-1 mb-5">Product <span style="font-family:Walkway; color: #ff3b40;">{{merchant.business_name}}</span> </h2>
+								<p class="mt-3">
+									{{merchant.business_description}}
+								</p>
+								<img :src="merchant.cover" class="img-responsive" style="height:80px; width:170px;">
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-
-			<div class="col-md-6 ml-2">
-				<h2>Evoush Office</h2>
-				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-			</div>
 		</div>
+		<!-- end intro -->
 	</div>
 </template>
 
 <script>
-	import Depan from '~/assets/images/kantor/Masuk.jpg'
-
-	export default{
-		data(){
-			return {
-				image1: Depan	
-			}
-		}
+	export default {
+		props: ['merchant']
 	}
 </script>
 
-<style>
 
-.intent-start {
-	width: 100%;
-}
+<style>
 /*panel*/
 .panel-header{
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
@@ -77,41 +80,39 @@
   margin-left: 5rem;
   margin-bottom: 2rem;
 }
+
 /*end panel;*/
+/* polaroid */
+.polaroid{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+  color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top:2rem;
+}
 
-/*polaroid*/
-    .polaroid{
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
-      color: rgba(0,0,0,0.7);
-      position: relative;
-      text-align: center;
-      margin-bottom: 3rem;
-      margin-top:2rem;
-    }
+.polaroid img{
+  width: 350px;
+  height: 300px;
+  margin-top: 1rem;
+}
+.polaroid-body p{
+  padding: 15px;
+  color:black;
+  font-family: 'Poiret One', cursive;font-weight:bold;
+  font-size: 25px; 
+}
 
-    .polaroid-body h2{
-      padding: 15px;
-      color:black;
-      font-family: 'Poiret One', cursive;font-weight:bold;
-      font-size: 25px;
-    }
+.polaroid-body h2{
+  padding: 25px;
+  color:black;
+  font-family: 'Poiret One', cursive;font-weight:bold;
+  font-size: 25px;
+}
+/* end polaroid */
 
-    .polaroid-body p{
-      padding: 15px;
-      color:black;
-      font-family: 'Poiret One', cursive;font-weight:bold;
-      font-size: 25px; 
-    }
-
-    .polaroid-vector{
-      width: 350px!important;
-      height: 400px!important;
-      margin-top: -.1rem!important;
-      margin-left: -.1rem!important;
-    }
-    /*end polaroid*/
-
-/*Mobile setup*/
+/*mobile setup*/
 @media only screen and (max-device-width: 812px) {
 	.panel-header img{
 		width: 290px!important;
@@ -119,12 +120,12 @@
 	}
 }
 /*end mobile*/
-
 /* DESKTOP VERSION */
   @media (min-width: 992px) { 
-  	/*panel*/
+
+    /*panel*/
     .panel-header{
-      box-shadow: 0 3px 20px rgba(0, 0, 0, 1.7);
+      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
       border-radius: 12px;
       margin-top: -7rem!important;
       padding: 12px;
@@ -191,11 +192,12 @@
     }
 
     .polaroid-vector{
-      width: 450px!important;
-      height: 350px!important;
-      margin-top: -1rem!important;
-      margin-left: -.5rem!important;
+      width: 500px;
+      height: 600px;
+      margin-top: 1rem;
+      margin-left: .1rem;
     }
     /*end polaroid*/
-  }	
+
+  }
 </style>

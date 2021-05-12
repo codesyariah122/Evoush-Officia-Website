@@ -13,17 +13,14 @@
 					{{JSON.stringify(categories, null, 2)}}
 				</pre>
 			</div> -->
-			<div class="container">
-				<div class="row justify-content-end">
-					<div class="col-12">
-					 	<h1 class="text-center" style="font-family: Walkway;"> {{ merchant.business_name }} <span style="font-family: Poiret One;"> Products</span> </h1>
-					 	<h1 class="underline" style="margin-top: 1rem;"></h1>		
-					</div>
-				</div>
-				
-				<product-list :products="products"></product-list>
-				<h1 class="underline" style="margin-top: 1rem;"></h1>		
-			</div>
+
+			<PanellHeader :merchant="merchant"/>
+			<h1 class="underline mb-5" style="margin-top: 5rem;"></h1>
+
+			<product-list :products="products"></product-list>
+			<h1 class="underline" style="margin-top: 1rem;"></h1>
+
+			<ParallaxProduct/>
 		</section>
 	</div>
 </template>
@@ -42,6 +39,8 @@
 
 <script>
 	import Hero from '~/components/Productpage/Hero'
+	import PanellHeader from '~/components/Productpage/PanellHeader'
+	import ParallaxProduct from '~/components/Productpage/ParallaxProduct'
 
 	export default {
 		data(){
@@ -50,7 +49,9 @@
 			}
 		},
 		components: {
-			Hero
+			Hero,
+			PanellHeader,
+			ParallaxProduct
 		},
 
 		async asyncData({ $commerce }) {

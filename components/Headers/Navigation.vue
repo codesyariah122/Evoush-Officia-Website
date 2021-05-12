@@ -3,7 +3,7 @@
 		<div class="collapse navbar-collapse">
 			<ul class="navbar-nav mx-auto">
 				<li class="nav-item"><nuxt-link to="/about" class="nav-link">About</nuxt-link></li>
-				<li class="nav-item"><nuxt-link to="/product" class="nav-link">Product</nuxt-link></li>
+				<li class="nav-item"><a href="/product" class="nav-link">Product</a></li>
 				<li>
 					<a href="/">
 						<!-- <img :src="logo" class="img-responsive"> -->
