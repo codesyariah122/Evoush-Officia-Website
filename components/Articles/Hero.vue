@@ -14,7 +14,7 @@
 </template>
 
 <script>
-	import HeroImg from '~/assets/images/banner/reduce/header2.jpg'
+	import HeroImg from '~/assets/images/model/model24.jpg'
   import BrandIcon from '../Headers/brand.vue'
 
 	export default{

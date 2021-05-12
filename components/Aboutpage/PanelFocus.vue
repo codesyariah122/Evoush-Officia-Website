@@ -1,169 +1,268 @@
 <template>
-	<div class="container">
-		<div class="row mb-5">
-			<div class="col-md-4 mx-auto intent-start">
-				<div class="polaroid">
-					<img :src="image1" class="img-responsive polaroid-vector">
-				</div>
-			</div>
+  <div>
+    <div id="focus">
+      <div class="panel panel-default panel-focus">
+        <div class="panel-body panel-body-focus">
+          <div v-for="panel in panels">
+            <div v-if="panel.id % 2 == 1">
+              <div class="row">
+                <div class="col-md-4 col-xs-12 col-sm-12">
+                  <div data-aos="zoom-out-left" data-aos-easing="ease-in-sine" data-aos-duration="1500">
+                    <img :src="panel.vector" class="img-responsive" style="width: 500px;">
+                  </div>
+                </div>
+                <div class="col-md-6 col-xs-12 col-sm-12 content ganjil">
+                  <div data-aos="zoom-out-right" data-aos-easing="ease-out-sine" data-aos-duration="1500">
+                    <h1 style="font-family: Walkway; color:#ff3b40; font-weight: 900;" v-html="panel.context.header"></h1>
 
-			<div class="col-md-6 ml-2">
-				<h2>Evoush Indonesia</h2>
-				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-			</div>
-		</div>
-	</div>
+                    <p class="ml-1">
+                      Alamat : {{panel.context.Alamat.lokasi}} <br>
+                      Jam : Buka - {{panel.context.Alamat.jam}} | 
+                      <span v-if="status == 'Tutup'" class="text-danger" style="font-weight: bold;"> {{status}}</span> 
+                      <span v-else-if="status == 'Belum Buka'" class="text-secondary" style="font-weight: bold;">{{status}}</span> 
+                      <span v-else class="text-success" style="font-weight: bold;"> {{status}} </span>
+                      <br>
+                      Kesehatan &amp; Keselamatan : <span v-html="panel.context.Alamat.kesehatan_keselamatan"></span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div v-if="panel.anim" class="row justify-content-end mt-2 mb-2">
+                <div class="p-2">
+                  <img :src="panel.anim" class="img-responsive anim">
+                </div>
+              </div>
+              <h1 class="underline"></h1>
+            </div>
+
+            <div v-else class="mb-5">
+              <div class="row">
+                <div class="genap col-12 col-xs-12 col-sm-12">
+                  <div data-aos="zoom-out-left" data-aos-easing="ease-in-sine" data-aos-duration="1500">
+                    <div class="embed-responsive embed-responsive-21by9">
+                        <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" :src="panel.lokasi.map" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=16/-7.4608/112.7403&amp;layers=N">View Larger Map</a></small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-	import Depan from '~/assets/images/kantor/Depan.jpg'
+  import Vector1 from '~/assets/images/kantor/Depan.jpg'
+  import Anim1 from '~/assets/images/animated/anim30.gif'
+  import Anim2 from '~/assets/images/vector_image/vector15.jpg'
 
-	export default{
-		data(){
-			return {
-				image1: Depan	
-			}
-		}
-	}
+  export default {
+    data(){
+      return {
+        status: '',
+        time:{
+          now: null,
+          close: 18,
+          buka: 8
+        },
+        panels: [
+          {
+            id:1,
+            context: {
+              header: `Evoush <span style="font-family: Reey Regular; color:#000;">Indonesia</span>`,
+              Alamat: {
+                lokasi: "Pergudangan sirie, Jl. Raya Rangkah Kidul No.20, Rangkah Kidul, Kec. Sidoarjo, Kabupaten Sidoarjo, Jawa Timur 61234",
+                jam: "08:00",
+                kesehatan_keselamatan: `
+                  Perlu janji temu <br/> 
+                  <ol>
+                    <li>Wajib mengenakan masker</li>
+                    <li>Wajib mengukur suhu tubuh</li> 
+                    <li>Staf mengenakan masker</li>
+                    <li>Staf telah melakukan pengukuran suhu tubuh</li>
+                    <li>Staf wajib menyemprotkan disinfektan ke permukaan di antara kunjungan pelanggan</li>
+                  </ol>`,
+                map: "https://www.openstreetmap.org/export/embed.html?bbox=112.73208618164064%2C-7.467283443100185%2C112.7485227584839%2C-7.45424124788113&amp;layer=mapnik"
+              }
+            },
+            anim: Anim1,
+            vector: Vector1,
+          },
+
+          {
+            id:2,
+            lokasi: {
+             map: 'https://www.openstreetmap.org/export/embed.html?bbox=112.73208618164064%2C-7.467283443100185%2C112.7485227584839%2C-7.45424124788113&amp;layer=mapnik'
+            },
+            anim: Anim1,
+            vector: Vector1,
+          }
+         
+        ]
+      }
+    },
+
+    mounted(){
+      this.getClose()
+    },
+    methods: {
+      getClose(){
+        this.time.now = new Date().getHours()
+        if(this.time.now > this.time.close){
+          this.status = "Tutup"
+        }else if(this.time.now < this.time.buka) {
+          this.status = "Belum Buka"
+        }else{
+          this.status = "Buka"
+        }
+      }
+    }
+  }
 </script>
 
 <style>
-
-.intent-start {
-	width: 100%;
-}
 /*panel*/
-.panel-header{
+.panel-focus{
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
   border-radius: 12px;
+  margin-top: -1.7rem;
   padding: 12px;
   background-color: white;
   display: flex;
   flex-wrap: nowrap;
   align-content: justify-content-center;
   width: 90%;
-  margin-left: 1rem;
-  z-index: 1!important;
+  margin-left: 1.2rem;
 }
-.panel-body-header {
+.panel-body-focus {
   margin-top: 1rem;
   padding: 5px;
 }
-.panel-body-header img{
+.panel-body-focus img{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important; color: rgb(255,228,181);border-radius:0%;
-  margin-bottom: 2rem;
-  margin-top: -1rem;
 }
-.panel-body-header h1{
-  margin-top: 2rem;
-  margin-left: -1rem;
+.panel-body-focus h1{
+  margin-left: .3rem;
   font-family: 'SpringSakura';
   font-size: 21px;
+  margin-top: 1rem;
 }
-.panel-body-header p{
+.panel-body-focus p{
   line-height: 25px;
   font-size: 12px;
-  text-indent: 21px;
+  /*text-indent: 21px;*/
   text-align: justify;
   margin-left: .1rem!important;
   width: 100%;
 }
-.panel-body-header a {
+.panel-body-focus a {
   margin-left: 5rem;
   margin-bottom: 2rem;
 }
 /*end panel;*/
+/* polaroid */
+.polaroid{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+  color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top:2rem;
+}
 
-/*polaroid*/
-    .polaroid{
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
-      color: rgba(0,0,0,0.7);
-      position: relative;
-      text-align: center;
-      margin-bottom: 3rem;
-      margin-top:2rem;
-    }
+.polaroid img{
+  width: 350px;
+  height: 300px;
+  margin-top: 1rem;
+}
+.polaroid-body p{
+  padding: 15px;
+  color:black;
+  font-family: 'Poiret One', cursive;font-weight:bold;
+  font-size: 25px; 
+}
 
-    .polaroid-body h2{
-      padding: 15px;
-      color:black;
-      font-family: 'Poiret One', cursive;font-weight:bold;
-      font-size: 25px;
-    }
+.polaroid-body h2{
+  padding: 25px;
+  color:black;
+  font-family: 'Poiret One', cursive;font-weight:bold;
+  font-size: 25px;
+}
+/* end polaroid */
 
-    .polaroid-body p{
-      padding: 15px;
-      color:black;
-      font-family: 'Poiret One', cursive;font-weight:bold;
-      font-size: 25px; 
-    }
-
-    .polaroid-vector{
-      width: 350px!important;
-      height: 400px!important;
-      margin-top: -.1rem!important;
-      margin-left: -.1rem!important;
-    }
-    /*end polaroid*/
-
-/*Mobile setup*/
+/*mobile setup*/
 @media only screen and (max-device-width: 812px) {
-	.panel-header img{
-		width: 290px!important;
-		height: 270px!important;
-	}
+  .panel-focus img{
+    width: 290px!important;
+    height: 270px!important;
+  }
 }
 /*end mobile*/
 
 /* DESKTOP VERSION */
   @media (min-width: 992px) { 
-  	/*panel*/
-    .panel-header{
-      box-shadow: 0 3px 20px rgba(0, 0, 0, 1.7);
+
+    /*panel*/
+    .panel-focus{
+      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
       border-radius: 12px;
-      margin-top: -7rem!important;
+      margin-top: -5rem;
       padding: 12px;
       background-color: white;
-      margin-left: 7rem!important;
-      width: 80%;
-      height: 53vh;
-      z-index: 1!important;
+      margin-left: 3.5rem;
+      width: 90%;
+      /*height: 50vh;*/
     }
-    .panel-body-header {
-      margin-top: 2rem!important;
+    .panel-body-focus {
+      margin-top: .1rem;
       padding: 15px;
-      margin-left: 2rem;
-      width: 100%;
     }
-    .panel-body-header img{
-      width: 400px;
-      height: 500px;
+    .panel-body-focus img{
+      height: 300px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important; color: rgb(255,228,181);
     }
-    .panel-body-header h1{
-      margin-left: 3rem;
+    .panel-body-focus h1{
+      margin-left: 5rem;
       font-family: 'SpringSakura';
+      font-size: 31px;
     }
-    .panel-body-header p{
-      margin-left: 1rem !important;
-      font-size: 16px;
+    .panel-body-focus p{
+      font-size: 18px;
+      font-weight: 400;
       text-align: justify;
     }
-    .panel-body-header a {
+    .panel-body-focus a {
       margin-left: 5rem;
     }
-    .panel-body-header .anim{
-      width: 330px;
-      height: 300px;
-      margin-right: 1.5rem;
-      margin-top: -2rem;
+    .panel-body-focus .anim{
+      width: 550px;
     }
+
     /*end panel;*/
+
+    .genap h1{
+      margin-left: -.1rem!important;
+    }
+    .genap p{
+      margin-left: -.1rem!important;
+    }
+    .genap a{
+      margin-left: -.1rem!important;
+    }
+
+    .ganjil h1{
+      margin-left: 8.7rem !important;
+    }
+    .ganjil p{
+      margin-left: 8.7rem !important;
+    }
+    .ganjil a{
+      margin-left: 7rem !important;
+    }
     /* content */
 
     /*polaroid*/
@@ -191,11 +290,13 @@
     }
 
     .polaroid-vector{
-      width: 450px!important;
-      height: 350px!important;
-      margin-top: -1rem!important;
-      margin-left: -.5rem!important;
+      width: 500px;
+      height: 500px;
+      margin-top: 1rem;
+      margin-left: .1rem;
     }
     /*end polaroid*/
-  }	
+
+  }
 </style>
+

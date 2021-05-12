@@ -14,7 +14,7 @@
 <style></style>
 
 <script>
-	import ParallaxImg from '~/assets/images/model/model4.jpg'
+	import ParallaxImg from '~/assets/images/model/model23.jpg'
 
 	export default {
 		data(){
@@ -91,7 +91,7 @@
       background:rgba(255,255,255,0.3);
       /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
       position: absolute;
-      margin-top: 16.5rem!important;
+      margin-top: 3.5rem!important;
       width: 75%;
       text-align: center;
       color: #fff;

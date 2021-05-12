@@ -3,7 +3,8 @@
 		<Hero/>
 		<section id="about">
 			<!-- intro -->
-			<h1 class="text-center underline"></h1>
+			<PanelHeader/>
+			<h1 class="text-center underline" style="margin-top: 5rem;"></h1>
 			
 			<!-- intent -->
 			<PanelIntent/>
@@ -13,7 +14,6 @@
 			<!-- Parallax Home -->
 			<ParallaxAbout/>
 
-			<h1 class="underline" style="margin-top: 5rem;"></h1>
 			<!-- focus -->
 			<PanelFocus/>
 			<h1 class="underline" style="margin-top: 5rem;"></h1>
@@ -41,6 +41,7 @@
 
 <script>
 	import Hero from '~/components/Aboutpage/Hero.vue'
+	import PanelHeader from '~/components/Aboutpage/PanelHeader.vue'
 	import PanelIntent from "~/components/Aboutpage/PanelIntent.vue"
 	import PanelFocus from "~/components/Aboutpage/PanelFocus.vue"
 	import ParallaxAbout from '~/components/Aboutpage/ParallaxAbout.vue'
@@ -54,6 +55,7 @@
 		},
 		components: {
 			Hero,
+			PanelHeader,
 			ParallaxAbout,
 			PanelIntent,
 			PanelFocus,

@@ -17,8 +17,8 @@
 							</div>
 
 							<div class="col-md-6">
-								<h2 class="ml-1 mb-5">Product <span style="font-family:Walkway; color: #ff3b40;">{{merchant.business_name}}</span> </h2>
-								<p class="mt-3">
+								<h2 class="ml-1 mb-2">Product <span style="font-family:Walkway; color: #ff3b40;">{{merchant.business_name}}</span> </h2>
+								<p class="mt-3 mb-5">
 									{{merchant.business_description}}
 								</p>
 								<img :src="merchant.cover" class="img-responsive" style="height:80px; width:170px;">

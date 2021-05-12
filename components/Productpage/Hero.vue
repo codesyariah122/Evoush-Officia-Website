@@ -14,7 +14,7 @@
 </template>
 
 <script>
-	import HeroImg from '~/assets/images/banner/evoush1.png'
+	import HeroImg from '~/assets/images/model/evoush_model2.png'
   import BrandIcon from '../Headers/brand.vue'
 
 	export default{
