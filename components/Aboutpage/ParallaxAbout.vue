@@ -14,7 +14,7 @@
 <style></style>
 
 <script>
-	import ParallaxImg from '~/assets/images/model/model23.jpg'
+	import ParallaxImg from '~/assets/images/model/reduce/model23.jpg'
 
 	export default {
 		data(){

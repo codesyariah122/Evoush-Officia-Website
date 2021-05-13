@@ -13,7 +13,7 @@
 
 
 <script>
-	import ParallaxImg from '~/assets/images/model/model18.jpg'
+	import ParallaxImg from '~/assets/images/model/model20.jpg'
   
 	export default {
 		data(){

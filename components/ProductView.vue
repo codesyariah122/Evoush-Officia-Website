@@ -1,5 +1,5 @@
 <template>
-	<div class="card mb-3" style="max-width: 540px;">
+	<div class="card mb-3" style="max-width: 500px;">
 		<div class="row no-gutters">
 			<div class="col-md-4">
 				<img :src="product.assets[0].url" :alt="product.name" class="img-responsive">
