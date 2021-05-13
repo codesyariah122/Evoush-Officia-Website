@@ -112,7 +112,7 @@
     methods: {
       getClose(){
         this.time.now = new Date().getHours()
-        if(this.time.now > this.time.close){
+        if(this.time.now >= this.time.close){
           this.status = "Tutup"
         }else if(this.time.now < this.time.buka) {
           this.status = "Belum Buka"
