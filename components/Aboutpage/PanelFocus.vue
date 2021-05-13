@@ -41,7 +41,7 @@
                 <div class="genap col-12 col-xs-12 col-sm-12">
                   <div data-aos="zoom-out-left" data-aos-easing="ease-in-sine" data-aos-duration="1500">
                     <div class="embed-responsive embed-responsive-21by9">
-                        <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" :src="panel.lokasi.map" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=16/-7.4608/112.7403&amp;layers=N">View Larger Map</a></small>
+                        <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" :src="lokasi.map" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=16/-7.4606/112.7400">View Larger Map</a></small>
                     </div>
                   </div>
                 </div>
@@ -86,7 +86,7 @@
                     <li>Staf telah melakukan pengukuran suhu tubuh</li>
                     <li>Staf wajib menyemprotkan disinfektan ke permukaan di antara kunjungan pelanggan</li>
                   </ol>`,
-                map: "https://www.openstreetmap.org/export/embed.html?bbox=112.73208618164064%2C-7.467283443100185%2C112.7485227584839%2C-7.45424124788113&amp;layer=mapnik"
+                map: "https://www.openstreetmap.org/export/embed.html?bbox=112.73180723190309%2C-7.467113237510468%2C112.74824380874635%2C-7.454071037217665&amp;layer=mapnik"
               }
             },
             anim: Anim1,
