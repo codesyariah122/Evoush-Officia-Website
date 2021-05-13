@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<div id="focus">
-			<div class="panel panel-default panel-focus">
-				<div class="panel-body panel-body-focus">
+			<div class="panel panel-default panel-focus-article">
+				<div class="panel-body panel-body-focus-article">
 					<div class="row">
 						<div class="col-md-6 col-xs-6 col-sm-6" v-for="article in articles" :key="article.slug">
 							<div class="card mb-3"  style="max-width: 540px;">
@@ -66,7 +66,7 @@
   height: 180px!important;
 }
 /*panel*/
-.panel-focus{
+.panel-focus-article{
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
   border-radius: 12px;
   margin-top: -1.7rem;
@@ -79,20 +79,20 @@
   margin-left: 1.2rem;
   z-index: 1!important;
 }
-.panel-body-focus {
+.panel-body-focus-article {
   margin-top: 1rem;
   padding: 5px;
 }
-.panel-body-focus img{
+.panel-body-focus-article img{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important; color: rgb(255,228,181);border-radius:0%;
 }
-.panel-body-focus h1{
+.panel-body-focus-article h1{
   margin-left: .3rem;
   font-family: 'SpringSakura';
   font-size: 21px;
   margin-top: 1rem;
 }
-.panel-body-focus p{
+.panel-body-focus-article p{
   line-height: 25px;
   font-size: 12px;
   text-indent: 21px;
@@ -100,7 +100,7 @@
   margin-left: .1rem!important;
   width: 100%;
 }
-.panel-body-focus a {
+.panel-body-focus-article a {
   margin-left: 5rem;
   margin-bottom: 2rem;
 }
@@ -136,7 +136,7 @@
 /* end polaroid */
 /*mobile setup*/
 @media only screen and (max-device-width: 812px) {
-  .panel-focus img{
+  .panel-focus-article img{
     width: 290px!important;
     height: 270px!important;
   }
@@ -150,7 +150,7 @@
   }
 
   /*panel*/
-    .panel-focus{
+    .panel-focus-article{
       box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
       border-radius: 12px;
       margin-top: -7.5rem;
@@ -160,28 +160,28 @@
       width: 90%;
       /*height: 50vh;*/
     }
-    .panel-body-focus {
+    .panel-body-focus-article {
       margin-top: .1rem;
       padding: 15px;
     }
-    .panel-body-focus img{
+    .panel-body-focus-article img{
       height: 300px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important; color: rgb(255,228,181);
     }
-    .panel-body-focus h1{
+    .panel-body-focus-article h1{
       margin-left: 5rem;
       font-family: 'SpringSakura';
       font-size: 31px;
     }
-    .panel-body-focus p{
+    .panel-body-focus-article p{
       font-size: 18px;
       font-weight: 400;
       text-align: justify;
     }
-    .panel-body-focus a {
+    .panel-body-focus-article a {
       margin-left: 5rem;
     }
-    .panel-body-focus .anim{
+    .panel-body-focus-article .anim{
       width: 550px;
     }
 
