@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Navigation/>
+    <!-- <Navigation/> -->
     <Nuxt />
     <!-- Scroll Top -->
     <BackToTop/>
     <!-- End Scroll Top -->
 
-    <Footer/>
+    <!-- <Footer/> -->
   </div>
 </template>
 

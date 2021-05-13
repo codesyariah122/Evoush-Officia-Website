@@ -19,9 +19,9 @@
 										<div class="card-body">
 											<NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
 												<h5 class="card-title">{{ article.title }}</h5>
-												<p>by {{ article.author.name }}</p>
+												<p>by {{ article.author.name }} | <span class="card-text"><small class="text-muted"> {{formatDate(article.createdAt)}} </small></span></p>
 												<p class="card-text">{{ article.description }}</p>
-												<p class="card-text"><small class="text-muted"> {{article.created_at}} </small></p>
+												
 											</NuxtLink>
 										</div>
 									</div>
@@ -55,7 +55,13 @@
 
 <script>
 	export default {
-		props: ['articles', 'tags']
+		props: ['articles', 'tags'],
+     methods: {
+      formatDate(date) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' }
+        return new Date(date).toLocaleDateString('en', options)
+      }
+    }
 	}
 </script>
 

@@ -1,12 +1,12 @@
 ---
 title: Pasar bisa di ciptakan
 description: Selera pasar menjadi target dalam pemasaran produk
-dir_img: post-4
+dir_img: ''
 img: ''
 slug: pasar-bisa-di-ciptakan
 alt: Bisnis Evoush
 author: 
-  name: Puji Evoush
+  name: puji_evoush
   bio: Freelancer Web Developer Evoush Indonesia
   img: https://avatars.githubusercontent.com/u/13291805?v=4
 tags: 

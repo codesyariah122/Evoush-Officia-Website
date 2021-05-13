@@ -1,14 +1,14 @@
 ---
 title: Bangun Kesuksesan di evoush
 description: Faktor yang mendorong kesuksesan anda dalam berbisnis
-dir_img: post-10
-img: ''
+dir_img: post-1
+img: post1.jpg
 slug: bangun-kesuksesan-di-evoush
 alt: Bisnis Evoush
 author: 
-	name: Puji Evoush
-	bio: Freelancer Web Developer Evoush Indonesia
-	img: https://avatars.githubusercontent.com/u/13291805?v=4
+  name: puji_evoush
+  bio: Freelancer Web Developer Evoush Indonesia
+  img: https://avatars.githubusercontent.com/u/13291805?v=4
 tags: 
   - produk_evoush
   - bisnis_evoush

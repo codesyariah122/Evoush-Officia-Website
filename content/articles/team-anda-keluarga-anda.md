@@ -1,14 +1,14 @@
 ---
 title: Team Anda Keluarga Anda
 description: Keluarga menjadi sebuah penggerak yang memacu kita untuk terus berjalan meraih target sukses kita
-dir_img: post-5
+dir_img: ''
 img: ''
 slug: team-anda-keluarga-anda
 alt: Bisnis Evoush
 author: 
-  name: Puji Evoush
+  name: puji_evoush
   bio: Freelancer Web Developer Evoush Indonesia
-  img: https://avatars.githubusercontent.com/u/13291805?v=4
+  img: https://avatars.githubusercontent.com/u/13291805?v=4=4
 tags: 
   - produk_evoush
   - bisnis_evoush

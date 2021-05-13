@@ -1,14 +1,14 @@
 ---
 title: Bersama meraih sukses
 description: Membangun jaringan dan menjadi sukses bersama team adalah sebuah nikmat
-dir_img: post-9
+dir_img: ''
 img: ''
 slug: bersama-meraih-sukses
 alt: Bisnis Evoush
 author: 
-	name: Puji Evoush
-	bio: Freelancer Web Developer Evoush Indonesia
-	img: https://avatars.githubusercontent.com/u/13291805?v=4
+  name: puji_evoush
+  bio: Freelancer Web Developer Evoush Indonesia
+  img: https://avatars.githubusercontent.com/u/13291805?v=4
 tags: 
   - produk_evoush
   - bisnis_evoush

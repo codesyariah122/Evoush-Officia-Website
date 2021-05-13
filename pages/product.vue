@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<Navigation/>
 		<Hero/>
 		<section id="product">
 			<!-- <div class="col-12 ml-5">
@@ -22,6 +23,7 @@
 
 			<ParallaxProduct/>
 		</section>
+		<Footer/>
 	</div>
 </template>
 
@@ -38,9 +40,11 @@
 </style>
 
 <script>
+	import Navigation from '~/components/Headers/Navigation'
 	import Hero from '~/components/Productpage/Hero'
 	import PanellHeader from '~/components/Productpage/PanellHeader'
 	import ParallaxProduct from '~/components/Productpage/ParallaxProduct'
+	import Footer from '~/components/molecules/Footer'
 
 	export default {
 		data(){
@@ -49,9 +53,11 @@
 			}
 		},
 		components: {
+			Navigation,
 			Hero,
 			PanellHeader,
-			ParallaxProduct
+			ParallaxProduct,
+			Footer
 		},
 
 		async asyncData({ $commerce }) {

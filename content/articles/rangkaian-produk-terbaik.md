@@ -1,12 +1,12 @@
 ---
 title: Rangkaian Produk Terbaik
 description: Produk merupakan sebuah bagian penting dari bisnis anda
-dir_img: post-2
+dir_img: ''
 img: ''
 slug: rangkaian-produk-terbaik
 alt: Evoush Produk
 author: 
-  name: Puji Evoush
+  name: puji_evoush
   bio: Freelancer Web Developer Evoush Indonesia
   img: https://avatars.githubusercontent.com/u/13291805?v=4
 tags: 

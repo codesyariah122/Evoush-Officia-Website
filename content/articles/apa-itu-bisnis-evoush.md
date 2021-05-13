@@ -2,11 +2,11 @@
 title: Apa itu Bisnis Evoush
 description: Membangun bisnis yang sukses bersama Evoush
 dir_img: post-1
-img: vector9.jpg
+img: Masuk.jpg
 slug: apa-itu-bisnis-evoush
 alt: Evoush Office
 author: 
-  name: Puji Evoush
+  name: puji_evoush
   bio: Freelancer Web Developer Evoush Indonesia
   img: https://avatars.githubusercontent.com/u/13291805?v=4
 tags: 

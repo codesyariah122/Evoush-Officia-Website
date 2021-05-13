@@ -1,31 +1,17 @@
 <template>
   <article>
-    <div class="container-fluid h-100">
-      <div class="row justify-content-start h-100">
-        <div v-if="article.img" class="col-sm-4 hidden-md-down">
-          <img :src="require(`~/assets/blog/images/${article.dir_img}/${article.img}`)" class="img-responsive" :alt="article.alt">
-        </div>
-        <div v-else class="col-sm-4 hidden-md-down">
-          <img :src="`https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60`" class="img-responsive">
-        </div>
-        <div class="col-sm-8 col-lg-8 col-xl-8">
-          <h1 class="ml-5">{{article.title}}</h1>
-          <div class="ml-5">
-             <!-- content from markdown -->
-             <nuxt-content :document="article" />
-             <!-- content author component -->
-             <author :author="article.author" />
-             <!-- prevNext component -->
-             <PrevNext :prev="prev" :next="next" class="mt-8" />
-          </div>
-        </div>
-      </div>
-    </div>
+    <PanelSlug :article="article" :prev="prev" :next="next" :tags="tags"/>
   </article>
 </template>
 
 <script>
+import PanelSlug from '~/components/Articles/PanelSlug'
+
 export default {
+  components: {
+    PanelSlug
+  },
+
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
     const tagsList = await $content('tags')

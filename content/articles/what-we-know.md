@@ -1,7 +1,7 @@
 ---
 title: What we know
 description: This is the description for the article about all the things we know
-dir_img: post-8
+dir_img: ''
 img: ''
 slug: what-we-know
 alt: Article 10

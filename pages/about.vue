@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<Navigation/>
 		<Hero/>
 		<section id="about">
 			<!-- intro -->
@@ -20,10 +21,8 @@
 
 			<!-- parallax end -->
 			<ParallaxEnd/>
-
-
-
 		</section>
+		<Footer/>
 	</div>
 </template>
 
@@ -40,12 +39,14 @@
 </style>
 
 <script>
+	import Navigation from '~/components/Headers/Navigation'
 	import Hero from '~/components/Aboutpage/Hero.vue'
 	import PanelHeader from '~/components/Aboutpage/PanelHeader.vue'
 	import PanelIntent from "~/components/Aboutpage/PanelIntent.vue"
 	import PanelFocus from "~/components/Aboutpage/PanelFocus.vue"
 	import ParallaxAbout from '~/components/Aboutpage/ParallaxAbout.vue'
 	import ParallaxEnd from '~/components/Aboutpage/ParallaxEnd.vue'
+	import Footer from '~/components/molecules/Footer'
 
 	export default {
 		data(){
@@ -54,12 +55,14 @@
 			}
 		},
 		components: {
+			Navigation,
 			Hero,
 			PanelHeader,
 			ParallaxAbout,
 			PanelIntent,
 			PanelFocus,
-			ParallaxEnd
+			ParallaxEnd,
+			Footer
 		},
 		head(){
 			return {

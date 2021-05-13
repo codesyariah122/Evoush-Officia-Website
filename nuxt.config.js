@@ -75,16 +75,24 @@ export default {
     '@nuxt/content',
     '@nuxtjs/dotenv'
   ],
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-material-oceanic.css'
+      }
+    },
+    nestedProperties: ['author.name']
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    //  extend(config, { isClient }) {
-    //   if (isClient) {
-    //     config.optimization.splitChunks.maxSize = 200000
-    //   }
-    // }
+     extend(config, { isClient }) {
+      if (isClient) {
+        config.optimization.splitChunks.maxSize = 200000
+      }
+    }
   }
 }

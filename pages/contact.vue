@@ -1,9 +1,13 @@
 <template>
 	<div>
+		<Navigation/>
 		<Hero/>
+
 		<section id="contact">
 			<h1>Evoush Contact</h1>
 		</section>
+
+		<Footer/>
 	</div>
 </template>
 
@@ -20,7 +24,9 @@
 </style>
 
 <script>
+	import Navigation from '~/components/Headers/Navigation'
 	import Hero from '~/components/Contactpage/Hero'
+	import Footer from '~/components/molecules/Footer'
 
 	export default {
 		data(){
@@ -29,7 +35,9 @@
 			}
 		},
 		components: {
-			Hero
+			Navigation,
+			Hero,
+			Footer
 		},
 		head(){
 			return {
@@ -45,8 +53,5 @@
 				]
 			}
 		},
-		components: {
-			Hero
-		}
 	}
 </script>
