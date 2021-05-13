@@ -44,3 +44,18 @@ export default {
   props: ["product"],
 };
 </script>
+
+<style scoped>
+	.card img{
+		width: 150px;
+		height: 80px;
+	}
+
+	/* DESKTOP VERSION */
+  @media (min-width: 992px) { 
+  		.card img{
+  			width: 400px;
+  			height: 200px;
+  		}
+  }
+</style>

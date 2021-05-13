@@ -21,7 +21,8 @@
 								<p class="mt-3 mb-5">
 									{{merchant.business_description}}
 								</p>
-								<img :src="merchant.cover" class="img-responsive" style="height:80px; width:170px;">
+								<!-- <img :src="merchant.cover" class="img-responsive" style="height:80px; width:170px;"> -->
+                <Logo/>
 							</div>
 						</div>
 					</div>
@@ -33,8 +34,13 @@
 </template>
 
 <script>
+  import Logo from '~/components/Logo'
+
 	export default {
-		props: ['merchant']
+		props: ['merchant'],
+    components: {
+      Logo
+    }
 	}
 </script>
 
