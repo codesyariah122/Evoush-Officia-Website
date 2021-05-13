@@ -15,7 +15,7 @@
 <style></style>
 
 <script>
-	import ParallaxImg from '~/assets/images/banner/evoush_banner.png'
+	import ParallaxImg from '~/assets/images/banner/reduce/evoush_banner.jpg'
 
 	export default {
 		data(){
