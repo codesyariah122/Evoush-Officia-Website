@@ -96,7 +96,7 @@
           {
             id:2,
             lokasi: {
-             map: 'https://www.openstreetmap.org/export/embed.html?bbox=25.04007339477539%2C60.22971250027113%2C25.10581970214844%2C60.255826303456416&amp;layer=mapnik'
+             map: 'https://www.openstreetmap.org/export/embed.html?bbox=112.69680976867677%2C-7.486984291932352%2C112.76255607604982%2C-7.434815529206579&amp;layer=mapnik'
             },
             anim: Anim1,
             vector: Vector1,
