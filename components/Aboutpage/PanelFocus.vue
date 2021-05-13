@@ -41,7 +41,7 @@
                 <div class="genap col-12 col-xs-12 col-sm-12">
                   <div data-aos="zoom-out-left" data-aos-easing="ease-in-sine" data-aos-duration="1500">
                     <div class="embed-responsive embed-responsive-21by9">
-                        <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" :src="panel.lokasi.map" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=16/-7.4608/112.7403&amp;layers=N">View Larger Map</a></small>
+                        <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" :src="panel.lokasi.map" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=13/-7.4695/112.7177&amp;layers=N">View Larger Map</a></small>
                     </div>
                   </div>
                 </div>
@@ -96,7 +96,7 @@
           {
             id:2,
             lokasi: {
-             map: 'https://www.openstreetmap.org/export/embed.html?bbox=112.72414684295656%2C-7.474304365908887%2C112.75701999664308%2C-7.448220005446348&amp;layer=mapnik&amp;marker=-7.4612623800802504%2C112.7405834197998'
+             map: 'https://www.openstreetmap.org/export/embed.html?bbox=112.65192031860353%2C-7.521618181770915%2C112.78341293334962%2C-7.4172827077915935&amp;layer=mapnik'
             },
             anim: Anim1,
             vector: Vector1,
