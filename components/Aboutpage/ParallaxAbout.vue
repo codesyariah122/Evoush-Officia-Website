@@ -37,7 +37,7 @@
 	
   .parallax-home{
     min-height: 500px; 
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
