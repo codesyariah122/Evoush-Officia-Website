@@ -1,23 +1,25 @@
 <template>
   <div class="row justify-content-start">
-    <NuxtLink
-      :to="`/blog/author/${author.name}`"
-      class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
-    >
-	    <div class="col-sm-4 hidden-md-down">
-	    	<img
-	    	v-if="author.img"
-	    	class="img-fluid img-thumbnail rounded-circle"
-	    	:src="author.img"
-	    	/>
-	    </div>
-	    <div class="col-sm-8 col-lg-8 col-xl-8">
-	    	<h4 class="text-ifo">Author</h4>
-	    	<p>{{ author.name }}</p>
-	    	<p>{{ author.bio }}</p>
-	    </div>
+    <div class="col-sm-12 col-12 col-xs-12 hidden-md-down">
+       <NuxtLink :to="`/blog/author/${author.name}`">
+         <div class="card mb-3">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img v-if="author.img" :src="author.img" :alt="author.name" class="img-responsive img-card">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Author</h5>
+                  <p class="card-text">{{ author.name }}</p>
+                  <p class="card-text"><small class="text-muted">{{ author.bio }}</small></p>
+                </div>
+              </div>
+          </div>
+        </div>
     </NuxtLink>
   </div>
+</div>
+
 </template>
 
 <script>
@@ -30,3 +32,28 @@ export default {
   }
 }
 </script>
+
+<style>
+.card{
+  max-width: 300px;
+}
+.img-card{
+  width: 80px!important;
+  height: 150px!important;
+}
+@media only screen and (max-device-width: 812px) {
+  .img-card{
+    width: 200px!important;
+    height: 230px!important;
+  }
+}
+@media (min-width: 992px) { 
+  .card{
+    max-width: 540px;
+  }
+  .card img{
+    width: 180px!important;
+    height: 180px!important;
+  }
+}
+</style>

@@ -3,15 +3,14 @@
     <NuxtLink
       v-if="prev"
       :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
-      class="btn btn-info btn-sm"
+      class="mb-5 py-3"
     >
       {{ prev.title }}
     </NuxtLink>
     <span v-else>&nbsp;</span>
-    <NuxtLink
+    <NuxtLink class="ml-5"
       v-if="next"
       :to="{ name: 'blog-slug', params: { slug: next.slug } }"
-      class="btn btn-success btn-sm"
     >
       {{ next.title }}
     </NuxtLink>

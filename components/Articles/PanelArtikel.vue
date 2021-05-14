@@ -32,9 +32,9 @@
 
 					<hr>
 
-					<div class="row">
+					<div class="row justify-content-center">
 						<div class="col-12">
-							<h3 class="text-info mb-3 text-center">Topics</h3>
+							<h3 class="text-primary mb-3 text-center" style="text-align: center!important;">Topics</h3>
 							<div class="row justify-content-center">
 								<div class="col-md-3 col-sm-12 col-xs-12" v-for="tag of tags" :key="tag.slug">
 									<NuxtLink :to="`/blog/tag/${tag.slug}`" class="">
@@ -174,7 +174,7 @@
       height: 300px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important; color: rgb(255,228,181);
     }
-    .panel-body-focus-article h1{
+    .panel-body-focus-article h1, h2, h3{
       margin-left: 5rem;
       font-family: 'SpringSakura';
       font-size: 31px;

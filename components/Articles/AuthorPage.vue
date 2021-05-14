@@ -1,20 +1,22 @@
 <template>
-	<div class="container-fluid h-100">
-		<div class="row h-100">
-			<div class="col-sm-6 col-2 h-100 bg-dark text-white py-2 align-items-center justify-content-center fixed-top" id="left" :style="bgImg">
-
-				<ul style="list-style: none;">
-					<li>
-						<a href="/">
-							<!-- <img :src="logo" class="img-responsive"> -->
-							<Logo class="ml-2"/>
-						</a>
-					</li>	
-				</ul>
-
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6 col-12 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top bg-img" id="left" :style="bgImg">
+				<div class="row" id="brand-logo">
+					<div class="col-12 col-12 col-sm-12 col-xs-12">
+						<ul style="list-style: none;">
+							<li>
+								<a href="/">
+									<!-- <img :src="logo" class="img-responsive"> -->
+									<Logo class="ml-2"/>
+								</a>
+							</li>	
+						</ul>
+					</div>
+				</div>
 
 				<div class="row" id="author-context">
-					<div class="col-12">
+					<div class="col-12 col-sm-12 col-xs-12">
 						<h1 class="d-none d-sm-block">
 							{{articles[0].author.name}}
 						</h1> 
@@ -24,7 +26,7 @@
 			</div>
 
 			<div class="col-sm-6 invisible col-2"><!--hidden spacer--></div>
-			<div class="col offset-3 offset-sm-6 py-2">
+			<div class="col-sm-6 col-12 offset-0 offset-sm-6 py-2" id="right"">
 				<NuxtLink to="/articles">
 					<p class="hover:underline">Back to All Articles</p>
 				</NuxtLink>
@@ -33,11 +35,11 @@
 					Here are a list of articles by {{ articles[0].author.name }}:
 				</h3>
 
-				<div  v-for="article in articles"  :key="article.slug" class="card mb-3" style="max-width: 540px;">
+				<div  v-for="article in articles"  :key="article.slug" class="card mb-3">
 					<div class="row no-gutters">
 						<div class="col-md-4">
 							<div  v-if="article.img" >
-								<img :src="require(`~/assets/blog/images/${article.dir_img}/${article.img}`)" :alt="article.alt"/>
+								<img :src="require(`~/assets/blog/images/${article.dir_img}/${article.img}`)" :alt="article.alt" class="img-responsive"/>
 							</div>
 							<div v-else>
 								<img :src="`https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60`" class="img-responsive">
@@ -111,14 +113,73 @@
 </script>
 
 <style>
+
+#right{
+	margin-top: 40rem!important;
+}
+#right .card{
+	max-width: 400px;
+}
+
+#left{
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+}
+#author-context{
+	width: 70%!important;
+	margin-left: -1rem!important;
+}
+#author-context ul li, h3 {
+	margin-left: -3rem;
+	font-size: 18px!important;
+	list-style: none; display: flex; flex-wrap: nowrap; margin-left: .2rem;
+}
+#author-context h1{
+	font-size: 21px;
+}
+#article-doc p{
+	width: 80%;
+	text-align: justify;
+	text-indent: 21px;
+}
+/* responsively apply fixed position */
+@media (min-width: 576px){
+    #left {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+    #author-context{
+    	margin-left: 1rem!important;
+    }
+}
+
 /* DESKTOP VERSION */
 @media (min-width: 992px) { 
 	body, html {
 		height: 100%;
 	}
+
+	#brand-logo{
+		top:0;
+		position: sticky;
+	}
+
+	#right{
+		margin-top: 2rem!important;
+	}
+
+	.bg-img{
+		background-size: cover;
+		height: 100vh;
+		width: 100vw;
+		overflow: hidden;
+	}
 	#author-context{
-		margin-top: 17rem;
-		margin-left: 5rem;
+		margin-top: 10rem!important;
+		margin-left: 3rem!important;
+		width: 100%;
 	}
 	#author-context h1, h2, h3, h4, h5 {
 		font-family: 'Walkway';
@@ -129,6 +190,9 @@
 		font-family: 'Poiret One';
 		font-weight: 900;
 		text-transform: capitalize;
+	}
+	#author-context ul li{
+		list-style: none; display: flex; flex-wrap: nowrap;
 	}
 }
 </style>

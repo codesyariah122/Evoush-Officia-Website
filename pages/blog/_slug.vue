@@ -1,7 +1,11 @@
 <template>
-  <article>
-    <PanelSlug :article="article" :prev="prev" :next="next" :tags="tags"/>
-  </article>
+  <div>
+    <section id="article">
+      <article>
+        <PanelSlug :article="article" :prev="prev" :next="next" :tags="tags"/>
+      </article>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -61,16 +65,13 @@ export default {
 
 
 <style scoped>
-article{
-  height: 100%;
+#article{
+  width: 100%;
 }
-
-
-
 /* DESKTOP VERSION */
 @media (min-width: 992px) { 
-  .context{
-    margin-left: 2rem;
+  #article{
+    width: 100%;
   }
 }
 </style>
