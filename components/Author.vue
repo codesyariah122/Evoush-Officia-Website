@@ -8,7 +8,7 @@
                 <img v-if="author.img" :src="author.img" :alt="author.name" class="img-responsive img-card">
               </div>
               <div class="col-md-8">
-                <div class="card-body">
+                <div class="card-body ml-5">
                   <h5 class="card-title">Author</h5>
                   <p class="card-text">{{ author.name }}</p>
                   <p class="card-text"><small class="text-muted">{{ author.bio }}</small></p>

@@ -3,28 +3,19 @@
 		<div class="row">
 			<div v-if="article.img && article.dir_img" >
 				<div :style="{ backgroundImage: `url(${getImage})` }" class="col-sm-6 col-12 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top bg-img" id="left">
-					<div class="row">
-						<div class="col-12">
-							<ul style="list-style: none;" class="mt-3">
-								<li>
-									<a href="/">
-										<!-- <img :src="logo" class="img-responsive"> -->
-										<Logo class="ml-2"/>
-									</a>
-								</li>	
-							</ul>
-						</div>
-					</div>
+
 					<div class="row" id="author-context">
+						<div class="row">
+							<div class="col-12">
+								<TheHeader/>
+							</div>
+						</div>
 						<div class="col-12 col-sm-12 col-xs-12">
 							<ul>
 								<li>
-									<h3 class="text-secondary">
-										{{formatDate(article.updatedAt)}}
-									</h3>
-								</li>
-								<li class="ml-3">
-									<h3> {{article.author.name}} </h3>
+									<h1 class="text-white">
+										{{formatDate(article.updatedAt)}} | {{article.author.name}}
+									</h1>
 								</li>
 							</ul>
 
@@ -38,17 +29,23 @@
 			</div>
 
 			<div v-else>
-				<div :style="bgImgEmpty" class="col-sm-6 col-12 offset-0 offset-sm-6 py-2 fixed-top h-100" id="left" >
+				<div :style="bgImgEmpty" class="col-sm-6 col-12 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top bg-img" id="left" >
+					<div class="row">
+						<div class="col-12">
+							<TheHeader/>
+						</div>
+					</div>
+
 					<div class="row" id="author-context">
 						<div class="col-12 col-sm-12 col-xs-12">
 							<ul>
 								<li>
-									<h3 class="text-secondary">
+									<h1 class="text-primary">
 										{{formatDate(article.updatedAt)}}
-									</h3>
+									</h1>
 								</li>
-								<li class="ml-3">
-									<h3> {{article.author.name}} </h3>
+								<li>
+									<h1> {{article.author.name}} </h1>
 								</li>
 							</ul>
 							<h1>
@@ -66,9 +63,9 @@
 					<p class="hover:underline mt-5">Back to All Articles</p>
 				</NuxtLink>
 
-				<h3 class="mb-4">
+				<h1 class="mb-4">
 					{{article.title}}
-				</h3>
+				</h1>
 
 				<div class="ml-2" id="article-doc">
 					<!-- content from markdown -->
@@ -135,7 +132,7 @@
 
 #right{
 	margin-top: 40rem!important;
-	width: 85%;
+	width: 100%;
 }
 #left{
 	height: 100vh;
@@ -146,7 +143,7 @@
 	width: 70%!important;
 	margin-left: -1rem!important;
 }
-#author-context ul li, h3 {
+#author-context ul li {
 	margin-left: -3rem;
 	font-size: 18px!important;
 	list-style: none; display: flex; flex-wrap: nowrap; margin-left: .2rem;
@@ -188,8 +185,8 @@
 		overflow: hidden;
 	}
 	#author-context{
-		margin-top: 2rem!important;
-		margin-left: 5rem!important;
+		margin-top: -11rem!important;
+		margin-left: 2rem!important;
 		width: 100%;
 	}
 	#author-context h1, h2, h3, h4, h5 {

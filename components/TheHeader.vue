@@ -1,15 +1,17 @@
 <template>
-	<nav class="navbar navbar-expand navbar-light sticky-top">
+	<nav class="navbar navbar-expand navbar-light">
 		<div class="collapse navbar-collapse">
-			<ul class="navbar-nav">
+			<ul class="navbar-nav mx-auto">
 				<li>
 					<a href="/">
 						<!-- <img :src="logo" class="img-responsive"> -->
-						<Logo class="ml-2"/>
+						<Logo class="ml-5"/>
 					</a>
+				</li>
+				<li>
+					<AppSearchInput />
 				</li>	
 			</ul>
-			<AppSearchInput />
 		</div>
 	</nav>
 </template>
@@ -26,6 +28,7 @@
 .navbar{
 	position: relative;
 	z-index:1;
+	width: 100%!important;
 }
 
 .transparent-nav{
@@ -36,7 +39,8 @@
 @media (min-width: 992px) { 
  /* navbar */
  .navbar{
- 	margin-left: -1rem;
+ 	margin-left: -1rem!important;
+ 	width:100%!important;
  }
  .navbar-brand, .nav-link {
   color: white !important;
@@ -62,7 +66,6 @@
   background : rgba(0, 0, 0, 0.3);
   position: fixed;
   margin-top: -.5rem;
-  width:100%!important;
 }
 .transparent-nav{
   background : rgba(0, 0, 0, 0.3);

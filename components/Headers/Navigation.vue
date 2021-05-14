@@ -1,5 +1,5 @@
 <template>
-	<nav class="navbar navbar-expand navbar-light sticky-top">
+	<nav class="navbar navbar-expand navbar-light sticky-top navbar-evoush">
 		<div class="collapse navbar-collapse">
 			<ul class="navbar-nav mx-auto">
 				<li class="nav-item"><a href="/about" class="nav-link">About</a></li>

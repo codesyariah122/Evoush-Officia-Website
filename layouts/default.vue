@@ -30,7 +30,7 @@
       scrollNav(){
         window.addEventListener('scroll', function(){
           let scrollPos = window.scrollY
-          let nav = document.querySelector('.navbar')
+          let nav = document.querySelector('.navbar-evoush')
           let isDesktop = window.matchMedia('only screen and (min-width: 992px)').matches;
           // console.log(scrollPos)
           if(!isDesktop){

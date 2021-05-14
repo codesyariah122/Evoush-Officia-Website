@@ -2,20 +2,18 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-6 col-12 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top bg-img" id="left" :style="bgImg">
-				<div class="row" id="brand-logo">
-					<div class="col-12 col-12 col-sm-12 col-xs-12">
-						<ul style="list-style: none;">
-							<li>
-								<a href="/">
-									<!-- <img :src="logo" class="img-responsive"> -->
-									<Logo class="ml-2"/>
-								</a>
-							</li>	
-						</ul>
-					</div>
-				</div>
+
+				<!-- <img :src="logo" class="img-responsive"> -->
 
 				<div class="row" id="author-context">
+					<div class="row">
+						<div class="col-12">
+							<a href="/">
+								<Logo class="ml-2"/>
+							</a>
+						</div>
+					</div>
+
 					<div class="col-12 col-sm-12 col-xs-12">
 						<h1 class="d-none d-sm-block">
 							{{articles[0].author.name}}
@@ -31,9 +29,9 @@
 					<p class="hover:underline">Back to All Articles</p>
 				</NuxtLink>
 
-				<h3 class="mb-4">
+				<h1 class="mb-4">
 					Here are a list of articles by {{ articles[0].author.name }}:
-				</h3>
+				</h1>
 
 				<div  v-for="article in articles"  :key="article.slug" class="card mb-3">
 					<div class="row no-gutters">
@@ -130,7 +128,7 @@
 	width: 70%!important;
 	margin-left: -1rem!important;
 }
-#author-context ul li, h3 {
+#author-context ul li{
 	margin-left: -3rem;
 	font-size: 18px!important;
 	list-style: none; display: flex; flex-wrap: nowrap; margin-left: .2rem;
@@ -169,6 +167,9 @@
 	#right{
 		margin-top: 2rem!important;
 	}
+	#right .card{
+		max-width: 550px;
+	}
 
 	.bg-img{
 		background-size: cover;
@@ -177,7 +178,7 @@
 		overflow: hidden;
 	}
 	#author-context{
-		margin-top: 10rem!important;
+		margin-top: 16rem!important;
 		margin-left: 3rem!important;
 		width: 100%;
 	}
