@@ -19,7 +19,7 @@
 							</h1>
 							<p class="mb-4">{{ article.description }}</p>
 
-							<a href="/articles" class="btn btn-primary"> Kembali Ke Articles </a>
+							<a href="/articles" class="btn btn-success"> Kembali Ke Articles </a>
 						</div>
 					</div>
 				</div>
@@ -56,9 +56,9 @@
 
 			<div class="col-6 invisible col-2"><!--hidden spacer--></div>
 			<div class="col-sm-6 col-12 offset-0 offset-sm-6 py-2" id="right">
-				<NuxtLink to="/articles">
+				<!-- <NuxtLink to="/articles">
 					<p class="hover:underline mt-5">Back to All Articles</p>
-				</NuxtLink>
+				</NuxtLink> -->
 
 				<h1 class="mb-4">
 					{{article.title}}
