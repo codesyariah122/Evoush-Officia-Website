@@ -21,6 +21,9 @@ export default {
       },
       {
         src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-609818ffd946e881'
+      },
+      {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js'
       }
     ],
     meta: [
@@ -42,6 +45,10 @@ export default {
       {
         rel: 'stylesheet',
         href: 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css'
       }
     ]
   },

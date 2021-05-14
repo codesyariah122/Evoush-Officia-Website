@@ -13,8 +13,11 @@
               </div>
               <div class="col-md-6 col-xs-6 col-sm-6">
                 <div data-aos="zoom-out-left" data-aos-easing="ease-in-sine" data-aos-duration="1500">
-                  <div class="embed-responsive embed-responsive-1by1">
-                    <iframe class="embed-responsive-item" :src="panel.vector" allowfullscreen></iframe>
+                  <div v-if="panel.iframe" class="embed-responsive embed-responsive-1by1">
+                    <iframe class="embed-responsive-item" :src="panel.iframe" allowfullscreen></iframe>
+                  </div>
+                  <div v-else>
+                    <img :src="panel.vector" class="img-responsive intents-img">
                   </div>
                 </div>
               </div>
@@ -45,6 +48,7 @@
 <script>
   import ImgPanelSatu from '~/assets/images/vector_image/vector27.jpg'
   import ImgPanelDua  from '~/assets/images/vector_image/vector28.jpg'
+
   export default {
     data(){
       return {
@@ -55,7 +59,8 @@
               header: `<span style="font-family: 'SpringSakura'; color: tomato;"> Selamat Datang </span> Di Kantor Pusat Kami`,
               paragraph: `<b><u>PT. Pineleng Indah Cemerlang</u></b> Sebagai landasan hukum dan rumah yang menaungi bahtera bisnis dengan merk dagang <i class="fas fa-air-freshener" style="font-size: 18px;"></i> <b><u> Evoush </u></b>. Ayo kita bangun bersama semangat dalam meraih kesuksesan dalam bisnis.<i class="far fa-calendar-check text-success"></i>.`
             },
-            vector: "https://www.youtube.com/embed/4uY11lCCKUs?rel=0",
+            vector: "",
+            iframe: "https://www.youtube.com/embed/4uY11lCCKUs?rel=0"
           },
           {
             id: 2,

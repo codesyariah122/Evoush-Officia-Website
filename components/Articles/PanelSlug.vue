@@ -3,26 +3,23 @@
 		<div class="row">
 			<div v-if="article.img && article.dir_img" >
 				<div :style="{ backgroundImage: `url(${getImage})` }" class="col-sm-6 col-12 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top bg-img" id="left">
-
 					<div class="row" id="author-context">
-						<div class="row">
-							<div class="col-12">
-								<TheHeader/>
-							</div>
-						</div>
 						<div class="col-12 col-sm-12 col-xs-12">
-							<ul>
-								<li>
-									<h1 class="text-white">
-										{{formatDate(article.updatedAt)}} | {{article.author.name}}
-									</h1>
-								</li>
-							</ul>
+							<TheHeader/>
+						</div>
+
+						<div class="col-12 col-sm-12 col-xs-12 article-detail">
+							
+							<h5 class="text-white">
+								{{formatDate(article.updatedAt)}} | {{article.author.name}}
+							</h5>
 
 							<h1>
 								{{article.title}}
 							</h1>
 							<p class="mb-4">{{ article.description }}</p>
+
+							<a href="/articles" class="btn btn-primary"> Kembali Ke Articles </a>
 						</div>
 					</div>
 				</div>
@@ -73,8 +70,9 @@
 					<!-- content author component -->
 					<author :author="article.author" />
 					<!-- prevNext component -->
-					<PrevNext :prev="prev" :next="next" class="mt-2" />
 					<h1 class="underline mb-3" style="margin-top: 2rem;"></h1>
+					<PrevNext :prev="prev" :next="next" class="mt-2 text-center" />
+					<hr>
 				</div>
 				
 			</div>
@@ -143,13 +141,14 @@
 	width: 70%!important;
 	margin-left: -1rem!important;
 }
-#author-context ul li {
-	margin-left: -3rem;
-	font-size: 18px!important;
-	list-style: none; display: flex; flex-wrap: nowrap; margin-left: .2rem;
+
+.article-detail{
+	margin-top: 5rem!important;
 }
-#author-context h1{
-	font-size: 21px;
+.article-detail h1{
+	text-shadow: 1px 1px 1px rgba(50, 10, 0, 100);
+	text-transform: capitalize;
+	margin-left: 1rem;
 }
 #article-doc p{
 	width: 80%;
@@ -184,23 +183,13 @@
 		width: 100vw;
 		overflow: hidden;
 	}
-	#author-context{
-		margin-top: -11rem!important;
-		margin-left: 2rem!important;
-		width: 100%;
+	.article-detail{
+		margin-top: 2rem!important;
 	}
-	#author-context h1, h2, h3, h4, h5 {
-		font-family: 'Walkway';
-		font-weight: 900;
+	.article-detail h1{
+		text-shadow: 1px 1px 1px rgba(50, 10, 0, 100);
 		text-transform: capitalize;
-	}
-	#author-context p{
-		font-family: 'Poiret One';
-		font-weight: 900;
-		text-transform: capitalize;
-	}
-	#author-context ul li{
-		list-style: none; display: flex; flex-wrap: nowrap;
+		margin-left: 1rem;
 	}
 }
 </style>

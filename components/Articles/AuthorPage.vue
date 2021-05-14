@@ -133,9 +133,7 @@
 	font-size: 18px!important;
 	list-style: none; display: flex; flex-wrap: nowrap; margin-left: .2rem;
 }
-#author-context h1{
-	font-size: 21px;
-}
+
 #article-doc p{
 	width: 80%;
 	text-align: justify;
@@ -182,11 +180,7 @@
 		margin-left: 3rem!important;
 		width: 100%;
 	}
-	#author-context h1, h2, h3, h4, h5 {
-		font-family: 'Walkway';
-		font-weight: 900;
-		text-transform: capitalize;
-	}
+
 	#author-context p{
 		font-family: 'Poiret One';
 		font-weight: 900;

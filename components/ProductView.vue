@@ -1,61 +1,105 @@
 <template>
-	<div class="card mb-3" style="max-width: 500px;">
-		<div class="row no-gutters">
-			<div class="col-md-4">
-				<img :src="product.assets[0].url" :alt="product.name" class="img-responsive">
-			</div>
-			<div class="col-md-6">
-				<div class="card-body">
-					<h5 class="card-title"> {{product.name}} </h5> 
-					<n-link
+	 <div class="card-pricing" data-toggle="lightbox" data-gallery="assets">
+		<a :href="product.assets[0].url" >
+			<img :src="product.assets[0].url" :alt="product.name" class="img-card-pricing float-left img-responsive"/>
+		</a>
+
+		<div class="card-content-pricing">
+			<h5 class="card-title"> {{product.name}} </h5>
+			<p class="card-text"><small class="text-muted">
+				Category : {{product.categories[0].name}}
+			</small></p>
+			<h4 class="card-text"><small class="text-muted">
+				{{product.price.formatted_with_symbol}}
+			</small></h4>
+			<blockquote class="blockquote-footer" v-html="product.seo.description"></blockquote>
+			<n-link
 					:to="{
 						name: 'products-permalink',
 						params: { permalink: product.permalink },
 					}" class="btn btn-success btn-sm"
-					> View Product </n-link>
-					<p class="card-text"><small class="text-muted">
-						Category : {{product.categories[0].name}}
-					</small></p>
-					<p class="card-text" v-html="product.seo.description"></p>
-					
-					<footer>
-						<div class="row">
-							<div class="col-md-4">
-								<h4 class="card-text"><small class="text-muted">
-									{{product.price.formatted_with_symbol}}
-								</small></h4>
-							</div>
-							<div class="col-md-8">
-								<a :href="product.checkout_url.display" class="btn btn-primary btn-sm"> 
-									Order Now
-								</a>	
-							</div>
-					</div>
-				</footer>
-			</div>
+					> 
+				View Product 
+			</n-link>
+		</div>
+
+		<div class="card-read-more-pricing">
+			<a :href="product.checkout_url.display" class="btn btn-link btn-block">Order Now</a>
 		</div>
 	</div>
-</div>	
-
 </template>
 
 <script>
 export default {
-  props: ["product"],
+  props: ["product", "permalink"],
 };
 </script>
 
 <style scoped>
-	.card img{
-		width: 150px;
-		height: 80px;
-	}
 
-	/* DESKTOP VERSION */
-  @media (min-width: 992px) { 
-  		.card img{
-  			width: 400px;
-  			height: 200px;
-  		}
-  }
+  .wrapper-pricing {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.container-fostrap {
+  display: table-cell;
+  padding: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+.fostrap-logo {
+  width: 100px;
+  margin-bottom:15px
+}
+
+.card-pricing {
+  display: block; 
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
+    transition: box-shadow .25s; 
+}
+.card-pricing:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+/*.img-card-pricing {
+  width: 100%;
+  height:200px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+    overflow: hidden;
+}*/
+.img-card-pricing{
+  width: 100%!important;
+  height: 70vh!important;
+  object-fit:cover!important; 
+  transition: all .25s ease;
+} 
+.card-content-pricing {
+  padding:15px;
+  text-align:left;
+}
+.card-title-pricing {
+  margin-top:0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
+.card-title-pricing a {
+  color: #000;
+  text-decoration: none !important;
+}
+.card-read-more-pricing {
+  border-top: 1px solid #D4D4D4;
+}
+.card-read-more-pricing a {
+  text-decoration: none !important;
+  padding:10px;
+  font-weight:600;
+  text-transform: uppercase
+}
 </style>

@@ -119,6 +119,7 @@ Made With Love
   background:rgb(255, 99, 78);
 }
 
+
 @media only screen and (max-device-width: 812px) {
   body{
     width: 100%!important;
