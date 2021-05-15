@@ -115,7 +115,7 @@
 	overflow: hidden;
 }
 #right{
-	margin-top: 40rem!important;
+	margin-top: 15rem!important;
 	width: 100%;
 }
 #left{
@@ -164,16 +164,13 @@
 
 /* DESKTOP VERSION */
 @media (min-width: 992px) { 
-	body, html {
-		height: 100%;
-	}
 	#right{
 		margin-top: 2rem!important;
 	}
 
 	.bg-img{
 		background-size: cover;
-		height: 100vh;
+		/*height: 100vh;*/
 		width: 100vw;
 		overflow: hidden;
 	}

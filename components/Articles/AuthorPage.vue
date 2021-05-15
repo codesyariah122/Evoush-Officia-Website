@@ -120,7 +120,7 @@
 }
 
 #left{
-	height: 100vh;
+	/*height: 100vh;*/
 	width: 100%;
 	position: absolute;
 }
@@ -153,9 +153,6 @@
 
 /* DESKTOP VERSION */
 @media (min-width: 992px) { 
-	body, html {
-		height: 100%;
-	}
 
 	#brand-logo{
 		top:0;
@@ -171,8 +168,8 @@
 
 	.bg-img{
 		background-size: cover;
-		height: 100vh;
-		width: 100vw;
+		/*height: 100vh;*/
+		width: 100%;
 		overflow: hidden;
 	}
 	#author-context{
