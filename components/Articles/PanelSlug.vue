@@ -104,7 +104,7 @@
 	width: 100%;
 }
 #left{
-	height: 100vh;
+	/*height: 100vh;*/
 	width: 100%;
 	position: absolute;
 }
@@ -140,17 +140,13 @@
 
 /* DESKTOP VERSION */
 @media (min-width: 992px) { 
-	body, html {
-		height: 100%;
-	}
-
 	#right{
 		margin-top: 2rem!important;
 	}
 
 	.bg-img{
 		background-size: cover;
-		height: 100vh;
+		/*height: 100vh;*/
 		width: 100vw;
 		overflow: hidden;
 	}
