@@ -48,9 +48,8 @@
 						</div>
 					</NuxtLink>
 				</div>
-				
 			</div>
-
+			<h1 class="underline" style="margin-top: 5rem;"></h1>
 		</div>
 	</div>
 </template>
