@@ -1,37 +1,43 @@
 <template>
-	 <div class="card-pricing" data-toggle="lightbox" data-gallery="assets">
-		<a :href="product.assets[0].url" >
-			<img :src="product.assets[0].url" :alt="product.name" class="img-card-pricing float-left img-responsive"/>
-		</a>
+  <div>
+    <pre>
+      {{product.permalink}}
+    </pre>
 
-		<div class="card-content-pricing">
-			<h5 class="card-title"> {{product.name}} </h5>
-			<p class="card-text"><small class="text-muted">
-				Category : {{product.categories[0].name}}
-			</small></p>
-			<h4 class="card-text"><small class="text-muted">
-				{{product.price.formatted_with_symbol}}
-			</small></h4>
-			<blockquote class="blockquote-footer" v-html="product.seo.description"></blockquote>
-			<n-link
-					:to="{
-						name: 'products-permalink',
-						params: { permalink: product.permalink },
-					}" class="btn btn-success btn-sm"
-					> 
-				View Product 
-			</n-link>
-		</div>
+  	 <div class="card-pricing">
+  		<a :href="product.assets[0].url" >
+  			<img :src="product.assets[0].url" :alt="product.name" class="img-card-pricing float-left img-responsive"/>
+  		</a>
 
-		<div class="card-read-more-pricing">
-			<a :href="product.checkout_url.display" class="btn btn-link btn-block">Order Now</a>
-		</div>
-	</div>
+  		<div class="card-content-pricing">
+  			<h5 class="card-title"> {{product.name}} </h5>
+  			<p class="card-text"><small class="text-muted">
+  				Category : {{product.categories[0].name}}
+  			</small></p>
+  			<h4 class="card-text"><small class="text-muted">
+  				{{product.price.formatted_with_symbol}}
+  			</small></h4>
+  			<blockquote class="blockquote-footer" v-html="product.seo.description"></blockquote>
+  			<NuxtLink
+  					:to="{
+  						name: 'products-permalink',
+  						params: { permalink: product.permalink },
+  					}" class="btn btn-success btn-sm"
+  					> 
+  				View Product 
+  			</NuxtLink>
+  		</div>
+
+  		<div class="card-read-more-pricing">
+  			<a :href="product.checkout_url.display" class="btn btn-link btn-block">Order Now</a>
+  		</div>
+  	</div>
+  </div>
 </template>
 
 <script>
 export default {
-  props: ["product", "permalink"],
+  props: ["product"],
 };
 </script>
 

@@ -1,7 +1,7 @@
 <template>
 	<div class="container-fluid">
 		<div class="row">
-			<div v-if="article.img && article.dir_img" >
+			<div v-if="article.img" >
 				<div :style="{ backgroundImage: `url(${getImage})` }" class="col-sm-6 col-12 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top bg-img" id="left">
 					<div class="row" id="author-context">
 						<div class="col-12 col-sm-12 col-xs-12">

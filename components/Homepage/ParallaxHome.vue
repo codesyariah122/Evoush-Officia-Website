@@ -3,8 +3,8 @@
 		<div class="parallax-home" :style="parallax.style">
 			<div class="row justify-content-center">
 				<div class="caption-parallax-home">
-          <p v-html="parallax.context.paragraph" class="mt-2"></p>
-					<h2 v-html="parallax.context.title"></h2>
+          <h2 v-html="parallax.caption"></h2>
+          <h1 v-html="parallax.company"></h1>
 				</div>
 			</div>
 		</div>
@@ -13,7 +13,7 @@
 
 
 <script>
-	import ParallaxImg from '~/assets/images/banner/new-model-1.jpg'
+	import ParallaxImg from '~/assets/images/banner/reduce/evoush_banner.jpg'
   
 	export default {
 		data(){
@@ -22,10 +22,9 @@
 					style: {
 						'background-image': `url('${ParallaxImg}')`,
 					},
-					context: {
-            title: `<span style="font-family: Walkway; color: red;">Evoush</span> <span style="font-family:'Reey Regular'; color: #fff">Indonesia</span>`,
-            paragraph: '<span style="font-family: Walkway;">Your Eternal</span> <span style="font-family: Reey Regular; color: red;">Future</span>.'
-          }
+					caption: `Kami merupakan sarana bagi <span style="font-family: SpringSakura;">Semangat</span> Anda <br/> untuk <span style="font-family: SpringSakura;"> Membangun </span> <span style="font-family: SpringSakura;color:#ff3b40;">Bisnis</span> yang <span style="font-family: SpringSakura; color: coral;"> Cemerlang</span>`,
+          company: `<span style="font-family: 'walkway';color: red; font-weight: 900;">Evoush</span> 
+                    <span style="font-family: 'Reey Regular'; color: #fff;text-shadow: 0 3px 20px rgba(0, 0, 0, 1.5);">Indonesia</span>`
 				}
 			}
 		}
@@ -92,7 +91,7 @@
       background:rgba(255,255,255,0.3);
       /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
       position: absolute;
-      margin-top: 16.5rem!important;
+      margin-top: 13.5rem!important;
       width: 75%;
       text-align: center;
       color: #fff;
@@ -109,9 +108,9 @@
       font-size: 18px;
     }
     .caption-parallax-home p{
-    font-size: 31px;
-    text-align: center;
-    text-shadow: 0 3px 20px rgba(0, 0, 0, 1.7);
-  }
+      font-size: 31px;
+      text-align: center;
+      text-shadow: 0 3px 20px rgba(0, 0, 0, 1.7);
+    }
 }
 </style>

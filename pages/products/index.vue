@@ -1,7 +1,5 @@
 <template>
-	<div>
-		<product-list :products="products"></product-list>
-	</div>
+	<product-list :products="products"></product-list>
 </template>
 
 

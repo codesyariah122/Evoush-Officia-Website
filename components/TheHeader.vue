@@ -1,11 +1,11 @@
 <template>
-	<nav class="navbar navbar-light transparent-nav">
+	<nav class="navbar navbar-light transparent-nav navbar-slug-article">
 		<a href="/">
 			<Logo class="navbar-brand"/>
 		</a>
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item active text-primary">
-				<a class="nav-link" href="/articles">Articles</a>
+				<a class="nav-link-article" href="/articles">Articles</a>
 			</li>
 			<li class="nav-item active text-primary">
 				<AppSearchInput />
@@ -24,21 +24,20 @@
 	}
 </script>
 <style>
-.navbar{
+.navbar-slug-article{
 	margin-top: -1rem!important;
 	margin-left: -1rem!important;
 	width: 100%;
 }
 
-.nav-link {
+.nav-link-article {
 	color: #fff !important;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 50);
-}
-.nav-link{
 	text-transform: uppercase;
 	margin-right: 3px;
 }
-.nav-link:hover::after{
+
+.nav-link-article:hover::after{
   content:'';
   display: block;
   border-bottom: 3px solid #0B63DC;
@@ -50,7 +49,7 @@
 /* DESKTOP VERSION */
 @media (min-width: 992px) { 
  /* navbar */
- .navbar{
+ .navbar-slug-article{
  	margin-top: -1rem!important;
  	margin-left: -5rem!important;
  	width: 100%;

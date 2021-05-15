@@ -1,8 +1,8 @@
 ---
 title: Rangkaian Produk Terbaik
 description: Produk merupakan sebuah bagian penting dari bisnis anda
-dir_img: ''
-img: ''
+dir_img: post-1
+img: post1.jpg
 slug: rangkaian-produk-terbaik
 alt: Evoush Produk
 author: 

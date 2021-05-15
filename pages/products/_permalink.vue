@@ -1,5 +1,5 @@
 <template>
-	<ProductDetail :product="product" :permalink="permalink"/>
+	<ProductDetail :product="product" />
 </template>
 
 

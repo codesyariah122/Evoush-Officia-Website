@@ -6,13 +6,13 @@
 				<div class="col-sm-6 col-12 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top bg-img" id="left" :style="{ backgroundImage: `url(${product.assets[3].url})` }">
 					<div class="row" id="product-context">
 						<div class="col-12 col-sm-12 col-xs-12">
-							<nav class="navbar navbar-light transparent-nav">
+							<nav class="navbar navbar-light transparent-nav navbar-prod">
 								<a href="/">
 									<BrandLogo class="navbar-brand"/>
 								</a>
 								<ul class="navbar-nav mr-auto">
 									<li class="nav-item active text-primary">
-										<a class="nav-link" href="/product">Products</a>
+										<a class="nav-link-prod" href="/product">Products</a>
 									</li>
 								</ul>					
 							</nav>
@@ -21,7 +21,7 @@
 							<h1>
 								{{product.seo.title}}
 							</h1>
-							<blockquote class="text-primary">
+							<blockquote class="text-primary ml-3">
 								Category : <nuxt-link :to="`/categories/${product.categories[0].name}`">{{product.categories[0].name}}</nuxt-link>
 							</blockquote>
 							<h2 class="text-primary">
@@ -123,29 +123,20 @@
 	width: 100%;
 	position: absolute;
 }
-.navbar{
+.navbar-prod{
 	margin-top: -1rem!important;
 	margin-left: -1rem!important;
 	width: 100%;
 }
 
-.nav-link {
+.nav-link-prod {
 	color: #000 !important;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 7.7);
-}
-.nav-link{
 	text-transform: uppercase;
 	margin-right: 3px;
 }
-.nav-link:hover::after{
-  content:'';
-  display: block;
-  border-bottom: 3px solid #0B63DC;
-  width: 50%;
-  margin:auto;
-  padding-bottom: 5px;
-  margin-bottom: -8px;
-}
+
+
 .prod-detail{
 	margin-top: 13rem!important;
 }
@@ -186,10 +177,19 @@
 		width: 100vw;
 		overflow: hidden;
 	}
-	.navbar{
+	.navbar-prod{
 		margin-top: -1rem!important;
-		margin-left: -5rem!important;
+		margin-left: -2rem!important;
 		width: 100%;
+	}
+	.nav-link-prod:hover::after{
+		content:'';
+		display: block;
+		border-bottom: 3px solid #0B63DC;
+		width: 50%;
+		margin:auto;
+		padding-bottom: 5px;
+		margin-bottom: -8px;
 	}
 	.prod-detail{
 		margin-top: 17rem!important;

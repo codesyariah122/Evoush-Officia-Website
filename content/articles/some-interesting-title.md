@@ -1,8 +1,8 @@
 ---
 title: Some Interesting title
 description: Learning how to use @nuxt/content to create a blog again
-dir_img: ''
-img: ''
+dir_img: post-1
+img: post1.jpg
 slug: some-interesting-title
 alt: nice image
 author: 

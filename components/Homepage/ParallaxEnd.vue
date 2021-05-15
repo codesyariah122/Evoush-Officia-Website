@@ -3,8 +3,8 @@
 		<div class="parallax" :style="parallax.style">
 			<div class="row justify-content-center">
 				<div class="caption">
-					<h2 v-html="parallax.caption"></h2>
-          <h1 v-html="parallax.company"></h1>
+          <p v-html="parallax.context.paragraph" class="mt-5 text-center"></p>
+          <h2 v-html="parallax.context.title"></h2>
 					<br>
 				</div>
 			</div>
@@ -15,7 +15,7 @@
 <style></style>
 
 <script>
-	import ParallaxImg from '~/assets/images/banner/reduce/evoush_banner.jpg'
+  import ParallaxImg from '~/assets/images/banner/new-model-1.jpg'
 
 	export default {
 		data(){
@@ -24,9 +24,11 @@
 					style: {
 						'background-image': `url('${ParallaxImg}')`,
 					},
-					caption: `Kami adalah sarana bagi <span style="font-family: SpringSakura;">Semangat</span> Anda <br/> untuk <span style="font-family: SpringSakura;"> Membangun </span> <span style="font-family: SpringSakura;">Bisnis</span> yang <span style="font-family: SpringSakura; color: coral;"> Cemerlang</span>`,
-          company: `<span style="font-family: 'walkway';color: red; font-weight: 900;">Evoush</span> 
-                    <span style="font-family: 'Reey Regular'; color: #fff;text-shadow: 0 3px 20px rgba(0, 0, 0, 1.5);">Indonesia</span>`
+          context: {
+            title: `<span style="font-family: Walkway; color: red;">Evoush</span> <span style="font-family:'Reey Regular'; color: #fff">Indonesia</span>`,
+            paragraph: '<span style="font-family: Walkway;">Your Eternal</span> <span style="font-family: Reey Regular; color: red;">Future</span>.'
+          }
+					
 				}
 			}
 		}
@@ -90,7 +92,7 @@
       background:rgba(255,255,255,0.3);
       /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
       position: absolute;
-      margin-top: 15.5rem;
+      margin-top: 15rem;
       width: 75%;
       text-align: center;
       color: #fff;
@@ -100,7 +102,13 @@
       font-weight:600;
       text-shadow: 0 3px 20px rgba(0, 0, 0, 1.7);
       margin-bottom: .9rem;
-      font-size: 41px;
+      font-size: 50px;
+    }
+    .caption p{
+      text-shadow: 0 3px 20px rgba(0, 0, 0, 7);
+      font-weight: 700;
+      width: 90%;
+      font-size: 35px;
     }
     .caption a{
       font-size: 18px;

@@ -51,7 +51,7 @@
 						id:1,
 						context: {
 							header: `Tunjukan <span style="font-family: 'SpringSakura'; color: tomato;"> Strategimu </span> agar Anda dikenal`,
-							paragraph: `<b><u>Dedikasikan Dirimu</u></b> dengan seluruh kemampuan anda, dan buat orang lain tertarik untuk mencoba <i class="fas fa-air-freshener" style="font-size: 18px;"></i> produk kita. Setiap hasil kerja kerasmu akan dihargai dengan nilai kepuasan oleh pengguna.<i class="far fa-calendar-check text-success"></i>.`
+							paragraph: `<b><u>Dedikasikan Diri anda</u></b> dengan seluruh kemampuan anda, dan buat orang lain tertarik untuk mencoba <i class="fas fa-air-freshener" style="font-size: 18px;"></i> produk kita. Setiap hasil kerja kerasmu akan dihargai dengan nilai kepuasan oleh pengguna.<i class="far fa-calendar-check text-success"></i>.`
 						},
 						vector: ImgPanelSatu,
 					},
@@ -85,6 +85,7 @@
 		text-align: justify;
 		margin-top: 1rem;
 		margin-left: 1rem;
+		text-transform: capitalize;
 	}
 	.intents-img{
 		width: 320px !important;
@@ -104,6 +105,7 @@
 		margin-left: 1.3rem;
 		text-align: justify;
 		text-indent: 18px;
+		text-transform: capitalize;
 	}
 	.intents-img{
 		width: 800px !important;

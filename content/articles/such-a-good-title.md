@@ -1,8 +1,8 @@
 ---
 title: Such a good title
 description: This is the description for and article about Lorem Ipsum
-dir_img: ''
-img: ''
+dir_img: post-1
+img: post1.jpg
 slug: such-a-good-title
 alt: Article 6
 author: 
