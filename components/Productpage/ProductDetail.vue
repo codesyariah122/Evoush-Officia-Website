@@ -130,7 +130,7 @@
 }
 
 .nav-link-prod {
-	color: #000 !important;
+	color: #fff !important;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 7.7);
 	text-transform: uppercase;
 	margin-right: 3px;
