@@ -33,30 +33,20 @@
 					Here are a list of articles by {{ articles[0].author.name }}:
 				</h1>
 
-				<div  v-for="article in articles"  :key="article.slug" class="card mb-3">
-					<div class="row no-gutters">
-						<div class="col-md-4">
-							<div  v-if="article.img" >
-								<img :src="require(`~/assets/blog/images/${article.dir_img}/${article.img}`)" :alt="article.alt" class="img-responsive"/>
-							</div>
-							<div v-else>
-								<img :src="`https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60`" class="img-responsive">
-							</div>
+				<div  v-for="article in articles"  :key="article.slug" class="card-pricing mb-3">
+					<NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+						<img  :src="require(`~/assets/blog/images/${article.dir_img}/${article.img}`)" :alt="article.alt" class="img-card-pricing float-left img-responsive">
+
+						<div class="card-content-pricing">
+							<h5 class="card-title">
+								{{article.title}}
+							</h5>
+							<p class="card-text">{{article.description}}.</p>
+							<p class="card-text"><small class="text-muted">
+								{{formatDate(article.updatedAt)}}
+							</small></p>
 						</div>
-						<div class="col-md-8">
-							<NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-								<div class="card-body">
-									<h5 class="card-title">
-										{{article.title}}
-									</h5>
-									<p class="card-text">{{article.description}}.</p>
-									<p class="card-text"><small class="text-muted">
-										{{formatDate(article.updatedAt)}}
-									</small></p>
-								</div>
-							</NuxtLink>
-						</div>
-					</div>
+					</NuxtLink>
 				</div>
 				
 			</div>
@@ -111,12 +101,73 @@
 </script>
 
 <style>
+ .wrapper-pricing {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
 
+.container-fostrap {
+  display: table-cell;
+  padding: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+.fostrap-logo {
+  width: 100px;
+  margin-bottom:15px
+}
+
+.card-pricing {
+  display: block; 
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
+    transition: box-shadow .25s; 
+}
+.card-pricing:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+/*.img-card-pricing {
+  width: 100%;
+  height:200px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+    overflow: hidden;
+}*/
+.img-card-pricing{
+  width: 100%!important;
+  height: 70vh!important;
+  object-fit:cover!important; 
+  transition: all .25s ease;
+} 
+.card-content-pricing {
+  padding:15px;
+  text-align:left;
+}
+.card-title-pricing {
+  margin-top:0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
+.card-title-pricing a {
+  color: #000;
+  text-decoration: none !important;
+}
+.card-read-more-pricing {
+  border-top: 1px solid #D4D4D4;
+}
+.card-read-more-pricing a {
+  text-decoration: none !important;
+  padding:10px;
+  font-weight:600;
+  text-transform: uppercase
+}
 #right{
 	margin-top: 40rem!important;
-}
-#right .card{
-	max-width: 400px;
 }
 
 #left{
@@ -125,7 +176,7 @@
 	position: absolute;
 }
 #author-context{
-	width: 70%!important;
+	width: 100%!important;
 	margin-left: -1rem!important;
 }
 #author-context ul li{
@@ -153,7 +204,71 @@
 
 /* DESKTOP VERSION */
 @media (min-width: 992px) { 
+	.wrapper-pricing {
+		display: table;
+		height: 100%;
+		width: 100%;
+	}
 
+	.container-fostrap {
+		display: table-cell;
+		padding: 1em;
+		text-align: center;
+		vertical-align: middle;
+	}
+	.fostrap-logo {
+		width: 100px;
+		margin-bottom:15px
+	}
+
+	.card-pricing {
+		display: block; 
+		margin-bottom: 20px;
+		line-height: 1.42857143;
+		background-color: #fff;
+		border-radius: 2px;
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
+		transition: box-shadow .25s; 
+	}
+	.card-pricing:hover {
+		box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+/*.img-card-pricing {
+  width: 100%;
+  height:200px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+    overflow: hidden;
+    }*/
+    .img-card-pricing{
+    	width: 100%!important;
+    	height: 70vh!important;
+    	object-fit:cover!important; 
+    	transition: all .25s ease;
+    } 
+    .card-content-pricing {
+    	padding:15px;
+    	text-align:left;
+    }
+    .card-title-pricing {
+    	margin-top:0px;
+    	font-weight: 700;
+    	font-size: 1.65em;
+    }
+    .card-title-pricing a {
+    	color: #000;
+    	text-decoration: none !important;
+    }
+    .card-read-more-pricing {
+    	border-top: 1px solid #D4D4D4;
+    }
+    .card-read-more-pricing a {
+    	text-decoration: none !important;
+    	padding:10px;
+    	font-weight:600;
+    	text-transform: uppercase
+    }
 	#brand-logo{
 		top:0;
 		position: sticky;
