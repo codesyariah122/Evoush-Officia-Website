@@ -56,7 +56,7 @@
 						id:1,
 						context: {
 							header: `Bisnis <span style="font-family: 'SpringSakura'; color: tomato;"> Income </span> Fantastis`,
-							paragraph: `<b><u>Jadilah Leader</u></b> di Kota Anda <i class="fas fa-air-freshener" style="font-size: 18px;"></i>, Bentuk Jati Diri Anda Sebagai Pebisnis dengan <span style="font-family:Reey Regular; color:#ff3b40;"> Income Fantastis </span> Hanya di <span style="font-family: Walkway; color:#ff3b40;">Evoush</span>. Laksana Kisah Seorang Samurai Berikut <i class="far fa-calendar-check text-success"></i>.`
+							paragraph: `<b><u>Jadilah Leader</u></b> di Kota Anda <i class="fas fa-air-freshener" style="font-size: 18px;"></i>, Bentuk Jati Diri Anda Sebagai Pebisnis dengan <span style="font-family:Reey Regular; color:#ff3b40;"> Income Fantastis </span> Hanya di <span style="font-family: Walkway; color:#ff3b40; font-weight: 900;"><b>Evoush</b></span>. Laksana Kisah Seorang Samurai Berikut <i class="far fa-calendar-check text-success"></i>.`
 						},
 						vector: ImgPanelSatu,
 						iframe: "https://www.youtube.com/embed/ePdgRIoNHQY"
