@@ -1,9 +1,9 @@
 <template>
   <div>
-    <pre>
+    <!-- <pre>
       {{product.permalink}}
     </pre>
-
+ -->
   	 <div class="card-pricing">
   		<a :href="product.assets[0].url" >
   			<img :src="product.assets[0].url" :alt="product.name" class="img-card-pricing float-left img-responsive"/>
