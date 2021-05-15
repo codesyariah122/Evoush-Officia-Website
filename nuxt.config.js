@@ -77,7 +77,12 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxt/content',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    [
+      'nuxt-google-tag-manager', { 
+        id: 'GTM-MGR7PP9' 
+      }
+    ],
   ],
   content: {
     markdown: {

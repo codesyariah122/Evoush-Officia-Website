@@ -8,7 +8,7 @@
 						<div class="col-12 col-xs-12 col-sm-6 col-md-3">
 							<div class="widget subscribe no-box">
 								<Logo/>
-								<p style="font-family:'Reey Regular'; color: red; font-size: 27px; font-weight: 800;" v-html="slogan"></p>
+								<p style="font-family:'Reey Regular'; color: red; font-size: 27px; font-weight: 900;" v-html="slogan"></p>
 							</div>
 						</div>
 
@@ -41,7 +41,7 @@
 					<div class="row">
 						<div class="col-md-12 text-center text-danger">
 							<p>&copy;{{year}}
-								<a href="https://evoush.vercel.app" class="brand"> {{brand}} <span class="text-white"> {{country}} </span> </a>. <br> 
+								<a href="https://evoush.vercel.app" class="brand" style="color:#ff3b40;"> {{brand}} <span class="text-white"> {{country}} </span> </a>. <br> 
 								{{cops}} <br/> <a href="https://evoush.vercel.app"> {{comp}} </a>
 							</p>
 						</div>
