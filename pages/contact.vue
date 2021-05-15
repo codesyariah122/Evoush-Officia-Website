@@ -4,7 +4,9 @@
 		<Hero/>
 
 		<section id="contact">
-			<h1>Evoush Contact</h1>
+			<h1 class="underline" style="margin-top: 5rem;"></h1>
+			<FormContact/>
+			<h1 class="underline" style="margin-top: 5rem;"></h1>
 		</section>
 
 		<Footer/>
@@ -26,6 +28,7 @@
 <script>
 	import Navigation from '~/components/Headers/Navigation'
 	import Hero from '~/components/Contactpage/Hero'
+	import FormContact from '~/components/Contactpage/FormContact'
 	import Footer from '~/components/molecules/Footer'
 
 	export default {
@@ -37,6 +40,7 @@
 		components: {
 			Navigation,
 			Hero,
+			FormContact,
 			Footer
 		},
 		head(){
