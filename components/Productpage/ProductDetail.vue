@@ -115,7 +115,7 @@
 	overflow: hidden;
 }
 #right{
-	margin-top: 45rem!important;
+	margin-top: 35rem!important;
 	width: 100%;
 }
 #left{
