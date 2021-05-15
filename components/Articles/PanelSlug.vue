@@ -104,13 +104,13 @@
 	width: 100%;
 }
 #left{
-	/*height: 100vh;*/
+	height: 100vh;
 	width: 100%;
 	position: absolute;
 }
 #author-context{
 	width: 100%!important;
-	margin-left: -1rem!important;
+	margin-left: 3rem!important;
 }
 
 .article-detail{
@@ -143,7 +143,9 @@
 	#right{
 		margin-top: 2rem!important;
 	}
-
+	#author-context{
+		margin-left: 3rem;
+	}
 	.bg-img{
 		background-size: cover;
 		/*height: 100vh;*/

@@ -55,7 +55,8 @@ export default {
     border-radius: 2px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
     transition: box-shadow .25s; 
-    height: 100%;
+    /*height: 100%;*/
+    width: 100%;
 }
 .card-pricing:hover {
   box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
@@ -89,5 +90,11 @@ export default {
   padding:10px;
   font-weight:600;
   text-transform: uppercase
+}
+
+@media (min-width: 992px) { 
+  .card-pricing {
+    width: 80%;
+  }
 }
 </style>

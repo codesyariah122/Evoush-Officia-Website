@@ -26,7 +26,7 @@
 <style>
 .navbar-slug-article{
 	margin-top: -1rem!important;
-	margin-left: -1rem!important;
+	/*margin-left: -1rem!important;*/
 	width: 100%;
 }
 
@@ -50,8 +50,8 @@
 @media (min-width: 992px) { 
  /* navbar */
  .navbar-slug-article{
- 	margin-top: -1rem!important;
- 	margin-left: -5rem!important;
+ 	margin-top: -15rem!important;
+ 	margin-left: -1rem!important;
  	width: 100%;
  }
 }
