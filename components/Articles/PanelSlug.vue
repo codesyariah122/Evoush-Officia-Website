@@ -25,35 +25,6 @@
 				</div>
 			</div>
 
-			<div v-else>
-				<div :style="bgImgEmpty" class="col-sm-6 col-12 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top bg-img" id="left" >
-					<div class="row">
-						<div class="col-12">
-							<TheHeader/>
-						</div>
-					</div>
-
-					<div class="row" id="author-context">
-						<div class="col-12 col-sm-12 col-xs-12">
-							<ul>
-								<li>
-									<h1 class="text-primary">
-										{{formatDate(article.updatedAt)}}
-									</h1>
-								</li>
-								<li>
-									<h1> {{article.author.name}} </h1>
-								</li>
-							</ul>
-							<h1>
-								{{article.title}}
-							</h1> 
-							<p class="mb-4">{{ article.description }}</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
 			<div class="col-6 invisible col-2"><!--hidden spacer--></div>
 			<div class="col-sm-6 col-12 offset-0 offset-sm-6 py-2" id="right">
 				<!-- <NuxtLink to="/articles">

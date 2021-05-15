@@ -3,7 +3,7 @@
 		<a href="/">
 			<Logo class="navbar-brand"/>
 		</a>
-		<ul class="navbar-nav mr-auto">
+		<ul class="navbar-nav">
 			<li class="nav-item active text-primary">
 				<a class="nav-link-article" href="/articles">Articles</a>
 			</li>

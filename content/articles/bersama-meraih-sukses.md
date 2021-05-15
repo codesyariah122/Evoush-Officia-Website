@@ -1,8 +1,8 @@
 ---
 title: Bersama meraih sukses
 description: Membangun jaringan dan menjadi sukses bersama team adalah sebuah nikmat
-dir_img: ''
-img: ''
+dir_img: post-1
+img: post1.jpg
 slug: bersama-meraih-sukses
 alt: Bisnis Evoush
 author: 
