@@ -115,7 +115,7 @@
 	overflow: hidden;
 }
 #right{
-	margin-top: 30rem!important;
+	margin-top: 45rem!important;
 	width: 100%;
 }
 #left{
@@ -165,7 +165,7 @@
 /* DESKTOP VERSION */
 @media (min-width: 992px) { 
 	#right{
-		margin-top: 2rem!important;
+		margin-top: 5rem!important;
 	}
 
 	.bg-img{
