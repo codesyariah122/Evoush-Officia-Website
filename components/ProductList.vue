@@ -2,19 +2,15 @@
   <div>
     <div id="product-list">
       <div class="container mt-5">
-        <div class="row" v-for="product in products" :key="product.permalink">
-          <div class="col-12 col-xs-12 col-sm-12">
-            <h1>
-            <n-link :to="product.categories[0].slug">
-              {{product.categories[0].name}}
-            </n-link>
-          </h1>
+        <div class="row justify-content-start">
+          <div v-for="product in products" :key="product.permalink" v-if="product.categories[0].name == 'Nutrisi'" class="col-md-4">
+             <NutrisiView :product="product" :categories="product.categories[0]"/>
           </div>
-          <div class="col-md-4 col-xs-12 col-sm-12 mb-3">
-            <product-view :product="product"></product-view>
           </div>
-          <div class="col-12">
-            <hr>
+          <hr>
+          <div class="row justify-content-start">
+             <div v-for="product in products" :key="product.permalink" v-if="product.categories[0].name == 'Cosmetics'" class="col-md-4">
+             <CosmeticsView :product="product" :categories="product.categories[0]"/>
           </div>
         </div>
       </div>
@@ -23,9 +19,16 @@
 </template>
 
 <script>
-export default {
-  props: ["products"],
-};
+  import CosmeticsView from '~/components/Productpage/ProductView/CosmeticsView'
+  import NutrisiView from '~/components/Productpage/ProductView/NutrisiView'
+
+  export default {
+    props: ["products"],
+    components:{
+      CosmeticsView,
+      NutrisiView
+    }
+  };
 </script>
 
 <style scoped>

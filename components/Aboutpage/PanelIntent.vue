@@ -73,7 +73,7 @@
           {
             id: 3,
             context: {
-              header: `<span style="font-family: Reey Regular; color: tomato;"> Magement </span> <span style="font-family: 'Walkway'; font-size: 37px; color: #ff3b40; margin-left: 1rem; font-weight: 900;">Evoush</span>`,
+              header: `<span style="font-family: Reey Regular; color: tomato;"> Management </span> <span style="font-family: 'Walkway'; font-size: 37px; color: #ff3b40; margin-left: 1rem; font-weight: 900;">Evoush</span>`,
               paragraph: `Team management kami yang senantiasa memberikan pelayanan terbaik bagi anda <i class="fas fa-mobile-alt"></i>, senantiasa bekerja dengan ketelitian dan keseriusan. <br/> Karena bisnis yang anda bangun di <span style="font-family: Walkway; color: #ff3b40; font-weight: 900;">Evoush</span> adalah prioritas bagi management kami.`
             },
             vector: ImgPanelSatu,
