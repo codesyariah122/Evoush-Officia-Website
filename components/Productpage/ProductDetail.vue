@@ -3,7 +3,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<!-- left content -->
-				<div class="col-sm-6 col-12 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top bg-img" id="left" :style="{ backgroundImage: `url(${product.assets[3].url})` }">
+				<div class="col-sm-6 col-12 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top bg-img" id="left" :style="{ backgroundImage: `url(${product.assets[2].url})` }">
 					<div class="row" id="product-context">
 						<div class="col-12 col-sm-12 col-xs-12">
 							<nav class="navbar navbar-light transparent-nav navbar-prod">
@@ -124,7 +124,7 @@
 	position: absolute;
 }
 .navbar-prod{
-	margin-top: -1rem!important;
+	margin-top: 1rem!important;
 	margin-left: -1rem!important;
 	width: 100%;
 }
@@ -138,7 +138,7 @@
 
 
 .prod-detail{
-	margin-top: 13rem!important;
+	margin-top: 10rem!important;
 }
 .prod-detail h1{
 	text-shadow: 1px 1px 1px rgba(50, 10, 0, 100);
