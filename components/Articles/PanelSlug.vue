@@ -109,7 +109,7 @@
 	position: absolute;
 }
 #author-context{
-	width: 70%!important;
+	width: 100%!important;
 	margin-left: -1rem!important;
 }
 
@@ -147,7 +147,7 @@
 	.bg-img{
 		background-size: cover;
 		/*height: 100vh;*/
-		width: 100vw;
+		width: 100%;
 		overflow: hidden;
 	}
 	.article-detail{
