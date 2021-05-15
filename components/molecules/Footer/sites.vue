@@ -20,8 +20,8 @@
 					{id:3, name:"Success Stories", link: "/success-stories"},
 					{id:4, name:"Event/Tickets", link: "/event"},
 					{id:5, name:"News", link: "/articles"},
-					{id:6, name:"Life Style", link: "/life-style"}	
-
+					{id:6, name:"Life Style", link: "/life-style"},
+					{id:7, name:"Quran Digital", link: "/quran-digital"}
 				]
 			}
 		}

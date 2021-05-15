@@ -15,7 +15,7 @@
 			>
 
 			<!-- Slides with image only -->
-			<b-carousel-slide  v-for="asset in assets" :img-src="asset.url"></b-carousel-slide>
+			<b-carousel-slide  v-for="asset in assets" :img-src="asset.url" :key="asset.id"></b-carousel-slide>
 
 			
 		</b-carousel>

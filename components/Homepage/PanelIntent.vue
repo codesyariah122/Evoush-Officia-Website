@@ -11,21 +11,26 @@
 									<p v-html="panel.context.paragraph"></p>
 								</div>
 							</div>
-							<div class="col-md-6 col-xs-6 col-sm-6">
+							<div class="col-md-8 col-xs-8 col-sm-8">
 								<div data-aos="zoom-out-left" data-aos-easing="ease-in-sine" data-aos-duration="1500">
-									<img :src="panel.vector" class="img-responsive intents-img">
+									<div v-if="panel.iframe" class="embed-responsive embed-responsive-1by1">
+										<iframe class="embed-responsive-item" :src="panel.iframe" allowfullscreen></iframe>
+									</div>
+									<div v-else>
+										<img :src="panel.vector" class="img-responsive intents-img">
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div v-else>
-						<div class="row">
+						<div class="row genap-home">
 							<div class="col-md-6 col-xs-6 col-sm-6">
 								<div data-aos="zoom-out-left" data-aos-easing="ease-in-sine" data-aos-duration="1500">
 									<img :src="panel.vector" class="img-responsive intents-img">
 								</div>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-6 col-xs-6 col-sm-6">
 								<div data-aos="zoom-out-right" data-aos-easing="ease-in-sine" data-aos-duration="1500">
 									<h1 v-html="panel.context.header"></h1>
 									<p class="mt-5" v-html="panel.context.paragraph"></p>
@@ -50,13 +55,22 @@
 					{
 						id:1,
 						context: {
+							header: `Bisnis <span style="font-family: 'SpringSakura'; color: tomato;"> Income </span> Fantastis`,
+							paragraph: `<b><u>Jadilah Leader</u></b> di Kota Anda <i class="fas fa-air-freshener" style="font-size: 18px;"></i>, Bentuk Jati Diri Anda Sebagai Pebisnis dengan <span style="font-family:Reey Regular; color:#ff3b40;"> Income Fantastis </span> Hanya di <span style="font-family: Walkway; color:#ff3b40;">Evoush</span>. Laksana Kisah Seorang Samurai Berikut <i class="far fa-calendar-check text-success"></i>.`
+						},
+						vector: ImgPanelSatu,
+						iframe: "https://www.youtube.com/embed/ePdgRIoNHQY"
+					},
+					{
+						id:2,
+						context: {
 							header: `Tunjukan <span style="font-family: 'SpringSakura'; color: tomato;"> Strategimu </span> agar Anda dikenal`,
 							paragraph: `<b><u>Dedikasikan Diri anda</u></b> dengan seluruh kemampuan anda, dan buat orang lain tertarik untuk mencoba <i class="fas fa-air-freshener" style="font-size: 18px;"></i> produk kita. Setiap hasil kerja kerasmu akan dihargai dengan nilai kepuasan oleh pengguna.<i class="far fa-calendar-check text-success"></i>.`
 						},
 						vector: ImgPanelSatu,
 					},
 					{
-						id: 2,
+						id: 3,
 						context: {
 							header: `Bergabung  dan bersinarlah bersama <span style="font-family: 'Walkway'; font-size: 37px; color: red; margin-left: 1rem;">Evoush`,
 							paragraph: `Berbisnis di Evoush merupakan sebuah investasi yang menjanjikan . Setelah anda bergabung  <i class="fas fa-mobile-alt"></i>, anda akan menjadi bagian dalam bisnis Bersama kami.Bersama kami merupakan  pilihan yang tepat. Karena, anda akan memiliki pengalaman baru yang mengesankan dalam dunia bisnis. <br/> Evoush dengan rangkaian produk kesehatan dan kecantikan yang merupakan sebuah modal lengkap bagi diri dan bisnis anda .`
@@ -107,9 +121,18 @@
 		text-indent: 18px;
 		text-transform: capitalize;
 	}
-	.intents-img{
+
+	.genap-home {
+		margin-top: 3rem;
+		/*margin-bottom: 3rem;*/
+	}
+	.genap-home h1,p {
+		margin-top: 5rem;
+		margin-left: 2rem;
+	}
+	.genap-home img{
 		width: 800px !important;
-		margin-left: -.1rem;
+		margin-left: -7rem;
 	}
 }
 </style>

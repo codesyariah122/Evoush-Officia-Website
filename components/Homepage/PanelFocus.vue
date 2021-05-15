@@ -19,11 +19,20 @@
 								</div>
 							</div>
 
-							<div v-if="panel.anim" class="row justify-content-end mt-2 mb-2">
+							<div v-if="panel.anim && panel.id !== 3" class="row justify-content-end mt-2 mb-2">
 								<div class="p-2">
 									<img :src="panel.anim" class="img-responsive anim">
 								</div>
 							</div>
+
+              <div v-else>
+                <div class="row justify-content-end mt-2 mb-2">
+                  <div class="p-2 embed-responsive embed-responsive-1by1">
+                    <iframe class="embed-responsive-item" :src="panel.iframe" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+              
 							<h1 class="underline"></h1>
 						</div>
 
@@ -87,6 +96,7 @@
             },
             anim: Anim2,
             vector: Vector3,
+            iframe: "https://www.youtube.com/embed/pvv5NaAC4js"
           },
           {
             id:4,
