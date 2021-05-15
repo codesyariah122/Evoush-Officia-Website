@@ -110,7 +110,7 @@
 <style>
 .bg-img{
 	background-size: cover;
-	height: 100vh;
+	/*height: 100vh;*/
 	width: 100vw;
 	overflow: hidden;
 }
@@ -119,7 +119,7 @@
 	width: 100%;
 }
 #left{
-	height: 100vh;
+	/*height: 100vh;*/
 	width: 100%;
 	position: absolute;
 }
