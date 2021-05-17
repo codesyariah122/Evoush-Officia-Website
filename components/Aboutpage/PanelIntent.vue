@@ -123,6 +123,9 @@
     width: 320px !important;
     margin-left: -.1rem;
   }
+  .ganjil-img{
+    width: 400px!important;
+  }
 
 }
 /* DESKTOP VERSION */
