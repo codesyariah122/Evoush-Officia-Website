@@ -57,7 +57,7 @@
 						id:1,
 						context: {
 							header: `Healthy <span style="font-family: 'Walkway'; color: tomato;"> Evoush</span>`,
-							paragraph: `<b><u>Product Cosmetics Evoush</u></b> Bukan hanya kaya manfaat, namun setiap product-product kami <i class="fas fa-air-freshener" style="font-size: 18px;"></i>, akan menjadi sebuah faktor unggul bagi <span style="font-family:Reey Regular; color:#ff3b40;"> Bisnis  </span> Anda di <span style="font-family: Walkway; color:#ff3b40; font-weight: 900;"><b>Evoush</b></span>. <i class="far fa-calendar-check text-success"></i>.`
+							paragraph: `<b><u>Product Nutrisi Evoush</u></b> merupakan hasil karya dari bahan pilihan di proses dengan kualitas terbaik, tidak hanya <i class="fas fa-air-freshener" style="font-size: 18px;"></i>, akan menjadi sebuah faktor unggul bagi <span style="font-family:Reey Regular; color:#ff3b40;"> Bisnis  </span> Anda di <span style="font-family: Walkway; color:#ff3b40; font-weight: 900;"><b>Evoush</b></span>, namun produk nutrisi evoush kaya akan manfaat. <i class="far fa-calendar-check text-success"></i>.`
 						},
 						vector: '',
 						iframe: "https://www.facebook.com/plugins/video.php?height=397&href=https%3A%2F%2Fwww.facebook.com%2Fmynik.evoush%2Fvideos%2F3086367111463377%2F&show_text=false&width=560"
