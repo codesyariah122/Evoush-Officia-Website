@@ -126,6 +126,9 @@
   .ganjil-img{
     width: 500px!important;
   }
+  .anim{
+    width: 300px!important;
+  }
 
 }
 /* DESKTOP VERSION */
