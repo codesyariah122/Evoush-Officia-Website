@@ -29,6 +29,11 @@
                 <div data-aos="zoom-out-left" data-aos-easing="ease-in-sine" data-aos-duration="1500">
                   <img :src="panel.vector" class="img-responsive intents-img">
                 </div>
+                <div v-if="panel.anim">
+                  <div class="p-2">
+                    <img :src="panel.anim" class="img-responsive anim">
+                  </div>
+                </div>
               </div>
               <div class="col-md-4">
                 <div data-aos="zoom-out-right" data-aos-easing="ease-in-sine" data-aos-duration="1500">
@@ -46,8 +51,9 @@
 
 
 <script>
-  import ImgPanelSatu from '~/assets/images/vector_image/vector27.jpg'
+  import ImgPanelSatu from '~/assets/images/vector_image/vector33.jpg'
   import ImgPanelDua  from '~/assets/images/vector_image/vector28.jpg'
+  import Anim1 from '~/assets/images/animated/anim48.gif'
 
   export default {
     data(){
@@ -69,6 +75,7 @@
               paragraph: `Segala yang dilakukan dengan bersama-sama dengan ketelitian dan keseriusan <i class="fas fa-mobile-alt"></i>, tak ayal semua faktor untuk anda mendapatkan keberhasilan dalam bisnis menjadi semakin terbuka luas. <br/> Seperti cakrawala yang selalu terbuka dengan berbagai pikiran yang meleburkan sayap-sayap impian.`
             },
             vector: ImgPanelDua,
+            anim: Anim1
           },
           {
             id: 3,
@@ -124,6 +131,9 @@
     width: 500px !important;
     height: 400px !important;
     margin-left: -.1rem;
+  }
+  .anim{
+    width: 550px;
   }
 }
 </style>
