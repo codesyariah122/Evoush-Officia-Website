@@ -36,7 +36,7 @@
 						id:1,
 						context: {
 							header: `Your Eternal <span style="font-family: Reey Regular; color: tomato;"> Future</span>`,
-							paragraph: `Di kantor inilah kami awali semangan untuk membangun bisnis masa depan anda yang <span style="font-family: Reey Regular;">Cemerlang</span> hanya bersama <b><u></u>Evoush</b>. Bangun kejayaan bisnis anda dengan penuh semangat <i class="fas fa-tags text-info"></i> tuntun strategy anda bersama team anda satukan semua gagasan menjadi sebuah gugusan yang meleburkan energy menjadi satu cahaya besar.`
+							paragraph: `Di Tempat inilah kami awali semangat untuk membangun bisnis masa depan anda yang <span style="font-family: Reey Regular;">Cemerlang</span> hanya bersama <b><u></u>Evoush</b>. Bangun kejayaan bisnis anda dengan penuh semangat <i class="fas fa-tags text-info"></i> tuntun strategy anda bersama team anda satukan semua gagasan menjadi sebuah gugusan yang meleburkan energy menjadi satu cahaya besar.`
 						},
 						vector: {
 							first: ImgPanelSatu
