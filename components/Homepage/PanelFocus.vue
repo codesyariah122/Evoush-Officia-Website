@@ -19,7 +19,7 @@
 								</div>
 							</div>
 
-							<div v-if="panel.anim && panel.id !== 3" class="row justify-content-end mt-2 mb-2">
+							<div v-if="panel.anim && panel.id !== 3" class="row justify-content-end mt-2 mb-5">
 								<div class="p-2">
 									<img :src="panel.anim" class="img-responsive anim">
 								</div>
@@ -27,8 +27,11 @@
 
               <div v-else>
                 <div class="row justify-content-end mt-2 mb-2">
-                  <div class="p-2 embed-responsive embed-responsive-1by1">
+                 <!--  <div class="p-2 embed-responsive embed-responsive-1by1">
                     <iframe class="embed-responsive-item" :src="panel.iframe" allowfullscreen></iframe>
+                  </div> -->
+                  <div class="p-2">
+                    <img :src="panel.anim" class="img-responsive anim">
                   </div>
                 </div>
               </div>
@@ -50,6 +53,11 @@
 									</div>
 								</div>
 							</div>
+              <div v-if="panel.anim" class="row justify-content-start mt-2 mb-2">
+                <div class="p-2">
+                  <img :src="panel.anim" class="img-responsive anim">
+                </div>
+              </div>
 						</div>
 
 					</div>
@@ -66,6 +74,8 @@
   import Vector4 from '~/assets/images/vector_image/vector22.jpg'
   import Anim1 from '~/assets/images/animated/anim37.gif'
   import Anim2 from '~/assets/images/vector_image/vector15.jpg'
+  import Anim3 from '~/assets/images/animated/anim39.gif'
+  import Anim4 from '~/assets/images/animated/anim38.gif'
 
   export default {
     data(){
@@ -94,9 +104,9 @@
               header: `Membantu dan membimbing anda dalam memaksimalkan potensi bisnis jaringan untuk meraih <span style="font-family: SpringSakura; color:tomato;">income growth</span> yang maksimal`,
               paragraph: `<span style="font-family: Walkway; color:#ff3b40;">Evoush</span> membantu serta membimbing anda dalam memaksimalkan potensi jaringan bisnis secara professional, sehingga anda bisa mengembangkan dan mengaplikasikan kemampuan bisnis anda kepada orang lain untuk meraih income growth yang lebih baik.`
             },
-            anim: Anim2,
+            anim: Anim3,
             vector: Vector3,
-            iframe: "https://www.youtube.com/embed/pvv5NaAC4js"
+            iframe: ""
           },
           {
             id:4,
@@ -104,6 +114,7 @@
               header: `Wujudkan komitmen untuk meraih impian bersama dan <span style="font-family: SpringSakura; color: tomato;">Masa depan</span> yang lebih baik.`,
               paragraph: `<span style="font-family: Walkway; color:#ff3b40;">Evoush</span> menjalakan misi untuk membantu tiap individu untuk menjalani kehidupan yang lebih baik, maka dari itu kami ingin mewujudkan impian bersama dan masa depan dengan membuka peluang kesempatan untuk mengembangkan kemampuan untuk memajukan bisnis jaringan dan karir anda.`
             },
+            anim: Anim4,
             vector: Vector4,
           }
         ]

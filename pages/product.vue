@@ -16,12 +16,26 @@
 			</div> -->
 
 			<PanellHeader :merchant="merchant"/>
+
 			<h1 class="underline mb-5" style="margin-top: 5rem;"></h1>
 
-			<product-list :products="products"></product-list>
-			<h1 class="underline" style="margin-top: 1rem;"></h1>
+			<PanelCosmetic/>
+			<h1 class="underline mb-5" style="margin-top: 5rem;"></h1>
 
-			<ParallaxProduct/>
+			<ParallaxBeauty/>
+
+			<cosmetic-list :products="products"></cosmetic-list>
+			<h1 class="underline" style="margin-top: 5rem;"></h1>
+
+			<PanelNutrisi/>
+			<h1 class="underline" style="margin-top: 5rem;"></h1>
+
+			<ParallaxHealthy/>
+
+			<NutrisiList :products="products"></NutrisiList>
+			<h1 class="underline" style="margin-top: 5rem;"></h1>
+
+			<ParallaxProduct/>			
 		</section>
 		<Footer/>
 	</div>
@@ -43,6 +57,10 @@
 	import Navigation from '~/components/Headers/Navigation'
 	import Hero from '~/components/Productpage/Hero'
 	import PanellHeader from '~/components/Productpage/PanellHeader'
+	import PanelCosmetic from '~/components/Productpage/PanelCosmetic'
+	import ParallaxBeauty from '~/components/Productpage/ParallaxBeauty'
+	import PanelNutrisi from '~/components/Productpage/PanelNutrisi'
+	import ParallaxHealthy from '~/components/Productpage/ParallaxHealthy'
 	import ParallaxProduct from '~/components/Productpage/ParallaxProduct'
 	import Footer from '~/components/molecules/Footer'
 
@@ -56,6 +74,10 @@
 			Navigation,
 			Hero,
 			PanellHeader,
+			PanelCosmetic,
+			ParallaxBeauty,
+			PanelNutrisi,
+			ParallaxHealthy,
 			ParallaxProduct,
 			Footer
 		},
