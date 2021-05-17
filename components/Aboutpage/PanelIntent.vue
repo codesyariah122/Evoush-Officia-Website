@@ -124,7 +124,7 @@
     margin-left: -.1rem;
   }
   .ganjil-img{
-    width: 500px!important;
+    width: 300px!important;
   }
   .anim{
     width: 300px!important;
@@ -150,7 +150,7 @@
     margin-left: -.1rem;
   }
   .ganjil-img{
-    width: 800px!important;
+    width: 600px!important;
   }
   .anim{
     width: 600px!important;
