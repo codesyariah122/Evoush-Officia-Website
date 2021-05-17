@@ -17,28 +17,37 @@
                     <iframe class="embed-responsive-item" :src="panel.iframe" allowfullscreen></iframe>
                   </div>
                   <div v-else>
-                    <img :src="panel.vector" class="img-responsive intents-img">
+                    <img :src="panel.vector" class="img-responsive ganjil-img">
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-start">
+              <div class="p-2">
+                <div v-if="panel.anim">
+                  <img :src="panel.anim" class="img-responsive anim">
                 </div>
               </div>
             </div>
           </div>
           <div v-else>
-            <div class="row mt-5 mb-5">
+            <div class="row mt-5">
               <div class="col-md-6 col-xs-6 col-sm-6">
                 <div data-aos="zoom-out-left" data-aos-easing="ease-in-sine" data-aos-duration="1500">
                   <img :src="panel.vector" class="img-responsive intents-img">
-                </div>
-                <div v-if="panel.anim">
-                  <div class="p-2">
-                    <img :src="panel.anim" class="img-responsive anim">
-                  </div>
                 </div>
               </div>
               <div class="col-md-4">
                 <div data-aos="zoom-out-right" data-aos-easing="ease-in-sine" data-aos-duration="1500">
                   <h1 v-html="panel.context.header"></h1>
                   <p class="mt-5" v-html="panel.context.paragraph"></p>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-end mb-5">
+              <div class="p-2">
+                <div v-if="panel.anim">
+                  <img :src="panel.anim" class="img-responsive anim">
                 </div>
               </div>
             </div>
@@ -54,6 +63,7 @@
   import ImgPanelSatu from '~/assets/images/vector_image/vector33.jpg'
   import ImgPanelDua  from '~/assets/images/vector_image/vector28.jpg'
   import Anim1 from '~/assets/images/animated/anim48.gif'
+  import Anim2 from '~/assets/images/animated/anim49.gif'
 
   export default {
     data(){
@@ -84,6 +94,7 @@
               paragraph: `Team management kami yang senantiasa memberikan pelayanan terbaik bagi anda <i class="fas fa-mobile-alt"></i>, senantiasa bekerja dengan ketelitian dan keseriusan. <br/> Karena bisnis yang anda bangun di <span style="font-family: Walkway; color: #ff3b40; font-weight: 900;">Evoush</span> adalah prioritas bagi management kami.`
             },
             vector: ImgPanelSatu,
+            anim: Anim2
           }
         ]
       }
@@ -132,8 +143,11 @@
     height: 400px !important;
     margin-left: -.1rem;
   }
+  .ganjil-img{
+    width: 800px!important;
+  }
   .anim{
-    width: 550px;
+    width: 600px!important;
   }
 }
 </style>

@@ -8,7 +8,7 @@
 						<div class="row">
 							<div data-aos="fade-left">
 								<div class="col-md-3">
-									<img :src="panel.vector.first" class="img-responsive anim">
+									<img :src="panel.vector.first" class="img-responsive header-img">
 								</div>
 							</div>
 
@@ -169,7 +169,7 @@
     .panel-body-header a {
       margin-left: 5rem;
     }
-    .panel-body-header .anim{
+    .panel-body-header .header-img{
       width: 330px;
       height: 300px;
       margin-right: 1.5rem;
