@@ -75,7 +75,7 @@
   import Anim1 from '~/assets/images/animated/anim37.gif'
   import Anim2 from '~/assets/images/vector_image/vector15.jpg'
   import Anim3 from '~/assets/images/animated/anim39.gif'
-  import Anim4 from '~/assets/images/animated/anim38.gif'
+  import Anim4 from '~/assets/images/animated/anim45.gif'
 
   export default {
     data(){
