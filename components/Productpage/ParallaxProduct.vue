@@ -13,7 +13,7 @@
 
 
 <script>
-	import ParallaxImg from '~/assets/images/model/reduce/parallax_product.jpg'
+	import ParallaxImg from '~/assets/images/model/reduce/parallax_product2.jpg'
   
 	export default {
 		data(){

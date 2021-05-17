@@ -124,7 +124,7 @@
     margin-left: -.1rem;
   }
   .ganjil-img{
-    width: 400px!important;
+    width: 500px!important;
   }
 
 }

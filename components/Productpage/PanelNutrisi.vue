@@ -46,8 +46,8 @@
 
 
 <script>
-	import ImgPanelSatu from '~/assets/images/animated/anim44.gif'
-	import ImgPanelDua	from '~/assets/images/animated/anim45.gif'
+	import ImgPanelSatu from '~/assets/images/product/nutrisi/vector/nutrisi3.jpg'
+	import ImgPanelDua	from '~/assets/images/product/nutrisi/anim/nutrisi_anim3.gif'
 
 	export default {
 		data(){
