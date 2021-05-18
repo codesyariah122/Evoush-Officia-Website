@@ -88,7 +88,7 @@
 <style>
 
 /* Main Footer */
-footer .main-footer{  padding: 20px 0;  background: #252525;}
+footer .main-footer{  padding: 10px 0;  background: #252525;}
 footer ul{  padding-left: 0;  list-style: none;}
 
 /* Copy Right Footer */
