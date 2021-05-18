@@ -1,9 +1,18 @@
 <template>
 	<div>
+		<!-- <div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<pre>
+						{{product}}
+					</pre>
+				</div>
+			</div>
+		</div> -->
 		<div class="container-fluid">
 			<div class="row">
 				<!-- left content -->
-				<div class="col-sm-6 col-12 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top bg-img" id="left" :style="{ backgroundImage: `url(${product.assets[2].url})` }">
+				<div class="col-sm-6 col-12 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top bg-img" id="left" :style="{ backgroundImage: `url(${product.assets[0].url})` }">
 					<div class="row" id="product-context">
 						<div class="col-12 col-sm-12 col-xs-12">
 							<nav class="navbar navbar-light transparent-nav navbar-prod">
@@ -29,7 +38,9 @@
 							</h2>
 							<p class="text-dark" v-html="product.seo.description"></p>
 
-							<a href="/product" class="btn btn-primary"> Kembali Ke Products </a>
+							<a href="/product#cosmetics-view" v-if="product.categories[0].name == 'Cosmetics'" id="back-cosmetics" class="btn btn-primary"> Kembali Ke Products </a>
+
+							<a v-else href="/product#nutrisi-view" id="back-nutrisi" class="btn btn-primary">Kembali Ke Product</a>
 						</div>
 					</div>
 				</div>
@@ -88,6 +99,8 @@
 				}
 			}
 		},
+		
+		
 		head(){
 			return {
 				title: `Evoush::${this.product.categories[0].name} - ${this.product.name}`,
@@ -109,7 +122,9 @@
 
 <style>
 .bg-img{
-	background-size: cover;
+	/*background-size: cover;*/
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 	/*height: 100vh;*/
 	width: 100vw;
 	overflow: hidden;
@@ -169,7 +184,9 @@
 	}
 
 	.bg-img{
-		background-size: cover;
+		/*background-size: cover;*/
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
 		/*height: 100vh;*/
 		width: 100vw;
 		overflow: hidden;

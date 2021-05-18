@@ -2,6 +2,17 @@
 	<div>
 		<Navigation/>
 		<Hero/>
+
+		<!-- <div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<pre>
+						{{products}}
+					</pre>
+				</div>
+			</div>
+		</div> -->
+
 		<section id="product">
 			<!-- <div class="col-12 ml-5">
 				<pre>
@@ -32,7 +43,7 @@
 
 			<ParallaxHealthy/>
 
-			<NutrisiList :products="products"></NutrisiList>
+			<nutrisi-list :products="products"></nutrisi-list>
 			<h1 class="underline" style="margin-top: 5rem;"></h1>
 
 			<ParallaxProduct/>			

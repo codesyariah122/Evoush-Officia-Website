@@ -14,7 +14,7 @@
 					</div>
 					<div class="row">
 						<div v-for="product in products" :key="product.permalink" v-if="product.categories[0].name == 'Nutrisi'" class="col-md-4 col-xs-12 col-sm-12">
-							<NutrisiView :product="product" :categories="product.categories[0]"/>
+							<NutrisiView id="nutrisi-view" :product="product" :categories="product.categories[0]"/>
 						</div>
 					</div>
 				</div>
