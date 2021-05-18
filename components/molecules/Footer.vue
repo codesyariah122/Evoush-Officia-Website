@@ -71,7 +71,7 @@
 				brand: "Evoush",
 				country: "Indonesia",
 				year: "",
-				slogan: `<span style="font-family: 'Walkway'; color: white; font-size: 27px;">Your Eternal</span> Future`
+				slogan: `<span style="font-family: 'Walkway'; color: white;">Your Eternal</span> Future`
 			}
 		},
 		mounted(){
@@ -88,7 +88,7 @@
 <style>
 
 /* Main Footer */
-footer .main-footer{  padding: 10px 0;  background: #252525;}
+footer .main-footer{  padding: 20px 0;  background: #252525;}
 footer ul{  padding-left: 0;  list-style: none;}
 
 /* Copy Right Footer */
