@@ -135,7 +135,7 @@
 	overflow: hidden;
 }
 #right{
-	margin-top: 35rem!important;
+	margin-top: 17rem!important;
 	width: 100%;
 }
 #left{
@@ -144,8 +144,8 @@
 	position: absolute;
 }
 .navbar-prod{
-	margin-top: 1rem!important;
-	margin-left: -1rem!important;
+	margin-top: -1rem!important;
+	margin-left: -10rem!important;
 	width: 100%;
 }
 
