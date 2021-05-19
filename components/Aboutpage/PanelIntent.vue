@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="intents">
+    <div id="intents-about">
       <div class="container mt-5">
         <div v-for="panel in panels" >
           <div v-if="panel.id % 2 == 1">
@@ -11,10 +11,10 @@
                   <p v-html="panel.context.paragraph"></p>
                 </div>
               </div>
-              <div class="col-md-6 col-xs-6 col-sm-6">
+              <div class="col-md-8 col-xs-6 col-sm-6">
                 <div data-aos="zoom-out-left" data-aos-easing="ease-in-sine" data-aos-duration="1500">
                   <div v-if="panel.iframe" class="embed-responsive embed-responsive-1by1">
-                    <iframe class="embed-responsive-item" :src="panel.iframe" allowfullscreen></iframe>
+                    <iframe width="600" height="400" class="embed-responsive-item" :src="panel.iframe" allowfullscreen></iframe>
                   </div>
                   <div v-else>
                     <img :src="panel.vector" class="img-responsive ganjil-img">
@@ -34,7 +34,7 @@
             <div class="row mt-5">
               <div class="col-md-6 col-xs-6 col-sm-6">
                 <div data-aos="zoom-out-left" data-aos-easing="ease-in-sine" data-aos-duration="1500">
-                  <img :src="panel.vector" class="img-responsive intents-img">
+                  <img :src="panel.vector" class="img-responsive intents-about-img">
                 </div>
               </div>
               <div class="col-md-4">
@@ -90,7 +90,7 @@
           {
             id: 3,
             context: {
-              header: `<span style="font-family: Reey Regular; color: tomato;"> Management </span> <span style="font-family: 'Walkway'; font-size: 37px; color: #ff3b40; margin-left: 1rem; font-weight: 900;">Evoush</span>`,
+              header: `<span style="font-family: 'Walkway'; font-size: 37px; color: #ff3b40; margin-left: 1rem; font-weight: 900;">Evoush</span> <span style="font-family: Reey Regular; color:#000;"> Management </span>`,
               paragraph: `Team management kami yang senantiasa memberikan pelayanan terbaik bagi anda <i class="fas fa-mobile-alt"></i>, senantiasa bekerja dengan ketelitian dan keseriusan. <br/> Karena bisnis yang anda bangun di <span style="font-family: Walkway; color: #ff3b40; font-weight: 900;">Evoush</span> adalah prioritas bagi management kami.`
             },
             vector: ImgPanelSatu,
@@ -105,18 +105,18 @@
 
 <style>
 @media only screen and (max-device-width: 812px) {
-  #intents{
+  #intents-about{
     width: 100%!important;
     margin-top: -1rem;
   }
 
-  #intents p{
+  #intents-about p{
     text-indent: 21px;
     text-align: justify;
     margin-top: 1rem;
     margin-left: 1rem;
   }
-  .intents-img{
+  .intents-about-img{
     width: 320px !important;
     margin-left: -.1rem;
   }
@@ -130,10 +130,10 @@
 }
 /* DESKTOP VERSION */
   @media (min-width: 992px) { 
-    #intents{
+    #intents-about{
       width: 100%!important;
     }
-  #intents p{
+  #intents-about p{
     font-family: 'Poiret One';
     font-size: 21px;
     margin-top: 1rem!important;
@@ -141,11 +141,12 @@
     text-align: justify;
     text-indent: 18px;
   }
-  .intents-img{
+  .intents-about-img{
     width: 500px !important;
     height: 400px !important;
     margin-left: -.1rem;
   }
+
   .ganjil-img{
     width: 600px!important;
   }

@@ -1,6 +1,6 @@
-<template>
+h<template>
 	<div>
-		<div id="intents">
+		<div id="intents-home">
 			<div class="container mt-5">
 				<div v-for="panel in panels" >
 					<div v-if="panel.id % 2 == 1">
@@ -17,7 +17,7 @@
 										<iframe class="embed-responsive-item" :src="panel.iframe" allowfullscreen></iframe>
 									</div>
 									<div v-else>
-										<img :src="panel.vector" class="img-responsive intents-img">
+										<img :src="panel.vector" class="img-responsive intents-home-img">
 									</div>
 								</div>
 							</div>
@@ -27,7 +27,7 @@
 						<div class="row genap-home">
 							<div class="col-md-6 col-xs-6 col-sm-6">
 								<div data-aos="zoom-out-left" data-aos-easing="ease-in-sine" data-aos-duration="1500">
-									<img :src="panel.vector" class="img-responsive intents-img">
+									<img :src="panel.vector" class="img-responsive intents-home-img">
 								</div>
 							</div>
 							<div class="col-md-6 col-xs-6 col-sm-6">
@@ -86,19 +86,19 @@
 
 <style>
 @media only screen and (max-device-width: 812px) {
-	#intents{
+	#intents-home{
 		width: 100%!important;
 		margin-top: -1rem;
 	}
 
-	#intents p{
+	#intents-home p{
 		text-indent: 21px;
 		text-align: justify;
 		margin-top: 1rem;
 		margin-left: 1rem;
 		text-transform: capitalize;
 	}
-	.intents-img{
+	.intents-home-img{
 		width: 320px !important;
 		margin-left: -.1rem;
 	}
@@ -106,10 +106,10 @@
 }
 /* DESKTOP VERSION */
   @media (min-width: 992px) { 
-  	#intents{
+  	#intents-home{
   		width: 100%!important;
   	}
-	#intents p{
+	#intents-home p{
 		font-family: 'Poiret One';
 		font-size: 21px;
 		margin-top: 1rem!important;
