@@ -24,7 +24,7 @@
 		</div>
 
 		<div class="card-read-more-pricing">
-			<a :href="product.checkout_url.display" class="btn btn-link btn-block">Order Now</a>
+			<a :href="product.checkout_url.display" class="btn btn-link btn-block">Checkout</a>
 		</div>
 	</div>
 

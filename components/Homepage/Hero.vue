@@ -20,7 +20,7 @@
 </template>
 
 <script>
-	import HeroImg from '~/assets/images/kantor/3.1.jpg'
+	import HeroImg from '~/assets/images/kantor/3.jpg'
 	import BrandIcon from '../Headers/brand.vue'
 
 	export default{

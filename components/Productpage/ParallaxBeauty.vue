@@ -15,7 +15,7 @@
 <style></style>
 
 <script>
-  import ParallaxImg from '~/assets/images/model/model36.jpg'
+  import ParallaxImg from '~/assets/images/model/new_model.jpg'
 
 	export default {
 		data(){
@@ -25,8 +25,8 @@
 						'background-image': `url('${ParallaxImg}')`,
 					},
           context: {
-            title: `<span style="font-family: Walkway; color: red;">Evoush</span> <span style="font-family:'Reey Regular'; color: #fff">Indonesia</span>`,
-            paragraph: '<span style="font-family: Walkway;">Evoush</span> <span style="font-family: Reey Regular; color: tomato;">Beauty</span>.'
+            title: `<span style="font-family: Walkway; color: red;">Evoush</span> <span style="font-family:'Reey Regular'; color: #fff">Beauty</span>`,
+            paragraph: ''
           }
 					
 				}

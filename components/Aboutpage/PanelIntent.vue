@@ -109,10 +109,7 @@
     width: 100%!important;
     margin-top: -1rem;
   }
-  #intents h1{
-    margin-left: 1rem;
-    text-align: center;
-  }
+
   #intents p{
     text-indent: 21px;
     text-align: justify;

@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div id="intents">
+		<div id="intents-nutrisi">
 			<div class="container mt-5">
 				<div v-for="panel in panels" >
 					<div v-if="panel.id % 2 == 1">
@@ -17,7 +17,7 @@
 										<iframe v-if="panel.iframe" :src="panel.iframe"  width="560" height="397" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
 									</div>
 									<div v-else>
-										<img :src="panel.vector" class="img-responsive intents-img">
+										<img :src="panel.vector" class="img-responsive intents-nutrisi-img">
 									</div>
 								</div>
 							</div>
@@ -27,7 +27,7 @@
 						<div class="row genap-nutrisi">
 							<div class="col-md-6 col-xs-6 col-sm-6">
 								<div data-aos="zoom-out-left" data-aos-easing="ease-in-sine" data-aos-duration="1500">
-									<img :src="panel.vector" class="img-responsive intents-img">
+									<img :src="panel.vector" class="img-responsive intents-nutrisi-img">
 								</div>
 							</div>
 							<div class="col-md-6 col-xs-6 col-sm-6">
@@ -87,22 +87,22 @@
 
 <style>
 @media only screen and (max-device-width: 812px) {
-	#intents{
+	#intents-nutrisi{
 		width: 100%!important;
 		margin-top: -1rem;
 	}
-	#intents h1{
+	#intents-nutrisi h1{
 		margin-left: 1rem;
 		text-align: center;
 	}
-	#intents p{
+	#intents-nutrisi p{
 		text-indent: 21px;
 		text-align: justify;
 		margin-top: 1rem;
 		margin-left: 1rem;
 		text-transform: capitalize;
 	}
-	.intents-img{
+	.intents-nutrisi-img{
 		width: 320px !important;
 		margin-left: -.1rem;
 	}
@@ -110,10 +110,11 @@
 }
 /* DESKTOP VERSION */
   @media (min-width: 992px) { 
-  	#intents{
+  	#intents-nutrisi{
   		width: 100%!important;
+  		margin-top: 10rem;
   	}
-	#intents p{
+	#intents-nutrisi p{
 		font-family: 'Poiret One';
 		font-size: 21px;
 		margin-top: 1rem!important;
@@ -122,7 +123,7 @@
 		text-indent: 18px;
 		text-transform: capitalize;
 	}
-	.intents-img{
+	.intents-nutrisi-img{
 		width: 800px !important;
 		margin-left: 1rem;
 	}

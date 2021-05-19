@@ -90,10 +90,7 @@
 		width: 100%!important;
 		margin-top: -1rem;
 	}
-	#intents h1{
-		margin-left: 1rem;
-		text-align: center;
-	}
+
 	#intents p{
 		text-indent: 21px;
 		text-align: justify;
@@ -126,10 +123,7 @@
 		margin-top: 3rem;
 		/*margin-bottom: 3rem;*/
 	}
-	.genap-home h1,p {
-		margin-top: 5rem;
-		margin-left: 2rem;
-	}
+
 	.genap-home img{
 		width: 800px !important;
 		margin-left: -7rem;

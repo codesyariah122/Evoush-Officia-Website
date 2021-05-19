@@ -25,8 +25,8 @@
 						'background-image': `url('${ParallaxImg}')`,
 					},
           context: {
-            title: `<span style="font-family: Walkway; color: red;">Evoush</span> <span style="font-family:'Reey Regular'; color: #fff">Indonesia</span>`,
-            paragraph: '<span style="font-family: Walkway;">Evoush</span> <span style="font-family: Reey Regular; color: dodgerblue;">Healthy</span>.'
+            title: `<span style="font-family: Walkway; color: red;">Evoush</span> <span style="font-family:'Reey Regular'; color: #fff">Healthy</span>`,
+            paragraph: ''
           }
 					
 				}

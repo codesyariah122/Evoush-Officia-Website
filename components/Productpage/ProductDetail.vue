@@ -13,7 +13,7 @@
 			<div class="row">
 				<!-- left content -->
 				<div class="col-sm-6 col-12 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top bg-img" id="left" :style="{ backgroundImage: `url(${product.assets[0].url})` }">
-					<div class="row" id="product-context">
+					<div class="row justify-content-start" id="product-context">
 						<div class="col-12 col-sm-12 col-xs-12">
 							<nav class="navbar navbar-light transparent-nav navbar-prod">
 								<a href="/">
@@ -27,7 +27,7 @@
 							</nav>
 						</div>
 						<div class="col-12 col-sm-12 col-xs-12 prod-detail">
-							<h1>
+							<!-- <h1>
 								{{product.seo.title}}
 							</h1>
 							<blockquote class="text-primary ml-3">
@@ -36,11 +36,9 @@
 							<h2 class="text-primary">
 								{{product.price.formatted_with_symbol}}
 							</h2>
-							<p class="text-dark" v-html="product.seo.description"></p>
+							<p class="text-dark" v-html="product.seo.description"></p> -->
 
-							<a href="/product#cosmetics-view" v-if="product.categories[0].name == 'Cosmetics'" id="back-cosmetics" class="btn btn-primary"> Kembali Ke Products </a>
-
-							<a v-else href="/product#nutrisi-view" id="back-nutrisi" class="btn btn-primary">Kembali Ke Product</a>
+							
 						</div>
 					</div>
 				</div>
@@ -54,12 +52,19 @@
 					</pre> -->
 					<div class="row justify-content-center right-prod-detail">
 						<div class="col-12">
+							<a href="/product#cosmetics-view" v-if="product.categories[0].name == 'Cosmetics'" id="back-cosmetics" class="btn btn-primary mb-2"> Kembali Ke Products </a>
+
+							<a v-else href="/product#nutrisi-view" id="back-nutrisi" class="btn btn-primary mb-2">Kembali Ke Product</a>
 							<h1>
 								{{product.name}}
 							</h1>
-							<blockquote class="blockquote-footer">
-								{{product.categories[0].name}}
+							<!-- <h2 class="text-primary">
+								{{product.price.formatted_with_symbol}}
+							</h2>
+ -->							<blockquote class="text-primary ml-3">
+								Category : <nuxt-link :to="`/categories/${product.categories[0].name}`">{{product.categories[0].name}}</nuxt-link>
 							</blockquote>
+							<p class="text-dark" v-html="product.seo.description"></p>
 							<p v-html="product.description" class="mb-5"></p>
 
 							<ProductCarousel :assets="product.assets"/>
@@ -192,7 +197,7 @@
 		overflow: hidden;
 	}
 	.navbar-prod{
-		margin-top: -1rem!important;
+		margin-top: -11rem!important;
 		margin-left: -2rem!important;
 		width: 100%;
 	}
@@ -206,7 +211,7 @@
 		margin-bottom: -8px;
 	}
 	.prod-detail{
-		margin-top: 17rem!important;
+		margin-top: 15rem!important;
 	}
 	.prod-detail h1{
 		text-shadow: 1px 1px 1px rgba(0, 0, 0, 50);
