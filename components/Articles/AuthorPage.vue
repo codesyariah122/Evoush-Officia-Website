@@ -1,7 +1,7 @@
 <template>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-6 col-12 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top bg-img" id="left" :style="bgImg">
+			<div class="col-sm-6 col-12 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top bg-img" id="left" :style="{ backgroundImage: `url(${articles[0].author.img})` }">
 
 				<!-- <img :src="logo" class="img-responsive"> -->
 
@@ -66,7 +66,7 @@
 		data(){
 			return {
 				bgImg:{
-					'background-image': `url(${this.articles[0].author.img})`,
+					'background-image': `url(~/assets/images/banner/reduce/${this.articles[0].author.img})`,
 					'background-size': 'cover',
 					'height': '100vh',
 					'width': '100vw',

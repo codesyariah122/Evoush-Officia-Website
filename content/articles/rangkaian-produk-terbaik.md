@@ -6,9 +6,9 @@ img: post1.jpg
 slug: rangkaian-produk-terbaik
 alt: Evoush Produk
 author: 
-  name: puji_evoush
-  bio: Freelancer Web Developer Evoush Indonesia
-  img: https://avatars.githubusercontent.com/u/13291805?v=4
+  name: evoush-official
+  bio: Evoush Official Indonesia
+  img: https://github.com/codesyariah122/Evoush-Officia-Website/blob/master/assets/images/banner/reduce/evoush_banner.jpg?raw=true
 tags: 
   - produk_evoush
   - bisnis_evoush
