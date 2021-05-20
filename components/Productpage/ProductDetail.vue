@@ -139,12 +139,12 @@
 	width: 100%;
 }
 #left{
-	/*height: 100vh;*/
+	height: 40vh;
 	width: 100%;
 	position: absolute;
 }
 .navbar-prod{
-	margin-top: -1rem!important;
+	margin-top: -8rem!important;
 	margin-left: -10rem!important;
 	width: 100%;
 }
