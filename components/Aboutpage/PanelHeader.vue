@@ -81,7 +81,7 @@
 }
 .panel-body-header p{
   line-height: 25px;
-  font-size: 12px;
+  font-size: 18px;
   text-indent: 21px;
   text-align: justify;
   margin-left: .1rem!important;

@@ -5,11 +5,11 @@
 				<div class="panel-body panel-body-focus">
 					<div class="row justify-content-center">
 						<div class="col-12 text-center mb-5">
-							<h2>
+							<h1>
 								<n-link to="/categories/nutrisi">
 									Nutrisi
 								</n-link>
-							</h2>
+							</h1>
 						</div>
 					</div>
 					<div class="row">
