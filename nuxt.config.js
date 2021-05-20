@@ -16,9 +16,9 @@ export default {
       {
         src: 'https://unpkg.com/aos@2.3.1/dist/aos.js'
       },
-      {
-         src: '//code.tidio.co/dxlufvwtvzz7xt4rwpkahdlzepgacn6q.js'
-      },
+      // {
+      //    src: '//code.tidio.co/dxlufvwtvzz7xt4rwpkahdlzepgacn6q.js'
+      // },
       {
         src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-609818ffd946e881'
       }
@@ -55,7 +55,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/commerce.js'],
+  plugins: [{src: '~/plugins/commerce.js'},  { src: '~/plugins/tawk', ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

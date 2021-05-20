@@ -37,7 +37,8 @@
     "postcss": "^8.2.14",
     "prism-themes": "^1.4.1",
     "sass-loader": "^10.1.1",
-    "vue-analytics": "^5.22.1"
+    "vue-analytics": "^5.22.1",
+    "vue-tawk": "^1.0.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",
