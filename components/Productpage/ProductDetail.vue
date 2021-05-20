@@ -12,8 +12,8 @@
 		<div class="container-fluid">
 			<div class="row">
 				<!-- left content -->
-				<div class="col-sm-6 col-12 bg-white text-white py-2 d-flex align-items-center justify-content-center fixed-top bg-img" id="left" :style="{ backgroundImage: `url(${product.assets[0].url})` }">
-					<div class="row justify-content-end" id="product-context">
+				<div class="col-sm-6 col-12 bg-dark text-white py-2 d-flex align-items-center justify-content-center fixed-top bg-img" id="left" :style="{ backgroundImage: `url(${product.assets[0].url})` }">
+					<div class="row justify-content-start" id="product-context">
 						<div class="col-12 col-sm-12 col-xs-12">
 							<nav class="navbar navbar-light transparent-nav navbar-prod">
 								<a href="/">
@@ -26,7 +26,7 @@
 								</ul>					
 							</nav>
 						</div>
-						<!-- <div class="col-12 col-sm-12 col-xs-12 prod-detail"> -->
+						<div class="col-12 col-sm-12 col-xs-12 prod-detail">
 							<!-- <h1>
 								{{product.seo.title}}
 							</h1>
@@ -39,7 +39,7 @@
 							<p class="text-dark" v-html="product.seo.description"></p> -->
 
 							
-						<!-- </div> -->
+						</div>
 					</div>
 				</div>
 				<!-- end left content -->
@@ -139,13 +139,13 @@
 	width: 100%;
 }
 #left{
-	height: 40vh;
+	/*height: 100vh;*/
 	width: 100%;
 	position: absolute;
 }
 .navbar-prod{
-	margin-top: -8rem!important;
-	margin-left: -10rem!important;
+	margin-top: -1rem!important;
+	margin-left: 12rem!important;
 	width: 100%;
 }
 
@@ -158,7 +158,7 @@
 
 
 .prod-detail{
-	margin-top: 10rem!important;
+	margin-top: 13rem!important;
 }
 .prod-detail h1{
 	text-shadow: 1px 1px 1px rgba(50, 10, 0, 100);
@@ -190,7 +190,6 @@
 
 	.bg-img{
 		/*background-size: cover;*/
-		/*margin-top: 5rem;*/
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
 		/*height: 100vh;*/
@@ -198,7 +197,7 @@
 		overflow: hidden;
 	}
 	.navbar-prod{
-		margin-top: -20rem!important;
+		margin-top: -12rem!important;
 		margin-left: -20rem!important;
 		width: 100%;
 	}
