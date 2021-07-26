@@ -49,14 +49,14 @@
                       :title="product.title"
                       ><i class="bx bx-plus"></i
                     ></a>
-                    <a
-                      href="portfolio-details.html"
+                    <nuxt-link
+                      :to="{name: `product-${product.categories[0].name}-slug`, params: {categories: product.categories[0].name, slug: product.slug}}"
                       data-gall="portfolioDetailsGallery"
                       data-vbtype="iframe"
                       class="venobox"
                       :title="`Detail ${product.title}`"
                       ><i class="bx bx-link"></i
-                    ></a>
+                    ></nuxt-link>
                   </div>
                 </div>
               </div>

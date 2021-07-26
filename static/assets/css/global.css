@@ -1,9 +1,5 @@
 @font-face {
-    font-family: "Oxygen";
-    src: local("Oxygen"),
-     url(~assets/fonts/walkway/Walkway.ttf.woff) format("truetype");
-}
-
-html {
     font-family: "Walkway";
+    src: local("Walkway"),
+     url(~assets/fonts/walkway/Walkway.ttf.woff) format("truetype");
 }

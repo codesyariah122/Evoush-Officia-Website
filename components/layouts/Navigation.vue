@@ -13,11 +13,11 @@
 				<li>
 					<a href="#members"><i class='bx bxs-group'></i> <span>Members</span></a>
 				</li>
-				<li>
+				<!-- <li>
 					<a href="#management">
 						<i class='bx bx-sitemap' ></i> <span>Management</span>
 					</a>
-				</li>
+				</li> -->
 				<li>
 					<a href="#news"
 					><i class='bx bx-news' ></i> <span>News</span></a

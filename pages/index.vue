@@ -12,15 +12,18 @@
 
 		<Product :products="results"/>
 
+		<Testimonial/>
+
 		<Members :members="members"/>
 
 	</div>
 </template>
 
 <script>
-	import Product from '~/components/Landing/Product'
-	import Members from '~/components/Landing/Members'
-	import ColorModePicker from '@/components/ColorModePicker'
+	import Product from '@/components/Landing/Product'
+	import Testimonial from '@/components/Landing/Testimonial'
+	import Members from '@/components/Landing/Members'
+	import ColorModePicker from '@/components/molecules/ColorModePicker'
 
 	export default {
 		async asyncData({$axios, $config}){
@@ -30,6 +33,7 @@
 		},
 		components: {
 			Product,
+			Testimonial,
 			Members,
 			ColorModePicker
 		},

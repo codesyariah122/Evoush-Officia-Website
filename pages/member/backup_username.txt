@@ -1,0 +1,37 @@
+<div v-for="member in members" class="row">
+
+					<div class="col-lg-4">
+						<h2 class="portfolio-title">{{member.title}}</h2>
+						<!-- <div class="owl-carousel portfolio-details-carousel">
+							<img src="assets/img/portfolio/portfolio-details-1.jpg" class="img-fluid" alt="">
+							<img src="assets/img/portfolio/portfolio-details-2.jpg" class="img-fluid" alt="">
+							<img src="assets/img/portfolio/portfolio-details-3.jpg" class="img-fluid" alt="">
+						</div> -->
+						<img :src="`https://app.evoush.com/storage/${member.avatar}`" class="img-fluid img-responsive" width="350">
+					</div>
+
+					<div class="col-lg-8 portfolio-info">
+						<h3 style="text-transform: capitalize;">{{member.name}}</h3>
+						<ul>
+							<li><strong>Kota : </strong> {{member.city}} | {{member.province}} </li>
+							<li><strong>Username : {{member.username}}</strong></li>
+							<li><strong>Media Social :</strong> <br>
+								<div class="social-links">
+									<a :href="`https://wa.me/${member.phone}?text=Hallo%20${member.name}%20saya%20tertarik%20untuk%20join%20Evoush, %20apa%20anda%20bisa%20bantu%20saya`"><i class='bx bxl-whatsapp text-success'></i></a>
+									<a :href="`https://www.facebook.com/${member.facebook}`" class="facebook"><i class="bx bxl-facebook text-primary"></i></a>
+									<a :href="`https://www.instagram.com/${member.instagram}`" class="instagram"><i class="bx bxl-instagram text-danger"></i></a>
+									<a :href="`https://www.youtube.com/channel/${member.youtube}`" class="youtube"><i class="bx bxl-youtube text-danger"></i></a>
+									<a :href="`mailto:${member.email}`" class="envelope-open"><i class='bx bxs-envelope text-warning'></i></a>
+								</div>
+							</li>
+							<li><strong>Join Web Replika : </strong> {{formatDate(member.created_at)}}</li>
+						</ul>
+
+						<p v-html="member.description">
+						</p>
+						
+						<nuxt-link to="/" class="btn btn-danger mt-3">Kembali</nuxt-link>
+					</div>
+
+
+				</div>

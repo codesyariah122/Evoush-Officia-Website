@@ -193,8 +193,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
   color: #fff;
-  /*background: #0563bb;*/
-  background: #ff3b40;
+  background: #0563bb;
 }
 
 .nav-menu a:hover span, .nav-menu .active > a span, .nav-menu li:hover > a span {
@@ -261,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.8);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -691,15 +690,6 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-.services .social-links{
-  font-size: 36px;
-  display: inline-block!important;
-  color: #45505b!important;
-  line-height: 1;
-  margin-right: 20px;
-  transition: 0.3s;
-}
-
 .services .icon-box {
   text-align: center;
   padding: 70px 20px 80px 20px;
@@ -725,25 +715,36 @@ section {
   position: relative;
 }
 
+.services .social-links {
+  font-size: 31px;
+}
+
 .services .icon-box .icon svg {
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  top: -2.5rem;
+  left: -2.5rem;
+}
+
+.services .icon-box img{
+  z-index: 1;
 }
 
 .services .icon-box .icon svg path {
   transition: 0.5s;
   fill: #f5f5f5;
-  font-size: 45px;
+  margin-bottom: 5rem!important;
 }
 
 .services .icon-box h4 {
   font-weight: 600;
   margin: 10px 0 15px 0;
   font-size: 22px;
+  text-transform: capitalize;
 }
 
+.services .icon-box ul li {
+  list-style: none;
+}
 .services .icon-box h4 a {
   color: #45505b;
   transition: ease-in-out 0.3s;

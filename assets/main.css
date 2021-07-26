@@ -35,6 +35,15 @@ a {
   color: var(--color-primary);
 }
 
+.portfolio-details h2{
+  color:  var(--color-primary);
+}
+
+.portfolio-info h3{
+  color:  var(--color-primary);
+}
+
+
 
 .iconbox-blue h1, h2, h3, h4{
   color: var(--color-dua);
