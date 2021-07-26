@@ -30,11 +30,11 @@
 									<li>
 										<strong>Media Social : </strong><br>
 										<div class="social-links">
-											<a href="#" class="whatsapp"><i class='bx bxl-whatsapp text-success'></i></a>
-											<a href="#" class="facebook"><i class="bx bxl-facebook text-primary"></i></a>
-											<a href="#" class="instagram"><i class="bx bxl-instagram text-danger"></i></a>
-											<a href="#" class="youtube"><i class='bx bxl-youtube text-danger'></i></a>
-											<a href="#" class="email"><box-icon name='envelope-open text-warning'></box-icon></a>
+											<a :href="`https://wa.me/${member.phone}?text=Hallo%20${member.name}%20saya%20tertarik%20untuk%20join%20Evoush, %20apa%20anda%20bisa%20bantu%20saya`" target="_blank" class="whatsapp"><i class='bx bxl-whatsapp text-success'></i></a>
+											<a :href="`https://www.facebook.com/${member.facebook}`" target="_blank" class="facebook"><i class="bx bxl-facebook text-primary"></i></a>
+											<a :href="`https://www.instagram.com/${member.instagram}`" target="_blank" class="instagram"><i class="bx bxl-instagram text-danger"></i></a>
+											<a :href="`${member.youtube}`" target="_blank" class="youtube"><i class='bx bxl-youtube text-danger'></i></a>
+											<a :href="`mailto:${member.email}`" target="_blank" class="email"><box-icon name='envelope-open text-warning'></box-icon></a>
 										</div>
 									</li>
 								</ul>
