@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<svg class="NuxtLogo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">  <image id="image0" width="40" height="40" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+		<svg class="NuxtLogo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">  <image id="image0" width="60" height="60" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 			AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACr1BMVEX/O0D/O0H9P0X/PEH7
 			RUz/Oj/7Q0r5SVH9P0T/PUL/Qkf/Njv/NDr/OD74W17pbW//Nzz9PkP6f4Tto6LItrP+PULuiI70
 			o6jvnZzLr63/ODzviI3oqrH1naH/OT7zjJPsr7XsqrD5o6fxn57Kr63+OT7cXmPRfYLTd3zSeH3U
@@ -34,16 +34,17 @@
 			/0nLImjCxEmTp/z9N/U/aEb1ShWmljsAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjEtMDUtMDlUMDM6
 			NDc6MzgrMDM6MDC4X2MJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIxLTA1LTA5VDAzOjQ3OjM4KzAz
 			OjAwyQLbtQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
-		</svg><span style="font-weight: 800; color:#ff3b40;margin-top:.5rem; font-size: 4rem;" v-html="brand"></span>
+		</svg>
 	</div>
 </template>
 
 <script>
 	export default {
-		data(){
-			return {
-				brand: 'voush Official'
-			}
-		}
+		
 	}
 </script>
+
+
+<style scoped>
+	svg path {fill: #ffffff}
+</style>

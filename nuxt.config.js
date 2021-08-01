@@ -1,18 +1,24 @@
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
-
+  mode: 'universal',
+  // loading: {
+  //   color: '#ff3b40',
+  //   height: '11px'
+  // },
+  loading: '~/components/LoadingBar.vue',
+  target: 'static',
+  ssr: true,
+  body: true,
+  components: true,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Evoush::Official',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
+      amp: true
     },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -27,6 +33,15 @@ export default {
     ],
 
     script: [
+      {
+        src: 'https://cdn.tiny.cloud/1/36xbwrnfekuspwhfv02z1kuwy3sz4nbehpqkb3x7bh8tek86/tinymce/5/tinymce.min.js',
+        type: 'text/javascript',
+        referrerpolicy: 'origin'
+      },
+      {
+        src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-609818ffd946e881',
+        type: 'text/javascript'
+      },
       {
         src: '/assets/vendor/jquery/jquery.min.js',
         type: 'text/javascript'
@@ -83,6 +98,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/tawk', ssr: false },
+    { src: '~/plugins/sweetalert2', ssr: false}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -97,8 +114,26 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
+    '@nuxt/content',
     '@nuxtjs/axios',
+    ['@nuxtjs/google-tag-manager', { id: 'GTM-MGR7PP9' }],
+     ['@nuxtjs/google-adsense', {
+      id: 'ca-pub-8390872078103831'
+    }],
+     ['nuxt-cloudflare-analytics', { 
+      token: '2b2fb5257a031c96b75c8a073fb038ef8f4c0'}],
   ],
+
+
+  // markdown content
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-material-oceanic.css'
+      }
+    },
+    nestedProperties: ['author.name']
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

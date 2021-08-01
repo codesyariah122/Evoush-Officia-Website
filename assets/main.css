@@ -1,25 +1,34 @@
 :root {
   --color: #243746;
+  --color-profile: #fff;
+  --color-follower: #fff;
   --color-primary: #158876;
   --color-secondary: #0e2233;
   --bg: #f3f5f4;
+  --bg-card: #f3f5f4;
   --bg-secondary: #fff;
   --border-color: #ddd;
 }
 
 .dark-mode {
   --color: #ebf4f1;
+  --color-profile:  #fff;
+  --color-follower:  #ebf4f1;
   --color-dua: #000;
   --color-primary: #41b38a;
   --color-secondary: #fdf9f3;
   --bg: #091a28;
+  --bg-card: #091a28;
   --bg-secondary: #071521;
   --border-color: #0d2538;
 }
 .sepia-mode {
   --color: #433422;
+  --color-profile:  #fff;
+  --color-follower: #433422;
   --color-secondary: #504231;
   --bg: #f1e7d0;
+  --bg-card: #f1e7d0;
   --bg-secondary: #eae0c9;
   --border-color: #ded0bf;
 }
@@ -35,6 +44,10 @@ a {
   color: var(--color-primary);
 }
 
+body h2{
+  color: var(--color)!important;
+}
+
 .portfolio-details h2{
   color:  var(--color-primary);
 }
@@ -43,10 +56,65 @@ a {
   color:  var(--color-primary);
 }
 
+.profile {
+  background-color: var(--color-dua);
+}
 
 
-.iconbox-blue h1, h2, h3, h4{
-  color: var(--color-dua);
+.media-body h4{
+  color: var(--color-profile);
+}
+
+.media-body p {
+  color: var(--color-profile);
+}
+
+.tab-content blockquote{
+  color:  var(--color);
+  font-size:  23px;
+}
+
+#news h3{
+  color: var(--color);
+}
+
+#testimonials h3{
+  color: var(--color);
+}
+
+#pages .icon-box{
+  background-color: var(--bg-secondary);
+}
+
+#pages .icon-box h4 {
+  color: var(--color);
+}
+#pages .icon-box p{
+  color: var(--color-secondary);
+}
+
+.services .icon-box {
+  background-color: var(--bg-secondary);
+}
+
+
+.services .icon-box blockquote{
+  color: var(--color);
+}
+.icon-box ul, li {
+  color: var(--color);
+}
+
+.follower-card {
+  background-color: var(--color-dua);
+}
+
+.tab-pane h4{
+  color: var(--color);
+}
+
+.iconbox-blue h4{
+  color: var(--color);
 }
 .iconbox-blue p{
   color: var(--color-dua);
@@ -74,4 +142,24 @@ a {
 
 .iconbox-teal p{
   color: var(--color-dua);
+}
+
+
+.contact .info{
+  background-color: var(--bg-secondary);
+}
+
+.contact .info h4{
+  color: var(--color);
+}
+
+.contact .php-email-form{
+  background-color: var(--bg-secondary);
+}
+
+.edit-form {
+  background-color: var(--bg-secondary);
+}
+.edit-form span{
+  color: var(--color);
 }

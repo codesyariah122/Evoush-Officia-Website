@@ -1,11 +1,11 @@
 <template>
 	<div>
 		<!-- ======= Testimonials Section ======= -->
-		<section id="testimonials" class="testimonials section-bg">
+		<section id="testimonials" class="testimonials section-bg mb-5">
 			<div class="container" data-aos="fade-up">
 
 				<div class="section-title">
-					<h2>Testimonials</h2>
+					<h2 class="portfolio-title">Testimonials</h2>
 				</div>
 
 				<div class="owl-carousel testimonials-carousel" data-aos="zoom-in" data-aos-delay="100">
