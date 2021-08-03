@@ -46,6 +46,7 @@
 			const articles = await $content('Blog', params.slug)
 			.only(['title', 'description', 'img', 'slug', 'categories', 'createdAt', 'author'])
 			.sortBy('createdAt', 'asc')
+			.where({categories: 'news'})
 			.fetch();
 			return { results, members, articles }
 		},
@@ -70,11 +71,11 @@
 					// { hid: 'keywords', name: 'keywords', content: 'Bisnis Evoush Bisnis Menjanjikan'},
 					{ hid: 'description', name: 'description', content: 'Evoush::Official | Home::Page'},
 					{ hid: 'keywords', name: 'keywords', content: 'Bisnis Network Marketing Zaman Now Ya Evoush Indonesia'},
-					{ hid: 'author', name: 'author' , content: 'Evoush::Administrator | Official::Website'},
+					{ hid: 'author', name: 'author' , content: 'Evoush::Indonesia | Official::Website'},
 					{ hid: 'og:type', property: 'og:type', content: 'website'},
 					{ hid: 'og:url', property: 'og:url', content: 'https://evoush.com/'},
 					{ hid: 'og:title', property: 'og:title', content: 'Evoush Indonesia'},
-					{ hid: 'og:site_name', property: 'og:site_name', content: 'Evoush::Official | Website::Official'},
+					{ hid: 'og:site_name', property: 'og:site_name', content: 'Evoush::Official | Evoush::Website'},
 					{ hid: 'og:description', property: 'og:description', content: 'Your Eternal Future'},
 					{ hid: 'og:image', property: 'og:image', content: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg'},
 					{ hid: 'og:image:width', property: 'og:image:width', content: '600'},
@@ -84,10 +85,10 @@
 		},
 
 		mounted(){
-			this.$nextTick(() => {
-				this.$nuxt.$loading.start()
-				setTimeout(() => this.$nuxt.$loading.finish(), 2000)
-			})
+			// this.$nextTick(() => {
+			// 	this.$nuxt.$loading.start()
+			// 	setTimeout(() => this.$nuxt.$loading.finish(), 2000)
+			// })
 		}
 	}
 </script>
@@ -105,4 +106,6 @@
 	height: 2px;
 	background:rgb(255, 99, 78);
 }
+
+
 </style>

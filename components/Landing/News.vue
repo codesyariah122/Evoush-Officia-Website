@@ -12,6 +12,10 @@
 					<h2>News</h2>
 				</div>
 
+<!-- <pre>
+	{{articles}}
+</pre>
+ -->
 				<div class="owl-carousel testimonials-carousel" data-aos="zoom-in" data-aos-delay="100">
 
 					<div v-for="article in articles" class="testimonial-item">

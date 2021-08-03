@@ -2,12 +2,12 @@
     <NuxtLink
       :to="{name: 'blog-author-author', params: {author: author.name}}"
     >
-    <img
-    v-if="author.img"
-    class="avatar"
-    :src="author.img"
-    />
     <h2>Author</h2>
+      <img
+      v-if="author.img"
+      class="avatar"
+      :src="author.img"
+      />
     <h4>{{author.name}}</h4>
     <p>{{author.bio}}.</p>
 
@@ -28,17 +28,17 @@ export default {
 
 <style scoped>
 .avatar {
- width: 50px;
- height: 50px;
+ width: 130px;
+ height: 120px;
  border-radius: 50%;
 }
 h2{
-  font-size: 13px;
+  font-size: 33px;
 }
 h4 {
-  font-size: 10px;
+  font-size: 31px;
 }
 p{
-  font-size: 8px;
+  font-size: 21px;
 }
 </style>

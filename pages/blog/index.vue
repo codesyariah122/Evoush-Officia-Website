@@ -1,0 +1,94 @@
+<template>
+	<div>
+		<!-- ======= Portfolio Section ======= -->
+		<section id="products" class="portfolio section-bg">
+			<div class="container" data-aos="fade-up">
+				<div class="section-title">
+
+					<h2>Article</h2>
+	
+				</div>
+
+			<div
+			class="row portfolio-container"
+			data-aos="fade-up"
+			data-aos-delay="200"
+			>
+
+			<div v-for="article in articles" class="col-lg-4 col-md-6 portfolio-item">
+				<div class="portfolio-wrap">
+					<img
+					:src="require(`~/assets/blog/images/${article.slug}/${article.img}`)"
+					class="img-fluid"
+					alt=""
+					/>
+					<div class="portfolio-info">
+						<h4>{{article.title}}</h4>
+						<p>{{article.categories}}</p>
+						<div class="portfolio-links">
+							<a
+							:href="require(`~/assets/blog/images/${article.slug}/${article.img}`)"
+							data-gall="productGallery"
+							class="venobox"
+							:title="article.title"
+							><i class="bx bx-plus"></i
+								></a>
+								<nuxt-link
+								:to="{name: `blog-${article.categories}-slug`, params: {categories: article.categories, slug: article.slug}}"
+								data-gall="portfolioDetailsGallery"
+								data-vbtype="iframe"
+								class="venobox"
+								:title="`Detail ${article.title}`"
+								><i class="bx bx-link"></i
+									></nuxt-link>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- End Portfolio Section -->
+	</div>
+</template>
+
+<script>
+	export default{
+		layout: 'blog',
+		head(){
+			return {
+				title: "Evoush::Blog",
+				link: [
+					{hid: 'canonical', rel: 'canonical', href: 'https://evoush.com/blog'}
+				],
+				meta: [
+					// { hid: 'description', name: 'Evoush Indonesia', content: 'Your Eternal Future' },
+					// { hid: 'description', name: 'description', content: 'Bisnis Evoush Indonesia'},
+					// { hid: 'keywords', name: 'keywords', content: 'Bisnis Evoush Bisnis Menjanjikan'},
+					{ hid: 'description', name: 'description', content: 'Evoush::Official | Article::Page'},
+					{ hid: 'keywords', name: 'keywords', content: 'Article-article menarik, seputar product, bisnis evoush dan juga tips and trick untuk kalian para evousher'},
+					{ hid: 'author', name: 'author' , content: 'Evoush::Article | Blog::Evoush'},
+					{ hid: 'og:type', property: 'og:type', content: 'website'},
+					{ hid: 'og:url', property: 'og:url', content: 'https://evoush.com/blog'},
+					{ hid: 'og:title', property: 'og:title', content: 'Evoush Indonesia'},
+					{ hid: 'og:site_name', property: 'og:site_name', content: 'Evoush::Official | Evoush::Website'},
+					{ hid: 'og:description', property: 'og:description', content: 'Your Eternal Future'},
+					{ hid: 'og:image', property: 'og:image', content: 'https://raw.githubusercontent.com/evoush12/bahan-evoush/main/images/banner/jumbotron5.jpg'},
+					{ hid: 'og:image:width', property: 'og:image:width', content: '600'},
+					{ hid: 'og:image:height', property: 'og:image:height', content: '598'}
+				],
+			}
+		},
+
+		async asyncData({ $content, params }) {
+			const articles = await $content('Blog', params.slug)
+			.only(['title', 'description', 'img', 'slug', 'categories', 'createdAt', 'author'])
+			.sortBy('createdAt', 'asc')
+			.fetch();
+			return {
+				articles
+			}
+		}
+	}
+</script>

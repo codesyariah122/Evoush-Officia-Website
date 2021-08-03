@@ -1,5 +1,10 @@
 <template>
 	<div>
+<!-- 
+		<pre>
+			{{user}}	
+		</pre> -->
+
 		<ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
 			<li class="nav-item" role="presentation">
 				<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><i class='bx bxs-user-detail'></i></a>
@@ -118,8 +123,29 @@
 				length: null,
 				loading: true,
 				token: localStorage.getItem('token'),
+				user:''
 			}
 		},
+
+		mounted(){
+			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
+			this.$axios.$get('https://app.evoush.com/api/user')
+			.then(response => {
+				this.user = response
+				let h=(new Date()).getHours();
+				let m=(new Date()).getMinutes();
+				let s=(new Date()).getSeconds();
+				if (h >= 4 && h < 10) this.sapaan = "Selamat pagi, "
+					if (h >= 10 && h < 15) this.sapaan = "Selamat siang, "
+						if (h >= 15 && h < 18) this.sapaan = "Selamat sore, "
+							if (h >= 18 || h < 4) this.sapaan = "Selamat malam, "
+
+						})
+			.catch(error => {
+				console.log(error.response)
+			})
+		},
+
 
 		methods: {
 			formatDate(date) {

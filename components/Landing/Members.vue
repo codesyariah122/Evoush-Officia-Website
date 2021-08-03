@@ -90,16 +90,18 @@
 	import pagination from 'laravel-vue-pagination'
 
 	export default {
-		props: ['members'],
+		// props: ['members'],
 
 		components: {
 			pagination
 		},
 
+		
 		data(){
 			return {
 				ip: '',
-				city: ''
+				city: '',
+				members: []
 			}
 		},
 
@@ -112,8 +114,9 @@
 		methods: {
 			listMembers(page){
 				this.$axios
-				.get(`/evoush/member-list?page=${page}`)
+				.get(`https://app.evoush.com/api/evoush/member-list?page=${page}`)
 				.then(res => {
+					// console.log(res)
 					return res.data
 				})
 				.then(data => {

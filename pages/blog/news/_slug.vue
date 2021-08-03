@@ -6,6 +6,9 @@
 				<div class="col-lg-12 col-xs-12 col-sm-12 mt-2">
 					<nuxt-content :document="article"/>	
 				</div>
+				<div class="col-lg-12 col-xs-12 col-sm-12 mt-2 mb-5">
+					<Disqus />
+				</div>
 				<div class="col-lg-6 col-xs-6 col-sm-6 info mt-5">
 					<ul>
 						<li><small class="text-secondary"><strong>Create at : {{formatDate(article.createdAt)}}</strong></small></li>

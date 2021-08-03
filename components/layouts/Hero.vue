@@ -4,18 +4,25 @@
 		<section id="hero" class="d-flex flex-column justify-content-center">
 			<div class="container content-hero" data-aos="zoom-in" data-aos-delay="100">
 				<div class="row justify-content-center">
-					<div class="col-lg-8 col-xs-12 col-sm-12">
+					<div class="col-lg-4 col-xs-12 col-sm-12">
 						<Logo />
 					</div>
 				</div>
 				<div class="row justify-content-center">
-					<div class="col-lg-12 col-xs-12 col-sm-12 mt-5">
+					<div class="col-lg-8 col-xs-12 col-sm-12 mt-3 ml-3">
 						<h1 style="font-family: 'Walkway';"><span style="font-weight: 800; margin-top:.5rem; font-size: 4rem;" v-html="brand"></span></h1>
-						<p>
+						<!-- <p>
 							Your
 							<span
 							class="typed"
 							data-typed-items="Eternal Future, Healthiness, Beautiness"
+							></span>
+						</p> -->
+						<p>
+							<!-- evoush -->
+							<span
+							class="typed"
+							data-typed-items="Sehat Untuk Indonesia, Your Eternal Future, Your Healthiness, Your Beautiness"
 							></span>
 						</p>
 						<div class="social-links">

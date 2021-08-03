@@ -79,7 +79,7 @@
 	import ProfileTabs from './ProfileTabs'
 
 	export default {
-		props: ['user', 'members', 'sapaan', 'token'],
+		props: ['members', 'sapaan', 'token'],
 		middleware: 'authenticated',
 		components: {
 			ProfileTabs
@@ -96,9 +96,7 @@
 
 				followers: null,
 				loading: true,
-				token: this.token,
-				user: '',
-				sapaan: ''
+				user: ''
 			}
 		},
 		head(){
@@ -139,6 +137,14 @@
 			.then(response => {
 
                     this.user = response
+
+                    let h=(new Date()).getHours();
+                    let m=(new Date()).getMinutes();
+                    let s=(new Date()).getSeconds();
+                    if (h >= 4 && h < 10) this.sapaan = "Selamat pagi, "
+                    	if (h >= 10 && h < 15) this.sapaan = "Selamat siang, "
+                    		if (h >= 15 && h < 18) this.sapaan = "Selamat sore, "
+                    			if (h >= 18 || h < 4) this.sapaan = "Selamat malam, "
 
                 })
 			.catch(error => {

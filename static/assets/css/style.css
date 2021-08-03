@@ -250,7 +250,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   /*height: 150vh;*/
   min-height: 100vh;
-  background: url("../img/bg/hero_bg5.jpg") top right no-repeat;
+  background: url("https://raw.githubusercontent.com/evoush12/bahan_evoush/main/assets/img/bg/new_hero_bg.jpg") top right no-repeat;
   background-size: cover;
   position: relative;
   /*margin-top: -2rem;*/
@@ -268,7 +268,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.2);
   position: absolute;
   bottom: 0;
   top: 0;

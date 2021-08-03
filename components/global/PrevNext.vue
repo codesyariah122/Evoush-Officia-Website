@@ -3,7 +3,7 @@
     <NuxtLink
       v-if="prev"
       :to="{ name: `blog-${prev.categories}-slug`, params: { slug: prev.slug } }"
-      class="text-primary font-bold hover:underline"
+      class="mb-2 btn btn-outline-primary"
     >
       {{ prev.title }}
     </NuxtLink>
@@ -11,7 +11,7 @@
     <NuxtLink
       v-if="next"
       :to="{ name: `blog-${next.categories}-slug`, params: { slug: next.slug } }"
-      class="font-bold hover:underline"
+      class="btn btn-outline-success"
     >
       {{ next.title }}
     </NuxtLink>

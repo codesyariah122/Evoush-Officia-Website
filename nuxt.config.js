@@ -1,15 +1,14 @@
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  mode: 'universal',
-  // loading: {
-  //   color: '#ff3b40',
-  //   height: '11px'
-  // },
-  loading: '~/components/LoadingBar.vue',
+  // mode: 'universal',
+  loading: {
+    color: '#ff3b40',
+    height: '11px'
+  },
+  // loading: '~/components/LoadingBar.vue',
   target: 'static',
-  ssr: true,
+  ssr: false,
   body: true,
-  components: true,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     htmlAttrs: {
@@ -98,6 +97,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    {src: '~/plugins/disqus'},
     { src: '~/plugins/tawk', ssr: false },
     { src: '~/plugins/sweetalert2', ssr: false}
   ],
@@ -116,12 +116,11 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxt/content',
     '@nuxtjs/axios',
+    ['@nuxtjs/bootstrap-vue', { css: false }],
     ['@nuxtjs/google-tag-manager', { id: 'GTM-MGR7PP9' }],
      ['@nuxtjs/google-adsense', {
       id: 'ca-pub-8390872078103831'
-    }],
-     ['nuxt-cloudflare-analytics', { 
-      token: '2b2fb5257a031c96b75c8a073fb038ef8f4c0'}],
+    }]
   ],
 
 
@@ -142,5 +141,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  performance: {
+    hints: false
   }
 }

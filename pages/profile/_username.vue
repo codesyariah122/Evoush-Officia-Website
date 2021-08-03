@@ -9,8 +9,9 @@
 			</div>	
 		</div>
 		<div v-if="length == 1">
-			<Profile :token="token" :user="user" :members="members" :sapaan="sapaan"/>
+			<Profile :token="token" :user="user" :members="members"/>
 		</div>
+
 
 		<div v-else>
 			<div class="container">
@@ -37,26 +38,39 @@
 		data(){
 			return {
 				token: localStorage.getItem('token'),
-				user: '',
-				sapaan: ''
+				user: ''
+			}
+		},
+
+		head(){
+			return {
+				title: `Evoush::Member | ${this.user.username}`,
+				link: [
+					{rel: 'canonical', href: `https://evoush.com/member/${this.user.username}`}
+				],
+				meta: [
+				{ hid: 'description', name: 'description', content: 'Evoush::Member'},
+				{ hid: 'keywords', name: 'keywords', content: 'Evoush::Official | Web::Replika'},
+				{ hid: 'author', name: 'author' , content: `${this.user.username} | Evoush::Member`},
+				{ hid: 'og:type', property: 'og:type', content: 'website'},
+				{ hid: 'og:url', property: 'og:url', content: `https://evoush.com/member/${this.user.username}`},
+				{ hid: 'og:title', property: 'og:title', content: 'Evoush Indonesia | Evoush::Member'},
+				{ hid: 'og:site_name', property: 'og:site_name', content: `${this.user.name} | ${this.user.username}`},
+				{ hid: 'og:description', property: 'og:description', content: `${this.user.quotes}`},
+				{ hid: 'og:image', property: 'og:image', content: `https://app.evoush.com/storage/${this.members.[0].avatar}`},
+				{ hid: 'og:image:width', property: 'og:image:width', content: '600'},
+				{ hid: 'og:image:height', property: 'og:image:height', content: '598'}
+				]
 			}
 		},
 
 		mounted(){
 			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
-			this.$axios.$get('http://localhost:8000/api/user')
+			this.$axios.$get('https://app.evoush.com/api/user')
 			.then(response => {
-				console.log(response)
 				this.user = response
-				let h=(new Date()).getHours();
-				let m=(new Date()).getMinutes();
-				let s=(new Date()).getSeconds();
-				if (h >= 4 && h < 10) this.sapaan = "Selamat pagi, "
-					if (h >= 10 && h < 15) this.sapaan = "Selamat siang, "
-						if (h >= 15 && h < 18) this.sapaan = "Selamat sore, "
-							if (h >= 18 || h < 4) this.sapaan = "Selamat malam, "
-
-						})
+				
+			})
 			.catch(error => {
 				console.log(error.response)
 			})

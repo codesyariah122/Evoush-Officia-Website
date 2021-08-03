@@ -2,11 +2,14 @@
 title: New Product Evost SOP 5000 Collagen
 description: Siapa saja peraih top income di periode juni kali ini, ayo kita simak detailnya di mari.
 slug: new-product-evost
-img: evost.jpg
+img: evost.jpeg
 author: 
+  author: 
   name: evoush_writter
   bio: Your Eternal Future
+  jobdesk: Content Writer
   img: https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/jumbotron5.jpg
+  cover: https://app.evoush.com/storage/product-covers/eJC8hUOT7B1Tg56943hWhsI9KMH8k7CdRe2OFDbo.jpg
 tags: 
   - Evoush Product
 
@@ -20,7 +23,7 @@ Halo evousher apa kabarnya ? semoga kita semua selalu diberikan nikmat sehat, se
 
 
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide mb-3" data-ride="carousel" style="width=50%;">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -45,4 +48,24 @@ Halo evousher apa kabarnya ? semoga kita semua selalu diberikan nikmat sehat, se
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>
+</div>  
+
+  
+  Ok ya evousher product baru evoush <a href="https://evoush.com/product/Nutrisi/evost-sop-5000-collagen" class="btn btn-danger">Evost SOP 5000 Collagen</a>.  
+Bukan sembarang (Minuman Serbuk Apel dengan Kolagen), berikut kandungan lengkap yang akan melengkapi anda dalam menjaga kesehatan tubuh di era pandemi ini.  
+- Kolagen 5000 mg per sajian
+- Salmon Bubuk
+- Tinggi Protein
+- Tinggi Serat Pangan
+- Sumber Vitamin A
+- Sumber Vitamin E
+- Sumber Vitamin B2 (Riboflavin)
+- Sumber Vitamin B6 (Pridoksin)
+- Sumber Vitamin B9 (Asam Folat)
+- Tinggi Vitamin C
+- Sumber Kalsium
+- Sumber Magnesium
+- Sumber Selenium
+- Tinggi Kolin  
+
+Lengkap sekali dong dari **Evost SOP 5000 Collagen** ini buat evousher semua, siapa sangka selain mendapat manfaat evousher juga bisa meraih bonusnya, ok kan evousher. Ok lah sekian dulu artikel mimin kali ini, ayo jangan lupa order dan ingat selalu yah evousher tetap jaga kesehatan, semoga kita semua selalu mendapatkan berkah nikmat sehat yang tak terhingga. Aamiin.

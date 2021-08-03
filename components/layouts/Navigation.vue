@@ -2,6 +2,11 @@
 	<div>
 		<nav class="nav-menu">
 			<ul>
+				<div v-if="token">
+					<li>
+						<nuxt-link :to="`/profile/${user.username}`"><i class='bx bxs-user-detail'></i> <span>{{user.username}}</span></nuxt-link>
+					</li>
+				</div>
 				<li class="active">
 					<a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a>
 				</li>
@@ -38,3 +43,28 @@
 		<!-- .nav-menu -->
 	</div>
 </template>
+
+
+<script>
+	export default{
+		data(){
+			return {
+				token: localStorage.getItem('token'),
+				user: ''
+			}
+		},
+
+		mounted(){
+			if(this.token){
+				this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
+				this.$axios.$get('https://app.evoush.com/api/user')
+				.then(response => {
+					this.user = response
+				})
+				.catch(error => {
+					console.log(error.response.data)
+				})
+			}
+		}
+	}
+</script>

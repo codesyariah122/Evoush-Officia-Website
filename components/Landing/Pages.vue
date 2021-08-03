@@ -67,7 +67,7 @@
 			<p>
 				Sebagai media entertainment bagi sebuah corporate team kami yang selalu menunjang setiap inovasi untuk dituangkan dalam perkembangan media digital yang pesat dengan segala macam content-content terbaru, menarik dan tentunya dapat menjadi sebuah branding tersendiri baik digunakan untuk branding bisnis maupun branding product, kami senantiasa memperbarui content-content berupa, article, news dan apapun content yang bermanfaat bagi bisnis evoush.
 			</p>
-			<nuxt-link to="/article" class="btn btn-primary mt-3">Article evoush</nuxt-link>
+			<nuxt-link to="/blog" class="btn btn-primary mt-3">Article evoush</nuxt-link>
 		</div>
 	</div>
 
