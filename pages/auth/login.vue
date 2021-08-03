@@ -79,7 +79,7 @@
 
 		mounted(){
 			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
-			this.$axios.$get('https://app.evoush.com/api/user')
+			this.$axios.get('/api/user')
 			.then(response => {
 				// console.log(response.username)
 				if(this.token){
@@ -113,13 +113,14 @@
 					// console.log(res)
 					if(res.data.success){
 						localStorage.setItem('token', res.data.token)
-						this.$swal({
-							position: 'top-center',
-							icon: 'success',
-							title: `Login success, anda telah login sebagai <strong>${username}</strong>`,
-							showConfirmButton: false,
-							timer: 1500
-						})
+						localStorage.setItem('username', res.data.data.username)
+						// this.$swal({
+						// 	position: 'top-center',
+						// 	icon: 'success',
+						// 	title: `Login success, anda telah login sebagai <strong>${username}</strong>`,
+						// 	showConfirmButton: false,
+						// 	timer: 1500
+						// })
 						return this.$router.push({
 							name:'profile-username', 
 							params: {username: res.data.data.username}

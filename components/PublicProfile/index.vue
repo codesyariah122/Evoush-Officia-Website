@@ -4,15 +4,18 @@
 			<div class="col-lg-10 col-xs-12 col-sm-12 mx-auto">
 				<!-- Profile widget -->
 				<div class="shadow rounded overflow-hidden profile">
-					<div class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('https://app.evoush.com/storage/${member.username}/${member.cover}')` : 'background-image: url(https://mediatrack.sg/wp-content/uploads/2021/02/digital-transformation-banner-blog.png)'">
+					<!-- <pre>
+						http://localhost:8000/storage/{{member.cover}}
+					</pre> -->
+					<div class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('http://localhost:8000/storage/${member.cover}')` : 'background-image: url(https://mediatrack.sg/wp-content/uploads/2021/02/digital-transformation-banner-blog.png)'">
 						<div class="media align-items-end">
 							<div class="row justify-content-center">
 								<div class="col-lg-10">
 									<div v-if="member.avatar">
-										<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3">
+										<img :src="`http://localhost:8000/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3">
 									</div>
 									<div v-else>
-										<img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg" :alt="member.name" class="image--profile-member rounded-circle center-block d-block mx-auto mt-0 mb-0" width="100">
+										<img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg" :alt="member.name" class="rounded-circle mb-3" width="100">
 									</div>
 								</div>
 								<div class="col-lg-8 col-xs-6 col-sm-6">
@@ -87,14 +90,21 @@
 				followers: null,
 				loading: true,
 				token: localStorage.getItem('token'),
+				username: localStorage.getItem('username'),
 				user: '',
 				sapaan: ''
 			}
 		},
 
 		mounted(){
+			if(this.token && this.username){
+				return this.$router.push({
+					name: 'profile-username',
+					params: {username: this.username}
+				})
+			}
 			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
-			this.$axios.$get('https://app.evoush.com/api/user')
+			this.$axios.get('/api/user')
 			.then(response => {
 
                     //console.log(response.data.name)
@@ -109,7 +119,7 @@
 		},
 		methods: {
 			getFollowers(username){
-				this.$axios.$get(`/member/join/active/${username}`)
+				this.$axios.get(`/member/join/active/${username}`)
 				.then( res => {
 					if(res.length > 0){
 						this.followers = res.length

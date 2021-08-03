@@ -9,7 +9,7 @@
 			</div>	
 		</div>
 		<div v-if="length == 1">
-			<Profile :token="token" :user="user" :members="members"/>
+			<Profile :token="token" :user="user" :members="members" :username="username"/>
 		</div>
 
 
@@ -38,6 +38,7 @@
 		data(){
 			return {
 				token: localStorage.getItem('token'),
+				username: localStorage.getItem('username'),
 				user: ''
 			}
 		},
@@ -46,7 +47,7 @@
 			return {
 				title: `Evoush::Member | ${this.user.username}`,
 				link: [
-					{rel: 'canonical', href: `https://evoush.com/member/${this.user.username}`}
+					{rel: 'canonical', href: `http://localhost:8000/api/member/${this.user.username}`}
 				],
 				meta: [
 				{ hid: 'description', name: 'description', content: 'Evoush::Member'},
@@ -65,10 +66,22 @@
 		},
 
 		mounted(){
+			if(this.token){
+				this.$swal({
+					icon: 'success',
+					title: `Selamat datang ${this.username}`,
+					showConfirmButton: false,
+					text: `Selamat datang ${this.username}`
+				})
+				return this.$router.push({
+					name:'profile-username', 
+					params: {username: this.username}
+				})
+			}
 			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
-			this.$axios.$get('https://app.evoush.com/api/user')
+			this.$axios.get(`/api/member/${this.username}`)
 			.then(response => {
-				this.user = response
+				this.user = response[0]
 				
 			})
 			.catch(error => {

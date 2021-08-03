@@ -12,8 +12,9 @@
 
 
 					<!--Profile Card 1-->
-					<div v-for="management in managements" class="col-lg-6 col-xs-12 col-sm-12 mb-5">
-						<div class="card profile-card-1">
+					<div v-for="management in managements" class="col-lg-12 col-xs-12 col-sm-12 mb-5">
+						<img :src="management.popup" class="img-fluid">
+						<!-- <div class="card profile-card-1">
 							<img :src="management.hero" :alt="management.name" class="background"/>
 							<a href="#" v-b-modal.modal-lg="`modal-${management.id}`">
 								<img :src="management.img" :alt="management.name" class="profile"/>
@@ -25,7 +26,7 @@
 						</div>
 
 						<!-- Modal -->
-						<b-modal :id="`modal-${management.id}`" hideFooter size="lg">
+						<b-modal :id="`modal-${management.id}`" hideFooter size="xl">
 							<img :src="management.popup" class="img-size">
 						</b-modal>
 
@@ -52,6 +53,24 @@
 
 
 <style scoped>
+.modal-dialog {
+	max-width: 800px;
+	margin: 30px auto;
+}
+.modal-body {
+	position:relative;
+	padding:0px;
+}
+.close {
+	position:absolute;
+	right:-30px;
+	top:0;
+	z-index:999;
+	font-size:2rem;
+	font-weight: normal;
+	color:#fff;
+	opacity:1;
+}
 /*Profile Card 1*/
 .profile-card-1 {
 	font-family: 'Open Sans', Arial, sans-serif;
@@ -61,7 +80,7 @@
 	width: 100%;
 	color: #ffffff;
 	text-align: center;
-	height:25vh;
+	height:65vh;
 	border:none;
 }
 .profile-card-1 .background {
@@ -87,8 +106,8 @@
 	bottom: 40%;
 	left: 50%;
 	/*max-width: 100px;*/
-	width: 170px;
-	height: 170px;
+	width: 250px;
+	height: 250px;
 	opacity: 1;
 	box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
 	border: 2px solid rgba(255, 255, 255, 1);
@@ -98,9 +117,9 @@
 .profile-card-1 h2 {
 	margin: 0 0 5px;
 	font-weight: 600;
-	font-size:25px;
+	font-size:21px;
 	color:#fff!important;
-	margin-top: 1.5rem;
+	margin-top:7rem;
 }
 .profile-card-1 h2 small {
 	display: block;

@@ -42,11 +42,11 @@
                 <div class="portfolio-info">
                   <h4>{{product.title}}</h4>
                   <p>{{product.categories[0].name}}</p>
-                  <div class="portfolio-links">
+                  <div class="portfolio-links mt-3">
                     <a
                       :href="`https://app.evoush.com/storage/${product.cover}`"
                       data-gall="productGallery"
-                      class="venobox"
+                      class="venobox btn btn-sm btn-primary text-white"
                       :title="product.title"
                       ><i class="bx bx-plus"></i
                     ></a>
@@ -54,10 +54,9 @@
                       :to="{name: `product-${product.categories[0].name}-slug`, params: {categories: product.categories[0].name, slug: product.slug}}"
                       data-gall="portfolioDetailsGallery"
                       data-vbtype="iframe"
-                      class="venobox"
+                      class="venobox btn btn-sm btn-success text-white"
                       :title="`Detail ${product.title}`"
-                      ><i class="bx bx-link"></i
-                    ></nuxt-link>
+                      ><i class='bx bx-window-open'></i> Lihat</nuxt-link>
                   </div>
                 </div>
               </div>

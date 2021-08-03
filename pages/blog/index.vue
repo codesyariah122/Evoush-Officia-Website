@@ -25,22 +25,23 @@
 					<div class="portfolio-info">
 						<h4>{{article.title}}</h4>
 						<p>{{article.categories}}</p>
-						<div class="portfolio-links">
+						<div class="portfolio-links mt-3">
 							<a
 							:href="require(`~/assets/blog/images/${article.slug}/${article.img}`)"
 							data-gall="productGallery"
-							class="venobox"
+							class="venobox btn btn-sm btn-primary text-white"
 							:title="article.title"
 							><i class="bx bx-plus"></i
-								></a>
-								<nuxt-link
-								:to="{name: `blog-${article.categories}-slug`, params: {categories: article.categories, slug: article.slug}}"
-								data-gall="portfolioDetailsGallery"
-								data-vbtype="iframe"
-								class="venobox"
-								:title="`Detail ${article.title}`"
-								><i class="bx bx-link"></i
-									></nuxt-link>
+								>
+							</a>
+									<nuxt-link
+										:to="{name: `blog-${article.categories}-slug`, params: {categories: article.categories, slug: article.slug}}"
+										data-gall="portfolioDetailsGallery"
+										data-vbtype="iframe"
+										class="venobox btn btn-sm btn-success text-white lihat"
+										:title="`Detail ${article.title}`"
+										><i class='bx bx-window-open'></i> Lihat
+									</nuxt-link>
 								</div>
 							</div>
 						</div>
@@ -92,3 +93,8 @@
 		}
 	}
 </script>
+
+
+<style scoped>
+
+</style>

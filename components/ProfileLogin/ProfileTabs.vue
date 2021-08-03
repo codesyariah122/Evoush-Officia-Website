@@ -1,7 +1,7 @@
 <template>
 	<div>
-<!-- 
-		<pre>
+
+	<!-- 	<pre>
 			{{user}}	
 		</pre> -->
 
@@ -25,6 +25,7 @@
 							<p class="font-italic mb-0"><strong>Status : </strong> <span class="badge badge-success">{{user.status}}</span></p>
 							<p class="font-italic mb-0"><strong>Join : {{formatDate(user.created_at)}}</strong></p>
 							<br>
+
 							<div v-if="user.quotes">
 								<blockquote class="blockquote-footer mt-3">
 									{{user.quotes}}
@@ -121,29 +122,8 @@
 			return{
 				followers: [],
 				length: null,
-				loading: true,
-				token: localStorage.getItem('token'),
-				user:''
+				loading: true
 			}
-		},
-
-		mounted(){
-			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
-			this.$axios.$get('https://app.evoush.com/api/user')
-			.then(response => {
-				this.user = response
-				let h=(new Date()).getHours();
-				let m=(new Date()).getMinutes();
-				let s=(new Date()).getSeconds();
-				if (h >= 4 && h < 10) this.sapaan = "Selamat pagi, "
-					if (h >= 10 && h < 15) this.sapaan = "Selamat siang, "
-						if (h >= 15 && h < 18) this.sapaan = "Selamat sore, "
-							if (h >= 18 || h < 4) this.sapaan = "Selamat malam, "
-
-						})
-			.catch(error => {
-				console.log(error.response)
-			})
 		},
 
 

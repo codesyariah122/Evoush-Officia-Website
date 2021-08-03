@@ -5,13 +5,34 @@
 				<div class="col-md-4 border-right">
 					<div v-for="edit in edits" class="d-flex flex-column align-items-center text-center p-3 py-5">
 						<div v-if="edit.avatar">
-							<img class="rounded-circle mt-5" :src="`https://app.evoush.com/storage/${edit.avatar}`" width="90">						
+							<img class="rounded-circle mt-5" :src="`http://localhost:8000/storage/${edit.avatar}`" width="90">						
 						</div>
 						<span class="font-weight-bold" style="text-transform: capitalize;">{{edit.name}}</span>
 						<span>{{edit.email}}</span>
 						<span>{{edit.city}} | {{edit.province}}</span>
 					</div>
+					<div v-if="showSuccess">
+						<div v-if="message" class="col-md-8 ml-5">
+							<div class="alert alert-success alert-dismissible fade show" role="alert">
+								<strong>Halo {{fields.username}}!</strong> {{message}} <strong class="text-primary">Successfully</strong>.
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+						</div>
+
+						<div v-else class="col-md-8 ml-5">
+							<div class="alert alert-success alert-dismissible fade show" role="alert">
+								<strong>Ooopsss!</strong> {{message}} <strong class="text-primary">Failed Errors</strong>.
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+						</div>
+					</div>
 				</div>
+
+				
 
 <!-- <pre>
 	{{pilih}}
@@ -19,6 +40,9 @@
 
 <pre>
 	{{edits}}
+</pre> -->
+<!-- <pre>
+	{{provinces}}
 </pre> -->
 
 				<div class="col-md-8">
@@ -29,81 +53,79 @@
 							</div>
 							<h6 class="text-right">Edit Profile</h6>
 						</div>
-						<form>
+						<form @submit.prevent="updateProfile">
 							<div class="row mt-2">
-								<div class="col-md-6"><input type="text" class="form-control" placeholder="Nama Lengkap" :value="edits[0].name"></div>
-								<div class="col-md-6"><input type="text" class="form-control" placeholder="Username Member" :value="edits[0].username"></div>
+								<input type="hidden" name="id" id="id" :value="fields.id">
+								<div class="col-md-6"><input type="text" id="name" class="form-control" placeholder="Nama Lengkap" :value="fields.name"></div>
+								<div class="col-md-6"><input type="text" id="username" class="form-control" placeholder="Username Member" :value="fields.username"></div>
 							</div>
 							<div class="row mt-3">
-								<div class="col-md-6"><input type="text" class="form-control" placeholder="Email@address.com" :value="edits[0].email"></div>
-								<div class="col-md-6"><input type="text" class="form-control" placeholder="Phone number / format: 6282xxxxxxxxx" :value="edits[0].phone"></div>
+								<div class="col-md-6"><input type="text" id="email" class="form-control" placeholder="Email@address.com" :value="fields.email"></div>
+								<div class="col-md-6"><input type="text" id="phone" class="form-control" placeholder="Phone number / format: 6282xxxxxxxxx" :value="fields.phone"></div>
 							</div>
 							<div class="row mt-3">
 								<div class="col-md-6">
-									<select name="province" class="form-control" v-on:change="getCity">
-										<option :value="edits[0].province">{{edits[0].province}}</option>
+									<select name="province" id="province" class="form-control" v-on:change="getCity">
+										<option :value="fields.province">{{fields.province}}</option>
 										<option value="" data-id=""><b>Ubah Provinsi</b></option>
-										<option v-for="provins in provinces" v-bind:value="provins.id" :value="provins.id" :data-id="provins.id" id="province">{{provins.nama}}</option>
+										<option v-for="provins in provinces" v-bind:value="provins.id" :value="provins.nama" :data-id="provins.id">{{provins.nama}}</option>
 									</select>
 								</div>
 								<div class="col-md-6">
 									<div v-if="!pilih">
-										<select name="city" class="form-control" id="city">
-											<option :value="edits[0].city">{{edits[0].city}}</option>
+										<select name="city" id="city" class="form-control">
+											<option :value="fields.city">{{fields.city}}</option>
 										</select>
 									</div>
 									<div v-else>
-										<select name="city" class="form-control" id="city">
+										<select name="city" id="city" class="form-control">
 											<option value="">Pilih Kota</option>
 											<option v-for="city in citys" :key="city.id" :value="city.nama">{{city.nama}}</option>
 										</select>
 									</div>
 								</div>
 							</div>
-							<div class="row mt-3">
-								<div class="col-md-6"><input type="text" class="form-control" placeholder="example(https://www.youtube.com/channel/UCIzNgeNDD58z8XNppkopwzw)" :value="edits[0].youtube"></div>
-								<div class="col-md-6"><input type="text" class="form-control" placeholder="Facebook username" :value="edits[0].facebook"></div>
-							</div>
-							<div class="row mt-3">
-								<div class="col-md-6"><input type="text" class="form-control" placeholder="Instagram username" :value="edits[0].instagram"></div>
-								<div class="col-md-6"><textarea name="quotes" placeholder="Your quotes max: 100character" class="form-control">{{edits[0].quotes}}</textarea></div>
-							</div>
-							<div class="row mt-3">
-								<div class="col-md-6">
-									<div v-if="edits[0].avatar">
-										<img class="rounded-circle mt-5 mb-3" :src="`https://app.evoush.com/storage/${edits[0].avatar}`" width="90"><br>
-										<span class="text-info mt-2 mb-2">Current profile image</span><br>
-										<small class="text-danger"><strong>Pilih file jika ingin mengubah profile image</strong></small>
-										<input type="file" name="avatar">
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div v-if="edits[0].cover">
-										<img :src="`http://localhost:8000/storage/${edits[0].cover}`" width="100" class="img-fluid img-responsive">
-										<span class="text-info mt-2 mb-2">Current profile cover</span><br>
-										<small class="text-danger"><strong>Pilih file jika ingin mengubah profile cover</strong></small>
-										<input type="file" name="cover">
-									</div>
-									<div v-else>
-										<small class="text-danger"><strong>Pilih file jika ingin menambah profile cover</strong></small>
-										<input type="file" name="cover">
-									</div>
-								</div>
-							</div>
+
 							<div class="row mt-3">
 								<div class="col-md-12">
-									<div v-if="edits[0].about">
-										<small class="text-danger mt-3 mb-2"><strong>Ketik di bagian text editor di bawah jika ingin mengubah success story anda</strong></small>
-										<textarea id="full-featured-non-premium" class="form-controll" :value="edits[0].about" name="message"></textarea>
-									</div>
-									<div v-else>
-										<small class="text-danger mt-3 mb-2"><strong>Silahkan tambahkan success story di text editor berikut</strong></small>
-										<textarea id="full-featured-non-premium" class="form-controll" name="message"></textarea>
-									</div>
+									<textarea name="address" id="address" :value="fields.address" placeholder="Alamat lengkap anda saat ini" class="form-control"></textarea>
+								</div>
+								<div class="col-md-12 mt-3">
+									<textarea id="quotes" name="quotes" placeholder="Your quotes max: 100character" class="form-control" :value="fields.quotes" rows="5"></textarea>
 								</div>
 							</div>
 
-							<div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+							<div class="row mt-3">
+								<div class="col-md-6"><input type="text" id="youtube" class="form-control" placeholder="example(https://www.youtube.com/channel/UCIzNgeNDD58z8XNppkopwzw)" :value="fields.youtube"></div>
+								<div class="col-md-6"><input type="text" id="facebook" class="form-control" placeholder="Facebook username" :value="fields.facebook"></div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-md-6"><input type="text" id="instagram" class="form-control" placeholder="Instagram username" :value="fields.instagram"></div>
+							</div>
+							<!-- <div class="row mt-3">
+								<div class="col-md-6">
+									<div v-if="fields.avatar">
+										<img class="rounded-circle mt-5 mb-3" :src="`http://localhost:8000/storage/${fields.avatar}`" width="90"><br>
+										<span class="text-info mt-2 mb-2">Current profile image</span><br>
+										<small class="text-danger"><strong>Pilih file jika ingin mengubah profile image</strong></small>
+										<input type="file" id="avatar" name="avatar" ref="avatar" @change="onChangeAvatar">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<img :src="`http://localhost:8000/storage/${edits[0].cover}`" width="100" class="img-fluid img-responsive">
+									<span class="text-info mt-2 mb-2">Current profile cover</span><br>
+									<small class="text-danger"><strong>Pilih file jika ingin mengubah profile cover</strong></small>
+									<input type="file" id="cover" name="cover">
+								</div>
+							</div> -->
+							<div class="row mt-3">
+								<div class="col-md-12">
+									<small class="text-danger mt-3 mb-2"><strong>Ketik di bagian text editor di bawah jika ingin mengubah success story anda</strong></small>
+									<textarea  class="form-control about" name="about" v-model="fields.about" rows="15"></textarea>	
+								</div>
+							</div>
+
+							<div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="submit">Save Profile</button></div>
 						</form>
 					</div>
 				</div>
@@ -120,7 +142,30 @@
 		 	return {
 		 		provinces: [],
 		 		pilih: false,
-		 		citys: []
+		 		citys: [],
+		 		newAvatar: null,
+		 		newCover: null,
+		 		fields: {
+		 			id: this.edits[0].id,
+		 			name: this.edits[0].name,
+		 			avatar: this.edits[0].avatar,
+		 			email: this.edits[0].email,
+		 			username: this.edits[0].username,
+		 			address: this.edits[0].address,
+		 			phone: this.edits[0].phone,
+		 			quotes: this.edits[0].quotes,
+		 			cover: this.edits[0].cover,
+		 			about: this.edits[0].about,
+		 			instagram: this.edits[0].instagram,
+		 			facebook: this.edits[0].facebook,
+		 			youtube: this.edits[0].youtube,
+		 			province: this.edits[0].province,
+		 			city: this.edits[0].city,
+		 			parallax: null
+		 		},
+		 		validation: [],
+		 		message: '',
+		 		showSuccess: false
 		 	}
 		 },
 		head(){
@@ -130,28 +175,94 @@
 		},
 
 		mounted(){
+			console.log(this.fields.id)
 			this.getProvinsi(),
 			this.activeTinyMce()
 		},
 		methods: {
-			updateProfile(){
+			onChangeAvatar(e) {
+				this.avatar = e.target.files[0] 
+			},
+
+			onChangeCover(e){
+				this.cover = e.target.files[0]
+				return this.fields.cover
+			},
+
+			updateProfile(event){
+
+				let data = {
+					name: document.querySelector('#name').value,
+					email: document.querySelector('#email').value,
+					username: document.querySelector('#username').value,
+					address: document.querySelector('textarea[name="address"]').value,
+					phone: document.querySelector('#phone').value,
+					quotes: document.querySelector('textarea[name="quotes"]').value,
+					about: document.querySelector('textarea[name="about"]').value,
+					instagram: document.querySelector('#instagram').value,
+					facebook: document.querySelector('#facebook').value,
+					youtube: document.querySelector('#youtube').value,
+					province: document.querySelector('#province').value,
+					city: document.querySelector('#city').value
+				}
+
+				console.log(data.avatar)
+
+				this.$axios.put(`https://app.evoush.com/api/member/update/${this.fields.id}`, {
+					name: data.name,
+					email: data.email,
+					username: data.username,
+					address: data.address,
+					phone: data.phone,
+					quotes: data.quotes,
+					about: data.about,
+					instagram: data.instagram,
+					facebook: data.facebook,
+					youtube: data.youtube,
+					province: data.province,
+					city: data.city,
+					parallax: null
+				})
+				.then(res => {
+					if(res.data.success){
+						this.message = res.data.message
+						this.showSuccess = true
+						this.$swal({
+							position: 'top-end',
+							icon: 'success',
+							title: res.data.message,
+							showConfirmButton: false,
+							timer: 1500
+						})
+					}
+				})
+				.catch(err => {
+					console.log(err.response.data)
+					this.showSuccess = false
+					this.$swal({
+						icon: 'error',
+						title: 'Oops...',
+						text: err.response.data
+					})
+				})
 
 			},
 
+
 			getProvinsi(){
-				this.$axios.$get('https://dev.farizdotid.com/api/daerahindonesia/provinsi')
+				this.$axios.get('https://dev.farizdotid.com/api/daerahindonesia/provinsi')
 				.then(res => {
 					// console.log(res)
-					this.provinces = res.provinsi
+					this.provinces = res.data.provinsi
 				})
 			},
 			getCity(e){
 				const id = e.target.value
-				this.$axios.$get(`https://dev.farizdotid.com/api/daerahindonesia/kota?id_provinsi=${id}`)
+				this.$axios.get(`https://dev.farizdotid.com/api/daerahindonesia/kota?id_provinsi=${id}`)
 				.then(res => {
 					console.log(res)
 					this.pilih = true
-					this.citys = res.kota_kabupaten
+					this.citys = res.data.kota_kabupaten
 				})
 			},
 

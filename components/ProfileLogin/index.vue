@@ -2,21 +2,43 @@
 	<div>
 		<div v-for="member in members" class="row justify-content-center px-2 py-1 mx-auto mb-5">
 			<div class="col-lg-10 col-xs-12 col-sm-12 mx-auto">
-				<!-- Profile widget -->
 				<div class="shadow rounded overflow-hidden profile">
-					<div class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('https://app.evoush.com/storage/${member.username}/${member.cover}')` : 'background-image: url(https://mediatrack.sg/wp-content/uploads/2021/02/digital-transformation-banner-blog.png)'">
+					<div class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('http://localhost:8000/storage/${member.cover}')` : 'background-image: url(https://mediatrack.sg/wp-content/uploads/2021/02/digital-transformation-banner-blog.png)'">
 						<div class="media align-items-end">
 							<div class="row justify-content-center">
 								<div class="col-lg-10">
-									<div v-if="member.avatar">
-										<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3">
+									<div v-if="member.avatar" class="container">
+										<div v-if="preview">
+											<img :src="preview" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
+										</div>
+										<div v-else>
+											<div v-if="avatar">
+												<img :src="`http://localhost:8000/storage/${avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
+											</div>
+											<div v-else>
+												<img :src="`http://localhost:8000/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
+											</div>
+										</div>
+										<div class="middle">
+											<div class="text" @click="openUpdateAvatar">
+												<i class='bx bx-edit'></i> Update foto
+											</div>
+
+											<div v-if="editForm">
+												<!-- <form @submit.prevent="updateAvatar" enctype="multipart/form-data"> -->
+													<input class="form-control" type="file" ref="file" id="file" @change="fileAvatar">
+													<button type="submit" class="btn btn-sm btn-primary" @click="updateAvatar">Upload</button>
+												<!-- </form> -->
+											</div>
+
+										</div>
 									</div>
 									<div v-else>
 										<img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg" :alt="member.name" class="image--profile-member rounded-circle center-block d-block mx-auto mt-0 mb-0" width="100">
 									</div>
 								</div>
-								<div class="col-lg-8 col-xs-6 col-sm-6">
-									<div class="media-body">
+								<div class="col-lg-12 col-xs-6 col-sm-6">
+									<div class="container media-body">
 										<h4 style="text-transform: capitalize;">{{member.name}}</h4>
 										<p class="small"> <i class='bx bx-map'></i>
 											{{member.city}} | {{member.province}}
@@ -57,7 +79,7 @@
 							<div class="col-lg-12 col-xs-12 col-sm-12">
 								<center>
 									<div class="alert alert-success alert-dismissible fade show" role="alert">
-										<strong>Halo! {{sapaan}}</strong> Anda telah login menggunakan username <strong class="text-info">{{user.username}}</strong>.
+										<strong>Halo! {{sapaan}}</strong> Anda telah login menggunakan username <strong class="text-info">{{username}}</strong>.
 										<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 											<span aria-hidden="true">&times;</span>
 										</button>
@@ -67,7 +89,8 @@
 						</div>
 					</div>
 
-					<ProfileTabs :user="user" :samples="samples"/>
+
+					<ProfileTabs :user="user" :samples="samples"  :sapaan="sapaan" :username="username"/>
 
 				</div>
 			</div>
@@ -79,7 +102,7 @@
 	import ProfileTabs from './ProfileTabs'
 
 	export default {
-		props: ['members', 'sapaan', 'token'],
+		props: ['members', 'token', 'user', 'username'],
 		middleware: 'authenticated',
 		components: {
 			ProfileTabs
@@ -96,7 +119,13 @@
 
 				followers: null,
 				loading: true,
-				user: ''
+				sapaan: '',
+				user: '',
+				avatar: null,
+				message: null,
+				preview: null,
+				errors: null,
+				editForm: false
 			}
 		},
 		head(){
@@ -119,8 +148,7 @@
 		},
 
 		mounted(){
-
-			if(!this.token){
+			if(!this.token && this.username){
 				this.$swal({
 					icon: 'error',
 					title: 'Oops...',
@@ -133,11 +161,10 @@
 			}
 
 			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
-			this.$axios.$get('https://app.evoush.com/api/user')
+			this.$axios.get(`http://localhost:8000/api/member/${this.username}`)
 			.then(response => {
-
-                    this.user = response
-
+				console.log(response)
+                    this.user = response.data[0]
                     let h=(new Date()).getHours();
                     let m=(new Date()).getMinutes();
                     let s=(new Date()).getSeconds();
@@ -145,7 +172,6 @@
                     	if (h >= 10 && h < 15) this.sapaan = "Selamat siang, "
                     		if (h >= 15 && h < 18) this.sapaan = "Selamat sore, "
                     			if (h >= 18 || h < 4) this.sapaan = "Selamat malam, "
-
                 })
 			.catch(error => {
 				console.log(error.response.data)
@@ -168,6 +194,40 @@
 				.finally(() => this.loading = false)
 			},
 
+			openUpdateAvatar(){
+				this.editForm = true
+			},
+
+			fileAvatar(event){
+				this.avatar = event.target.files[0]
+				this.preview = URL.createObjectURL(event.target.files[0])
+			},
+
+			updateAvatar(){
+				let formData = new FormData()
+				const config = { headers: { "Content-Type": "multipart/form-data" } }
+				formData.append('file', this.avatar)
+				this.$axios.put(`/member/update/avatar/${this.user.id}`, formData, config)
+				.then(res => {
+					console.log(res)
+					this.avatar = res.data.data
+					this.$swal({
+						position: 'top-end',
+						icon: 'success',
+						title: res.data.message,
+						showConfirmButton: false,
+						timer: 1500
+					})
+					this.preview = null
+					this.$refs.file.value=null
+					this.errors = null
+				})
+				.catch(err => {
+					this.errors = err.response.data.errors.image
+					this.massage = null
+				})
+			},
+
 			logout(){
 				this.$swal({
 					title: 'Anda yakin ingin keluar ?',
@@ -180,7 +240,7 @@
 				}).then((result) => {
 					if (result.isConfirmed) {
 						this.$swal(
-							'Okay',
+							`Bye~ ${this.user.username}`,
 							`Anda telah logout dari akun ${this.user.username}`,
 							'success'
 						)
@@ -214,7 +274,6 @@
 
 <style scoped>
 .cover {	
-	/*background-size: cover;*/
 	background-repeat: no-repeat;
 	/*height: 50vh;*/
 	min-height: 50vh;
@@ -224,16 +283,57 @@
 	position: relative;
 }
 
-.media img{
+.media .profile{
+	width: 150px;
+	height: 150px;
 	border-radius: 50%!important;
 	margin-top: 7rem;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+.profile-overlay{
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: .5s ease;
+	backface-visibility: hidden;
+}
+.container:hover .profile-overlay{
+	opacity: 0.3;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .middle{
+	opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 12px;
+  padding: 2px 3px;
+  cursor: pointer;
 }
 
 .media-body h4{
 	font-size: 14px;
 }
 @media (min-width: 992px) { 
-	.media img{
+	.media .profile{
 		margin-top: 25rem;
 		margin-left: 2rem;
 	}
