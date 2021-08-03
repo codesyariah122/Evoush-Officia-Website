@@ -137,7 +137,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // baseURL: 'https://app.evoush.com/api'
-    baseUrl: 'http://localhost:8000/api'
+    baseUrl: 'https://app.evoush.com/api'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
