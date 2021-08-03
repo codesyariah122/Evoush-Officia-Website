@@ -97,6 +97,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    {src: '~/plugins/bootstrap-vue'},
     {src: '~/plugins/disqus'},
     { src: '~/plugins/tawk', ssr: false },
     { src: '~/plugins/sweetalert2', ssr: false}
@@ -116,7 +117,6 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxt/content',
     '@nuxtjs/axios',
-    ['@nuxtjs/bootstrap-vue', { css: false }],
     ['@nuxtjs/google-tag-manager', { id: 'GTM-MGR7PP9' }],
      ['@nuxtjs/google-adsense', {
       id: 'ca-pub-8390872078103831'

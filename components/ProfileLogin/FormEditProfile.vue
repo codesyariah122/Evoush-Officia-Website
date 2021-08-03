@@ -5,7 +5,7 @@
 				<div class="col-md-4 border-right">
 					<div v-for="edit in edits" class="d-flex flex-column align-items-center text-center p-3 py-5">
 						<div v-if="edit.avatar">
-							<img class="rounded-circle mt-5" :src="`http://localhost:8000/storage/${edit.avatar}`" width="90">						
+							<img class="rounded-circle mt-5" :src="`https://app.evoush.com/storage/${edit.avatar}`" width="90">						
 						</div>
 						<span class="font-weight-bold" style="text-transform: capitalize;">{{edit.name}}</span>
 						<span>{{edit.email}}</span>

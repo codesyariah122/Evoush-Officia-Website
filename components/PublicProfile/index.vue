@@ -7,12 +7,12 @@
 					<!-- <pre>
 						http://localhost:8000/storage/{{member.cover}}
 					</pre> -->
-					<div class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('http://localhost:8000/storage/${member.cover}')` : 'background-image: url(https://mediatrack.sg/wp-content/uploads/2021/02/digital-transformation-banner-blog.png)'">
+					<div class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('https://app.evoush.com/storage/${member.cover}')` : 'background-image: url(https://mediatrack.sg/wp-content/uploads/2021/02/digital-transformation-banner-blog.png)'">
 						<div class="media align-items-end">
 							<div class="row justify-content-center">
 								<div class="col-lg-10">
 									<div v-if="member.avatar">
-										<img :src="`http://localhost:8000/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3">
+										<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3">
 									</div>
 									<div v-else>
 										<img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg" :alt="member.name" class="rounded-circle mb-3" width="100">

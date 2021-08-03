@@ -45,7 +45,7 @@
 			return{
 				managements: [
 					{id: 1, name: 'Muslichun Iskandar', jabatan: 'Direktur Utama', img: 'https://github.com/evoush12/bahan_evoush/blob/main/management/Pak%20Mus.png?raw=true', hero: 'https://www.wallpapertip.com/wmimgs/16-169280_human-resource-management-hr.jpg', popup: 'https://raw.githubusercontent.com/evoush12/bahan-evoush/main/images/management/1QQQ.jpg', fb: '', ig: '', twitter: ''},
-					{id: 2, name: 'Mayjen TNI H.M. Syafei Kasno', jabatan: 'Komisaris Utama', img: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/management/Pak%20Syafei.png', hero: 'https://dvkconsultants.ae/wp-content/uploads/2018/02/DIGITAL-HUMAN-RESOURCE-MANAGEMENT.jpg', popup: 'https://raw.githubusercontent.com/evoush12/bahan-evoush/main/images/management/1QQ.jpg', fb: '', ig: '', twitter: ''}
+					{id: 2, name: 'Mayjen TNI H.M. Syafei Kasno', jabatan: 'Komisaris Utama', img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/management/edit2.png', hero: 'https://dvkconsultants.ae/wp-content/uploads/2018/02/DIGITAL-HUMAN-RESOURCE-MANAGEMENT.jpg', popup: 'https://raw.githubusercontent.com/evoush12/bahan-evoush/main/images/management/1QQ.jpg', fb: '', ig: '', twitter: ''}
 				],
 				index: null
 			}

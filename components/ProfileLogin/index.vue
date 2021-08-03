@@ -3,7 +3,7 @@
 		<div v-for="member in members" class="row justify-content-center px-2 py-1 mx-auto mb-5">
 			<div class="col-lg-10 col-xs-12 col-sm-12 mx-auto">
 				<div class="shadow rounded overflow-hidden profile">
-					<div class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('http://localhost:8000/storage/${member.cover}')` : 'background-image: url(https://mediatrack.sg/wp-content/uploads/2021/02/digital-transformation-banner-blog.png)'">
+					<div class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('https://app.evoush.com/storage/${member.cover}')` : 'background-image: url(https://mediatrack.sg/wp-content/uploads/2021/02/digital-transformation-banner-blog.png)'">
 						<div class="media align-items-end">
 							<div class="row justify-content-center">
 								<div class="col-lg-10">
@@ -13,10 +13,10 @@
 										</div>
 										<div v-else>
 											<div v-if="avatar">
-												<img :src="`http://localhost:8000/storage/${avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
+												<img :src="`https://app.evoush.com/storage/${avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 											</div>
 											<div v-else>
-												<img :src="`http://localhost:8000/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
+												<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 											</div>
 										</div>
 										<div class="middle">
@@ -161,7 +161,7 @@
 			}
 
 			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
-			this.$axios.get(`http://localhost:8000/api/member/${this.username}`)
+			this.$axios.get(`https://app.evoush.com/api/member/${this.username}`)
 			.then(response => {
 				console.log(response)
                     this.user = response.data[0]
@@ -181,7 +181,7 @@
 		},
 		methods: {
 			getFollowers(username){
-				this.$axios.$get(`/member/join/active/${username}`)
+				this.$axios.$get(`https://app.evoush.com/member/join/active/${username}`)
 				.then( res => {
 					if(res.length > 0){
 						this.followers = res.length
@@ -207,7 +207,7 @@
 				let formData = new FormData()
 				const config = { headers: { "Content-Type": "multipart/form-data" } }
 				formData.append('file', this.avatar)
-				this.$axios.put(`/member/update/avatar/${this.user.id}`, formData, config)
+				this.$axios.put(`https://app.evoush.com/member/update/avatar/${this.user.id}`, formData, config)
 				.then(res => {
 					console.log(res)
 					this.avatar = res.data.data
