@@ -153,10 +153,11 @@ data-aos-delay="200"
 	</svg>
 	<i class='bx bx-book-open' ></i>
 </div>
-<h4><a href="">AlQuran Digital</a></h4>
+<h4><a href="">Evoush Salaam</a></h4>
 <p>
-	Alquran digital yang 
+	Aplikasi alquran digital, sumber data dari kemenag. Baca AlQuran Online langsung di website official evoush.
 </p>
+<nuxt-link to="/salaam" class="btn btn-primary mt-3">Baca Quran</nuxt-link>
 </div>
 </div>
 

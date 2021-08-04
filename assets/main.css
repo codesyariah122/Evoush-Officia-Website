@@ -165,3 +165,12 @@ body h2{
 }
 
 
+.card-quran{
+  background-color: var(--bg-secondary)
+}
+
+.card-quran h5{
+  color: var(--color);
+}
+
+
