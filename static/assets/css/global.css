@@ -3,3 +3,10 @@
     src: local("Walkway"),
      url(../fonts/walkway/Walkway.ttf.woff) format("truetype");
 }
+
+@font-face {
+	font-family: 'quran-ali Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('quran-ali'), url('../fonts/quran/AlQuranAli-L3A83.woff') format('woff');
+}

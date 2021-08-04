@@ -47,7 +47,7 @@
 			return {
 				title: `Evoush::Member | ${this.user.username}`,
 				link: [
-					{rel: 'canonical', href: `http://localhost:8000/api/member/${this.user.username}`}
+					{rel: 'canonical', href: `https://app.evoush.com/api/member/${this.user.username}`}
 				],
 				meta: [
 				{ hid: 'description', name: 'description', content: 'Evoush::Member'},
@@ -76,6 +76,16 @@
 				return this.$router.push({
 					name:'profile-username', 
 					params: {username: this.username}
+				})
+			}else{
+				this.$swal({
+					icon: 'error',
+					title: 'Oops...',
+					text: 'Sepertinya anda belum login!',
+					footer: '<a href="https://evoush.com/issue">Why do I have this issue?</a>'
+				})
+				return this.$router.push({
+					path: '/auth/login'
 				})
 			}
 			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`

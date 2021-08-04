@@ -95,9 +95,9 @@
 	</div>
 	<h4><a href="">Top Leaders</a></h4>
 	<p>
-		Excepteur sint occaecat cupidatat non proident, sunt in culpa
-		qui officia
+		Top leader evoush, leader dalam kamus harafiahnya adalah pemimpin, pemimpin akan menjadi satu role model, panutan bagi kawulanya, begitu pula dalam ranah percaturan bisnis, adu kekuatan bukan lagi pilihan, kesempatan selalu terbuka siapapun yang berjuang dan bekerja tentunya pencapaian terbaik berhak baginya, berikut selengkapnya top leader dari evoush.
 	</p>
+	<nuxt-link to="/top-leader" class="btn btn-primary mt-3">Article evoush</nuxt-link>
 </div>
 </div>
 
@@ -155,8 +155,7 @@ data-aos-delay="200"
 </div>
 <h4><a href="">AlQuran Digital</a></h4>
 <p>
-	Quis consequatur saepe eligendi voluptatem consequatur dolor
-	consequuntur
+	Alquran digital yang 
 </p>
 </div>
 </div>

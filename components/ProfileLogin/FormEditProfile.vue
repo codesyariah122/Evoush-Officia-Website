@@ -91,7 +91,7 @@
 									<textarea name="address" id="address" :value="fields.address" placeholder="Alamat lengkap anda saat ini" class="form-control"></textarea>
 								</div>
 								<div class="col-md-12 mt-3">
-									<textarea id="quotes" name="quotes" placeholder="Your quotes max: 100character" class="form-control" :value="fields.quotes" rows="5"></textarea>
+									<textarea id="quotes" name="quotes" placeholder="Your quotes max: 100character" class="form-control" v-bind:value="fields.quotes" rows="5"></textarea>
 								</div>
 							</div>
 
@@ -121,7 +121,7 @@
 							<div class="row mt-3">
 								<div class="col-md-12">
 									<small class="text-danger mt-3 mb-2"><strong>Ketik di bagian text editor di bawah jika ingin mengubah success story anda</strong></small>
-									<textarea  class="form-control about" name="about" v-model="fields.about" rows="15"></textarea>	
+									<textarea  id="full-featured-non-premium" class="form-control about" name="about" v-model="fields.about" rows="15"></textarea>	
 								</div>
 							</div>
 
@@ -148,13 +148,11 @@
 		 		fields: {
 		 			id: this.edits[0].id,
 		 			name: this.edits[0].name,
-		 			avatar: this.edits[0].avatar,
 		 			email: this.edits[0].email,
 		 			username: this.edits[0].username,
 		 			address: this.edits[0].address,
 		 			phone: this.edits[0].phone,
 		 			quotes: this.edits[0].quotes,
-		 			cover: this.edits[0].cover,
 		 			about: this.edits[0].about,
 		 			instagram: this.edits[0].instagram,
 		 			facebook: this.edits[0].facebook,
@@ -175,19 +173,10 @@
 		},
 
 		mounted(){
-			console.log(this.fields.id)
 			this.getProvinsi(),
 			this.activeTinyMce()
 		},
 		methods: {
-			onChangeAvatar(e) {
-				this.avatar = e.target.files[0] 
-			},
-
-			onChangeCover(e){
-				this.cover = e.target.files[0]
-				return this.fields.cover
-			},
 
 			updateProfile(event){
 
@@ -260,7 +249,7 @@
 				const id = e.target.value
 				this.$axios.get(`https://dev.farizdotid.com/api/daerahindonesia/kota?id_provinsi=${id}`)
 				.then(res => {
-					console.log(res)
+					// console.log(res)
 					this.pilih = true
 					this.citys = res.data.kota_kabupaten
 				})

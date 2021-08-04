@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 40px;
   border-radius: 50px;
   right: 15px;
-  bottom: 15px;
+  bottom: 35px;
   /*background: #0563bb;*/
   background: #ff3b40;
   color: #fff;
@@ -56,7 +56,22 @@ h1, h2, h3, h4, h5, h6 {
   background: #ff3b40;
   transition: background 0.2s ease-in-out;
 }
-
+@media (min-width: 992px) { 
+  .back-to-top {
+    position: fixed;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    right: 15px;
+    bottom: 15px;
+    /*background: #0563bb;*/
+    background: #ff3b40;
+    color: #fff;
+    transition: display 0.5s ease-in-out;
+    z-index: 99999;
+  }
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/

@@ -4,7 +4,7 @@
 			<ul>
 				<div v-if="token && username">
 					<li>
-						<nuxt-link :to="`/profile/${user.username}`"><i class='bx bxs-user-detail'></i> <span>{{user.username}}</span></nuxt-link>
+						<nuxt-link :to="`/profile/${user.username}`"><i class='bx bxs-user-detail'></i> <span>{{username}}</span></nuxt-link>
 					</li>
 				</div>
 				<li class="active">

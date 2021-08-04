@@ -212,11 +212,11 @@
 		bottom: 30%;
 		left: 50%;
 		/*max-width: 100px;*/
-		width: 400px;
+		width: 500px;
 		height: 500px;
 		opacity: 1;
 		box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
-		border: 3px solid rgba(255, 255, 255, 1.5);
+		border: 2px solid rgba(255, 255, 255, 1.5);
 		-webkit-transform: translate(-50%, 0%);
 		transform: translate(-50%, 0%);
 	}
