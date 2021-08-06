@@ -1,6 +1,8 @@
+require('dotenv').config()
+console.log(process.env.config_production)
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  // mode: 'universal',
+  mode: 'universal',
   loading: {
     color: '#ff3b40',
     height: '11px'
@@ -28,7 +30,7 @@ export default {
       { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/venobox/venobox.css'},
       { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/owl.carousel/assets/owl.carousel.min.css'},
       { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/aos/aos.css'},
-      { rel: 'stylesheet', type: 'text/css', href: '/assets/css/style.css'}
+      { rel: 'stylesheet', type: 'text/css', href: '/assets/css/style.css'},
     ],
 
     script: [
@@ -137,7 +139,8 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // baseURL: 'https://app.evoush.com/api'
-    baseUrl: 'https://app.evoush.com/api'
+    baseUrl: (process.env.config_production) ? process.env.baseURL : 'http://localhost:8000',
+    proxy: false
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

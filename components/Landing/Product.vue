@@ -13,6 +13,13 @@
           </div>
 
           <div class="row">
+
+            <div class="col-lg-12 col-xs-12 col-sm-12 mb-5">
+              <small class="text-danger">
+                (* Klik foto / design gambar product untuk melihat detail data product secara keseluruhan, gunakan tombol filter di bawah untuk memfilter tampilan data product sesuai kategori yang anda inginkan.)
+              </small>
+            </div>
+
             <div
               class="col-lg-12 d-flex justify-content-center"
               data-aos="fade-up"

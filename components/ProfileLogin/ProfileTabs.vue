@@ -133,7 +133,7 @@
 				return new Date(date).toLocaleDateString('en', options)
 			},
 			getMember(username){
-				this.$axios.$get(`https://app.evoush.com/member/join/active/${username}`)
+				this.$axios.$get(`https://app.evoush.com/api/member/join/active/${username}`)
 				.then( res => {
 					this.followers = res
 					this.length = res.length

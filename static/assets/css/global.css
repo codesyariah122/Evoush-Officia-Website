@@ -1,10 +1,15 @@
 @font-face {
     font-family: "Walkway";
     src: local("Walkway"),
-     url(../fonts/walkway/Walkway.ttf.woff) format("truetype");
+     url(../fonts/walkway/Walkway.ttf.woff) format("woff");
 }
 
 @font-face {
 	font-family: 'quran';
-	src: local('quran'), url('../fonts/quran/amiri-quran-colored.woff') format('woff');
+	src: local('quran'), url('../fonts/quran/amiri-quran-colored.woff') format("truetype");
+}
+
+@font-face {
+	font-family: 'AlQalam';
+	src: local('AlQalam'), url('../fonts/quran/noorehidayat.ttf') format("opentype");
 }

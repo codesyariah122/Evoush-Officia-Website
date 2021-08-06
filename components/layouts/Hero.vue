@@ -22,7 +22,7 @@
 							<!-- evoush -->
 							<span
 							class="typed"
-							data-typed-items="Sehat Untuk Indonesia, Your Eternal Future, Your Healthiness, Your Beautiness"
+							data-typed-items="Sehat Untuk Indonesia, Your Eternal Future, Your Healthy, Your Beauty"
 							></span>
 						</p>
 						<div class="social-links">

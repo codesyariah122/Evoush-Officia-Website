@@ -9,6 +9,12 @@
 	
 				</div>
 
+				<div class="col-lg-12 col-xs-12 col-sm-12 mb-5">
+					<small class="text-danger">
+						(* Klik foto / design gambar article untuk melihat detail article yang ingin anda baca secara keseluruhan.)
+					</small>
+				</div>
+
 			<div
 			class="row portfolio-container"
 			data-aos="fade-up"

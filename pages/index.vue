@@ -12,7 +12,7 @@
 
 		<Product :products="results"/>
 
-		
+		{{env}}
 
 		<Members :members="members"/>
 
@@ -45,10 +45,16 @@
 			const members = await $axios.$get('/evoush/member-list')
 			const articles = await $content('Blog', params.slug)
 			.only(['title', 'description', 'img', 'slug', 'categories', 'createdAt', 'author'])
-			.sortBy('createdAt', 'asc')
+			.sortBy('createdAt', 'desc')
 			.where({categories: 'news'})
 			.fetch();
 			return { results, members, articles }
+		},
+
+		data(){
+			return {
+				env: process.env.config_production
+			}
 		},
 		components: {
 			Product,

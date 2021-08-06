@@ -10,6 +10,12 @@
 						</div>
 					</div>
 
+					<div class="col-lg-12 col-xs-12 col-sm-12 mb-5">
+						<small class="text-danger">
+							(* Klik foto / design gambar untuk melihat detail design profile management evoush keseluruhan.)
+						</small>
+					</div>
+
 
 					<!--Profile Card 1-->
 					<div v-for="management in managements" class="col-lg-12 col-xs-12 col-sm-12 mb-5">

@@ -155,7 +155,7 @@ data-aos-delay="200"
 </div>
 <h4><a href="">Evoush Salaam</a></h4>
 <p>
-	Aplikasi alquran digital, sumber data dari kemenag. Baca AlQuran Online langsung di website official evoush.
+	Aplikasi alquran digital evoush lengkap dengan audio player yang bisa anda dengarkan dan ikuti, sumber data resmi yang bersumber dari kemenag. Memungkinkan Anda tetap bisa membaca AlQuran Online sesuai ketentuan hukum dan aturan dalam membaca AlQuran yang kita ketahui, langsung di website official evoush ini.
 </p>
 <nuxt-link to="/salaam" class="btn btn-primary mt-3">Baca Quran</nuxt-link>
 </div>

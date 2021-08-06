@@ -195,7 +195,7 @@
 					city: document.querySelector('#city').value
 				}
 
-				console.log(data.avatar)
+				// console.log(data.avatar)
 
 				this.$axios.put(`https://app.evoush.com/api/member/update/${this.fields.id}`, {
 					name: data.name,
@@ -251,7 +251,7 @@
 				.then(res => {
 					// console.log(res)
 					this.pilih = true
-					this.citys = res.data.kota_kabupaten
+					this.citys = res.data.data.kota_kabupaten
 				})
 			},
 
