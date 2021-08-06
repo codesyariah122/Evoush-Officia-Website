@@ -79,7 +79,7 @@
 
 		mounted(){
 			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
-			this.$axios.get('/api/user')
+			this.$axios.get('/user')
 			.then(response => {
 				// console.log(response.username)
 				if(this.token){

@@ -9,7 +9,7 @@ export default {
   },
   // loading: '~/components/LoadingBar.vue',
   target: 'static',
-  ssr: false,
+  ssr: true,
   body: true,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -139,7 +139,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // baseURL: 'https://app.evoush.com/api'
-    baseUrl: (process.env.config_production) ? process.env.baseURL : 'http://localhost:8000',
+    baseUrl: (process.env.config_production) ? process.env.baseURL : 'http://localhost:8000/api',
     proxy: false
   },
 

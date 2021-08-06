@@ -55,32 +55,32 @@
 						</div>
 						<form @submit.prevent="updateProfile">
 							<div class="row mt-2">
-								<input type="hidden" name="id" id="id" :value="fields.id">
-								<div class="col-md-6"><input type="text" id="name" class="form-control" placeholder="Nama Lengkap" :value="fields.name"></div>
-								<div class="col-md-6"><input type="text" id="username" class="form-control" placeholder="Username Member" :value="fields.username"></div>
+								<input type="hidden" name="id" id="id" v-model="fields.id">
+								<div class="col-md-6"><input type="text" id="name" class="form-control" placeholder="Nama Lengkap" v-model="fields.name"></div>
+								<div class="col-md-6"><input type="text" id="username" class="form-control" placeholder="Username Member" v-model="fields.username"></div>
 							</div>
 							<div class="row mt-3">
-								<div class="col-md-6"><input type="text" id="email" class="form-control" placeholder="Email@address.com" :value="fields.email"></div>
-								<div class="col-md-6"><input type="text" id="phone" class="form-control" placeholder="Phone number / format: 6282xxxxxxxxx" :value="fields.phone"></div>
+								<div class="col-md-6"><input type="text" id="email" class="form-control" placeholder="Email@address.com" v-model="fields.email"></div>
+								<div class="col-md-6"><input type="text" id="phone" class="form-control" placeholder="Phone number / format: 6282xxxxxxxxx" v-model="fields.phone"></div>
 							</div>
 							<div class="row mt-3">
 								<div class="col-md-6">
 									<select name="province" id="province" class="form-control" v-on:change="getCity">
-										<option :value="fields.province">{{fields.province}}</option>
+										<option v-model="fields.province">{{fields.province}}</option>
 										<option value="" data-id=""><b>Ubah Provinsi</b></option>
-										<option v-for="provins in provinces" v-bind:value="provins.id" :value="provins.nama" :data-id="provins.id">{{provins.nama}}</option>
+										<option v-for="provins in provinces" v-bind:value="provins.id" v-model="provins.nama" :data-id="provins.id">{{provins.nama}}</option>
 									</select>
 								</div>
 								<div class="col-md-6">
 									<div v-if="!pilih">
 										<select name="city" id="city" class="form-control">
-											<option :value="fields.city">{{fields.city}}</option>
+											<option v-model="fields.city">{{fields.city}}</option>
 										</select>
 									</div>
 									<div v-else>
 										<select name="city" id="city" class="form-control">
 											<option value="">Pilih Kota</option>
-											<option v-for="city in citys" :key="city.id" :value="city.nama">{{city.nama}}</option>
+											<option v-for="city in citys" :key="city.id" v-model="city.nama">{{city.nama}}</option>
 										</select>
 									</div>
 								</div>
@@ -88,19 +88,19 @@
 
 							<div class="row mt-3">
 								<div class="col-md-12">
-									<textarea name="address" id="address" :value="fields.address" placeholder="Alamat lengkap anda saat ini" class="form-control"></textarea>
+									<textarea name="address" id="address" v-model="fields.address" placeholder="Alamat lengkap anda saat ini" class="form-control"></textarea>
 								</div>
 								<div class="col-md-12 mt-3">
-									<textarea id="quotes" name="quotes" placeholder="Your quotes max: 100character" class="form-control" v-bind:value="fields.quotes" rows="5"></textarea>
+									<textarea id="quotes" name="quotes" placeholder="Your quotes max: 100character" class="form-control" v-model="fields.quotes" rows="5"></textarea>
 								</div>
 							</div>
 
 							<div class="row mt-3">
-								<div class="col-md-6"><input type="text" id="youtube" class="form-control" placeholder="example(https://www.youtube.com/channel/UCIzNgeNDD58z8XNppkopwzw)" :value="fields.youtube"></div>
-								<div class="col-md-6"><input type="text" id="facebook" class="form-control" placeholder="Facebook username" :value="fields.facebook"></div>
+								<div class="col-md-6"><input type="text" id="youtube" class="form-control" placeholder="example(https://www.youtube.com/channel/UCIzNgeNDD58z8XNppkopwzw)" v-model="fields.youtube"></div>
+								<div class="col-md-6"><input type="text" id="facebook" class="form-control" placeholder="Facebook username" v-model="fields.facebook"></div>
 							</div>
 							<div class="row mt-3">
-								<div class="col-md-6"><input type="text" id="instagram" class="form-control" placeholder="Instagram username" :value="fields.instagram"></div>
+								<div class="col-md-6"><input type="text" id="instagram" class="form-control" placeholder="Instagram username" v-model="fields.instagram"></div>
 							</div>
 							<!-- <div class="row mt-3">
 								<div class="col-md-6">
@@ -198,6 +198,7 @@
 				// console.log(data.avatar)
 
 				this.$axios.put(`https://app.evoush.com/api/member/update/${this.fields.id}`, {
+					id: this.fields.id,
 					name: data.name,
 					email: data.email,
 					username: data.username,
@@ -249,9 +250,10 @@
 				const id = e.target.value
 				this.$axios.get(`https://dev.farizdotid.com/api/daerahindonesia/kota?id_provinsi=${id}`)
 				.then(res => {
-					// console.log(res)
+					console.log(res)
 					this.pilih = true
-					this.citys = res.data.data.kota_kabupaten
+					this.citys = res.data.kota_kabupaten
+					// console.log(this.citys)
 				})
 			},
 
