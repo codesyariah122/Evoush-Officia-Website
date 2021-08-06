@@ -27,11 +27,11 @@
 								
 								<img :src="management.img" :alt="management.name" class="profile profile-overlay"/>
 								
-								<div class="middle">
+								<!-- <div class="middle">
 									<div class="text">
 										<button v-b-modal.modal-xl="`modal-${management.id}`" class="btn btn-sm btn-success"><i class='bx bxs-zoom-in'></i> Lihat detail</button>
 									</div>
-								</div>
+								</div> -->
 							</div>
 							<div class="card-content">
 								<h2>{{management.name}}<small><strong>{{management.jabatan}}</strong></small></h2>
@@ -164,7 +164,7 @@
   width: 50%;
 }*/
 
-.profile-overlay {
+/*.profile-overlay {
   opacity: 1;
   display: block;
   width: 100%;
@@ -172,8 +172,8 @@
   transition: .5s ease;
   backface-visibility: hidden;
 }
-
-.middle {
+*/
+/*.middle {
   transition: .5s ease;
   opacity: 0;
   position: absolute;
@@ -197,7 +197,7 @@
   color: white;
   font-size: 16px;
   padding: 1px 3px;
-}
+}*/
 
 
 @media (min-width: 992px) { 
@@ -218,13 +218,13 @@
 		bottom: 30%;
 		left: 50%;
 		/*max-width: 100px;*/
-		width: 500px;
-		height: 500px;
+		width: 387px;
+		height: 450px;
 		opacity: 1;
-		box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+		/*box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
 		border: 2px solid rgba(255, 255, 255, 1.5);
 		-webkit-transform: translate(-50%, 0%);
-		transform: translate(-50%, 0%);
+		transform: translate(-50%, 0%);*/
 	}
 	.profile-card-1 h2 {
 		margin: 0 0 5px;
@@ -234,7 +234,7 @@
 		margin-top:10rem;
 	}
 
-	.middle {
+	/*.middle {
 		transition: .5s ease;
 		opacity: 0;
 		position: absolute;
@@ -243,7 +243,7 @@
 		transform: translate(-50%, -50%);
 		-ms-transform: translate(-50%, -50%);
 		text-align: center;
-	}
+	}*/
 
 	.img-size{
 		width: 1100px;

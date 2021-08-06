@@ -12,37 +12,48 @@
 											<img :src="preview" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 										</div>
 										<div v-else>
-											<div v-if="avatar">
-												<img :src="`https://app.evoush.com/storage/${avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
-											</div>
-											<div v-else>
-												<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
-											</div>
+											<!-- <div v-if="avatar">
+												<img :src="`https://app.evoush.com/storage/${avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay"> 
+											</div> -->
+											
+											<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay"> 
+											
 										</div>
-										<div class="middle">
+										<!-- <div class="middle">
 											<div class="text" @click="openUpdateAvatar">
 												<i class='bx bx-edit'></i> Update foto
 											</div>
 
 											<div v-if="editForm">
-												<!-- <form @submit.prevent="updateAvatar" enctype="multipart/form-data"> -->
-													<input class="form-control" type="file" ref="file" id="file" @change="fileAvatar">
-													<button type="submit" class="btn btn-sm btn-primary" @click="updateAvatar">Upload</button>
-												<!-- </form> -->
+												<form width="200px" name="myForm" method="post" @submit.prevent="updateAvatar" enctype="multipart/form-data">
+													<input type="hidden" name="id" id="id_member" :value="member.id">
+													<input  class="form-control mb-2" type="file" ref="file" id="file" name="avatar" accept="avatar/*" @change="fileAvatar">
+													<button class="btn btn-sm btn-primary">Upload</button>
+												</form>
 											</div>
+										</div> -->
 
-										</div>
 									</div>
 									<div v-else>
 										<img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg" :alt="member.name" class="image--profile-member rounded-circle center-block d-block mx-auto mt-0 mb-0" width="100">
 									</div>
 								</div>
-								<div class="col-lg-12 col-xs-6 col-sm-6">
+								<div class="col-lg-12 col-xs-6 col-sm-6 ml-3 mt-3">
 									<div class="container media-body">
 										<h4 style="text-transform: capitalize;">{{member.name}}</h4>
 										<p class="small"> <i class='bx bx-map'></i>
 											{{member.city}} | {{member.province}}
 										</p>
+										<button class="btn btn-sm btn-primary mt-3" @click="openUpdateAvatar">Update Foto Profile</button>
+										<div v-if="editForm" class="mt-2">
+											<i @click="closeForm" class='bx bx-window-close lg mt-2' style="font-size: 30px; cursor: pointer;"></i>
+											<form width="200px" name="myForm" method="post" @submit.prevent="updateAvatar" enctype="multipart/form-data">
+												<input type="hidden" name="id" id="id_member" :value="member.id">
+												<label for="file">Pilih foto yang ingin di upload, kemudian klik tombol Upload</label>
+												<input  class="form-control mb-2" type="file" ref="file" id="file" name="avatar" accept="avatar/*" @change="fileAvatar">
+												<button class="btn btn-sm btn-primary">Upload</button>
+											</form>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -78,6 +89,15 @@
 						<div class="row justify-content-center">
 							<div class="col-lg-12 col-xs-12 col-sm-12">
 								<center>
+									<div v-if="message">
+										<div class="alert alert-success alert-dismissible fade show" role="alert">
+											<strong>{{message}}</strong> <br> Profile Image Baru anda <strong class="text-info">{{avatar}}</strong>.
+											<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+									</div>
+
 									<div class="alert alert-success alert-dismissible fade show" role="alert">
 										<strong>Halo! {{sapaan}}</strong> Anda telah login menggunakan username <strong class="text-info">{{username}}</strong>.
 										<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -111,10 +131,10 @@
 		data(){
 			return {
 				samples: [
-					{id:1, url: 'https://images.unsplash.com/photo-1469594292607-7bd90f8d3ba4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'},
-					{id:2, url: 'https://images.unsplash.com/photo-1493571716545-b559a19edd14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'},
-					{id:3, url: 'https://images.unsplash.com/photo-1453791052107-5c843da62d97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'},
-					{id:4, url: 'https://images.unsplash.com/photo-1475724017904-b712052c192a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'}
+				{id:1, url: 'https://images.unsplash.com/photo-1469594292607-7bd90f8d3ba4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'},
+				{id:2, url: 'https://images.unsplash.com/photo-1493571716545-b559a19edd14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'},
+				{id:3, url: 'https://images.unsplash.com/photo-1453791052107-5c843da62d97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'},
+				{id:4, url: 'https://images.unsplash.com/photo-1475724017904-b712052c192a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'}
 				],
 
 				followers: null,
@@ -163,16 +183,16 @@
 			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
 			this.$axios.get(`https://app.evoush.com/api/member/${this.username}`)
 			.then(response => {
-				console.log(response)
-                    this.user = response.data[0]
-                    let h=(new Date()).getHours();
-                    let m=(new Date()).getMinutes();
-                    let s=(new Date()).getSeconds();
-                    if (h >= 4 && h < 10) this.sapaan = "Selamat pagi, "
-                    	if (h >= 10 && h < 15) this.sapaan = "Selamat siang, "
-                    		if (h >= 15 && h < 18) this.sapaan = "Selamat sore, "
-                    			if (h >= 18 || h < 4) this.sapaan = "Selamat malam, "
-                })
+				// console.log(response)
+				this.user = response.data[0]
+				let h=(new Date()).getHours();
+				let m=(new Date()).getMinutes();
+				let s=(new Date()).getSeconds();
+				if (h >= 4 && h < 10) this.sapaan = "Selamat pagi, "
+					if (h >= 10 && h < 15) this.sapaan = "Selamat siang, "
+						if (h >= 15 && h < 18) this.sapaan = "Selamat sore, "
+							if (h >= 18 || h < 4) this.sapaan = "Selamat malam, "
+						})
 			.catch(error => {
 				console.log(error.response.data)
 			})
@@ -194,6 +214,10 @@
 				.finally(() => this.loading = false)
 			},
 
+			closeForm(){
+				this.editForm = false
+			},
+
 			openUpdateAvatar(){
 				this.editForm = true
 			},
@@ -204,27 +228,25 @@
 			},
 
 			updateAvatar(){
-				let formData = new FormData()
-				const config = { headers: { "Content-Type": "multipart/form-data" } }
-				formData.append('file', this.avatar)
-				this.$axios.put(`https://app.evoush.com/member/update/avatar/${this.user.id}`, formData, config)
-				.then(res => {
-					console.log(res)
-					this.avatar = res.data.data
+				const id = document.querySelector('#id_member').value
+				let formData = new FormData
+				formData.append("avatar", this.avatar)
+				
+				this.$axios.post(`https://app.evoush.com/api/member/update/avatar/${id}`, formData, {
+					headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+				})
+				.then(res=>{
+					// console.log(res.data)
 					this.$swal({
 						position: 'top-end',
 						icon: 'success',
-						title: res.data.message,
+						title: this.message,
 						showConfirmButton: false,
 						timer: 1500
 					})
-					this.preview = null
-					this.$refs.file.value=null
-					this.errors = null
-				})
-				.catch(err => {
-					this.errors = err.response.data.errors.image
-					this.massage = null
+					this.editForm = false
+					this.message = res.data.message
+					this.avatar = res.data.data
 				})
 			},
 
@@ -243,7 +265,7 @@
 							`Bye~ ${this.user.username}`,
 							`Anda telah logout dari akun ${this.user.username}`,
 							'success'
-						)
+							)
 						this.$axios.defaults.headers.common.Authorization  = `Bearer ${this.token}`
 						this.$axios.post('/logout')
 						.then(res => {
@@ -254,11 +276,11 @@
 		                    localStorage.removeItem('token')
 
 		                    //redirect ke halaman login
-		                     return this.$router.push({
-		                        	path: '/auth/login'
-		                        })
-		                    }
-		                })
+		                    return this.$router.push({
+		                    	path: '/auth/login'
+		                    })
+		                }
+		            })
 						.catch(error => {
 							// console.log(error)
 							console.log(error.response.data)
@@ -284,15 +306,16 @@
 }
 
 .media .profile{
-	width: 150px;
-	height: 150px;
+	width: 250px;
+	height: 250px;
 	border-radius: 50%!important;
 	margin-top: 7rem;
+	margin-left: -2rem;
 }
 
 .container {
-  position: relative;
-  width: 50%;
+	position: relative;
+	width: 50%;
 }
 .profile-overlay{
 	opacity: 1;
@@ -307,14 +330,14 @@
 }
 
 .middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
 }
 
 .container:hover .middle{
@@ -322,11 +345,11 @@
 }
 
 .text {
-  background-color: #04AA6D;
-  color: white;
-  font-size: 12px;
-  padding: 2px 3px;
-  cursor: pointer;
+	background-color: #04AA6D;
+	color: white;
+	font-size: 12px;
+	padding: 2px 3px;
+	cursor: pointer;
 }
 
 .media-body h4{
@@ -335,8 +358,9 @@
 @media (min-width: 992px) { 
 	.media .profile{
 		margin-top: 25rem;
-		margin-left: 2rem;
+		/*margin-left: 2rem;*/
 	}
+
 }
 
 </style>
