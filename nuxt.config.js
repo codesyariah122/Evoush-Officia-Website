@@ -2,14 +2,14 @@ require('dotenv').config()
 console.log(process.env.config_production)
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  mode: 'universal',
+  // mode: 'universal',
   loading: {
     color: '#ff3b40',
     height: '11px'
   },
   // loading: '~/components/LoadingBar.vue',
   target: 'static',
-  ssr: true,
+  ssr: false,
   body: true,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
