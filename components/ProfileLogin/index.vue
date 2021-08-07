@@ -30,7 +30,7 @@
 
 						<div class="media align-items-end">
 							<div class="row justify-content-center">
-								<div class="col-lg-10">
+								<div class="col-lg-12 col-xs-12 col-sm-12">
 									<div v-if="member.avatar" class="container">
 										<div v-if="preview">
 											<img :src="preview" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
@@ -42,7 +42,7 @@
 											
 											<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay"> 
 
-											<button class="btn btn-sm btn-primary mt-3" @click="openUpdateAvatar"><i class='bx bxs-edit bx-lg'></i> Update Foto Profile</button>
+											<button class="btn btn-sm btn-primary mt-3 mb-2" @click="openUpdateAvatar"><i class='bx bxs-edit bx-lg'></i> Update Foto Profile</button>
 											
 										</div>
 										<!-- <div class="middle">
@@ -64,7 +64,7 @@
 										<img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg" :alt="member.name" class="image--profile-member rounded-circle center-block d-block mx-auto mt-0 mb-0" width="100">
 									</div>
 								</div>
-								<div class="col-lg-12 col-xs-6 col-sm-6 ml-3 mt-3">
+								<div class="col-lg-12 col-xs-12 col-sm-12 mt-3">
 									<div class="container media-body">
 										<h4 style="text-transform: capitalize;">{{member.name}}</h4>
 										<p class="small"> <i class='bx bx-map'></i>
@@ -397,7 +397,7 @@
 	height: 250px;
 	border-radius: 50%!important;
 	margin-top: 7rem;
-	margin-left: -2rem;
+	margin-left: -5rem;
 }
 
 .container {
@@ -438,7 +438,9 @@
 	padding: 2px 3px;
 	cursor: pointer;
 }
-
+.media-body {
+	width: 100%;
+}
 .media-body h4{
 	font-size: 14px;
 }

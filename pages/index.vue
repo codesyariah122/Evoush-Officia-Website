@@ -101,17 +101,7 @@
 
 
 <style scoped>
-.underline:after{
-	content: '';
-	display: block;
-	margin: auto;
-	margin-top: 15px;
-	position: relative;
-	margin-bottom:2rem;
-	width: 100px;
-	height: 2px;
-	background:rgb(255, 99, 78);
-}
+
 
 
 </style>
