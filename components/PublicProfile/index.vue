@@ -12,7 +12,7 @@
 							<div class="row justify-content-center">
 								<div class="col-lg-10">
 									<div v-if="member.avatar">
-										<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3">
+										<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 									</div>
 									<div v-else>
 										<img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg" :alt="member.name" class="rounded-circle mb-3" width="100">
@@ -178,7 +178,6 @@
 
 <style scoped>
 .cover {	
-	/*background-size: cover;*/
 	background-repeat: no-repeat;
 	/*height: 50vh;*/
 	min-height: 50vh;
@@ -188,19 +187,61 @@
 	position: relative;
 }
 
-.media img{
+.media .profile{
+	width: 250px;
+	height: 250px;
 	border-radius: 50%!important;
 	margin-top: 7rem;
+	margin-left: -2rem;
+}
+
+.container {
+	position: relative;
+	width: 50%;
+}
+.profile-overlay{
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: .5s ease;
+	backface-visibility: hidden;
+}
+.container:hover .profile-overlay{
+	opacity: 0.3;
+}
+
+.middle {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.container:hover .middle{
+	opacity: 1;
+}
+
+.text {
+	background-color: #04AA6D;
+	color: white;
+	font-size: 12px;
+	padding: 2px 3px;
+	cursor: pointer;
 }
 
 .media-body h4{
-	font-size: 14px;
+	font-size: 35px;
 }
 @media (min-width: 992px) { 
-	.media img{
+	.media .profile{
 		margin-top: 25rem;
-		margin-left: 2rem;
+		/*margin-left: 2rem;*/
 	}
-}
 
+}
 </style>

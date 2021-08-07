@@ -35,6 +35,11 @@ export default {
 
     script: [
       {
+        src: 'https://cdn.popt.in/pixel.js?id=146a60e91cb08',
+        async: 'true',
+        id: 'pixel-script-poptin'
+      },
+      {
         src: 'https://cdn.tiny.cloud/1/36xbwrnfekuspwhfv02z1kuwy3sz4nbehpqkb3x7bh8tek86/tinymce/5/tinymce.min.js',
         type: 'text/javascript',
         referrerpolicy: 'origin'

@@ -38,8 +38,6 @@
 
 						<p class="mb-5" v-html="product.description">
 						</p>
-						<br>
-						<Testimonial/>
 					</div>
 				</div>
 
@@ -49,13 +47,10 @@
 </template>
 
 <script>
-	import Testimonial from '@/components/Product/Testimonial'
 
 	export default{
 		props: 'params',
-		components: {
-			Testimonial
-		},
+
 		head(){
 			return {
 				title: `Evoush::Product | ${this.products[0].categories[0].name}::${this.products[0].title}`,

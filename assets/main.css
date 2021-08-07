@@ -166,11 +166,28 @@ body h2{
 
 
 .card-quran{
-  background-color: var(--bg-secondary)
+  background-color: var(--bg-secondary);
 }
 
 .card-quran h5{
   color: var(--color);
 }
+
+.profile-card-2 {
+  background-color: var(--bg-secondary);
+}
+
+.profile-card-2 h5{
+  color: var(--color);
+}
+
+.profile-card-2 p{
+  color: var(--color);
+}
+
+.profile-card-2 .card-title{
+  color: var(--color-secondary);
+}
+
 
 

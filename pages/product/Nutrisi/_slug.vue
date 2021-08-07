@@ -29,8 +29,6 @@
 
 						<p class="mb-5" v-html="product.description">
 						</p>
-						
-						<Testimonial/>
 
 					</div>
 				</div>
@@ -46,12 +44,8 @@
 </template>
 
 <script>
-	import Testimonial from '@/components/Product/Testimonial'
 
 	export default{
-		components: {
-			Testimonial
-		},
 		layout: 'product',
 
 		head(){

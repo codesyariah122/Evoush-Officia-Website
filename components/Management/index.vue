@@ -48,8 +48,8 @@
 
 					</div>
 
-					<div class="col-lg-12 col-xs-12 col-sm-12">
-						<div class="embed-responsive embed-responsive-21by9">
+					<div class="col-lg-12 col-xs-12 col-sm-12 mb-5">
+						<div class="embed-responsive embed-responsive-4by3">
 							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0H81i8_dPmM"></iframe>
 						</div>
 					</div>
@@ -81,7 +81,7 @@
 	width: 100%;
 	color: #ffffff;
 	text-align: center;
-	height:65vh;
+	height:70vh;
 	border:none;
 }
 .profile-card-1 .background {
@@ -102,13 +102,13 @@
 	top: 50%;
 }
 .profile-card-1 .profile {
-	border-radius: 50%;
+	/*border-radius: 50%;*/
 	position: absolute;
 	bottom: 30%;
 	left: 50%;
 	/*max-width: 100px;*/
-	width: 250px;
-	height: 270px;
+	width: 190px;
+	height: 290px;
 	opacity: 1;
 	box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
 	border: 2px solid rgba(255, 255, 255, 1);
@@ -120,7 +120,7 @@
 	font-weight: 600;
 	font-size:21px;
 	color:#fff!important;
-	margin-top:7rem;
+	margin-top:6.3rem;
 }
 .profile-card-1 h2 small {
 	display: block;
@@ -209,29 +209,29 @@
 		width: 100%;
 		color: #ffffff;
 		text-align: center;
-		height:60vh;
+		height:55vh;
 		border:none;
 	}
 	.profile-card-1 .profile {
-		border-radius: 50%;
+		/*border-radius: 50%;*/
 		position: absolute;
-		bottom: 30%;
+		bottom: 10%;
 		left: 50%;
 		/*max-width: 100px;*/
-		width: 387px;
-		height: 450px;
+		width: 400px;
+		height: 600px;
 		opacity: 1;
-		/*box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
-		border: 2px solid rgba(255, 255, 255, 1.5);
+		box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+		border: 5px solid rgba(255, 255, 255, 1.5);
 		-webkit-transform: translate(-50%, 0%);
-		transform: translate(-50%, 0%);*/
+		transform: translate(-50%, 0%);
 	}
 	.profile-card-1 h2 {
 		margin: 0 0 5px;
 		font-weight: 600;
-		font-size:31px;
+		font-size:27px;
 		color:#fff!important;
-		margin-top:10rem;
+		margin-top:9rem;
 	}
 
 	/*.middle {

@@ -1,0 +1,175 @@
+<template>
+	<div>
+		<div class="container">
+			<div class="row justify-content-end mt-3 mb-3">
+				<div class="col-lg-1 col-xs-6 col-sm-6">
+					<nuxt-link class="btn btn-danger ml-3 mt-3" to="/#pages"><i class='bx bx-arrow-back'></i>Kembali</nuxt-link>
+				</div>
+			</div>	
+
+			<div class="row justify-content-center">
+				<div class="col-lg-12 col-xs-12 col-sm-12 text-center">
+					<div class="section-title">
+						<h2 class="portfolio-title">Founder</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="row justify-content-center">
+				<div class="col-lg-12">
+					<div class="row">
+						<div v-for="founder in founders" class="col-md-6 col-xs-12 col-sm-12 mt-3 mb-5" :key="founder.id">
+							<div class="card profile-card-2">
+								<div class="card-img-block">
+									<img class="img-responsive img-fluid" :src="founder.cover ? founder.cover : 'https://mediatrack.sg/wp-content/uploads/2021/02/digital-transformation-banner-blog.png'" alt="Card image cap">
+								</div>
+								<div class="card-body pt-5">
+									<img :src="founder.avatar ? `https://app.evoush.com/storage/${founder.avatar}` : 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg'" alt="profile-image" class="profile img-fluid img-responsive image--profile-member img-responsive rounded-circle center-block d-block mx-auto mt-2"/>
+
+									<h5 class="card-title ml-3">{{founder.name}}</h5>
+									
+									<div class="mt-2 mb-3">
+										<nuxt-link :to="{name:'member-username', params: {username: founder.username}}" class="btn btn-danger btn-sm">Lihat Profile</nuxt-link>
+									</div>
+
+									<blockquote v-if="founder.quotes" class="card-text blockquote-footer">{{founder.quotes}}.</blockquote>
+
+									<blockquote class="blockquote-footer" v-else>
+										<small class="text-primary">{{founder.username}}, <strong>belum menambahkan quotes</strong></small>
+									</blockquote>
+									<div class="social-links">
+										<small>Social media & Contact Founder : </small><br>
+
+										<a href="" target="_blank" class="whatsapp"><i class='bx bxl-whatsapp text-success'></i></a>
+										<a href="" target="_blank" class="facebook"><i class="bx bxl-facebook text-primary"></i></a>
+										<a href="" target="_blank" class="instagram"><i class="bx bxl-instagram text-danger"></i></a>
+										<a href="" target="_blank" class="youtube"><i class='bx bxl-youtube text-danger'></i></a>
+										<a href="" target="_blank" class="email"><i class='bx bx-envelope-open text-warning'></i></a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<script>
+	export default{
+		layout: 'pages',
+		head(){
+			return {
+				title: 'Evoush::Founder'
+			}
+		},
+
+		data(){
+			return {
+				founders: []
+			}
+		},
+
+		mounted(){
+			this.getFounder()
+		},
+
+		methods: {
+			getFounder(page){
+				this.$axios.get(`https://app.evoush.com/api/evoush/founder-list?page=${page}`)
+				.then(res => {
+					return res.data
+				})
+				.then(res=>{
+					this.founders = res.data
+				})
+				.catch(err => {
+					console.log(err.response)
+				})
+			}
+		}
+	}
+</script>
+
+
+<style scoped>
+
+/*Profile card 2*/
+.profile-card-2 .card-img-block{
+	float:left;
+	width: 100%;
+	height:350px;
+	overflow:hidden;
+}
+.profile-card-2 .card-body{
+	position:relative;
+}
+.profile-card-2 .profile {
+	border-radius: 50%;
+	position: absolute;
+	top: -21rem;
+	left: 25%;
+	/*max-width: 65px;*/
+	width: 150px;
+	border: 3px solid rgba(255, 255, 255, 1);
+	-webkit-transform: translate(-50%, 0%);
+	transform: translate(-50%, 0%);
+}
+.profile-card-2 h5{
+	text-transform: capitalize;
+	font-size: 31px;
+	font-weight:700;
+	/*color:#000!important;*/
+	margin-top: -14rem;
+}
+.profile-card-2 .card-text{
+	font-weight:300;
+	font-size:15px;
+}
+.profile-card-2 .icon-block{
+	float:left;
+	width:100%;
+}
+.profile-card-2 .icon-block a{
+	text-decoration:none;
+}
+.profile-card-2 i {
+	display: inline-block;
+	font-size: 31px;
+	color: #6ab04c;
+	text-align: center;
+	border: 1px solid #6ab04c;
+	width: 40px;
+	height: 40px;
+	line-height: 37px;
+	border-radius: 50%;
+	margin:0 5px;
+}
+.profile-card-2 i:hover {
+	background-color:#6ab04c;
+	color:#fff!important;
+}
+
+@media (min-width: 992px) { 
+	.profile-card-2 .profile {
+		border-radius: 50%;
+		position: absolute;
+		top: -17rem;
+		left: 15%;
+		/*max-width: 65px;*/
+		width: 150px;
+		border: 3px solid rgba(255, 255, 255, 1);
+		-webkit-transform: translate(-50%, 0%);
+		transform: translate(-50%, 0%);
+	}
+	.profile-card-2 h5{
+		text-transform: capitalize;
+		font-size: 31px;
+		font-weight:700;
+		/*color:#6ab04c;*/
+		margin-top: -10rem;
+	}
+}
+</style>
