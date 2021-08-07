@@ -9,7 +9,7 @@
 
 
 
-			<article>
+			<section class="term-of-service">
 				<h1>Term Of Service</h1>
 
 				<p>Halo, evousher <span class="text-primary">{{city}}</span>, Website official evoush telah diluncurkan sebagai website official dan website company profile dan juga web support atau web replika yang bisa <strong>evousher</strong> gunakan sebagai media branding, sebagai fasilitas bagi para leader-leader evoush juga tentunya untuk menaikan branding member <strong>evoush</strong>. <strong class="text-primary">PT. Pineleng Indah Cemerlang</strong> dengan Merk dagang <strong>evoush</strong>, akan selalu memberikan pelayanan terbaik bagi anda semua. Dan berikut ini dokumentasi dan aturan dalam penggunaan website official evoush dan web support, web replika leader evoush.</p>  
@@ -54,7 +54,7 @@
 
 				</div>
 
-			</article>
+			</section>
 
 
 
@@ -67,6 +67,13 @@
 <script>
 	export default {
 		layout: 'pages',
+
+		head(){
+			return {
+				title: 'Evoush::Official | Term-Of-Service'
+			}
+		},
+
 		data(){
 			return {
 				ip: '',
@@ -89,7 +96,7 @@
 
 				var newLine, el, title, link;
 
-				$("article h3").each(function() {
+				$("section h3").each(function() {
 
 					el = $(this);
 					title = el.text();
