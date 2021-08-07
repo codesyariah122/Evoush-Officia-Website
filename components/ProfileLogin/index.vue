@@ -2,8 +2,32 @@
 	<div>
 		<div v-for="member in members" class="row justify-content-center px-2 py-1 mx-auto mb-5">
 			<div class="col-lg-10 col-xs-12 col-sm-12 mx-auto">
+				<button class="btn btn-sm btn-primary mt-3 mb-2" @click="openUpdateCover"><i class='bx bxs-edit bx-lg'></i> Update Cover Profile</button>
+
+				<div v-if="editCover" class="mt-2">
+					<i @click="closeCover" class='bx bx-window-close lg mt-2' style="font-size: 30px; cursor: pointer;"></i>
+					<form class="mb-5" width="200px" name="myForm" method="post" @submit.prevent="updateCover" enctype="multipart/form-data">
+						<input type="hidden" name="id" id="id_member" :value="member.id">
+						<label for="file">Pilih design banner atau cover yang ingin anda upload</label>
+						<input  class="form-control mb-2" type="file" ref="file" id="file" name="cover" accept="cover/*" @change="fileCover">
+						<button class="btn btn-sm btn-primary">Upload</button>
+					</form>
+				</div>
+
+				<div v-if="message_cover">
+					<div class="alert alert-success alert-dismissible fade show" role="alert">
+						<strong>{{message_cover}}</strong> <br> Cover Profile Baru anda <strong class="text-info">{{cover}}</strong>.
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				</div>
+
 				<div class="shadow rounded overflow-hidden profile">
-					<div class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('https://app.evoush.com/storage/${member.cover}')` : 'background-image: url(https://mediatrack.sg/wp-content/uploads/2021/02/digital-transformation-banner-blog.png)'">
+
+					<div  class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('https://app.evoush.com/storage/${member.cover}')` : 'background-image: url(https://mediatrack.sg/wp-content/uploads/2021/02/digital-transformation-banner-blog.png)'">
+
+
 						<div class="media align-items-end">
 							<div class="row justify-content-center">
 								<div class="col-lg-10">
@@ -17,6 +41,8 @@
 											</div> -->
 											
 											<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay"> 
+
+											<button class="btn btn-sm btn-primary mt-3" @click="openUpdateAvatar"><i class='bx bxs-edit bx-lg'></i> Update Foto Profile</button>
 											
 										</div>
 										<!-- <div class="middle">
@@ -44,7 +70,7 @@
 										<p class="small"> <i class='bx bx-map'></i>
 											{{member.city}} | {{member.province}}
 										</p>
-										<button class="btn btn-sm btn-primary mt-3" @click="openUpdateAvatar">Update Foto Profile</button>
+										
 										<div v-if="editForm" class="mt-2">
 											<i @click="closeForm" class='bx bx-window-close lg mt-2' style="font-size: 30px; cursor: pointer;"></i>
 											<form width="200px" name="myForm" method="post" @submit.prevent="updateAvatar" enctype="multipart/form-data">
@@ -72,7 +98,12 @@
 									<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" width="50">
 								</div>
 								<div v-else>
-									<h5 class="font-weight-bold mb-0 d-block">{{followers}}</h5>
+									<div v-if="followers > 0">
+										<h5 class="font-weight-bold mb-0 d-block">{{followers}}</h5>
+									</div>
+									<div v-else>
+										<h5 class="font-weight-bold mb-0 d-block">0</h5>
+									</div>
 								</div>
 								<small class="text-muted"> <i class="fas fa-user mr-1"></i>Members</small>
 							</li>							
@@ -142,25 +173,28 @@
 				sapaan: '',
 				user: '',
 				avatar: null,
+				cover: null,
 				message: null,
+				message_cover: null,
 				preview: null,
 				errors: null,
-				editForm: false
+				editForm: false,
+				editCover: false
 			}
 		},
 		head(){
 			return {
-				title: `Evoush::Member | ${this.user.username}`,
+				title: `Evoush::Member | ${this.members[0].username}`,
 				meta: [
 				{ hid: 'description', name: 'description', content: 'Evoush::Member'},
 				{ hid: 'keywords', name: 'keywords', content: 'Evoush::Official | Web::Replika'},
-				{ hid: 'author', name: 'author' , content: `${this.user.username} | Evoush::Member`},
+				{ hid: 'author', name: 'author' , content: `${this.members[0].username} | Evoush::Member`},
 				{ hid: 'og:type', property: 'og:type', content: 'website'},
-				{ hid: 'og:url', property: 'og:url', content: `https://evoush.com/member/${this.user.username}`},
+				{ hid: 'og:url', property: 'og:url', content: `https://evoush.com/member/${this.members[0].username}`},
 				{ hid: 'og:title', property: 'og:title', content: 'Evoush Indonesia | Evoush::Member'},
-				{ hid: 'og:site_name', property: 'og:site_name', content: `${this.user.name} | ${this.user.username}`},
-				{ hid: 'og:description', property: 'og:description', content: `${this.user.quotes}`},
-				{ hid: 'og:image', property: 'og:image', content: `https://app.evoush.com/storage/${this.user.avatar}`},
+				{ hid: 'og:site_name', property: 'og:site_name', content: `${this.members[0].name} | ${this.user.username}`},
+				{ hid: 'og:description', property: 'og:description', content: `${this.members[0].quotes}`},
+				{ hid: 'og:image', property: 'og:image', content: `https://app.evoush.com/storage/${this.members[0].avatar}`},
 				{ hid: 'og:image:width', property: 'og:image:width', content: '600'},
 				{ hid: 'og:image:height', property: 'og:image:height', content: '598'}
 				]
@@ -214,6 +248,8 @@
 				.finally(() => this.loading = false)
 			},
 
+
+
 			closeForm(){
 				this.editForm = false
 			},
@@ -249,6 +285,57 @@
 					this.avatar = res.data.data
 				})
 			},
+
+			openUpdateCover(){
+				this.editCover = true 
+			},
+
+			fileCover(e){
+				this.cover = e.target.files[0]
+			},
+
+			closeCover(){
+				this.editCover = false
+			},
+
+			updateCover(){
+				this.$swal({
+					title: 'Do you want to save the changes?',
+					showDenyButton: true,
+					showCancelButton: true,
+					confirmButtonText: `Save`,
+					denyButtonText: `Don't save`,
+				}).then((result) => {
+					/* Read more about isConfirmed, isDenied below */
+					if (result.isConfirmed) {
+						const id = document.querySelector('#id_member').value
+						let formData = new FormData
+						formData.append("cover", this.cover)
+						this.$axios.post(`https://app.evoush.com/api/member/update/cover/${id}`, formData, {
+									headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+						})
+						.then(res=>{
+							// console.log(res.data)
+							this.$swal({
+								position: 'top-end',
+								icon: 'success',
+								title: this.message,
+								showConfirmButton: false,
+								timer: 1500
+							})
+							this.editCover = false
+							this.message_cover = res.data.message
+							this.cover = res.data.data
+							location.reload()
+						})
+					} else if (result.isDenied) {
+						this.editCover = false
+						this.$swal('Changes are not saved', '', 'info')
+					}
+				})
+				
+			},
+
 
 			logout(){
 				this.$swal({
