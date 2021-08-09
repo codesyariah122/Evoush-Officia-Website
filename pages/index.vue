@@ -22,6 +22,8 @@
 
 		<Product :products="results"/>
 
+		<Branding />
+
 
 		<Members :members="members"/>
 
@@ -48,8 +50,21 @@
 	import Contact from '@/components/Landing/Contact'
 	import ColorModePicker from '@/components/molecules/ColorModePicker'
 	import SocialSharing from '@/components/global/socialsharing'
+	import Branding from '@/components/Landing/Branding'
 
 	export default {
+		layout: 'default',
+		components: {
+			Product,
+			Members,
+			News,
+			Pages,
+			Contact,
+			ColorModePicker,
+			SocialSharing,
+			Branding
+		},
+		
 		async asyncData({$content, params, $axios, $config}){
 			const results = await $axios.$get('/product/all')
 			const members = await $axios.$get('/evoush/member-list')
@@ -102,16 +117,7 @@
 				]
 			}
 		},
-		components: {
-			Product,
-			Members,
-			News,
-			Pages,
-			Contact,
-			ColorModePicker,
-			SocialSharing
-		},
-		layout: 'default',
+
 		head(){
 			return {
 				title: "Evoush::Official",
