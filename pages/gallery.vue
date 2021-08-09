@@ -213,7 +213,7 @@
 
 				thirds: [
 					{id: 1, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/639ee5eb-264b-433a-8924-b3622c7e2390.jpg'},
-					{id: 2, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/WhatsApp%20Image%202021-08-02%20at%2016.48.28.jpeg'},
+					{id: 2, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/4.jpg'},
 					{id: 3, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/WhatsApp%20Image%202021-08-02%20at%2016.48.28.jpeg'},
 					{id: 4, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/WhatsApp%20Image%202021-08-09%20at%2014.42.32%20(1).jpeg'},
 					{id: 5, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/WhatsApp%20Image%202021-08-09%20at%2014.42.32.jpeg'}

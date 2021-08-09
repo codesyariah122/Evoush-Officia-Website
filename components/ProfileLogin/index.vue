@@ -94,7 +94,7 @@
 							<li class="list-inline-item">
 								<h5 class="font-weight-bold mb-0 d-block">
 									{{samples.length}}
-								</h5><small class="text-muted"> <i class="fas fa-image mr-1"></i>Gallery</small>
+								</h5><small class="text-muted"><i class='bx bx-images'></i> Gallery</small>
 							</li>
 							<li class="list-inline-item">
 								<div v-if="loading">
@@ -108,7 +108,7 @@
 										<h5 class="font-weight-bold mb-0 d-block">0</h5>
 									</div>
 								</div>
-								<small class="text-muted"> <i class="fas fa-user mr-1"></i>Members</small>
+								<small class="text-muted"><i class='bx bx-group'></i> Members</small>
 							</li>							
 							<li class="mb-2 mt-2">
 								<a class="btn btn-danger" @click.prevent="logout">Logout</a>

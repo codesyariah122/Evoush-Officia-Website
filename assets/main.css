@@ -8,6 +8,7 @@
   --bg-card: #f3f5f4;
   --bg-secondary: #fff;
   --border-color: #ddd;
+  --color-management: #fff;
 }
 
 .dark-mode {
@@ -21,6 +22,7 @@
   --bg-card: #091a28;
   --bg-secondary: #071521;
   --border-color: #0d2538;
+  --color-management: #fff;
 }
 .sepia-mode {
   --color: #433422;
@@ -31,6 +33,7 @@
   --bg-card: #f1e7d0;
   --bg-secondary: #eae0c9;
   --border-color: #ded0bf;
+  --color-management: #fff;
 }
 
 body {
@@ -202,4 +205,7 @@ body h2{
 }
 
 
+/*.profile-card-1 .profile{
+  background-color: var(--bg-secondary);
+}*/
 

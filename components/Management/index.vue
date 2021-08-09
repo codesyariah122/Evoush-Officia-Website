@@ -27,6 +27,11 @@
 								
 								<img :src="management.img" :alt="management.name" class="profile profile-overlay"/>
 								
+								<div class="overlay">
+									<div class="text">
+										<img :src="management.popup" class="img-fluid img-responsive">
+									</div>
+								</div>
 								<!-- <div class="middle">
 									<div class="text">
 										<button v-b-modal.modal-xl="`modal-${management.id}`" class="btn btn-sm btn-success"><i class='bx bxs-zoom-in'></i> Lihat detail</button>
@@ -81,12 +86,12 @@
 	width: 100%;
 	color: #ffffff;
 	text-align: center;
-	height:70vh;
+	height:50vh;
 	border:none;
 }
 .profile-card-1 .background {
 	width:100%;
-	height: 100vh;
+	height: 70vh;
 	vertical-align: top;
   /*opacity: 0.9;
   -webkit-filter: blur(5px);
@@ -104,7 +109,7 @@
 .profile-card-1 .profile {
 	/*border-radius: 50%;*/
 	position: absolute;
-	bottom: 30%;
+	bottom: 10%;
 	left: 50%;
 	/*max-width: 100px;*/
 	width: 190px;
@@ -116,15 +121,15 @@
 	transform: translate(-50%, 0%);
 }
 .profile-card-1 h2 {
-	margin: 0 0 5px;
+	margin: 0 0 1px;
 	font-weight: 600;
-	font-size:21px;
+	font-size:13px;
 	color:#fff!important;
-	margin-top:6.3rem;
+	margin-top:2rem;
 }
 .profile-card-1 h2 small {
 	display: block;
-	font-size: 15px;
+	font-size: 12px;
 	margin-top:10px;
 }
 .profile-card-1 .social-i {
@@ -158,6 +163,35 @@
 	width: 350px;
 }
 
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
 /*.container {
   position: relative;
@@ -215,7 +249,7 @@
 	.profile-card-1 .profile {
 		/*border-radius: 50%;*/
 		position: absolute;
-		bottom: 10%;
+		bottom: 3%;
 		left: 50%;
 		/*max-width: 100px;*/
 		width: 400px;
