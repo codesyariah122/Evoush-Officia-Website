@@ -3,6 +3,9 @@
 		<div class="col-lg-12 col-xs-12 col-sm-12 mb-5">
 			<div class="card card-quran">
 				<div class="card-body">
+					<!-- <pre>
+						{{select}}
+					</pre> -->
 					<h5 class="card-title">{{select.name.transliteration.id}} ({{select.name.translation.id}})</h5>
 					<h6 class="card-subtitle mb-2 text-muted">{{select.name.long}}</h6>
 					<p class="card-text">

@@ -16,4 +16,4 @@ categories: news
 ---  
 
 
-...
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/news/acara.jpeg" class="img-responsive img-fluid">

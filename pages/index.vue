@@ -7,12 +7,21 @@
 						<ColorModePicker/>
 					</div>
 				</div>
+
+				<div class="col-lg-12 col-xs-12 col-sm-12">
+					<SocialSharing :socials="socials"/>
+				</div>
+
+				<div class="col-lg-12 col-12 col-xs-12 col-sm-12 mt-5 mb-5">
+					<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/news/new-news.jpeg" class="img-fluid img-responsive">
+				</div>
 			</div>
+
 		</div>
+
 
 		<Product :products="results"/>
 
-		{{env}}
 
 		<Members :members="members"/>
 
@@ -38,6 +47,7 @@
 	import Pages from '@/components/Landing/Pages'
 	import Contact from '@/components/Landing/Contact'
 	import ColorModePicker from '@/components/molecules/ColorModePicker'
+	import SocialSharing from '@/components/global/socialsharing'
 
 	export default {
 		async asyncData({$content, params, $axios, $config}){
@@ -53,7 +63,43 @@
 
 		data(){
 			return {
-				env: process.env.config_production
+				env: process.env.config_production,
+				socials: [
+					{
+						id: 1,
+						icon: 'bx bxl-twitter bx-lg',
+						network: 'twitter',
+						url: 'https://evoush.com/',
+						title: 'Evoush::Official | HomePage',
+						description: 'Bisnis Network Marketing Zaman Now Ya Evoush Indonesia. yaa Evoush',
+						quote: 'Raih kegemilangan berbisnis network marketing bersama kami, banyak reward yang kami siapkan untuk semangat yang gigih meraih pencapaian tertinggi.',
+						image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
+						hashtags: 'Your Eternal Future',
+						twitterUser: 'EvoushOfficial'
+					},
+					{
+						id: 2,
+						icon: 'bx bxl-facebook-circle bx-lg',
+						network: 'facebook',
+						url: 'https://evoush.com/',
+						title: 'Evoush::Official | HomePage',
+						description: 'Bisnis Network Marketing Zaman Now Ya Evoush Indonesia. yaa Evoush',
+						quote: 'Raih kegemilangan berbisnis network marketing bersama kami, banyak reward yang kami siapkan untuk semangat yang gigih meraih pencapaian tertinggi.',
+						image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
+						hashtags: 'Your Eternal Future'
+					},
+					{
+						id: 3,
+						icon: 'bx bxl-whatsapp bx-lg',
+						network: 'whatsapp',
+						url: 'https://evoush.com/',
+						title: 'Evoush::Official | HomePage',
+						description: 'Bisnis Network Marketing Zaman Now Ya Evoush Indonesia. yaa Evoush',
+						quote: 'Raih kegemilangan berbisnis network marketing bersama kami, banyak reward yang kami siapkan untuk semangat yang gigih meraih pencapaian tertinggi.',
+						image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
+						hashtags: 'Your Eternal Future'
+					}
+				]
 			}
 		},
 		components: {
@@ -62,7 +108,8 @@
 			News,
 			Pages,
 			Contact,
-			ColorModePicker
+			ColorModePicker,
+			SocialSharing
 		},
 		layout: 'default',
 		head(){

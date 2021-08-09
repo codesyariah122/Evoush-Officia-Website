@@ -32,19 +32,22 @@
 							<div class="row justify-content-center">
 								<div class="col-lg-12 col-xs-12 col-sm-12">
 									<div v-if="member.avatar" class="container">
-										<div v-if="preview">
+										<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay"> 
+
+											<button class="btn btn-sm btn-primary mt-3 mb-2" @click="openUpdateAvatar"><i class='bx bxs-edit bx-lg'></i> Update Foto Profile</button>
+										<!-- <div v-if="preview">
 											<img :src="preview" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 										</div>
 										<div v-else>
-											<!-- <div v-if="avatar">
+											<div v-if="avatar">
 												<img :src="`https://app.evoush.com/storage/${avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay"> 
-											</div> -->
+											</div>
 											
-											<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay"> 
+											<img :src="`https://app.evoush.com/storage/${avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay"> 
 
 											<button class="btn btn-sm btn-primary mt-3 mb-2" @click="openUpdateAvatar"><i class='bx bxs-edit bx-lg'></i> Update Foto Profile</button>
 											
-										</div>
+										</div> -->
 										<!-- <div class="middle">
 											<div class="text" @click="openUpdateAvatar">
 												<i class='bx bx-edit'></i> Update foto

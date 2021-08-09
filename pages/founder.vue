@@ -18,33 +18,43 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-12">
 					<div class="row">
-						<div v-for="founder in founders" class="col-md-6 col-xs-12 col-sm-12 mt-3 mb-5" :key="founder.id">
+						<div v-for="founder in founders" class="col-md-12 col-xs-12 col-sm-12 mt-3 mb-5" :key="founder.id">
 							<div class="card profile-card-2">
 								<div class="card-img-block">
 									<img class="img-responsive img-fluid" :src="founder.cover ? founder.cover : 'https://mediatrack.sg/wp-content/uploads/2021/02/digital-transformation-banner-blog.png'" alt="Card image cap">
 								</div>
 								<div class="card-body pt-5">
-									<img :src="founder.avatar ? `https://app.evoush.com/storage/${founder.avatar}` : 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg'" alt="profile-image" class="profile img-fluid img-responsive image--profile-member img-responsive rounded-circle center-block d-block mx-auto mt-2"/>
-
-									<h5 class="card-title ml-3">{{founder.name}}</h5>
-									
-									<div class="mt-2 mb-3">
-										<nuxt-link :to="{name:'member-username', params: {username: founder.username}}" class="btn btn-danger btn-sm">Lihat Profile</nuxt-link>
+									<div class="row justify-content-center">
+										<img :src="founder.avatar ? `https://app.evoush.com/storage/${founder.avatar}` : 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg'" alt="profile-image" class="profile img-fluid img-responsive image--profile-member img-responsive rounded-circle center-block d-block mx-auto mt-2"/>
 									</div>
 
-									<blockquote v-if="founder.quotes" class="card-text blockquote-footer">{{founder.quotes}}.</blockquote>
+									<div class="row justify-content-center mt-5 media-body">
+										<div class="col-lg-8 col-xs-8 col-sm-8">
+											<center>											
+												<h5 class="card-title ml-3">{{founder.name}}</h5>
+												<p><strong>Username : {{founder.username}}</strong></p>
+												<p class="badge badge-primary text-white"> {{founder.achievements.includes('STAR SAPHIRE') ? 'FOUNDER' : ''}}</p>
 
-									<blockquote class="blockquote-footer" v-else>
-										<small class="text-primary">{{founder.username}}, <strong>belum menambahkan quotes</strong></small>
-									</blockquote>
-									<div class="social-links">
-										<small>Social media & Contact Founder : </small><br>
+												<div class="mt-2 mb-3">
+													<nuxt-link :to="{name:'member-username', params: {username: founder.username}}" class="btn btn-danger btn-sm">Lihat Profile</nuxt-link>
+												</div>
 
-										<a href="" target="_blank" class="whatsapp"><i class='bx bxl-whatsapp text-success'></i></a>
-										<a href="" target="_blank" class="facebook"><i class="bx bxl-facebook text-primary"></i></a>
-										<a href="" target="_blank" class="instagram"><i class="bx bxl-instagram text-danger"></i></a>
-										<a href="" target="_blank" class="youtube"><i class='bx bxl-youtube text-danger'></i></a>
-										<a href="" target="_blank" class="email"><i class='bx bx-envelope-open text-warning'></i></a>
+												<blockquote v-if="founder.quotes" class="card-text blockquote-footer">{{founder.quotes}}.</blockquote>
+
+												<blockquote class="blockquote-footer" v-else>
+													<small class="text-primary">{{founder.username}}, <strong>belum menambahkan quotes</strong></small>
+												</blockquote>
+												<div class="social-links">
+													<small>Social media & Contact Founder : </small><br>
+
+													<a href="" target="_blank" class="whatsapp"><i class='bx bxl-whatsapp text-success'></i></a>
+													<a href="" target="_blank" class="facebook"><i class="bx bxl-facebook text-primary"></i></a>
+													<a href="" target="_blank" class="instagram"><i class="bx bxl-instagram text-danger"></i></a>
+													<a href="" target="_blank" class="youtube"><i class='bx bxl-youtube text-danger'></i></a>
+													<a href="" target="_blank" class="email"><i class='bx bx-envelope-open text-warning'></i></a>
+												</div>
+											</center>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -100,17 +110,18 @@
 .profile-card-2 .card-img-block{
 	float:left;
 	width: 100%;
-	height:350px;
+	height:400px;
 	overflow:hidden;
 }
+
 .profile-card-2 .card-body{
 	position:relative;
 }
 .profile-card-2 .profile {
 	border-radius: 50%;
 	position: absolute;
-	top: -21rem;
-	left: 25%;
+	top: -23rem;
+	left: 50%;
 	/*max-width: 65px;*/
 	width: 150px;
 	border: 3px solid rgba(255, 255, 255, 1);
@@ -122,7 +133,8 @@
 	font-size: 31px;
 	font-weight:700;
 	/*color:#000!important;*/
-	margin-top: -14rem;
+	margin-top: -19rem;
+	align-items: center!important;
 }
 .profile-card-2 .card-text{
 	font-weight:300;
@@ -152,14 +164,32 @@
 	color:#fff!important;
 }
 
+.media-body{
+	margin-top: 3rem!important;
+}
+
+.media-body h5 {
+	font-size: 23px;
+}
+
+.media-body p {
+	font-size: 11px;
+}
+
 @media (min-width: 992px) { 
-	.profile-card-2 .profile {
+	.profile-card-2 .card-img-block{
+		float:left;
+		width: 100%;
+		height:600px;
+		overflow:hidden;
+	}
+	.profile {
 		border-radius: 50%;
 		position: absolute;
-		top: -17rem;
-		left: 15%;
+		top: -23rem!important;
+		left: 50%!important;
 		/*max-width: 65px;*/
-		width: 150px;
+		width: 250px!important;
 		border: 3px solid rgba(255, 255, 255, 1);
 		-webkit-transform: translate(-50%, 0%);
 		transform: translate(-50%, 0%);
@@ -169,7 +199,10 @@
 		font-size: 31px;
 		font-weight:700;
 		/*color:#6ab04c;*/
-		margin-top: -10rem;
+		/*margin-top: -10rem;*/
+	}
+	.media-body{
+		margin-top: 13rem!important;
 	}
 }
 </style>

@@ -10,11 +10,11 @@
 						</div>
 					</div>
 
-					<div class="col-lg-12 col-xs-12 col-sm-12 mb-5">
+					<!-- <div class="col-lg-12 col-xs-12 col-sm-12 mb-5">
 						<small class="text-danger">
 							(* Klik foto / design gambar untuk melihat detail design profile management evoush keseluruhan.)
 						</small>
-					</div>
+					</div> -->
 
 
 					<!--Profile Card 1-->
@@ -219,7 +219,7 @@
 		left: 50%;
 		/*max-width: 100px;*/
 		width: 400px;
-		height: 600px;
+		height: 670px;
 		opacity: 1;
 		box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
 		border: 5px solid rgba(255, 255, 255, 1.5);

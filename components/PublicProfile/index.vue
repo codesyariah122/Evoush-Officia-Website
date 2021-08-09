@@ -188,11 +188,11 @@
 }
 
 .media .profile{
-	width: 250px;
-	height: 250px;
+	width: 150px;
+	height: 150px;
 	border-radius: 50%!important;
 	margin-top: 7rem;
-	margin-left: -2rem;
+	/*margin-left: -2rem;*/
 }
 
 .container {
@@ -241,6 +241,14 @@
 	.media .profile{
 		margin-top: 25rem;
 		/*margin-left: 2rem;*/
+	}
+
+	.media .profile{
+		width: 250px;
+		height: 250px;
+		/*border-radius: 50%!important;
+		margin-top: 7rem;*/
+		/*margin-left: -2rem;*/
 	}
 
 }

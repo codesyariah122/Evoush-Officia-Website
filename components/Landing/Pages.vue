@@ -71,38 +71,9 @@
 		</div>
 	</div>
 
-		<div
-			class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
-			data-aos="zoom-in"
-			data-aos-delay="200"
-			>
-			<div class="icon-box iconbox-orange">
-				<div class="icon">
-					<svg
-					width="100"
-					height="100"
-					viewBox="0 0 600 600"
-					xmlns="http://www.w3.org/2000/svg"
-					>
-					<path
-					stroke="none"
-					stroke-width="0"
-					fill="#f5f5f5"
-					d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"
-					></path>
-				</svg>
-				<i class='bx bxs-news' ></i>
-			</div>
-			<h4><a href="">Articles</a></h4>
-			<p>
-				Sebagai media entertainment bagi sebuah corporate team kami yang selalu menunjang setiap inovasi untuk dituangkan dalam perkembangan media digital yang pesat dengan segala macam content-content terbaru, menarik dan tentunya dapat menjadi sebuah branding tersendiri baik digunakan untuk branding bisnis maupun branding product, kami senantiasa memperbarui content-content berupa, article, news dan apapun content yang bermanfaat bagi bisnis evoush.
-			</p>
-			<nuxt-link to="/blog" class="btn btn-primary mt-3">Article evoush</nuxt-link>
-		</div>
-	</div>
 
 <div
-class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
+class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
 data-aos="zoom-in"
 data-aos-delay="100"
 >
@@ -125,8 +96,7 @@ data-aos-delay="100"
 </div>
 <h4><a href="">Top Income</a></h4>
 <p>
-	At vero eos et accusamus et iusto odio dignissimos ducimus qui
-	blanditiis
+	Top Income merupakan sebuah reward yang kami persembahkan untuk para evousher yang telah berjuang dalam menggapai pencapian yang gilang gemilang. Dan berikut adalah list top income evoush yang berhasil masuk ke dalam system kami.
 </p>
 <nuxt-link to="/top-income" class="btn btn-primary mt-3">Top Income</nuxt-link>
 </div>
@@ -164,6 +134,37 @@ data-aos-delay="100"
 </div>
 </div>
 
+
+<div
+class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
+data-aos="zoom-in"
+data-aos-delay="200"
+>
+<div class="icon-box iconbox-orange">
+	<div class="icon">
+		<svg
+		width="100"
+		height="100"
+		viewBox="0 0 600 600"
+		xmlns="http://www.w3.org/2000/svg"
+		>
+		<path
+		stroke="none"
+		stroke-width="0"
+		fill="#f5f5f5"
+		d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"
+		></path>
+	</svg>
+	<i class='bx bxs-news' ></i>
+</div>
+<h4><a href="">Articles</a></h4>
+<p>
+	Sebagai media entertainment bagi sebuah corporate team kami yang selalu menunjang setiap inovasi untuk dituangkan dalam perkembangan media digital yang pesat dengan segala macam content-content terbaru, menarik dan tentunya dapat menjadi sebuah branding tersendiri baik digunakan untuk branding bisnis maupun branding product, kami senantiasa memperbarui content-content berupa, article, news dan apapun content yang bermanfaat bagi bisnis evoush.
+</p>
+<nuxt-link to="/blog" class="btn btn-primary mt-3">Article evoush</nuxt-link>
+</div>
+</div>
+
 <div
 class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
 data-aos="zoom-in"
@@ -195,7 +196,7 @@ data-aos-delay="200"
 </div>
 
 
-<div
+<!-- <div
 class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
 data-aos="zoom-in"
 data-aos-delay="300"
@@ -223,7 +224,7 @@ data-aos-delay="300"
 	sit aspernatur
 </p>
 </div>
-</div>
+</div> -->
 
 
 <div
@@ -250,9 +251,9 @@ data-aos-delay="300"
 </div>
 <h4><a href="">Events</a></h4>
 <p>
-	Modi nostrum vel laborum. Porro fugit error sit minus sapiente
-	sit aspernatur
+	Halo evousher anda bisa update event-event terbaru evoush atau event yang akan berlangsung di hari mendatang, dan dihalaman events ini semua terdokumentasi menjadi sebuah cerita tentang event yang digelar dengan meriah oleh evoush.
 </p>
+<nuxt-link to="/salaam" class="btn btn-primary mt-3">Kunjungi Event</nuxt-link>
 </div>
 </div>
 
@@ -311,9 +312,9 @@ data-aos-delay="300"
 </div>
 <h4><a href="">Halo Dokter</a></h4>
 <p>
-	Modi nostrum vel laborum. Porro fugit error sit minus sapiente
-	sit aspernatur
+	Hallo evousher  sekarang ini anda bisa berkonsultasi melalui aplikasi halo dokter ini.
 </p>
+<nuxt-link to="/halo-dokter" class="btn btn-primary mt-3">Halo Dokter</nuxt-link>
 </div>
 </div>
 
@@ -342,11 +343,76 @@ data-aos-delay="300"
 </div>
 <h4><a href="">Term Of Service</a></h4>
 <p>
-	Modi nostrum vel laborum. Porro fugit error sit minus sapiente
-	sit aspernatur
+	Setiap data-data sensitive yang terdapat di konten website official evoush ini merupakan data yang terjaga hak cipta dan privasi sangat terjaga, di bawah payung hukum <strong>PT. Pineleng Indah Cemerlang</strong> sebagai naungan hukum sah yang melindungi semua konten yang terdapat dalam website official evoush ini.
 </p>
 
 <nuxt-link to="/term-of-service" class="btn btn-primary mt-3">Term Of Service</nuxt-link>
+
+</div>
+</div>
+
+<div
+class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
+data-aos="zoom-in"
+data-aos-delay="300"
+>
+<div class="icon-box iconbox-red">
+	<div class="icon">
+		<svg
+		width="100"
+		height="100"
+		viewBox="0 0 600 600"
+		xmlns="http://www.w3.org/2000/svg"
+		>
+		<path
+		stroke="none"
+		stroke-width="0"
+		fill="#f5f5f5"
+		d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"
+		></path>
+	</svg>
+	<i class='bx bx-fingerprint'></i>
+</div>
+<h4><a href="">Privacy Policy</a></h4>
+<p>
+	Kebijakan privacy menjadi sesuatu yang sangat kami pentingkan, dan ini sebagai bentuk legalitas digital bahwa website official evoush telah resmi terdaftar sebagai partner google.
+	<a href="https://www.privacypolicyonline.com/live.php?token=bHBrhWEmveR3TWjVbwgJgUv7bUok2eVq">Evoush Privacy Policy</a>
+</p>
+
+<nuxt-link to="/privacy-policy" class="btn btn-primary mt-3">Privacy Policy</nuxt-link>
+
+</div>
+</div>
+
+
+<div
+class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
+data-aos="zoom-in"
+data-aos-delay="300"
+>
+<div class="icon-box iconbox-blue">
+	<div class="icon">
+		<svg
+		width="100"
+		height="100"
+		viewBox="0 0 600 600"
+		xmlns="http://www.w3.org/2000/svg"
+		>
+		<path
+		stroke="none"
+		stroke-width="0"
+		fill="#f5f5f5"
+		d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"
+		></path>
+	</svg>
+	<i class='bx bxs-binoculars'></i>
+</div>
+<h4><a href="">Pusat bantuan</a></h4>
+<p>
+	Halo evousher kami memiliki pusat bantuan sebagai langkah panduan anda dalam menggunakan atau mengakses website official evoush ini berikut ada beberapa list yang bisa anda ikuti agar fokus anda dalam menggunakan website official evoush ini semakin asik.
+</p>
+
+<nuxt-link to="/pusat-bantuan" class="btn btn-primary mt-3">Privacy Policy</nuxt-link>
 
 </div>
 </div>

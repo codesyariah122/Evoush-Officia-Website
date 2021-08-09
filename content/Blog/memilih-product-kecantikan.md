@@ -2,7 +2,7 @@
 title: Cara Cerdas Memilih Kosmetik yang Aman untuk Kulit
 description: Kali ini mimin mau membahas hal yang berbau tricky yaitu bagaimana cara memilihi product kesmetik yang aman
 slug: memilih-product-kecantikan
-img: Cara-Cerdas-Memilih-Produk-Kosmetik-yang-Aman.jpg
+img: evost.jpg
 author: 
   name: evoush_writter
   bio: Your Eternal Future
@@ -26,7 +26,7 @@ Saking menjamurnya produk kosmetik di Indonesia, hal ini memicu peredaran kosmet
 ### Langkah-langkah memilih produk kosmetik yang aman  
 <br><br>
 #### 1. Cek KLIK
-<img src="https://app.evoush.com/storage/product-sliders/736f93e8-6aa5-41b1-b7a4-21104885c997.jpg" class="img-responsive" width="800">  
+<img src="https://app.evoush.com/storage/product-sliders/736f93e8-6aa5-41b1-b7a4-21104885c997.jpg" class="img-responsive img-fluid" width="800">  
 <br><br>
 Cara pertama sebelum membeli produk kosmetik adalah cek KLIK. Cek KLIK artinya cek kemasan, label, izin edar, dan tanggal kedaluwarsa pada kosmetik.
 
@@ -34,7 +34,7 @@ Pertama-tama, cek kemasan dan label produk kosmetik yang Anda beli. Periksa seti
 
 Selanjutnya, temukan Nomor Izin Edar (NIE) pada kemasan produk. Kosmetik yang legal dan aman sudah pasti mengantongi izin resmi dari **BPOM** dan memiliki nomor izin edar tersebut. Artinya, bahan-bahan yang terkandung pun dijamin aman karena sudah diuji terlebih dahulu oleh BPOM.  
 
-<img src="https://app.evoush.com/storage/product-sliders/Day%20Cream.jpg" class="img-responsive" width="800">
+<img src="https://app.evoush.com/storage/product-sliders/Day%20Cream.jpg" class="img-responsive img-fluid">
 <br><br>
 Selain itu, pastikan bahwa nomor izin edar tersebut benar-benar terdaftar pada web resmi BPOM. Sebab, mungkin saja beberapa produk kecantikan hanya sekadar menempel nomor izin edar yang asal-asalan. Jika produk kosmetik yang Anda beli tidak memiliki nomor izin edar maupun tidak benar-benar terdaftar, maka kosmetik tersebut sudah pasti ilegal dan tidak terjamin kandungannya.
 
@@ -42,7 +42,7 @@ Jangan lupa untuk melihat tanggal kedaluwarsa pada label produk. Hal ini sering 
 
 #### 2. Harga murah tidak menjamin kualitas  
 
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/blog/harga.jpg" class="img-responsive" width="800">  
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/blog/harga.jpg" class="img-responsive img-fluid">  
 
 Sebagian besar konsumen mengeluhkan harga kosmetik yang kian mahal dan membuat kantong jebol. Karena itulah, banyak orang yang mulai melirik produk kosmetik yang sama, namun dijual dengan harga yang lebih murah, bahkan terkadang cenderung tidak masuk akal.
 
@@ -52,7 +52,7 @@ Maka itu, jangan mudah tertipu dengan harga murah dan periksa lagi keaslian prod
 
 #### 3. Order melalui distributor, toko kosmetik yang terpercaya  
 
-<img src="https://app.evoush.com/storage/product-covers/wMPsgYNzwAnVOxxZnkBtaVZKrLsgWoswtbBqRBDF.jpg" class="img-responsive" width="800">  
+<img src="https://app.evoush.com/storage/product-covers/wMPsgYNzwAnVOxxZnkBtaVZKrLsgWoswtbBqRBDF.jpg" class="img-responsive img-fluid">  
 <br><br>
 Agar mendapatkan produk kosmetik yang aman, pastikan Anda membelinya di toko yang terpercaya. Selain toko konvensional, kini sudah banyak toko online yang juga menjual kosmetik kesayangan Anda. Akan tetapi, pastikan bahwa toko tersebut benar-benar terpercaya dan menjual produk kosmetik yang asli.
 
@@ -62,7 +62,7 @@ Bila Anda menemukan bentuk kemasan yang tidak meyakinkan, tekstur produk yang ti
 
 #### 4. Perhatikan reaksi setelah memakai kosmetik  
 
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/blog/alergi.jpg" class="img-responsive" width="800">
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/blog/alergi.jpg" class="img-responsive img-fluid">
 <br><br>  
 Bagi Anda yang sudah sering membeli kosmetik tentu sudah handal dalam mencoba tester kosmetik. Caranya adalah dengan mengoleskan sedikit produk ke bagian punggung tangan untuk melihat tekstur dan warna, apakah cocok dengan yang Anda cari atau tidak.
 

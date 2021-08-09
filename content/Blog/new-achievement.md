@@ -17,4 +17,6 @@ categories: news
 
 ##### New Achievement Star Sapphire  
 
-Selamat atas pencapaian yang telah di raih untuk Achievement Star Sapphire Ibu **Luthfi Kardhina Sari**
+Selamat atas pencapaian yang telah di raih untuk Achievement Star Sapphire Ibu **Luthfi Kardhina Sari**  
+
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/news/achievement.jpeg" class="img-fluid img-responsive">

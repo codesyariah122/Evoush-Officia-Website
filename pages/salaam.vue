@@ -88,14 +88,14 @@
 				this.showLists = true
 				const number = e.target.value
 				if(number !== ""){
-					this.$axios.$get(`https://api.quran.sutanlab.id/surah/${number}`)
+					this.$axios.get(`https://api.quran.sutanlab.id/surah/${number}`)
 					.then(res => {
-						this.select = res.data
+						this.select = res.data.data
 						console.log(this.select)
 					})
 					.catch(error => {
 						console.log( (error.response || {}).data );
-						return false;
+						// return false;
 					})
 				}else{
 					this.showLists = false

@@ -19,4 +19,6 @@ Kementerian Perdagangan (Kemendag) memberikan dorongan kepada perusahaan multi l
 
 Koordinator Distribusi Langsung dan Waralaba Kemendag Ronny Marpaung mengatakan kontribusi perusahaan multi level marketing tersebut fokus terhadap produk kesehatan, kecantikan, dan lifestyle. Hal ini membuktikan industri penjualan langsung kebal terhadap pandemi Covid-19.  
 
-Ketua Umum Asosiasi Perusahaan Penjualan Langsung Indonesia (AP2LI) Andrew Susanto mengatakan terlepas dari pro dan kontra yang terjadi masyarakat, industri penjualan langsung tetap tumbuh subur pada masa-masa sulit termasuk saat pandemi.
+Ketua Umum Asosiasi Perusahaan Penjualan Langsung Indonesia (AP2LI) Andrew Susanto mengatakan terlepas dari pro dan kontra yang terjadi masyarakat, industri penjualan langsung tetap tumbuh subur pada masa-masa sulit termasuk saat pandemi.  
+
+<img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg" class="img-fluid img-responsive">

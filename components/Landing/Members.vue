@@ -30,7 +30,8 @@
 								<ul>
 									<li><strong>Username : {{member.username}}</strong></li>
 									<li><strong>Status : </strong> <span class="badge badge-success">Active</span></li>
-									<li>
+									<li><span class="badge badge-info"><i class='bx bxs-trophy bx-lg text-white'></i> {{member.achievements.includes('STAR SAPHIRE') ? 'STAR SAPHIRE' : 'SAPHIRE'}}</span></li>
+									<li class="mt-5 mb-5">
 										<strong>Media Social : </strong><br>
 										<div class="social-links">
 											<a :href="`https://wa.me/${member.phone}?text=Hallo%20${member.name}%20saya%20tertarik%20untuk%20join%20Evoush, %20apa%20anda%20bisa%20bantu%20saya`" target="_blank" class="whatsapp"><i class='bx bxl-whatsapp text-success'></i></a>

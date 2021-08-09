@@ -44,16 +44,16 @@ Kalian tentunya sudah tau bahwasanya **evoush** mempunyai sebuah product yang be
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/testimoni/gilcam/WhatsApp%20Image%202021-07-31%20at%2020.00.52.jpeg" class="d-block w-100" alt="...">
+      <img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/testimoni/gilcam/WhatsApp%20Image%202021-07-31%20at%2020.00.52.jpeg" class="img-fluid img-responsive d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/testimoni/gilcam/WhatsApp%20Image%202021-07-31%20at%2020.00.45.jpeg" class="d-block w-100" alt="...">
+      <img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/testimoni/gilcam/WhatsApp%20Image%202021-07-31%20at%2020.00.45.jpeg" class="img-fluid img-responsive d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/testimoni/gilcam/WhatsApp%20Image%202021-07-30%20at%2018.25.58.jpeg" class="d-block w-100" alt="...">
+      <img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/testimoni/gilcam/WhatsApp%20Image%202021-07-30%20at%2018.25.58.jpeg" class="img-fluid img-responsive d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/testimoni/gilcam/WhatsApp%20Image%202021-07-30%20at%2008.00.45.jpeg" class="d-block w-100" alt="...">
+      <img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/testimoni/gilcam/WhatsApp%20Image%202021-07-30%20at%2008.00.45.jpeg" class="img-fluid img-responsive d-block w-100" alt="...">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

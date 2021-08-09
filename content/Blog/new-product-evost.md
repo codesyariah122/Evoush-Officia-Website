@@ -31,13 +31,13 @@ Halo evousher apa kabarnya ? semoga kita semua selalu diberikan nikmat sehat, se
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://app.evoush.com/storage/product-sliders/736f93e8-6aa5-41b1-b7a4-21104885c997.jpg" class="d-block w-100" alt="...">
+      <img src="https://app.evoush.com/storage/product-sliders/736f93e8-6aa5-41b1-b7a4-21104885c997.jpg" class="img-fluid img-responsive d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="https://app.evoush.com/storage/product-sliders/208680483_535423144562771_8966429403612088480_n.jpg" class="d-block w-100" alt="...">
+      <img src="https://app.evoush.com/storage/product-sliders/208680483_535423144562771_8966429403612088480_n.jpg" class="img-fluid img-responsive d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="https://app.evoush.com/storage/product-sliders/corner.png" class="d-block w-100" alt="...">
+      <img src="https://app.evoush.com/storage/product-sliders/corner.png" class="img-fluid img-responsive d-block w-100" alt="...">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

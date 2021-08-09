@@ -12,11 +12,11 @@
 				</li>
 				<li>
 					<a href="#products"
-					><i class='bx bx-cart'></i><span>Product</span></a
+					><i class='bx bxs-shopping-bag-alt'></i><span>Product</span></a
 					>
 				</li>
 				<li>
-					<a href="#members"><i class='bx bxs-group'></i> <span>Members</span></a>
+					<a href="#members"><i class='bx bxs-network-chart'></i> <span>Leaders</span></a>
 				</li>
 				<!-- <li>
 					<a href="#management">
@@ -49,8 +49,8 @@
 	export default{
 		data(){
 			return {
-				token: localStorage.getItem('token'),
-				username: localStorage.getItem('username'),
+				token: (localStorage.getItem('token') ? localStorage.getItem('token') : ''),
+				username: (localStorage.getItem('username') ? localStorage.getItem('username') : ''),
 				user: ''
 			}
 		},
