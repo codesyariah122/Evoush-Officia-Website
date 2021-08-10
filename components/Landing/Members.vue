@@ -76,7 +76,7 @@
 						</ul>
 						<br>
 						<blockquote class="blockquote-footer text-danger">
-							Gunakan link halaman di bawah untuk melihat list member selanjutnya.
+							Gunakan link halaman di bawah untuk melihat list  selanjutnya.
 						</blockquote>
 						<pagination align="center" :data="members" @pagination-change-page="listMembers"></pagination>
 					</div>
@@ -123,7 +123,7 @@
 					return res.data
 				})
 				.then(data => {
-					console.log(data)
+					// console.log(data)
 					this.members = data
 				})
 				.catch(err => console.log(err.response))

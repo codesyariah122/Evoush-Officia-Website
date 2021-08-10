@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  right: 35px;
+  right: 15px;
   bottom: 85px;
   /*background: #0563bb;*/
   background: #ff3b40;
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 40px;
     border-radius: 50px;
     right: 15px;
-    bottom: 15px;
+    bottom: 85px;
     /*background: #0563bb;*/
     background: #ff3b40;
     color: #fff;
@@ -265,7 +265,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   /*height: 150vh;*/
   min-height: 100vh;
-  background: url("https://raw.githubusercontent.com/evoush12/bahan_evoush/main/assets/img/bg/new_hero_bg.jpg") top right no-repeat;
+  background: url("https://raw.githubusercontent.com/evoush12/bahan_evoush/main/assets/img/bg/new_bg2.jpg") top right no-repeat;
   background-size: cover;
   position: relative;
   /*margin-top: -2rem;*/
