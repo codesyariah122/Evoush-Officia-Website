@@ -37,6 +37,46 @@
 		layout: 'pages',
 		components: {
 			Covid
+		},
+		data(){
+			return {
+				socials: [
+					{
+						id: 1,
+						icon: 'bx bxl-twitter bx-lg',
+						network: 'twitter',
+						url: 'https://evoush.com/halo-dokter',
+						title: 'Evoush::Official | HaloDokter::Page',
+						description: 'Di halaman ini anda bisa berkonsultasi pada dokter terpercaya yang telah kami siapkan',
+						quote: 'Raih kegemilangan berbisnis network marketing bersama kami, banyak reward yang kami siapkan untuk semangat yang gigih meraih pencapaian tertinggi.',
+						image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
+						hashtags: 'Your Eternal Future',
+						twitterUser: 'EvoushOfficial'
+					},
+					{
+						id: 2,
+						icon: 'bx bxl-facebook-circle bx-lg',
+						network: 'facebook',
+						url: 'https://evoush.com/halo-dokter',
+						title: 'Evoush::Official | HaloDokter::Page',
+						description: 'Di halaman ini anda bisa berkonsultasi pada dokter terpercaya yang telah kami siapkan',
+						quote: 'Raih kegemilangan berbisnis network marketing bersama kami, banyak reward yang kami siapkan untuk semangat yang gigih meraih pencapaian tertinggi.',
+						image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
+						hashtags: 'Your Eternal Future',
+					},
+					{
+						id: 3,
+						icon: 'bx bxl-whatsapp bx-lg',
+						network: 'whatsapp',
+						url: 'https://evoush.com/halo-dokter',
+						title: 'Evoush::Official | HaloDokter::Page',
+						description: 'Di halaman ini anda bisa berkonsultasi pada dokter terpercaya yang telah kami siapkan',
+						quote: 'Raih kegemilangan berbisnis network marketing bersama kami, banyak reward yang kami siapkan untuk semangat yang gigih meraih pencapaian tertinggi.',
+						image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
+						hashtags: 'Your Eternal Future',
+					}
+				]
+			}
 		}
 	}
 </script>

@@ -59,8 +59,8 @@
 				provinces:[],
 				results: {},
 				show: false,
-				barChartData: {},
-				barChartOptions: {}
+				barChartData: null,
+				barChartOptions: null
 			}
 		},
 
@@ -104,11 +104,12 @@
 			},
 			changeProvince(event){
 				let provinsi = event.target.value
-				console.log(provinsi)
+				// console.log(provinsi)
+
+				// console.log(provinsi)
 				
 				this.$axios.get('https://indonesia-covid-19.mathdro.id/api/provinsi/',  { crossdomain: true })
 				.then(res => {
-					// console.log(res.data)
 					this.show = true
 					const results = res.data
 					// this.results = results.data[provinsi]
@@ -142,7 +143,7 @@
 				}
 
 				this.barChartOptions = {
-					responsive: false,
+					responsive: true,
 					legend: {
 						display: false
 					},
@@ -166,10 +167,10 @@
 						yAxes: [
 						{
 							ticks: {
-								beginAtZero: true
+								beginAtZero: false
 							},
 							gridLines: {
-								display: true
+								display: false
 							}
 						}
 						]

@@ -12,6 +12,7 @@ export default async (context) => {
       return;
     }
 
+    alert("Anda mendapat pembaruan dari evoush official")
     console.debug('There is an update for the PWA, reloading...');
     window.location.reload();
   });

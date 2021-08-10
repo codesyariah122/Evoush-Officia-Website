@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { Bar, Doughnut, Line, Pie, } from 'vue-chartjs'
+import { Bar, Doughnut, Line, Pie, mixins} from 'vue-chartjs'
 
 const registerComponent = function(name, originalComponent) {
     Vue.component(
@@ -7,9 +7,15 @@ const registerComponent = function(name, originalComponent) {
         {
             extends: originalComponent,
             props: ['data', 'options'],
+            mixins: [mixins.reactiveProp],
             mounted() {
                 this.renderChart(this.data, this.options)
             },
+            watch: {
+               options () {
+                this.renderChart(this.data, this.options);
+                }
+            }
         }
     )
 }
