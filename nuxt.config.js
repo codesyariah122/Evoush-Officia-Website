@@ -188,6 +188,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    {src: '~/plugins/pwa-update', mode: 'client'},
     {src: '~/plugins/plugins_vue-chartjs', ssr: false},
     {src: '~/plugins/vue-social-sharing'},
     {src: '~/plugins/bootstrap-vue'},

@@ -29,11 +29,17 @@
 
 
 						<div class="col-lg-12 col-xs-12 col-sm-12 mt-5 mb-3">
-							<BarChart :result="result"/>
-							<pre>
-								{{result}}
-							</pre>
+							<div v-if="show">
+								<bar-chart :data="barChartData" :options="barChartOptions" :height="200"></bar-chart>
+							</div>
+							<div v-else>
+								<small class="text-danger">
+									Pilih nama provinsi
+								</small>
+							</div>
 						</div>
+
+						
 					</div>
 				</div>
 			</div>
@@ -43,20 +49,18 @@
 </template>
 
 <script>
-	import BarChart from '@/components/HaloDokter/BarChart'
 
 	export default{
-		components: {
-			BarChart
-		},
+
 		data(){
 			return{
 				ip: '',
 				country_name: '',
 				provinces:[],
-				result: {
-					
-				}
+				results: {},
+				show: false,
+				barChartData: {},
+				barChartOptions: {}
 			}
 		},
 
@@ -104,12 +108,73 @@
 				
 				this.$axios.get('https://indonesia-covid-19.mathdro.id/api/provinsi/',  { crossdomain: true })
 				.then(res => {
-					// console.log(res.data.data)
-					const results = res.data.data
-					this.result = results[provinsi]
-
+					// console.log(res.data)
+					this.show = true
+					const results = res.data
+					// this.results = results.data[provinsi]
+					this.getChartData(results.data[provinsi])
 				})
 				.catch(err => console.log(err.response))
+			},
+
+			getChartData(data){
+				this.barChartData = {
+					labels: [
+						`provinsi : ${data.provinsi}`
+					],
+					datasets: [
+					{
+						label: 'Positif',
+						data: [data.kasusPosi],
+						backgroundColor: '#003f5c'
+					},
+					{
+						label: 'Sembuh',
+						data: [data.kasusSemb],
+						backgroundColor: '#2f4b7c'
+					},
+					{
+						label: 'Meninggal',
+						data: [data.kasusMeni],
+						backgroundColor: '#665191'
+					}
+					]
+				}
+
+				this.barChartOptions = {
+					responsive: false,
+					legend: {
+						display: false
+					},
+					title: {
+						display: true,
+						text: data.provinsi,
+						fontSize: 24,
+						fontColor: '#6b7280'
+					},
+					tooltips: {
+						backgroundColor: '#17BF62'
+					},
+					scales: {
+						xAxes: [
+						{
+							gridLines: {
+								display: true
+							}
+						}
+						],
+						yAxes: [
+						{
+							ticks: {
+								beginAtZero: true
+							},
+							gridLines: {
+								display: true
+							}
+						}
+						]
+					}
+				}
 			}
 		}
 	}

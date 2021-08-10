@@ -53,9 +53,9 @@
 								</div>
 								<div v-else>
 									<blockquote class="blockquote-footer">
-										Belum Menambahkan Quotes, silahkan edit profile <br>
+										{{member.name}} Belum menambahkan quotes <br>
 										<small style='text-transform: capitalize;' class="text-secondary">
-											{{member.name}} Belum menambahkan quotes
+											Untuk menambah atau mengedit profile anda silahkan klik tombol, Lihat profile kemudian anda akan di arahkan ke halaman profile member replika anda, selanjutnya di halaman profile member replika anda, anda bisa langsung menuju halaman login, dengan mengklik tombol Login bermwarna biru.
 										</small>
 									</blockquote>
 								</div>

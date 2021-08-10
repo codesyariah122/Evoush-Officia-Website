@@ -318,6 +318,37 @@ data-aos-delay="300"
 </div>
 </div>
 
+<div
+class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
+data-aos="zoom-in"
+data-aos-delay="300"
+>
+<div class="icon-box iconbox-blue">
+	<div class="icon">
+		<svg
+		width="100"
+		height="100"
+		viewBox="0 0 600 600"
+		xmlns="http://www.w3.org/2000/svg"
+		>
+		<path
+		stroke="none"
+		stroke-width="0"
+		fill="#f5f5f5"
+		d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"
+		></path>
+	</svg>
+	<i class='bx bx-shield-quarter'></i>
+</div>
+<h4><a href="">Legalitas</a></h4>
+<p>
+	Kami memiliki keunggulan dari sisi legalitas yang secara sah diakhui oleh <strong>AP2LI</strong>.
+</p>
+
+<nuxt-link to="/legalitas" class="btn btn-primary mt-3">Lihat Legalitas</nuxt-link>
+
+</div>
+</div>
 
 <div
 class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
@@ -386,11 +417,11 @@ data-aos-delay="300"
 
 
 <div
-class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
+class="col-lg-12 col-md-12 d-flex align-items-stretch mt-4"
 data-aos="zoom-in"
 data-aos-delay="300"
 >
-<div class="icon-box iconbox-blue">
+<div class="icon-box iconbox-red">
 	<div class="icon">
 		<svg
 		width="100"
@@ -412,7 +443,7 @@ data-aos-delay="300"
 	Halo evousher kami memiliki pusat bantuan sebagai langkah panduan anda dalam menggunakan atau mengakses website official evoush ini berikut ada beberapa list yang bisa anda ikuti agar fokus anda dalam menggunakan website official evoush ini semakin asik.
 </p>
 
-<nuxt-link to="/pusat-bantuan" class="btn btn-primary mt-3">Privacy Policy</nuxt-link>
+<nuxt-link to="/pusat-bantuan" class="btn btn-primary mt-3">Pusat Bantuan</nuxt-link>
 
 </div>
 </div>

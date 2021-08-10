@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { Bar, Doughnut, Line, Pie } from 'vue-chartjs'
+import { Bar, Doughnut, Line, Pie, } from 'vue-chartjs'
 
 const registerComponent = function(name, originalComponent) {
     Vue.component(
@@ -9,7 +9,7 @@ const registerComponent = function(name, originalComponent) {
             props: ['data', 'options'],
             mounted() {
                 this.renderChart(this.data, this.options)
-            }
+            },
         }
     )
 }

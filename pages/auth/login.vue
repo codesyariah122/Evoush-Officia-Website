@@ -9,8 +9,8 @@
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="col-md-6 col-xs-12 col-sm-12">
+			<div class="row justify-content-center">
+				<div class="col-lg-12 col-xs-12 col-sm-12">
 					<div class="card">
 						<form class="box" @submit.prevent="login">
 						
@@ -151,7 +151,7 @@
     background: linear-gradient(to right, #b92b27, #1565c0)
 }*/
 .card {
-	margin-bottom: 20px;
+	margin-bottom: 2px;
 	border: none
 }
 
@@ -159,10 +159,10 @@
 	width: 300px;
 	padding: 30px;
 	position: absolute;
-	top: 30%;
-	left: 7%;
+	/*top: 70%!important;*/
+	margin-top: -.5rem!important;
+	left: 4%;
 	background: #191919;
-	;
 	text-align: center;
 	transition: 0.25s;
 	margin-top: 100px;
@@ -183,7 +183,7 @@
 	background: none;
 	display: block;
 	margin: 20px auto;
-	text-align: center;
+	text-align: left;
 	border: 2px solid #3498db;
 	padding: 10px 10px;
 	width: 250px;
@@ -201,7 +201,7 @@
 
 .box input[type="text"]:focus,
 .box input[type="password"]:focus {
-	width: 300px;
+	width: 250px;
 	border-color: #2ecc71
 }
 
@@ -212,12 +212,13 @@
 	margin: 20px auto;
 	text-align: center;
 	border: 2px solid #2ecc71;
-	padding: 14px 40px;
+	padding: 15px 40px;
 	outline: none;
 	color: white;
 	border-radius: 24px;
 	transition: 0.25s;
-	cursor: pointer
+	cursor: pointer;
+	width:200px;
 }
 
 .box input[type="submit"]:hover {
@@ -305,8 +306,8 @@ a.socialIcon:hover,
 	position: relative;
 	margin: 0 auto 0 auto;
 	border-radius: 50%;
-	text-align: center;
-	width: 50px;
+	text-align: left;
+	width: 20px;
 	height: 50px;
 	font-size: 20px
 }
@@ -333,12 +334,12 @@ a.socialIcon:hover,
 @media (min-width: 992px) { 
 	.box {
 		width: 500px;
-		padding: 40px;
+		padding: 100px;
 		position: absolute;
-		top: 30%;
-		left: 50%;
+		/*top: 30%;*/
+		margin-top: 3rem!important;
+		left: 30%;
 		background: #191919;
-		;
 		text-align: center;
 		transition: 0.25s;
 		margin-top: 100px;
