@@ -265,7 +265,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   /*height: 150vh;*/
   min-height: 100vh;
-  background: url("https://raw.githubusercontent.com/evoush12/bahan_evoush/main/assets/img/bg/new_bg2.jpg") top right no-repeat;
+  background: url("https://raw.githubusercontent.com/evoush12/bahan_evoush/main/assets/img/bg/ind.jpg") top right no-repeat;
   background-size: cover;
   position: relative;
   /*margin-top: -2rem;*/
@@ -277,7 +277,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 992px) {
   #hero {
+    width: 100%;
+  /*height: 150vh;*/
+  min-height: 100vh;
+    background: url("https://raw.githubusercontent.com/evoush12/bahan_evoush/main/assets/img/bg/new_bg2.jpg") top right no-repeat;
     padding-left: 160px;
+    background-size: cover;
+  position: relative;
   }
 }
 
