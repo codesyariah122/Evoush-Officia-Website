@@ -333,16 +333,84 @@ a.socialIcon:hover,
 
 @media (min-width: 992px) { 
 	.box {
-		width: 500px;
+		width: 600px;
 		padding: 100px;
 		position: absolute;
 		/*top: 30%;*/
 		margin-top: 3rem!important;
-		left: 30%;
+		left: 25%;
 		background: #191919;
 		text-align: center;
 		transition: 0.25s;
 		margin-top: 100px;
 	}
+
+	.box h5{
+		font-size: 25px;
+	}
+
+	.box p{
+		font-size: 18px;
+	}
+
+	.box input[type="text"],
+	.box input[type="password"] {
+		border: 0;
+		background: none;
+		display: block;
+		margin: 20px auto;
+		text-align: left;
+		border: 2px solid #3498db;
+		padding: 15px 10px;
+		width: 350px;
+		outline: none;
+		color: white;
+		border-radius: 24px;
+		transition: 0.25s
+	}
+
+	.box h1 {
+		color: white;
+		text-transform: uppercase;
+		font-weight: 500
+	}
+
+	.box input[type="text"]:focus,
+	.box input[type="password"]:focus {
+		width: 250px;
+		border-color: #2ecc71
+	}
+
+	.box input[type="submit"] {
+		border: 0;
+		background: none;
+		display: block;
+		margin: 20px auto;
+		text-align: center;
+		border: 2px solid #2ecc71;
+		padding: 15px 35px;
+		outline: none;
+		color: white;
+		border-radius: 24px;
+		transition: 0.25s;
+		cursor: pointer;
+		width:350px;
+	}
+
+	.box input[type="submit"]:hover {
+		background: #2ecc71
+	}
+
+	.social-circle li a {
+		display: inline-block;
+		position: relative;
+		margin: 0 auto 0 auto;
+		border-radius: 50%;
+		text-align: left;
+		width: 50px;
+		height: 50px;
+		font-size: 35px
+	}
+
 }
 </style>

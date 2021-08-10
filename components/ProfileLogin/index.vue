@@ -364,6 +364,7 @@
 
 		                    //remove localStorage
 		                    localStorage.removeItem('token')
+		                    localStorage.removeItem('username')
 
 		                    //redirect ke halaman login
 		                    return this.$router.push({
