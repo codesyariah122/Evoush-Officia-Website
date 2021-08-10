@@ -15,16 +15,25 @@
 			<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 				<div class="px-4 py-3">
 					<center>
+						<!-- <pre>
+							{{member}}
+						</pre> -->
+
+
+
 						<div class="p-4 rounded shadow-lg">
 							<p class="font-italic mb-0"><strong>Username : {{member.username}}</strong></p>
 							<p class="font-italic mb-0"><strong>Status : </strong> <span class="badge badge-success">{{member.status}}</span></p>
+
+							<p class="mt-3 mb-3"><span :class="`${member.achievements.includes('STAR SAPHIRE') ? 'badge badge-primary' : 'badge badge-success'}`"><i class='bx bx-medal bx-lg'></i> {{(member.achievements.includes("STAR SAPHIRE")) ? "STAR SAPHIRE" : "SAPHIRE"}}</span></p>
+
 							<p class="font-italic mb-0"><strong>Join : {{formatDate(member.created_at)}}</strong></p>
 							<br>
 							<div v-if="member.quotes">
 								<blockquote class="blockquote-footer mt-3">
 									{{member.quotes}}
-									<br>
-									Quotes by : {{member.username}}
+									<br><br>
+									<strong>Quotes by : <span style="text-transform: capitalize;">{{member.name}}</span></strong>
 								</blockquote>
 							</div>
 							<div v-else>

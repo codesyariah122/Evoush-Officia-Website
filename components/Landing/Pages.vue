@@ -342,7 +342,7 @@ data-aos-delay="300"
 </div>
 <h4><a href="">Legalitas</a></h4>
 <p>
-	Kami memiliki keunggulan dari sisi legalitas yang secara sah diakhui oleh <strong>AP2LI</strong>.
+	PT. Pineleng Indah Cemerlang dengan merk dagang evoush merupakan sebuah merk dagang yang telah resmi tergabung dalam keanggotaan <strong>AP2LI</strong>, sebagai landasan hukum yang menjadi legalitas kuat bagi keberlangsungan bisnis anda di evoush.
 </p>
 
 <nuxt-link to="/legalitas" class="btn btn-primary mt-3">Lihat Legalitas</nuxt-link>

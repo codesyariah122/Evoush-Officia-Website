@@ -30,7 +30,7 @@
 								<ul>
 									<li><strong>Username : {{member.username}}</strong></li>
 									<li><strong>Status : </strong> <span class="badge badge-success">Active</span></li>
-									<li><span class="badge badge-info"><i class='bx bxs-trophy bx-lg text-white'></i> {{member.achievements.includes('STAR SAPHIRE') ? 'STAR SAPHIRE' : 'SAPHIRE'}}</span></li>
+									<li class="mt-3"><span :class="`${member.achievements.includes('STAR SAPHIRE') ? 'badge badge-primary' : 'badge badge-success'}`"><i :class="`${member.achievements.includes('STAR SAPHIRE') ? 'bx bxs-trophy bx-lg text-white' : 'bx bxs-medal bx-lg text-white'}`"></i> {{member.achievements.includes('STAR SAPHIRE') ? 'STAR SAPHIRE' : 'SAPHIRE'}}</span></li>
 									<li class="mt-5 mb-5">
 										<strong>Media Social : </strong><br>
 										<div class="social-links">
