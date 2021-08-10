@@ -20,7 +20,7 @@
 					<!-- You can delete the links only if you purchased the pro version. -->
 					<!-- Licensing information: [license-url] -->
 					<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
-					Designed by <a href="https://puji-app.herokuapp.com/">evoush webdeveloper team</a>
+					Hak cipta di lindungi <a href="https://evoush.com/privacy-policy">Oleh PT. Pineleng Indah Cemerlang</a>
 				</div>
 			</div>
 		</footer><!-- End Footer -->

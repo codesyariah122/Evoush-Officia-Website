@@ -253,7 +253,7 @@ data-aos-delay="300"
 <p>
 	Halo evousher anda bisa update event-event terbaru evoush atau event yang akan berlangsung di hari mendatang, dan dihalaman events ini semua terdokumentasi menjadi sebuah cerita tentang event yang digelar dengan meriah oleh evoush.
 </p>
-<nuxt-link to="/salaam" class="btn btn-primary mt-3">Kunjungi Event</nuxt-link>
+<nuxt-link to="/event" class="btn btn-primary mt-3">Kunjungi Event</nuxt-link>
 </div>
 </div>
 

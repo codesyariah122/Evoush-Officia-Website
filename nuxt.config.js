@@ -110,8 +110,11 @@ export default {
       manifest: {
         name: 'Evoush::Official',
         short_name: 'Evoush::Indonesia',
+        start_url: '/',
         lang: 'en',
         display: 'standalone',
+        theme_color: '#a2466c',
+        background_color: '#f7f0eb',
         icons: [
           {
             src:'/icon.png',
