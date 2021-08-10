@@ -46,6 +46,10 @@ export default {
       referrerpolicy: 'origin'
     },
     {
+      src: 'https://cdn.jsdelivr.net/npm/chart.js@2.8.0',
+      type: 'text/javascript'
+    },
+    {
       src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-609818ffd946e881',
       type: 'text/javascript'
     },
@@ -184,6 +188,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    {src: '~/plugins/plugins_vue-chartjs', ssr: false},
     {src: '~/plugins/vue-social-sharing'},
     {src: '~/plugins/bootstrap-vue'},
     {src: '~/plugins/disqus'},

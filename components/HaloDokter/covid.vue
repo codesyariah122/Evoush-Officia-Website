@@ -23,8 +23,16 @@
 							<label for="exampleFormControlSelect1">Pilih Provinsi</label>
 							<select class="form-control" id="exampleFormControlSelect1" @change="changeProvince">
 								<option value="">-Pilih Province-</option>
-								<option v-for="province in provinces" v-model="province.nama" >{{province.nama}}</option>
+								<option v-for="(item, index) in provinces" v-bind:value="index" >{{item.provinsi}}</option>
 							</select>
+						</div>
+
+
+						<div class="col-lg-12 col-xs-12 col-sm-12 mt-5 mb-3">
+							<BarChart :result="result"/>
+							<pre>
+								{{result}}
+							</pre>
 						</div>
 					</div>
 				</div>
@@ -35,12 +43,20 @@
 </template>
 
 <script>
+	import BarChart from '@/components/HaloDokter/BarChart'
+
 	export default{
+		components: {
+			BarChart
+		},
 		data(){
 			return{
 				ip: '',
 				country_name: '',
-				provinces:[]
+				provinces:[],
+				result: {
+					
+				}
 			}
 		},
 
@@ -69,25 +85,29 @@
 				.catch(err => console.log(err.message))
 			},
 			getProvinsi(){
-				this.$axios.get('https://dev.farizdotid.com/api/daerahindonesia/provinsi')
+				// this.$axios.get('https://dev.farizdotid.com/api/daerahindonesia/provinsi')
+				// .then(res => {
+				// 	// console.log(res.data.provinsi)
+				// 	this.provinces = res.data.provinsi
+				// })
+				this.$axios.get('https://indonesia-covid-19.mathdro.id/api/provinsi/',  { crossdomain: true })
 				.then(res => {
-					// console.log(res.data.provinsi)
-					this.provinces = res.data.provinsi
+					const results = res.data.data
+					const objData = Object.keys(results).map((key) => results[key])
+					this.provinces = objData
 				})
+				.catch(err=>err.response)
 			},
 			changeProvince(event){
-				const provinsi = event.target.value
-				const config = {
-					headers: {
-						'Access-Control-Allow-Origin': '*',
-					},
-					proxy: {
-						host: 'cors-anywhere.herokuapp.com'
-					}
-				};
-				this.$axios.get('https://api.kawalcorona.com/indonesia/provinsi',  { crossdomain: true })
+				let provinsi = event.target.value
+				console.log(provinsi)
+				
+				this.$axios.get('https://indonesia-covid-19.mathdro.id/api/provinsi/',  { crossdomain: true })
 				.then(res => {
-					console.log(res)
+					// console.log(res.data.data)
+					const results = res.data.data
+					this.result = results[provinsi]
+
 				})
 				.catch(err => console.log(err.response))
 			}
