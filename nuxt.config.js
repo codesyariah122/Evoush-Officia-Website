@@ -212,6 +212,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxt/content',
     '@nuxtjs/axios',
+    '@nuxtjs/onesignal',
     '@nuxtjs/pwa',
     ['@nuxtjs/google-tag-manager', { id: 'GTM-MGR7PP9' }],
     ['@nuxtjs/google-adsense', 
@@ -219,6 +220,16 @@ export default {
     ],
   ],
 
+  
+  oneSignal: {
+    init: {
+      appId: 'e8eb39f3-f332-437f-aa61-6de803147842',
+      allowLocalhostAsSecureOrigin: true,
+      welcomeNotification: {
+        disable: true
+      }
+    }
+  },
 
   // markdown content
   content: {

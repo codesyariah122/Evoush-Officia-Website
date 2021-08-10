@@ -7,7 +7,7 @@
 					<h2>Leaders</h2>
 					<p>
 						Halo <span style="color:#ff3b40;">evousher</span> <strong class="text-primary">{{city}}</strong> <br> 
-						Berikut kami perkenalkan leader-leader terbaik <span style="color:#ff3b40;">evoush</span>. Beliau-beliau telah melewati pencapaian melalui kegigihan dan kerja keras tangguh yang tiada sia-sia <span style="color:#ff3b40;">evousher</span>. Kami member tempat terhormat pada para leader dan berikut persembahan kami yaitu web support yang kami dedikasikan guna meningkatkan branding secara personal bagi leader-leader dan member-member evoush lain dan calon member yang akan join, dan kami akan selalu terus meningkatkan kualitas terbaik kami.
+						Berikut kami perkenalkan leader-leader terbaik <span style="color:#ff3b40;">evoush</span>. Beliau-beliau telah melewati pencapaian melalui kegigihan dan kerja keras tangguh yang tiada sia-sia, <span style="color:#ff3b40;">evousher</span>. Kami memberikan tempat terhormat pada para leader dan berikut persembahan kami yaitu web support yang kami dedikasikan guna meningkatkan branding secara personal bagi leader-leader dan member-member evoush lain dan calon member yang akan join, dan kami akan selalu terus meningkatkan kualitas terbaik kami.
 					</p>
 				</div>
 
