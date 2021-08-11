@@ -3,18 +3,18 @@
 		<div class="container rounded bg-white mt-5">
 			<div class="row edit-form">
 				<div class="col-md-4 border-right">
-					<div v-for="edit in edits" class="d-flex flex-column align-items-center text-center p-3 py-5">
-						<div v-if="edit.avatar">
-							<img class="rounded-circle mt-5" :src="`https://app.evoush.com/storage/${edit.avatar}`" width="90">						
+					<div class="d-flex flex-column align-items-center text-center p-3 py-5">
+						<div v-if="edits[0].avatar">
+							<img class="rounded-circle mt-5" :src="`https://app.evoush.com/storage/${edits[0].avatar}`" width="90">						
 						</div>
-						<span class="font-weight-bold" style="text-transform: capitalize;">{{edit.name}}</span>
-						<span>{{edit.email}}</span>
-						<span>{{edit.city}} | {{edit.province}}</span>
+						<span class="font-weight-bold" style="text-transform: capitalize;">{{edits[0].name}}</span>
+						<span>{{edits[0].email}}</span>
+						<span>{{edits[0].city}} | {{edits[0].province}}</span>
 					</div>
 					<div v-if="showSuccess">
 						<div v-if="message" class="col-md-8 ml-5">
 							<div class="alert alert-success alert-dismissible fade show" role="alert">
-								<strong>Halo {{fields.username}}!</strong> {{message}} <strong class="text-primary">Successfully</strong>.
+								<strong>Halo {{edits[0].username}}!</strong> {{message}} <strong class="text-primary">Successfully</strong>.
 								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
@@ -195,8 +195,10 @@
 					city: document.querySelector('#city').value
 				}
 
+
+
 				// console.log(data.province)
-				console.log(this.fields.province)
+				// console.log(this.fields.province)
 				this.$axios.put(`https://app.evoush.com/api/member/update/${this.fields.id}`, {
 					id: this.fields.id,
 					name: data.name,
@@ -216,6 +218,13 @@
 				.then(res => {
 					if(res.data.success){
 						this.message = res.data.message
+						const result_data = res.data.data
+						console.log(result_data)
+						// this.edits[0].name = result_data.name
+						// this.edits[0].email = result_data.email
+						this.edits[0].city = result_data.city
+						this.edits[0].province = result_data.province
+			
 						this.showSuccess = true
 						this.$swal({
 							position: 'top-end',
