@@ -74,14 +74,18 @@
 											{{member.city}} | {{member.province}}
 										</p>
 										
-										<div v-if="editForm" class="mt-2">
-											<i @click="closeForm" class='bx bx-window-close lg mt-2' style="font-size: 30px; cursor: pointer;"></i>
-											<form width="200px" name="myForm" method="post" @submit.prevent="updateAvatar" enctype="multipart/form-data">
-												<input type="hidden" name="id" id="id_member" :value="member.id">
-												<label for="file">Pilih foto yang ingin di upload, kemudian klik tombol Upload</label>
-												<input  class="form-control mb-2" type="file" ref="file" id="file" name="avatar" accept="avatar/*" @change="fileAvatar">
-												<button class="btn btn-sm btn-primary">Upload</button>
-											</form>
+										<div v-if="editForm" class="mt-2" style="background-color: #fff;">
+											<div class="container">
+												<i @click="closeForm" class='bx bx-window-close lg mt-2' style="font-size: 30px; cursor: pointer;"></i>
+												<form width="200px" name="myForm" method="post" @submit.prevent="updateAvatar" enctype="multipart/form-data">
+													<input type="hidden" name="id" id="id_member" :value="member.id">
+													<label for="file">Pilih foto yang ingin di upload, kemudian klik tombol Upload</label>
+													<input  class="form-control mb-2" type="file" ref="file" id="file" name="avatar" accept="avatar/*" @change="fileAvatar">
+													<button class="btn btn-sm btn-primary mt-2">Upload</button>
+													<button @click="closeForm" class="btn btn-sm btn-secondary mt-2">Cancel</button>
+													<br><br>
+												</form>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -368,7 +372,10 @@
 
 		                    //redirect ke halaman login
 		                    return this.$router.push({
-		                    	path: '/auth/login'
+		                    	name: 'auth-login', 
+		                    	params: {
+		                    		username: this.user.username
+		                    	}
 		                    })
 		                }
 		            })

@@ -1,4 +1,4 @@
-export default async (context) => {
+export default async ({context, $swal}) => {
   const workbox = await window.$workbox;
 
   if (!workbox) {
@@ -12,6 +12,13 @@ export default async (context) => {
       return;
     }
 
+       $swal({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Evoush::Official New Updated Build',
+        showConfirmButton: false,
+        timer: 1500
+      })
     // alert("Anda mendapat pembaruan dari evoush official")
     console.debug('There is an update for the PWA, reloading...');
     window.location.reload();

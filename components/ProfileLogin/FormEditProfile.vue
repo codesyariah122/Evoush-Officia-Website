@@ -195,8 +195,8 @@
 					city: document.querySelector('#city').value
 				}
 
-				// console.log(data.avatar)
-
+				// console.log(data.province)
+				console.log(this.fields.province)
 				this.$axios.put(`https://app.evoush.com/api/member/update/${this.fields.id}`, {
 					id: this.fields.id,
 					name: data.name,
@@ -245,12 +245,14 @@
 					// console.log(res)
 					this.provinces = res.data.provinsi
 				})
+				.catch(err => console.log(err.response))
 			},
 			getCity(e){
 				const id = e.target.value
 				this.$axios.get(`https://dev.farizdotid.com/api/daerahindonesia/kota?id_provinsi=${id}`)
 				.then(res => {
-					console.log(res)
+					this.fields.province = id
+					// console.log(this.fields.province)
 					this.pilih = true
 					this.citys = res.data.kota_kabupaten
 					// console.log(this.citys)

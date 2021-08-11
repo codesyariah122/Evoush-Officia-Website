@@ -54,7 +54,7 @@
 								<nuxt-link :to="{name:'profile-username', params: {username: user.username}}" class="btn btn-success">My Profile</nuxt-link>
 							</li>
 							<li v-else class="mb-2 mt-2">
-								<nuxt-link to="/auth/login" class="btn btn-primary">Login</nuxt-link>
+								<nuxt-link :to="{name: 'auth-login', params: {username: member.username}}"  class="btn btn-primary">Login</nuxt-link>
 							</li>
 						</ul>
 					</div>

@@ -40,6 +40,14 @@ export default {
       async: 'true',
       id: 'pixel-script-poptin'
     },
+    // {
+    //   src: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js',
+    //   async: '',
+    // },
+    {
+      src: 'https://www.openstreetmap.org/assets/leaflet-src.js.map',
+      type: 'text/javascript'
+    },
     {
       src: 'https://cdn.tiny.cloud/1/36xbwrnfekuspwhfv02z1kuwy3sz4nbehpqkb3x7bh8tek86/tinymce/5/tinymce.min.js',
       type: 'text/javascript',

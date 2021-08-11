@@ -12,6 +12,11 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-12 col-xs-12 col-sm-12">
 					<div class="card">
+
+						<!-- <pre>
+						{{username}}
+						</pre> -->
+
 						<form class="box" @submit.prevent="login">
 						
 						<Logo/>
@@ -60,6 +65,14 @@
 			ColorModePicker,
 			Logo
 		},
+
+		async asyncData({params}){
+			const username = params.username
+			return {
+				username
+			}
+		},
+
 		data(){
 			return{
 				user: {

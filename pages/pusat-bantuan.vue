@@ -14,21 +14,16 @@
 					<h2 class="portfolio-title">Pusat Bantuan</h2>
 				</div>
 				
-				<p>Halo, evousher <span class="text-primary">{{city}}</span>, Website official evoush telah diluncurkan sebagai website official dan website company profile dan juga web support atau web replika yang bisa <strong>evousher</strong> gunakan sebagai media branding, sebagai fasilitas bagi para leader-leader evoush juga tentunya untuk menaikan branding member <strong>evoush</strong>. <strong class="text-primary">PT. Pineleng Indah Cemerlang</strong> dengan Merk dagang <strong>evoush</strong>, akan selalu memberikan pelayanan terbaik bagi anda semua. Dan berikut ini dokumentasi dan aturan dalam penggunaan website official evoush dan web support, web replika leader evoush.</p>  
+				<p>Halo, evousher <span class="text-primary">{{city}}</span>, Website official evoush telah diluncurkan sebagai website official dan website company profile dan juga menjadi web support atau web replika yang merupakan bagian support dan juga media branding dari perusahaan kami untuk kalian para <strong>evousher</strong> yang mempunyai mimpi besar dan semangat gigih dalam mewujudkan mimpi besarnya, sebagai fasilitas bagi para leader-leader evoush juga tentunya untuk menaikan branding membership <strong>evoush</strong>. <strong class="text-primary">PT. Pineleng Indah Cemerlang</strong> dengan Merk dagang <strong>evoush</strong>, akan selalu memberikan pelayanan terbaik bagi anda semua. Dan berikut ini dokumentasi dan aturan dalam penggunaan website official evoush dan web support, web replika leader evoush.</p>  
 
 				<div class="all-questions">
 
 					<h3 id="one">Homepage Website Official</h3>
 
 					<p>
-						Halaman homepage merupakan halaman awal dari website official evoush ini sendiri. Sebagai halaman landing yang menjadi navigasi utama untuk mengakses content lainnya di dalam setiap halaman di website official evoush.
-
+						Halaman homepage merupakan halaman awal dari website official evoush ini sendiri. Sebagai halaman landing yang menjadi navigasi utama untuk mengakses content lainnya di dalam setiap halaman di website official evoush.	
 						<ul>
-							<li>Navigasi scrolling <br>
-								<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/content-tos/img/1.jpg" class="img-fluid img-responsive"> <br><br>
-								Navigasi bisa di gunakan untuk meluncur ke content lainnya dalam halaman homepage evoush tersebut, navigasi diatas adalah navigasi di device desktop. dan berikut navigasi dalam tampilan mobile device <br><br>
-								<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/content-tos/img/2.jpg" class="img-fluid img-responsive">
-							</li>
+							<li v-for="home in homes" :key="home.id"><img :src="home.img" class="img-fluid img-responsive"></li>
 						</ul>
 
 					</p>  
@@ -78,6 +73,14 @@
 
 <script>
 	export default {
-		layout: 'pages'
+		layout: 'pages',
+		data(){
+			return {
+				homes: [
+					{id: 1, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/content-tos/img/1.jpg'},
+					{id: 2, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/content-tos/img/2.jpg'}
+				]
+			}
+		}
 	}
 </script>
