@@ -44,6 +44,11 @@ export default {
     //   src: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js',
     //   async: '',
     // },
+    // {
+    //   src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+    //   async: true,
+    //   data-ad-client: 'ca-pub-8390872078103831'
+    // },
     {
       src: 'https://www.openstreetmap.org/assets/leaflet-src.js.map',
       type: 'text/javascript'

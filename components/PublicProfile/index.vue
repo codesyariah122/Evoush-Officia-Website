@@ -21,6 +21,9 @@
 								<div class="col-lg-8 col-xs-6 col-sm-6">
 									<div class="media-body">
 										<h4 style="text-transform: capitalize;">{{member.name}}</h4>
+
+										<p class="mt-2 mb-3"><span :class="`${member.achievements.includes('STAR SAPHIRE') ? 'badge badge-primary' : 'badge badge-success'}`"><i class='bx bx-medal bx-lg'></i> {{(member.achievements.includes("STAR SAPHIRE")) ? "STAR SAPHIRE" : "SAPHIRE"}}</span></p>
+
 										<p class="small"> <i class='bx bx-map'></i>
 											{{member.city}} | {{member.province}}
 										</p>
@@ -59,7 +62,13 @@
 						</ul>
 					</div>
 
-
+					<div class="col-lg-12 col-xs-12 col-sm-12 mb-5 mt-3">
+						<center>
+							<span class="blockquote-footer text-primary">
+								! Klik atau tap pada bagian icon tabs di bawah untuk melihat informasi selanjutnya <br>atau informasi detail lainnya.
+							</span>
+						</center>
+					</div>
 					<ProfileTabs :member="member" :samples="samples" :user="user"/>
 
 				</div>

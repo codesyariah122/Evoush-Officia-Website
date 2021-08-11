@@ -25,7 +25,7 @@
 							<p class="font-italic mb-0"><strong>Username : {{member.username}}</strong></p>
 							<p class="font-italic mb-0"><strong>Status : </strong> <span class="badge badge-success">{{member.status}}</span></p>
 
-							<p class="mt-3 mb-3"><span :class="`${member.achievements.includes('STAR SAPHIRE') ? 'badge badge-primary' : 'badge badge-success'}`"><i class='bx bx-medal bx-lg'></i> {{(member.achievements.includes("STAR SAPHIRE")) ? "STAR SAPHIRE" : "SAPHIRE"}}</span></p>
+							
 
 							<p class="font-italic mb-0"><strong>Join : {{formatDate(member.created_at)}}</strong></p>
 							<br>
@@ -117,7 +117,7 @@
 											</div> -->
 											
 											<div class="col-lg-12 col-xs-12 col-sm-12">
-												<p><span class="text-primary">Tertarik untuk mempunyai web replika ? seperti</span> {{member.username}} <br><br>Anda bisa langsung join menjadi bagian dari member sponsor {{member.username}}, langsung klik atau tap tombol <span class="text-danger">Join</span> Di bawah.<br><br></p>
+												<p><span class="text-primary">Tertarik untuk mempunyai web replika ? seperti</span> <strong>{{member.username}}</strong> <br><br>Anda bisa langsung join menjadi bagian dari member sponsor <strong>{{member.username}}</strong>, langsung klik atau tap tombol <span class="text-danger">Join</span> Di bawah.<br></p>
 											</div>
 										</center>
 										<div class="row justify-content-center">
