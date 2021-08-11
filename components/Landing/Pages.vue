@@ -42,7 +42,7 @@
 			</div>
 
 			<div
-			class="col-lg-4 col-md-6 d-flex align-items-stretch"
+			class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
 			data-aos="zoom-in"
 			data-aos-delay="100"
 			>

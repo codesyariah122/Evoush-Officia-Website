@@ -49,10 +49,10 @@ export default {
       src: 'https://cdn.jsdelivr.net/npm/chart.js@2.8.0',
       type: 'text/javascript'
     },
-    {
-      src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-609818ffd946e881',
-      type: 'text/javascript'
-    },
+    // {
+    //   src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-609818ffd946e881',
+    //   type: 'text/javascript'
+    // },
     {
       src: '/assets/vendor/jquery/jquery.min.js',
       type: 'text/javascript'
@@ -193,7 +193,7 @@ export default {
     {src: '~/plugins/vue-social-sharing'},
     {src: '~/plugins/bootstrap-vue'},
     {src: '~/plugins/disqus'},
-    { src: '~/plugins/tawk', ssr: false },
+    // { src: '~/plugins/tawk', ssr: false },
     { src: '~/plugins/sweetalert2', ssr: false},
     { src: '~/plugins/axios', ssr: false}
   ],
