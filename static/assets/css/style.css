@@ -269,6 +269,9 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   position: relative;
   /*margin-top: -2rem;*/
+  /*background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;*/
 }
 
 #hero .content-hero{

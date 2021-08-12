@@ -27,9 +27,12 @@
 								
 								<img :src="management.img" :alt="management.name" class="profile profile-overlay"/>
 								
-								<div class="overlay">
+								<div class="overlay" :style="`background-color:#fff; background-image: url(${management.popup}); background-repeat:no-repeat;
+								background-size:contain;
+								background-position:center;`">
 									<div class="text">
-										<img :src="management.popup" class="img-fluid img-responsive">
+										<!-- <img :src="management.popup" class="img-fluid img-responsive"> -->
+										
 									</div>
 								</div>
 								<!-- <div class="middle">
@@ -47,7 +50,7 @@
 						<!-- Modal -->
 						<b-modal :id="`modal-${management.id}`" size="xl" centered hideFooter body-class="p-0">
 							<div class="container">
-								<img :src="management.popup" class="img-size">
+								<img :src="management.popup" class="img-size img-fluid img-responsive">
 							</div>
 						</b-modal>
 
@@ -86,7 +89,7 @@
 	width: 100%;
 	color: #ffffff;
 	text-align: center;
-	height:50vh;
+	height:35vh;
 	border:none;
 }
 .profile-card-1 .background {
@@ -107,13 +110,13 @@
 	top: 50%;
 }
 .profile-card-1 .profile {
-	/*border-radius: 50%;*/
+	border-radius: 7%;
 	position: absolute;
-	bottom: 10%;
+	bottom: 3%;
 	left: 50%;
 	/*max-width: 100px;*/
-	width: 190px;
-	height: 290px;
+	width: 150px;
+	height: 270px;
 	opacity: 1;
 	box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
 	border: 2px solid rgba(255, 255, 255, 1);
@@ -123,31 +126,31 @@
 .profile-card-1 h2 {
 	margin: 0 0 1px;
 	font-weight: 600;
-	font-size:13px;
+	font-size:10px;
 	color:#fff!important;
-	margin-top:2rem;
+	margin-top:3rem;
 }
 .profile-card-1 h2 small {
 	display: block;
-	font-size: 12px;
+	font-size: 8px;
 	margin-top:10px;
 }
 .profile-card-1 .social-i {
 	display: inline-block;
-	font-size: 16px;
+	font-size: 14px;
 	color: #ffffff;
 	text-align: center;
 	border: 1px solid #fff;
-	width: 30px;
-	height: 30px;
-	line-height: 30px;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
 	border-radius: 50%;
 	margin:0 5px;
 }
 .profile-card-1 .icon-block{
 	float:left;
 	width:100%;
-	margin-top:15px;
+	margin-top:11px;
 }
 .profile-card-1 .icon-block a{
 	text-decoration:none;
@@ -157,13 +160,10 @@
 	color:#2E3434;
 	text-decoration:none;
 }
-
 .img-size{
 	height: 300px;
 	width: 350px;
 }
-
-
 .overlay {
   position: absolute;
   bottom: 100%;
@@ -175,12 +175,10 @@
   height:0;
   transition: .5s ease;
 }
-
 .container:hover .overlay {
   bottom: 0;
   height: 100%;
 }
-
 .text {
   color: white;
   font-size: 20px;
@@ -192,12 +190,10 @@
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
 /*.container {
   position: relative;
   width: 50%;
 }*/
-
 /*.profile-overlay {
   opacity: 1;
   display: block;
@@ -217,15 +213,12 @@
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
-
 .container:hover .profile-overlay {
   opacity: 0.3;
 }
-
 .container:hover .middle {
   opacity: 1;
 }
-
 .text {
   background-color: #04AA6D;
   color: white;
@@ -267,7 +260,29 @@
 		color:#fff!important;
 		margin-top:9rem;
 	}
+	.profile-card-1 h2 small {
+		display: block;
+		font-size: 21px;
+		margin-top:7px;
+	}
 
+	.profile-card-1 .social-i {
+		display: inline-block;
+		font-size: 14px!important;
+		color: #ffffff;
+		text-align: center;
+		border: 1px solid #fff;
+		width: 25px!important;
+		height: 25px!important;
+		line-height: 25px!important;
+		border-radius: 50%;
+		margin:0 5px;
+	}
+	.profile-card-1 .icon-block{
+		float:left;
+		width:100%;
+		margin-top:15px!important;
+	}
 	/*.middle {
 		transition: .5s ease;
 		opacity: 0;

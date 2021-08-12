@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row justify-content-end mt-3 mb-3">
 				<div class="col-lg-1 col-xs-6 col-sm-6">
-					<nuxt-link class="btn btn-danger ml-3 mt-3" to="/#pages"><i class='bx bx-arrow-back'></i>Kembali</nuxt-link>
+					<nuxt-link class="btn btn-danger ml-3 mt-3" to="/#members"><i class='bx bx-arrow-back'></i>Kembali</nuxt-link>
 				</div>
 			</div>	
 
@@ -18,7 +18,7 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-12">
 					<div class="row">
-						<div v-for="founder in founders" class="col-md-12 col-xs-12 col-sm-12 mt-3 mb-5" :key="founder.id">
+						<div data-aos="fade-up" v-for="founder in founders" class="col-md-12 col-xs-12 col-sm-12 mt-3 mb-5" :key="founder.id">
 							<div class="card profile-card-2">
 								<div class="card-img-block">
 									<img class="img-responsive img-fluid" :src="founder.cover ? founder.cover : 'https://mediatrack.sg/wp-content/uploads/2021/02/digital-transformation-banner-blog.png'" alt="Card image cap">
@@ -33,7 +33,7 @@
 											<center>											
 												<h5 class="card-title ml-3">{{founder.name}}</h5>
 												<p><strong>Username : {{founder.username}}</strong></p>
-												<p class="badge badge-primary text-white"> {{founder.achievements.includes('STAR SAPHIRE') ? 'FOUNDER' : ''}}</p>
+												<p class="badge badge-primary text-white"> {{(founder.achievements.includes('STAR SAPHIRE') || founder.achievements.includes('SAPHIRE')) ? 'FOUNDER' : ''}}</p>
 
 												<div class="mt-2 mb-3">
 													<nuxt-link :to="{name:'member-username', params: {username: founder.username}}" class="btn btn-danger btn-sm">Lihat Profile</nuxt-link>
@@ -44,14 +44,14 @@
 												<blockquote class="blockquote-footer" v-else>
 													<small class="text-primary">{{founder.username}}, <strong>belum menambahkan quotes</strong></small>
 												</blockquote>
-												<div class="social-links">
-													<small>Social media & Contact Founder : </small><br>
+												<div class="social-links mt-3 mb-5">
+													<!-- <small>Social media & Contact Founder : </small><br> -->
 
-													<a href="" target="_blank" class="whatsapp"><i class='bx bxl-whatsapp text-success'></i></a>
-													<a href="" target="_blank" class="facebook"><i class="bx bxl-facebook text-primary"></i></a>
-													<a href="" target="_blank" class="instagram"><i class="bx bxl-instagram text-danger"></i></a>
-													<a href="" target="_blank" class="youtube"><i class='bx bxl-youtube text-danger'></i></a>
-													<a href="" target="_blank" class="email"><i class='bx bx-envelope-open text-warning'></i></a>
+													<a :href="`https://wa.me/${founder.phone}?text=Hallo%20${founder.name}%20saya%20tertarik%20untuk%20join%20untuk%20menjadi%20member%20anda, %20bisakah%20saya%20dibantu%20untuk%20join%20member%20baru`" target="_blank" class="whatsapp"><i class='bx bxl-whatsapp text-success'></i></a>
+													<a :href="`https://www.facebook.com/${founder.facebook}`" target="_blank" class="facebook"><i class="bx bxl-facebook text-primary"></i></a>
+													<a :href="`https://www.instagram.com/${founder.instagram}`" target="_blank" class="instagram"><i class="bx bxl-instagram text-danger"></i></a>
+													<a :href="founder.youtube" target="_blank" class="youtube"><i class='bx bxl-youtube text-danger'></i></a>
+													<a :href="`mailto: ${founder.email}`" target="_blank" class="email"><i class='bx bx-envelope-open text-warning'></i></a>
 												</div>
 											</center>
 										</div>

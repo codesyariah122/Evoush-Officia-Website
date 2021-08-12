@@ -24,10 +24,19 @@
 						<div class="p-4 rounded shadow-lg">
 							<p class="font-italic mb-0"><strong>Username : {{member.username}}</strong></p>
 							<p class="font-italic mb-0"><strong>Status : </strong> <span class="badge badge-success">{{member.status}}</span></p>
+							<p class="font-italic mb-0"><strong>Join : {{formatDate(member.created_at)}}</strong></p>
 
 							
+							<div class="social-links mt-3 mb-5">
+								<!-- <small>Social media & Contact Founder : </small><br> -->
 
-							<p class="font-italic mb-0"><strong>Join : {{formatDate(member.created_at)}}</strong></p>
+								<a :href="`https://wa.me/${member.phone}?text=Hallo%20${member.name}%20saya%20tertarik%20untuk%20join%20untuk%20menjadi%20member%20anda, %20bisakah%20saya%20dibantu%20untuk%20join%20member%20baru`" target="_blank" class="whatsapp"><i class='bx bxl-whatsapp text-success'></i></a>
+								<a :href="`https://www.facebook.com/${member.facebook}`" target="_blank" class="facebook"><i class="bx bxl-facebook text-primary"></i></a>
+								<a :href="`https://www.instagram.com/${member.instagram}`" target="_blank" class="instagram"><i class="bx bxl-instagram text-danger"></i></a>
+								<a :href="member.youtube" target="_blank" class="youtube"><i class='bx bxl-youtube text-danger'></i></a>
+								<a :href="`mailto: ${member.email}`" target="_blank" class="email"><i class='bx bx-envelope-open text-warning'></i></a>
+							</div>
+
 							<br>
 							<div v-if="member.quotes">
 								<blockquote class="blockquote-footer mt-3">
@@ -36,6 +45,8 @@
 									<strong>Quotes by : <span style="text-transform: capitalize;">{{member.name}}</span></strong>
 								</blockquote>
 							</div>
+
+
 							<div v-else>
 								<blockquote class="blockquote-footer mt-3">
 									<strong>{{member.username}}, <small class="text-danger">belum menambahkan quotes.</small> </strong>
@@ -123,7 +134,7 @@
 										<div class="row justify-content-center">
 											<div class="col-lg-12 col-xs-12 col-sm-12">
 												<center>
-													<a href="" class="btn btn-outline-success mb-5 mt-5">Join Now</a>
+													<nuxt-link :to="{name: 'member-join-sponsor', params:{sponsor: member.username}}" class="btn btn-outline-success mb-5 mt-5">Join Now</nuxt-link>
 												</center>
 											</div>
 										</div>
