@@ -21,7 +21,7 @@
 								<p :class="(member.achievements.includes('STAR SAPHIRE')) ? `badge badge-primary text-white` : `badge badge-success text-white`"> {{member.achievements.includes('STAR SAPHIRE') ? 'STAR SAPHIRE' : 'SAPHIRE'}} </p>
 
 								<div class="mt-2 mb-3">
-									<nuxt-link to="/" class="btn btn-danger btn-sm">Lihat Profile</nuxt-link>
+									<nuxt-link :to="{name: 'member-username', params:{username: member.username}}" class="btn btn-danger btn-sm">Lihat Profile</nuxt-link>
 								</div>
 
 								<blockquote v-if="member.quotes"  class="card-text blockquote-footer">
