@@ -1415,6 +1415,11 @@
     serve-static "^1.14.1"
     workbox-cdn "^5.1.4"
 
+"@nuxtjs/robots@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/robots/-/robots-2.5.0.tgz#a42b25e3bc58181cb2a8fbd30d6b0fee6c36bc60"
+  integrity sha512-z1F3HXb05NiZga8Cuq6k5bbowfJOScPtbSOakip0nege+1aI9pGoajzap8eR5s1qwLXAk9Ts+NcgetoUn5lwrQ==
+
 "@nuxtjs/svg@^0.1.12":
   version "0.1.12"
   resolved "https://registry.yarnpkg.com/@nuxtjs/svg/-/svg-0.1.12.tgz#a5b2a66070a36e3c5c5183db9e3d89485ef3eb1c"
@@ -1424,6 +1429,14 @@
     raw-loader "^4.0.0"
     url-loader "^4.1.0"
     vue-svg-loader "^0.16.0"
+
+"@nuxtjs/workbox@^3.0.0-beta.16":
+  version "3.0.0-beta.16"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/workbox/-/workbox-3.0.0-beta.16.tgz#23353837bd438bde6bc41ccbfa8888be2035c69f"
+  integrity sha512-p0n+shhU+4z4uOwIjwS/8WsXJFxsGyCdD8UKOUvhQdgwi6PEHjpo++0ldr9u5xRb2xwhUPtfAzgmqZBHUj/uhg==
+  dependencies:
+    "@nuxtjs/pwa-utils" "3.0.0-beta.16"
+    workbox-cdn "^4.3.1"
 
 "@nuxtjs/youch@^4.2.3":
   version "4.2.3"
@@ -9024,6 +9037,13 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.1.0.tgz#1a67a47b8ecacfa86d75830173fffee3bf8a4ee3"
   integrity sha512-vKl1skEKn8EK9f8P2ZzhRnuaRHLHrlt1sbRmazlvsx6EiC3A8oWF8YCBrMJzoN+W3OnElwIGbVjsx6/xelY1AA==
 
+vue-cookieconsent-component@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/vue-cookieconsent-component/-/vue-cookieconsent-component-1.2.0.tgz#cd6f5a37dd2301028360a169e2bee4817be18c3c"
+  integrity sha512-9vbbLSIIuLjtFuhJ2QJaY0Jt3xTmotWXsz5/rQyICK9kFgpcDd9dnDwwy753tMSoSLG0+gWKDugaHGuHMdUs2Q==
+  dependencies:
+    vue "^2.5.2"
+
 vue-disqus@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/vue-disqus/-/vue-disqus-4.0.1.tgz#9ec040c575f3b87f3ef4bf43477ff20f06cc57dc"
@@ -9038,6 +9058,13 @@ vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
   integrity sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==
+
+vue-if-bot@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/vue-if-bot/-/vue-if-bot-1.2.0.tgz#1258bd0bb02908781a7fbd0fd19643f563512d48"
+  integrity sha512-iJg8owGwT7MXWFn7UkP30C3e9fGvmRFh/SI2Cf5v83oZ9MKXN2vwunKg5KHq2OYwI5Lr88R2HY33Z7W4teWtxA==
+  dependencies:
+    vue "^2.5.16"
 
 vue-loader@^15.9.7:
   version "15.9.7"
@@ -9129,7 +9156,7 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@^2.5.16, vue@^2.6.12:
+vue@^2.5.16, vue@^2.5.2, vue@^2.6.12:
   version "2.6.14"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.14.tgz#e51aa5250250d569a3fbad3a8a5a687d6036e235"
   integrity sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==
@@ -9279,6 +9306,11 @@ widest-line@^3.1.0:
   integrity sha512-NsmoXalsWVDMGupxZ5R08ka9flZjjiLvHVAWYOKtiKM8ujtZWr9cRffak+uSE48+Ob8ObalXpwyeUiyDD6QFgg==
   dependencies:
     string-width "^4.0.0"
+
+workbox-cdn@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/workbox-cdn/-/workbox-cdn-4.3.1.tgz#f1ffed5368c20291048498ba0744baf27dbd7294"
+  integrity sha512-Adkgo+/7S+bBsDTzdeH0xxQCrfBM1EiyZlvu1tMh0cJ/ipC6TtA8KDr12PBREdbL0zO9hG+7OSzvi2NLchPAEg==
 
 workbox-cdn@^5.1.4:
   version "5.1.4"

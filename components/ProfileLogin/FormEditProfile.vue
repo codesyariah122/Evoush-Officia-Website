@@ -56,15 +56,15 @@
 						<form @submit.prevent="updateProfile">
 							<div class="row mt-2">
 								<input type="hidden" name="id" id="id" v-model="fields.id">
-								<div class="col-md-6"><input type="text" id="name" class="form-control" placeholder="Nama Lengkap" v-model="fields.name"></div>
+								<div class="col-md-6 mb-3"><input type="text" id="name" class="form-control" placeholder="Nama Lengkap" v-model="fields.name"></div>
 								<div class="col-md-6"><input type="text" id="username" class="form-control" placeholder="Username Member" v-model="fields.username"></div>
 							</div>
 							<div class="row mt-3">
-								<div class="col-md-6"><input type="text" id="email" class="form-control" placeholder="Email@address.com" v-model="fields.email"></div>
+								<div class="col-md-6 mb-3"><input type="text" id="email" class="form-control" placeholder="Email@address.com" v-model="fields.email"></div>
 								<div class="col-md-6"><input type="text" id="phone" class="form-control" placeholder="Phone number / format: 6282xxxxxxxxx" v-model="fields.phone"></div>
 							</div>
 							<div class="row mt-3">
-								<div class="col-md-6">
+								<div class="col-md-6 mb-3">
 									<select name="province" id="province" class="form-control" v-on:change="getCity">
 										<option v-model="fields.province">{{fields.province}}</option>
 										<option value="" data-id=""><b>Ubah Provinsi</b></option>
@@ -96,7 +96,7 @@
 							</div>
 
 							<div class="row mt-3">
-								<div class="col-md-6"><input type="text" id="youtube" class="form-control" placeholder="example(https://www.youtube.com/channel/UCIzNgeNDD58z8XNppkopwzw)" v-model="fields.youtube"></div>
+								<div class="col-md-6 mb-3"><input type="text" id="youtube" class="form-control" placeholder="example(https://www.youtube.com/channel/UCIzNgeNDD58z8XNppkopwzw)" v-model="fields.youtube"></div>
 								<div class="col-md-6"><input type="text" id="facebook" class="form-control" placeholder="Facebook username" v-model="fields.facebook"></div>
 							</div>
 							<div class="row mt-3">
@@ -122,6 +122,7 @@
 								<div class="col-md-12">
 									<small class="text-danger mt-3 mb-2"><strong>Ketik di bagian text editor di bawah jika ingin mengubah success story anda</strong></small>
 									<textarea  id="full-featured-non-premium" class="form-control about" name="about" v-model="fields.about" rows="15"></textarea>	
+									<!-- <textarea class="form-control about" name="about" v-model="fields.about" rows="15"></textarea> -->
 								</div>
 							</div>
 
@@ -195,24 +196,25 @@
 					city: document.querySelector('#city').value
 				}
 
+				// console.log(data.about)
 
 
 				// console.log(data.province)
 				// console.log(this.fields.province)
 				this.$axios.put(`https://app.evoush.com/api/member/update/${this.fields.id}`, {
 					id: this.fields.id,
-					name: data.name,
-					email: data.email,
-					username: data.username,
-					address: data.address,
-					phone: data.phone,
-					quotes: data.quotes,
-					about: data.about,
-					instagram: data.instagram,
-					facebook: data.facebook,
-					youtube: data.youtube,
-					province: data.province,
-					city: data.city,
+					name: this.fields.name,
+					email: this.fields.email,
+					username: this.fields.username,
+					address: this.fields.address,
+					phone: this.fields.phone,
+					quotes: this.fields.quotes,
+					about: this.fields.about,
+					instagram: this.fields.instagram,
+					facebook: this.fields.facebook,
+					youtube: this.fields.youtube,
+					province: this.fields.province,
+					city: this.fields.city,
 					parallax: null
 				})
 				.then(res => {
@@ -220,10 +222,18 @@
 						this.message = res.data.message
 						const result_data = res.data.data
 						console.log(result_data)
-						// this.edits[0].name = result_data.name
-						// this.edits[0].email = result_data.email
-						this.edits[0].city = result_data.city
+						this.edits[0].name = result_data.name
+						this.edits[0].email = result_data.email
+						this.edits[0].username = result_data.username
+						this.edits[0].address = result_data.address
+						this.edits[0].phone = result_data.phone
+						this.edits[0].quotes = result_data.quotes
+						this.edits[0].about = result_data.about
+						this.edits[0].instagram = result_data.instagram
+						this.edits[0].facebook = result_data.facebook
+						this.edits[0].youtube = result_data.youtube
 						this.edits[0].province = result_data.province
+						this.edits[0].city = result_data.city
 			
 						this.showSuccess = true
 						this.$swal({

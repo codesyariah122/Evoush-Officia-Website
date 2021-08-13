@@ -371,10 +371,10 @@ a.socialIcon:hover,
 		border: 0;
 		background: none;
 		display: block;
-		margin: 20px auto;
+		/*margin: 20px auto;*/
 		text-align: left;
 		border: 2px solid #3498db;
-		padding: 15px 10px;
+		padding: 10px 10px;
 		width: 350px;
 		outline: none;
 		color: white;

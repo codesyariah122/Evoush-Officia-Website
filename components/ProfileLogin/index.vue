@@ -68,14 +68,10 @@
 									</div>
 								</div>
 								<div class="col-lg-12 col-xs-12 col-sm-12 mt-3">
-									<div class="container media-body">
-										<h4 style="text-transform: capitalize;">{{member.name}}</h4>
-										<p class="small"> <i class='bx bx-map'></i>
-											{{member.city}} | {{member.province}}
-										</p>
-										
-										<div v-if="editForm" class="mt-2" style="background-color: #fff;">
-											<div class="container">
+									<div class="container-fluid media-body">
+										<!-- form upload -->
+										<div v-if="editForm" class="mt-2 mb-5" style="background-color: #fff;">
+											<div class="container-fluid">
 												<i @click="closeForm" class='bx bx-window-close lg mt-2' style="font-size: 30px; cursor: pointer;"></i>
 												<form width="200px" name="myForm" method="post" @submit.prevent="updateAvatar" enctype="multipart/form-data">
 													<input type="hidden" name="id" id="id_member" :value="member.id">
@@ -87,6 +83,12 @@
 												</form>
 											</div>
 										</div>
+										<!-- end form upload -->
+
+										<h4 style="text-transform: capitalize;">{{member.name}}</h4>
+										<p class="small"> <i class='bx bx-map'></i>
+											{{member.city}} | {{member.province}}
+										</p>
 									</div>
 								</div>
 							</div>
@@ -123,7 +125,7 @@
 						</ul>
 					</div>
 
-					<div class="container">					
+					<div class="container-fluid">					
 						<div class="row justify-content-center">
 							<div class="col-lg-12 col-xs-12 col-sm-12">
 								<center>

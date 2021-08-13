@@ -17,7 +17,8 @@
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/google-tag-manager": "^2.3.2",
     "@nuxtjs/onesignal": "^3.0.0-beta.16",
-    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/robots": "^2.5.0",
+    "@nuxtjs/workbox": "^3.0.0-beta.16",
     "bootstrap-vue": "^2.21.2",
     "chart.js": "^2.9.4",
     "core-js": "^3.15.1",
@@ -27,13 +28,17 @@
     "prism-themes": "^1.8.0",
     "vue-axios": "^3.2.5",
     "vue-chartjs": "^3.5.1",
+    "vue-cookieconsent-component": "^1.2.0",
     "vue-disqus": "^4.0.1",
+    "vue-if-bot": "^1.2.0",
     "vue-social-sharing": "^3.0.8",
     "vue-sweetalert2": "^5.0.2",
     "vue-tawk": "^1.0.1"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.0.10",
-    "@nuxtjs/svg": "^0.1.12"
+    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/svg": "^0.1.12",
+    "axios": "^0.21.1"
   }
 }

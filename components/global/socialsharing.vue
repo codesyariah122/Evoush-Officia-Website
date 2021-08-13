@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="row justify-content-center mt-5 mb-5">
+		<div class="row justify-content-center mb-5">
 			<ul class="social-share" style="list-style: none; display: flex;">
 				<li v-for="social in socials" class='mr-3' :key="social.id">
 					<ShareNetwork
@@ -13,7 +13,7 @@
 					:twitterUser="(social.twitterUser) ? social.twitterUser : ''"
 					>
 						<i :class='social.icon'></i>
-						<span style="text-transform: capitalise;">share on {{social.network}}</span>
+						<span style="text-transform: capitalise;">{{social.network}}</span>
 					</ShareNetwork>
 				</li>
 				

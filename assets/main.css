@@ -9,6 +9,9 @@
   --bg-secondary: #fff;
   --border-color: #ddd;
   --color-management: #fff;
+  --color-cookie: #fff;
+  --bg-cookie:#672011;
+  --bg-cookie-consent: #C5BCBB;
 }
 
 .dark-mode {
@@ -23,6 +26,9 @@
   --bg-secondary: #071521;
   --border-color: #0d2538;
   --color-management: #fff;
+  --bg-cookie-consent: #1F1031;
+  --bg-cookie: #A59191;
+  --color-cookie: #B7B5B7;
 }
 .sepia-mode {
   --color: #433422;
@@ -209,3 +215,17 @@ body h2{
   background-color: var(--bg-secondary);
 }*/
 
+
+.cookie-consent {
+  background-color: var(--bg-cookie-consent);
+  color: var(--color-cookie);
+}
+
+.cookie-consent-message {
+  color: var(--color);
+}
+
+.cookie-consent-compliance{
+  background-color: var(--bg-cookie);
+  color: var(--color-dua);
+}
