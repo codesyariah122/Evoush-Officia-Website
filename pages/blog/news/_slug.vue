@@ -3,7 +3,9 @@
 		<div class="row justify-content-center">
 			<!-- <img :src="require(`~/assets/blog/images/${article.slug}/${article.img}`)" class="cover img-fluid img-responsive mb-5"> -->
 			<div class="col-lg-12 col-xs-12 col-sm-12 mt-2">
-				<nuxt-content :document="article"/>	
+				<article>
+					<nuxt-content :document="article"/>
+				</article>
 			</div>
 			<div class="col-lg-12 col-xs-12 col-sm-12 mt-2 mb-5">
 				<Disqus />
@@ -24,8 +26,13 @@
 </template>
 
 <script>
+import SocialSharing from '@/components/global/socialsharing'
+
 export default {
 	layout: 'blog',
+	components: {
+		SocialSharing
+	},
 	head(){
 		return{
 			title: `Evoush::News | ${this.article.title}`
@@ -51,6 +58,7 @@ export default {
 		}
 	},
 
+
 	methods: {
 		formatDate(date) {
 			const options = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -60,7 +68,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .cover {
 	width: 100%;
 }
@@ -68,6 +76,17 @@ export default {
 		list-style: none;
 		display: flex;
 		flex-wrap: nowrap;
+	}
+
+	.nuxt-content h2 {
+		font-weight: bold;
+		font-size: 41px;
+		text-align: center;
+		margin-bottom: 5rem;
+	}
+	.nuxt-content p {
+		margin-bottom: 30px;
+		font-size: 16px;
 	}
 </style>
 

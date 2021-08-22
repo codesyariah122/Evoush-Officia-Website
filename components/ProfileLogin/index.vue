@@ -32,7 +32,7 @@
 							<div class="row justify-content-center">
 								<div class="col-lg-12 col-xs-12 col-sm-12">
 									<div v-if="member.avatar" class="container">
-										<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay"> 
+										<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 
 											<button class="btn btn-sm btn-primary mt-3 mb-2" @click="openUpdateAvatar"><i class='bx bxs-edit bx-lg'></i> Update Foto Profile</button>
 										<!-- <div v-if="preview">
@@ -40,13 +40,13 @@
 										</div>
 										<div v-else>
 											<div v-if="avatar">
-												<img :src="`https://app.evoush.com/storage/${avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay"> 
+												<img :src="`https://app.evoush.com/storage/${avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 											</div>
-											
-											<img :src="`https://app.evoush.com/storage/${avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay"> 
+
+											<img :src="`https://app.evoush.com/storage/${avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 
 											<button class="btn btn-sm btn-primary mt-3 mb-2" @click="openUpdateAvatar"><i class='bx bxs-edit bx-lg'></i> Update Foto Profile</button>
-											
+
 										</div> -->
 										<!-- <div class="middle">
 											<div class="text" @click="openUpdateAvatar">
@@ -115,7 +115,7 @@
 									</div>
 								</div>
 								<small class="text-muted"><i class='bx bx-group'></i> Members</small>
-							</li>							
+							</li>
 							<li class="mb-2 mt-2">
 								<a class="btn btn-danger" @click.prevent="logout">Logout</a>
 							</li>
@@ -125,10 +125,20 @@
 						</ul>
 					</div>
 
-					<div class="container-fluid">					
+					<div class="container-fluid">
 						<div class="row justify-content-center">
 							<div class="col-lg-12 col-xs-12 col-sm-12">
 								<center>
+								<div v-if="newMembers.length > 0" class="mb-5 mt-2 alert alert-warning alert-dismissible fade show" role="alert">
+									<strong>Halo {{member.username}}!</strong> anda mempunyai <strong>{{newMembers.length}} member</strong> yang belum di aktivasi, click tombol list member di bawah untuk melanjutkan aktivasi member anda. <br>
+
+									<nuxt-link to="/profile/new-member/activated" class="btn btn-lg btn-primary">List Member</nuxt-link>
+
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+
 									<div v-if="message">
 										<div class="alert alert-success alert-dismissible fade show" role="alert">
 											<strong>{{message}}</strong> <br> Profile Image Baru anda <strong class="text-info">{{avatar}}</strong>.
@@ -143,7 +153,7 @@
 										<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 											<span aria-hidden="true">&times;</span>
 										</button>
-									</div>	
+									</div>
 								</center>
 							</div>
 						</div>
@@ -167,7 +177,7 @@
 		components: {
 			ProfileTabs
 		},
-		
+
 		data(){
 			return {
 				samples: [
@@ -176,7 +186,7 @@
 				{id:3, url: 'https://images.unsplash.com/photo-1453791052107-5c843da62d97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'},
 				{id:4, url: 'https://images.unsplash.com/photo-1475724017904-b712052c192a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'}
 				],
-
+				newMembers: [],
 				followers: null,
 				loading: true,
 				sapaan: '',
@@ -193,7 +203,7 @@
 		},
 		head(){
 			return {
-				title: `Evoush::Member | ${this.members[0].username}`,
+				title: `Evoush::Profile | ${this.members[0].username}`,
 				meta: [
 				{ hid: 'description', name: 'description', content: 'Evoush::Member'},
 				{ hid: 'keywords', name: 'keywords', content: 'Evoush::Official | Web::Replika'},
@@ -224,10 +234,11 @@
 			}
 
 			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
-			this.$axios.get(`https://app.evoush.com/api/member/${this.username}`)
+			this.$axios.get(`/member/${this.username}`)
 			.then(response => {
 				// console.log(response)
 				this.user = response.data[0]
+				// console.log(this.user)
 				let h=(new Date()).getHours();
 				let m=(new Date()).getMinutes();
 				let s=(new Date()).getSeconds();
@@ -240,11 +251,12 @@
 				console.log(error.response.data)
 			})
 
-			this.getFollowers(this.user.username)
+			this.getFollowers(this.members[0].username),
+			this.inActiveMember()
 		},
 		methods: {
 			getFollowers(username){
-				this.$axios.$get(`https://app.evoush.com/member/join/active/${username}`)
+				this.$axios.$get(`/member/join/active/${username}`)
 				.then( res => {
 					if(res.length > 0){
 						this.followers = res.length
@@ -257,7 +269,15 @@
 				.finally(() => this.loading = false)
 			},
 
-
+			inActiveMember(){
+				this.$axios.get(`/member/join/inactive/${this.members[0].username}`)
+				.then(res=>{
+					this.newMembers = res.data
+					if(this.newMembers.length > 0){
+						this.$toast(`Halo ${this.members[0].username}, Anda mempunya ${this.newMembers.length} member yang perlu di aktivasi. Silahkan diaktivasi.`)
+					}
+				})
+			},
 
 			closeForm(){
 				this.editForm = false
@@ -276,15 +296,15 @@
 				const id = document.querySelector('#id_member').value
 				let formData = new FormData
 				formData.append("avatar", this.avatar)
-				
-				this.$axios.post(`https://app.evoush.com/api/member/update/avatar/${id}`, formData, {
+
+				this.$axios.post(`/member/update/avatar/${id}`, formData, {
 					headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 				})
 				.then(res=>{
 					// console.log(res.data)
 					this.$swal({
 						position: 'top-end',
-						icon: 'success',
+						icon: 'info',
 						title: this.message,
 						showConfirmButton: false,
 						timer: 1500
@@ -296,7 +316,7 @@
 			},
 
 			openUpdateCover(){
-				this.editCover = true 
+				this.editCover = true
 			},
 
 			fileCover(e){
@@ -320,7 +340,7 @@
 						const id = document.querySelector('#id_member').value
 						let formData = new FormData
 						formData.append("cover", this.cover)
-						this.$axios.post(`https://app.evoush.com/api/member/update/cover/${id}`, formData, {
+						this.$axios.post(`/member/update/cover/${id}`, formData, {
 									headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 						})
 						.then(res=>{
@@ -342,7 +362,7 @@
 						this.$swal('Changes are not saved', '', 'info')
 					}
 				})
-				
+
 			},
 
 
@@ -374,7 +394,7 @@
 
 		                    //redirect ke halaman login
 		                    return this.$router.push({
-		                    	name: 'auth-login', 
+		                    	name: 'auth-login',
 		                    	params: {
 		                    		username: this.user.username
 		                    	}
@@ -395,7 +415,7 @@
 
 
 <style scoped>
-.cover {	
+.cover {
 	background-repeat: no-repeat;
 	/*height: 50vh;*/
 	min-height: 50vh;
@@ -457,7 +477,7 @@
 .media-body h4{
 	font-size: 14px;
 }
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
 	.media .profile{
 		margin-top: 25rem;
 		/*margin-left: 2rem;*/

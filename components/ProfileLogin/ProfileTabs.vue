@@ -2,7 +2,7 @@
 	<div>
 
 	<!-- 	<pre>
-			{{user}}	
+			{{user}}
 		</pre> -->
 
 		<ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
@@ -73,12 +73,19 @@
 			<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
 				<div class="px-4 py-3">
 					<div class="p-4 rounded shadow-lg">
+
+						<!-- <pre>
+							{{length}}
+						</pre> -->
+
 						<div v-if="length > 0">
 							<div v-if="loading">
-								<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" width="50">
+								<center>
+									<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" width="50">
+								</center>
 							</div>
 							<div v-else>
-								<FollowersList :followers="followers" :user="user"/>
+								<FollowersList :followers="followers" :member="user"/>
 							</div>
 						</div>
 						<div v-else>
@@ -86,6 +93,7 @@
 								<div class="row justify-content-center">
 									<center>
 										<div class="col-lg-12 col-xs-12 col-sm-12">
+
 											<blockquote class="blockquote-footer mb-2">
 												<strong>{{user.username}}, <small class="text-danger">{{followers.message}}</small></strong>
 											</blockquote>
@@ -94,7 +102,7 @@
 												<a href="" class="btn btn-outline-success mb-5 mt-5">Daftarkan Member Baru</a>
 											</center>
 										</div>
-									</center>		
+									</center>
 								</div>
 							</div>
 
@@ -111,7 +119,7 @@
 
 
 <script>
-	import FollowersList from './Followers'
+	import FollowersList from '@/components/ProfileLogin/Followers'
 
 	export default {
 		props: ['user', 'samples'],
@@ -122,7 +130,8 @@
 			return{
 				followers: [],
 				length: null,
-				loading: true
+				loading: false,
+				followers:[]
 			}
 		},
 
@@ -133,11 +142,13 @@
 				return new Date(date).toLocaleDateString('en', options)
 			},
 			getMember(username){
-				this.$axios.get(`https://app.evoush.com/api/member/join/active/${username}`)
+				this.loading = true
+				this.$axios.get(`/member/join/active/${username}`)
 				.then( res => {
+					console.log(res.data.length)
 					this.followers = res.data
-					this.length = res.length
 					console.log(this.followers)
+					this.length = res.data.length
 				})
 				.catch(err => console.log(err.response))
 				.finally(() => this.loading = false)

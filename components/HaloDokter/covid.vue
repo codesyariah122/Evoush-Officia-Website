@@ -39,7 +39,7 @@
 							</div>
 						</div>
 
-						
+
 					</div>
 				</div>
 			</div>
@@ -64,9 +64,12 @@
 			}
 		},
 
-		mounted(){
-			this.getLocation(this.ip),
+		created(){
 			this.getProvinsi()
+		},
+
+		mounted(){
+			this.getLocation(this.ip)
 		},
 
 		methods: {
@@ -107,7 +110,7 @@
 				// console.log(provinsi)
 
 				// console.log(provinsi)
-				
+
 				this.$axios.get('https://indonesia-covid-19.mathdro.id/api/provinsi/',  { crossdomain: true })
 				.then(res => {
 					this.show = true

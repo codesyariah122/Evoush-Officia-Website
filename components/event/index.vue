@@ -13,6 +13,9 @@
 							Event-event yang evoush gelar, selain memperkenalkan product dan bisnis evoush secara masif pada para calon evousher sebagai media edukasi bagi product dan bisnis evoush. Kami menamakan perlehatan event evoush dengan nama <strong><code>E.O.S</code></strong> yang merupakan akronim dari <strong><code>Evoush.Opportunity.Seminar</code></strong>. E.O.S menjadi landasan bagi para calon <strong>evousher</strong>, agar mendapatkan sarana edukasi yang membekali para <strong>evousher</strong> saat memluai join dan menjalankan bisnis, evoush yang mempunyai legalitas yang kuat dan leader-leader unggulan yang siap menjadi mentor-mentor yang membawa anda menuju mahligai kesuksesan yang gemilang.
 						</p>
 					</div>
+					<div class="col-lg-12 col-xs-12 col-lg-12">
+
+					</div>
 				</div>
 
 				<div class="row justify-content-center">
@@ -26,7 +29,7 @@
 			</div>
 		</section>
 	</div>
-	
+
 </template>
 
 <script>

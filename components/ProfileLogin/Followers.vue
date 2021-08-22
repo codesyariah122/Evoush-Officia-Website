@@ -1,22 +1,26 @@
 <template>
 	<div>
-		<div class="container">
-			
+		<div class="container mb-5">
+
 			<div class="d-flex justify-content-center row">
 				<div class="col-md-6">
-					<div class="follower-card  p-3  text-center">
+					<div class="follower-card p-3  text-center">
 						<div>
 							<!-- <img src="https://i.imgur.com/yFeV2ed.png"> -->
 							<h4 style="text-transform: capitalize;">List Member {{member.name}}</h4>
 						</div>
-						<p><span class="text-primary">Tertarik untuk mempunyai web replika ? seperti</span> {{member.username}}&nbsp;<br>Anda bisa langsung join menjadi bagian dari member sponsor {{member.username}}, langsung klik atau tap tombol <span class="text-danger">Join</span> Di bawah.<br><br></p>
+						<p><span class="text-primary">Halo! , <strong class="text-success">{{member.username}}</strong><br>
+							Anda bisa mendaftarkan sendiri member baru anda, dengan cara mengklik atau tap tombol Di bawah. </span><br>
+						</p>
 
-						<a href="" class="btn btn-outline-success mb-5">Join</a>
-						
+						<center>
+							<nuxt-link :to="{name: 'member-join-sponsor', params:{sponsor: member.username}}" class="btn btn-outline-success mb-5 mt-5">Daftarkan Member Baru</nuxt-link>
+						</center>
+
 						<div v-for="follower in followers" class="d-flex flex-row justify-content-between align-items-center">
 							<div class="d-flex flex-row align-items-center">
 								<div v-if="follower.avatar">
-									<img :src="`https://app.evoush.com/storage/${follower.avatar}`" class="image--profile-member rounded center-block d-block mx-auto mt-0 mb-0" width="55">	
+									<img :src="`https://app.evoush.com/storage/${follower.avatar}`" class="image--profile-member rounded center-block d-block mx-auto mt-0 mb-0" width="55">
 								</div>
 								<div v-else>
 									<img class="rounded-circle" src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg" width="55">
@@ -25,10 +29,10 @@
 									<span style="text-transform: capitalize;" class="font-weight-bold">{{follower.name}}</span><span class="followers badge badge-success">{{follower.status}}</span></div>
 							</div>
 							<div class="d-flex flex-row align-items-center mt-2">
-								<a href="" class="btn btn-outline-primary btn-sm" type="button">Lihat</a>
+								<nuxt-link :to="{name:'member-username', params: {username: follower.username}}" class="btn btn-primary"><i class='bx bx-link-external text-white'></i> Lihat Profile</nuxt-link>
 							</div>
 						</div>
-						
+
 					</div>
 				</div>
 			</div>
@@ -39,7 +43,7 @@
 <script>
 	export default{
 		props: ['followers', 'member']
-	}	
+	}
 </script>
 
 <style scoped>

@@ -1,6 +1,24 @@
 <template>
 	<div>
+
 		<div class="container">
+
+			<div class="row justify-content-center">
+				<div class="col-lg-12 col-12 col-xs-12 col-sm-12">
+					<!-- <img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/news/new-news.jpeg" class="img-fluid img-responsive"> -->
+					<ScreenAnim/>
+				</div>
+			</div>
+
+			<!-- <div class="container-fluid mt-5">
+				<div class="row justify-content-center">
+					<div class="col-lg-12 col-xs-12 col-sm-12">
+						<Updated/>
+					</div>
+				</div>
+			</div> -->
+
+
 			<div class="row justify-content-center mt-5">
 				<div class="col-12 col-lg-12 col-xs-12 col-sm-12">
 					<div class="float-right">
@@ -15,20 +33,23 @@
 				</div>
 
 
-				<div class="col-lg-12 col-xs-12 col-sm-12 mt-5">
-					<h4 class="text-muted text-center">Share On</h4>
-					<SocialSharing :socials="socials"/>
-				</div>
+				<!-- <div class="col-lg-12 col-xs-12 col-sm-12 mt-5 mb-5">
 
-				<div class="col-lg-12 col-12 col-xs-12 col-sm-12 mt-5 mb-5">
-					<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/news/new-news.jpeg" class="img-fluid img-responsive">
-				</div>
+					<SocialSharing :socials="socials"/>
+					<center>
+						<RegisterEvent/>
+					</center>
+
+				</div> -->
+
 			</div>
 
 		</div>
 
 
 		<Product :products="results"/>
+
+		<!-- <CheckOngkir/> -->
 
 		<Branding />
 
@@ -43,9 +64,15 @@
 
 		<Pages/>
 
-		<h1 class="underline" style="margin-bottom: 15rem;"></h1>
+		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
+
+		<NewMember/>
+
+		<h1 class="underline" style="margin-top: 5rem;"></h1>
+
 
 		<Contact/>
+
 
 	</div>
 </template>
@@ -53,6 +80,7 @@
 <script>
 	import Product from '@/components/Landing/Product'
 	import Members from '@/components/Landing/Members'
+	import NewMember from '@/components/Landing/NewMember'
 	import News from '@/components/Landing/News'
 	import Pages from '@/components/Landing/Pages'
 	import Contact from '@/components/Landing/Contact'
@@ -60,21 +88,29 @@
 	import SocialSharing from '@/components/global/socialsharing'
 	import Branding from '@/components/Landing/Branding'
 	import AddToHome from '@/components/Landing/addToHomeBtn'
+	import ScreenAnim from '@/components/Landing/ScreenAnim'
+	import CheckOngkir from '@/components/Landing/CheckOngkir'
+	import Updated from '@/components/Landing/Updated'
+	// import RegisterEvent from '@/components/Landing/RegisterEventButton'
 
 	export default {
 		layout: 'default',
 		components: {
 			Product,
 			Members,
+			NewMember,
 			News,
 			Pages,
 			Contact,
 			ColorModePicker,
 			SocialSharing,
 			Branding,
-			AddToHome
+			AddToHome,
+			ScreenAnim,
+			CheckOngkir,
+			Updated
 		},
-		
+
 		async asyncData({$content, params, $axios, $config}){
 			const results = await $axios.$get('/product/all')
 			const members = await $axios.$get('/evoush/member-list')
@@ -83,13 +119,15 @@
 			.sortBy('createdAt', 'desc')
 			.where({categories: 'news'})
 			.fetch();
-			return { results, members, articles }
+			// console.log(newMembers)
+			return { results, members, articles}
 		},
 
 		data(){
 			return {
 				env: process.env.config_production,
 				deferredPrompt: '',
+				colorMode: localStorage.getItem('nuxt-color-mode'),
 				socials: [
 				{
 					id: 1,

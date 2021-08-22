@@ -26,7 +26,7 @@
 							<p class="font-italic mb-0"><strong>Status : </strong> <span class="badge badge-success">{{member.status}}</span></p>
 							<p class="font-italic mb-0"><strong>Join : {{formatDate(member.created_at)}}</strong></p>
 
-							
+
 							<div class="social-links mt-3 mb-5">
 								<!-- <small>Social media & Contact Founder : </small><br> -->
 
@@ -89,7 +89,9 @@
 					<div class="p-4 rounded shadow-lg">
 						<div v-if="length > 0">
 							<div v-if="loading">
-								<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" width="50">
+								<center>
+									<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" width="50">
+								</center>
 							</div>
 							<div v-else>
 								<FollowersList :followers="followers" :member="member"/>
@@ -117,7 +119,7 @@
 													<strong>{{member.username}}, <small class="text-danger">{{followers.message}}</small></strong>
 												</blockquote>
 											</div>
-										</center>		
+										</center>
 									</div>
 									<div v-else>
 										<center>
@@ -126,7 +128,7 @@
 													<strong>{{member.username}}, <small class="text-danger">{{followers.message}}</small></strong>
 												</blockquote>
 											</div> -->
-											
+
 											<div class="col-lg-12 col-xs-12 col-sm-12">
 												<p><span class="text-primary">Tertarik untuk mempunyai web replika ? seperti</span> <strong>{{member.username}}</strong> <br><br>Anda bisa langsung join menjadi bagian dari member sponsor <strong>{{member.username}}</strong>, langsung klik atau tap tombol <span class="text-danger">Join</span> Di bawah.<br></p>
 											</div>
@@ -134,7 +136,7 @@
 										<div class="row justify-content-center">
 											<div class="col-lg-12 col-xs-12 col-sm-12">
 												<center>
-													<nuxt-link :to="{name: 'member-join-sponsor', params:{sponsor: member.username}}" class="btn btn-outline-success mb-5 mt-5">Join Now</nuxt-link>
+													<nuxt-link :to="{name: 'member-join-sponsor', params:{sponsor: member.username}}" class="btn btn-outline-success mb-5 mt-5"><i class='bx bxs-user-check'></i>  Join Now</nuxt-link>
 												</center>
 											</div>
 										</div>
@@ -177,11 +179,13 @@
 				return new Date(date).toLocaleDateString('en', options)
 			},
 			getMember(username){
-				this.$axios.$get(`/member/join/active/${username}`)
+				this.loading = true
+				this.$axios.get(`/member/join/active/${username}`)
 				.then( res => {
-					this.followers = res
-					this.length = res.length
-					// console.log(this.length)
+					console.log(res.data.length)
+					this.followers = res.data
+					console.log(this.followers)
+					this.length = res.data.length
 				})
 				.catch(err => console.log(err.response))
 				.finally(() => this.loading = false)

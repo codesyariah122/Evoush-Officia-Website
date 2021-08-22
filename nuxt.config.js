@@ -8,7 +8,7 @@ export default {
     height: '11px'
   },
   // loading: '~/components/LoadingBar.vue',
-  target: 'static',
+  target: 'server',
   ssr: false,
   body: true,
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -27,15 +27,18 @@ export default {
       { name: "format-detection", content:"telephone=no"}
     ],
     link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    { rel: 'stylesheet', type: 'text/css', href: '/assets/css/global.css'},
-    { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/bootstrap/css/bootstrap.min.css'},
-    { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/icofont/icofont.min.css'},
-    { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/boxicons/css/boxicons.min.css'},
-    { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/venobox/venobox.css'},
-    { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/owl.carousel/assets/owl.carousel.min.css'},
-    { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/aos/aos.css'},
-    { rel: 'stylesheet', type: 'text/css', href: '/assets/css/style.css'},
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', type: 'text/css', href: '/assets/css/global.css'},
+      { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/bootstrap/css/bootstrap.min.css'},
+      { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/icofont/icofont.min.css'},
+      { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/boxicons/css/boxicons.min.css'},
+      { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/venobox/venobox.css'},
+      { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/owl.carousel/assets/owl.carousel.min.css'},
+      { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/aos/aos.css'},
+      { rel: 'stylesheet', type: 'text/css', href: '/assets/css/style.css'},
+      { rel: 'stylesheet', type: 'text/css', href: '/assets/anniversary/fonts/font-awesome-4.7.0/css/font-awesome.min.css'},
+      { rel: 'stylesheet', type: 'text/css', href: '/assets/anniversary/fonts/iconic/css/material-design-iconic-font.min.css'}
+      // { rel: 'manifest', href: '/manifest.json'}
     ],
 
 
@@ -44,6 +47,11 @@ export default {
       src: 'https://cdn.popt.in/pixel.js?id=146a60e91cb08',
       async: 'true',
       id: 'pixel-script-poptin'
+    },
+    {
+      src: 'https://cdn.ampproject.org/v0/amp-ad-0.1.js',
+      async: 'true',
+      'custom-element': 'amp-ad'
     },
     // {
     //   src: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js',
@@ -61,6 +69,15 @@ export default {
     {
       src: 'https://www.openstreetmap.org/assets/leaflet-src.js.map',
       type: 'text/html'
+    },
+
+    {
+      src: '/assets/anniversary/tilt/tilt.jquery.min.js',
+      type: 'text/javascript'
+    },
+    {
+      src: '/assets/js/anniversary.js',
+      type: 'text/javascript'
     },
     {
       src: 'https://cdn.tiny.cloud/1/36xbwrnfekuspwhfv02z1kuwy3sz4nbehpqkb3x7bh8tek86/tinymce/5/tinymce.min.js',
@@ -136,7 +153,7 @@ export default {
       manifest: {
         name: 'Evoush::Official',
         short_name: 'Evoush',
-        start_url: '.',
+        start_url: '/',
         lang: 'en',
         display: 'standalone',
         theme_color: '#a2466c',
@@ -171,12 +188,25 @@ export default {
            "src":"/icon_128.png",
            "size":"128x128",
            "type": "image/png"
+          },
+          {
+           "src":"/icon_64.png",
+           "size":"64x64",
+           "type": "image/png"
+          },
+          {
+           "src":"/icon_48.png",
+           "size":"48x48",
+           "type": "image/png"
           }
         ]
       },
     },
 
    workbox: {
+    workboxOptions: {
+      skipWaiting: true
+    },
     // offline: true,
     // offlineStrategy: 'NetworkFirst',
     // offlinePage: null,
@@ -233,12 +263,22 @@ export default {
       },
     ]
   },
-
+  router:{
+    routes: [
+      {
+        name: 'event',
+        path: '/event',
+        component: 'pages/event/index.vue'
+      }
+    ]
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    // {src: '~/plugins/updated', mode: 'client'},
+    {src: '~/plugins/vue-toastification'},
     {src: '~/plugins/pwa-update', mode: 'client'},
     {src: '~/plugins/plugins_vue-chartjs', ssr: false},
     {src: '~/plugins/vue-social-sharing'},
@@ -267,7 +307,7 @@ export default {
     '@nuxtjs/onesignal',
     '@nuxtjs/pwa',
     ['@nuxtjs/google-tag-manager', { id: 'GTM-MGR7PP9' }],
-    ['@nuxtjs/google-adsense', 
+    ['@nuxtjs/google-adsense',
       {id: 'ca-pub-8390872078103831'}
     ],
   ],
@@ -276,13 +316,14 @@ robots: {
   UserAgent: '*',
   Disallow: '/'
 },
-  
+
+
   oneSignal: {
     init: {
       appId: '15dc915b-fe30-4b1b-b635-63ab40fc8361',
       allowLocalhostAsSecureOrigin: true,
       welcomeNotification: {
-        disable: false
+        disable: true
       },
       promptOptions: {
         slidedown: {

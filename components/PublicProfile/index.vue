@@ -1,6 +1,14 @@
 <template>
 	<div>
+		<div v-if="!members">
+			<h1>Member yang anda cari tidak terdaftar</h1>
+		</div>
 		<div v-for="member in members" class="row justify-content-center px-2 py-1 mx-auto mb-5">
+
+			<!-- <div class="col-lg-12 col-xs-12 col-sm-12">
+				<SocialSharing :socials="socials"/>
+			</div> -->
+
 			<div class="col-lg-10 col-xs-12 col-sm-12 mx-auto">
 				<!-- Profile widget -->
 				<div class="shadow rounded overflow-hidden profile">
@@ -15,23 +23,51 @@
 										<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 									</div>
 									<div v-else>
-										<img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg" :alt="member.name" class="rounded-circle mb-3" width="100">
+										<img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg" :alt="member.name" class="rounded-circle mb-3 profile profile-overlay rounded-circle mb-3" width="100">
 									</div>
 								</div>
 								<div class="col-lg-8 col-xs-6 col-sm-6">
 									<div class="media-body">
 										<h4 style="text-transform: capitalize;">{{member.name}}</h4>
 
-										<p class="mt-2 mb-3"><span :class="`${member.achievements.includes('STAR SAPHIRE') ? 'badge badge-primary' : 'badge badge-success'}`"><i class='bx bx-medal bx-lg'></i> {{(member.achievements.includes("STAR SAPHIRE")) ? "STAR SAPHIRE" : "SAPHIRE"}}</span></p>
+										<p class="mt-2 mb-3">
+											<!-- <pre>
+												{{member.achievements}}
+											</pre> -->
+											<div v-if="member.achievements">
+												<span :class="`${member.achievements.includes('STAR SAPHIRE') ? 'badge badge-primary mb-3' : 'badge badge-success mb-3'}`"><i class='bx bx-medal bx-lg'></i> {{(member.achievements.includes("STAR SAPHIRE")) ? "STAR SAPHIRE" : "SAPHIRE"}}</span></p>
+											</div>
+											<div v-else>
+												<span class="badge badge-danger mb-3">
+													No Achievements
+												</span>
+											</div>
+											<!-- <div v-if="member.achievements.includes('STAR SAPHIRE')">
+												<span class="badge badge-primary">
+													STAR SAPHIRE
+												</span>
+											</div>
+											<div v-else-if="member.achievements.includes('SAPHIRE')">
+												<span class="badge badge-success">
+													SAPHIRE
+												</span>
+											</div>
+											<div v-else>
+												<span class="badge badge-success">
+													No Achievements
+												</span>
+											</div> -->
 
-										<p class="small"> <i class='bx bx-map'></i>
-											{{member.city}} | {{member.province}}
-										</p>
+											<!-- <span :class="`${member.achievements.includes('STAR SAPHIRE') ? 'badge badge-primary' : 'badge badge-success'}`"><i class='bx bx-medal bx-lg'></i> {{(member.achievements.includes("STAR SAPHIRE")) ? "STAR SAPHIRE" : "SAPHIRE"}}</span></p> -->
+
+											<p class="small"> <i class='bx bx-map'></i>
+												{{member.city}} | {{member.province}}
+											</p>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
 
 					<!-- <pre>
 						{{token}}
@@ -49,15 +85,20 @@
 									<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" width="50">
 								</div>
 								<div v-else>
-									<h5 class="font-weight-bold mb-0 d-block">{{followers}}</h5>
+									<div v-if="followers.length > 0">
+										<h5 class="font-weight-bold mb-0 d-block">{{followers.length}}</h5>
+									</div>
+									<div v-else>
+										<h5 class="font-weight-bold mb-0 d-block">0</h5>
+									</div>
 								</div>
 								<small class="text-muted"><i class='bx bx-group'></i> Members</small>
-							</li>							
+							</li>
 							<li v-if="token" class="mb-2 mt-2">
 								<nuxt-link :to="{name:'profile-username', params: {username: user.username}}" class="btn btn-success">My Profile</nuxt-link>
 							</li>
 							<li v-else class="mb-2 mt-2">
-								<nuxt-link :to="{name: 'auth-login', params: {username: member.username}}"  class="btn btn-primary">Login</nuxt-link>
+								<nuxt-link to="/auth/login"  class="btn btn-primary">Login</nuxt-link>
 							</li>
 						</ul>
 					</div>
@@ -86,15 +127,38 @@
 		components: {
 			ProfileTabs
 		},
-		
+
+		head(){
+			return {
+				title: `Evoush::Member | ${this.members[0].username}`,
+				link: [
+					{rel: 'canonical', href: `https://evoush.com/member/${this.members[0].username}`}
+				],
+				meta: [
+				{ hid: 'description', name: 'description', content: 'Evoush::Member'},
+				{ hid: 'keywords', name: 'keywords', content: 'Evoush::Member | Web::Replika'},
+				{ hid: 'author', name: 'author' , content: `${this.members[0].username} | Evoush::Member`},
+				{ hid: 'og:type', property: 'og:type', content: 'website'},
+				{ hid: 'og:url', property: 'og:url', content: `https://evoush.com/member/${this.members[0].username}`},
+				{ hid: 'og:title', property: 'og:title', content: 'Evoush Indonesia | Evoush::Member'},
+				{ hid: 'og:site_name', property: 'og:site_name', content: `${this.members[0].name} | ${this.members[0].username}`},
+				{ hid: 'og:description', property: 'og:description', content: `${this.members[0].quotes}`},
+				{ hid: 'og:image', property: 'og:image', content: `https://app.evoush.com/storage/${this.members.[0].avatar}`},
+				{ hid: 'og:image:width', property: 'og:image:width', content: '600'},
+				{ hid: 'og:image:height', property: 'og:image:height', content: '598'}
+				]
+			}
+		},
+
 		data(){
 			return {
 				samples: [
-				{id:1, url: 'https://images.unsplash.com/photo-1469594292607-7bd90f8d3ba4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'},
-				{id:2, url: 'https://images.unsplash.com/photo-1493571716545-b559a19edd14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'},
-				{id:3, url: 'https://images.unsplash.com/photo-1453791052107-5c843da62d97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'},
-				{id:4, url: 'https://images.unsplash.com/photo-1475724017904-b712052c192a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'}
+					{id:1, url: 'https://images.unsplash.com/photo-1469594292607-7bd90f8d3ba4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'},
+					{id:2, url: 'https://images.unsplash.com/photo-1493571716545-b559a19edd14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'},
+					{id:3, url: 'https://images.unsplash.com/photo-1453791052107-5c843da62d97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'},
+					{id:4, url: 'https://images.unsplash.com/photo-1475724017904-b712052c192a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'}
 				],
+
 
 				followers: null,
 				loading: true,
@@ -113,28 +177,25 @@
 				})
 			}
 			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
-			this.$axios.get('/api/user')
+			this.$axios.get('https://app.evoush.com/api/user')
 			.then(response => {
 
-                    //console.log(response.data.name)
+                    // console.log(response.data.name)
                     this.user = response
 
                 })
 			.catch(error => {
 				console.log(error.response.data)
 			})
-			
+
 			this.getFollowers(this.members[0].username)
 		},
 		methods: {
 			getFollowers(username){
-				this.$axios.get(`/member/join/active/${username}`)
+				this.$axios.get(`https://app.evoush.com/api/member/join/active/${username}`)
 				.then( res => {
-					if(res.length > 0){
-						this.followers = res.length
-					}else{
-						this.followers = 0
-					}
+					this.followers = res.data
+					// console.log(this.followers.length)
 					// console.log(this.length)
 				})
 				.catch(err => console.log(err.response))
@@ -156,7 +217,7 @@
 							'Okay',
 							'Anda akan segera logout',
 							'success'
-						)
+							)
 						this.$axios.defaults.headers.common.Authorization  = `Bearer ${this.token}`
 						this.$axios.post('/logout')
 						.then(res => {
@@ -167,11 +228,11 @@
 		                    localStorage.removeItem('token')
 
 		                    //redirect ke halaman login
-		                     return this.$router.push({
-		                        	path: '/auth/login'
-		                        })
-		                    }
-		                })
+		                    return this.$router.push({
+		                    	path: '/auth/login'
+		                    })
+		                }
+		            })
 						.catch(error => {
 							// console.log(error)
 							console.log(error.response.data)
@@ -186,7 +247,7 @@
 
 
 <style scoped>
-.cover {	
+.cover {
 	background-repeat: no-repeat;
 	/*height: 50vh;*/
 	min-height: 50vh;
@@ -246,7 +307,7 @@
 .media-body h4{
 	font-size: 35px;
 }
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
 	.media .profile{
 		margin-top: 25rem;
 		/*margin-left: 2rem;*/

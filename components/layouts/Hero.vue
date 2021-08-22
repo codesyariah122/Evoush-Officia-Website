@@ -4,12 +4,12 @@
 		<section id="hero" class="d-flex flex-column justify-content-center">
 			<div class="container content-hero" data-aos="zoom-in" data-aos-delay="100">
 				<div class="row justify-content-center">
-					<div class="col-lg-4 col-xs-12 col-sm-12">
+					<div class="col-lg-8 col-xs-12 col-sm-12">
 						<Logo />
 					</div>
 				</div>
-				<div class="row justify-content-center">
-					<div class="col-lg-8 col-xs-12 col-sm-12 mt-3 ml-3">
+				<div class="row justify-content-start">
+					<div class="col-lg-6 col-xs-12 col-sm-12 mt-3 ml-3">
 						<h1 style="font-family: 'Walkway';"><span style="font-weight: 800; margin-top:.5rem; font-size: 4rem;" v-html="brand"></span></h1>
 						<!-- <p>
 							Your

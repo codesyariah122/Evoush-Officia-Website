@@ -1,12 +1,15 @@
 <template>
   <div>
+    <small v-if="message" class="blockquote-footer text-info mb-5 mt-3">
+      {{message}}
+    </small>
     <button
       v-if="deferredPrompt"
       ref="addBtn"
-      class="add-button"
+      class="add-button btn btn-primary"
       @click="clickCallback"
-    >
-      Add
+    ><i class='bx bxs-extension bx-lg'></i>
+      Install Evoush::App
     </button>
   </div>
 </template>
@@ -16,6 +19,7 @@ export default {
   name: 'AddToHomeScreen',
   data: () => ({
     deferredPrompt: null,
+    message: null
   }),
   mounted() {
     this.captureEvent()
@@ -27,6 +31,7 @@ export default {
         e.preventDefault()
         // Stash the event so it can be triggered later.
         this.deferredPrompt = e
+        this.message = "Install aplikasi evoush untuk mendapatkan update terbaru konten-konten evoush."
       })
     },
     clickCallback() {
@@ -36,6 +41,10 @@ export default {
       this.deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
           // Call another function?
+          // this.captureEvent()
+          console.log("User accepted installation")
+        }else{
+          console.log("User canceled installation")
         }
         this.deferredPrompt = null
       })

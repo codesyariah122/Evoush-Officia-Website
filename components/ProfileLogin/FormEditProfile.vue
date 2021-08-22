@@ -1,20 +1,20 @@
 <template>
 	<div>
-		<div class="container rounded bg-white mt-5">
+		<div class="container-fluid rounded bg-white mt-5">
 			<div class="row edit-form">
 				<div class="col-md-4 border-right">
 					<div class="d-flex flex-column align-items-center text-center p-3 py-5">
 						<div v-if="edits[0].avatar">
-							<img class="rounded-circle mt-5" :src="`https://app.evoush.com/storage/${edits[0].avatar}`" width="90">						
+							<img class="rounded-circle mt-5" :src="`https://app.evoush.com/storage/${edits[0].avatar}`" width="90">
 						</div>
 						<span class="font-weight-bold" style="text-transform: capitalize;">{{edits[0].name}}</span>
 						<span>{{edits[0].email}}</span>
 						<span>{{edits[0].city}} | {{edits[0].province}}</span>
 					</div>
 					<div v-if="showSuccess">
-						<div v-if="message" class="col-md-8 ml-5">
+						<div v-if="message" class="col-md-12">
 							<div class="alert alert-success alert-dismissible fade show" role="alert">
-								<strong>Halo {{edits[0].username}}!</strong> {{message}} <strong class="text-primary">Successfully</strong>.
+								<strong>Halo {{fields.username}}!</strong> {{message}} <strong class="text-primary">Successfully</strong>.
 								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
@@ -32,7 +32,7 @@
 					</div>
 				</div>
 
-				
+
 
 <!-- <pre>
 	{{pilih}}
@@ -121,7 +121,7 @@
 							<div class="row mt-3">
 								<div class="col-md-12">
 									<small class="text-danger mt-3 mb-2"><strong>Ketik di bagian text editor di bawah jika ingin mengubah success story anda</strong></small>
-									<textarea  id="full-featured-non-premium" class="form-control about" name="about" v-model="fields.about" rows="15"></textarea>	
+									<textarea  id="full-featured-non-premium" class="form-control about" name="about" v-model="fields.about" rows="15"></textarea>
 									<!-- <textarea class="form-control about" name="about" v-model="fields.about" rows="15"></textarea> -->
 								</div>
 							</div>
@@ -201,7 +201,7 @@
 
 				// console.log(data.province)
 				// console.log(this.fields.province)
-				this.$axios.put(`https://app.evoush.com/api/member/update/${this.fields.id}`, {
+				this.$axios.put(`/member/update/${this.fields.id}`, {
 					id: this.fields.id,
 					name: this.fields.name,
 					email: this.fields.email,
@@ -234,7 +234,7 @@
 						this.edits[0].youtube = result_data.youtube
 						this.edits[0].province = result_data.province
 						this.edits[0].city = result_data.city
-			
+
 						this.showSuccess = true
 						this.$swal({
 							position: 'top-end',
@@ -352,7 +352,7 @@
 
 
 <style scoped>
-	
+
 .form-control:focus {
     box-shadow: none;
     border-color: #BA68C8

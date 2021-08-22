@@ -9,7 +9,9 @@
 						</div>
 					</div>
 
-					<div class="row justify-content-center">
+
+
+					<!-- <div class="row justify-content-center">
 						<div class="col-lg-12 col-xs-12 col-sm-12">
 							<div class="section-title">
 								<h2>New Product</h2>
@@ -54,7 +56,7 @@
 						</div>
 					</div>
 
-					<h1 class="underline mt-5" style="margin-bottom: 15rem;"></h1>
+					<h1 class="underline mt-5" style="margin-bottom: 15rem;"></h1> -->
 
 					<div class="row justify-content-center">
 						<div class="col-lg-12 col-xs-12 col-sm-12">
@@ -76,7 +78,7 @@
 								class="row portfolio-container"
 								data-aos="fade-up"
 								data-aos-delay="200">
-									<div v-for="first in firsts" class="col-lg-4 col-md-6 portfolio-item">
+									<div v-for="first in reverse" class="col-lg-4 col-md-6 portfolio-item">
 										<div class="portfolio-wrap">
 											<img
 											:src="first.img"
@@ -181,8 +183,10 @@
 
 
 <script>
+
 	export default{
 		layout: 'pages',
+
 		head(){
 			return {
 				title: 'Evoush::Gallery'
@@ -203,7 +207,10 @@
 					{id:10, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/propolis10.jpeg'},
 					{id:11, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/propolis11.jpeg'},
 					{id:12, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/propolis12.jpeg'},
-					{id:13, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/propolis13.jpeg'}
+					{id:13, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/propolis13.jpeg'},
+					{id:14, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/propolis14.jpeg'},
+					{id:15, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/propolis15.jpeg'},
+					{id:16, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/propolis16.jpeg'}
 				],
 
 				seconds: [
@@ -222,6 +229,12 @@
 				fourths: [
 					{id:1, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/daycreamevoush/WhatsApp%20Image%202021-07-28%20at%2015.58.58.jpeg'}
 				]
+			}
+		},
+
+		computed: {
+			reverse(){
+				return this.firsts.slice().reverse()
 			}
 		},
 

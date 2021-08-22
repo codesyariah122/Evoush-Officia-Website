@@ -24,15 +24,15 @@
 						<div class="card profile-card-1">
 							<img :src="management.hero" :alt="management.name" class="background"/>
 							<div class="container">
-								
+
 								<img :src="management.img" :alt="management.name" class="profile profile-overlay"/>
-								
+
 								<div class="overlay" :style="`background-color:#fff; background-image: url(${management.popup}); background-repeat:no-repeat;
 								background-size:contain;
 								background-position:center;`">
 									<div class="text">
 										<!-- <img :src="management.popup" class="img-fluid img-responsive"> -->
-										
+
 									</div>
 								</div>
 								<!-- <div class="middle">
@@ -227,7 +227,7 @@
 }*/
 
 
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
 	.profile-card-1 {
 		font-family: 'Open Sans', Arial, sans-serif;
 		position: relative;
@@ -242,11 +242,11 @@
 	.profile-card-1 .profile {
 		/*border-radius: 50%;*/
 		position: absolute;
-		bottom: 3%;
+		bottom: 2%;
 		left: 50%;
 		/*max-width: 100px;*/
-		width: 400px;
-		height: 670px;
+		width: 300px;
+		height: 490px;
 		opacity: 1;
 		box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 		/*border: 5px solid rgba(255, 255, 255, 1.5);*/

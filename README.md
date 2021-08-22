@@ -1,9 +1,42 @@
 # Evoush WebApps
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/data_puji/saved3.jpg">  
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/data_puji/saved4.jpg">
+
+
+Evoush dibangun dengan Progressive Web Application, saya pujiermanto sebagai fullstack engineer dari PT. Pineleng Indah Cemerlang (Evoush) - Jawa Timur.  
+WebApps Evoush ini dibangun sebagai media support untuk member perusahaan yaitu sebuah content web replika yang bisa menjadi support branding, dimana member mendapat fasilitas untuk menambahkan profile di dalam content web replika evoush ini.  
+Setiap member yang telah terdaftar di system web replika evoush bisa menggunakan fasilitas login yang bersumber dari system backend evoush yang di bangun dengan fondasi framework Laravel8 dan menggunakan module Passport sebagai vendor untuk verifikasi keamanan pada authentication login user.  
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/data_puji/saved1.jpg">  
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/data_puji/saved2.jpg">  
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/data_puji/saved5.jpg">  
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/data_puji/saved6.jpg">  
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/data_puji/saved7.jpg">  
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/data_puji/saved8.jpg">
+
+### Frontend WebApps Evoush  
+Webapps evoush sendiri dibangun menggunakan framework frontend yaitu NuxtJS yang di bangun dari fondasi dasar VueJS.  
+kenapa memilih VueJS. VueJS dengan framework NuxtJS menjadi kombinasi yang handal untuk membangun webapps berbasis Progressive Web, cepat dan mudah dalam proses development.  
+berikut tools yang saya gunakan dalam membangun webapps evoush :  
+
+- Framework NuxtJS as a main system frontend  apps 
+- Axios as a XMLHttp Request to server backend
+- OneSignal as a Push Notification System vendor  
+- Google Adsense as a digital advertising system  
+- NuxtPWA by NuxtJS community as a service worker for PWA service
+- Bootstrap as a framework css  
+- JQuerY, IsoTope, Venobox, Boxicons, typedjs, sweetalert2 and Aos as a tools frontend apps
+- ChartJS as a Graphical Data for user experience
+- Disqus as a comment system for web apps content
+
+
+
 
 ## Build Setup
 
 ```bash
 # install dependencies
+$ git clone this repository  
+
 $ yarn install
 
 # serve with hot reload at localhost:3000
@@ -17,53 +50,3 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
-
-## Special Directories
-
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).

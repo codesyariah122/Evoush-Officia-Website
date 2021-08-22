@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #ff3b40;
   transition: background 0.2s ease-in-out;
 }
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
   .back-to-top {
     position: fixed;
     display: none;
@@ -280,13 +280,19 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 992px) {
   #hero {
-    width: 100%;
-  /*height: 150vh;*/
-  min-height: 100vh;
-    background: url("https://raw.githubusercontent.com/evoush12/bahan_evoush/main/assets/img/bg/new_bg2.jpg") top right no-repeat;
-    padding-left: 160px;
+    background: url("https://raw.githubusercontent.com/evoush12/bahan_evoush/main/assets/img/bg/propolis-doktersehat2.jpg") right no-repeat;
+    /*width: 100%;
+    height: 100vh;
+    min-height: 500px;
     background-size: cover;
-  position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;*/
+    padding-left: 160px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 }
 
@@ -1237,6 +1243,72 @@ section {
   }
 }
 
+/*--------------------------------------------------------------
+# New member Lists
+--------------------------------------------------------------*/
+.newmember-lists {
+  padding: 40px 0;
+}
+
+.newmember-lists .portfolio-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.newmember-lists .newmember-lists-carousel .owl-nav, .newmember-lists .newmember-lists-carousel .owl-dots {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.newmember-lists .newmember-lists-carousel .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd !important;
+}
+
+.newmember-lists .newmember-lists-carousel .owl-dot.active {
+  background-color: #0563bb !important;
+}
+
+.newmember-lists .portfolio-info {
+  padding-top: 45px;
+}
+
+.newmember-lists-carousel img{
+  width: 400px;
+  height: 200px;
+}
+
+.newmember-lists .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.newmember-lists .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.newmember-lists .portfolio-info ul li + li {
+  margin-top: 10px;
+}
+
+.newmember-lists .portfolio-info p {
+  font-size: 15px;
+  padding: 15px 0 0 0;
+}
+
+@media (max-width: 992px) {
+  .newmember-lists .portfolio-info {
+    padding-top: 20px;
+  }
+}
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/

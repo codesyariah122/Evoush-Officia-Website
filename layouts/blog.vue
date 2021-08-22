@@ -14,13 +14,20 @@
 						<nuxt-link class="btn btn-danger mt-3 mb-5" to="/#news"><i class='bx bx-arrow-back'></i>Kembali</nuxt-link>
 					</div>
 				</div>
+
+
+				<div class="row justify-content-center">
+					<div class="col-lg-12 col-xs-12 col-sm-12">
+						<SocialSharing :socials="socials"/>
+					</div>
+				</div>
 			</div>
-	
+
 			<Nuxt/>
 
 			<a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
 			<!-- <div id="preloader"></div> -->
-			
+
 		</main>
 	</div>
 </template>
