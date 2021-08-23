@@ -18,7 +18,7 @@
 
 
 		<!-- Main -->
-		<div class="flex-w flex-str size1 overlay1">
+		<!-- <div class="flex-w flex-str size1 overlay1">
       <div class="flex-w flex-col-sb wsize1 bg0 p-l-70 p-t-37 p-b-52 p-r-50 respon1">
         <div class="wrappic1">
           <a href="#">
@@ -66,7 +66,7 @@
       </div>
     </div>
 
-			<!-- <form class="flex-w flex-c-m contact100-form validate-form p-t-70">
+			<form class="flex-w flex-c-m contact100-form validate-form p-t-70">
 				<div class="wrap-input100 validate-input where1" data-validate = "Email is required: ex@abc.xyz">
 					<input class="s1-txt1 placeholder0 input100" type="text" name="email" placeholder="Email Address">
 					<span class="focus-input100"></span>
@@ -75,13 +75,13 @@
 				<button class="flex-c-m s1-txt1 size2 how-btn trans-04 where1">
 					Notify Me
 				</button>
-			</form> -->
+			</form>
 
 		</div>
-	</div>
+	</div>-->
 		<!-- End Main -->
 
-
+    <h1>Acara Telah Terselenggara</h1>
 
 
 	</div>
