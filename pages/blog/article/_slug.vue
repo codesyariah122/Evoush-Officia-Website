@@ -3,7 +3,7 @@
 		<div class="row justify-content-center">
 			<!-- <img :src="require(`~/assets/blog/images/${article.slug}/${article.img}`)" class="cover img-fluid img-responsive mb-5"> -->
 			<div class="col-lg-12 col-xs-12 col-sm-12 mt-2">
-				<nuxt-content :document="article" style="text-align: justify; font-size: 18px;"/>	
+				<nuxt-content :document="article" style="text-align: justify; font-size: 18px;"/>
 			</div>
 			<div class="col-lg-12 col-xs-12 col-sm-12 mt-2 mb-5">
 				<Disqus />

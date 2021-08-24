@@ -6,7 +6,7 @@
 				<div class="section-title">
 
 					<h2>Article</h2>
-	
+
 				</div>
 
 				<div class="col-lg-12 col-xs-12 col-sm-12 mb-5">
@@ -46,7 +46,7 @@
 										data-vbtype="iframe"
 										class="venobox btn btn-sm btn-success text-white lihat"
 										:title="`Detail ${article.title}`"
-										><i class='bx bx-window-open'></i> Lihat
+										><i class='bx bx-window-open'></i> Baca
 									</nuxt-link>
 								</div>
 							</div>

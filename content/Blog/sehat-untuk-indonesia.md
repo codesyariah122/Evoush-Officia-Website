@@ -19,6 +19,7 @@ categories: news
 # Sehat Untuk Indonesia
 
 ##### Bismillah, Assalamualaikum  
+<img src="https://app.evoush.com/storage/product-sliders/gilcam1.jpeg" class="img-fluid img-responsive">
 
 
 Halo evousher, apa kabarnya ? Semoga teman-teman evousher semua selalu dalam keadaan sehat-sehat dan diberikan nikmat lebih di tengah masa-masa yang pelik kali ini.  

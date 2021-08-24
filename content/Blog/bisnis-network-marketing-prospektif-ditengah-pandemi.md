@@ -15,10 +15,11 @@ tags:
 categories: news
 ---  
 
-Kementerian Perdagangan (Kemendag) memberikan dorongan kepada perusahaan multi level marketing (MLM), Lifetime karena sudah berkontribusi langsung terhadap pemulihan ekonomi nasional. Perusahaan tersebut mampu menciptakan dan membuka lapangan pekerjaan di tengah pandemi Covid-19.  
+Kementerian Perdagangan (Kemendag) memberikan dorongan kepada perusahaan multi level marketing (MLM), karena sudah berkontribusi langsung terhadap pemulihan ekonomi nasional. Bisnsi MLM mampu menciptakan dan membuka lapangan pekerjaan di tengah pandemi Covid-19.  
 
 Koordinator Distribusi Langsung dan Waralaba Kemendag Ronny Marpaung mengatakan kontribusi perusahaan multi level marketing tersebut fokus terhadap produk kesehatan, kecantikan, dan lifestyle. Hal ini membuktikan industri penjualan langsung kebal terhadap pandemi Covid-19.  
 
 Ketua Umum Asosiasi Perusahaan Penjualan Langsung Indonesia (AP2LI) Andrew Susanto mengatakan terlepas dari pro dan kontra yang terjadi masyarakat, industri penjualan langsung tetap tumbuh subur pada masa-masa sulit termasuk saat pandemi.  
-
-<img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg" class="img-fluid img-responsive">
+<img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg" class="img-fluid img-responsive">  
+<br><br>  
+<img src="https://raw.githubusercontent.com/evoush122/bahan_evoush/main/legalitas/legalitas2.jpg" class="img-fluid img-responsive">

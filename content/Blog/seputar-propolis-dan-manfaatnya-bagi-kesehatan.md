@@ -92,5 +92,5 @@ Bagaimana evousher, kaya manfaat sekali yah propolis ini, dan untuk product evou
 **- Ekstract Tebu dan Mint**  
 **- Honey, Propolis, Cane Extract Mint**  
 
-Jangan lupa perhatikan aturan konsumsi yang tertera di product propolis evoush : <a href="product/Nutrisi/gilcam-propolis">Gilcam Propolis</a>  
+Jangan lupa perhatikan aturan konsumsi yang tertera di product propolis evoush : <a href="/product/Nutrisi/gilcam-propolis">Gilcam Propolis</a>  
 

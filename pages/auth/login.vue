@@ -22,8 +22,13 @@
 						<Logo/>
 						<h5 class="text-white mt-3">Login Web Replika Evoush</h5>
 						<p class="text-muted mt-3 mb-2"> Please enter your username and password!</p>
+
 						<div v-if="loginFailed" class="alert alert-danger mb-2">
-							Username atau Password Anda salah.
+							{{message}} <br>
+
+							<div v-if="activated">
+								<a :href="`https://wa.me/${sponsor.phone}?text=Hallo%20${sponsor.name}%20saya%20telah%20join%20menjadi%20member%20anda, %20apa%20anda%20bisa%20bantu%20saya%20untuk%20proses%20aktivasi%20member%20saya`" class="btn btn-success btn-sm mt-3">Request Aktivasi</a>
+							</div>
 						</div>
 
 							<input type="text" name="username" v-model="user.username" placeholder="Username">
@@ -75,12 +80,16 @@
 
 		data(){
 			return{
+				message: '',
+				alert: '',
+				sponsor: {},
 				user: {
 					username: '',
 					password: ''
 				},
 				validation: {},
 				loginFailed: null,
+				activated: null,
 				token: localStorage.getItem('token'),
 			}
 		},
@@ -123,7 +132,7 @@
 					password
 				})
 				.then(res => {
-					// console.log(res)
+					console.log(res)
 					if(res.data.success){
 						localStorage.setItem('token', res.data.token)
 						localStorage.setItem('username', res.data.data.username)
@@ -141,6 +150,13 @@
 					}
 
 					this.loginFailed = true
+					this.message = res.data.message
+
+					if(res.data.message === "Status member anda belum di aktivasi oleh pihak sponsor, coba hubungi pihak sponsor anda."){
+						this.activated = true
+						this.sponsor = res.data.sponsor
+					}
+
 				})
 				.catch(err => {
 					// console.log(err)

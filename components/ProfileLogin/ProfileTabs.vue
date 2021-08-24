@@ -99,7 +99,7 @@
 											</blockquote>
 											<br>
 											<center>
-												<a href="" class="btn btn-outline-success mb-5 mt-5">Daftarkan Member Baru</a>
+												<nuxt-link :to="{name: 'member-join-sponsor', params:{sponsor: user.username}}" class="btn btn-outline-success mb-5 mt-5"><i class='bx bxs-user-check'></i>  Daftarkan Member Baru</nuxt-link>
 											</center>
 										</div>
 									</center>
