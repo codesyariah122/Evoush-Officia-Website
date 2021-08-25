@@ -27,7 +27,7 @@ Penulis sendiri belum genap satu tahun di evoush, namun penulis telisik untuk ev
 
 Untuk kalian evousher yang gak mau ketinggalan untuk ikut andil dalam memeriahkan event anniversary evoush jangan lupa yah isi formulir pendaftarannya dan pilih lomba apa yang evousher ingin ikuti, semoga kalian menjadi pemenang di event anniversary ini. Amiin. Ok evousher segitu dulu postingan kali ini, Jaya terus evoush semoga semakin berkembang dalam mengarungi perjalanan bisnis.
 
-<a href="https://evoush.com/event/anniversary/" class="btn btn-primary btn-block">Daftar Lomba</a>
+
 
 Salaam.
 

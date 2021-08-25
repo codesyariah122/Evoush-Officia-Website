@@ -38,7 +38,7 @@
 							<hr>
 							<p class="mb-0">Silahkan klik tombol aktivasi dibawah ini .</p>
 							<!-- <button class="btn btn-primary btn-block mt-5 mb-3" @click="AktivasiAkun">Aktivasi Akun</button> -->
-							<a :href="`https://wa.me/${dataSponsor[0].phone}?text=Hallo%20${dataSponsor[0].name}%20saya%20tertarik%20untuk%20join%20Evoush, %20apa%20anda%20bisa%20bantu%20saya`" target="_blank" class="btn btn-primary btn-block mt-5 mb-5" @click="AktivasiAkun">Aktivasi Akun</a>
+							<a :href="`https://wa.me/${dataSponsor[0].phone}?text=Hallo%20${dataSponsor[0].name}%20saya%20sudah%20melakukan%20join%20menjadi%20member%20anda, %20apa%20anda%20bisa%20bantu%20saya%20untuk%20proses%20aktivasi`" target="_blank" class="btn btn-primary btn-block mt-5 mb-5" @click="AktivasiAkun">Aktivasi Akun</a>
 						</div>
 					</div>
 				</div>

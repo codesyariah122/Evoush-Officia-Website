@@ -265,9 +265,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   /*height: 150vh;*/
   min-height: 100vh;
-  background: url("https://raw.githubusercontent.com/evoush12/bahan_evoush/main/assets/img/bg/ind.jpg") top right no-repeat;
+  background: url("https://raw.githubusercontent.com/evoush122/bahan_evoush/main/assets/img/bg/propolis-doktersehat2_edit.jpg") top right no-repeat;
   background-size: cover;
   position: relative;
+  padding-left: 50px;
   /*margin-top: -2rem;*/
   /*background-repeat:no-repeat;
   background-size:contain;
@@ -280,7 +281,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 992px) {
   #hero {
-    background: url("https://raw.githubusercontent.com/evoush12/bahan_evoush/main/assets/img/bg/propolis-doktersehat2.jpg") right no-repeat;
+    background: url("https://raw.githubusercontent.com/evoush122/bahan_evoush/main/assets/img/bg/propolis-doktersehat2.jpg") right no-repeat;
     /*width: 100%;
     height: 100vh;
     min-height: 500px;
@@ -288,11 +289,14 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;*/
-    padding-left: 160px;
+    /*padding-left: 160px;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+  }
+   #hero .social-links a {
+    color: #45505b!important;
   }
 }
 
@@ -336,8 +340,8 @@ h1, h2, h3, h4, h5, h6 {
 #hero .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: #45505b;
-  /*color: #fff;*/
+  /*color: #45505b;*/
+  color: #fff;
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
@@ -360,6 +364,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
     line-height: 24px;
   }
+
 }
 
 /*--------------------------------------------------------------

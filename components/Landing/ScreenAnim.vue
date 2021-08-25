@@ -6,13 +6,13 @@
 
 <style scoped>
 .anim{
-	margin-top: -5rem;
-	margin-left: -.5rem;
+	margin-top: -7rem;
+	margin-left: .7rem;
 }
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
 	.anim{
-		margin-top: -12rem;
-		margin-left: 20rem;
+		margin-top: -7rem;
+		margin-left: 5rem;
 	}
 }
 </style>

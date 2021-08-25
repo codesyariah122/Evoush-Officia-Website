@@ -7,7 +7,12 @@
 						<nuxt-link :to="`/profile/${user.username}`"><i class='bx bxs-user-detail'></i> <span>{{username}}</span></nuxt-link>
 					</li>
 				</div>
-				<li class="active">
+				<div v-else>
+					<li class="active">
+						<nuxt-link to="/auth/login"><i class='bx bxs-key'></i> <span>Login Profile</span></nuxt-link>
+					</li>
+				</div>
+				<li>
 					<a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a>
 				</li>
 				<li>

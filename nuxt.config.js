@@ -43,6 +43,7 @@ export default {
 
 
     script: [
+
     {
       src: 'https://cdn.popt.in/pixel.js?id=146a60e91cb08',
       async: 'true',
