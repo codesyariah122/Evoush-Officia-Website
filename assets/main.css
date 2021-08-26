@@ -229,3 +229,11 @@ body h2{
   background-color: var(--bg-cookie);
   color: var(--color-dua);
 }
+
+.about .content h3{
+  color: var(--color);
+}
+
+.about .content h2{
+  color: var(--color-profile);
+}

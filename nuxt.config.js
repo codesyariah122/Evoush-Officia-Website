@@ -1,5 +1,5 @@
 require('dotenv').config()
-console.log(process.env.PROD)
+// console.log(process.env.PROD)
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   mode: 'spa',
@@ -36,8 +36,6 @@ export default {
       { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/owl.carousel/assets/owl.carousel.min.css'},
       { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/aos/aos.css'},
       { rel: 'stylesheet', type: 'text/css', href: '/assets/css/style.css'},
-      { rel: 'stylesheet', type: 'text/css', href: '/assets/anniversary/fonts/font-awesome-4.7.0/css/font-awesome.min.css'},
-      { rel: 'stylesheet', type: 'text/css', href: '/assets/anniversary/fonts/iconic/css/material-design-iconic-font.min.css'}
       // { rel: 'manifest', href: '/manifest.json'}
     ],
 
@@ -70,15 +68,6 @@ export default {
     {
       src: 'https://www.openstreetmap.org/assets/leaflet-src.js.map',
       type: 'text/html'
-    },
-
-    {
-      src: '/assets/anniversary/tilt/tilt.jquery.min.js',
-      type: 'text/javascript'
-    },
-    {
-      src: '/assets/js/anniversary.js',
-      type: 'text/javascript'
     },
     {
       src: 'https://cdn.tiny.cloud/1/36xbwrnfekuspwhfv02z1kuwy3sz4nbehpqkb3x7bh8tek86/tinymce/5/tinymce.min.js',
@@ -279,6 +268,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // {src: '~/plugins/updated', mode: 'client'},
+    {src: '~/plugins/vue-tel-input'},
     {src: '~/plugins/vue-toastification'},
     {src: '~/plugins/pwa-update', mode: 'client'},
     {src: '~/plugins/plugins_vue-chartjs', ssr: false},

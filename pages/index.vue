@@ -3,12 +3,12 @@
 
 		<div class="container">
 
-			<div class="row justify-content-center">
+			<!-- <div class="row justify-content-center">
 				<div class="col-lg-12 col-12 col-xs-12 col-sm-12">
-					<!-- <img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/news/new-news.jpeg" class="img-fluid img-responsive"> -->
+					<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/news/new-news.jpeg" class="img-fluid img-responsive">
 					<ScreenAnim/>
 				</div>
-			</div>
+			</div> -->
 
 			<!-- <div class="container-fluid mt-5">
 				<div class="row justify-content-center">
@@ -17,6 +17,12 @@
 					</div>
 				</div>
 			</div> -->
+
+			<div class="row justify-content-center">
+				<div class="col-lg-12 col-xs-12 col-sm-12">
+					<Branding />
+				</div>
+			</div>
 
 
 			<div class="row justify-content-center mt-5">
@@ -49,10 +55,12 @@
 
 		<Product :products="results"/>
 
+		<!-- <h1 class="underline" style="margin-top: 5rem;"></h1> -->
+
+		<!-- <SendSms/> -->
+
 		<!-- <CheckOngkir/> -->
-
-		<Branding />
-
+		<h1 class="underline" style="margin-top: 5rem;"></h1>
 
 		<Members :members="members"/>
 
@@ -91,6 +99,7 @@
 	import ScreenAnim from '@/components/Landing/ScreenAnim'
 	import CheckOngkir from '@/components/Landing/CheckOngkir'
 	import Updated from '@/components/Landing/Updated'
+	import SendSms from '@/components/Landing/SendSms'
 	// import RegisterEvent from '@/components/Landing/RegisterEventButton'
 
 	export default {
@@ -108,7 +117,8 @@
 			AddToHome,
 			ScreenAnim,
 			CheckOngkir,
-			Updated
+			Updated,
+			SendSms
 		},
 
 		async asyncData({$content, params, $axios, $config}){

@@ -144,7 +144,8 @@
 									<option value="">+15</option>
 									<option value="">+18</option>
 								</select> -->
-								<input type="tel" id="phone" name="phone" placeholder="Phone Number Format:(628782xxxx)" class="form-control bg-white border-md border-left-0 pl-3">
+								<vue-tel-input type="number" v-model="tell.phone" class="bg-white border-md border-left-0 pl-3" id="phone" name="phone"></vue-tel-input>
+								<!-- <input type="tel" id="phone" name="phone" placeholder="Phone Number Format:(628782xxxx)" class="form-control bg-white border-md border-left-0 pl-3"> -->
 								<div class="col-lg-12 col-xs-12 col-sm-12">
 									<small class="text-danger">*Wajib diisi</small>
 									<br />
@@ -394,6 +395,9 @@
 				email_sponsor: "",
 				showing_axios: false,
 				success: false,
+				tell:{
+					phone:''
+				},
 				field: {},
 				fields: {},
 				messages: {},
@@ -431,7 +435,8 @@
 						username_path: document.querySelector("#username_path").value,
 						name: document.querySelector("#name").value,
 						email: document.querySelector("#email").value,
-						phone: document.querySelector("#phone").value,
+						// phone: document.querySelector("#phone").value,
+						phone: this.tell.phone,
 						province: document.querySelector("#province").value,
 						city: document.querySelector("#city").value,
 						password: password,
@@ -565,8 +570,8 @@
 </script>
 
 <style scoped>
-	.border-md {
-    border-width: 2px;
+.border-md {
+	border-width: 2px;
 }
 
 .btn-facebook {
@@ -587,7 +592,9 @@
     background: #1799e4;
 }
 
-
+.show{
+	cursor: pointer;
+}
 
 /*
 *

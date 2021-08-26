@@ -310,7 +310,7 @@ data-aos-delay="300"
 	</svg>
 	<i class='bx bxs-first-aid'></i>
 </div>
-<h4><a href="">Halo Dokter</a></h4>
+<h4><a href="">Evoush Healthy</a></h4>
 <p>
 	Hallo evousher  sekarang ini anda bisa berkonsultasi melalui aplikasi halo dokter ini.
 </p>
@@ -416,7 +416,7 @@ data-aos-delay="300"
 </div>
 
 
-<div
+<!-- <div
 class="col-lg-12 col-md-12 d-flex align-items-stretch mt-4"
 data-aos="zoom-in"
 data-aos-delay="300"
@@ -446,7 +446,7 @@ data-aos-delay="300"
 <nuxt-link to="/pusat-bantuan" class="btn btn-primary mt-3">Pusat Bantuan</nuxt-link>
 
 </div>
-</div>
+</div> -->
 
 
 </div>

@@ -8,7 +8,7 @@
 						<blockquote class='blockquote-footer'>
 							Rekomendasi terbaik bagi anda, yang mendambakan kulit sehat, terjaga dan awet muda.
 						</blockquote>
-						
+
 						<div class="owl-carousel portfolio-details-carousel">
 							<img v-for="branding in brandings" :src="branding.img" class="img-fluid" alt="">
 						</div>
@@ -27,12 +27,8 @@
 		data(){
 			return{
 				brandings: [
-					{id: 1, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/6.jpeg'},
-					{id: 2, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/5.jpeg'},
-					{id: 3, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/WhatsApp%20Image%202021-08-09%20at%2014.42.32.jpeg'},
-					{id: 4, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/WhatsApp%20Image%202021-08-09%20at%2014.42.32%20(1).jpeg'},
-					{id: 5, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/WhatsApp%20Image%202021-08-02%20at%2016.48.28.jpeg'},
-					{id: 6, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/639ee5eb-264b-433a-8924-b3622c7e2390.jpg'},
+					{id: 1, img: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/bahan_gallery/image/new_products/1.jpeg'},
+					{id: 2, img: 'https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/2.jpeg?raw=true'}
 				],
 			}
 		},

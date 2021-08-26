@@ -6,7 +6,7 @@
 				<div class="section-title">
 					<h2>Leaders</h2>
 					<p>
-						Halo <span style="color:#ff3b40;">evousher</span> <strong class="text-primary">{{city}}</strong> <br> 
+						Halo <span style="color:#ff3b40;">evousher</span> <strong class="text-primary">{{city}}</strong> <br>
 						Berikut kami perkenalkan leader-leader terbaik <span style="color:#ff3b40;">evoush</span>. Beliau-beliau telah melewati pencapaian melalui kegigihan dan kerja keras tangguh yang tiada sia-sia, <span style="color:#ff3b40;">evousher</span>. Kami memberikan tempat terhormat pada para leader dan berikut persembahan kami yaitu web support yang kami dedikasikan guna meningkatkan branding secara personal bagi leader-leader dan member-member evoush lain dan calon member yang akan join, dan kami akan selalu terus meningkatkan kualitas terbaik kami.
 					</p>
 				</div>
@@ -63,6 +63,16 @@
 								<div class="mt-5">
 									<nuxt-link :to="{name:'member-username', params: {username: member.username}}" class="btn btn-primary"><i class='bx bx-link-external text-white'></i> Lihat Profile</nuxt-link>
 								</div>
+								<div class="row justify-content-center mt-5">
+									<div class="col-lg-12 col-xs-12 col-sm-12">
+										<center>
+											<small class="text-info">
+												Hallo evousher anda bisa langsung join menjadi member dari daftar leader / sponsor yang resmi terdaftar sebagai leader evoush
+											</small> <br>
+											<nuxt-link :to="{name: 'member-join-sponsor', params:{sponsor: member.username}}" class="btn btn-outline-success mb-5"><i class='bx bxs-user-check'></i>  Join Now</nuxt-link>
+										</center>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -80,7 +90,7 @@
 						</blockquote>
 						<pagination align="center" :data="members" @pagination-change-page="listMembers"></pagination>
 					</div>
-			
+
 		</div>
 	</div>
 </section>
@@ -99,7 +109,7 @@
 			pagination
 		},
 
-		
+
 		data(){
 			return {
 				ip: '',

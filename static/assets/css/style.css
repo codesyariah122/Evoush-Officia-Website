@@ -423,6 +423,12 @@ section {
   font-weight: 700;
   font-size: 26px;
   color: #728394;
+  text-transform: uppercase;
+}
+
+.about .content h2 {
+  font-weight: 800;
+  font-size: 36px;
 }
 
 .about .content ul {
@@ -444,6 +450,19 @@ section {
   margin-bottom: 0;
 }
 
+@media (min-width: 992px) {
+  .about .content h3{
+    margin-left: 7rem;
+    margin-top: 3rem;
+  }
+
+  .about .content h2{
+    margin-left: 7rem;
+  }
+}
+/*.about .mix{
+  mix-blend-mode: multiply;
+}*/
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/

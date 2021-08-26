@@ -5,7 +5,7 @@
 				<div class="col-lg-1 col-xs-6 col-sm-6">
 					<nuxt-link class="btn btn-danger ml-3 mt-3" to="/#pages"><i class='bx bx-arrow-back'></i>Kembali</nuxt-link>
 				</div>
-			</div>	
+			</div>
 		</div>
 
 		<Management :managements="managements" :index="index" class="mt-3 mb-5"/>
@@ -16,7 +16,7 @@
 <script>
 	export default {
 		layout: 'pages',
-		
+
 		head(){
 			return {
 				title: "Evoush::Management",
@@ -44,8 +44,8 @@
 		data(){
 			return{
 				managements: [
-					{id: 1, name: 'Muslichun Iskandar', jabatan: 'Direktur Utama', img: 'https://github.com/evoush12/bahan_evoush/blob/main/management/Pak%20Mus.png?raw=true', hero: 'https://www.wallpapertip.com/wmimgs/16-169280_human-resource-management-hr.jpg', popup: 'https://raw.githubusercontent.com/evoush12/bahan-evoush/main/images/management/1QQQ.jpg', fb: '', ig: '', twitter: ''},
-					{id: 2, name: 'Mayjen TNI H.M. Syafei Kasno', jabatan: 'Komisaris Utama', img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/management/edit2.png', hero: 'https://dvkconsultants.ae/wp-content/uploads/2018/02/DIGITAL-HUMAN-RESOURCE-MANAGEMENT.jpg', popup: 'https://raw.githubusercontent.com/evoush12/bahan-evoush/main/images/management/1QQ.jpg', fb: '', ig: '', twitter: ''}
+					{id: 1, name: 'Mayjen TNI H.M. Syafei Kasno', jabatan: 'Komisaris Utama', img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/management/edit2.png', hero: 'https://dvkconsultants.ae/wp-content/uploads/2018/02/DIGITAL-HUMAN-RESOURCE-MANAGEMENT.jpg', popup: 'https://raw.githubusercontent.com/evoush12/bahan-evoush/main/images/management/1QQ.jpg', fb: '', ig: '', twitter: ''},
+					{id: 2, name: 'Muslichun Iskandar', jabatan: 'Direktur Utama', img: 'https://github.com/evoush12/bahan_evoush/blob/main/management/Pak%20Mus.png?raw=true', hero: 'https://www.wallpapertip.com/wmimgs/16-169280_human-resource-management-hr.jpg', popup: 'https://raw.githubusercontent.com/evoush12/bahan-evoush/main/images/management/1QQQ.jpg', fb: '', ig: '', twitter: ''}
 				],
 				index: null
 			}

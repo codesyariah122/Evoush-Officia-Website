@@ -28,6 +28,7 @@
     justify-content: center;
     border-bottom: 1px solid white;
     color: white;
+    background-color: #ff3b40;
   }
   .cookie-consent button {
     border: 1px solid white;
