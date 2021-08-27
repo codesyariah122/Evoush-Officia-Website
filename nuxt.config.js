@@ -65,10 +65,11 @@ export default {
     //   src: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js',
     //   async: null
     // },
-    {
-      src: 'https://www.openstreetmap.org/assets/leaflet-src.js.map',
-      type: 'text/html'
-    },
+    // {
+    //   src: 'https://www.openstreetmap.org/assets/leaflet-src.js.map',
+    //   type: 'text/html'
+    // },
+
     {
       src: 'https://cdn.tiny.cloud/1/36xbwrnfekuspwhfv02z1kuwy3sz4nbehpqkb3x7bh8tek86/tinymce/5/tinymce.min.js',
       type: 'text/javascript',
@@ -268,6 +269,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // {src: '~/plugins/updated', mode: 'client'},
+    {src: '~/plugins/nuxt-leaflet', mode: 'client', ssr: false},
     {src: '~/plugins/vue-tel-input'},
     {src: '~/plugins/vue-toastification'},
     {src: '~/plugins/pwa-update', mode: 'client'},

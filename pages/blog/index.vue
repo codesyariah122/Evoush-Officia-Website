@@ -23,11 +23,13 @@
 
 			<div v-for="article in articles" class="col-lg-4 col-md-6 portfolio-item">
 				<div class="portfolio-wrap">
-					<img
-					:src="require(`~/assets/blog/images/${article.slug}/${article.img}`)"
-					class="img-fluid"
-					alt=""
-					/>
+					<div class="wrap-article">
+						<img
+						:src="require(`~/assets/blog/images/${article.slug}/${article.img}`)"
+						class="img-fluid img-articles"
+						alt=""
+						/>
+					</div>
 					<div class="portfolio-info">
 						<h4>{{article.title}}</h4>
 						<p>{{article.categories}}</p>
@@ -101,6 +103,14 @@
 </script>
 
 
-<style scoped>
-
+<style>
+@media (min-width: 992px) {
+	.img-articles{
+		height:300px;
+		width: 400px;
+	}
+	.wrap-article{
+		margin-bottom: -1rem;
+	}
+}
 </style>

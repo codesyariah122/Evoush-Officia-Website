@@ -57,6 +57,8 @@
 
 		<!-- <h1 class="underline" style="margin-top: 5rem;"></h1> -->
 
+		<!-- <YoutubeChannel :channels="channels"/> -->
+
 		<!-- <SendSms/> -->
 
 		<!-- <CheckOngkir/> -->
@@ -100,6 +102,7 @@
 	import CheckOngkir from '@/components/Landing/CheckOngkir'
 	import Updated from '@/components/Landing/Updated'
 	import SendSms from '@/components/Landing/SendSms'
+	import YoutubeChannel from '@/components/Landing/YoutubeChannel'
 	// import RegisterEvent from '@/components/Landing/RegisterEventButton'
 
 	export default {
@@ -118,10 +121,13 @@
 			ScreenAnim,
 			CheckOngkir,
 			Updated,
-			SendSms
+			SendSms,
+			YoutubeChannel
 		},
 
 		async asyncData({$content, params, $axios, $config}){
+			const channel_id = 'UCIzNgeNDD58z8XNppkopwzw'
+			const channels = await $axios.$get(`/evoush/youtube/${channel_id}`)
 			const results = await $axios.$get('/product/all')
 			const members = await $axios.$get('/evoush/member-list')
 			const articles = await $content('Blog', params.slug)
@@ -130,7 +136,7 @@
 			.where({categories: 'news'})
 			.fetch();
 			// console.log(newMembers)
-			return { results, members, articles}
+			return { results, members, articles, channels}
 		},
 
 		data(){

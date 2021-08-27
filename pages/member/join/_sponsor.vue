@@ -51,7 +51,7 @@
 
 							<input type="hidden" name="sponsor_id" :value="dataSponsor[0].id" id="sponsor_id">
 
-							<input type="hidden" name="roles[]" value='["FOLLOWER"]' id="roles">
+							<input type="hidden" name="roles[]" value="FOLLOWER" id="roles">
 
 							<input type="hidden" name="status" value="INACTIVE" id="status">
 
@@ -416,6 +416,21 @@
 				this.$router.back()
 			},
 			storeNewMember(e) {
+				this.fields = {
+					sponsor_id: document.querySelector("#sponsor_id").value,
+					roles: document.querySelector("#roles").value,
+					status: document.querySelector("#status").value,
+					username_path: document.querySelector("#username_path").value,
+					name: document.querySelector("#name").value,
+					email: document.querySelector("#email").value,
+						// phone: document.querySelector("#phone").value,
+						phone: this.tell.phone,
+						province: document.querySelector("#province").value,
+						city: document.querySelector("#city").value,
+						password: password,
+						password_confirmation: confirm_password,
+						achievements: null
+					};
 				const password = document.querySelector("#password").value;
 				const confirm_password = document.querySelector(
 					"#password_confirmation"
@@ -428,21 +443,7 @@
 				} else {
 					this.loading = true
 					this.$toast("Tunggu beberapa saat, proses join sedang berlangsung...")
-					this.fields = {
-						sponsor_id: document.querySelector("#sponsor_id").value,
-						roles: document.querySelector("#roles").value,
-						status: document.querySelector("#status").value,
-						username_path: document.querySelector("#username_path").value,
-						name: document.querySelector("#name").value,
-						email: document.querySelector("#email").value,
-						// phone: document.querySelector("#phone").value,
-						phone: this.tell.phone,
-						province: document.querySelector("#province").value,
-						city: document.querySelector("#city").value,
-						password: password,
-						password_confirmation: confirm_password,
-						achievements: null
-					};
+
 					this.$axios
 					.post("https://app.evoush.com/api/member/activation", this.fields)
 					.then(res => {

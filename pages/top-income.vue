@@ -5,7 +5,7 @@
 				<div class="col-lg-1 col-xs-6 col-sm-6">
 					<nuxt-link class="btn btn-danger ml-3 mt-3" to="/#pages"><i class='bx bx-arrow-back'></i>Kembali</nuxt-link>
 				</div>
-			</div>	
+			</div>
 
 			<div class="row justify-content-center">
 				<div class="col-lg-12 col-xs-12 col-sm-12 text-center">
@@ -13,14 +13,14 @@
 						<h2 class="portfolio-title">Top Income</h2>
 					</div>
 				</div>
-				<div class="col-lg-12 col-xs-12 col-sm-12 mt-2 mb-5">
+				<!-- <div class="col-lg-12 col-xs-12 col-sm-12 mt-2 mb-5">
 					<div class="embed-responsive embed-responsive-16by9">
 						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2EGfDiGcK-E" allowfullscreen></iframe>
 					</div>
-				</div>
-			</div>	
+				</div> -->
+			</div>
 
-			<h1 class="underline" style="margin-bottom: 5rem;"></h1>
+			<!-- <h1 class="underline" style="margin-bottom: 5rem;"></h1> -->
 
 			<div class="row justify-content-center">
 				<div class="col-lg-12 col-xs-12 col-sm-12 mt-2">
@@ -28,7 +28,7 @@
 				</div>
 				<TopIncome />
 			</div>
-			
+
 		</div>
 	</div>
 </template>
@@ -51,7 +51,7 @@
 		},
 
 		methods: {
-			
+
 		}
 	}
 </script>

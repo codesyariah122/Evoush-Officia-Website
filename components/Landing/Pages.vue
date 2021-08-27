@@ -127,10 +127,9 @@ data-aos-delay="100"
 </div>
 <h4><a href="">Stokis</a></h4>
 <p>
-	At vero eos et accusamus et iusto odio dignissimos ducimus qui
-	blanditiis
+	Evoush memliki mitra stockist yang tersebar di beberapa wilayah pulau / provinsi di Indonesia, anda bisa melihat daftar stockist evoush yang telah resmi menjadi mitra evoush.
 </p>
-<nuxt-link to="/stokis" class="btn btn-primary mt-3">Stokis</nuxt-link>
+<nuxt-link to="/stokis" class="btn btn-primary mt-3">List Stokis</nuxt-link>
 </div>
 </div>
 
@@ -372,9 +371,9 @@ data-aos-delay="300"
 	</svg>
 	<i class='bx bx-check-shield'></i>
 </div>
-<h4><a href="">Term Of Service</a></h4>
+<h4><a href="">Inspiration Movies</a></h4>
 <p>
-	Setiap data-data sensitive yang terdapat di konten website official evoush ini merupakan data yang terjaga hak cipta dan privasi sangat terjaga, di bawah payung hukum <strong>PT. Pineleng Indah Cemerlang</strong> sebagai naungan hukum sah yang melindungi semua konten yang terdapat dalam website official evoush ini.
+	Content movie yang bisa menjadi daftar inspirasi untuk memajukan bisnis kita di evoush.
 </p>
 
 <nuxt-link to="/term-of-service" class="btn btn-primary mt-3">Term Of Service</nuxt-link>

@@ -290,6 +290,8 @@ h1, h2, h3, h4, h5, h6 {
     background-attachment: fixed;
     position: relative;*/
     /*padding-left: 160px;*/
+    /*clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 100%);*/
+    background-position: top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -702,7 +704,8 @@ section {
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
-  color: #45505b;
+  /*color: #45505b;*/
+  color: #000000;
   font-weight: 600;
 }
 
@@ -752,6 +755,7 @@ section {
   bottom: 15px;
   right: 15px;
 }
+
 
 /*--------------------------------------------------------------
 # pages

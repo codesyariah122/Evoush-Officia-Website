@@ -9,19 +9,20 @@
 
         <div class="row mt-1">
           <div class="col-lg-4">
-            <div class="info mb-5">
+            <div class="info mb-2">
               <div v-for="panel in panels" class="address">
                 <i class="icofont-google-map text-white"></i>
                 <h4>Location:</h4>
                 <p><b v-html="panel.lokasi"></b></p>
                 <br>
                 <div class="container">
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <!-- <iframe align="center" width="250" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" :src="panel.map" style="border: 1px solid black"></iframe> -->
+                  <Location/>
+                  <!-- <div class="embed-responsive embed-responsive-16by9">
+                    <iframe align="center" width="250" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" :src="panel.map" style="border: 1px solid black"></iframe>
                     <br/>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15824.382293592016!2d112.7473496!3d-7.4546784!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4368c61e34a370d1!2sPineleng%20indah%20cemerlang!5e0!3m2!1sid!2sid!4v1629692205791!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    <!-- <small><a href="https://www.openstreetmap.org/?mlat=-7.46097&amp;mlon=112.74037#map=17/-7.46097/112.74037&amp;layers=D">View Larger Map</a></small> -->
-                  </div>
+                    <small><a href="https://www.openstreetmap.org/?mlat=-7.46097&amp;mlon=112.74037#map=17/-7.46097/112.74037&amp;layers=D">View Larger Map</a></small>
+                  </div> -->
                 </div>
               </div>
 
@@ -99,7 +100,7 @@
 
               <div class="form-row">
                 <div class="col-md-6 form-group mt-2 ml-3">
-                  <input
+                  <!-- <input
                   type="text"
                   name="phone"
                   class="form-control"
@@ -107,7 +108,8 @@
                   placeholder="No telephone aktif anda: example(082x xxxx xxxx)"
                   data-rule="minlen:4"
                   data-msg="Please enter at least 4 chars" v-model="contacts.phone"
-                  />
+                  /> -->
+                  <vue-tel-input v-model="contacts.phone"></vue-tel-input>
                   <div v-if="errors.phone">
                     <div class="mt-2 mb-2 alert alert-danger">
                       {{errors.phone}}
@@ -203,7 +205,14 @@
 
 
     <script>
+      import Location from '@/components/Contacts/Location'
+
       export default{
+
+        components: {
+          Location
+        },
+
         data(){
           return {
             status: '',

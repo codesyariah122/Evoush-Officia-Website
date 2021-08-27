@@ -1,10 +1,10 @@
 <template>
 	<div>
 		<div v-for="member in members" class="col-lg-12 col-xs-12 col-sm-12 mb-5" data-aos="fade-up">
-			
+
 			<!-- <h5><strong>{{lists[0].data}}</strong></h5> -->
-			
-			<div class="card profile-card-2">
+
+			<!-- <div class="card profile-card-2">
 				<div class="card-img-block">
 					<img class="img-responsive img-fluid" :src="(member.cover) ? `https://app.evoush.com/storage/${member.cover}` : `https://mediatrack.sg/wp-content/uploads/2021/02/digital-transformation-banner-blog.png` " alt="Card image cap">
 				</div>
@@ -15,7 +15,7 @@
 
 					<div class="row justify-content-center mt-5 media-body">
 						<div class="col-lg-8 col-xs-8 col-sm-8">
-							<center>											
+							<center>
 								<h5 class="card-title ml-3" style="text-transform: capitalize;">{{member.name}}</h5>
 								<p><strong>Username : {{member.username}}</strong></p>
 								<p :class="(member.achievements.includes('STAR SAPHIRE')) ? `badge badge-primary text-white` : `badge badge-success text-white`"> {{member.achievements.includes('STAR SAPHIRE') ? 'STAR SAPHIRE' : 'SAPHIRE'}} </p>
@@ -25,7 +25,7 @@
 								</div>
 
 								<blockquote v-if="member.quotes"  class="card-text blockquote-footer">
-									{{member.quotes}} 
+									{{member.quotes}}
 									<br><br>
 									<small class="text-primary">Quotes By, <strong>{{member.username}}</strong></small>
 								</blockquote>
@@ -43,7 +43,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 		</div>
 	</div>
@@ -159,7 +159,7 @@
 	font-size: 11px;
 }
 
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
 	.profile-card-2 .card-img-block{
 		float:left;
 		width: 100%;
