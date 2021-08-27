@@ -430,11 +430,16 @@
 						password: password,
 						password_confirmation: confirm_password,
 						achievements: null
-					};
+				};
 				const password = document.querySelector("#password").value;
 				const confirm_password = document.querySelector(
 					"#password_confirmation"
 					).value;
+
+				if(this.fields.name === "" || this.fields.email === "" || this.fields.phone === "" || this.fields.province === "" || this.fields.city === ""){
+					this.getAlert("Anda belum mengisi kolom input join / Harap isi kolom input dengan benar" , "https://media0.giphy.com/media/utmZFnsMhUHqU/200.gif")
+				}
+
 				if (password !== confirm_password) {
 					this.getAlert(
 						"Password konfirmasi tidak sama",
@@ -462,15 +467,16 @@
 					})
 					.catch(err => {
 						console.log(err.response.data);
-						this.getAlert(
-							err.response.data.message,
-							"https://media0.giphy.com/media/utmZFnsMhUHqU/200.gif"
-							);
+						// this.getAlert(
+						// 	err.response.data.message,
+						// 	"https://media0.giphy.com/media/utmZFnsMhUHqU/200.gif"
+						// 	);
+						this.getAlert("Terjadi kesalahan saat mengirim data", "https://media0.giphy.com/media/utmZFnsMhUHqU/200.gif")
 						this.messages = err.response.data.errors;
 						this.err_msg = err.response.data.message;
 						this.showing_axios = true;
 						this.success = false;
-						this.show_form = false;
+						this.show_form = true;
 						this.error = true;
 						// this.showModal();
 						this.showForm()
@@ -478,8 +484,8 @@
 					.finally(() => {
 						this.loading = false
 						e.target.reset()
-						this.success = true;
-						this.show_form = true
+						this.success = true
+						this.show_form = false
 						// this.hideModal();
 						this.hideForm()
 					});
