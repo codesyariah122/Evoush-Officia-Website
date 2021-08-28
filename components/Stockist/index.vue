@@ -1,28 +1,16 @@
 <template>
-	<div>
-		<client-only>
-	 		<!-- <l-map :zoom=13 :center="[-7.46097,112.74037]">
-	 			<l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
-	 			<l-marker :lat-lng="[-7.46097,112.74037]"></l-marker>
-	 		</l-map> -->
-	 		<l-map
-		 		ref="myMap"
-		 		:zoom="zoom"
-		 		:center="center"
-		 		>
-		 		<l-marker :lat-lng="regionCenter">
-		 			<l-popup>Lokasi outlet</l-popup>
-		 		</l-marker>
-		 		<l-polyline
-		 		:lat-lngs="polyline.latlngs"
-		 		:color="polyline.color"
-		 		></l-polyline>
-		 		<l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
-		 	</l-map>
-	 	</client-only>
-	</div>
+	<l-map style="height: 500px" :zoom="zoom" :center="center">
+		<l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
+		<l-marker
+			v-for="item in markers"
+			:key="item.id"
+			:lat-lng="item.position"
+			:visible="item.visible"
+			:draggable="item.draggable">
+			<l-popup>Hello!</l-popup>
+		</l-marker>
+	</l-map>
 </template>
-
 
 <script>
 	export default {
@@ -31,22 +19,52 @@
 				url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
 				attribution:
 				'© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-				zoom: 15,
+				zoom: 4.3,
 				center: {
-					lat: -7.46097,
-					lng: 112.74037,
+					lat: -6.200000,
+					lng: 106.816666,
 				},
 				bounds: null,
-				regionCenter: [-7.46097, 112.74037],
 				address: {
 					long: '',
 					display: '',
 				},
-				polyline: {
-					color: 'red',
-					latlngs: [],
-				},
+				region:[-6.200000, 106.816666],
+				markers: [
+					{
+						id: "m1",
+						position: { lat: 51.505, lng: -0.09 },
+						draggable: true,
+						visible: true
+					},
+					{
+						id: "m2",
+						position: { lat: 51.8905, lng: -0.09 },
+						draggable: true,
+						visible: false
+					},
+					{
+						id: "m3",
+						position: { lat: 51.005, lng: -0.09 },
+						draggable: true,
+						visible: true
+					},
+					{
+						id: "m4",
+						position: { lat: 50.7605, lng: -0.09 },
+						draggable: true,
+						visible: false
+					}
+				],
 
+			}
+		},
+
+		methods: {
+			OpenPopup(event){
+				Vue.nextTick(() => {
+					event.target.openPopup();
+				})
 			}
 		}
 	}

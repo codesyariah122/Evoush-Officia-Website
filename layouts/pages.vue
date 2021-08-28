@@ -18,7 +18,7 @@
 
 				<div class="row justify-content-center">
 					<div class="col-lg-12 col-xs-12 col-sm-12">
-						<SocialSharing :socials="socials"/>
+						<!-- <SocialSharing :socials="socials"/> -->
 					</div>
 				</div>
 
@@ -36,6 +36,7 @@
 
 <script>
 	import ColorModePicker from '@/components/molecules/ColorModePicker'
+	import SocialSharing from '@/components/global/SocialSharing'
 
 	export default {
 		data(){
@@ -44,7 +45,8 @@
 			}
 		},
 		components: {
-			ColorModePicker
+			ColorModePicker,
+			SocialSharing
 		}
 
 	}

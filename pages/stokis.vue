@@ -7,7 +7,7 @@
 				</div>
 			</div>
 
-			<div class="row justify-content-center">
+			<div class="row justify-content-center mt-5">
 				<div class="col-lg-12 col-xs-12 col-sm-12">
 					<!-- <img :src="map" class="img-fluid img-responsive"> -->
 					<div style="height: 250px; width: 100%">

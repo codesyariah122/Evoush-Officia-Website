@@ -26,7 +26,7 @@
 				<div class="col-lg-12 col-xs-12 col-sm-12 mt-2">
 					<p class="blockquote-footer">Berikut daftar member <strong>10 Besar</strong> peraih <strong>top income</strong> yang kami berikan pada para member yang meraih pencapian terbaik dalam kurun periode yang telah kami tentukan.</p>
 				</div>
-				<TopIncome />
+				<!-- <TopIncome /> -->
 			</div>
 
 		</div>

@@ -33,6 +33,12 @@
 						</div>
 					</div>
 
+					<div class="col-lg-12 col-xs-12 col-sm-12 mt-5 mb-5">
+						<div class="embed-responsive embed-responsive-1by1">
+							<iframe src="https://drive.google.com/file/d/1hwjpBRd3xmFKPTR5gT7wnDVi2d-V9lBG/preview" width="640" height="600" allow="autoplay"></iframe>
+						</div>
+					</div>
+
 					<div class="col-lg-12 col-xs-12 col-sm-12 mt-5 mb-5" data-aos="fade-up">
 						<div class="embed-responsive embed-responsive-16by9">
 							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/DWgPxCKFFS4" allowfullscreen></iframe>

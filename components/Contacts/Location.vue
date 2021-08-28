@@ -1,17 +1,13 @@
 <template>
 	 <div style="height: 250px; width: 100%">
 	 	<client-only>
-	 		<!-- <l-map :zoom=13 :center="[-7.46097,112.74037]">
-	 			<l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
-	 			<l-marker :lat-lng="[-7.46097,112.74037]"></l-marker>
-	 		</l-map> -->
 	 		<l-map
 		 		ref="myMap"
 		 		:zoom="zoom"
 		 		:center="center"
 		 		>
 		 		<l-marker :lat-lng="regionCenter">
-		 			<l-popup>Lokasi outlet</l-popup>
+		 			<l-popup>PT. Pineleng Indah Cemerlang (Evoush Office)</l-popup>
 		 		</l-marker>
 		 		<l-polyline
 		 		:lat-lngs="polyline.latlngs"

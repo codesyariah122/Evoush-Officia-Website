@@ -28,9 +28,28 @@
 							<div class="mt-5">
 								<h4>{{member.name}}</h4>
 								<ul>
-									<li><strong>Username : {{member.username}}</strong></li>
+									<li><strong>Username : {{(member.username === "fentirifqi") ? "coachrifqi" : member.username}}</strong></li>
 									<li><strong>Status : </strong> <span class="badge badge-success">Active</span></li>
-									<li class="mt-3"><span :class="`${member.achievements.includes('STAR SAPHIRE') ? 'badge badge-primary' : 'badge badge-success'}`"><i :class="`${member.achievements.includes('STAR SAPHIRE') ? 'bx bxs-trophy bx-lg text-white' : 'bx bxs-medal bx-lg text-white'}`"></i> {{member.achievements.includes('STAR SAPHIRE') ? 'STAR SAPHIRE' : 'SAPHIRE'}}</span></li>
+									<li class="mt-3">
+										<!-- <span :class="`${member.achievements.includes('STAR SAPHIRE') ? 'badge badge-primary' : 'badge badge-success'}`"><i :class="`${member.achievements.includes('STAR SAPHIRE') ? 'bx bxs-trophy bx-lg text-white' : 'bx bxs-medal bx-lg text-white'}`"></i>
+												{{member.achievements.includes('STAR SAPHIRE') ? 'STAR SAPHIRE' : 'SAPHIRE'}}
+										</span> -->
+										<div v-if="member.achievements.includes('STAR SAPHIRE')">
+											<span class="badge badge-primary">
+												<i class="bx bxs-trophy bx-lg text-white"></i>{{"STAR SAPHIRE"}}
+											</span>
+										</div>
+										<div v-else-if="member.achievements.includes('SAPHIRE')">
+											<span class="badge badge-success">
+												<i class="bx bxs-trophy bx-lg text-white"></i>{{"SAPHIRE"}}
+											</span>
+										</div>
+										<div v-else>
+											<span class="badge badge-danger">
+												{{"No Achievements"}}
+											</span>
+										</div>
+									</li>
 									<li class="mt-5 mb-5">
 										<strong>Media Social : </strong><br>
 										<div class="social-links">

@@ -22,7 +22,7 @@
 
 
 						<div class="p-4 rounded shadow-lg">
-							<p class="font-italic mb-0"><strong>Username : {{member.username}}</strong></p>
+							<p class="font-italic mb-0"><strong>Username : {{(member.username === "fentirifqi") ? "coachrifqi" : member.username}}</strong></p>
 							<p class="font-italic mb-0"><strong>Status : </strong> <span class="badge badge-success">{{member.status}}</span></p>
 							<p class="font-italic mb-0"><strong>Join : {{formatDate(member.created_at)}}</strong></p>
 
@@ -49,7 +49,7 @@
 
 							<div v-else>
 								<blockquote class="blockquote-footer mt-3">
-									<strong>{{member.username}}, <small class="text-danger">belum menambahkan quotes.</small> </strong>
+									<strong>{{(member.username === "fentirifqi") ? "coachrifqi" : member.username}}, <small class="text-danger">belum menambahkan quotes.</small> </strong>
 								</blockquote>
 							</div>
 						</div>

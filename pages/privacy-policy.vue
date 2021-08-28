@@ -5,13 +5,15 @@
 				<div class="col-lg-1 col-xs-6 col-sm-6">
 					<nuxt-link class="btn btn-danger ml-3 mt-3" to="/#pages"><i class='bx bx-arrow-back'></i>Kembali</nuxt-link>
 				</div>
-			</div>	
+			</div>
 			<section class="term-of-service">
 				<div class="section-title">
-					<h2 class="portfolio-title"><strong>Privacy Policy for Evoush::Official</strong></h2>
+					<h2 class="portfolio-title"><strong>Evoush::Official</strong></h2>
 				</div>
-				
-				<p>At Evoush::Official, accessible from https://evoush.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Evoush::Official and how we use it.</p>
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe src="https://drive.google.com/file/d/1NiwGRpVuzSrUWKFXWF_QaxiGiGs1MIwl/preview" width="640" height="800" allow="autoplay"></iframe>
+				</div>
+				<!-- <p>At Evoush::Official, accessible from https://evoush.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Evoush::Official and how we use it.</p>
 
 				<p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
 
@@ -66,7 +68,7 @@
 
 					<h2>Consent</h2>
 
-					<p>By using our website, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.</p>
+					<p>By using our website, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.</p> -->
 			</section>
 		</div>
 

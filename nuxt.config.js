@@ -270,9 +270,9 @@ export default {
   plugins: [
     // {src: '~/plugins/updated', mode: 'client'},
     {src: '~/plugins/nuxt-leaflet', mode: 'client', ssr: false},
-    {src: '~/plugins/vue-tel-input'},
-    {src: '~/plugins/vue-toastification'},
-    {src: '~/plugins/pwa-update', mode: 'client'},
+    {src: '~/plugins/vue-tel-input', mode: 'client', ssr: false},
+    {src: '~/plugins/vue-toastification', mode: 'client', ssr: false},
+    {src: '~/plugins/pwa-update', mode: 'client', ssr: false},
     {src: '~/plugins/plugins_vue-chartjs', ssr: false},
     {src: '~/plugins/vue-social-sharing'},
     {src: '~/plugins/bootstrap-vue'},

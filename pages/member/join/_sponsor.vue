@@ -27,24 +27,27 @@
 				</div>
 
 				<!-- Registeration Form -->
-				<div v-if="loading">
-					<img src="https://img.pikbest.com/58pic/35/39/61/62K58PICb88i68HEwVnm5_PIC2018.gif!w340">
-				</div>
-				<div v-if="show_form" class="col-md-7 col-lg-6 ml-auto">
-					<div v-if="success">
-						<div class="alert alert-success" role="alert">
-							<h4 class="alert-heading">Selamat Bergabung</h4>
-							<p v-html="field.message"></p>
-							<hr>
-							<p class="mb-0">Silahkan klik tombol aktivasi dibawah ini .</p>
-							<!-- <button class="btn btn-primary btn-block mt-5 mb-3" @click="AktivasiAkun">Aktivasi Akun</button> -->
-							<a :href="`https://wa.me/${dataSponsor[0].phone}?text=Hallo%20${dataSponsor[0].name}%20saya%20sudah%20melakukan%20join%20menjadi%20member%20anda, %20apa%20anda%20bisa%20bantu%20saya%20untuk%20proses%20aktivasi`" target="_blank" class="btn btn-primary btn-block mt-5 mb-5" @click="AktivasiAkun">Aktivasi Akun</a>
-						</div>
+
+				<div v-if="hide_form" class="col-md-7 col-lg-6 ml-auto">
+					<div class="alert alert-success" role="alert">
+						<h4 class="alert-heading">Selamat Bergabung</h4>
+						<p v-html="message"></p>
+						<hr>
+						<p class="mb-0">Silahkan klik tombol aktivasi dibawah ini .</p>
+						<!-- <button class="btn btn-primary btn-block mt-5 mb-3" @click="AktivasiAkun">Aktivasi Akun</button> -->
+						<a :href="`https://wa.me/${dataSponsor[0].phone}?text=Hallo%20${dataSponsor[0].name}%20saya%20sudah%20melakukan%20join%20menjadi%20member%20anda, %20apa%20anda%20bisa%20bantu%20saya%20untuk%20proses%20aktivasi`" target="_blank" class="btn btn-primary btn-block mt-5 mb-5" @click="AktivasiAkun">Aktivasi Akun</a>
 					</div>
 				</div>
 
+
 				<div v-else id='form-join' class="col-md-7 col-lg-6 ml-auto">
-					<form @submit.prevent="storeNewMember">
+					<div v-if="loading">
+						<img src="https://d33wubrfki0l68.cloudfront.net/3dafc215e0dc2be7e854dc25c44c453fdaf4be87/ccccb/uploads/foodrush-loader.gif" class="img-fluid">
+					</div>
+					<!-- <h1>Teu di hide anjing</h1> -->
+					<div v-if="err_message" class="alert alert-danger">{{err_message}}</div>
+					<form  @submit.prevent="storeNewMember">
+
 						<div class="row">
 
 							<input type="hidden" name="email_sponsor" :value="dataSponsor[0].email" id="email_sponsor">
@@ -64,27 +67,17 @@
 										<i class='bx bx-user text-muted'></i>
 									</span>
 								</div>
-								<input type="text" name="name" placeholder="Nama Lengkap Anda" class="form-control bg-white border-left-0 border-md" id="name">
+								<input type="text" v-model="field.name" name="name" placeholder="Nama Lengkap Anda" class="form-control bg-white border-left-0 border-md" id="name">
 
 								<div class="col-lg-12 col-xs-12 col-sm-12">
 									<small class="text-danger">*wajib di isi</small>
 									<br />
-									<div v-if="showing_axios">
-										<div v-if="error">
-											<div class="alert alert-danger">
-												<blockquote
-												class="blockquote-footer"
-												>
-												<b class="text-primary">{{
-													err_msg
-												}}</b>
-											</blockquote>
-											<br />
-											<span>{{ messages.name }}</span
-												><br />
-											</div>
-										</div>
-									</div>
+								</div>
+
+								<div class="col-lg-12 col-xs-12 col-sm-12">
+									<small v-if="validation.name" class="mt-2 text-danger">
+										{{validation.name[0]}}
+									</small>
 								</div>
 
 							</div>
@@ -107,27 +100,16 @@
 										<i class='bx bx-envelope-open text-muted'></i>
 									</span>
 								</div>
-								<input id="email" type="email" name="email" placeholder="alamat_email_anda@email.com" class="form-control bg-white border-left-0 border-md">
+								<input id="email" v-model="field.email" type="email" name="email" placeholder="alamat_email_anda@email.com" class="form-control bg-white border-left-0 border-md">
 
 								<div class="col-lg-12 col-xs-12 col-sm-12">
 									<small class="text-danger">*Wajib diisi</small>
 									<br />
-									<div v-if="showing_axios">
-	                                    <div v-if="error">
-	                                        <div class="alert alert-danger">
-	                                            <blockquote
-	                                                class="blockquote-footer"
-	                                            >
-	                                                <b class="text-primary">{{
-	                                                    err_msg
-	                                                }}</b>
-	                                            </blockquote>
-	                                            <br />
-	                                            <span>{{ messages.email }}</span
-	                                            ><br />
-	                                        </div>
-	                                    </div>
-	                                </div>
+								</div>
+								<div class="col-lg-12 col-xs-12 col-sm-12">
+									<small v-if="validation.email" class="mt-2 text-danger">
+										{{validation.email[0]}}
+									</small>
 								</div>
 							</div>
 
@@ -144,27 +126,16 @@
 									<option value="">+15</option>
 									<option value="">+18</option>
 								</select> -->
-								<vue-tel-input type="number" v-model="tell.phone" class="bg-white border-md border-left-0 pl-3" id="phone" name="phone"></vue-tel-input>
+								<vue-tel-input type="number" v-model="field.phone" class="bg-white border-md border-left-0 pl-3" id="phone" name="phone"></vue-tel-input>
 								<!-- <input type="tel" id="phone" name="phone" placeholder="Phone Number Format:(628782xxxx)" class="form-control bg-white border-md border-left-0 pl-3"> -->
 								<div class="col-lg-12 col-xs-12 col-sm-12">
 									<small class="text-danger">*Wajib diisi</small>
 									<br />
-									<div v-if="showing_axios">
-										<div v-if="error">
-											<div class="alert alert-danger">
-												<blockquote
-												class="blockquote-footer"
-												>
-												<b class="text-primary">{{
-													err_msg
-												}}</b>
-											</blockquote>
-											<br />
-											<span>{{ messages.phone }}</span
-												><br />
-											</div>
-										</div>
-									</div>
+								</div>
+								<div class="col-lg-12 col-xs-12 col-sm-12">
+									<small v-if="validation.phone" class="mt-2 text-danger">
+										{{validation.phone[0]}}
+									</small>
 								</div>
 							</div>
 
@@ -193,6 +164,13 @@
 
                                 <div class="col-lg-12 col-xs-12 col-sm-12">
 	                                <small class="text-danger">*wajib di pilih salah satu</small>
+	                                <br>
+                                </div>
+
+                                <div class="col-lg-12 col-xs-12 col-sm-12">
+                                	<small v-if="validation.province" class="mt-2 text-danger">
+										{{validation.province[0]}}
+									</small>
                                 </div>
 
 							</div>
@@ -218,6 +196,13 @@
                                 </select>
                                 <div class="col-lg-12 col-xs-12 col-sm-12">
 	                                <small class="text-danger">*wajib di pilih salah satu</small >
+	                                <br>
+                                </div>
+
+                                <div class="col-lg-12 col-xs-12 col-sm-12">
+                                	<small v-if="validation.city" class="mt-2 text-danger">
+										{{validation.city[0]}}
+									</small>
                                 </div>
 
 							</div>
@@ -229,7 +214,7 @@
 										<i class='bx bx-lock-alt text-muted'></i>
 									</span>
 								</div>
-								<input placeholder="password"
+								<input v-model="field.password" placeholder="password"
                                     type="password"
                                     name="password"
                                     id="password" class="form-control bg-white border-left-0 border-md">
@@ -237,36 +222,23 @@
                                 <div class="col-lg-12 col-xs-12 col-sm-12">
                                 	<small class="text-danger">*wajib di isi</small>
                                 	<br />
-                                	<div v-if="showing_axios">
-                                		<div v-if="error">
-                                			<div class="alert alert-danger">
-                                				<blockquote
-                                				class="blockquote-footer"
-                                				>
-                                				<b class="text-primary">{{
-                                					err_msg
-                                				}}</b>
-                                			</blockquote>
-                                			<br />
-                                			<span>{{ messages.password }}</span
-                                				><br />
-                                			</div>
-                                		</div>
-                                	</div>
-
                                 	<div
                                 	id="show-password"
                                 	class="show"
                                 	v-on:click="showPassword"
                                 	>
-                                	<div v-if="showing === false">
-                                		<span v-html="show"></span> Show Password
-                                	</div>
-                                	<div v-else>
-                                		<span v-html="hide"></span> Hide Password
+	                                	<div v-if="showing === false">
+	                                		<span v-html="show"></span> Show Password
+	                                	</div>
+	                                	<div v-else>
+	                                		<span v-html="hide"></span> Hide Password
+	                                	</div>
                                 	</div>
                                 </div>
-
+                                <div class="col-lg-12 col-xs-12 col-sm-12">
+                                	<small v-if="validation.password" class="mt-2 text-danger">
+										{{validation.password[0]}}
+									</small>
                                 </div>
 
 							</div>
@@ -278,45 +250,32 @@
 										<i class='bx bx-lock-alt text-muted'></i>
 									</span>
 								</div>
-								<input  placeholder="Ketik ulang password anda"
+								<input v-model="field.password_confirmation" placeholder="Ketik ulang password anda"
                                     type="password"
                                     name="password_confirmation"
                                     id="password_confirmation" class="form-control bg-white border-left-0 border-md">
 
                                     <div class="col-lg-12 col-xs-12 col-sm-12">
 	                                    <small class="text-danger">*Ulangi password</small>
-	                                    	<br />
-	                                    	<div v-if="showing_axios">
-	                                    		<div v-if="error">
-	                                    			<div class="alert alert-danger">
-	                                    				<blockquote
-	                                    				class="blockquote-footer"
-	                                    				>
-	                                    				<b class="text-primary">{{
-	                                    					err_msg
-	                                    				}}</b>
-	                                    			</blockquote>
-	                                    			<br />
-	                                    			<span>{{
-	                                    				messages.password_confirmation
-	                                    			}}</span
-	                                    			><br />
-	                                    		</div>
-	                                    	</div>
-	                                    </div>
 	                                    <div
 	                                    id="show-password"
 	                                    class="show"
 	                                    v-on:click="showPasswordConfirm"
 	                                    >
-	                                    <div v-if="showingConfirm === false">
-	                                    	<span v-html="show"></span> Show Password
-	                                    </div>
-	                                    <div v-else>
-	                                    	<span v-html="hide"></span> Hide Password
-	                                    </div>
-	                                </div>
-                                </div>
+		                                    <div v-if="showingConfirm === false">
+		                                    	<span v-html="show"></span> Show Password
+		                                    </div>
+		                                    <div v-else>
+		                                    	<span v-html="hide"></span> Hide Password
+		                                    </div>
+	                                	</div>
+                                	</div>
+
+                                	<div class="col-lg-12 col-xs-12 col-sm-12">
+                                		<small v-if="validation.password_confirmation" class="mt-2 text-danger">
+	                                    		{{validation.password_confirmation[0]}}
+	                                    	</small>
+                                	</div>
 
 							</div>
 
@@ -356,6 +315,7 @@
 
 						</div>
 					</form>
+
 				</div>
 			</div>
 		</div>
@@ -383,7 +343,6 @@
 
 		data(){
 			return {
-				show_form: false,
 				provinces: [],
 				citys: [],
 				showing: false,
@@ -393,17 +352,24 @@
 				error: false,
 				name_join: "",
 				email_sponsor: "",
-				showing_axios: false,
-				success: false,
-				tell:{
-					phone:''
+				success: null,
+
+				result: {},
+				field: {
+					name: '',
+					email: '',
+					phone: '',
+					password: '',
+					password_confirmation:'',
+					achievements: null
 				},
-				field: {},
-				fields: {},
-				messages: {},
-				err_msg: "",
+				messages: '',
+				err_message: '',
+				validation:{},
 				profile: this.profileData,
-				loading: false
+				loading: null,
+				activated: null,
+				hide_form: null
 			}
 		},
 
@@ -416,80 +382,54 @@
 				this.$router.back()
 			},
 			storeNewMember(e) {
-				this.fields = {
-					sponsor_id: document.querySelector("#sponsor_id").value,
-					roles: document.querySelector("#roles").value,
-					status: document.querySelector("#status").value,
-					username_path: document.querySelector("#username_path").value,
-					name: document.querySelector("#name").value,
-					email: document.querySelector("#email").value,
-						// phone: document.querySelector("#phone").value,
-						phone: this.tell.phone,
-						province: document.querySelector("#province").value,
-						city: document.querySelector("#city").value,
-						password: password,
-						password_confirmation: confirm_password,
-						achievements: null
-				};
-				const password = document.querySelector("#password").value;
-				const confirm_password = document.querySelector(
-					"#password_confirmation"
-					).value;
-
-				if(this.fields.name === "" || this.fields.email === "" || this.fields.phone === "" || this.fields.province === "" || this.fields.city === ""){
-					this.getAlert("Anda belum mengisi kolom input join / Harap isi kolom input dengan benar" , "https://media0.giphy.com/media/utmZFnsMhUHqU/200.gif")
+				e.preventDefault()
+				this.loading = true
+				const setData = {
+					sponsor_id: document.querySelector('#sponsor_id').value,
+					roles: document.querySelector('#roles').value,
+					status: document.querySelector('#status').value,
+					username_path: document.querySelector('#username_path').value,
+					name: this.field.name,
+					email: this.field.email,
+					phone: this.field.phone,
+					province: document.querySelector('#province').value,
+					city: document.querySelector('#city').value,
+					password: this.field.password,
+					password_confirmation: this.field.password_confirmation,
+					achievements: this.field.achievements,
 				}
 
-				if (password !== confirm_password) {
-					this.getAlert(
-						"Password konfirmasi tidak sama",
-						"https://media0.giphy.com/media/utmZFnsMhUHqU/200.gif"
-						);
-				} else {
-					this.loading = true
-					this.$toast("Tunggu beberapa saat, proses join sedang berlangsung...")
+				this.$axios
+				.post('https://app.evoush.com/api/member/activation', setData)
+				// .finally(() => {
+				// 	console.log("Beres anjing kadie")
+				// 	e.target.reset()
+				// 	this.hide_form = false
+				// 	this.activated = true
+				// 	this.loading = false
+				// 	this.success = true
+				// 	this.hideForm()
+				// })
+				.then(res => {
 
-					this.$axios
-					.post("https://app.evoush.com/api/member/activation", this.fields)
-					.then(res => {
-						console.log(res.data)
-						this.field = res.data
-						this.getAlert(
-							res.data.message,
-							"https://media1.tenor.com/images/808f60557342d540771c340e0a387247/tenor.gif?itemid=9727038"
-							);
-						this.messages = res.data.message;
-						this.showing_axios = true;
-						this.error = false;
-						this.name_join = this.field.data_member.name;
-						this.email_sponsor = document.querySelector('#email_sponsor').value
-						this.setCookie("New Member", this.name_join, 7);
-					})
-					.catch(err => {
-						console.log(err.response.data);
-						// this.getAlert(
-						// 	err.response.data.message,
-						// 	"https://media0.giphy.com/media/utmZFnsMhUHqU/200.gif"
-						// 	);
-						this.getAlert("Terjadi kesalahan saat mengirim data", "https://media0.giphy.com/media/utmZFnsMhUHqU/200.gif")
-						this.messages = err.response.data.errors;
-						this.err_msg = err.response.data.message;
-						this.showing_axios = true;
-						this.success = false;
-						this.show_form = true;
-						this.error = true;
-						// this.showModal();
-						this.showForm()
-					})
-					.finally(() => {
-						this.loading = false
+					this.message = res.data.message
+					if(this.message){
+						this.$toast(`Selamat bergabung ${setData.name}, silahkan lanjut ke aktivasi.`)
 						e.target.reset()
-						this.success = true
-						this.show_form = false
-						// this.hideModal();
-						this.hideForm()
-					});
-				}
+						this.hide_form =true
+						this.setCookie("New Member", setData.name, 7);
+					}
+				})
+				.catch(err => {
+					this.err_message = "Terjadi kesalahan / mohon isi kolom input dengan lengkap dan benar"
+					this.hide_form = false
+					this.loading = false
+					this.success = false
+					this.validation = err.response.data
+					this.getAlert(this.err_message, 'https://i.gifer.com/CSrL.gif', 'https://toppng.com/uploads/preview/objects-plastic-bag-transparent-background-11563206911l9k1gbnugg.png')
+					this.showForm()
+				})
+
 			},
 
 			getProvinsi() {

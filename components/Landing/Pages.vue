@@ -373,10 +373,10 @@ data-aos-delay="300"
 </div>
 <h4><a href="">Inspiration Movies</a></h4>
 <p>
-	Content movie yang bisa menjadi daftar inspirasi untuk memajukan bisnis kita di evoush.
+	Content movie ini berisi beberapa list film yang kami hadirkan pada anda untuk memberi inspirasi bahkan motivasi dari setiap konten film/video yang kami tampilkan di halaman content inspiration movie ini.
 </p>
 
-<nuxt-link to="/term-of-service" class="btn btn-primary mt-3">Term Of Service</nuxt-link>
+<nuxt-link to="/movie-inspiration" class="btn btn-primary mt-3">Term Of Service</nuxt-link>
 
 </div>
 </div>
@@ -403,9 +403,9 @@ data-aos-delay="300"
 	</svg>
 	<i class='bx bx-fingerprint'></i>
 </div>
-<h4><a href="">Privacy Policy</a></h4>
+<h4><a href="">Code Ethics</a></h4>
 <p>
-	Kebijakan privacy menjadi sesuatu yang sangat kami pentingkan, dan ini sebagai bentuk legalitas digital bahwa website official evoush telah resmi terdaftar sebagai partner google.
+	Kode etik kami merupakan bentuk legalitas data yang sah, yang di dalamnya merupakan bukti kekuatan hukum PT. Pineleng Indah Cemerlang berdasarkan ketentuan yang telah tercantum dalam isi dokumen kode etik kami. Yang menjadi landasan dan aturan yang melindungi anda yang tergabung sebagai mitra penggerak di bisnis evoush.
 	<a href="https://www.privacypolicyonline.com/live.php?token=bHBrhWEmveR3TWjVbwgJgUv7bUok2eVq">Evoush Privacy Policy</a>
 </p>
 
