@@ -25,10 +25,15 @@
 					<div class="col-lg-8 pt-4 pt-lg-0 content mt-5">
 						<h3>{{management.name}}</h3>
 						<h2>{{management.jabatan}}</h2>
-						<!-- <p class="font-italic">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						</p> -->
+
+						<p class="font-italic">
+							{{management.profile}}
+							<br>
+							Selengkapnya tentang Bapak. {{management.name}} <br>
+							<a :href="management.link_profile" class="btn btn-primary">Lebih Lanjut</a>
+						</p>
+
+
 
 					</div>
 					<div class="container">
