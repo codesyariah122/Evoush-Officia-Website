@@ -26,12 +26,14 @@
 						<h3>{{management.name}}</h3>
 						<h2>{{management.jabatan}}</h2>
 
-						<p class="font-italic">
-							{{management.profile}}
-							<br>
-							Selengkapnya tentang Bapak. {{management.name}} <br>
-							<a :href="management.link_profile" class="btn btn-primary">Lebih Lanjut</a>
-						</p>
+						<div class="container">
+							<p class="font-italic" v-html="management.profile">
+							</p>
+							<p>
+								Selengkapnya tentang <b>Bapak. {{management.name}}</b> <br>
+								<a :href="management.link_profile" class="btn btn-primary mt-5">Lebih Lanjut</a>
+							</p>
+						</div>
 
 
 
