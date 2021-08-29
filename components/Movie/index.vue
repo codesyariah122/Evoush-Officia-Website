@@ -110,7 +110,7 @@
 		methods: {
 			getMovie(){
 				const keyword = this.keyword.title
-				this.$axios.get(`http://www.omdbapi.com?apiKey=${this.apiKey}&s=${keyword}`)
+				this.$axios.get(`https://www.omdbapi.com?apiKey=${this.apiKey}&s=${keyword}`)
 				.then(res => {
 					// console.log(res)
 					if(res.data.Response){
@@ -124,7 +124,7 @@
 			},
 
 			getMovieDetail(imdbID){
-				this.$axios.get(`http://www.omdbapi.com?apiKey=${this.apiKey}&i=${imdbID}`)
+				this.$axios.get(`https://www.omdbapi.com?apiKey=${this.apiKey}&i=${imdbID}`)
 				.then(res => {
 					console.log(res.data)
 					this.detail = res.data
