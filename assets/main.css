@@ -122,6 +122,11 @@ body h2{
 .services .icon-box blockquote{
   color: var(--color);
 }
+
+.services .icon-box .blockquote-footer p{
+  color: var(--color);
+}
+
 .icon-box ul, li {
   color: var(--color);
 }
@@ -150,6 +155,10 @@ body h2{
 }
 
 .iconbox-pink p{
+  color: var(--color-dua);
+}
+
+.blockquote-footer p {
   color: var(--color-dua);
 }
 
