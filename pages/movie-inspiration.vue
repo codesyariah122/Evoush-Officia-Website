@@ -10,20 +10,32 @@
 
 
 			<section class="term-of-service">
-
 				<div class="section-title">
 					<h2 class="portfolio-title"><strong>Movie Inspiration</strong></h2>
 				</div>
 
 				<ul style="list-style: none;">
 					<li v-for="movie in movies" :key="movie.id" class="mb-5">
-						<h5 class="text-secondary">{{movie.title}}</h5>
+						<h5 class="text-secondary mt-5">{{movie.title}}</h5>
 						<br>
-						<div class="embed-responsive embed-responsive-16by9">
+						<div class="embed-responsive embed-responsive-16by9 mt-2">
 							<iframe width="560" height="315" :src="movie.link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
 					</li>
 				</ul>
+
+				<h1 class="underline" style="margin-top: 5rem;"></h1>
+
+				<div class="container mt-5 mb-5">
+					<div class="row justify-content-center">
+						<div class="col-lg-12 col-xs-12 col-sm-12">
+							<h4 class="text-secondary text-center">Cari Movie Favorite Anda</h4>
+						</div>
+						<div class="col-lg-12 col-xs-12 col-sm-12">
+							<Movie/>
+						</div>
+					</div>
+				</div>
 
 			</section>
 
