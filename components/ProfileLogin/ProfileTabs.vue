@@ -27,11 +27,10 @@
 							<br>
 
 							<div v-if="user.quotes">
-								<blockquote class="blockquote-footer mt-3">
-									{{user.quotes}}
+								<blockquote class="blockquote-footer mt-3" v-html="user.quotes">
 									<br>
-									Quotes by : {{user.username}}
 								</blockquote>
+								<strong class="mt-2 text-bold text-muted">Quotes by : {{user.username}}</strong>
 							</div>
 							<div v-else>
 								<blockquote class="blockquote-footer mt-3">
@@ -57,15 +56,23 @@
 			<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 				<div class="px-4 py-3">
 					<div class="p-4 rounded shadow-lg">
-						<h4 class="mb-0 text-center">Success Story : </h4>
-						<div v-if="user.about">
-							<blockquote class="blockquote-footer" v-html="user.about">
-							</blockquote>
-						</div>
-						<div v-else>
-							<blockquote class="blockquote-footer text-center">
-								<strong>{{user.username}}, <small class="text-danger">belum menambahkan success story.</small></strong>
-							</blockquote>
+						<div class="container-fluid">
+							<div class="row justify-content-center">
+								<div class="col-lg-12 col-xs-12 col-sm-12">
+									<center>
+										<h4 class="mb-0 text-center">Success Story : </h4>
+										<div v-if="user.about">
+											<blockquote class="blockquote-footer" v-html="user.about">
+											</blockquote>
+										</div>
+										<div v-else>
+											<blockquote class="blockquote-footer text-center">
+												<strong>{{user.username}}, <small class="text-danger">belum menambahkan success story.</small></strong>
+											</blockquote>
+										</div>
+									</center>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

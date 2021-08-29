@@ -47,12 +47,13 @@
 
 		mounted(){
 			if(this.token){
-				this.$swal({
-					icon: 'success',
-					title: `Selamat datang ${this.username}`,
-					showConfirmButton: false,
-					text: `Selamat datang ${this.username}`
-				})
+				// this.$swal({
+				// 	icon: 'success',
+				// 	title: `Selamat datang ${this.username}`,
+				// 	showConfirmButton: false,
+				// 	text: `Selamat datang ${this.username}`
+				// })
+				this.$toast(`Selamat Datang ${this.username}`)
 				return this.$router.push({
 					name:'profile-username',
 					params: {username: this.username}

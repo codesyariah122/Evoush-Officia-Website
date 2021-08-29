@@ -38,16 +38,6 @@
 					</center>
 				</div>
 
-
-				<!-- <div class="col-lg-12 col-xs-12 col-sm-12 mt-5 mb-5">
-
-					<SocialSharing :socials="socials"/>
-					<center>
-						<RegisterEvent/>
-					</center>
-
-				</div> -->
-
 			</div>
 
 		</div>
@@ -95,7 +85,6 @@
 	import Pages from '@/components/Landing/Pages'
 	import Contact from '@/components/Landing/Contact'
 	import ColorModePicker from '@/components/molecules/ColorModePicker'
-	import SocialSharing from '@/components/global/socialsharing'
 	import Branding from '@/components/Landing/Branding'
 	import AddToHome from '@/components/Landing/addToHomeBtn'
 	import ScreenAnim from '@/components/Landing/ScreenAnim'
@@ -115,7 +104,6 @@
 			Pages,
 			Contact,
 			ColorModePicker,
-			SocialSharing,
 			Branding,
 			AddToHome,
 			ScreenAnim,

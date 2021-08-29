@@ -192,14 +192,15 @@
                   </div>
 
                   <div class="form-group col-md-12">
-                    <textarea
+                   <!--  <textarea
                     class="form-control"
                     name="message"
                     rows="5"
                     data-rule="required"
                     data-msg="Please write something for us"
                     placeholder="Pesan anda disini ..." id="message" v-model="contacts.message"
-                    ></textarea>
+                    ></textarea> -->
+                    <tinymce id="d1" v-model="contacts.message"></tinymce>
                     <div class="validate">
                     </div>
                     <div v-if="errors.message">

@@ -426,7 +426,7 @@
 					this.loading = false
 					this.success = false
 					this.validation = err.response.data
-					this.getAlert(this.err_message, 'https://i.gifer.com/CSrL.gif', 'https://toppng.com/uploads/preview/objects-plastic-bag-transparent-background-11563206911l9k1gbnugg.png')
+					this.getAlert(this.err_message, 'https://i.gifer.com/CSrL.gif', 'https://e7.pngegg.com/pngimages/906/961/png-clipart-white-bricks-and-wall-background-clean-walls.png')
 					this.showForm()
 				})
 

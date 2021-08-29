@@ -62,13 +62,11 @@
 									</li>
 								</ul>
 								<div v-if="member.quotes">
-									<blockquote class="blockquote-footer">
-										{{member.quotes}}
-										<br>
-										<small style='text-transform: capitalize; font-size: 14px;' class="text-secondary">
-											Quotes by : {{member.name}}
-										</small>
+									<blockquote class="blockquote-footer" v-html="member.quotes">
 									</blockquote>
+									<small style='text-transform: capitalize; font-size: 14px;' class="text-secondary mt-2">
+										Quotes by : {{member.name}}
+									</small>
 								</div>
 								<div v-else>
 									<blockquote class="blockquote-footer">

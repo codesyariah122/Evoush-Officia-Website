@@ -1,5 +1,9 @@
-import Vue from 'vue';
-import EditorText from '@tinymce/tinymce-vue';
+import Vue from 'vue'
+import tinymce from 'vue-tinymce-editor'
+// import 'tinymce/tinymce.min';
+// import 'tinymce/themes/silver/theme.min';
+// import 'tinymce/plugins/image/plugin.min';
+// import 'tinymce/plugins/link/plugin.min';
+// import 'tinymce/plugins/lists/plugin.min';
 
-
-Vue.use(EditorText);
+Vue.component('tinymce', tinymce)

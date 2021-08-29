@@ -136,13 +136,14 @@
 					if(res.data.success){
 						localStorage.setItem('token', res.data.token)
 						localStorage.setItem('username', res.data.data.username)
-						this.$swal({
-							position: 'top-center',
-							icon: 'success',
-							title: `Login success, anda telah login sebagai <strong>${username}</strong>`,
-							showConfirmButton: false,
-							timer: 1500
-						})
+						// this.$swal({
+						// 	position: 'top-center',
+						// 	icon: 'success',
+						// 	title: `Login success, anda telah login sebagai <strong>${username}</strong>`,
+						// 	showConfirmButton: false,
+						// 	timer: 1500
+						// })
+                        // this.$toast('Login success')
 						return this.$router.push({
 							name:'profile-username',
 							params: {username: res.data.data.username}

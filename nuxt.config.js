@@ -70,11 +70,11 @@ export default {
     //   type: 'text/html'
     // },
 
-    {
-      src: 'https://cdn.tiny.cloud/1/36xbwrnfekuspwhfv02z1kuwy3sz4nbehpqkb3x7bh8tek86/tinymce/5/tinymce.min.js',
-      type: 'text/javascript',
-      referrerpolicy: 'origin'
-    },
+    // {
+    //   src: 'https://cdn.tiny.cloud/1/36xbwrnfekuspwhfv02z1kuwy3sz4nbehpqkb3x7bh8tek86/tinymce/5/tinymce.min.js',
+    //   type: 'text/javascript',
+    //   referrerpolicy: 'origin'
+    // },
     {
       src: 'https://cdn.jsdelivr.net/npm/chart.js@2.8.0',
       type: 'text/javascript'
@@ -274,10 +274,12 @@ export default {
     {src: '~/plugins/vue-toastification', mode: 'client', ssr: false},
     {src: '~/plugins/pwa-update', mode: 'client', ssr: false},
     {src: '~/plugins/plugins_vue-chartjs', ssr: false},
-    {src: '~/plugins/vue-social-sharing'},
+    // {src: '~/plugins/vue-social-sharing'},
     {src: '~/plugins/bootstrap-vue'},
     {src: '~/plugins/disqus'},
+    {src: '~/plugins/vue-tiny-mce', mode: 'client', ssr: false},
     // { src: '~/plugins/tawk', ssr: false },
+    { src: '~/plugins/vue-wysiwyg'},
     { src: '~/plugins/sweetalert2', ssr: false},
     { src: '~/plugins/axios', ssr: false}
   ],

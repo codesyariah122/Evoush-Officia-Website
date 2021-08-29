@@ -4,17 +4,17 @@
 			<div class="row edit-form">
 				<div class="col-md-4 border-right">
 					<div class="d-flex flex-column align-items-center text-center p-3 py-5">
-						<div v-if="edits[0].avatar">
-							<img class="rounded-circle mt-5" :src="`https://app.evoush.com/storage/${edits[0].avatar}`" width="90">
+						<div v-if="field.avatar">
+							<img class="rounded-circle mt-5" :src="`https://app.evoush.com/storage/${field.avatar}`" width="90">
 						</div>
-						<span class="font-weight-bold" style="text-transform: capitalize;">{{edits[0].name}}</span>
-						<span>{{edits[0].email}}</span>
-						<span>{{edits[0].city}} | {{edits[0].province}}</span>
+						<span class="font-weight-bold" style="text-transform: capitalize;">{{field.name}}</span>
+						<span>{{field.email}}</span>
+						<span>{{field.city}} | {{field.province}}</span>
 					</div>
 					<div v-if="showSuccess">
 						<div v-if="message" class="col-md-12">
 							<div class="alert alert-success alert-dismissible fade show" role="alert">
-								<strong>Halo {{fields.username}}!</strong> {{message}} <strong class="text-primary">Successfully</strong>.
+								<strong>Halo {{field.username}}!</strong> {{message}} <strong class="text-primary">Successfully</strong>.
 								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
@@ -35,10 +35,10 @@
 
 
 <!-- <pre>
-	{{pilih}}
-</pre>
+	{{field.id}}
+</pre> -->
 
-<pre>
+<!-- <pre>
 	{{edits}}
 </pre> -->
 <!-- <pre>
@@ -53,20 +53,22 @@
 							</div>
 							<h6 class="text-right">Edit Profile</h6>
 						</div>
+
+
 						<form @submit.prevent="updateProfile">
 							<div class="row mt-2">
-								<input type="hidden" name="id" id="id" v-model="fields.id">
-								<div class="col-md-6 mb-3"><input type="text" id="name" class="form-control" placeholder="Nama Lengkap" v-model="fields.name"></div>
-								<div class="col-md-6"><input type="text" id="username" class="form-control" placeholder="Username Member" v-model="fields.username"></div>
+								<input type="hidden" name="id" id="id" v-model="field.id">
+								<div class="col-md-6 mb-3"><input type="text" id="name" class="form-control" placeholder="Nama Lengkap" v-model="field.name"></div>
+								<div class="col-md-6"><input type="text" id="username" class="form-control" placeholder="Username Member" v-model="field.username"></div>
 							</div>
 							<div class="row mt-3">
-								<div class="col-md-6 mb-3"><input type="text" id="email" class="form-control" placeholder="Email@address.com" v-model="fields.email"></div>
-								<div class="col-md-6"><input type="text" id="phone" class="form-control" placeholder="Phone number / format: 6282xxxxxxxxx" v-model="fields.phone"></div>
+								<div class="col-md-6 mb-3"><input type="text" id="email" class="form-control" placeholder="Email@address.com" v-model="field.email"></div>
+								<div class="col-md-6"><input type="text" id="phone" class="form-control" placeholder="Phone number / format: 6282xxxxxxxxx" v-model="field.phone"></div>
 							</div>
 							<div class="row mt-3">
 								<div class="col-md-6 mb-3">
 									<select name="province" id="province" class="form-control" v-on:change="getCity">
-										<option v-model="fields.province">{{fields.province}}</option>
+										<option v-model="field.province">{{field.province}}</option>
 										<option value="" data-id=""><b>Ubah Provinsi</b></option>
 										<option v-for="provins in provinces" v-bind:value="provins.id" v-model="provins.nama" :data-id="provins.id">{{provins.nama}}</option>
 									</select>
@@ -74,7 +76,7 @@
 								<div class="col-md-6">
 									<div v-if="!pilih">
 										<select name="city" id="city" class="form-control">
-											<option v-model="fields.city">{{fields.city}}</option>
+											<option v-model="field.city">{{field.city}}</option>
 										</select>
 									</div>
 									<div v-else>
@@ -88,19 +90,21 @@
 
 							<div class="row mt-3">
 								<div class="col-md-12">
-									<textarea name="address" id="address" v-model="fields.address" placeholder="Alamat lengkap anda saat ini" class="form-control"></textarea>
+									<textarea name="address" id="address" v-model="field.address" placeholder="Alamat lengkap anda saat ini" class="form-control"></textarea>
 								</div>
 								<div class="col-md-12 mt-3">
-									<textarea id="quotes" name="quotes" placeholder="Your quotes max: 100character" class="form-control" v-model="fields.quotes" rows="5"></textarea>
+									<!-- <textarea id="quotes" name="quotes" placeholder="Your quotes max: 100character" class="form-control" v-model="field.quotes" rows="5"></textarea> -->
+									<!-- <tinymce id="d1" v-model="field.quotes"></tinymce> -->
+									<wysiwyg v-model="field.quotes"/>
 								</div>
 							</div>
 
 							<div class="row mt-3">
-								<div class="col-md-6 mb-3"><input type="text" id="youtube" class="form-control" placeholder="example(https://www.youtube.com/channel/UCIzNgeNDD58z8XNppkopwzw)" v-model="fields.youtube"></div>
-								<div class="col-md-6"><input type="text" id="facebook" class="form-control" placeholder="Facebook username" v-model="fields.facebook"></div>
+								<div class="col-md-6 mb-3"><input type="text" id="youtube" class="form-control" placeholder="example(https://www.youtube.com/channel/UCIzNgeNDD58z8XNppkopwzw)" v-model="field.youtube"></div>
+								<div class="col-md-6"><input type="text" id="facebook" class="form-control" placeholder="Facebook username" v-model="field.facebook"></div>
 							</div>
 							<div class="row mt-3">
-								<div class="col-md-6"><input type="text" id="instagram" class="form-control" placeholder="Instagram username" v-model="fields.instagram"></div>
+								<div class="col-md-6"><input type="text" id="instagram" class="form-control" placeholder="Instagram username" v-model="field.instagram"></div>
 							</div>
 							<!-- <div class="row mt-3">
 								<div class="col-md-6">
@@ -121,8 +125,9 @@
 							<div class="row mt-3">
 								<div class="col-md-12">
 									<small class="text-danger mt-3 mb-2"><strong>Ketik di bagian text editor di bawah jika ingin mengubah success story anda</strong></small>
-									<textarea  id="full-featured-non-premium" class="form-control about" name="about" v-model="fields.about" rows="15"></textarea>
-									<!-- <textarea class="form-control about" name="about" v-model="fields.about" rows="15"></textarea> -->
+									<!-- <textarea class="form-control about" name="about" v-model="field.about" rows="15" id="about"></textarea> -->
+									<!-- <tinymce id="d2" v-model="field.about"></tinymce> -->
+									<wysiwyg v-model="field.about" :options="options"/>
 								</div>
 							</div>
 
@@ -146,25 +151,13 @@
 		 		citys: [],
 		 		newAvatar: null,
 		 		newCover: null,
-		 		fields: {
-		 			id: this.edits[0].id,
-		 			name: this.edits[0].name,
-		 			email: this.edits[0].email,
-		 			username: this.edits[0].username,
-		 			address: this.edits[0].address,
-		 			phone: this.edits[0].phone,
-		 			quotes: this.edits[0].quotes,
-		 			about: this.edits[0].about,
-		 			instagram: this.edits[0].instagram,
-		 			facebook: this.edits[0].facebook,
-		 			youtube: this.edits[0].youtube,
-		 			province: this.edits[0].province,
-		 			city: this.edits[0].city,
-		 			parallax: null
-		 		},
+		 		field:{},
 		 		validation: [],
 		 		message: '',
-		 		showSuccess: false
+		 		showSuccess: false,
+		 		options: {
+		 			maxHeight: "500px"
+		 		}
 		 	}
 		 },
 		head(){
@@ -173,76 +166,49 @@
 			}
 		},
 
+		created(){
+			this.$axios(`https://app.evoush.com/api/member/${this.edits[0].username}`)
+			.then(res => {
+				this.field = res.data[0]
+				console.log(res.data)
+			})
+		},
+
 		mounted(){
-			this.getProvinsi(),
-			this.activeTinyMce()
+			this.getProvinsi()
 		},
 		methods: {
 
 			updateProfile(event){
 
-				let data = {
-					name: document.querySelector('#name').value,
-					email: document.querySelector('#email').value,
-					username: document.querySelector('#username').value,
-					address: document.querySelector('textarea[name="address"]').value,
-					phone: document.querySelector('#phone').value,
-					quotes: document.querySelector('textarea[name="quotes"]').value,
-					about: document.querySelector('textarea[name="about"]').value,
-					instagram: document.querySelector('#instagram').value,
-					facebook: document.querySelector('#facebook').value,
-					youtube: document.querySelector('#youtube').value,
-					province: document.querySelector('#province').value,
-					city: document.querySelector('#city').value
-				}
-
-				// console.log(data.about)
-
-
-				// console.log(data.province)
-				// console.log(this.fields.province)
-				this.$axios.put(`/member/update/${this.fields.id}`, {
-					id: this.fields.id,
-					name: this.fields.name,
-					email: this.fields.email,
-					username: this.fields.username,
-					address: this.fields.address,
-					phone: this.fields.phone,
-					quotes: this.fields.quotes,
-					about: this.fields.about,
-					instagram: this.fields.instagram,
-					facebook: this.fields.facebook,
-					youtube: this.fields.youtube,
-					province: this.fields.province,
-					city: this.fields.city,
+				this.$axios.put(`/member/update/${this.field.id}`, {
+					id: this.field.id,
+					name: this.field.name,
+					email: this.field.email,
+					username: this.field.username,
+					address: this.field.address,
+					phone: this.field.phone,
+					quotes: this.field.quotes,
+					about: this.field.about,
+					instagram: this.field.instagram,
+					facebook: this.field.facebook,
+					youtube: this.field.youtube,
+					province: this.field.province,
+					city: this.field.city,
 					parallax: null
 				})
 				.then(res => {
 					if(res.data.success){
 						this.message = res.data.message
-						const result_data = res.data.data
-						console.log(result_data)
-						this.edits[0].name = result_data.name
-						this.edits[0].email = result_data.email
-						this.edits[0].username = result_data.username
-						this.edits[0].address = result_data.address
-						this.edits[0].phone = result_data.phone
-						this.edits[0].quotes = result_data.quotes
-						this.edits[0].about = result_data.about
-						this.edits[0].instagram = result_data.instagram
-						this.edits[0].facebook = result_data.facebook
-						this.edits[0].youtube = result_data.youtube
-						this.edits[0].province = result_data.province
-						this.edits[0].city = result_data.city
-
 						this.showSuccess = true
-						this.$swal({
-							position: 'top-end',
-							icon: 'success',
-							title: res.data.message,
-							showConfirmButton: false,
-							timer: 1500
-						})
+						// this.$swal({
+						// 	position: 'top-end',
+						// 	icon: 'success',
+						// 	title: res.data.message,
+						// 	showConfirmButton: false,
+						// 	timer: 1500
+						// })
+						this.$toast(res.data.message+' Successfully')
 					}
 				})
 				.catch(err => {
@@ -282,70 +248,9 @@
 				return this.$router.back()
 			},
 
-			activeTinyMce(){
 
-				let useDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-				tinymce.init({
-					selector: 'textarea#full-featured-non-premium',
-					plugins: 'print preview paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap quickbars emoticons',
-					imagetools_cors_hosts: ['picsum.photos'],
-					menubar: 'file edit view insert format tools table help',
-					toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl',
-					toolbar_sticky: true,
-					autosave_ask_before_unload: true,
-					autosave_interval: '30s',
-					autosave_prefix: '{path}{query}-{id}-',
-					autosave_restore_when_empty: false,
-					autosave_retention: '2m',
-					image_advtab: true,
-					link_list: [
-					{ title: 'My page 1', value: 'https://www.tiny.cloud' },
-					{ title: 'My page 2', value: 'http://www.moxiecode.com' }
-					],
-					image_list: [
-					{ title: 'My page 1', value: 'https://www.tiny.cloud' },
-					{ title: 'My page 2', value: 'http://www.moxiecode.com' }
-					],
-					image_class_list: [
-					{ title: 'None', value: '' },
-					{ title: 'Some class', value: 'class-name' }
-					],
-					importcss_append: true,
-					file_picker_callback: function (callback, value, meta) {
-						/* Provide file and text for the link dialog */
-						if (meta.filetype === 'file') {
-							callback('https://www.google.com/logos/google.jpg', { text: 'My text' });
-						}
 
-						/* Provide image and alt text for the image dialog */
-						if (meta.filetype === 'image') {
-							callback('https://www.google.com/logos/google.jpg', { alt: 'My alt text' });
-						}
-
-						/* Provide alternative source and posted for the media dialog */
-						if (meta.filetype === 'media') {
-							callback('movie.mp4', { source2: 'alt.ogg', poster: 'https://www.google.com/logos/google.jpg' });
-						}
-					},
-					templates: [
-					{ title: 'New Table', description: 'creates a new table', content: '<div class="mceTmpl"><table width="98%%"  border="0" cellspacing="0" cellpadding="0"><tr><th scope="col"> </th><th scope="col"> </th></tr><tr><td> </td><td> </td></tr></table></div>' },
-					{ title: 'Starting my story', description: 'A cure for writers block', content: 'Once upon a time...' },
-					{ title: 'New list with dates', description: 'New List with dates', content: '<div class="mceTmpl"><span class="cdate">cdate</span><br /><span class="mdate">mdate</span><h2>My List</h2><ul><li></li><li></li></ul></div>' }
-					],
-					template_cdate_format: '[Date Created (CDATE): %m/%d/%Y : %H:%M:%S]',
-					template_mdate_format: '[Date Modified (MDATE): %m/%d/%Y : %H:%M:%S]',
-					height: 600,
-					image_caption: true,
-					quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
-					noneditable_noneditable_class: 'mceNonEditable',
-					toolbar_mode: 'sliding',
-					contextmenu: 'link image imagetools table',
-					skin: useDarkMode ? 'oxide-dark' : 'oxide',
-					content_css: useDarkMode ? 'dark' : 'default',
-					content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
-				});
-			}
 		}
 	}
 </script>
