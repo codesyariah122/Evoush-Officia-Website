@@ -47,7 +47,6 @@
 
 		<!-- <h1 class="underline" style="margin-top: 5rem;"></h1> -->
 
-		<!-- <YoutubeChannel :channels="channels"/> -->
 
 		<!-- <SendSms/> -->
 
@@ -73,6 +72,7 @@
 
 		<Contact/>
 
+		<YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos"/>
 
 	</div>
 </template>
@@ -116,6 +116,7 @@
 		async asyncData({$content, params, $axios, $config}){
 			const channel_id = 'UCIzNgeNDD58z8XNppkopwzw'
 			const channels = await $axios.$get(`/evoush/youtube/${channel_id}`)
+			const latestVideos = await $axios.$get(`/evoush/youtube/latest-video/${channel_id}/5/date`)
 			const results = await $axios.$get('/product/all')
 			const members = await $axios.$get('/evoush/member-list')
 			const articles = await $content('Blog', params.slug)
@@ -124,7 +125,7 @@
 			.where({categories: 'news'})
 			.fetch();
 			// console.log(newMembers)
-			return { results, members, articles, channels}
+			return { results, members, articles, channels, latestVideos}
 		},
 
 		data(){
@@ -216,16 +217,10 @@
 		// }
 
 		mounted(){
-			OneSignal.log.setLevel('trace');
+			// OneSignal.log.setLevel('trace');
 		}
 
 
 	}
 </script>
 
-
-<style scoped>
-
-
-
-</style>
