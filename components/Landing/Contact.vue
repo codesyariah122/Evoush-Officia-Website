@@ -47,14 +47,20 @@
               <img src="https://img.pikbest.com/58pic/35/39/61/62K58PICb88i68HEwVnm5_PIC2018.gif!w340" class="img-fluid">
             </div>
 
-            <div v-if="success">
-              <div class="alert alert-warning">
-                {{message}}
+            <div v-if="show">
+              <div v-if="!success">
+                <div class="alert alert-danger">
+                  {{err_message}}
+                </div>
+              </div>
+
+              <div v-else>
+                <div class="alert alert-warning">
+                  {{message}}
+                </div>
               </div>
             </div>
-              <!-- <pre v-if="errors.message">
-                {{errors.message}}
-              </pre> -->
+
 
               <form @submit.prevent="KirimEmail"
               role="form"
@@ -75,9 +81,9 @@
                   data-msg="Please enter at least 4 chars" v-model="contacts.name"
                   />
                   <div v-if="errors.name">
-                    <div class="mt-2 mb-2 alert alert-danger">
-                      {{errors.name}}
-                    </div>
+                    <span class="mt-2 mb-2 text-danger">
+                      {{errors.name[0]}}
+                    </span>
                   </div>
                 </div>
                 <div class="col-md-7 form-group mt-2">
@@ -91,9 +97,9 @@
                   data-msg="Please enter a valid email" v-model="contacts.email"
                   />
                   <div v-if="errors.email">
-                    <div class="mt-2 mb-2 alert alert-danger">
-                      {{errors.email}}
-                    </div>
+                    <span class="mt-2 mb-2 text-danger">
+                      {{errors.email[0]}}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -111,9 +117,9 @@
                   /> -->
                   <vue-tel-input v-model="contacts.phone"></vue-tel-input>
                   <div v-if="errors.phone">
-                    <div class="mt-2 mb-2 alert alert-danger">
-                      {{errors.phone}}
-                    </div>
+                    <span class="mt-2 mb-2 text-danger">
+                      {{errors.phone[0]}}
+                    </span>
                   </div>
                 </div>
                 <div class="form-group col-md-5">
@@ -132,7 +138,9 @@
                           {{subject.name}}
                         </option>
                       </select>
-                      <div class="validate"></div>
+                      <div class="validate">
+
+                      </div>
                     </div>
                   </div>
 
@@ -151,7 +159,13 @@
                         <option value="" data-id=""><b>Pilih Provinsi</b></option>
                         <option v-for="provins in provinces" v-bind:value="provins.id" :data-id="provins.id">{{provins.nama}}</option>
                       </select>
-                      <div class="validate"></div>
+                      <div class="validate">
+                      </div>
+                      <div v-if="errors.province">
+                        <span class="mt-2 mb-2 text-danger">
+                          {{errors.province[0]}}
+                        </span>
+                      </div>
                     </div>
                     <div class="col-md-5 form-group mt-2">
                    <!--  <input
@@ -167,7 +181,13 @@
                         <option value="">Pilih Kota</option>
                         <option v-if="pilih" v-for="city in citys" :key="city.id" v-bind:value="city.nama">{{city.nama}}</option>
                       </select>
-                      <div class="validate"></div>
+                      <div class="validate">
+                      </div>
+                      <div v-if="errors.city">
+                        <span class="mt-2 mb-2 text-danger">
+                          {{errors.city[0]}}
+                        </span>
+                      </div>
                     </div>
                   </div>
 
@@ -180,7 +200,13 @@
                     data-msg="Please write something for us"
                     placeholder="Pesan anda disini ..." id="message" v-model="contacts.message"
                     ></textarea>
-                    <div class="validate"></div>
+                    <div class="validate">
+                    </div>
+                    <div v-if="errors.message">
+                      <span class="mt-2 mb-2 text-danger">
+                        {{errors.message[0]}}
+                      </span>
+                    </div>
                   </div>
 
                   <div class="mb-3">
@@ -241,11 +267,12 @@
               vector: "https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/kantor/Depan.jpg",
             }
             ],
-            show: false,
+            show: null,
             alert: '',
-            success: false,
+            success: null,
             loading: false,
             message: '',
+            err_message:'',
             contact: {
               email: {href: 'mailto:evoushofficiall@gmail.com', label: 'evoushofficiall@gmail.com'},
               wa: {href:'https://wa.me/6282114610011?text=Hallo%20Admin%20Evoush%20Official%20Apakah%20Anda%20bisa%20bantu%20saya%20untuk%20mengetahui%20bisnis-plan%20dan%20daftar%20product%20evoush', label: '+62 8211 4610 011'}
@@ -265,7 +292,7 @@
             provinces: [],
             citys: [],
             ip_address: {},
-
+            validate: {}
           }
         },
 
@@ -282,9 +309,9 @@
           getProvinsi(){
            this.$axios.get('https://dev.farizdotid.com/api/daerahindonesia/provinsi')
            .then(res => {
-         // console.log(res)
-         this.provinces = res.data.provinsi
-       })
+              // console.log(res)
+              this.provinces = res.data.provinsi
+            })
            .catch(err => console.log(err.response))
          },
 
@@ -292,64 +319,84 @@
            const id = e.target.value
            this.$axios.get(`https://dev.farizdotid.com/api/daerahindonesia/kota?id_provinsi=${id}`)
            .then(res => {
-             this.province = id
-         // console.log(this.fields.province)
-         this.pilih = true
-         this.citys = res.data.kota_kabupaten
-         // console.log(this.citys)
-       })
+                this.province = id
+                // console.log(this.fields.province)
+                this.pilih = true
+                this.citys = res.data.kota_kabupaten
+                // console.log(this.citys)
+            })
          },
 
          KirimEmail(e){
           e.preventDefault();
           this.loading = true
-        // this.$toast("Kami sedang melakukan proses mengirim pesan anda")
-        const FormData = {
-          name: this.contacts.name,
-          email: this.contacts.email,
-          phone: this.contacts.phone,
-          category_id: document.querySelector('#category_id').value,
-          message: this.contacts.message,
-          province: document.querySelector('#province').value,
-          city: document.querySelector('#city').value,
-          ip_address: document.querySelector('#ip_address').value,
-          username: null
-        }
+          // this.$toast("Kami sedang melakukan proses mengirim pesan anda")
+          const FormData = {
+            name: this.contacts.name,
+            email: this.contacts.email,
+            phone: this.contacts.phone,
+            category_id: document.querySelector('#category_id').value,
+            message: this.contacts.message,
+            province: document.querySelector('#province').value,
+            city: document.querySelector('#city').value,
+            ip_address: document.querySelector('#ip_address').value,
+            username: null
+          }
 
-        this.$axios.post('https://app.evoush.com/api/evoush/kirim-email', {
-          name: FormData.name,
-          email: FormData.email,
-          phone: FormData.phone,
-          category_id: FormData.category_id,
-          message: FormData.message,
-          province: FormData.province,
-          city: FormData.city,
-          ip_address: FormData.ip_address,
-          username: FormData.username
-        })
-        .then(res => {
-          this.message = res.data.message
-        })
-        .catch(err => {
-          this.loading = false
-          this.show = true
-          this.success = false
-          this.alert = "danger"
-          this.message = "Terjadi kesalahan saat pengiriman pesan, harap periksa kembali kolom inputan dengan lengkap dan benar."
-          this.errors = err.response.data
-          // console.log(err.response.data)
-        })
-        .finally(()=>{
-          e.target.reset()
-          this.contacts.name = ''
-          this.contacts.email = ''
-          this.contacts.phone = ''
-          this.contacts.message = ''
-          this.show = true
-          this.success = true
-          this.alert = "success"
-          this.loading = false
-        })
+          this.$axios.post('https://app.evoush.com/api/evoush/kirim-email', {
+            name: FormData.name,
+            email: FormData.email,
+            phone: FormData.phone,
+            category_id: FormData.category_id,
+            message: FormData.message,
+            province: FormData.province,
+            city: FormData.city,
+            ip_address: FormData.ip_address,
+            username: FormData.username
+          })
+          .then(res => {
+            this.message = res.data.message
+            if(this.message){
+               e.target.reset()
+               this.contacts.name = ''
+               this.contacts.email = ''
+               this.contacts.phone = ''
+               this.contacts.message = ''
+               this.show = true
+               this.success = true
+               this.alert = "success"
+               this.loading = false
+               this.$toast(`Terima kasih ${FormData.name} pesan anda telah di kirim ke email admin evoush`)
+            }
+          })
+          .catch(err => {
+            this.loading = false
+            this.show = true
+            this.success = false
+            this.alert = "danger"
+            this.err_message = "Terjadi kesalahan saat pengiriman pesan, harap periksa kembali kolom inputan dengan lengkap dan benar."
+            this.errors = err.response.data
+            console.log(err.response)
+            this.getAlert(this.err_message, 'https://i.gifer.com/17Cg.gif', 'https://e7.pngegg.com/pngimages/906/961/png-clipart-white-bricks-and-wall-background-clean-walls.png')
+          })
+          // .finally(()=>{
+
+          // })
+      },
+
+      getAlert(message, gif, bg) {
+        this.$swal({
+          title: message,
+          width: 600,
+          padding: "3em",
+          background: `#fff url(${bg})`,
+          backdrop: `
+          rgba(0,0,123,0.4)
+          url("${gif}")
+          left top
+          no-repeat
+          `
+        });
       },
 
       toasts(message){
