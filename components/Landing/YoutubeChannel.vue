@@ -7,29 +7,53 @@
 						{{results}}
 					</pre> -->
 					<!--Profile Card 3-->
-					<div class="card profile-card-3">
-						<div class="background-block">
-							<img :src="results.brandingSettings.image.bannerExternalUrl"  alt="profile-sample1" class="background"/>
-						</div>
-						<div class="profile-thumb-block">
-							<img :src="results.snippet.thumbnails.medium.url" alt="profile-image" class="profile"/>
-						</div>
-						<div class="card-content">
-							<h2>{{results.snippet.title}}<small><i class='bx bxs-user-circle'></i> {{results.statistics.subscriberCount}} Subscribers.</small></h2>
-							<h2><small><i class='bx bx-tv'></i> {{results.statistics.videoCount}} Total video</small></h2>
-							<blockquote class="blockquote-footer mt-3" v-html="results.brandingSettings.channel.description"></blockquote>
-							<br>
-							<small class="text-info mt-2 mb-5">{{results.brandingSettings.channel.keywords}}</small>
-							<br>
+					<div class="container">
+						<div class="card profile-card-3">
+							<div class="background-block">
+								<img :src="results.brandingSettings.image.bannerExternalUrl"  alt="profile-sample1" class="background"/>
+							</div>
+							<div class="profile-thumb-block">
+								<img :src="results.snippet.thumbnails.medium.url" alt="profile-image" class="profile"/>
+							</div>
+							<div class="card-content-yt">
+								<h2><a :href="`https://youtube.com/channel/${results.id}`" target="_blank">{{results.snippet.title}}</a><small><i class='bx bxs-user-circle'></i> {{results.statistics.subscriberCount}} Subscribers.</small></h2>
+								<h2><small><i class='bx bx-tv'></i> {{results.statistics.videoCount}} Total video</small></h2>
+								<blockquote class="blockquote-footer mt-3" v-html="results.brandingSettings.channel.description"></blockquote>
+								<br>
+								<small class="text-info mt-2 mb-5">{{results.brandingSettings.channel.keywords}}</small>
+								<br>
+							</div>
 						</div>
 					</div>
-					<p class="mt-3 w-100 float-left text-center"><strong>Latest video updated</strong></p>
+					<p class="mt-3 w-100 float-left text-center"><strong>Teaser Product Video Playlist</strong></p>
 					<div class="container">
-						<!-- <pre>
-							{{videos}}
-						</pre> -->
-						<div v-for="video in videos" class="embed-responsive embed-responsive-16by9 mb-3">
-							<iframe class="embed-responsive-item" :src="`https://www.youtube.com/embed/${video.link.id.videoId}?rel=0`" allowfullscreen></iframe>
+
+						<!-- <div v-for="playlist in playlists" class="embed-responsive embed-responsive-16by9 mb-3">
+							<iframe class="embed-responsive-item" :src="`https://www.youtube.com/embed/${playlist.snippet.resourceId.videoId}?rel=0`" allowfullscreen></iframe>
+						</div> -->
+						<div class="card">
+							<ul class="list-group list-group-flush">
+								<div>
+									<li v-for="video in videos" class="list-group-item">
+										<!-- <img :src="video.snippet.thumbnails.default.url"> -->
+										<div class="embed-responsive embed-responsive-16by9 mb-3">
+											<iframe class="embed-responsive-item" :src="`https://www.youtube.com/embed/${video.snippet.resourceId.videoId}?rel=0`" allowfullscreen></iframe>
+										</div>
+										<br>
+										<ul style="list-style: none;">
+											<li>
+												<strong>{{video.snippet.title}}</strong>
+											</li>
+											<li>
+												<strong>Published At : {{formatDate(video.contentDetails.videoPublishedAt)}}</strong>
+											</li>
+											<li>
+												<blockquote class="blockquote-footer" v-html="video.snippet.description"></blockquote>
+											</li>
+										</ul>
+									</li>
+								</div>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -40,21 +64,32 @@
 
 <script>
 	export default{
-		props: ['channels', 'latests'],
+		props: ['channels', 'latests', 'playlists'],
 
 		data(){
 			return {
 				results: this.channels.data.items[0],
-				videos: [
-					{id:1, link: this.latests.data.items[1]},
-					{id:2, link: this.latests.data.items[2]},
-					{id:3, link: this.latests.data.items[3]}
-				]
+				// videos: [
+				// 	{id:1, data: this.playlists.data.items[0]},
+				// 	{id:2, data: this.playlists.data.items[1]},
+				// 	{id:3, data: this.playlists.data.items[2]},
+				// 	{id:4, data: this.playlists.data.items[4]},
+				// 	{id:5, data: this.playlists.data.items[5]}
+				// ],
+
+				videos: this.playlists.data.items
 			}
 		},
 
 		mounted(){
 			console.log(this.videos)
+		},
+
+		methods: {
+			formatDate(date) {
+				const options = { year: 'numeric', month: 'long', day: 'numeric' }
+				return new Date(date).toLocaleDateString('en', options)
+			},
 		}
 	}
 </script>
@@ -97,20 +132,20 @@
 		-webkit-transform: scale(1.8);
 		transform: scale(2.8);*/
 	}
-	.profile-card-3 .card-content {
+	.profile-card-3 .card-content-yt {
 		width: 100%;
 		padding: 55px 25px;
 		color:#232323;
 		float:left;
-		background:#efefef;
+		/*background:#efefef;*/
 		height:50%;
 		border-radius:0 0 5px 5px;
 		position: relative;
 		z-index: 9999;
 	}
-	.profile-card-3 .card-content::before {
+	.profile-card-3 .card-content-yt::before {
 		content: '';
-		background: #efefef;
+		/*background: #efefef;*/
 		width: 120%;
 		height: 100%;
 		left: 11px;
@@ -146,7 +181,7 @@
 	.profile-card-3 i {
 		display: inline-block;
 		font-size: 16px;
-		color: #232323;
+		/*color: #232323;*/
 		text-align: center;
 		border: 1px solid #232323;
 		width: 30px;
@@ -180,7 +215,7 @@
 			overflow: hidden;
 			width: 100%;
 			text-align: center;
-			height:700px;
+			height:900px;
 			border:none;
 		}
 		.profile-card-3 .background-block {
@@ -197,20 +232,20 @@
 			-webkit-transform: scale(1.8);
 			transform: scale(2.8);*/
 		}
-		.profile-card-3 .card-content {
+		.profile-card-3 .card-content-yt {
 			width: 100%;
 			padding: 55px 25px;
 			color:#232323;
 			float:left;
-			background:#efefef;
-			height:50%;
+			/*background:#efefef;*/
+			height:45%;
 			border-radius:0 0 5px 5px;
 			position: relative;
 			z-index: 9999;
 		}
-		.profile-card-3 .card-content::before {
+		.profile-card-3 .card-content-yt::before {
 			content: '';
-			background: #efefef;
+			/*background: #efefef;*/
 			width: 120%;
 			height: 100%;
 			left: 11px;
@@ -222,7 +257,7 @@
 		.profile-card-3 .profile {
 			border-radius: 50%;
 			position: absolute;
-			bottom: 45%;
+			bottom: 43%;
 			left: 50%;
 			max-width: 100px;
 			opacity: 1;
@@ -246,7 +281,7 @@
 		.profile-card-3 i {
 			display: inline-block;
 			font-size: 16px;
-			color: #232323;
+			/*color: #232323;*/
 			text-align: center;
 			border: 1px solid #232323;
 			width: 30px;

@@ -203,23 +203,34 @@ body h2{
   color: var(--color);
 }
 
-.profile-card-2 {
+.profile-card-3 {
   background-color: var(--bg-secondary);
 }
 
-.profile-card-2 h5{
+.profile-card-3 h5{
   color: var(--color);
 }
 
-.profile-card-2 p{
+.profile-card-3 p{
   color: var(--color);
 }
 
-.profile-card-2 .card-title{
+.profile-card-3 .card-title{
   color: var(--color-secondary);
 }
 
-
+.card-content-yt{
+  background-color: var(--bg-secondary);
+}
+.card-content-yt::before{
+  background: var(--bg-secondary);
+}
+.card-content-yt i{
+  color: var(--color);
+}
+.card-content-yt blockquote{
+  color: var(--color);
+}
 /*.profile-card-1 .profile{
   background-color: var(--bg-secondary);
 }*/

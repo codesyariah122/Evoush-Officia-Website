@@ -72,7 +72,7 @@
 
 		<Contact/>
 
-		<YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos"/>
+		<YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos" :playlists="playlistVideos"/>
 
 	</div>
 </template>
@@ -115,8 +115,10 @@
 
 		async asyncData({$content, params, $axios, $config}){
 			const channel_id = 'UCIzNgeNDD58z8XNppkopwzw'
+			const playlist_id = 'PLblvVtAgjh4DwLORfIHawwIVvaosP-YCA'
 			const channels = await $axios.$get(`/evoush/youtube/${channel_id}`)
 			const latestVideos = await $axios.$get(`/evoush/youtube/latest-video/${channel_id}/5/date`)
+			const playlistVideos = await $axios.$get(`/evoush/youtube/playlist-video/${channel_id}/5/${playlist_id}`)
 			const results = await $axios.$get('/product/all')
 			const members = await $axios.$get('/evoush/member-list')
 			const articles = await $content('Blog', params.slug)
@@ -124,78 +126,41 @@
 			.sortBy('createdAt', 'desc')
 			.where({categories: 'news'})
 			.fetch();
-			// console.log(newMembers)
-			return { results, members, articles, channels, latestVideos}
+			return { results, members, articles, channels, latestVideos, playlistVideos}
 		},
 
 		data(){
 			return {
 				env: process.env.config_production,
 				deferredPrompt: '',
-				colorMode: localStorage.getItem('nuxt-color-mode'),
-				socials: [
-				{
-					id: 1,
-					icon: 'bx bxl-twitter bx-lg',
-					network: 'twitter',
-					url: 'https://evoush.com/',
-					title: 'Evoush::Official | HomePage',
-					description: 'Bisnis Network Marketing Zaman Now Ya Evoush Indonesia. yaa Evoush',
-					quote: 'Raih kegemilangan berbisnis network marketing bersama kami, banyak reward yang kami siapkan untuk semangat yang gigih meraih pencapaian tertinggi.',
-					image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
-					hashtags: 'Your Eternal Future',
-					twitterUser: 'EvoushOfficial'
-				},
-				{
-					id: 2,
-					icon: 'bx bxl-facebook-circle bx-lg',
-					network: 'facebook',
-					url: 'https://evoush.com/',
-					title: 'Evoush::Official | HomePage',
-					description: 'Bisnis Network Marketing Zaman Now Ya Evoush Indonesia. yaa Evoush',
-					quote: 'Raih kegemilangan berbisnis network marketing bersama kami, banyak reward yang kami siapkan untuk semangat yang gigih meraih pencapaian tertinggi.',
-					image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
-					hashtags: 'Your Eternal Future'
-				},
-				{
-					id: 3,
-					icon: 'bx bxl-whatsapp bx-lg',
-					network: 'whatsapp',
-					url: 'https://evoush.com/',
-					title: 'Evoush::Official | HomePage',
-					description: 'Bisnis Network Marketing Zaman Now Ya Evoush Indonesia. yaa Evoush',
-					quote: 'Raih kegemilangan berbisnis network marketing bersama kami, banyak reward yang kami siapkan untuk semangat yang gigih meraih pencapaian tertinggi.',
-					image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
-					hashtags: 'Your Eternal Future'
-				}
-				]
+				colorMode: localStorage.getItem('nuxt-color-mode')
 			}
 		},
 
-		// head(){
-		// 	return {
-		// 		title: "Evoush::Official",
-		// 		link: [
-		// 		{hid: 'canonical', rel: 'canonical', href: 'https://evoush.com/'}
-		// 		],
-		// 		meta: [
-		// 			// { hid: 'description', name: 'Evoush Indonesia', content: 'Your Eternal Future' },
-		// 			// { hid: 'description', name: 'description', content: 'Bisnis Evoush Indonesia'},
-		// 			// { hid: 'keywords', name: 'keywords', content: 'Bisnis Evoush Bisnis Menjanjikan'},
-		// 			{ hid: 'description', name: 'description', content: 'Evoush::Official | Home::Page'},
-		// 			{ hid: 'keywords', name: 'keywords', content: 'Bisnis Network Marketing Zaman Now Ya Evoush Indonesia'},
-		// 			{ hid: 'author', name: 'author' , content: 'Evoush::Indonesia | Official::Website'},
-		// 			{ hid: 'og:type', property: 'og:type', content: 'website'},
-		// 			{ hid: 'og:url', property: 'og:url', content: 'https://evoush.com/'},
-		// 			{ hid: 'og:title', property: 'og:title', content: 'Evoush Indonesia'},
-		// 			{ hid: 'og:site_name', property: 'og:site_name', content: 'Evoush::Official | Evoush::Website'},
-		// 			{ hid: 'og:description', property: 'og:description', content: 'Your Eternal Future'},
-		// 			{ hid: 'og:image', property: 'og:image', content: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg'},
-		// 			{ hid: 'og:image:width', property: 'og:image:width', content: '600'},
-		// 			{ hid: 'og:image:height', property: 'og:image:height', content: '598'}
-		// 		],
-		// 	}
-		// },
+		head(){
+			return {
+				title: "Evoush::Official",
+				link: [
+				{hid: 'canonical', rel: 'canonical', href: 'https://evoush.com/'}
+				],
+				meta: [
+					// { hid: 'description', name: 'Evoush Indonesia', content: 'Your Eternal Future' },
+					// { hid: 'description', name: 'description', content: 'Bisnis Evoush Indonesia'},
+					// { hid: 'keywords', name: 'keywords', content: 'Bisnis Evoush Bisnis Menjanjikan'},
+					{ hid: 'description', name: 'description', content: 'Evoush::Official | Home::Page'},
+					{ hid: 'keywords', name: 'keywords', content: 'Bisnis Network Marketing Zaman Now Ya Evoush Indonesia'},
+					{ hid: 'author', name: 'author' , content: 'Evoush::Indonesia | Official::Website'},
+					{ hid: 'og:type', property: 'og:type', content: 'website'},
+					{ hid: 'og:url', property: 'og:url', content: 'https://evoush.com/'},
+					{ hid: 'og:title', property: 'og:title', content: 'Evoush Indonesia'},
+					{ hid: 'og:site_name', property: 'og:site_name', content: 'Evoush::Official | Evoush::Website'},
+					{ hid: 'og:description', property: 'og:description', content: 'Your Eternal Future'},
+					{ hid: 'og:image', property: 'og:image', content: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg'},
+					{ hid: 'og:image:width', property: 'og:image:width', content: '600'},
+					{ hid: 'og:image:height', property: 'og:image:height', content: '598'}
+				],
+			}
+		},
 
 		// created(){
 		// 	window.addEventListener("beforeinstallprompt", e => {
