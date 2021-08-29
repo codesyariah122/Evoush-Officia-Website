@@ -409,7 +409,7 @@ data-aos-delay="300"
 	<a href="https://www.privacypolicyonline.com/live.php?token=bHBrhWEmveR3TWjVbwgJgUv7bUok2eVq">Evoush Privacy Policy</a>
 </p>
 
-<nuxt-link to="/privacy-policy" class="btn btn-primary mt-3">Privacy Policy</nuxt-link>
+<nuxt-link to="/privacy-policy" class="btn btn-primary mt-3">Code Ethics</nuxt-link>
 
 </div>
 </div>
