@@ -1,7 +1,7 @@
 <template>
 	<VueIfBot>
 		<CookieConsent
-		message="Kami sebagai media yang melindungi privacy anda!"
+		message="Kami sebagai media yang melindungi dan menjaga keamanan privacy anda!"
 		link-label="Cookies Privacy"
 		/>
 	</VueIfBot>
@@ -28,7 +28,7 @@
     justify-content: center;
     border-bottom: 1px solid white;
     color: white;
-    background-color: #ff3b40;
+    background-color: salmon;
   }
   .cookie-consent button {
     border: 1px solid white;

@@ -87,6 +87,7 @@ export default {
 	.nuxt-content p {
 		margin-bottom: 30px;
 		font-size: 16px;
+		text-align: justify;
 	}
 </style>
 

@@ -71,9 +71,16 @@ export default {
 		flex-wrap: nowrap;
 	}
 
-	.nuxt-content h1 {
-  /* my custom h1 style */
-  font-size: 31px;
-}
+	.nuxt-content h2 {
+		font-weight: bold;
+		font-size: 41px;
+		text-align: center;
+		margin-bottom: 5rem;
+	}
+	.nuxt-content p {
+		margin-bottom: 30px;
+		font-size: 16px;
+		text-align: justify;
+	}
 </style>
 
