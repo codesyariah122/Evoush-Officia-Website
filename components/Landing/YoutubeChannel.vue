@@ -18,7 +18,7 @@
 							<div class="card-content-yt">
 								<h2><a :href="`https://youtube.com/channel/${results.id}`" target="_blank">{{results.snippet.title}}</a><small><i class='bx bxs-user-circle'></i> {{results.statistics.subscriberCount}} Subscribers.</small></h2>
 								<h2><small><i class='bx bx-tv'></i> {{results.statistics.videoCount}} Total video</small></h2>
-								<blockquote class="blockquote-footer mt-3" v-html="results.brandingSettings.channel.description"></blockquote>
+								<blockquote class="blockquote-footer mt-3" v-html="results.brandingSettings.channel.description" style="text-align: justify;"></blockquote>
 								<br>
 								<small class="text-info mt-2 mb-5">{{results.brandingSettings.channel.keywords}}</small>
 								<br>
@@ -31,7 +31,7 @@
 						<!-- <div v-for="playlist in playlists" class="embed-responsive embed-responsive-16by9 mb-3">
 							<iframe class="embed-responsive-item" :src="`https://www.youtube.com/embed/${playlist.snippet.resourceId.videoId}?rel=0`" allowfullscreen></iframe>
 						</div> -->
-						<div class="card">
+						<div class="card card-list-yt">
 							<ul class="list-group list-group-flush">
 								<div>
 									<li v-for="video in videos" class="list-group-item">
@@ -48,7 +48,7 @@
 												<strong>Published At : {{formatDate(video.contentDetails.videoPublishedAt)}}</strong>
 											</li>
 											<li>
-												<blockquote class="blockquote-footer" v-html="video.snippet.description"></blockquote>
+												<blockquote class="blockquote-footer" v-html="video.snippet.description" style="text-align: justify;"></blockquote>
 											</li>
 										</ul>
 									</li>
@@ -154,6 +154,16 @@
 		z-index: -1;
 		transform: rotate(-13deg);
 	}
+
+
+	.profile-card-3 .card-content-yt blockquote{
+		text-align: justify;
+	}
+
+	.list-group blockquote{
+		margin-left: -2rem;
+	}
+
 	.profile-card-3 .profile {
 		border-radius: 50%;
 		position: absolute;

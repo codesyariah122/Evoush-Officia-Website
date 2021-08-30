@@ -231,6 +231,10 @@ body h2{
 .card-content-yt blockquote{
   color: var(--color);
 }
+
+.card-list-yt ul li{
+  background-color: var(--bg-secondary);
+}
 /*.profile-card-1 .profile{
   background-color: var(--bg-secondary);
 }*/

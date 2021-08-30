@@ -183,6 +183,10 @@
 
 		mounted(){
 			// OneSignal.log.setLevel('trace');
+			this.$axios.get('http://localhost:8000/api/test-data')
+			.then(res => {
+				console.log(res)
+			})
 		}
 
 

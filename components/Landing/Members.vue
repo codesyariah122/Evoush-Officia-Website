@@ -63,6 +63,7 @@
 								</ul>
 								<div v-if="member.quotes">
 									<blockquote class="blockquote-footer" v-html="member.quotes">
+										<!-- {{member.quotes}} -->
 									</blockquote>
 									<small style='text-transform: capitalize; font-size: 14px;' class="text-secondary mt-2">
 										Quotes by : {{member.name}}
