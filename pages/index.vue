@@ -18,18 +18,16 @@
 				</div>
 			</div> -->
 
-			<div class="row justify-content-center">
-				<div class="col-lg-12 col-xs-12 col-sm-12">
-					<Branding />
-				</div>
-			</div>
-
 
 			<div class="row justify-content-center mt-5">
 				<div class="col-12 col-lg-12 col-xs-12 col-sm-12">
 					<div class="float-right">
 						<ColorModePicker/>
 					</div>
+				</div>
+
+				<div class="col-lg-12 col-xs-12 col-sm-12">
+					<Branding />
 				</div>
 
 				<div class="col-lg-12 col-xs-12 col-sm-12">
@@ -65,14 +63,16 @@
 
 		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
 
+		<YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos" :playlists="playlistVideos"/>
+
+		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
+
 		<NewMember/>
 
 		<h1 class="underline" style="margin-top: 5rem;"></h1>
 
 
 		<Contact/>
-
-		<YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos" :playlists="playlistVideos"/>
 
 	</div>
 </template>

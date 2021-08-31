@@ -5,7 +5,7 @@
 				<div class="col-lg-1 col-xs-6 col-sm-6">
 					<nuxt-link class="btn btn-danger ml-3 mt-3" to="/#members"><i class='bx bx-arrow-back'></i>Kembali</nuxt-link>
 				</div>
-			</div>	
+			</div>
 
 			<div class="row justify-content-center">
 				<div class="col-lg-12 col-xs-12 col-sm-12 text-center">
@@ -21,7 +21,7 @@
 						<div data-aos="fade-up" v-for="founder in founders" class="col-md-12 col-xs-12 col-sm-12 mt-3 mb-5" :key="founder.id">
 							<div class="card profile-card-2">
 								<div class="card-img-block">
-									<img class="img-responsive img-fluid" :src="founder.cover ? founder.cover : 'https://mediatrack.sg/wp-content/uploads/2021/02/digital-transformation-banner-blog.png'" alt="Card image cap">
+									<img class="img-responsive img-fluid" :src="founder.cover ? founder.cover : 'https://youmatter.world/app/uploads/sites/2/2019/11/tech-planet.jpg'" alt="Card image cap">
 								</div>
 								<div class="card-body pt-5">
 									<div class="row justify-content-center">
@@ -30,7 +30,7 @@
 
 									<div class="row justify-content-center mt-5 media-body">
 										<div class="col-lg-8 col-xs-8 col-sm-8">
-											<center>											
+											<center>
 												<h5 class="card-title ml-3">{{founder.name}}</h5>
 												<p><strong>Username : {{founder.username}}</strong></p>
 												<p class="badge badge-primary text-white"> {{(founder.achievements.includes('STAR SAPHIRE') || founder.achievements.includes('SAPHIRE')) ? 'FOUNDER' : ''}}</p>
@@ -176,7 +176,7 @@
 	font-size: 11px;
 }
 
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
 	.profile-card-2 .card-img-block{
 		float:left;
 		width: 100%;

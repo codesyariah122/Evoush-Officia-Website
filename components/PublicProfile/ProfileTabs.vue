@@ -39,11 +39,11 @@
 
 							<br>
 							<div v-if="member.quotes">
-								<blockquote class="blockquote-footer mt-3">
-									{{member.quotes}}
-									<br><br>
-									<strong>Quotes by : <span style="text-transform: capitalize;">{{member.name}}</span></strong>
+								<blockquote class="blockquote-footer mt-3" v-html="member.quotes">
+									<!-- {{member.quotes}} -->
 								</blockquote>
+								<br><br>
+								<strong>Quotes by : <span style="text-transform: capitalize;">{{member.name}}</span></strong>
 							</div>
 
 
