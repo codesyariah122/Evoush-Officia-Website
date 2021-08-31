@@ -39,7 +39,7 @@
 
 							<br>
 							<div v-if="member.quotes">
-								<blockquote class="blockquote-footer mt-3" v-html="member.quotes">
+								<blockquote class="blockquote-footer mt-3 profile-quotes" v-html="member.quotes">
 									<!-- {{member.quotes}} -->
 								</blockquote>
 								<br><br>
