@@ -95,6 +95,10 @@ body h2{
   font-size:  23px;
 }
 
+.tab-content blockquote p {
+  color: var(--color);
+}
+
 #news h3{
   color: var(--color);
 }
