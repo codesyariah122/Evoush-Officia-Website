@@ -14,27 +14,42 @@
 					<h2 class="portfolio-title"><strong>Movie Inspiration</strong></h2>
 				</div>
 
-				<ul style="list-style: none;">
-					<li v-for="movie in movies" :key="movie.id" class="mb-5">
-						<h5 class="text-secondary mt-5">{{movie.title}}</h5>
-						<br>
-						<div class="embed-responsive embed-responsive-16by9 mt-2">
-							<iframe width="560" height="315" :src="movie.link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</div>
-					</li>
-				</ul>
+				<div v-for="movie in movies" :key="movie.id" class="mb-5">
+					<h3 class="text-secondary mt-5 mb-5">{{movie.title}}</h3>
+					<div class="embed-responsive embed-responsive-16by9 mt-2">
+						<iframe width="560" height="315" :src="movie.link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
 
 				<h1 class="underline" style="margin-top: 5rem;"></h1>
 
 				<div class="container mt-5 mb-5">
 					<div class="row justify-content-center">
 						<div class="col-lg-12 col-xs-12 col-sm-12">
-							<h4 class="text-secondary text-center">Cari Movie Favorite Anda</h4>
-						</div>
-						<div class="col-lg-12 col-xs-12 col-sm-12">
-							<Movie/>
+							<div class="card">
+								<div class="card-body">
+									<h4 class="text-secondary text-center">Cari Movie Favorite Anda Via IMDB</h4>
+									<div class="col-lg-12 col-xs-12 col-sm-12">
+										<Movie/>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
+
+					<div class="row justify-content-center mt-5">
+						<div class="col-lg-12 col-xs-12 col-sm-12">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="text-secondary text-center">Pencarian Youtube</h4>
+									<div class="col-lg-12 col-xs-12 col-sm-12">
+										<Youtube/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
 
 			</section>
@@ -45,7 +60,12 @@
 
 
 <script>
+	import Youtube from '@/components/Movie/YoutubeSearch'
+
 	export default {
+		components:{
+			Youtube
+		},
 		layout: 'pages',
 
 		head(){
@@ -61,7 +81,10 @@
 				movies: [
 					{id:1, link: 'https://www.youtube.com/embed/5xVuYhf8MvE', title: 'The Pursuit of Happyness'},
 					{id:2, link: 'https://www.youtube.com/embed/r-St3WAEf-4', title: 'THE FOUNDER'},
-					{id:3, link: 'https://www.youtube.com/embed/1uG4SJyAKCE', title: 'JOBS'}
+					{id:3, link: 'https://www.youtube.com/embed/1uG4SJyAKCE', title: 'JOBS'},
+					{id:4, link: 'https://www.youtube.com/embed/RkVJNOQ7B74', title: 'Crocodile in the Yangtze Full - Story of Alibaba & Jack Ma Full Documentary'},
+					{id:5, link: 'https://www.youtube.com/embed/HOSPnnfwjxM', title: 'The Social Network'},
+					{id:6, link: 'https://www.youtube.com/embed/ibuiUXOTE4M', title: 'Startup.com'}
 				]
 			}
 		},

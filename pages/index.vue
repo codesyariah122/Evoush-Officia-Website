@@ -27,10 +27,6 @@
 				</div>
 
 				<div class="col-lg-12 col-xs-12 col-sm-12">
-					<Branding />
-				</div>
-
-				<div class="col-lg-12 col-xs-12 col-sm-12">
 					<center>
 						<AddToHome/>
 					</center>
@@ -50,6 +46,11 @@
 
 		<!-- <CheckOngkir/> -->
 		<h1 class="underline" style="margin-top: 5rem;"></h1>
+
+
+		<div class="col-lg-12 col-xs-12 col-sm-12">
+			<Branding />
+		</div>
 
 		<Members :members="members"/>
 
@@ -93,7 +94,6 @@
 	import SendSms from '@/components/Landing/SendSms'
 	import YoutubeChannel from '@/components/Landing/YoutubeChannel'
 	// import RegisterEvent from '@/components/Landing/RegisterEventButton'
-
 	export default {
 		layout: 'default',
 		components: {
@@ -112,7 +112,6 @@
 			SendSms,
 			YoutubeChannel
 		},
-
 		async asyncData({$content, params, $axios, $config}){
 			const channel_id = 'UCIzNgeNDD58z8XNppkopwzw'
 			const playlist_id = 'PLblvVtAgjh4DwLORfIHawwIVvaosP-YCA'
@@ -128,7 +127,6 @@
 			.fetch();
 			return { results, members, articles, channels, latestVideos, playlistVideos}
 		},
-
 		data(){
 			return {
 				env: process.env.config_production,
@@ -136,7 +134,6 @@
 				colorMode: localStorage.getItem('nuxt-color-mode')
 			}
 		},
-
 		head(){
 			return {
 				title: "Evoush::Official",
@@ -161,7 +158,6 @@
 				],
 			}
 		},
-
 		// created(){
 		// 	window.addEventListener("beforeinstallprompt", e => {
 		// 			e.preventDefault();
@@ -171,7 +167,6 @@
 		// 	  		this.deferredPrompt = null;
 		//   	});
 		// },
-
 		// methods: {
 		// 	async dismiss() {
 		// 		this.deferredPrompt = null;
@@ -180,7 +175,6 @@
 		// 		this.deferredPrompt.prompt();
 		// 	}
 		// }
-
 		mounted(){
 			// OneSignal.log.setLevel('trace');
 			this.$axios.get('http://localhost:8000/api/test-data')
@@ -188,8 +182,5 @@
 				console.log(res)
 			})
 		}
-
-
 	}
 </script>
-

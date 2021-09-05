@@ -69,7 +69,7 @@
 				]
 			}
 		},
-		
+
 		async asyncData({$axios, params}){
 			const products = await $axios.$get(`/detail/Nutrisi/${params.slug}`)
 			console.log(products)

@@ -70,7 +70,7 @@
 				})
 			}
 			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
-			this.$axios.$get(`https://app.evoush.com/api/member/${this.username}`)
+			this.$axios.$get(`https://evoush.herokuapp.com/api/member/${this.username}`)
 			.then(response => {
 				this.user = response[0]
 

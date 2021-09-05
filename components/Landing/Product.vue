@@ -39,10 +39,14 @@
             data-aos-delay="200"
           >
 
+          <!-- <pre>
+            {{ products }}
+          </pre>
+ -->
             <div v-for="product in products" :class="(product.categories[0].name === 'Nutrisi' ? 'col-lg-4 col-md-6 portfolio-item filter-nutrisi' : 'col-lg-4 col-md-6 portfolio-item filter-kosmetik')">
               <div class="portfolio-wrap">
                 <img
-                  :src="`https://app.evoush.com/storage/${product.cover}`"
+                  :src="`https://evoush.herokuapp.com/storage/${product.cover}`"
                   class="img-fluid"
                   alt=""
                 />

@@ -18,7 +18,7 @@
 			<div class="row py-5 mt-4 align-items-center">
 				<!-- For Demo Purpose -->
 				<div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
-					<img :src="`https://app.evoush.com/storage/${dataSponsor[0].avatar}`" alt="" class="img-fluid mb-3 d-none d-md-block img-responsive" width="300">
+					<img :src="`https://evoush.herokuapp.com/storage/${dataSponsor[0].avatar}`" alt="" class="img-fluid mb-3 d-none d-md-block img-responsive" width="300">
 					<h1>Join Member Baru</h1>
 					<p class="font-italic text-muted mb-0">Anda akan diarahkan untuk join member baru dari sponsor <strong class="text-primary" style="text-transform: capitalize;">{{dataSponsor[0].name}}</strong>.</p>
 					<p class="font-italic text-muted">Silahkan isi data <a href="https://bootstrapious.com" class="text-muted">
@@ -439,7 +439,7 @@
 						achievements: null
 					};
 					this.$axios
-					.post("https://app.evoush.com/api/member/activation", this.fields)
+					.post("https://evoush.herokuapp.com/api/member/activation", this.fields)
 					.then(res => {
 						console.log(res.data)
 						this.field = res.data

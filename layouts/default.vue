@@ -27,22 +27,22 @@
 
 		mounted(){
 			this.getNewContentUpdate()
-			// this.$OneSignal.push(() => {
-			// 	this.$OneSignal.isPushNotificationsEnabled((isEnabled) => {
-			// 		if (isEnabled) {
-			// 			console.log('Push notifications are enabled!')
-			// 		} else {
-			// 			console.log('Push notifications are not enabled yet.')
-			// 		}
-			// 	})
-			// })
+			this.$OneSignal.push(() => {
+				this.$OneSignal.isPushNotificationsEnabled((isEnabled) => {
+					if (isEnabled) {
+						console.log('Push notifications are enabled!')
+					} else {
+						console.log('Push notifications are not enabled yet.')
+					}
+				})
+			})
 
-			// window.OneSignal = window.OneSignal || [];
-			// OneSignal.push(function() {
-			// 	OneSignal.init({
-			// 		appId: "15dc915b-fe30-4b1b-b635-63ab40fc8361",
-			// 	});
-			// });
+			window.OneSignal = window.OneSignal || [];
+			OneSignal.push(function() {
+				OneSignal.init({
+					appId: "15dc915b-fe30-4b1b-b635-63ab40fc8361",
+				});
+			});
 		},
 
 		methods: {

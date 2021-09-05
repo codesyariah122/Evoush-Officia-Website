@@ -127,7 +127,7 @@
 			login(){
 				let username = this.user.username
 				let password = this.user.password
-				this.$axios.post('/login', {
+				this.$axios.post('https://app.evoush.com/api/login', {
 					username,
 					password
 				})

@@ -20,7 +20,7 @@
 							<div class="row justify-content-center">
 								<div class="col-lg-10">
 									<div v-if="member.avatar">
-										<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
+										<img :src="`https://evoush.herokuapp.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 									</div>
 									<div v-else>
 										<img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg" :alt="member.name" class="rounded-circle mb-3 profile profile-overlay rounded-circle mb-3" width="100">
@@ -177,7 +177,7 @@
 				})
 			}
 			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
-			this.$axios.get('https://app.evoush.com/api/user')
+			this.$axios.get('https://evoush.herokuapp.com/api/user')
 			.then(response => {
 
                     // console.log(response.data.name)
@@ -192,7 +192,7 @@
 		},
 		methods: {
 			getFollowers(username){
-				this.$axios.get(`https://app.evoush.com/api/member/join/active/${username}`)
+				this.$axios.get(`https://evoush.herokuapp.com/api/member/join/active/${username}`)
 				.then( res => {
 					this.followers = res.data
 					// console.log(this.followers.length)

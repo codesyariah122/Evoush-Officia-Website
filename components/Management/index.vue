@@ -185,7 +185,58 @@
 
 @media (min-width: 992px) {
 	.box-management {
-		height: 42vh;
+		max-height: 35vh;
+	}
+	._content-img-profile{
+		height: 425px;
+		margin-top: .1rem;
+	}
+
+	._content-img-profile img{
+		max-height: 382px!important;
 	}
 }
+
+@media (min-width: 768px){
+	._content-img-profile img{
+		max-height: 757px;
+	}
+}
+
+@media (min-width: 1024px){
+	._content-img-profile img{
+		max-height: 403px;
+		margin-top: 1.3rem;
+	}
+}
+
+@media (min-width: 540px){
+	._content-img-profile img{
+		max-height: 517px;
+	}
+}
+
+@media (min-width: 375px){
+	.box-management{
+		max-height: 35vh;
+	}
+	._content-img-profile img{
+		max-height: 228px;
+	}
+}
+
+@media (min-width: 768px){
+	._content-img-profile img{
+		max-height: 303px;
+	}
+}
+
+/*@media (min-width: 320px){
+	.box-management{
+		max-height: 77vh;
+	}
+	._content-img-profile img{
+		max-height: 400px;
+	}
+}*/
 </style>

@@ -29,8 +29,8 @@
 				brandings: [
 					// {id: 1, img: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/bahan_gallery/image/new_products/1.jpeg'},
 					// {id: 2, img: 'https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/2.jpeg?raw=true'}
-					{id:1, img: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/promo/promo_new1.jpeg'},
-					{id:2, img: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/promo/promo_new2.jpeg'}
+					{id:1, img: 'https://github.com/evoush-products/bahan_evoush/blob/main/promo/promo.jpeg?raw=true'}
+					// {id:2, img: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/promo/promo_new2.jpeg'}
 				],
 			}
 		},

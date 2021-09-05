@@ -1,5 +1,5 @@
 <template>
-	<l-map style="height: 500px" :zoom="zoom" :center="center">
+	<!-- <l-map style="height: 500px" :zoom="zoom" :center="center">
 		<l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
 		<l-marker
 			v-for="item in markers"
@@ -9,11 +9,17 @@
 			:draggable="item.draggable">
 			<l-popup>Hello!</l-popup>
 		</l-marker>
-	</l-map>
+	</l-map> -->
+	<Map/>
 </template>
 
 <script>
+	import Map from './Map'
+
 	export default {
+		components: {
+			Map
+		},
 		data () {
 			return {
 				url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',

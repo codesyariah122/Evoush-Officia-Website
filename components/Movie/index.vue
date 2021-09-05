@@ -3,6 +3,17 @@
 		<input type="search" v-model="keyword.title" name="keyword" class="form-control" placeholder="ketikan judul film yang ingin dicari" @keyup="getMovie">
 
 		<div class="row justify-content-center">
+			<div v-if="loading" class="col-md-4 col-xs-12 col-sm-12 mt-5">
+				<small class="text-info">Loading dulu kak ...</small>
+				<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" class="img-fluid" width="100">
+			</div>
+
+			<div v-if="notFound" class="col-md-4 col-xs-12 col-sm-12 mt-5">
+				<div class="alert alert-danger">
+					Ooops ! Sory {{ notFound }}
+				</div>
+			</div>
+
 			<div v-for="movie in movies" class="col-md-4 col-xs-12 col-sm-12 mt-5">
 				<div class="card" style="width: 18rem;">
 					<img class="card-img-top" :src="movie.Poster" alt="Card image cap">
@@ -100,23 +111,30 @@
 	export default{
 		data(){
 			return{
+				loading: null,
 				apiKey: '43c80ec7',
 				keyword: {},
 				movies: [],
-				detail: ''
+				detail: '',
+				notFound: ''
 			}
 		},
 
 		methods: {
 			getMovie(){
+				this.loading = true
 				const keyword = this.keyword.title
 				this.$axios.get(`https://www.omdbapi.com?apiKey=${this.apiKey}&s=${keyword}`)
 				.then(res => {
-					// console.log(res)
+					console.log(res.data)
 					if(res.data.Response){
+						this.loading = false
 						// console.log(res.data.Response)
 						this.movies = res.data.Search
 					}
+
+					this.notFound = res.data.Error
+
 				})
 				.catch(err => {
 					console.log(err.response)

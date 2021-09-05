@@ -279,6 +279,8 @@ export default {
     {src: '~/plugins/disqus'},
     {src: '~/plugins/vue-tiny-mce', mode: 'client', ssr: false},
     // { src: '~/plugins/tawk', ssr: false },
+    { src: '~/plugins/vue-geolocation' },
+    // { src: '~/plugins/vue-googlemaps'},
     { src: '~/plugins/vue-wysiwyg'},
     { src: '~/plugins/sweetalert2', ssr: false},
     { src: '~/plugins/axios', ssr: false}
@@ -296,6 +298,9 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
+    ['nuxt-gmaps', {
+      key: 'AIzaSyBf-xwTi-Hagcxhz2T3bq1mPjUBhWXCvAU'
+    }],
     '@nuxtjs/robots',
     '@nuxt/content',
     '@nuxtjs/axios',
