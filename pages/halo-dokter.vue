@@ -4,14 +4,9 @@
 			<div class="row justify-content-center mt-5">
 				<div class="col-12 col-lg-12 col-xs-12 col-sm-12">
 					<div class="float-right">
-						<ColorModePicker/>
+						<color-mode-picker/>
 					</div>
 				</div>
-
-				<div class="col-lg-12 col-xs-12 col-sm-12">
-					<SocialSharing :socials="socials"/>
-				</div>
-
 			</div>
 
 			<div class="row justify-content-end mt-2 mb-5">

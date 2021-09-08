@@ -15,12 +15,12 @@
 					<!-- <pre>
 						http://localhost:8000/storage/{{member.cover}}
 					</pre> -->
-					<div class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('https://app.evoush.com/storage/${member.cover}')` : 'background-image: url(https://youmatter.world/app/uploads/sites/2/2019/11/tech-planet.jpg)'">
+					<div class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/${member.cover}')` : 'background-image: url(https://cdn.pixabay.com/photo/2020/04/12/20/37/abstract-5035778_960_720.jpg)'">
 						<div class="media align-items-end">
 							<div class="row justify-content-center">
 								<div class="col-lg-10">
 									<div v-if="member.avatar">
-										<img :src="`https://evoush.herokuapp.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
+										<img :src="`https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 									</div>
 									<div v-else>
 										<img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg" :alt="member.name" class="rounded-circle mb-3 profile profile-overlay rounded-circle mb-3" width="100">

@@ -46,7 +46,7 @@
             <div v-for="product in products" :class="(product.categories[0].name === 'Nutrisi' ? 'col-lg-4 col-md-6 portfolio-item filter-nutrisi' : 'col-lg-4 col-md-6 portfolio-item filter-kosmetik')">
               <div class="portfolio-wrap">
                 <img
-                  :src="`https://evoush.herokuapp.com/storage/${product.cover}`"
+                  :src="`https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/${product.cover}`"
                   class="img-fluid"
                   alt=""
                 />
@@ -55,7 +55,7 @@
                   <p>{{product.categories[0].name}}</p>
                   <div class="portfolio-links mt-3">
                     <a
-                      :href="`https://app.evoush.com/storage/${product.cover}`"
+                      :href="`https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/${product.cover}`"
                       data-gall="productGallery"
                       class="venobox btn btn-sm btn-primary text-white"
                       :title="product.title"

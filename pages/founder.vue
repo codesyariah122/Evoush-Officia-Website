@@ -21,7 +21,7 @@
 						<div data-aos="fade-up" v-for="founder in founders" class="col-md-12 col-xs-12 col-sm-12 mt-3 mb-5" :key="founder.id">
 							<div class="card profile-card-2">
 								<div class="card-img-block">
-									<img class="img-responsive img-fluid" :src="founder.cover ? founder.cover : 'https://youmatter.world/app/uploads/sites/2/2019/11/tech-planet.jpg'" alt="Card image cap">
+									<img class="img-responsive img-fluid" :src="founder.cover ? founder.cover : 'https://cdn.pixabay.com/photo/2020/04/12/20/37/abstract-5035778_960_720.jpg'" alt="Card image cap">
 								</div>
 								<div class="card-body pt-5">
 									<div class="row justify-content-center">

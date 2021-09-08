@@ -281,7 +281,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 992px) {
   #hero {
-    background: url("https://github.com/evoush-products/bahan_evoush/blob/main/product_png/gilcam/gilcam2.png?raw=true") right no-repeat;
+    background: url("https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/assets/img/bg/propolis-doktersehat.jpg") right no-repeat;
     /*width: 100%;
     height: 100vh;
     min-height: 500px;

@@ -25,14 +25,14 @@
 
 				<div class="shadow rounded overflow-hidden profile">
 
-					<div  class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('https://app.evoush.com/storage/${member.cover}')` : 'background-image: url(https://mediatrack.sg/wp-content/uploads/2021/02/digital-transformation-banner-blog.png)'">
+					<div  class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('https://app.evoush.com/storage/${member.cover}')` : 'background-image: url(https://cdn.pixabay.com/photo/2020/04/12/20/37/abstract-5035778_960_720.jpg)'">
 
 
 						<div class="media align-items-end">
 							<div class="row justify-content-center">
 								<div class="col-lg-12 col-xs-12 col-sm-12">
 									<div v-if="member.avatar" class="container">
-										<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
+										<img :src="`https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 
 											<button class="btn btn-sm btn-primary mt-3 mb-2" @click="openUpdateAvatar"><i class='bx bxs-edit bx-lg'></i> Update Foto Profile</button>
 										<!-- <div v-if="preview">
@@ -183,10 +183,10 @@
 		data(){
 			return {
 				samples: [
-				{id:1, url: 'https://images.unsplash.com/photo-1469594292607-7bd90f8d3ba4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'},
-				{id:2, url: 'https://images.unsplash.com/photo-1493571716545-b559a19edd14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'},
-				{id:3, url: 'https://images.unsplash.com/photo-1453791052107-5c843da62d97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'},
-				{id:4, url: 'https://images.unsplash.com/photo-1475724017904-b712052c192a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'}
+					{id:1, url: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/bahan_gallery/image/new_products/brands1.jpeg'},
+					{id:2, url: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/bahan_gallery/image/new_products/brands2.jpeg'},
+					{id:3, url: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/bahan_gallery/image/new_products/brands3.jpeg'},
+					{id:4, url: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/bahan_gallery/image/new_products/brands4.jpeg'}
 				],
 				newMembers: [],
 				followers: null,

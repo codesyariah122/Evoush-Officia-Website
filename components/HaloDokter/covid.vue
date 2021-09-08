@@ -31,6 +31,7 @@
 						<div class="col-lg-12 col-xs-12 col-sm-12 mt-5 mb-3">
 							<div v-if="show">
 								<bar-chart :data="barChartData" :options="barChartOptions" :height="200"></bar-chart>
+								<!-- <ChartLineBase :bar-chart-data="barChartData"/> -->
 							</div>
 							<div v-else>
 								<small class="text-danger">
@@ -38,7 +39,6 @@
 								</small>
 							</div>
 						</div>
-
 
 					</div>
 				</div>

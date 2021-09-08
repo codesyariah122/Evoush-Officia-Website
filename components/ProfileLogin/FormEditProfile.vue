@@ -5,7 +5,7 @@
 				<div class="col-md-4 border-right">
 					<div class="d-flex flex-column align-items-center text-center p-3 py-5">
 						<div v-if="field.avatar">
-							<img class="rounded-circle mt-5" :src="`https://app.evoush.com/storage/${field.avatar}`" width="90">
+							<img class="rounded-circle mt-5" :src="`https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/${field.avatar}`" width="90">
 						</div>
 						<span class="font-weight-bold" style="text-transform: capitalize;">{{field.name}}</span>
 						<span>{{field.email}}</span>

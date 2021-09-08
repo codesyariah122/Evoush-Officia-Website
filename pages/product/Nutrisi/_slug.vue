@@ -14,7 +14,7 @@
 						<h2 class="portfolio-title">{{product.title}}</h2>
 						<div class="owl-carousel portfolio-details-carousel">
 							<div v-for="slider in JSON.parse(product.slider)">
-								<img :src="`https://app.evoush.com/storage/product-sliders/${slider}`" class="img-fluid" alt="">
+								<img :src="`https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/product-sliders/${slider}`" class="img-fluid" alt="">
 							</div>
 						</div>
 						<!-- <img :src="`https://app.evoush.com/storage/${product.cover}`" class="img-fluid img-responsive"> -->

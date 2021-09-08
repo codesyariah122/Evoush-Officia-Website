@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="form-group">
-			<input type="text" name="keyword" id="keyword" class="form-control" placeholder="Ketikan keyword untuk mencari video youtube" v-model="keyword" @keyup="SearchYoutube">
+			<input type="search" name="keyword" id="keyword" class="form-control" placeholder="Ketikan keyword untuk mencari video youtube" v-model="keyword" @keyup="SearchYoutube">
 		</div>
 
 		<div v-if="loading" class="mt-5">
@@ -10,7 +10,7 @@
 
 		<div v-if="keyword">
 			<ul v-for="video in videos" class="list-video">
-				<li>
+				<li class="title">
 					{{ video.snippet.title }}
 				</li>
 				<li>
@@ -56,7 +56,15 @@
 <style>
 
 .list-video{
+	list-style: none;
+}
 
+.list-video li {
+	font-size: 31px;
+}
+
+.title {
+	margin-bottom: 1.5rem;
 }
 
 </style>
