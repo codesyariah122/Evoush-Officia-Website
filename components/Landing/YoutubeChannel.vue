@@ -82,7 +82,7 @@
 		},
 
 		mounted(){
-			console.log(this.videos)
+			console.log(this.channels)
 		},
 
 		methods: {

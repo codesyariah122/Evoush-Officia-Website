@@ -2,6 +2,7 @@ require('dotenv').config()
 // console.log(process.env.PROD)
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
+
   mode: 'spa',
   loading: {
     color: '#ff3b40',
@@ -79,10 +80,10 @@ export default {
       src: 'https://cdn.jsdelivr.net/npm/chart.js@2.8.0',
       type: 'text/javascript'
     },
-    // {
-    //   src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-609818ffd946e881',
-    //   type: 'text/javascript'
-    // },
+    {
+      src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-609818ffd946e881',
+      type: 'text/javascript'
+    },
     {
       src: '/assets/vendor/jquery/jquery.min.js',
       type: 'text/javascript'
@@ -269,6 +270,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // {src: '~/plugins/updated', mode: 'client'},
+    {src: '~/plugins/commerce'},
     {src: '~/plugins/nuxt-leaflet', mode: 'client', ssr: false},
     {src: '~/plugins/vue-tel-input', mode: 'client', ssr: false},
     {src: '~/plugins/vue-toastification', mode: 'client', ssr: false},

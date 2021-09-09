@@ -86,8 +86,11 @@ body h2{
   color: var(--color-profile);
 }
 
+.media-body h5{
+  color: var(--color-dua);
+}
 .media-body p {
-  color: var(--color-profile);
+  color: var(--color-secondary);
 }
 
 .tab-content blockquote{

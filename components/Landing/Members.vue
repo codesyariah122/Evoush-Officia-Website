@@ -146,7 +146,7 @@
 				this.$axios
 				.get(`https://app.evoush.com/api/evoush/member-list?page=${page}`)
 				.then(res => {
-					console.log(res)
+					// console.log(res)
 					return res.data
 				})
 				.then(data => {

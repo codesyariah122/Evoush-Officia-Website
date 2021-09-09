@@ -21,11 +21,11 @@
 						<div data-aos="fade-up" v-for="founder in founders" class="col-md-12 col-xs-12 col-sm-12 mt-3 mb-5" :key="founder.id">
 							<div class="card profile-card-2">
 								<div class="card-img-block">
-									<img class="img-responsive img-fluid" :src="founder.cover ? founder.cover : 'https://cdn.pixabay.com/photo/2020/04/12/20/37/abstract-5035778_960_720.jpg'" alt="Card image cap">
+									<img class="img-responsive img-fluid" :src="founder.cover ? founder.cover : 'https://github.com/evoush-products/bahan_evoush/blob/main/assets/img/bg/network-4851119_1920.jpg?raw=true'" alt="Card image cap">
 								</div>
 								<div class="card-body pt-5">
 									<div class="row justify-content-center">
-										<img :src="founder.avatar ? `https://app.evoush.com/storage/${founder.avatar}` : 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg'" alt="profile-image" class="profile img-fluid img-responsive image--profile-member img-responsive rounded-circle center-block d-block mx-auto mt-2"/>
+										<img :src="founder.avatar ? `https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/${founder.avatar}` : 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg'" alt="profile-image" class="profile img-fluid img-responsive image--profile-member img-responsive rounded-circle center-block d-block mx-auto mt-2"/>
 									</div>
 
 									<div class="row justify-content-center mt-5 media-body">
@@ -112,6 +112,7 @@
 	width: 100%;
 	height:400px;
 	overflow:hidden;
+	/*background: linear-gradient(to right, salmon, coral);*/
 }
 
 .profile-card-2 .card-body{
@@ -133,7 +134,7 @@
 	font-size: 31px;
 	font-weight:700;
 	/*color:#000!important;*/
-	margin-top: -19rem;
+	margin-top: -15rem;
 	align-items: center!important;
 }
 .profile-card-2 .card-text{
@@ -164,9 +165,6 @@
 	color:#fff!important;
 }
 
-.media-body{
-	margin-top: 3rem!important;
-}
 
 .media-body h5 {
 	font-size: 23px;
@@ -174,19 +172,20 @@
 
 .media-body p {
 	font-size: 11px;
+	color:#000;
 }
 
 @media (min-width: 992px) {
 	.profile-card-2 .card-img-block{
 		float:left;
 		width: 100%;
-		height:600px;
+		height:800px;
 		overflow:hidden;
 	}
 	.profile {
 		border-radius: 50%;
 		position: absolute;
-		top: -23rem!important;
+		top: -19rem!important;
 		left: 50%!important;
 		/*max-width: 65px;*/
 		width: 250px!important;

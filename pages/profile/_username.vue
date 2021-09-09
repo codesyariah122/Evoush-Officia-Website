@@ -39,14 +39,19 @@
 
 		data(){
 			return {
-				token: localStorage.getItem('token'),
-				username: localStorage.getItem('username'),
+				// token: localStorage.getItem('token'),
+				// username: localStorage.getItem('username'),
 				user: ''
 			}
 		},
 
+		computed:{
+			credentialLogin(){
+				return this.$store.getters.getCredentialUser
+			}
+		},
 		mounted(){
-			if(this.token){
+			if(this.credentialLogin.token){
 				// this.$swal({
 				// 	icon: 'success',
 				// 	title: `Selamat datang ${this.username}`,
@@ -78,6 +83,12 @@
 			.catch(error => {
 				console.log(error.response)
 			})
+		},
+
+		methods: {
+			credential(){
+				this.$store.commit('credential')
+			}
 		},
 
 		async asyncData({$axios, params}){

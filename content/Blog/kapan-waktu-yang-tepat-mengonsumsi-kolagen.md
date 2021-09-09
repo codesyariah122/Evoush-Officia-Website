@@ -38,7 +38,7 @@ Dokter yang sekaligus founder Portico itu juga menambahkan bahwa penggunaan Glut
 <img src="https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/4.jpg?raw=true" class="img-fluid">  
 
 **L-Glutation** itu biasanya mampu membuat kulit terlihat lebih cerah, sehatm dan berseri sepanjang hari. Tidak hanya itu, kandungan gluta yang baik juga terbukti bisa membuat kolagen dalam tubuh semakin maksimal kerjanya pada kulit," tambahnya.  
-<img src="https://app.evoush.com/storage/product-sliders/dc06b899913a8375d93d7b8e45ea26b2" class="img-fluid">  
+<img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/product-sliders/dc06b899913a8375d93d7b8e45ea26b2" class="img-fluid">  
 
 Semua kecemasan yang anda alami seperti diatas ... kulit butuh perawatan dari dalam dan kami punya solusinya !  
 dari product kami yang diantaranya adalah  

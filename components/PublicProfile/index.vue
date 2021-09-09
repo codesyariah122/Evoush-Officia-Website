@@ -15,7 +15,7 @@
 					<!-- <pre>
 						http://localhost:8000/storage/{{member.cover}}
 					</pre> -->
-					<div class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/${member.cover}')` : 'background-image: url(https://cdn.pixabay.com/photo/2020/04/12/20/37/abstract-5035778_960_720.jpg)'">
+					<div class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/${member.cover}')` : 'background-image: url(https://github.com/evoush-products/bahan_evoush/blob/main/assets/img/bg/network-4851119_1920.jpg?raw=true)'">
 						<div class="media align-items-end">
 							<div class="row justify-content-center">
 								<div class="col-lg-10">
@@ -60,7 +60,7 @@
 
 											<!-- <span :class="`${member.achievements.includes('STAR SAPHIRE') ? 'badge badge-primary' : 'badge badge-success'}`"><i class='bx bx-medal bx-lg'></i> {{(member.achievements.includes("STAR SAPHIRE")) ? "STAR SAPHIRE" : "SAPHIRE"}}</span></p> -->
 
-											<p class="small"> <i class='bx bx-map'></i>
+											<p class="small text-white"> <i class='bx bx-map'></i>
 												{{member.city}} | {{member.province}}
 											</p>
 										</div>
@@ -156,28 +156,39 @@
 					{id:1, url: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/bahan_gallery/image/new_products/brands1.jpeg'},
 					{id:2, url: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/bahan_gallery/image/new_products/brands2.jpeg'},
 					{id:3, url: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/bahan_gallery/image/new_products/brands3.jpeg'},
-					{id:4, url: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/bahan_gallery/image/new_products/brands4.jpeg'}
+					{id:4, url: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/bahan_gallery/image/new_products/brands4.jpeg'},
+					{id:5, url: 'https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/new_brand1.jpeg?raw=true'},
+					{id:6, url: 'https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/new_brand2.jpeg?raw=true'},
+					{id:7, url: 'https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/new_brand3.jpeg?raw=true'},
+					{id:8, url: 'https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/new_brand4.jpeg?raw=true'}
 				],
 
 
 				followers: null,
 				loading: true,
-				token: localStorage.getItem('token'),
-				username: localStorage.getItem('username'),
 				user: '',
 				sapaan: ''
 			}
 		},
 
+		computed:{
+			credentialLogin(){
+				return this.$store.getters.getCredentialUser
+			}
+		},
+
 		mounted(){
-			if(this.token && this.username){
+			// console.log(this.credentialLogin)
+
+			if(this.credentialLogin.token && this.credentialLogin.username){
 				return this.$router.push({
 					name: 'profile-username',
 					params: {username: this.username}
 				})
 			}
+
 			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
-			this.$axios.get('https://evoush.herokuapp.com/api/user')
+			this.$axios.get('https://app.evoush.com/api/user')
 			.then(response => {
 
                     // console.log(response.data.name)
@@ -191,6 +202,11 @@
 			this.getFollowers(this.members[0].username)
 		},
 		methods: {
+
+			credential(){
+				this.$store.commit('credential')
+			},
+
 			getFollowers(username){
 				this.$axios.get(`https://evoush.herokuapp.com/api/member/join/active/${username}`)
 				.then( res => {

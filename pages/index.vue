@@ -32,12 +32,21 @@
 					</center>
 				</div>
 
+				<!-- test vuex -->
+				<!-- <div class="col-lg-12">
+					{{ color }}
+				</div> -->
+
 			</div>
 
 		</div>
 
+		<div class="col-lg-12 col-xs-12 col-sm-12">
+			<Branding />
+		</div>
 
-		<Product :products="results"/>
+		<!-- <Product :products="results"/> -->
+		<NewProduct :products="products"/>
 
 		<!-- <h1 class="underline" style="margin-top: 5rem;"></h1> -->
 
@@ -48,9 +57,6 @@
 		<h1 class="underline" style="margin-top: 5rem;"></h1>
 
 
-		<div class="col-lg-12 col-xs-12 col-sm-12">
-			<Branding />
-		</div>
 
 		<Members :members="members"/>
 
@@ -80,6 +86,7 @@
 
 <script>
 	import Product from '@/components/Landing/Product'
+	import NewProduct from '@/components/Landing/NewProductComponent'
 	import Members from '@/components/Landing/Members'
 	import NewMember from '@/components/Landing/NewMember'
 	import News from '@/components/Landing/News'
@@ -98,6 +105,7 @@
 		layout: 'default',
 		components: {
 			Product,
+			NewProduct,
 			Members,
 			NewMember,
 			News,
@@ -112,7 +120,11 @@
 			SendSms,
 			YoutubeChannel
 		},
-		async asyncData({$content, params, $axios, $config}){
+		async asyncData({$commerce, $content, params, $axios, $config}){
+			const {data: products} = await $commerce.products.list()
+
+			// console.log(products)
+
 			const channel_id = 'UCIzNgeNDD58z8XNppkopwzw'
 			const playlist_id = 'PLblvVtAgjh4DwLORfIHawwIVvaosP-YCA'
 			const channels = await $axios.$get(`/evoush/youtube/${channel_id}`)
@@ -125,13 +137,13 @@
 			.sortBy('createdAt', 'desc')
 			.where({categories: 'news'})
 			.fetch();
-			return { results, members, articles, channels, latestVideos, playlistVideos}
+			return { results, products, members, articles, channels, latestVideos, playlistVideos}
 		},
 		data(){
 			return {
 				env: process.env.config_production,
 				deferredPrompt: '',
-				colorMode: localStorage.getItem('nuxt-color-mode')
+				colorMode: this.color
 			}
 		},
 		head(){
@@ -141,9 +153,6 @@
 				{hid: 'canonical', rel: 'canonical', href: 'https://evoush.com/'}
 				],
 				meta: [
-					// { hid: 'description', name: 'Evoush Indonesia', content: 'Your Eternal Future' },
-					// { hid: 'description', name: 'description', content: 'Bisnis Evoush Indonesia'},
-					// { hid: 'keywords', name: 'keywords', content: 'Bisnis Evoush Bisnis Menjanjikan'},
 					{ hid: 'description', name: 'description', content: 'Evoush::Official | Home::Page'},
 					{ hid: 'keywords', name: 'keywords', content: 'Bisnis Network Marketing Zaman Now Ya Evoush Indonesia'},
 					{ hid: 'author', name: 'author' , content: 'Evoush::Indonesia | Official::Website'},
@@ -158,6 +167,25 @@
 				],
 			}
 		},
+
+		computed:{
+			counter(){
+				return this.$store.getters.getCounter
+			},
+			color(){
+				return this.$store.getters.getColorMode
+			}
+		},
+
+		methods: {
+			increment(){
+				return this.$store.commit('increment')
+			},
+			decrement(){
+				return this.$store.commit('decrement')
+			}
+		},
+
 		// created(){
 		// 	window.addEventListener("beforeinstallprompt", e => {
 		// 			e.preventDefault();
@@ -181,6 +209,8 @@
 			// .then(res => {
 			// 	console.log(res)
 			// })
+
+			OneSignal.log.setLevel('trace')
 		}
 	}
 </script>

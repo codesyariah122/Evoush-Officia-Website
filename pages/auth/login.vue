@@ -90,7 +90,7 @@
 				loginFailed: null,
 				activated: null,
 				join: null,
-				token: localStorage.getItem('token'),
+				// token: localStorage.getItem('token'),
 			}
 		},
 		head(){
@@ -99,19 +99,26 @@
 			}
 		},
 
+        computed:{
+            credentialLogin(){
+                return this.$store.getters.getCredentialUser
+            }
+        },
+
 		mounted(){
-			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
+            console.log(this.credentialLogin.token)
+			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.credentialLogin.token}`
 			this.$axios.get('/user')
 			.then(response => {
 				// console.log(response.username)
-				if(this.token){
-					// this.$swal({
-					// 	position: 'top-center',
-					// 	icon: 'success',
-					// 	title: `Anda telah login menggunakan username : ${response.username}`,
-					// 	showConfirmButton: false,
-					// 	timer: 1500
-					// })
+				if(this.credentialLogin.token){
+					this.$swal({
+						position: 'top-center',
+						icon: 'success',
+						title: `Anda telah login menggunakan username : ${this.credentialLogin.username}`,
+						showConfirmButton: false,
+						timer: 1500
+					})
 					return this.$router.push({
 						name: 'profile-username',
 						params: {username: response.username}
@@ -124,6 +131,10 @@
 		},
 
 		methods:{
+            credential(){
+                this.$store.commit('credential')
+            },
+
 			login(){
 				let username = this.user.username
 				let password = this.user.password

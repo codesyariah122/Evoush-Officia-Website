@@ -54,14 +54,20 @@
 	export default{
 		data(){
 			return {
-				token: (localStorage.getItem('token') ? localStorage.getItem('token') : ''),
-				username: (localStorage.getItem('username') ? localStorage.getItem('username') : ''),
+				// token: (localStorage.getItem('token') ? localStorage.getItem('token') : ''),
+				// username: (localStorage.getItem('username') ? localStorage.getItem('username') : ''),
 				user: ''
 			}
 		},
 
+		computed: {
+			credentialLogin(){
+				return this.$store.getters.getCredentialUser
+			}
+		},
+
 		mounted(){
-			if(this.token){
+			if(this.credentialLogin.token){
 				this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
 				this.$axios.get('/api/user')
 				.then(response => {
@@ -70,6 +76,11 @@
 				.catch(error => {
 					console.log(error.response.data)
 				})
+			}
+		},
+		methods: {
+			credential(){
+				return this.$store.commit('credential')
 			}
 		}
 	}
