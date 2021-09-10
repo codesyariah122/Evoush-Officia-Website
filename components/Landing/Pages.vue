@@ -16,33 +16,98 @@
 					data-aos="zoom-in"
 					data-aos-delay="100"
 					>
-					<div class="icon-box iconbox-blue">
-						<div class="icon">
-							<svg
-							width="100"
-							height="100"
-							viewBox="0 0 600 600"
-							xmlns="http://www.w3.org/2000/svg"
-							>
-							<path
-							stroke="none"
-							stroke-width="0"
-							fill="#f5f5f5"
-							d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"
-							></path>
-						</svg>
-						<i class='bx bxs-business'></i>
+						<div class="icon-box iconbox-blue">
+							<div class="icon">
+								<svg
+								width="100"
+								height="100"
+								viewBox="0 0 600 600"
+								xmlns="http://www.w3.org/2000/svg"
+								>
+								<path
+								stroke="none"
+								stroke-width="0"
+								fill="#f5f5f5"
+								d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"
+								></path>
+							</svg>
+							<i class='bx bxs-business'></i>
+						</div>
+						<h4><a href="">Management</a></h4>
+						<p>
+							Sebuah corporate tentunya tidak terlepas dari sebuah bagian penting yaitu management, sebuah management yang berkualitas berperan penting bagi pergerakan bisnis sebuah perusahaan sehingga akan terus berinovasi dengan segala macam pembaruan dalam dunia bisnis.
+						</p>
+						<nuxt-link to="/management" class="btn btn-primary mt-3">Management evoush</nuxt-link>
 					</div>
-					<h4><a href="">Management</a></h4>
-					<p>
-						Sebuah corporate tentunya tidak terlepas dari sebuah bagian penting yaitu management, sebuah management yang berkualitas berperan penting bagi pergerakan bisnis sebuah perusahaan sehingga akan terus berinovasi dengan segala macam pembaruan dalam dunia bisnis.
-					</p>
-					<nuxt-link to="/management" class="btn btn-primary mt-3">Management evoush</nuxt-link>
 				</div>
+
+				<div
+				class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
+				data-aos="zoom-in"
+				data-aos-delay="300"
+				>
+				<div class="icon-box iconbox-red">
+					<div class="icon">
+						<svg
+						width="100"
+						height="100"
+						viewBox="0 0 600 600"
+						xmlns="http://www.w3.org/2000/svg"
+						>
+						<path
+						stroke="none"
+						stroke-width="0"
+						fill="#f5f5f5"
+						d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"
+						></path>
+					</svg>
+					<i class='bx bx-shield-quarter'></i>
+				</div>
+				<h4><a href="">Legalitas</a></h4>
+				<p>
+					PT. Pineleng Indah Cemerlang dengan merk dagang evoush merupakan sebuah merk dagang yang telah resmi tergabung dalam keanggotaan <strong>AP2LI</strong>, sebagai landasan hukum yang menjadi legalitas kuat bagi keberlangsungan bisnis anda di evoush.
+				</p>
+
+				<nuxt-link to="/legalitas" class="btn btn-primary mt-3">Lihat Legalitas</nuxt-link>
+
+			</div>
+		</div>
+
+				<div
+				class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
+				data-aos="zoom-in"
+				data-aos-delay="300"
+				>
+				<div class="icon-box iconbox-orange">
+					<div class="icon">
+						<svg
+						width="100"
+						height="100"
+						viewBox="0 0 600 600"
+						xmlns="http://www.w3.org/2000/svg"
+						>
+						<path
+						stroke="none"
+						stroke-width="0"
+						fill="#f5f5f5"
+						d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"
+						></path>
+					</svg>
+					<i class='bx bx-fingerprint'></i>
+				</div>
+				<h4><a href="">Code Ethics</a></h4>
+				<p>
+					Kode etik kami merupakan bentuk legalitas data yang sah, yang di dalamnya merupakan bukti kekuatan hukum PT. Pineleng Indah Cemerlang berdasarkan ketentuan yang telah tercantum dalam isi dokumen kode etik kami. Yang menjadi landasan dan aturan yang melindungi anda yang tergabung sebagai mitra penggerak di bisnis evoush.
+					<a href="https://www.privacypolicyonline.com/live.php?token=bHBrhWEmveR3TWjVbwgJgUv7bUok2eVq">Evoush Privacy Policy</a>
+				</p>
+
+				<nuxt-link to="/code-ethics" class="btn btn-primary mt-3">Code Ethics</nuxt-link>
+
+			</div>
 			</div>
 
 			<div
-			class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
+			class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
 			data-aos="zoom-in"
 			data-aos-delay="100"
 			>
@@ -73,7 +138,7 @@
 
 
 <div
-class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
+class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
 data-aos="zoom-in"
 data-aos-delay="100"
 >
@@ -317,37 +382,7 @@ data-aos-delay="300"
 </div>
 </div>
 
-<div
-class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
-data-aos="zoom-in"
-data-aos-delay="300"
->
-<div class="icon-box iconbox-blue">
-	<div class="icon">
-		<svg
-		width="100"
-		height="100"
-		viewBox="0 0 600 600"
-		xmlns="http://www.w3.org/2000/svg"
-		>
-		<path
-		stroke="none"
-		stroke-width="0"
-		fill="#f5f5f5"
-		d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"
-		></path>
-	</svg>
-	<i class='bx bx-shield-quarter'></i>
-</div>
-<h4><a href="">Legalitas</a></h4>
-<p>
-	PT. Pineleng Indah Cemerlang dengan merk dagang evoush merupakan sebuah merk dagang yang telah resmi tergabung dalam keanggotaan <strong>AP2LI</strong>, sebagai landasan hukum yang menjadi legalitas kuat bagi keberlangsungan bisnis anda di evoush.
-</p>
 
-<nuxt-link to="/legalitas" class="btn btn-primary mt-3">Lihat Legalitas</nuxt-link>
-
-</div>
-</div>
 
 <div
 class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
@@ -381,38 +416,7 @@ data-aos-delay="300"
 </div>
 </div>
 
-<div
-class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
-data-aos="zoom-in"
-data-aos-delay="300"
->
-<div class="icon-box iconbox-red">
-	<div class="icon">
-		<svg
-		width="100"
-		height="100"
-		viewBox="0 0 600 600"
-		xmlns="http://www.w3.org/2000/svg"
-		>
-		<path
-		stroke="none"
-		stroke-width="0"
-		fill="#f5f5f5"
-		d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"
-		></path>
-	</svg>
-	<i class='bx bx-fingerprint'></i>
-</div>
-<h4><a href="">Code Ethics</a></h4>
-<p>
-	Kode etik kami merupakan bentuk legalitas data yang sah, yang di dalamnya merupakan bukti kekuatan hukum PT. Pineleng Indah Cemerlang berdasarkan ketentuan yang telah tercantum dalam isi dokumen kode etik kami. Yang menjadi landasan dan aturan yang melindungi anda yang tergabung sebagai mitra penggerak di bisnis evoush.
-	<a href="https://www.privacypolicyonline.com/live.php?token=bHBrhWEmveR3TWjVbwgJgUv7bUok2eVq">Evoush Privacy Policy</a>
-</p>
 
-<nuxt-link to="/privacy-policy" class="btn btn-primary mt-3">Code Ethics</nuxt-link>
-
-</div>
-</div>
 
 
 <!-- <div

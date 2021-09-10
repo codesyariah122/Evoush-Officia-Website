@@ -46,7 +46,7 @@
 				<div class="row">
 					<div class="col-lg-12 col-xs-12 col-sm-12 mb-5">
 						<div class="embed-responsive embed-responsive-4by3">
-							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0H81i8_dPmM"></iframe>
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4uY11lCCKUs?rel=0" allowfullscreen></iframe>
 						</div>
 					</div>
 				</div>
@@ -102,7 +102,7 @@
 
 .box-management ._content-img-profile{
 	position:absolute;
-	top:15px;
+	top:11px;
 	left:15px;
 	right:15px;
 	bottom:15px;
@@ -193,10 +193,12 @@
 	}
 
 	._content-img-profile img{
-		max-height: 382px!important;
-	}
-}
+		max-height: 402px!important;
 
+	}
+
+}
+/*
 @media (min-width: 768px){
 	._content-img-profile img{
 		max-height: 757px;
@@ -229,7 +231,7 @@
 	._content-img-profile img{
 		max-height: 303px;
 	}
-}
+}*/
 
 /*@media (min-width: 320px){
 	.box-management{

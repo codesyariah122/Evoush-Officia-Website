@@ -28,12 +28,13 @@
     justify-content: center;
     border-bottom: 1px solid white;
     color: white;
-    background-color: salmon;
+    background-color: #C8C8C8;
   }
   .cookie-consent button {
     border: 1px solid white;
     padding: 10px;
     margin-left: 20px;
     min-width: 140px;
+    background-color: #636161;
   }
 </style>

@@ -15,7 +15,7 @@
 					<!-- <pre>
 						http://localhost:8000/storage/{{member.cover}}
 					</pre> -->
-					<div class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/${member.cover}')` : 'background-image: url(https://github.com/evoush-products/bahan_evoush/blob/main/assets/img/bg/network-4851119_1920.jpg?raw=true)'">
+					<div class="px-4 pt-5 pb-4 cover" :style="(member.cover) ? `background-image: url('https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/${member.cover}')` : 'background-image: url(https://coolwallpapers.me/picsup/5605343-internet-wallpapers.jpg)'">
 						<div class="media align-items-end">
 							<div class="row justify-content-center">
 								<div class="col-lg-10">
