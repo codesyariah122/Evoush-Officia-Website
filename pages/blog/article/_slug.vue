@@ -11,9 +11,9 @@
 			<div class="col-lg-6 col-xs-6 col-sm-6 info mt-5">
 				<ul>
 					<li><small class="text-secondary"><strong>Create at : {{formatDate(article.createdAt)}}</strong></small></li>
-						<!-- <li class="mt-3">
+						<li class="mt-3">
 							<author :author="article.author" />
-						</li> -->
+						</li>
 						<li class="mt-5">
 							<PrevNext :prev="prev" :next="next"  />
 						</li>

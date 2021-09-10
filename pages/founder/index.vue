@@ -21,7 +21,7 @@
 						<div data-aos="fade-up" v-for="founder in founders" class="col-md-12 col-xs-12 col-sm-12 mt-3 mb-5" :key="founder.id">
 							<div class="card profile-card-2">
 								<div class="card-img-block">
-									<img class="img-responsive img-fluid" :src="founder.cover ? founder.cover : 'https://github.com/evoush-products/bahan_evoush/blob/main/assets/img/bg/network-4851119_1920.jpg?raw=true'" alt="Card image cap">
+									<img class="img-responsive img-fluid" :src="founder.cover ? founder.cover : 'https://coolwallpapers.me/picsup/5605343-internet-wallpapers.jpg'" alt="Card image cap">
 								</div>
 								<div class="card-body pt-5">
 									<div class="row justify-content-center">
@@ -34,7 +34,9 @@
 												<h5 class="card-title ml-3">{{founder.name}}</h5>
 												<p><strong>Username : {{founder.username}}</strong></p>
 												<p class="badge badge-primary text-white"> {{(founder.achievements.includes('STAR SAPHIRE') || founder.achievements.includes('SAPHIRE')) ? 'FOUNDER' : ''}}</p>
-
+												<p style="font-size: 16px;"> <i class='bx bx-map' style="font-size: 14px;"></i>
+													{{founder.city}} | {{founder.province}}
+												</p>
 												<div class="mt-2 mb-3">
 													<nuxt-link :to="{name:'member-username', params: {username: founder.username}}" class="btn btn-danger btn-sm">Lihat Profile</nuxt-link>
 												</div>

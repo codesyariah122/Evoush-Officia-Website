@@ -10,9 +10,9 @@ author:
   img: https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/jumbotron5.jpg
   cover: https://app.evoush.com/storage/product-covers/eJC8hUOT7B1Tg56943hWhsI9KMH8k7CdRe2OFDbo.jpg
 tags: 
-  - Evoush Tips
+  - Evoush News
 
-categories: article
+categories: news
 ---
 
 #### Bismillah  
@@ -26,14 +26,14 @@ Saking menjamurnya produk kosmetik di Indonesia, hal ini memicu peredaran kosmet
 ### Langkah-langkah memilih produk kosmetik yang aman  
 <br><br>
 #### 1. Cek KLIK
-<img src="https://app.evoush.com/storage/product-covers/5WL4zZmHersbDeiZm6kGs07P8UaLuRnem7D0Kiwb.jpg" class="img-responsive img-fluid" width="800">  
+<img src="https://cdn.chec.io/merchants/27164/assets/R764tDtFbVwbZ6A3%7CDay%20Cream1%20(1).jpg" class="img-responsive img-fluid" width="800">  
 <br><br>
 Cara pertama sebelum membeli produk kosmetik adalah cek KLIK. Cek KLIK artinya cek kemasan, label, izin edar, dan tanggal kedaluwarsa pada kosmetik.
 
 Pertama-tama, cek kemasan dan label produk kosmetik yang Anda beli. Periksa setiap sisinya apakah terdapat kecacatan dan perbedaan dengan kemasan kosmetik yang asli.
 
 Selanjutnya, temukan Nomor Izin Edar (NIE) pada kemasan produk. Kosmetik yang legal dan aman sudah pasti mengantongi izin resmi dari **BPOM** dan memiliki nomor izin edar tersebut. Artinya, bahan-bahan yang terkandung pun dijamin aman karena sudah diuji terlebih dahulu oleh BPOM.  
-<img src="https://app.evoush.com/storage/product-sliders/Day%20Cream.jpg" class="img-responsive img-fluid" width="600">
+<img src="https://cdn.chec.io/merchants/27164/assets/BnOLvdCmASEwEOuW%7CDay%20Cream.jpg" class="img-responsive img-fluid" width="600">
 <br><br>
 Selain itu, pastikan bahwa nomor izin edar tersebut benar-benar terdaftar pada web resmi BPOM. Sebab, mungkin saja beberapa produk kecantikan hanya sekadar menempel nomor izin edar yang asal-asalan. Jika produk kosmetik yang Anda beli tidak memiliki nomor izin edar maupun tidak benar-benar terdaftar, maka kosmetik tersebut sudah pasti ilegal dan tidak terjamin kandungannya.
 

@@ -26,13 +26,11 @@
 </template>
 
 <script>
-	import SocialSharing from '@/components/global/socialsharing'
 	import Event from '@/components/event/index'
 
 	export default {
 		layout: 'pages',
 		components: {
-			SocialSharing,
 			Event
 		},
 

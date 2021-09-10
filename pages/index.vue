@@ -43,6 +43,7 @@
 
 		<div class="col-lg-12 col-xs-12 col-sm-12">
 			<!-- <Branding /> -->
+			<News :articles="articles"/>
 		</div>
 
 		<!-- <Product :products="results"/> -->
@@ -62,15 +63,11 @@
 
 		<h1 class="underline" style="margin-top: 5rem;"></h1>
 
-		<News :articles="articles"/>
-
-		<h1 class="underline" style="margin-bottom: 5rem;"></h1>
-
 		<Pages/>
 
 		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
 
-		<YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos" :playlists="playlistVideos"/>
+		<!-- <YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos" :playlists="playlistVideos"/> -->
 
 		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
 

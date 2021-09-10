@@ -38,7 +38,7 @@
 											<div class="wrap-article">
 												<img
 												:src="list.cover"
-												class="img-fluid img-articles" style="width: 400px; height:200px;"
+												class="img-fluid img-articles" style="width: 500px; height:250px;"
 												alt=""
 												/>
 											</div>
