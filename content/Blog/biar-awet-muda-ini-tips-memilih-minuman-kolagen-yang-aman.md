@@ -31,6 +31,8 @@ Selain dari skincare, kolagen bisa kita peroleh dari makanan dan minuman. Bahkan
 #### 2. Lihat jumlah kolagen  
 Perhatikan juga jumlah kolagen yang terdapat dalam sebuah produk minuman. Jumlah standar peptida kolagen yang dianggap efektif adalah 5.000mg per hari untuk kulit dan 10.000 mg per hari untuk tulang sendi.  
 
+<iframe width="800" height="400" src="https://www.youtube.com/embed/kDEBNtodC7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 #### 3. Perhatikan kandungan gula  
 “Lihat juga apakah minimum tersebut banyak gula atau tidak,” tutur Dr. Reinita. Jadinya, kita bisa mengonsumsi minuman dalam jangka waktu panjang dan tidak berbahaya untuk kesehatan. Bila terlalu banyak pemanis, justru bisa berisiko terkena diabetes.  
 <img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/bahan_gallery/image/new_products/new_evost_brand.jpeg" class="img-fluid">  
