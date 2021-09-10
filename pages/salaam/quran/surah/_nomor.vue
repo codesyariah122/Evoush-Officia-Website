@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row justify-content-end mt-3 mb-3">
 				<div class="col-lg-2 col-xs-6 col-sm-6">
-					<nuxt-link class="btn btn-danger ml-3 mt-3" to="/salaam"><i class='bx bx-arrow-back'></i>Kembali</nuxt-link>
+					<nuxt-link class="btn btn-danger ml-3 mt-3" to="/salaam/quran"><i class='bx bx-arrow-back'></i>Kembali</nuxt-link>
 				</div>
 			</div>
 		</div>
@@ -44,31 +44,20 @@
 
 											<br>
 
-										<a class="tafsir-surah btn btn-success mt-3 mb-5" :data-surah="result.number.inSurah" data-toggle="modal" data-target="#exampleModal" @click="TafsirQuran">Read Tafsir Surah</a>
+										<a class="tafsir-surah btn btn-success mt-3 mb-5" :data-ayat="result.number.inSurah" data-toggle="modal" data-target="#exampleModal1" @click="TafsirQuran">Read Tafsir Surah</a>
 
 										<!-- Modal -->
-										<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 											<div class="modal-dialog modal-dialog-centered">
 												<div class="modal-content">
 													<div class="modal-header">
-														<h5 class="modal-title" id="exampleModalLabel">{{ tafsir.surah.name.transliteration.id }} - Ayat ke {{ tafsir.number.inSurah }}</h5>
+														<h5 class="modal-title" id="exampleModalLabel" v-html="tafsir_title"></h5>
 														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 															<span aria-hidden="true">&times;</span>
 														</button>
 													</div>
 													<div class="modal-body">
-														<h2>{{ tafsir.text.arab }}</h2>
-														<blockquote class="blockquote-footer">
-															{{ tafsir.text.transliteration.en ? tafsir.text.transliteration.en : tafsir.text.transliteration.id }}
-														</blockquote>
-														<small class="text-muted">
-															{{ tafsir.translation.id }} <br>
-															<br>
-															{{ tafsir.translation.en }}
-														</small>
-														<p>
-															{{ tafsir.tafsir.id.long }}
-														</p>
+														<div v-html="result_tafsir"></div>
 													</div>
 													<div class="modal-footer">
 														<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -142,31 +131,20 @@
 
 										<div v-html="elemAyat"></div>
 
-											<a class="tafsir-surah btn btn-success mt-3 mb-5" :data-surah="result.number.inSurah" data-toggle="modal" data-target="#exampleModal" @click="TafsirQuran">Read Tafsir Surah</a>
+											<a class="tafsir-surah btn btn-success mt-3 mb-5" :data-ayat="config.activeData" data-toggle="modal" data-target="#exampleModal2" @click="TafsirQuran">Read Tafsir Surah</a>
 
 											<!-- Modal -->
-											<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+											<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 												<div class="modal-dialog modal-dialog-centered">
 													<div class="modal-content">
 														<div class="modal-header">
-															<h5 class="modal-title" id="exampleModalLabel">{{ tafsir.surah.name.transliteration.id }} - Ayat ke {{ tafsir.number.inSurah }}</h5>
+															<h5 class="modal-title" id="exampleModalLabel" v-html="tafsir_title"></h5>
 															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 																<span aria-hidden="true">&times;</span>
 															</button>
 														</div>
 														<div class="modal-body">
-															<h2>{{ tafsir.text.arab }}</h2>
-															<blockquote class="blockquote-footer">
-																{{ tafsir.text.transliteration.en ? tafsir.text.transliteration.en : tafsir.text.transliteration.id }}
-															</blockquote>
-															<small class="text-muted">
-																{{ tafsir.translation.id }} <br>
-																<br>
-																{{ tafsir.translation.en }}
-															</small>
-															<p>
-																{{ tafsir.tafsir.id.long }}
-															</p>
+															<div v-html="result_tafsir"></div>
 														</div>
 														<div class="modal-footer">
 															<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -175,6 +153,7 @@
 													</div>
 												</div>
 											</div>
+
 
 											<div class="form-group">
 												<label for="ayat">Filter Ayat</label>
@@ -234,7 +213,6 @@
 
 		data(){
 			return {
-				loading: null,
 				showNext: false,
 				dataAyat: {},
 				elemAyat:'',
@@ -251,7 +229,8 @@
 					LastData: ''
 				},
 				surah: {},
-				tafsir: ''
+				tafsir_title: '',
+				result_tafsir:''
 			}
 		},
 
@@ -280,7 +259,7 @@
 
 
 			const surahchange = await $axios.get(`https://api.quran.sutanlab.id/surah/${NumberSurah}`)
-			// console.log(activeData)
+			// console.log(result)
 			const changes = surahchange.data.data.verses
 
 
@@ -518,15 +497,34 @@
 				.catch(err => console.log(err.response))
 			},
 
-			TafsirQuran(e){
-				e.preventDefault
-				this.loading = true
+			TafsirQuran(){
+				// this.loading = true
 				const surah = this.nomorSurah
-				const ayat = this.nomorAyat
+				const ayat = document.querySelector('.tafsir-surah').getAttribute('data-ayat')
+				console.log(surah +' - '+ ayat)
 				this.$axios.get(`https://api.quran.sutanlab.id/surah/${surah}/${ayat}`)
 				.then(res =>{
-					console.log(res.data)
-					this.tafsir = res.data.data
+					// this.loading = false
+					const tafsir = res.data
+					console.log(tafsir)
+					this.tafsir_title = `${tafsir.data.surah.name.transliteration.id} - Ayat ke ${tafsir.data.number.inSurah}`
+					this.result_tafsir = `
+					<h2>${tafsir.data.text.arab}</h2>
+					<blockquote class="blockquote-footer">
+					${ tafsir.data.text.transliteration.en ? tafsir.data.text.transliteration.en : tafsir.data.text.transliteration.id }
+					<br/>
+
+					<small class="text-muted">
+					${ tafsir.data.translation.id } <br>
+					<br>
+					${ tafsir.data.translation.en }
+					</small>
+					</blockquote>
+
+					<p>
+					${ tafsir.data.tafsir.id.long }
+					</p>
+					`
 				})
 				.catch(err => console.log(err.response))
 			}
