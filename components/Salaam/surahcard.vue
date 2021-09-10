@@ -17,13 +17,13 @@
 							{{select.tafsir.id}}
 						</blockquote>
 					</p>
-					<nuxt-link :to="{name: 'surah-nomor', params: {nomor: select.number}}" class="card-link btn btn-outline-primary btn-block">Baca Surah</nuxt-link>
+					<nuxt-link :to="{name: 'salaam-quran-surah-nomor', params: {nomor: select.number}}" class="card-link btn btn-outline-primary btn-block">Baca Surah</nuxt-link>
 					<!-- <a href="#" class="card-link">Another link</a> -->
 				</div>
 			</div>
 		</div>
 
-		
+
 	</div>
 </template>
 
