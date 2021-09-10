@@ -60,10 +60,12 @@
 
 
 <script>
+	import Movie from '@/components/Movie/index'
 	import Youtube from '@/components/Movie/YoutubeSearch'
 
 	export default {
 		components:{
+			Movie,
 			Youtube
 		},
 		layout: 'pages',

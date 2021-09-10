@@ -42,7 +42,7 @@
 		</div>
 
 		<div class="col-lg-12 col-xs-12 col-sm-12">
-			<Branding />
+			<!-- <Branding /> -->
 		</div>
 
 		<!-- <Product :products="results"/> -->
@@ -74,10 +74,7 @@
 
 		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
 
-		<NewMember/>
-
-		<h1 class="underline" style="margin-top: 5rem;"></h1>
-
+		<!-- <NewMember/> -->
 
 		<Contact/>
 
