@@ -67,7 +67,7 @@
 
 		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
 
-		<!-- <YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos" :playlists="playlistVideos"/> -->
+		<YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos" :playlists="playlistVideos"/>
 
 		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
 
