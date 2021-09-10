@@ -44,7 +44,39 @@
 
 											<br>
 
-										<a class="tafsir-surah btn btn-success mt-3 mb-5" :data-surah="result.number.inSurah" data-toggle="modal" data-target="#exampleModal">Read Tafsir Surah</a>
+										<a class="tafsir-surah btn btn-success mt-3 mb-5" :data-surah="result.number.inSurah" data-toggle="modal" data-target="#exampleModal" @click="TafsirQuran">Read Tafsir Surah</a>
+
+										<!-- Modal -->
+										<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+											<div class="modal-dialog modal-dialog-centered">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalLabel">{{ tafsir.surah.name.transliteration.id }} - Ayat ke {{ tafsir.number.inSurah }}</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true">&times;</span>
+														</button>
+													</div>
+													<div class="modal-body">
+														<h2>{{ tafsir.text.arab }}</h2>
+														<blockquote class="blockquote-footer">
+															{{ tafsir.text.transliteration.en ? tafsir.text.transliteration.en : tafsir.text.transliteration.id }}
+														</blockquote>
+														<small class="text-muted">
+															{{ tafsir.translation.id }} <br>
+															<br>
+															{{ tafsir.translation.en }}
+														</small>
+														<p>
+															{{ tafsir.tafsir.id.long }}
+														</p>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+														<button type="button" class="btn btn-primary">Save changes</button>
+													</div>
+												</div>
+											</div>
+										</div>
 
 										<!-- <pre>
 											{{ changes }}
@@ -110,7 +142,39 @@
 
 										<div v-html="elemAyat"></div>
 
-											<a class="tafsir-surah btn btn-success mt-3 mb-5" :data-surah="dataAyat.number.inSurah" data-toggle="modal" data-target="#exampleModal">Read Tafsir Surah</a>
+											<a class="tafsir-surah btn btn-success mt-3 mb-5" :data-surah="result.number.inSurah" data-toggle="modal" data-target="#exampleModal" @click="TafsirQuran">Read Tafsir Surah</a>
+
+											<!-- Modal -->
+											<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+												<div class="modal-dialog modal-dialog-centered">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h5 class="modal-title" id="exampleModalLabel">{{ tafsir.surah.name.transliteration.id }} - Ayat ke {{ tafsir.number.inSurah }}</h5>
+															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																<span aria-hidden="true">&times;</span>
+															</button>
+														</div>
+														<div class="modal-body">
+															<h2>{{ tafsir.text.arab }}</h2>
+															<blockquote class="blockquote-footer">
+																{{ tafsir.text.transliteration.en ? tafsir.text.transliteration.en : tafsir.text.transliteration.id }}
+															</blockquote>
+															<small class="text-muted">
+																{{ tafsir.translation.id }} <br>
+																<br>
+																{{ tafsir.translation.en }}
+															</small>
+															<p>
+																{{ tafsir.tafsir.id.long }}
+															</p>
+														</div>
+														<div class="modal-footer">
+															<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+															<button type="button" class="btn btn-primary">Save changes</button>
+														</div>
+													</div>
+												</div>
+											</div>
 
 											<div class="form-group">
 												<label for="ayat">Filter Ayat</label>
@@ -170,6 +234,7 @@
 
 		data(){
 			return {
+				loading: null,
 				showNext: false,
 				dataAyat: {},
 				elemAyat:'',
@@ -185,7 +250,8 @@
 					FirstData: '',
 					LastData: ''
 				},
-				surah: {}
+				surah: {},
+				tafsir: ''
 			}
 		},
 
@@ -220,6 +286,7 @@
 
 			return{
 				nomorSurah,
+				nomorAyat,
 				result,
 				audio,
 				NumberSurah,
@@ -237,6 +304,8 @@
 		},
 
 		mounted(){
+
+			// console.log(this.result)
 
 		},
 
@@ -445,6 +514,19 @@
 						<br>
 					`
 
+				})
+				.catch(err => console.log(err.response))
+			},
+
+			TafsirQuran(e){
+				e.preventDefault
+				this.loading = true
+				const surah = this.nomorSurah
+				const ayat = this.nomorAyat
+				this.$axios.get(`https://api.quran.sutanlab.id/surah/${surah}/${ayat}`)
+				.then(res =>{
+					console.log(res.data)
+					this.tafsir = res.data.data
 				})
 				.catch(err => console.log(err.response))
 			}
