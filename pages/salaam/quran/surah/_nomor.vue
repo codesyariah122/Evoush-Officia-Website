@@ -51,7 +51,7 @@
 											<div class="modal-dialog modal-dialog-centered">
 												<div class="modal-content">
 													<div class="modal-header">
-														<h5 class="modal-title" id="exampleModalLabel" v-html="tafsir_title"></h5>
+														<h5 class="modal-title text-dark" id="exampleModalLabel" v-html="tafsir_title"></h5>
 														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 															<span aria-hidden="true">&times;</span>
 														</button>
@@ -138,7 +138,7 @@
 												<div class="modal-dialog modal-dialog-centered">
 													<div class="modal-content">
 														<div class="modal-header">
-															<h5 class="modal-title" id="exampleModalLabel" v-html="tafsir_title"></h5>
+															<h5 class="modal-title text-dark" id="exampleModalLabel" v-html="tafsir_title"></h5>
 															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 																<span aria-hidden="true">&times;</span>
 															</button>
@@ -509,7 +509,7 @@
 					console.log(tafsir)
 					this.tafsir_title = `${tafsir.data.surah.name.transliteration.id} - Ayat ke ${tafsir.data.number.inSurah}`
 					this.result_tafsir = `
-					<h2>${tafsir.data.text.arab}</h2>
+					<h2 class="text-muted">${tafsir.data.text.arab}</h2>
 					<blockquote class="blockquote-footer">
 					${ tafsir.data.text.transliteration.en ? tafsir.data.text.transliteration.en : tafsir.data.text.transliteration.id }
 					<br/>
@@ -521,7 +521,7 @@
 					</small>
 					</blockquote>
 
-					<p>
+					<p class="text-dark">
 					${ tafsir.data.tafsir.id.long }
 					</p>
 					`
