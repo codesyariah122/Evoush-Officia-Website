@@ -268,3 +268,19 @@ body h2{
 .about .content h2{
   color: var(--color-profile);
 }
+
+.list-group li {
+  color: var(--color-dua);
+}
+
+.modal-content .modal-body h2 {
+  color: var(--color-secondary);
+}
+
+.modal-content.modal-body blockquote{
+  color: var(--color-primary);
+}
+
+.modal-content.moda-body p{
+  color: var(--color-dua);
+}

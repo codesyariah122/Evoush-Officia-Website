@@ -9,9 +9,9 @@ author:
   img: https://img.freepik.com/free-vector/young-author-writer-working-new-article_74855-5602.jpg?size=626&ext=jpg
   cover: https://app.evoush.com/storage/product-covers/eJC8hUOT7B1Tg56943hWhsI9KMH8k7CdRe2OFDbo.jpg
 tags:
-  - Evoush Info
+  - Evoush News
 
-categories: article
+categories: news
 ---  
 
 Keunggulan Aloe Barbadensis Extract :
