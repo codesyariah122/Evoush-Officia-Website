@@ -77,10 +77,14 @@
 
 		async asyncData({$axios, $config}){
 			const surahLists = await $axios.$get('https://api.quran.sutanlab.id/surah')
-			
+
 			return {
 				surahLists
 			}
+		},
+
+		mounted(){
+			localStorage.removeItem('nomor-ayat')
 		},
 
 		methods: {
@@ -128,6 +132,6 @@
 	line-height: 1.5em;
 	margin-right: 5px;
 	text-align: center;
-	width: 1.6em; 
+	width: 1.6em;
 }
 </style>

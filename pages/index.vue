@@ -165,23 +165,6 @@
 			}
 		},
 
-		computed:{
-			counter(){
-				return this.$store.getters.getCounter
-			},
-			color(){
-				return this.$store.getters.getColorMode
-			}
-		},
-
-		methods: {
-			increment(){
-				return this.$store.commit('increment')
-			},
-			decrement(){
-				return this.$store.commit('decrement')
-			}
-		},
 
 		// created(){
 		// 	window.addEventListener("beforeinstallprompt", e => {

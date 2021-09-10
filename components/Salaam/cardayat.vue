@@ -14,7 +14,7 @@
 							<div class="col-12 col-xs-12 col-sm-12 text-center mb-5">
 								<h1 class="mb-5"> {{result.surah.preBismillah !== null ? result.surah.preBismillah.text.arab : ''}} </h1>
 								<h3 class="mt-2">
-									<span class="circle-number">{{result.number.inSurah}}</span> &nbsp; 
+									<span class="circle-number">{{result.number.inSurah}}</span> &nbsp;
 									{{result.text.arab}}
 								</h3>
 								<h4 class="mt-5">{{result.text.transliteration.en}}</h4>

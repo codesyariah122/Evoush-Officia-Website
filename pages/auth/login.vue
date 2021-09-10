@@ -90,51 +90,35 @@
 				loginFailed: null,
 				activated: null,
 				join: null,
-				// token: localStorage.getItem('token'),
-			}
-		},
-		head(){
-			return {
-				title: 'Evoush::Member | Login'
+				token: localStorage.getItem('token')
 			}
 		},
 
-        computed:{
-            credentialLogin(){
-                return this.$store.getters.getCredentialUser
-            }
+        mounted(){
+            this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
+            this.$axios.get('/user')
+            .then(response => {
+                console.log(response)
+                if(this.token){
+                    this.$swal({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: `Anda telah login menggunakan username : ${response.data.username}`,
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                    return this.$router.push({
+                        name: 'profile-username',
+                        params: {username: response.data.username}
+                    })
+                }
+            })
+            .catch(error => {
+                console.log(error.response)
+            })
         },
 
-		mounted(){
-            console.log(this.credentialLogin.token)
-			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.credentialLogin.token}`
-			this.$axios.get('/user')
-			.then(response => {
-				// console.log(response.username)
-				if(this.credentialLogin.token){
-					this.$swal({
-						position: 'top-center',
-						icon: 'success',
-						title: `Anda telah login menggunakan username : ${this.credentialLogin.username}`,
-						showConfirmButton: false,
-						timer: 1500
-					})
-					return this.$router.push({
-						name: 'profile-username',
-						params: {username: response.username}
-					})
-				}
-			})
-			.catch(error => {
-				console.log(error.response)
-			})
-		},
-
 		methods:{
-            credential(){
-                this.$store.commit('credential')
-            },
-
 			login(){
 				let username = this.user.username
 				let password = this.user.password

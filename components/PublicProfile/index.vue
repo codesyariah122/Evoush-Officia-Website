@@ -123,7 +123,6 @@
 
 	export default {
 		props: ['members'],
-		middleware: 'authenticated',
 		components: {
 			ProfileTabs
 		},
@@ -162,7 +161,10 @@
 					{id:7, url: 'https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/new_brand3.jpeg?raw=true'},
 					{id:8, url: 'https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/new_brand4.jpeg?raw=true'}
 				],
-
+				credential: {
+					username: localStorage.getItem('username'),
+					token: localStorage.getItem('token')
+				},
 
 				followers: null,
 				loading: true,
@@ -171,16 +173,11 @@
 			}
 		},
 
-		computed:{
-			credentialLogin(){
-				return this.$store.getters.getCredentialUser
-			}
-		},
 
 		mounted(){
 			// console.log(this.credentialLogin)
 
-			if(this.credentialLogin.token && this.credentialLogin.username){
+			if(this.credential.token && this.credential.username){
 				return this.$router.push({
 					name: 'profile-username',
 					params: {username: this.username}

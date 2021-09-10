@@ -175,7 +175,6 @@
 
 	export default {
 		props: ['members', 'token', 'user', 'username'],
-		middleware: 'authenticated',
 		components: {
 			ProfileTabs
 		},

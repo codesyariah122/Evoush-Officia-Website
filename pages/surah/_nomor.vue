@@ -5,7 +5,7 @@
 				<div class="col-lg-2 col-xs-6 col-sm-6">
 					<nuxt-link class="btn btn-danger ml-3 mt-3" to="/salaam"><i class='bx bx-arrow-back'></i>Kembali</nuxt-link>
 				</div>
-			</div>	
+			</div>
 		</div>
 
 
@@ -26,7 +26,7 @@
 									<div class="col-12 col-xs-12 col-sm-12 text-center mb-5">
 										<h3 class="mb-5"> {{result.surah.preBismillah !== null ? result.surah.preBismillah.text.arab : ''}} </h3>
 										<h1 class="mt-2">
-											<span class="circle-number">{{result.number.inSurah}}</span> &nbsp; 
+											<span class="circle-number">{{result.number.inSurah}}</span> &nbsp;
 											{{result.text.arab}}
 										</h1>
 										<h4 class="mt-5">{{result.text.transliteration.en}}</h4>
@@ -37,14 +37,28 @@
 										<audio  ref="player" controls>
 											<source v-bind:src="audio" type="audio/mp3">
 										</audio>
-										
+
 										<!-- <audio ref="player" controls>
 											<source v-bind:src="audio" type="audio/mp3">
 										</audio> -->
-											
+
 											<br>
-											
-											<a class="tafsir-surah btn btn-success mt-3 mb-5" :data-surah="result.number.inSurah" data-toggle="modal" data-target="#exampleModal">Read Tafsir Surah</a>
+
+										<a class="tafsir-surah btn btn-success mt-3 mb-5" :data-surah="result.number.inSurah" data-toggle="modal" data-target="#exampleModal">Read Tafsir Surah</a>
+
+										<!-- <pre>
+											{{ changes }}
+										</pre> -->
+										<div class="form-group">
+											<label for="ayat">Filter Ayat</label>
+											<br>
+											<select class="form-control mt-3 mb-5" @change="ChangeAyat">
+												<option value="">-Pilih Ayat-</option>
+												<option v-for="change in changes" :value="change.number.inSurah">
+													Ayat - {{ change.number.inSurah }}
+												</option>
+											</select>
+										</div>
 
 										<nav aria-label="Page navigation example">
 											<ul class="pagination justify-content-center">
@@ -91,35 +105,48 @@
 
 						<div class="card-body quran-body">
 							<div class="row justify-content-center">
-								<div class="ayat col-12 col-xs-12 col-sm-12 text-center mb-5">
-								
-									<div v-html="elemAyat"></div>
-											
-										<a class="tafsir-surah btn btn-success mt-3 mb-5" :data-surah="dataAyat.number.inSurah" data-toggle="modal" data-target="#exampleModal">Read Tafsir Surah</a>
+								<div class="ayat">
+									<div class="col-12 col-xs-12 col-sm-12 text-center mb-5">
 
-										<nav aria-label="Page navigation example">
-											<ul class="pagination justify-content-center">
-												<li :class="config.Disabled">
-													<a class="page-link first" :data-surah="config.NumberSurah" :data-ayat="config.FirstData" aria-label="Previous" @click="firstAyat">
-														<span aria-hidden="true">&laquo;</span>
-													</a>
-												</li>
-												<li :class="config.Disabled">
-													<a class="page-link prev" :data-surah="config.NumberSurah" :data-ayat="config.PrevData"  @click="prevAyat">Previous</a>
-												</li>
+										<div v-html="elemAyat"></div>
 
-												<li :class="config.DisabledNext">
-													<a class="page-link next" :data-surah="config.NumberSurah" :data-ayat="config.NextData" @click="nextAyat">Next</a>
-												</li>
-												<li :class="config.DisabledNext">
-													<a class="page-link last" aria-label="Next" :data-surah="config.NumberSurah" :data-ayat="config.LastData" @click="lastAyat">
-														<span aria-hidden="true">&raquo;</span>
-													</a>
-												</li>
-											</ul>
-										</nav>
+											<a class="tafsir-surah btn btn-success mt-3 mb-5" :data-surah="dataAyat.number.inSurah" data-toggle="modal" data-target="#exampleModal">Read Tafsir Surah</a>
 
-									</div>
+											<div class="form-group">
+												<label for="ayat">Filter Ayat</label>
+												<br>
+												<select class="form-control mt-3 mb-5" @change="ChangeAyat">
+													<option value="">-Pilih Ayat-</option>
+													<option v-for="change in changes" :value="change.number.inSurah">
+														Ayat - {{ change.number.inSurah }}
+													</option>
+												</select>
+											</div>
+
+											<nav aria-label="Page navigation example">
+												<ul class="pagination justify-content-center">
+													<li :class="config.Disabled">
+														<a class="page-link first" :data-surah="config.NumberSurah" :data-ayat="config.FirstData" aria-label="Previous" @click="firstAyat">
+															<span aria-hidden="true">&laquo;</span>
+														</a>
+													</li>
+													<li :class="config.Disabled">
+														<a class="page-link prev" :data-surah="config.NumberSurah" :data-ayat="config.PrevData"  @click="prevAyat">Previous</a>
+													</li>
+
+													<li :class="config.DisabledNext">
+														<a class="page-link next" :data-surah="config.NumberSurah" :data-ayat="config.NextData" @click="nextAyat">Next</a>
+													</li>
+													<li :class="config.DisabledNext">
+														<a class="page-link last" aria-label="Next" :data-surah="config.NumberSurah" :data-ayat="config.LastData" @click="lastAyat">
+															<span aria-hidden="true">&raquo;</span>
+														</a>
+													</li>
+												</ul>
+											</nav>
+
+										</div>
+								</div>
 								</div>
 							</div>
 						</div>
@@ -138,7 +165,7 @@
 		head(){
 			return{
 				title: "Evoush::Salaam"
-			} 
+			}
 		},
 
 		data(){
@@ -157,14 +184,21 @@
 					PrevData: '',
 					FirstData: '',
 					LastData: ''
-				}
+				},
+				surah: {}
 			}
 		},
 
 
 		async asyncData({$axios, params}){
-			const nomor = params.nomor
-			const surahResults = await $axios.get(`https://api.quran.sutanlab.id/surah/${nomor}/1`)
+			localStorage.setItem('nomor-surah', params.nomor)
+			// localStorage.setItem('nomor-ayat', 1)
+			// console.log(params.nomor)
+
+			let nomorSurah = localStorage.getItem('nomor-surah')
+			let nomorAyat = localStorage.getItem('nomor-ayat') ? localStorage.getItem('nomor-ayat') : 1
+
+			const surahResults = await $axios.get(`https://api.quran.sutanlab.id/surah/${nomorSurah}/${nomorAyat}`)
 			const result = surahResults.data.data
 			const audio = result.audio.primary
 			const NumberSurah = result.surah.number
@@ -177,11 +211,15 @@
 			const PrevData = activeData != 1 ? activeData - 1 : ''
 			const FirstData = activeData >= 1 ? (activeData + 1) - activeData : ''
 			const LastData = activeData >= 1 ? (activeData - activeData) + TotalAyat : TotalAyat
-			
+
+
+			const surahchange = await $axios.get(`https://api.quran.sutanlab.id/surah/${NumberSurah}`)
 			// console.log(activeData)
-			// console.log(LastData)
+			const changes = surahchange.data.data.verses
+
 
 			return{
+				nomorSurah,
 				result,
 				audio,
 				NumberSurah,
@@ -193,15 +231,59 @@
 				NextData,
 				PrevData,
 				FirstData,
-				LastData
+				LastData,
+				changes
 			}
 		},
 
 		mounted(){
-			
+
 		},
 
 		methods: {
+
+			ChangeAyat(e){
+				const surah = this.config.NumberSurah ? this.config.NumberSurah : this.nomorSurah
+				const ayat = e.target.value
+
+				localStorage.setItem('nomor-surah', surah)
+				localStorage.setItem('nomor-ayat', ayat)
+
+				this.$axios.get(`https://api.quran.sutanlab.id/surah/${surah}/${ayat}`)
+				.then(res => {
+					this.showNext = true
+					this.dataAyat = res.data.data
+					console.log(this.dataAyat)
+
+					this.config.NumberSurah = this.dataAyat.surah.number
+					this.config.TotalAyat = this.dataAyat.surah.numberOfVerses
+					this.config.activeData = this.dataAyat.number.inSurah
+					this.config.Disabled = this.config.activeData == 1 ? 'page-item disabled' : ''
+					this.config.DisabledTab = this.config.activeData == 1 ? 'tabindex="-1" aria-disabled="true"' : ''
+					this.config.DisabledNext = this.config.activeData >= this.config.TotalAyat ? 'page-item disabled' : ''
+					this.config.NextData = this.config.activeData >= this.config.TotalAyat ? 1 : this.config.activeData + 1
+					this.config.PrevData = this.config.activeData != 1 ? this.config.activeData - 1 : ''
+					this.config.FirstData = this.config.activeData >= 1 ? (this.config.activeData + 1) - this.config.activeData : ''
+					this.config.LastData = this.config.activeData >= 1 ? (this.config.activeData - this.config.activeData) + this.config.TotalAyat : ''
+					this.elemAyat = `
+						<h3 class="mb-5"> ${this.dataAyat.surah.preBismillah !== null ? this.dataAyat.surah.preBismillah.text.arab : ''} </h3>
+						<h1 class="mt-2">
+						<span class="circle-number">${this.dataAyat.number.inSurah}</span> &nbsp;
+						${this.dataAyat.text.arab}
+						</h1>
+						<h4 class="mt-5">${this.dataAyat.text.transliteration.en}</h4>
+						<br/>
+						<blockquote class="mb-2 text-success"> - ${this.dataAyat.translation.id}</blockquote>
+						<br/>
+						<audio ref="player" controls>
+						<source src="${this.dataAyat.audio.primary}" type="audio/mp3">
+						</audio>
+						<br>
+					`
+
+				})
+			},
+
 			nextAyat(e){
 				const surah = e.target.getAttribute('data-surah')
 				const ayat = e.target.getAttribute('data-ayat')
@@ -225,7 +307,7 @@
 					this.elemAyat = `
 						<h3 class="mb-5"> ${this.dataAyat.surah.preBismillah !== null ? this.dataAyat.surah.preBismillah.text.arab : ''} </h3>
 						<h1 class="mt-2">
-						<span class="circle-number">${this.dataAyat.number.inSurah}</span> &nbsp; 
+						<span class="circle-number">${this.dataAyat.number.inSurah}</span> &nbsp;
 						${this.dataAyat.text.arab}
 						</h1>
 						<h4 class="mt-5">${this.dataAyat.text.transliteration.en}</h4>
@@ -264,7 +346,7 @@
 					this.elemAyat = `
 						<h3 class="mb-5"> ${this.dataAyat.surah.preBismillah !== null ? this.dataAyat.surah.preBismillah.text.arab : ''}</h3>
 						<h1 class="mt-2">
-						<span class="circle-number">${this.dataAyat.number.inSurah}</span> &nbsp; 
+						<span class="circle-number">${this.dataAyat.number.inSurah}</span> &nbsp;
 						${this.dataAyat.text.arab}
 						</h1>
 						<h4 class="mt-5">${this.dataAyat.text.transliteration.en}</h4>
@@ -307,7 +389,7 @@
 					this.elemAyat = `
 						<h3 class="mb-5"> ${this.dataAyat.surah.preBismillah !== null ? this.dataAyat.surah.preBismillah.text.arab : ''}</h3>
 						<h1 class="mt-2">
-						<span class="circle-number">${this.dataAyat.number.inSurah}</span> &nbsp; 
+						<span class="circle-number">${this.dataAyat.number.inSurah}</span> &nbsp;
 						${this.dataAyat.text.arab}
 						</h1>
 						<h4 class="mt-5">${this.dataAyat.text.transliteration.en}</h4>
@@ -350,7 +432,7 @@
 					this.elemAyat = `
 						<h3 class="mb-5"> ${this.dataAyat.surah.preBismillah !== null ? this.dataAyat.surah.preBismillah.text.arab : ''}</h3>
 						<h1 class="mt-2">
-						<span class="circle-number">${this.dataAyat.number.inSurah}</span> &nbsp; 
+						<span class="circle-number">${this.dataAyat.number.inSurah}</span> &nbsp;
 						${this.dataAyat.text.arab}
 						</h1>
 						<h4 class="mt-5">${this.dataAyat.text.transliteration.en}</h4>
@@ -409,7 +491,7 @@
 		line-height: 1.5em;
 		margin-right: 5px;
 		text-align: center;
-		width: 1.6em; 
+		width: 1.6em;
 	}
 
 	.page-link {
