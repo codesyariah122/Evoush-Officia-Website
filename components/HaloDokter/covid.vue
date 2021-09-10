@@ -123,7 +123,7 @@
 		methods: {
 			dataVaksin(){
 				this.$axios
-				.get('http://vaksincovid19-api.vercel.app/api/vaksin')
+				.get('https://vaksincovid19-api.vercel.app/api/vaksin')
 				.then(res => {
 					this.vaksin = res.data
 				})
