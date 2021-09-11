@@ -35,6 +35,10 @@
 				</ul>
 			</div>
 
+		<!-- 	<pre>
+				{{ provinces }}
+			</pre> -->
+
 			<div v-if="country_name == 'Indonesia'">
 				<div class="row mt-5">
 					<div class="col-lg-12 col-xs-12 col-sm-12">
@@ -50,7 +54,7 @@
 						<label for="exampleFormControlSelect1">Pilih Provinsi</label>
 						<select class="form-control" id="exampleFormControlSelect1" @change="changeProvince">
 							<option value="">-Pilih Province-</option>
-							<option v-for="(item, index) in provinces" v-bind:value="index" >{{item.provinsi}}</option>
+							<option v-for="(item, index) in provinces.data.data" v-bind:value="index" >{{item.provinsi}}</option>
 						</select>
 					</div>
 
@@ -92,7 +96,7 @@
 <script>
 
 	export default{
-
+		props: ['provinces'],
 		data(){
 			return{
 				ip: '',
@@ -116,7 +120,7 @@
 
 		mounted(){
 			this.getLocation(this.ip),
-			this.getProvinsi(),
+			// this.getProvinsi(),
 			this.dataVaksin()
 		},
 

@@ -10,7 +10,7 @@
 
 		<div class="container">
 			<div class="row justify-content-center">
-				<Covid/>
+				<Covid :provinces="provinces"/>
 			</div>
 		</div>
 
@@ -25,6 +25,14 @@
 		components: {
 			Covid
 		},
+
+		async asyncData({$axios}){
+			const provinces = await $axios.get('https://indonesia-covid-19.mathdro.id/api/provinsi/')
+			return {
+				provinces
+			}
+		},
+
 		data(){
 			return {
 				socials: [
