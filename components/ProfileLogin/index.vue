@@ -66,7 +66,7 @@
 									<div v-else>
 										<img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg" :alt="member.name" class="image--profile-member rounded-circle center-block d-block mx-auto mt-0 mb-0" width="100">
 
-										<button class="btn btn-sm btn-primary mt-3 mb-2" @click="openUpdateAvatar"><i class='bx bxs-edit bx-lg'></i> Update Foto Profile</button>
+										<button class="btn btn-sm btn-primary mt-3 mb-2 edit-avatar" @click="openUpdateAvatar"><i class='bx bxs-edit bx-lg'></i> Update Foto Profile</button>
 									</div>
 								</div>
 								<div class="col-lg-12 col-xs-12 col-sm-12 mt-3">
@@ -483,7 +483,20 @@
 		margin-top: 25rem;
 		/*margin-left: 2rem;*/
 	}
-
+	.media-body h4{
+		margin-left: 5rem;
+		font-size: 21px;
+	}
+	.media-body p{
+		margin-left: 5rem;
+		font-size: 18px;
+	}
+	.media  button{
+		margin-left: -4.5rem;
+	}
+	.media .profile{
+		margin-left: -7rem;
+	}
 }
 
 </style>
