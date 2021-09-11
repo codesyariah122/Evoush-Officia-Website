@@ -6,6 +6,7 @@
 				<div class="row justify-content-center">
 					<div class="col-lg-8 col-xs-12 col-sm-12">
 						<Logo />
+						<!-- <WhiteLogo/> -->
 					</div>
 				</div>
 				<div class="row justify-content-start">
@@ -42,10 +43,12 @@
 
 <script>
 	import Logo from '~/components/molecules/Logo'
+	import WhiteLogo from '~/components/molecules/WhiteLogo'
 
 	export default {
 		components: {
-			Logo
+			Logo,
+			WhiteLogo
 		},
 		data(){
 			return {

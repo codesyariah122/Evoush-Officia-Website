@@ -1,6 +1,4 @@
-<template>
-	<div>
-		<svg class="NuxtLogo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve" >
+<svg class="NuxtLogo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
 			<image  id="image0" width="60" height="60" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 			AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACr1BMVEX/O0D/O0H9P0X/PEH7
 			RUz/Oj/7Q0r5SVH9P0T/PUL/Qkf/Njv/NDr/OD74W17pbW//Nzz9PkP6f4Tto6LItrP+PULuiI70
@@ -34,18 +32,5 @@
 			ANY2AwcNHiK6mhGta62FNSUADLUZNnyEUgSIizH5PWf+xj+FkVajRo8ZO248mERLbYMhSaPRlCc1
 			/0nLImjCxEmTp/z9N/U/aEb1ShWmljsAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjEtMDUtMDlUMDM6
 			NDc6MzgrMDM6MDC4X2MJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIxLTA1LTA5VDAzOjQ3OjM4KzAz
-			OjAwyQLbtQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" style="fill:#fff"/>
+			OjAwyQLbtQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
 		</svg>
-	</div>
-</template>
-
-<script>
-	export default {
-
-	}
-</script>
-
-
-<style scoped>
-
-</style>

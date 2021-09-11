@@ -7,7 +7,7 @@
 				</div>
 			</div>
 
-			<div class="row justify-content-center mt-5 mb-5">
+			<!-- <div class="row justify-content-center mt-5 mb-5">
 				<div class="col-lg-12 col-xs-12 col-sm-12">
 					<h5>Lihat Jadwal Shalat Kota Lainnya</h5>
 				</div>
@@ -35,29 +35,38 @@
 							<button type="submit" class="btn btn-primary btn-lg">Lihat Jadwal Shalat</button>
 						</div>
 					</form>
-
 				</div>
-			</div>
+			</div> -->
+
+			<!-- <ChangeJadwalShalat v-if="show_change" :location="locationChange" :query="queryChange" :timeNow="timeNowChange" :results="resultsChange"/> -->
 
 			<JadwalShalatDefault :location="location" :query="query" :timeNow="timeNow" :results="results"/>
+
 		</div>
 	</div>
 </template>
 
 <script>
 	import JadwalShalatDefault from '@/components/Salaam/JadwalShalat/JadwalShalatDefault'
+	import ChangeJadwalShalat from '@/components/Salaam/JadwalShalat/ChangeJadwalShalat'
 
 	export default{
 		layout: 'pages',
 		components: {
-			JadwalShalatDefault
+			JadwalShalatDefault,
+			ChangeJadwalShalat
 		},
 		data(){
 			return{
+				show_change: false,
 				show_city: false,
 				change_result: null,
 				provinces: [],
-				citys: []
+				citys: [],
+				resultsChange: [],
+				locationChange: {},
+				queryChange: {},
+				timeNowChange: ''
 			}
 		},
 		async asyncData({$axios, $config}){
@@ -82,11 +91,10 @@
 				minutes: time.getMinutes()
 			}
 
-			console.log(location)
+			// console.log(location)
 
 			const results = shalat.data.jadwal.data
 			const query = shalat.data.query
-			localStorage.setItem('your-ip', ip.data.ip)
 
 			return {
 				testLocation,
@@ -116,6 +124,7 @@
 				this.$axios
 				.get(`https://dev.farizdotid.com/api/daerahindonesia/kota?id_provinsi=${id}`)
 				.then(res => {
+					console.log(res.data)
 					this.show_city = true
 					this.citys = res.data.kota_kabupaten
 					// console.log(this.citys)
@@ -139,22 +148,23 @@
 					const month = time.getMonth() > 9 ? time.getMonth()+1 : `0${time.getMonth()+1}`
 					const year = time.getFullYear()
 					const tglFormat = `${year}-${month}-${date}`
-					this.getShalatData(code, tglFormat)
-					this.detailLocation(localStorage.getItem('your-ip'))
+					this.getShalatData(city, code, tglFormat)
 				})
 				.catch(err => console.log(err.response))
 			},
 
-			getShalatData(id, tgl){
+			getShalatData(city, id, tgl){
 				this.$axios.get(`https://api.banghasan.com/sholat/format/json/jadwal/kota/${id}/tanggal/${tgl}`)
 				.then(res => {
-					console.log(res.data)
+					this.show_change = true
+					this.resultsChange = res.jadwal
+					this.queryChange = res.query
+					this.locationChange = city
+					this.timeNowChange = tgl
+					console.log(locationChange)
 				})
 			},
 
-			detailLocation(ip){
-				console.log(ip)
-			}
 		}
 	}
 </script>
