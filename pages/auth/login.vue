@@ -90,23 +90,17 @@
 				loginFailed: null,
 				activated: null,
 				join: null,
-				// token: localStorage.getItem('token')
+				token: localStorage.getItem('token')
 			}
 		},
 
-        computed: {
-            credentialUser(){
-                return this.$store.getters.getCredentialUser
-            }
-        },
-
         mounted(){
             // console.log(this.credentialUser)
-            this.$axios.defaults.headers.common.Authorization = `Bearer ${this.credentialUser.token}`
+            this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
             this.$axios.get('/user')
             .then(response => {
-                console.log(response)
-                if(this.credentialUser.token){
+                // console.log(response)
+                if(this.token){
                     this.$swal({
                         position: 'top-end',
                         icon: 'success',
@@ -173,9 +167,6 @@
 				return this.$router.back()
 			},
 
-            getCredential(){
-                this.$store.commit('credential')
-            }
 		}
 	}
 </script>

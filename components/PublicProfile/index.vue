@@ -161,10 +161,10 @@
 					{id:7, url: 'https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/new_brand3.jpeg?raw=true'},
 					{id:8, url: 'https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/new_brand4.jpeg?raw=true'}
 				],
-				// credential: {
-				// 	username: localStorage.getItem('username'),
-				// 	token: localStorage.getItem('token')
-				// },
+				credential: {
+					username: localStorage.getItem('username'),
+					token: localStorage.getItem('token')
+				},
 
 				followers: null,
 				loading: true,
@@ -173,23 +173,17 @@
 			}
 		},
 
-		computed:{
-			credentialUser(){
-				return this.$store.getters.getCredentialUser
-			}
-		},
-
 		mounted(){
-			console.log(this.credentialUser)
+			// console.log(this.credential)
 
-			if(this.credentialUser.token && this.credentialUser.username){
+			if(this.credential.token && this.credential.username){
 				return this.$router.push({
 					name: 'profile-username',
 					params: {username: this.username}
 				})
 			}
 
-			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.credentialUser.token}`
+			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.credential.token}`
 			this.$axios.get('https://app.evoush.com/api/user')
 			.then(response => {
 
@@ -210,7 +204,7 @@
 			},
 
 			getFollowers(username){
-				this.$axios.get(`https://evoush.herokuapp.com/api/member/join/active/${username}`)
+				this.$axios.get(`https://app.evoush.com/api/member/join/active/${username}`)
 				.then( res => {
 					this.followers = res.data
 					// console.log(this.followers.length)

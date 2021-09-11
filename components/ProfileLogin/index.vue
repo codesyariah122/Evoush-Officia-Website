@@ -221,14 +221,8 @@
 			}
 		},
 
-		computed:{
-			credentialUser(){
-				return this.$store.getters.getCredentialUser
-			}
-		},
-
 		mounted(){
-			if(!this.credentialUser.token){
+			if(!this.token){
 				this.$swal({
 					icon: 'error',
 					title: 'Oops...',
@@ -240,7 +234,7 @@
 				})
 			}
 
-			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.credentialUser.token}`
+			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
 			this.$axios.get(`/member/${this.username}`)
 			.then(response => {
 				// console.log(response)
