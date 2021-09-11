@@ -48,6 +48,7 @@ Namun, komposisi propolis bisa berbeda-beda tergantung lokasi lebah dan tumbuhan
 Propolis biasanya terkandung di dalam madu walau kadarnya hanya sedikit. Selain itu, propolis juga sering ditemukan dalam bentuk suplemen, salep atau losion, pasta gigi, dan obat kumur.
 
 Beberapa penelitian menunjukkan bahwa propolis memiliki sifat antibakteri, antijamur, antivirus, antiradang, dan antikanker. Hal ini membuat propolis diklaim memiliki beberapa manfaat untuk kesehatan, di antaranya:  
+<iframe width="1200" height="600" src="https://www.youtube.com/embed/N5SZ8tZOdFY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **1. Menyembuhkan luka di kulit**  
 Propolis sudah digunakan sejak zaman dahulu sebagai salah satu obat untuk menyembuhkan luka di kulit, termasuk luka bakar ringan.
@@ -93,4 +94,10 @@ Bagaimana evousher, kaya manfaat sekali yah propolis ini, dan untuk product evou
 **- Honey, Propolis, Cane Extract Mint**  
 
 Jangan lupa perhatikan aturan konsumsi yang tertera di product propolis evoush : <a href="/product/Nutrisi/gilcam-propolis">Gilcam Propolis</a>  
+
+<iframe width="1200" height="600" src="https://www.youtube.com/embed/bkbfW35jjwE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+<iframe width="1200" height="600" src="https://www.youtube.com/embed/dnoBpFLe58k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+
+Mengkonsumsi **Gilcam Propolis** tidak berasa sedang minum obat atau bahan kimia lain, rasa yang alami terjaga sejak dalam proses produksi, kaya manfaatnya juga raup sukses berbisnis di evoush.
+
 

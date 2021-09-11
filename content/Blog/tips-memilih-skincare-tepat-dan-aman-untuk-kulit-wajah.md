@@ -20,7 +20,9 @@ walaupun tetap di dalam rumah jangan sampai tidak menjaga kulit tubuh dan wajah.
 
 Salah satu untuk menjaga kulit wajah yaitu dengan menggunakan skincare, bagaimana cara memilih skincare yang tepat dan aman?   
 
-**1. Pilih skincare sesuai dengan jenis kulit**  
+**1. Pilih skincare sesuai dengan jenis kulit** 
+<iframe class="mb-5" width="1200" height="600" src="https://www.youtube.com/embed/cpe16Oe9kzY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+
 Menyesuaikan jenis kulit merupakan salah satu tips untuk memilih skincare yang tepat. Setiap jenis skin care pasti sudah memiliki klaim untuk jenis kulit tertentu. Jenis kulit sendiri ada yang normal, berminyak, kering, kombinasi, dan sensitif.
 
 Untuk jenis kulit wajah normal, biasanya menggunakan kebutuhan skincare yang sederhana dibandingkan dengan kulit wajah lainnya. Jika kulit wajah kering, disarankan untuk memilih skincare untuk kulit kering di bagian yang kering, begitu juga untuk kulit berminyak skincare-an di bagian yang berminyak.  
@@ -68,4 +70,3 @@ Banyak produk skincare yang ada dipasaran, bahkan bingung untuk memilih produk m
 
 Umumnya skincare tidak memberikan reaksi secara langsung, berhasil atau tidaknya suatu produk skincare dapat memakan waktu yang lama. Sehingga jangan mengharapkan hasil yang instan dari penggunaan skincare.  
 
-<iframe class="mb-5" width="1200" height="600" src="https://www.youtube.com/embed/cpe16Oe9kzY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
