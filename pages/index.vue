@@ -46,18 +46,18 @@
 			<News :articles="articles"/>
 		</div>
 
+		<h1 class="underline" style="margin-top: 5rem;"></h1>
+
+		<CheckResi/>
+
+		<h1 class="underline" style="margin-top: 5rem;"></h1>
 		<!-- <Product :products="results"/> -->
 		<NewProduct :products="products"/>
-
-		<!-- <h1 class="underline" style="margin-top: 5rem;"></h1> -->
 
 
 		<!-- <SendSms/> -->
 
-		<!-- <CheckOngkir/> -->
 		<h1 class="underline" style="margin-top: 5rem;"></h1>
-
-
 
 		<Members :members="members"/>
 
@@ -94,6 +94,7 @@
 	import Updated from '@/components/Landing/Updated'
 	import SendSms from '@/components/Landing/SendSms'
 	import YoutubeChannel from '@/components/Landing/YoutubeChannel'
+	import CheckResi from '@/components/Landing/CheckResi'
 	// import RegisterEvent from '@/components/Landing/RegisterEventButton'
 	export default {
 		layout: 'default',
@@ -112,7 +113,8 @@
 			CheckOngkir,
 			Updated,
 			SendSms,
-			YoutubeChannel
+			YoutubeChannel,
+			CheckResi
 		},
 		async asyncData({$commerce, $content, params, $axios, $config}){
 			const {data: products} = await $commerce.products.list()
