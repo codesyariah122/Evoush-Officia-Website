@@ -21,7 +21,7 @@
 							</blockquote>
 							<p>
 								Evoush Salaam merupakan kumpulan aplikasi yang dapat menambah pengalaman dan khazanah baru dalam perjalanan pencarian ilmu yang kita lalui selama hayat kita.
-								Data data pada setiap sumber aplikasi berasal dari sumber terbuka <a href="https://github.com/Zhirrr/islamic-rest-api-indonesian-v2">Zhirrrr Islamic Api</a>
+								Data data pada setiap sumber aplikasi berasal dari sumber terbuka <a href="https://github.com/Zhirrr/islamic-rest-api-indonesian-v2">Zhirrrr Islamic Api</a>.
 							</p>
 						</div>
 					</div>
@@ -92,14 +92,32 @@
 					{
 						id:2,
 						title: 'Jadwal Shalat',
-						cover: 'https://img.freepik.com/free-vector/islamic-mosque-building-flat-design-illustration_5379-218.jpg?size=626&ext=jpg',
+						cover: 'https://img.freepik.com/free-vector/muslim-people-perform-tarawih-prayer-night-during-ramadan_227564-13.jpg?size=626&ext=jpg',
 						link: '/salaam/jadwal-shalat'
 					},
 					{
 						id:2,
-						title: 'Hadist Digital',
+						title: 'Kumpulan Hadist',
 						cover: 'https://awsimages.detik.net.id/community/media/visual/2020/05/10/faebba1a-d974-4c46-811e-30eed2ed55fd_169.jpeg?w=1200',
-						link: '/salaam/hadist'
+						link: '/salaam/kumpulan-hadist'
+					},
+					{
+						id:3,
+						title: 'Doa Harian',
+						cover: 'https://cdn.dribbble.com/users/3780914/screenshots/11482657/media/9475abcb53ccefc20fcc1ef4527552a0.jpg?compress=1&resize=400x300',
+						link: '/salaam/doa-harian'
+					},
+					{
+						id:4,
+						title: 'Asmaul Husna',
+						cover: 'https://i.pinimg.com/736x/f6/ce/8f/f6ce8fbe7062ed11f0946db696c0dec2.jpg',
+						link: '/salaam/asmaul-husna'
+					},
+					{
+						id:5,
+						title: 'Bacaan Shalat',
+						cover: 'https://i.pinimg.com/originals/d6/65/49/d665496a6b10f106454cb6ecd7269406.jpg',
+						link: '/salaam/bacaan-shallat'
 					}
 				]
 			}

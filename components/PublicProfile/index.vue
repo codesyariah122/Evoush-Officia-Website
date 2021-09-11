@@ -161,10 +161,10 @@
 					{id:7, url: 'https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/new_brand3.jpeg?raw=true'},
 					{id:8, url: 'https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/new_brand4.jpeg?raw=true'}
 				],
-				credential: {
-					username: localStorage.getItem('username'),
-					token: localStorage.getItem('token')
-				},
+				// credential: {
+				// 	username: localStorage.getItem('username'),
+				// 	token: localStorage.getItem('token')
+				// },
 
 				followers: null,
 				loading: true,
@@ -173,18 +173,23 @@
 			}
 		},
 
+		computed:{
+			credentialUser(){
+				return this.$store.getters.getCredentialUser
+			}
+		},
 
 		mounted(){
-			// console.log(this.credentialLogin)
+			console.log(this.credentialUser)
 
-			if(this.credential.token && this.credential.username){
+			if(this.credentialUser.token && this.credentialUser.username){
 				return this.$router.push({
 					name: 'profile-username',
 					params: {username: this.username}
 				})
 			}
 
-			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
+			this.$axios.defaults.headers.common.Authorization = `Bearer ${this.credentialUser.token}`
 			this.$axios.get('https://app.evoush.com/api/user')
 			.then(response => {
 
@@ -200,7 +205,7 @@
 		},
 		methods: {
 
-			credential(){
+			getCredential(){
 				this.$store.commit('credential')
 			},
 
@@ -231,15 +236,16 @@
 							'Anda akan segera logout',
 							'success'
 							)
-						this.$axios.defaults.headers.common.Authorization  = `Bearer ${this.token}`
+						this.$axios.defaults.headers.common.Authorization  = `Bearer ${this.credentialUser.token}`
 						this.$axios.post('/logout')
 						.then(res => {
 							// console.log(res)
 							if(res.data.success) {
 
 		                    //remove localStorage
-		                    localStorage.removeItem('token')
-
+		                    // localStorage.removeItem('token')
+		                    this.credentialUser.token = localStorage.removeItem('token')
+		                    this.credentialUser.username = localStorage.removeItem('username')
 		                    //redirect ke halaman login
 		                    return this.$router.push({
 		                    	path: '/auth/login'

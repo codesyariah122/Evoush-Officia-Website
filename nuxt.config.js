@@ -275,6 +275,7 @@ export default {
     {src: '~/plugins/vue-toastification', mode: 'client', ssr: false},
     {src: '~/plugins/pwa-update', mode: 'client', ssr: false},
     {src: '~/plugins/plugins_vue-chartjs', ssr: false},
+    {src: '~/plugins/chart-line.js', ssr:false},
     // {src: '~/plugins/vue-social-sharing'},
     {src: '~/plugins/bootstrap-vue'},
     {src: '~/plugins/disqus'},
