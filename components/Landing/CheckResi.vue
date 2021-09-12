@@ -83,6 +83,14 @@
 						</div>
 					</div>
 
+					<div v-if="empty" class="row justify-content-center">
+						<div class="col-lg-12">
+							<div class="alert alert-warning">
+								{{ empty }}
+							</div>
+						</div>
+					</div>
+
 
 					<!-- <pre>
 						{{ historys }}
@@ -106,6 +114,7 @@
 				error: null,
 				success: null,
 				loading: null,
+				empty: null,
 				resi: {
 					courier:'',
 					awb:''
@@ -144,22 +153,32 @@
 					courier: this.resi.courier,
 					awb: this.resi.awb
 				}
-				console.log(resi)
+
+				if(this.resi.courier === "" || this.resi.awb === ""){
+					this.empty = "Terjadi kesalahan, periksa kembali kolom inputan check resi diatas"
+				}
 
 				this.loading = true
 				this.success = false
 				e.preventDefault()
 				this.$axios.get(`https://app.evoush.com/api/evoush/check-resi/${this.resi.courier}/${this.resi.awb}`)
 				.then(res => {
-					this.success = true
-					this.loading = false
-					this.detail = res.data.data.data.detail
-					this.historys = res.data.data.data.history
-					console.log(res)
+					this.empty = null
+					// console.log(res.data.data)
+					if(res.data.data.status === 400){
+						this.success = false
+						this.loading = false
+						this.error = res.data.data.message
+					}else{
+						this.success = true
+						this.loading = false
+						this.detail = res.data.data.data.detail
+						this.historys = res.data.data.data.history
+					}
 				})
 				.catch(err => {
 					this.loading = false
-					this.error = 'Terjadi kesalahan... periksa kembali kolom input'
+					this.success = false
 					console.log(err.response)
 				})
 			}
