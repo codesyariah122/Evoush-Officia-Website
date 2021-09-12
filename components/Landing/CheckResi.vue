@@ -75,6 +75,14 @@
 						</div>
 					</div>
 
+					<div v-if="error" class="row-justify-content-center">
+						<div class="col-lg-12">
+							<div class="alert alert-danger">
+								{{ error }}
+							</div>
+						</div>
+					</div>
+
 
 					<!-- <pre>
 						{{ historys }}
@@ -95,6 +103,7 @@
 	export default{
 		data(){
 			return {
+				error: null,
 				success: null,
 				loading: null,
 				resi: {
@@ -130,6 +139,13 @@
 				this.resi.courier = e.target.value
 			},
 			CheckResi(e){
+
+				const resi = {
+					courier: this.resi.courier,
+					awb: this.resi.awb
+				}
+				console.log(resi)
+
 				this.loading = true
 				this.success = false
 				e.preventDefault()
@@ -141,7 +157,11 @@
 					this.historys = res.data.data.data.history
 					console.log(res)
 				})
-				.catch(err => console.log(err.response))
+				.catch(err => {
+					this.loading = false
+					this.error = 'Terjadi kesalahan... periksa kembali kolom input'
+					console.log(err.response)
+				})
 			}
 		}
 	}

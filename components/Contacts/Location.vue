@@ -42,6 +42,10 @@
 					latlngs: [],
 				},
 
+				staticAnchor: [16, 37],
+				customText: "/assets/marker/map_marker.png",
+				iconSize: 64
+
 			}
 		}
 	}
