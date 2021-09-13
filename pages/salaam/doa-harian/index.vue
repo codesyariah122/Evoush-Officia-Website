@@ -34,18 +34,18 @@
 
 					<div v-if="success" class="card mt-5 mb-5">
 						<div class="card-body">
-							<div class="ayat">
-								<h5 class="card-title">{{ pray.title }}</h5>
-								<p class="card-text">
+							<h5 class="card-title">{{ pray.title }}</h5>
+							<div class="ayat mt-3 mb-5">
+								<h4>
 									{{ pray.arabic }}
-								</p>
-								<small class="text-success">
-									{{ pray.latin }}
-								</small>
-								<blockquote class="blockquote-footer">
-									{{ pray.translation }}
-								</blockquote>
+								</h4>
 							</div>
+							<small class="text-success">
+								{{ pray.latin }}
+							</small>
+							<blockquote class="blockquote-footer">
+								{{ pray.translation }}
+							</blockquote>
 						</div>
 					</div>
 				</div>
@@ -95,3 +95,66 @@
 		}
 	}
 </script>
+
+
+<style>
+	.card-header h3{
+		font-family: 'quran';
+		font-weight: 700;
+	}
+	.card-body .card-title h6{
+		font-family: 'quran';
+		font-weight: 700;
+	}
+
+	.ayat h5{
+		font-family: 'quran';
+		font-weight: 700;
+		font-size: 31px;
+	}
+
+	.ayat h4{
+		font-family: 'quran';
+		font-weight: 700;
+		font-size: 41px;
+	}
+
+	.ayat h3{
+		font-family: 'quran';
+		font-weight: 700;
+	}
+
+	.ayat h1{
+		font-family: 'quran';
+		font-weight: 700;
+	}
+
+	.ayat h4{
+		font-size: 21px;
+	}
+
+	.circle-number  {
+		font-family: 'AlQalam';
+		background: rgba(0, 0, 0, 0.7);
+		font-size: 1.7rem !important;
+		border-radius: 0.8em;
+		-moz-border-radius: 0.8em;
+		-webkit-border-radius: 0.8em;
+		color: #ffffff;
+		display: inline-block;
+		font-weight: bold;
+		line-height: 1.5em;
+		margin-right: 5px;
+		text-align: center;
+		width: 1.6em;
+	}
+
+	.page-link {
+		cursor: pointer;
+	}
+
+	.disabled{
+		cursor: not-allowed;
+	}
+
+</style>
