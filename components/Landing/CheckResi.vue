@@ -49,10 +49,10 @@
 
 
 						<div class="row justify-content-center">
-							<div v-for="history in historys" class="col-md-4 mt-5">
+							<div v-for="(history, index) in historys" class="col-md-4 mt-5">
 								<div class="card mb-3" style="width: 18rem;">
 									<div class="card-body">
-										<h5 class="card-title">Detail Progress</h5>
+										<h5 class="card-title">Detail Progress ke {{ index }} </h5>
 										<ul class="list-group">
 											<li class="list-group-item">Date : <b>{{ history.date }}</b></li>
 											<li class="list-group-item">Description : <b>{{ history.desc }}</b></li>
@@ -67,10 +67,10 @@
 					<div v-else class="row justify-content-center">
 						<div class="col-lg-12">
 							<div v-if="loading">
+								<img src="https://cfr.lps.go.id/images/Animation/Progressbar.gif" class="img-fluid">
 								<small class="blockquote-footer text-info">
 									Loading dulu kak ...
 								</small>
-								<img src="https://c.tenor.com/LeSVOZJUt-oAAAAM/muuve-rider.gif" class="img-fluid">
 							</div>
 						</div>
 					</div>
@@ -119,6 +119,7 @@
 					courier:'',
 					awb:''
 				},
+				no: 0,
 				historys: [],
 				detail: {},
 				couriers: [
@@ -173,7 +174,7 @@
 						this.success = true
 						this.loading = false
 						this.detail = res.data.data.data.detail
-						this.historys = res.data.data.data.history
+						this.historys = res.data.data.data.history.reverse()
 					}
 				})
 				.catch(err => {
