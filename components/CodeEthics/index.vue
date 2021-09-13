@@ -16,9 +16,9 @@
 						<p>Kode Etik menjadi sebuah kebijakan dalam Bisnis Penjualan di evoush ada kode etik yang berlaku yang bisa anda simak dalam document kode etik berikut ini.</p>
 					</div>
 					<div class="col-lg-12 col-xs-12 col-sm-12 mt-2 mb-5" data-aos="fade-up">
-
-						<iframe src="https://drive.google.com/file/d/1NiwGRpVuzSrUWKFXWF_QaxiGiGs1MIwl/preview" width="1200" height="1000" allow="autoplay"></iframe>
-
+						<div class="embed-responsive embed-responsive-1by1">
+							<iframe src="https://drive.google.com/file/d/1NiwGRpVuzSrUWKFXWF_QaxiGiGs1MIwl/preview" allow="autoplay" height="800"></iframe>
+						</div>
 						<!-- <div class="overlay">
 							<div class="text">
 

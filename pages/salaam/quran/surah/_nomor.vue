@@ -123,6 +123,7 @@
 							<h3> {{result.surah.name.long}} ({{result.surah.name.transliteration.id}})</h3>
 						</div>
 
+						{{ selected }}
 
 						<div class="card-body quran-body">
 							<div class="row justify-content-center">
@@ -189,7 +190,7 @@
 											</nav>
 
 										</div>
-								</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -213,6 +214,7 @@
 
 		data(){
 			return {
+				selecting: localStorage.getItem('nomor-ayat'),
 				showNext: false,
 				dataAyat: {},
 				elemAyat:'',
@@ -283,7 +285,7 @@
 		},
 
 		mounted(){
-
+			console.log(this.selecting)
 			// console.log(this.result)
 
 		},
@@ -301,7 +303,7 @@
 				.then(res => {
 					this.showNext = true
 					this.dataAyat = res.data.data
-					console.log(this.dataAyat)
+					// console.log(this.dataAyat)
 
 					this.config.NumberSurah = this.dataAyat.surah.number
 					this.config.TotalAyat = this.dataAyat.surah.numberOfVerses
@@ -335,6 +337,7 @@
 			nextAyat(e){
 				const surah = e.target.getAttribute('data-surah')
 				const ayat = e.target.getAttribute('data-ayat')
+				localStorage.setItem('nomor-ayat', ayat)
 
 				this.$axios.$get(`https://api.quran.sutanlab.id/surah/${surah}/${ayat}`)
 				.then( res => {
@@ -375,6 +378,7 @@
 			prevAyat(e){
 				const surah = e.target.getAttribute('data-surah')
 				const ayat = e.target.getAttribute('data-ayat')
+				localStorage.setItem('nomor-ayat', ayat)
 
 				this.$axios.$get(`https://api.quran.sutanlab.id/surah/${surah}/${ayat}`)
 				.then( res => {

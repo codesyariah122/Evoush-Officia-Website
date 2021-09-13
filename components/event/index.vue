@@ -19,7 +19,7 @@
 									<blockquote class="blockquote-footer">
 										{{list.quotes}}
 									</blockquote>
-									<img :src="`https://app.evoush.com/storage/${list.cover}`" class="img-fluid">
+									<img :src="`https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/${list.cover}`" class="img-fluid">
 									<br>
 									<button class="btn btn-primary mt-2 btn-block" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
 										Lihat details
