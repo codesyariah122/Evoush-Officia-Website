@@ -27,7 +27,7 @@
 							<!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
 						</div>
 					</div>
-					<div class="col-lg-3 col-xs-1 col-sm-1 sachet">
+					<div class="col-lg-3 col-xs-12 col-sm-12 sachet">
 						<img v-if="ShowBox" src="https://github.com/evoush-products/evoush-products.github.io/blob/main/assets/img/products/evost_box.png?raw=true" class="img-fluid" @mouseleave="LeaveMe">
 						<img v-else src="https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/sachet.png" class="img-fluid" @mouseover="OverMe">
 					</div>
@@ -46,7 +46,7 @@
 		cursor: pointer;
 	}
 	.sachet img:hover{
-		transform: translateY(-15px);
+		transform: translateY(-25px);
 	}
 </style>
 
@@ -62,14 +62,25 @@
 		data(){
 			return {
 				ShowBox: false,
+				ShoBoxAgain: null,
 				brand: 'evoush official'
 			}
 		},
 		mounted(){
-			this.typedHero()
+			this.typedHero(),
+			this.getHeroCarousel()
 		},
 
 		methods:{
+			getHeroCarousel(){
+				// Testimonials carousel (uses the Owl Carousel library)
+				$(".hero-carousel").owlCarousel({
+					autoplay: true,
+					dots: true,
+					loop: true,
+					items: 1
+				});
+			},
 			typedHero(){
 				if ($('.typed').length) {
 					var typed_strings = $(".typed").data('typed-items');
@@ -89,6 +100,12 @@
 			},
 			LeaveMe(){
 				this.ShowBox = false
+			},
+			OverMeAgain(){
+				this.ShoBoxAgain = true
+			},
+			LeaveMeAgain(){
+				this.ShowBoxAgain = false
 			}
 		}
 	}

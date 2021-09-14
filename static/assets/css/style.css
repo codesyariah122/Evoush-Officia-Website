@@ -293,7 +293,7 @@ h1, h2, h3, h4, h5, h6 {
     background-attachment: fixed;
     position: relative;*/
     /*padding-left: 160px;*/
-    background: linear-gradient(to right, coral, salmon);
+    background: linear-gradient(to right, salmon, coral);
     clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 100%);
     background-position: top;
     -webkit-background-size: cover;

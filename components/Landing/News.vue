@@ -3,11 +3,11 @@
 		<!-- ======= Testimonials Section ======= -->
 		<section id="news" class="testimonials section-bg">
 			<div class="container" data-aos="fade-up">
-<!-- 
+<!--
 				<pre>
 					{{articles}}
 				</pre> -->
-				
+
 				<div class="section-title">
 					<h2>News</h2>
 				</div>
@@ -33,7 +33,7 @@
 
 
 				</div>
-			
+
 
 			</div>
 		</section><!-- End Testimonials Section -->
