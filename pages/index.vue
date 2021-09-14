@@ -50,10 +50,15 @@
 
 		<CheckResi/>
 
+		<br>
+
 		<h1 class="underline" style="margin-top: 5rem;"></h1>
 		<!-- <Product :products="results"/> -->
 		<NewProduct :products="products"/>
 
+		<hr>
+
+		<CheckOngkir/>
 
 		<!-- <SendSms/> -->
 

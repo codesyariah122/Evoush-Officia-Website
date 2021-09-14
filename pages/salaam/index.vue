@@ -86,7 +86,7 @@
 					{
 						id:1,
 						title: 'Alquran Digital',
-						cover: 'https://www.freevector.com/uploads/vector/preview/30295/Al_Quran_vector_4.jpg',
+						cover: 'https://img.freepik.com/free-vector/organic-flat-ramadan-concept-illustration_23-2148890555.jpg?size=338&ext=jpg&ga=GA1.2.2118371178.1630368000',
 						link: '/salaam/quran'
 					},
 					{
@@ -116,8 +116,20 @@
 					{
 						id:5,
 						title: 'Bacaan Shalat',
-						cover: 'https://i.pinimg.com/originals/d6/65/49/d665496a6b10f106454cb6ecd7269406.jpg',
-						link: '/salaam/bacaan-shallat'
+						cover: 'https://static.vecteezy.com/system/resources/thumbnails/001/313/843/small_2x/praying-muslim-with-team-free-vector.jpg',
+						link: '/salaam/bacaan-shalat'
+					},
+					{
+						id:6,
+						title: 'Wirid',
+						cover: 'https://img.freepik.com/free-vector/flat-ramadan-illustration_23-2148878858.jpg?size=338&ext=jpg',
+						link: '/salaam/wirid'
+					},
+					{
+						id:7,
+						title: 'Kisah Nabi',
+						cover: 'https://saintif.com/wp-content/uploads/2020/12/mukjizat-nabi-musa-1.jpg',
+						link: '/salaam/kisah-nabi'
 					}
 				]
 			}

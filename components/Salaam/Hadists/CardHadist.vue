@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<div class="row justify-content-center">
+		<div v-for="result in results" class="row justify-content-center">
 
-			<div v-for="result in results" class="col-md-4 col-xs-4 col-sm-4 mt-5 mb-5">
+			<div  class="col-md-12 col-xs-12 col-sm-12 mt-5 mb-5">
 				<div class="card card-quran">
 					<div class="card-body">
 						<h3 class="card-title">Hadist {{ name }} <span class="circle-number">{{ result.number }}</span></h3>

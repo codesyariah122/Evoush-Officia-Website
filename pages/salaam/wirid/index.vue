@@ -15,20 +15,20 @@
 		</div>
 
 		<div class="row justify-content-center">
-			<div v-for="result in results" class="col-md-4 mb-5">
-				<div class="card">
+			<div v-for="result in results.data.result.data" class="col-md-4 col-xs-12 col-sm-12 mb-5">
+				<div class="card" style="width: 18rem;">
 					<div class="card-body">
 						<div class="ayat">
 							<h5 class="card-title">
-								<span class="circle-number">{{ result.index }}</span>. {{ result.arabic }}
+								<span class="circle-number">{{ result.id }}</span>. {{ result.arabic }}
 							</h5>
 						</div>
-						<h6 class="card-subtitle mb-2 text-muted">
+<!-- 						<h6 class="card-subtitle mb-2 text-muted">
 							{{ result.translation_en }}
 						</h6>
 						<p class="card-text">
 							{{ result.translation_id }}
-						</p>
+						</p> -->
 					</div>
 				</div>
 			</div>
@@ -46,14 +46,16 @@
 			}
 		},
 
+		mounted(){
+			console.log(this.results)
+		},
+
 		async asyncData({$axios}){
-			const fetchs = await $axios.get('https://islamic-api-indonesia.herokuapp.com/api/data/json/asmaulhusna');
-			const results = fetchs.data.result.data
-			console.log(results)
+			const results = await $axios.get('https://islamic-api-indonesia.herokuapp.com/api/data/json/wirid')
+
 			return {
 				results
 			}
-
 		}
 	}
 </script>

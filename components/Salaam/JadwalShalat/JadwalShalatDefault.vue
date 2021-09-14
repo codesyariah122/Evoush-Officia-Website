@@ -6,6 +6,7 @@
 				Tanggal : {{ query.tanggal }}
 			</small>
 
+			<Weather :city="location.data.city"/>
 					<!-- <pre>
 						{{ provinces }}
 					</pre> -->
@@ -123,10 +124,13 @@
 
 <script>
 	import Location from './Location'
+	import Weather from './Weather'
+
 	export default{
 		props: ['location', 'query', 'timeNow', 'results'],
 		components: {
-			Location
+			Location,
+			Weather
 		}
 	}
 </script>
