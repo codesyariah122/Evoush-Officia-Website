@@ -12,13 +12,6 @@
 				<div class="row justify-content-start">
 					<div class="col-lg-6 col-xs-12 col-sm-12 mt-3 ml-3">
 						<h1 style="font-family: 'Walkway';"><span style="font-weight: 800; margin-top:.5rem; font-size: 4rem;" v-html="brand"></span></h1>
-						<!-- <p>
-							Your
-							<span
-							class="typed"
-							data-typed-items="Eternal Future, Healthiness, Beautiness"
-							></span>
-						</p> -->
 						<p>
 							<!-- evoush -->
 							<span
@@ -34,12 +27,28 @@
 							<!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
 						</div>
 					</div>
+					<div class="col-lg-3 col-xs-1 col-sm-1 sachet">
+						<img v-if="ShowBox" src="https://github.com/evoush-products/evoush-products.github.io/blob/main/assets/img/products/evost_box.png?raw=true" class="img-fluid" @mouseleave="LeaveMe">
+						<img v-else src="https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/sachet.png" class="img-fluid" @mouseover="OverMe">
+					</div>
 				</div>
 			</div>
 		</section>
 		<!-- End Hero -->
 	</div>
 </template>
+
+<style scoped>
+	.sachet img{
+		position: absolute;
+		filter: drop-shadow(25px 15px 21px black);
+		transform: translateX(-5%);
+		cursor: pointer;
+	}
+	.sachet img:hover{
+		transform: translateY(-15px);
+	}
+</style>
 
 <script>
 	import Logo from '~/components/molecules/Logo'
@@ -52,6 +61,7 @@
 		},
 		data(){
 			return {
+				ShowBox: false,
 				brand: 'evoush official'
 			}
 		},
@@ -72,6 +82,13 @@
 						backDelay: 2000
 					});
 				}
+			},
+			OverMe(){
+				this.ShowBox = true
+				// this.$toast('Evost SOP 5000 Collagen')
+			},
+			LeaveMe(){
+				this.ShowBox = false
 			}
 		}
 	}

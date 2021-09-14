@@ -266,10 +266,12 @@ h1, h2, h3, h4, h5, h6 {
   /*height: 150vh;*/
   min-height: 100vh;
   /*background: url("https://raw.githubusercontent.com/evoush122/bahan_evoush/main/assets/img/bg/propolis-doktersehat2_edit.jpg") top right no-repeat;*/
-  background: url("https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/assets/img/bg/new_bg_aja.jpg") right no-repeat;
+  /*background: url("https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/assets/img/bg/new_bg_aja.jpg") right no-repeat;*/
+  background: linear-gradient(to right, coral, salmon);
+  clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 100%);
   background-size: cover;
   position: relative;
-  padding-left: 50px;
+  padding-left: 15px;
   /*background-repeat:no-repeat;
   background-size:contain;
   background-position:center;*/
@@ -282,7 +284,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 992px) {
   #hero {
     /*background: url("https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/assets/img/bg/propolis-doktersehat.jpg") right no-repeat;*/
-    background: url("https://github.com/evoush-products/bahan_evoush/blob/main/assets/img/bg/new_bg_aja_desktop.jpg?raw=true");
+    /*background: url("https://github.com/evoush-products/bahan_evoush/blob/main/assets/img/bg/new_bg_aja_desktop.jpg?raw=true");*/
     /*width: 100%;
     height: 100vh;
     min-height: 500px;
@@ -291,7 +293,8 @@ h1, h2, h3, h4, h5, h6 {
     background-attachment: fixed;
     position: relative;*/
     /*padding-left: 160px;*/
-    /*clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 100%);*/
+    background: linear-gradient(to right, coral, salmon);
+    clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 100%);
     background-position: top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -316,11 +319,12 @@ h1, h2, h3, h4, h5, h6 {
 #hero h1 {
   margin: 0;
   font-size: 64px;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 56px;
   /*color: #ff3b40;*/
-  /*color: #fff;*/
-  color: #34495E;
+  color: #fff;
+  text-shadow: 2px 3px rgba(171, 183, 183, 1);
+  /*color: #34495E;*/
 }
 
 #hero p {
@@ -333,8 +337,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero p span {
   /*color: #0563bb;*/
-  /*color: #fff;*/
-  color: #212F3D;
+  color: #fff;
+  /*color: rgba(218, 223, 225, 1);*/
+  text-shadow: 3px 3px rgba(171, 183, 183, 1);
+  /*color: #212F3D;*/
   letter-spacing: 1px;
 }
 
@@ -345,8 +351,9 @@ h1, h2, h3, h4, h5, h6 {
 #hero .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: #0563bb;;
-  /*color: #fff!important;*/
+  /*color: #0563bb;;*/
+  color: #fff!important;
+  text-shadow: 3px 3px grey;
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;

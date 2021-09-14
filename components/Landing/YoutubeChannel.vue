@@ -82,7 +82,7 @@
 		},
 
 		mounted(){
-			console.log(this.channels)
+			// console.log(this.channels)
 		},
 
 		methods: {
