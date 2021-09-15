@@ -3,11 +3,11 @@ title: Bisnis Network Marketing Prospektif Ditengah Pandemi
 description: Bisnis Network Marketing Prospektif ditengah pandemi tutur Ketua Umum Asosiasi Perusahaan Penjualan Langsung Indonesia (AP2LI)
 slug: bisnis-network-marketing-prospektif-ditengah-pandemi
 img: 3.jpg
-author: 
-  name: evoush_writter
+author:
+  name: evoush
   bio: Your Eternal Future
-  jobdesk: Content Writer
-  img: https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/jumbotron5.jpg
+  jobdesk: Evoush Official
+  img: https://raw.githubusercontent.com/evoush-products/Evoush-Official-Website/master/static/icon_128.png
   cover: https://app.evoush.com/storage/product-covers/eJC8hUOT7B1Tg56943hWhsI9KMH8k7CdRe2OFDbo.jpg
 tags: 
   - Evoush Tips

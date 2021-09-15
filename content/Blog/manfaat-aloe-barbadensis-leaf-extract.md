@@ -3,10 +3,10 @@ title: Manfaat Aloe Barbadensis Leaf Extract
 description: Aloe Barbadensis Leaf Extract adalah tanaman yang kaya akan protein, kalsium, vitamin A, C, dan E untuk menghilangkan jerawat, melembabkan kulit, dan meremajakan kulit. Berfungsi sebagai antibakteri dan antiinflamasi.
 img: dnars-aloe.jpg
 author:
-  name: Evoush Admin
+  name: evoush
   bio: Your Eternal Future
-  jobdesk: Content Writer
-  img: https://img.freepik.com/free-vector/young-author-writer-working-new-article_74855-5602.jpg?size=626&ext=jpg
+  jobdesk: Evoush Official
+  img: https://raw.githubusercontent.com/evoush-products/Evoush-Official-Website/master/static/icon_128.png
   cover: https://app.evoush.com/storage/product-covers/eJC8hUOT7B1Tg56943hWhsI9KMH8k7CdRe2OFDbo.jpg
 tags:
   - Evoush News

@@ -9,8 +9,8 @@
 						<!-- <WhiteLogo/> -->
 					</div>
 				</div>
-				<div class="row justify-content-start mt-5">
-					<div class="col-lg-6 col-xs-12 col-sm-12 mt-3 ml-3">
+				<div class="row justify-content-start">
+					<div class="col-lg-6 col-xs-12 col-sm-12 mt-3 ml-5">
 						<h1 style="font-family: 'Walkway';"><span style="font-weight: 800; margin-top:.5rem; font-size: 4rem;" v-html="brand"></span></h1>
 						<p>
 							<!-- evoush -->
@@ -30,12 +30,12 @@
 
 					<div class="col-lg-4 col-xs-12 col-sm-12">
 						<div class="row justify-content-center interactive-product">
-							<div class="col-lg-4 mb-2">
+							<div class="col-lg-4">
 								<img :src="imgBox" class="img-fluid">
 							</div>
 						</div>
 
-							<div class="col-md-2">
+							<div class="col-md-2 box-sachet">
 								<ul class="sachet" style="list-style: none;">
 									<li v-for="(image, index) in images">
 										<img id="sachet" :src="image.src" :data-id="image.id" :key="image.id" class="img-fluid" @click="ClickMe(boxes[index].src)">
@@ -77,6 +77,7 @@
 		margin-top: 2rem;
 	}
 	.sachet img{
+		filter: drop-shadow(25px 15px 21px black);
 		margin: 0 -15px;
 		max-width: 100px;
 		cursor: pointer;
@@ -88,17 +89,21 @@
 	@media (min-width: 992px) {
 		.interactive-product img{
 			max-width: 800px;
+			margin-top: -7rem;
+		}
+		.box-sachet{
+			margin-top: 10rem;
+			margin-bottom: 5rem;
 		}
 		.sachet{
-			margin-top: 3rem;
+			margin-top: -15rem;
+			transform: translateX(-10%);
 		}
 		.sachet img{
+			filter: drop-shadow(15px 13px 18px black);
 			margin: 0 -20px;
 			max-width: 250px;
 			cursor: pointer;
-		}
-		.content-hero{
-			margin-top: 5rem;
 		}
 	}
 </style>

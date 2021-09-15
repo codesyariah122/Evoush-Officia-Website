@@ -284,3 +284,10 @@ body h2{
 .modal-content.moda-body p{
   color: var(--color-dua);
 }
+
+.collapse .card {
+  background: linear-gradient(to left, #F6ECEA, #C2C2C2);
+}
+.collapse .card-body p{
+  color: var(--color-dua);
+}

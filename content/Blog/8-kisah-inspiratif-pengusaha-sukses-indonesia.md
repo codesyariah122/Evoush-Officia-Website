@@ -1,12 +1,13 @@
 ---
 title: 8 Kisah Inspiratif Pengusaha Sukses Indonesia
 description: Belakangan ini banyak orang mulai lebih melirik dunia usaha ketimbang menjadi karyawan suatu perusahaan. Kesuksesan finansial yang bisa diperoleh dari membangun usaha sendiri mendorong orang untuk memilih memulai usaha mereka sendiri.
+slug: 8-kisah-inspiratif-pengusaha-sukses-indonesia
 img: 8-Kisah-Inspirasi-Usaha-Para-Pengusaha-Sukses-di-Indonesia.-5-Diantaranya-Usia-20-an-30-an-Finansialku.jpg
 author:
-  name: evoush_writter
+  name: evoush
   bio: Your Eternal Future
-  jobdesk: Content Writer
-  img: https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/jumbotron5.jpg
+  jobdesk: Evoush Official
+  img: https://raw.githubusercontent.com/evoush-products/Evoush-Official-Website/master/static/icon_128.png
   cover: https://app.evoush.com/storage/product-covers/eJC8hUOT7B1Tg56943hWhsI9KMH8k7CdRe2OFDbo.jpg
 tags:
   - Evoush Article
