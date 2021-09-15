@@ -72,7 +72,8 @@
 		async asyncData({$axios, $config}){
 			const time = new Date()
 			const apiKey = 'f4330440-77f5-4564-90f1-17a341b7ee2a'
-			const ip = await $axios.get('http://ip-api.com/json/')
+			// const ip = await $axios.get('http://ip-api.com/json/')
+			const ip = await $axios('https://api.ipify.org/?format=json')
 
 			const testLocation = await $axios.get(`https://api.ipfind.com?ip=${ip.data.query}&auth=${apiKey}&lang=id`)
 
