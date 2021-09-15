@@ -90,7 +90,7 @@
 					</div>
 
 					<div v-if="show_result">
-						<h4 class="text-xl pb-1">HASIL ONGKOS KIRIM</h4>
+						<h4 class="text-xl pb-1" style="text-transform: uppercase;">ONGKOS KIRIM {{ results[0].code }}</h4>
 						<hr class="border-2">
 
 						<h4><strong>Courier : {{ results[0].code }}</strong></h4>

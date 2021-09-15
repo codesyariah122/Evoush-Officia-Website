@@ -185,15 +185,15 @@
 
 @media (min-width: 992px) {
 	.box-management {
-		max-height: 35vh;
+		max-height: 43vh;
 	}
 	._content-img-profile{
-		height: 425px;
+		height: 490px;
 		margin-top: .1rem;
 	}
 
 	._content-img-profile img{
-		max-height: 402px!important;
+		max-height: 467px!important;
 
 	}
 

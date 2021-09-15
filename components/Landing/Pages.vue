@@ -348,7 +348,7 @@ data-aos-delay="200"
 <p>
 	Aplikasi alquran digital evoush lengkap dengan audio player yang bisa anda dengarkan dan ikuti, sumber data resmi yang bersumber dari kemenag. Memungkinkan Anda tetap bisa membaca AlQuran Online sesuai ketentuan hukum dan aturan dalam membaca AlQuran yang kita ketahui, langsung di website official evoush ini.
 </p>
-<nuxt-link to="/salaam" class="btn btn-primary mt-3">Baca Quran</nuxt-link>
+<nuxt-link to="/salaam" class="btn btn-primary mt-3">Evoush Salaam</nuxt-link>
 </div>
 </div>
 
@@ -411,7 +411,7 @@ data-aos-delay="300"
 	Content movie ini berisi beberapa list film yang kami hadirkan pada anda untuk memberi inspirasi bahkan motivasi dari setiap konten film/video yang kami tampilkan di halaman content inspiration movie ini.
 </p>
 
-<nuxt-link to="/movie-inspiration" class="btn btn-primary mt-3">Term Of Service</nuxt-link>
+<nuxt-link to="/movie-inspiration" class="btn btn-primary mt-3">Watch Now</nuxt-link>
 
 </div>
 </div>
