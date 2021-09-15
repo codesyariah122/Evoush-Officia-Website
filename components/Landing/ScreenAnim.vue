@@ -12,12 +12,11 @@
 
 <style scoped>
 .anim{
-	margin-top: -7rem;
-	margin-left: .7rem;
+	max-width: 200px;
 }
 @media (min-width: 992px) {
 	.anim{
-		margin-top: -7rem;
+		margin-top: -5rem;
 	}
 }
 </style>

@@ -35,6 +35,7 @@
     padding: 10px;
     margin-left: 20px;
     min-width: 140px;
+    width: 100%;
     background-color: #636161;
   }
 </style>
