@@ -54,6 +54,7 @@
 					autoplay: true,
 					dots: true,
 					loop: true,
+					autoplayTimeout:10000,
 					items: 1
 				});
 			},

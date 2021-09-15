@@ -16,7 +16,7 @@
 							<!-- evoush -->
 							<span
 							class="typed"
-							data-typed-items="Sehat Untuk Indonesia, Your Eternal Future, Your Healthy, Your Beauty"
+							data-typed-items="Agar sukses, Anda harus meletakan hati Anda pada bisnis Anda, dan Bisnis Anda, Di hati Anda"
 							></span>
 						</p>
 						<div class="social-links">
