@@ -72,11 +72,11 @@
 		async asyncData({$axios, $config}){
 			const time = new Date()
 			const apiKey = 'f4330440-77f5-4564-90f1-17a341b7ee2a'
-			const ip = await $axios.get('https://api.ipify.org/?format=json')
+			const ip = await $axios.get('http://ip-api.com/json/')
 
-			const testLocation = await $axios.get(`https://api.ipfind.com?ip=${ip.data.ip}&auth=${apiKey}&lang=id`)
+			const testLocation = await $axios.get(`https://api.ipfind.com?ip=${ip.data.query}&auth=${apiKey}&lang=id`)
 
-			const location = await $axios.get(`https://ipapi.co/${ip.data.ip}/json/`)
+			const location = await $axios.get(`https://ipapi.co/${ip.data.query}/json/`)
 			const kodeKota = await $axios.get(`https://api.banghasan.com/sholat/format/json/kota/nama/${location.data.city}`)
 			const kode = kodeKota.data.kota[0].id
 			const date = time.getDate() > 9 ? time.getDate() : `0${time.getDate}`

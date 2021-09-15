@@ -6,7 +6,7 @@
 				<div class="section-title">
 					<h2>Leaders</h2>
 					<p>
-						Halo <span style="color:#ff3b40;">evousher</span> <strong class="text-primary">{{city}}</strong> <br>
+						Halo <span style="color:#ff3b40;">evousher</span> <strong class="text-primary">{{country}}</strong> <br>
 						Berikut kami perkenalkan leader-leader terbaik <span style="color:#ff3b40;">evoush</span>. Beliau-beliau telah melewati pencapaian melalui kegigihan dan kerja keras tangguh yang tiada sia-sia, <span style="color:#ff3b40;">evousher</span>. Kami memberikan tempat terhormat pada para leader dan berikut persembahan kami yaitu web support yang kami dedikasikan guna meningkatkan branding secara personal bagi leader-leader dan member-member evoush lain dan calon member yang akan join, dan kami akan selalu terus meningkatkan kualitas terbaik kami.
 					</p>
 				</div>
@@ -131,6 +131,7 @@
 			return {
 				ip: '',
 				city: '',
+				country: '',
 				members: []
 			}
 		},
@@ -157,18 +158,27 @@
 				.finally(() => this.loading = false)
 			},
 			getIp(){
-				this.$axios
-				.get('https://api.ipify.org/?format=json')
-				.then(res => {
-		        	// console.log(res)
-		        	this.ip = res.data.ip
-        		})
-        		.catch(err => console.log(err.message))
+				// this.$axios
+				// .get('https://api.ipify.org/?format=json')
+				// .then(res => {
+		  //       	// console.log(res)
+		  //       	this.ip = res.data.ip
+    //     		})
+    //     		.catch(err => console.log(err.message))
+
+    			this.$axios
+    			.get('http://ip-api.com/json/')
+    			.then(res => {
+    				this.ip = res.data.query
+    				// console.log(res)
+    			})
+    			.catch(err => console.log(err.message))
 			},
 			getLocation(ip){
 				this.$axios
 				.get(`https://ipapi.co/${ip}/json/`)
 				.then(res => {
+					this.country = res.data.country_name
 					this.city = res.data.city
 				})
 				.catch(err => console.log(err.message))

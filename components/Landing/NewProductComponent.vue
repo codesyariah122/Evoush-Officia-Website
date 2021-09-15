@@ -43,7 +43,7 @@
             {{ products.reverse() }}
           </pre> -->
 
-            <div v-for="product in products.reverse()" :class="`${product.categories.map(d => d.name === 'Nutrisi' ? 'col-lg-4 col-md-6 portfolio-item filter-nutrisi' : 'col-lg-4 col-md-6 portfolio-item filter-kosmetik')}`">
+            <div v-for="product in products" :class="`${product.categories.map(d => d.name === 'Nutrisi' ? 'col-lg-4 col-md-6 portfolio-item filter-nutrisi' : 'col-lg-4 col-md-6 portfolio-item filter-kosmetik')}`">
               <div class="portfolio-wrap">
 
                 <img
