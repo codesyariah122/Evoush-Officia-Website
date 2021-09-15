@@ -75,9 +75,9 @@
 			// const ip = await $axios.get('http://ip-api.com/json/')
 			const ip = await $axios('https://api.ipify.org/?format=json')
 
-			const testLocation = await $axios.get(`https://api.ipfind.com?ip=${ip.data.query}&auth=${apiKey}&lang=id`)
+			const testLocation = await $axios.get(`https://api.ipfind.com?ip=${ip.data.ip}&auth=${apiKey}&lang=id`)
 
-			const location = await $axios.get(`https://ipapi.co/${ip.data.query}/json/`)
+			const location = await $axios.get(`https://ipapi.co/${ip.data.ip}/json/`)
 			const kodeKota = await $axios.get(`https://api.banghasan.com/sholat/format/json/kota/nama/${location.data.city}`)
 			const kode = kodeKota.data.kota[0].id
 			const date = time.getDate() > 9 ? time.getDate() : `0${time.getDate}`
