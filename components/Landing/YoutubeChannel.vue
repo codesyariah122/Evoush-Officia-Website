@@ -68,7 +68,7 @@
 
 		data(){
 			return {
-				results: this.channels.data.items[0],
+				results: '',
 				// videos: [
 				// 	{id:1, data: this.playlists.data.items[0]},
 				// 	{id:2, data: this.playlists.data.items[1]},
@@ -77,11 +77,13 @@
 				// 	{id:5, data: this.playlists.data.items[5]}
 				// ],
 
-				videos: this.playlists.data.items
+				videos: ''
 			}
 		},
 
 		mounted(){
+			this.results = this.channels.data.items[0],
+			this.videos = this.playlists.data.items
 			// console.log(this.channels)
 		},
 

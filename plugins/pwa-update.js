@@ -29,7 +29,7 @@
 
 export default async (context) => {
   const workbox = await window.$workbox;
-  console.log(workbox)
+  // console.log(workbox)
 
   if (!workbox) {
     console.debug("Workbox couldn't be loaded.");

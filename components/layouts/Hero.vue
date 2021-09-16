@@ -64,7 +64,7 @@
 
 	.sachet{
 		position: absolute;
-		left: 20%;
+		left: 10%;
 		bottom: -5rem;
 		transform: translateX(-7%);
 		display: flex;
@@ -125,7 +125,8 @@
 				images: [
 					{id:1, src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/material/evost_material.png'},
 					{id:2, src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/material/kileon_material.png'},
-					{id:3, src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/material/gilcam_material.png'}
+					{id:3, src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/material/gilcam_material.png'},
+					{id:4, src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/material/eikana_material.png'}
 				],
 				boxes: [
 					{
@@ -136,6 +137,9 @@
 					},
 					{
 						id:3, src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/gilcam2.png'
+					},
+					{
+						id:4, src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/eikana_box.png'
 					}
 				],
 				imgBox: ''
@@ -173,7 +177,7 @@
 			ClickMe(imgBox){
 				this.ShowBox = true
 				this.imgBox = imgBox
-				console.log(imgBox)
+				// console.log(imgBox)
 			}
 		}
 	}

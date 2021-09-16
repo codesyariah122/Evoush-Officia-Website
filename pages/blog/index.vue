@@ -54,8 +54,15 @@
 							</div>
 						</div>
 					</div>
-
 				</div>
+
+				<div class="row justify-content-center">
+					<div class="col-lg-12 col-xs-12 col-sm-12">
+						<Pagination :nextPage="nextPage" :pageNo="1" urlPrefix="/blog"/>
+					</div>
+				</div>
+
+
 			</div>
 		</section>
 		<!-- End Portfolio Section -->
@@ -63,7 +70,11 @@
 </template>
 
 <script>
+	import Pagination from '@/components/molecules/Pagination'
 	export default{
+		components: {
+			Pagination
+		},
 		layout: 'blog',
 		head(){
 			return {
@@ -93,10 +104,16 @@
 		async asyncData({ $content, params }) {
 			const articles = await $content('Blog', params.slug)
 			.only(['title', 'description', 'img', 'slug', 'categories', 'createdAt', 'author'])
+			.limit(10)
 			.sortBy('createdAt', 'desc')
 			.fetch();
+			const nextPage = articles.length === 10
+			const prevPage = nextPage ? articles.slice(0, -1) : articles
+
 			return {
-				articles
+				articles,
+				nextPage,
+				prevPage
 			}
 		}
 	}

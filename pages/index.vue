@@ -27,6 +27,10 @@
 				</div>
 
 				<div class="col-lg-12 col-xs-12 col-sm-12">
+					<SocialSharing :socials="socials"/>
+				</div>
+
+				<div class="col-lg-12 col-xs-12 col-sm-12">
 					<center>
 						<AddToHome/>
 					</center>
@@ -76,7 +80,7 @@
 
 		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
 
-		<YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos" :playlists="playlistVideos"/>
+		<!-- <YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos" :playlists="playlistVideos"/> -->
 
 		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
 
@@ -104,6 +108,7 @@
 	import SendSms from '@/components/Landing/SendSms'
 	import YoutubeChannel from '@/components/Landing/YoutubeChannel'
 	import CheckResi from '@/components/Landing/CheckResi'
+	import SocialSharing from '@/components/global/socialsharing'
 	// import RegisterEvent from '@/components/Landing/RegisterEventButton'
 	export default {
 		layout: 'default',
@@ -123,7 +128,8 @@
 			Updated,
 			SendSms,
 			YoutubeChannel,
-			CheckResi
+			CheckResi,
+			SocialSharing
 		},
 		async asyncData({$commerce, $content, params, $axios, $config}){
 			const {data: products} = await $commerce.products.list()
@@ -142,34 +148,86 @@
 			.sortBy('createdAt', 'desc')
 			.where({categories: 'news'})
 			.fetch();
+
+
 			return { results, products, members, articles, channels, latestVideos, playlistVideos}
 		},
 		data(){
 			return {
 				env: process.env.config_production,
 				deferredPrompt: '',
-				colorMode: this.color
+				colorMode: this.color,
+				image: {
+					type: String,
+					default: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg'
+				},
+				socials: [
+					{
+						id: 1,
+						icon: 'bx bxl-twitter bx-lg',
+						network: 'twitter',
+						url: 'https://evoush.com/',
+						title: 'Evoush::Official',
+						description: 'Evoush Official Website.',
+						quote: 'Sukses berbisnis network marketing di era pandemi.',
+						image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
+						hashtags: 'Your Eternal Future',
+						twitterUser: 'EvoushOfficial'
+					},
+					{
+						id: 2,
+						icon: 'bx bxl-facebook-circle bx-lg',
+						network: 'facebook',
+						url: 'https://evoush.com/',
+						title: 'Evoush::Official',
+						description: 'Evoush Official Website.',
+						quote: 'Sukses berbisnis network marketing di era pandemi.',
+						image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
+						hashtags: 'Your Eternal Future'
+					},
+					{
+						id: 3,
+						icon: 'bx bxl-whatsapp bx-lg',
+						network: 'whatsapp',
+						url: 'https://evoush.com/event',
+						title: 'Evoush::Official',
+						description: 'Evoush Official Website.',
+						quote: 'Sukses berbisnis network marketing di era pandemi.',
+						image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
+						hashtags: 'Your Eternal Future'
+					}
+				]
 			}
 		},
 		head(){
 			return {
 				title: "Evoush::Official",
-				link: [
-				{hid: 'canonical', rel: 'canonical', href: 'https://evoush.com/'}
-				],
 				meta: [
-					{ hid: 'description', name: 'description', content: 'Evoush::Official | Home::Page'},
-					{ hid: 'keywords', name: 'keywords', content: 'Bisnis Network Marketing Zaman Now Ya Evoush Indonesia'},
-					{ hid: 'author', name: 'author' , content: 'Evoush::Indonesia | Official::Website'},
-					{ hid: 'og:type', property: 'og:type', content: 'website'},
-					{ hid: 'og:url', property: 'og:url', content: 'https://evoush.com/'},
-					{ hid: 'og:title', property: 'og:title', content: 'Evoush Indonesia'},
-					{ hid: 'og:site_name', property: 'og:site_name', content: 'Evoush::Official | Evoush::Website'},
-					{ hid: 'og:description', property: 'og:description', content: 'Your Eternal Future'},
-					{ hid: 'og:image', property: 'og:image', content: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg'},
-					{ hid: 'og:image:width', property: 'og:image:width', content: '600'},
-					{ hid: 'og:image:height', property: 'og:image:height', content: '598'}
-				],
+					{ property: "og:site_name", content: "Evoush Official" },
+					{ hid: "og:type", property: "og:type", content: "website" },
+					{
+						hid: "og:url",
+						property: "og:url",
+						content: "https://evoush.com",
+					},
+					{
+						hid: "og:title",
+						property: "og:title",
+						content: "Evoush::Official | Home::Page",
+					},
+					{
+						hid: "og:description",
+						property: "og:description",
+						content: "Your Eternal Future.",
+					},
+					{
+						hid: "og:image",
+						property: "og:image",
+						content: this.image
+					},
+					{ property: "og:image:width", content: "740" },
+					{ property: "og:image:height", content: "300" },
+				]
 			}
 		},
 

@@ -24,9 +24,87 @@ export default {
       { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent"},
       { name: 'apple-mobile-web-app-title', content:"Evoush::Official"},
       { hid: 'description', name: 'description', content: 'Your eternal future'},
-      { name: "format-detection", content:"telephone=no"}
+      // { name: "format-detection", content:"telephone=no"}
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Your Eternal Future'
+      },
+
+      // Twitter
+      // Test on: https://cards-dev.twitter.com/validator
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@evoushofficial' },
+      {
+        hid: 'twitter:url',
+        name: 'twitter:url',
+        content: 'https://twitter.com/evoushofficial?lang=en'
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'Evoush Official'
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content:
+          'Your Eternal Future'
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg'
+      },
+
+      // Open Graph
+      // Test on: https://developers.facebook.com/tools/debug/
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Evoush::Official' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://evoush.com'
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Evoush Official'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          'Your Eternal Future'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg'
+      },
+      {
+        hid: 'og:image:secure_url',
+        property: 'og:image:secure_url',
+        content: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg'
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: 'Evoush::Success'
+      }
+
     ],
     link: [
+      {
+        hid: "canonical",
+        rel: "canonical",
+        href: "https://evoush.com",
+      },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', type: 'text/css', href: '/assets/css/global.css'},
       { rel: 'stylesheet', type: 'text/css', href: '/assets/vendor/bootstrap/css/bootstrap.min.css'},
@@ -276,7 +354,7 @@ export default {
     {src: '~/plugins/pwa-update', mode: 'client', ssr: false},
     {src: '~/plugins/plugins_vue-chartjs', ssr: false},
     {src: '~/plugins/chart-line.js', ssr:false},
-    // {src: '~/plugins/vue-social-sharing'},
+    {src: '~/plugins/vue-social-sharing'},
     {src: '~/plugins/bootstrap-vue'},
     {src: '~/plugins/disqus'},
     {src: '~/plugins/vue-tiny-mce', mode: 'client', ssr: false},
@@ -319,6 +397,9 @@ robots: {
   Disallow: '/'
 },
 
+googleAnalytics: {
+    id: 'G-C870SRQM92'
+},
 
   oneSignal: {
     init: {

@@ -1,5 +1,5 @@
 ---
-title: Moment puncak di anniversary evoush yang pertama
+title: Kode Etik Evoush
 description: 
 slug: kode-etik-dan-kebijakan-bisnis-penjualan
 img: code-ethics.jpg
