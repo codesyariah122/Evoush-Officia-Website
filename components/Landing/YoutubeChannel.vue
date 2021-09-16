@@ -3,24 +3,22 @@
 		<div class="container-fluid">
 			<div class="row justify-content-center">
 				<div class="col-lg-12 col-xs-12 col-sm-12">
-					<!-- <pre>
-						{{results}}
-					</pre> -->
+
 					<!--Profile Card 3-->
 					<div class="container">
 						<div class="card profile-card-3">
 							<div class="background-block">
-								<img :src="results.brandingSettings.image.bannerExternalUrl"  alt="profile-sample1" class="background"/>
+								<img :src="channels.data.items[0].brandingSettings.image.bannerExternalUrl"  alt="profile-sample1" class="background"/>
 							</div>
 							<div class="profile-thumb-block">
-								<img :src="results.snippet.thumbnails.medium.url" alt="profile-image" class="profile"/>
+								<img :src="channels.data.items[0].snippet.thumbnails.medium.url" alt="profile-image" class="profile"/>
 							</div>
 							<div class="card-content-yt">
-								<h2><a :href="`https://youtube.com/channel/${results.id}`" target="_blank">{{results.snippet.title}}</a><small><i class='bx bxs-user-circle'></i> {{results.statistics.subscriberCount}} Subscribers.</small></h2>
-								<h2><small><i class='bx bx-tv'></i> {{results.statistics.videoCount}} Total video</small></h2>
-								<blockquote class="blockquote-footer mt-3" v-html="results.brandingSettings.channel.description" style="text-align: justify;"></blockquote>
+								<h2><a :href="`https://youtube.com/channel/${channels.data.items[0].id}`" target="_blank">{{channels.data.items[0].snippet.title}}</a><small><i class='bx bxs-user-circle'></i> {{channels.data.items[0].statistics.subscriberCount}} Subscribers.</small></h2>
+								<h2><small><i class='bx bx-tv'></i> {{channels.data.items[0].statistics.videoCount}} Total video</small></h2>
+								<blockquote class="blockquote-footer mt-3" v-html="channels.data.items[0].brandingSettings.channel.description" style="text-align: justify;"></blockquote>
 								<br>
-								<small class="text-info mt-2 mb-5">{{results.brandingSettings.channel.keywords}}</small>
+								<small class="text-info mt-2 mb-5">{{channels.data.items[0].brandingSettings.channel.keywords}}</small>
 								<br>
 							</div>
 						</div>
@@ -84,7 +82,7 @@
 		mounted(){
 			this.results = this.channels.data.items[0],
 			this.videos = this.playlists.data.items
-			// console.log(this.channels)
+			console.log(this.channels)
 		},
 
 		methods: {

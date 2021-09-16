@@ -142,7 +142,7 @@
 					{ hid: 'og:title', property: 'og:title', content: 'Evoush Indonesia | Evoush::Member'},
 					{ hid: 'og:site_name', property: 'og:site_name', content: `${this.members[0].name} | ${this.members[0].username}`},
 					{ hid: 'og:description', property: 'og:description', content: `${this.members[0].quotes}`},
-					{ hid: 'og:image', property: 'og:image', content: `https://app.evoush.com/storage/${this.members.[0].avatar}`},
+					{ hid: 'og:image', property: 'og:image', content: `https://app.evoush.com/storage/${this.members[0].avatar}`},
 					{ hid: 'og:image:width', property: 'og:image:width', content: '600'},
 					{ hid: 'og:image:height', property: 'og:image:height', content: '598'}
 				]

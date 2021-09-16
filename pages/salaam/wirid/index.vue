@@ -15,23 +15,25 @@
 		</div>
 
 		<div class="row justify-content-center">
-			<div v-for="result in results.data.result.data" class="col-md-4 col-xs-12 col-sm-12 mb-5">
-				<div class="card" style="width: 18rem;">
-					<div class="card-body">
-						<div class="ayat">
-							<h5 class="card-title">
-								<span class="circle-number">{{ result.id }}</span>. {{ result.arabic }}
-							</h5>
+			<center>
+				<div v-for="result in results.data.result.data" class="col-md-4 col-xs-12 col-sm-12 mb-5">
+					<div class="card" style="width: 18rem;">
+						<div class="card-body">
+							<div class="ayat">
+								<h5 class="card-title">
+									<span class="circle-number">{{ result.id }}</span>. {{ result.arabic }}
+								</h5>
+							</div>
+	<!-- 						<h6 class="card-subtitle mb-2 text-muted">
+								{{ result.translation_en }}
+							</h6>
+							<p class="card-text">
+								{{ result.translation_id }}
+							</p> -->
 						</div>
-<!-- 						<h6 class="card-subtitle mb-2 text-muted">
-							{{ result.translation_en }}
-						</h6>
-						<p class="card-text">
-							{{ result.translation_id }}
-						</p> -->
 					</div>
 				</div>
-			</div>
+			</center>
 		</div>
 	</div>
 </template>
@@ -41,7 +43,7 @@
 		layout: 'pages',
 		data(){
 			return{
-				title: 'asmaul husna',
+				title: 'kumpulan wirid',
 				loading: null
 			}
 		},

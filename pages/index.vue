@@ -251,7 +251,7 @@
 		// }
 
 		mounted(){
-			// OneSignal.log.setLevel('trace')
+			OneSignal.log.setLevel('trace')
 		}
 	}
 </script>

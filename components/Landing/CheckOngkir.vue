@@ -217,7 +217,7 @@
 					this.loading = false
 					this.show_result = false
 					this.error= true
-					console.log(error.response)
+					console.log(error.message)
 				})
 			}
 		}
