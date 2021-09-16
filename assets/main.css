@@ -56,7 +56,9 @@ a {
 body h2{
   color: var(--color)!important;
 }
-
+.mobile-nav-toggle i{
+  color: var(--color);
+}
 .underline:after{
   content: '';
   display: block;

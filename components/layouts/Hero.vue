@@ -59,12 +59,13 @@
 	.interactive-product img{
 		filter: drop-shadow(25px 15px 21px black);
 		max-width: 250px;
+		margin-bottom: 2rem;
 		transform: translateY(5%);
 	}
 
 	.sachet{
 		position: absolute;
-		left: 10%;
+		left: -1%;
 		bottom: -5rem;
 		transform: translateX(-7%);
 		display: flex;
@@ -74,7 +75,7 @@
 		list-style: none!important;
 		display: inline-block;
 		cursor: pointer;
-		margin-top: 2rem;
+		margin-top: 2.5rem;
 	}
 	.sachet img{
 		filter: drop-shadow(25px 15px 21px black);
