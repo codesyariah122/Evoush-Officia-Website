@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<div id="fb-root"></div>
 		<main>
 			<div class="container">
 				<div class="row justify-content-center mt-5">
@@ -10,7 +11,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<Nuxt/>
 		</main>
 	</div>

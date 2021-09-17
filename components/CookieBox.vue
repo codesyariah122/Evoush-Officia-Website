@@ -1,18 +1,30 @@
 <template>
-	<cookie-consent>
-  <template
-    slot="message"
-  >
-    Evoush Official Website menggunakan cookie untuk memberikan pengalaman browsing yang lebih baik bagi Anda, dengan perlindungan terhadap keamanan kebijakan privacy data-data anda. <br>
-    <a href="https://evoush.com" class="btn btn-link mt-5">Your Eternal Future</a>
-  </template>
-  <template
-    slot="button"
-  >
-    <button class="btn btn-primary btn-block">Setuju</button>
+  <VueIfBot>
+    	<cookie-consent>
+      <template
+        slot="message"
+      >
+        <div class="container mt-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-12">
+                Evoush Official Website menggunakan cookie untuk memberikan pengalaman browsing yang lebih baik bagi Anda, dengan perlindungan terhadap keamanan kebijakan privacy data-data anda.
+                <center>
+                    <a href="https://evoush.com" class="btn btn-link mt-5">Your Eternal Future</a>
+                </center>
+            </div>
 
-  </template>
-</cookie-consent>
+          </div>
+        </div>
+      </template>
+      <template
+        slot="button"
+      >
+        <div class="col-lg-12">
+          <button class="btn btn-primary btn-block">Setuju</button>
+        </div>
+      </template>
+    </cookie-consent>
+  </VueIfBot>
 </template>
 
 <script>
@@ -23,14 +35,20 @@
 		components: {
 			VueIfBot,
 			CookieConsent
-		}
+		},
+
+    mounted(){
+      // if(document.querySelector('.cookie-consent-compliance')){
+      //   document.querySelector('.cookie-consent-compliance').style.visibility="hidden"
+      // }
+    }
 	}
 </script>
 
 <style>
   .cookie-consent {
     /*display: flex;*/
-    padding: 35px;
+    padding: 5px;
     align-items: center;
     align-self: center;
     justify-content: center;
@@ -41,15 +59,22 @@
   .cookie-consent button {
     border: 2px solid white;
     box-shadow: 5px 10px #888888;
-    padding: 10px;
-    margin-bottom: -15rem;
-    /*margin-left: 20px;*/
-    /*min-width: 140px;*/
     background: linear-gradient(to left, salmon, LightSalmon);
   }
 
   .cookie-consent button:hover{
     transform: translateY(15px);
+  }
+
+  @media (min-width: 992px) {
+    .cookie-consent{
+      padding: 15px;
+      text-align: justify;
+      margin:0;
+    }
+    .cookie-consent button:hover{
+      transform: translateY(5px);
+    }
   }
 </style>
 

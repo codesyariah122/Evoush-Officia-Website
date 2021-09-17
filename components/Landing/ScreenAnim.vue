@@ -2,9 +2,7 @@
 	<div>
 		<div class="row justify-content-center">
 			<div class="col-lg-12 col-xs-12 col-sm-12">
-				<center>
-					<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/animated/new_mockup_mobile.gif" class="img-fluid img-responsive anim">
-				</center>
+				<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/animated/new_mockup_mobile.gif" class="img-fluid anim">
 			</div>
 		</div>
 	</div>
@@ -12,7 +10,7 @@
 
 <style scoped>
 .anim{
-	max-width: 200px;
+	max-width: 100px;
 }
 @media (min-width: 992px) {
 	.anim{

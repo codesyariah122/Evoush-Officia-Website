@@ -12,6 +12,15 @@ export default {
   // loading: '~/components/LoadingBar.vue',
   body: true,
   // Global page headers: https://go.nuxtjs.dev/config-head
+
+   generate: {
+    cache: {
+      ignore: [
+        // When something changed in the docs folder, do not re-build via webpack
+        'docs'
+      ]
+    }
+  },
   head: {
     htmlAttrs: {
       lang: 'en',
@@ -120,6 +129,13 @@ export default {
 
     script: [
 
+    // {
+    //   src: 'https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v12.0&appId=787376388459905&autoLogAppEvents=1',
+    //   async: true,
+    //   defer: true,
+    //   crossorigin: "anonymous",
+    //   body: true
+    // },
     {
       src: 'https://cdn.popt.in/pixel.js?id=146a60e91cb08',
       async: 'true',

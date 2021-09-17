@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<div id="fb-root"></div>
 		<main>
 			<Header/>
 			<Nuxt/>
@@ -26,7 +27,8 @@
 		},
 
 		mounted(){
-			this.getNewContentUpdate()
+			this.getFacebookSDK(document, 'script', 'facebook-jssdk'),
+			this.getNewContentUpdate(),
 			this.$OneSignal.push(() => {
 				this.$OneSignal.isPushNotificationsEnabled((isEnabled) => {
 					if (isEnabled) {
@@ -63,6 +65,14 @@
 				        }
 				    });
 				}
+			},
+
+			getFacebookSDK(d, s, id){
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+				fjs.parentNode.insertBefore(js, fjs);
 			}
 		}
 

@@ -204,7 +204,7 @@
 					courier: this.state.courier
 				}
 
-				// console.log(data)
+				console.log(sending)
 				this.$axios.post('https://app.evoush.com/api/evoush/checkOngkir', sending)
 				.then(response => {
 					this.loading = false

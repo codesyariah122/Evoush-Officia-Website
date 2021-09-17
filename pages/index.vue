@@ -5,7 +5,6 @@
 
 			<!-- <div class="row justify-content-center">
 				<div class="col-lg-12 col-12 col-xs-12 col-sm-12">
-					<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/news/new-news.jpeg" class="img-fluid img-responsive">
 					<ScreenAnim/>
 				</div>
 			</div> -->
@@ -19,7 +18,14 @@
 			</div> -->
 
 
+
 			<div class="row justify-content-center mt-5">
+				<!-- <div class="col-lg-12 col-xs-12 col-sm-12">
+					<center>
+						<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="standard" data-action="like" data-size="small"></div>
+					</center>
+				</div> -->
+
 				<div class="col-12 col-lg-12 col-xs-12 col-sm-12">
 					<div class="float-right">
 						<ColorModePicker/>
@@ -40,6 +46,12 @@
 				<!-- <div class="col-lg-12">
 					{{ color }}
 				</div> -->
+
+
+				<div class="col-lg-12 col-xs-12 col-sm-12">
+					<BirthdayMember/>
+				</div>
+				<h1 class="underline" style="margin-top: 5rem;"></h1>
 
 			</div>
 
@@ -65,14 +77,11 @@
 		<CheckOngkir/>
 
 		<!-- <SendSms/> -->
-
 		<h1 class="underline" style="margin-top: 5rem;"></h1>
 
 		<Members :members="members"/>
 
-		<br>
-
-		<ScreenAnim/>
+		<!-- <ScreenAnim/> -->
 
 		<h1 class="underline" style="margin-top: 5rem;"></h1>
 
@@ -90,6 +99,12 @@
 
 	</div>
 </template>
+
+<style>
+	.fb-like{
+		margin-left: 5rem;
+	}
+</style>
 
 <script>
 	import Product from '@/components/Landing/Product'
@@ -109,6 +124,7 @@
 	import YoutubeChannel from '@/components/Landing/YoutubeChannel'
 	import CheckResi from '@/components/Landing/CheckResi'
 	import SocialSharing from '@/components/global/socialsharing'
+	import BirthdayMember from '@/components/Landing/BirthdayMember'
 	// import RegisterEvent from '@/components/Landing/RegisterEventButton'
 	export default {
 		layout: 'default',
@@ -129,7 +145,8 @@
 			SendSms,
 			YoutubeChannel,
 			CheckResi,
-			SocialSharing
+			SocialSharing,
+			BirthdayMember
 		},
 		async asyncData({$commerce, $content, params, $axios, $config}){
 			const {data: products} = await $commerce.products.list()
@@ -252,6 +269,8 @@
 
 		mounted(){
 			OneSignal.log.setLevel('trace')
-		}
+		},
+
+
 	}
 </script>
