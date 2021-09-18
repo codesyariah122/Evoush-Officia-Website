@@ -65,7 +65,7 @@
 
 	.sachet{
 		position: absolute;
-		left: -1%;
+		left: -1rem;
 		bottom: -5rem;
 		transform: translateX(-7%);
 		display: flex;

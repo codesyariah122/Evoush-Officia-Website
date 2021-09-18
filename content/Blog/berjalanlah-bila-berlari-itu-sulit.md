@@ -14,9 +14,10 @@ tags:
 
 categories: news
 ---  
-<img src="/assets/img/blog/berjalan-sukses.jpg" class="img-fluid">
+### Berjalanlah Bila Berlari itu sulit
 
-Memulai usaha memang dapat melalui banyak tahap perencanaan yang harus dipikirkan, dan produk apa yang akan dijual, harga sampai hal-hal yang berhubungan untuk meningkatkan penjualan. Satu persatu harus disiapkan dengan baik, dan semua harus dipikirkan dengan matang, selain itu menentukan target dan sasaran, memang diperlukan, tetapi kesabaran jauh lebih penting, menatanya dengan sedikit-demi sedikit jauh lebih baik.  
+Memulai usaha memang dapat melalui banyak tahap perencanaan yang harus dipikirkan, dan produk apa yang akan dijual, harga sampai hal-hal yang berhubungan untuk meningkatkan penjualan. Satu persatu harus disiapkan dengan baik, dan semua harus dipikirkan dengan matang, selain itu menentukan target dan sasaran, memang diperlukan, tetapi kesabaran jauh lebih penting, menatanya dengan sedikit-demi sedikit jauh lebih baik. 
+<img src="https://cdn.idntimes.com/content-images/post/old/97a5e-main_roadfromscratch_wordpress_600x400.jpg" class="img-fluid"> 
 
 Ada banyak pengusaha-pengusaha kecil yang dengan fokus sampai pada tujuan, walaupun ada yang cepat dan ada yang lambat. Sekali lagi membangun usaha itu seperti berlari, tapi bila memang ada hal-hal yang tidak bisa dengan cepat diusahakan, maka berjalan adalah tahap awal yang cukup baik, ada banyak ide yang orang-orang miliki, tetapi sulit untuk direalisasikan, perlu keberanian besar untuk memulainya.  
 
@@ -24,7 +25,7 @@ Ada banyak pengusaha-pengusaha kecil yang dengan fokus sampai pada tujuan, walau
 
 Dalam memulai suatu usaha perlu keberanian juga, karena selain modal dan produk jika tidak memiliki keberanian seperti berlari tanpa semangat. Karena kemampuan sehebat apapun kalau tidak berani maka tidak akan mampu mencapai apapun.
 
- 
+ <!--more-->
 
 Usaha kecil dalam skala pemula mudah timbul tenggelam, kalau kuat dengan segala terjanggan keadaan maka akan mampu terus bertahan, tapi tidak sedikit yang lenyap karena tidak mampu bertahan dengan strategi dan keadaan didepan.
 

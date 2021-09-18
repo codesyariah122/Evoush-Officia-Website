@@ -20,7 +20,9 @@
         slot="button"
       >
         <div class="col-lg-12">
-          <button class="btn btn-primary btn-block">Setuju</button>
+          <center>
+            <button class="btn btn-primary btn-lg">Setuju</button>
+          </center>
         </div>
       </template>
     </cookie-consent>
@@ -68,7 +70,7 @@
 
   @media (min-width: 992px) {
     .cookie-consent{
-      padding: 15px;
+      padding: 0;
       text-align: justify;
       margin:0;
     }

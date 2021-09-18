@@ -1,13 +1,11 @@
 <template>
 	<div class="container mt-5 mb-5">
 		<div class="row justify-content-center">
-			<div class="col-lg-12 col-xs-12 col-sm-12">
+			<div class="col-lg-8 col-xs-12 col-sm-12">
 				<div class="section-title">
 					<h2>Check Ongkir</h2>
 				</div>
-			</div>
-			<form @submit.prevent="getCostOngkir">
-				<div class="col-lg-12 col-xs-12 col-sm-12">
+				<form @submit.prevent="getCostOngkir">
 					<h4>ORIGIN</h4>
 					<div class="form-group">
 						<label for="prov">PROVINSI</label>
@@ -23,8 +21,6 @@
 							<option v-for="city in cities_origin" :key="city.id" :value="city.city_id">{{city.city_name}}</option>
 						</select>
 					</div>
-				</div>
-				<div class="col-lg-12 col-xs-12 col-sm-12 mt-2">
 					<h4>DESTINATION</h4>
 					<div class="form-group">
 						<label for="prov">PROVINSI</label>
@@ -42,8 +38,6 @@
 							<option class="py-1" v-for="city in cities_destination" :key="city.id" :value="city.city_id">{{ city.city_name }}</option>
 						</select>
 					</div>
-				</div>
-				<div class="col-lg-12 col-xs-12 col-sm-12">
 					<h4><i class='bx bxs-truck' ></i> KURIR</h4>
 					<hr>
 					<div class="form-group">
@@ -55,79 +49,77 @@
 							<option class="py-1" value="pos">POS</option>
 						</select>
 					</div>
-				</div>
-				<div class="col-lg-12 col-xs-12 col-sm-12">
 					<div class="form-group">
 						<label for="berat">BERAT <i class='bx bxs-package'></i>(Gram)</label>
 						<input type="text" class="form-control" v-model="state.weight" placeholder="Masukkan Berat Barang (Gram)">
 					</div>
-				</div>
 
-				<div class="col-lg-12 col-xs-12 col-sm-12">
 					<div class="form-group">
 						<button type="submit" class="btn btn-lg btn-primary">CEK ONGKOS KIRIM</button>
 					</div>
-				</div>
-			</form>
+				</form>
+			</div>
 		</div>
 
-		<div class="col-lg-12 col-xs-12 col-sm-12 mt-5">
-			<div v-if="error">
-				<div class="alert alert-warning">
-					Terjadi kesalahan harap periksa kembali kolom input check ongkir diatas
-				</div>
-			</div>
-
-			<div v-if="results" class="card">
-				<div class="card-body">
-
-					<div v-if="loading">
-						<div class="d-flex justify-content-center">
-							<div class="col-lg-12 col-xs-12 col-sm-12">
-								<img src="https://c.tenor.com/LeSVOZJUt-oAAAAM/muuve-rider.gif" class="img-fluid">
-							</div>
-						</div>
+		<div class="row justify-content-center">
+			<div class="col-lg-8 col-xs-12 col-sm-12 mt-5">
+				<div v-if="error">
+					<div class="alert alert-warning">
+						Terjadi kesalahan harap periksa kembali kolom input check ongkir diatas
 					</div>
+				</div>
 
-					<div v-if="show_result">
-						<h4 class="text-xl pb-1" style="text-transform: uppercase;">ONGKOS KIRIM {{ results[0].code }}</h4>
-						<hr class="border-2">
+				<div v-if="results" class="card">
+					<div class="card-body">
 
-						<h4><strong>Courier : {{ results[0].code }}</strong></h4>
-						<h5>{{ results[0].name }}</h5>
-						<ul class="list-group">
-							<!-- <pre>
-								{{ results[0].costs }}
-							</pre> -->
-							<div v-for="cost in results[0].costs">
-								<li class="list-group-item">
-									Service : <b>{{ cost.service }}</b> <br>
-									<blockquote class="blockquote-footer text-info ml-5">
-										{{ cost.description }}
-									</blockquote>
-								</li>
-								<div v-for="c in cost.cost">
-									<li class="list-group-item">
-										Perkiraan waktu pengiriman : <strong>{{ c.etd }} Hari</strong>
-									</li>
-									<li class="list-group-item">
-										Tarif pengiriman : <strong>
-											Rp. {{ c.value }}
-										</strong>
-									</li>
-									<li class="list-group-item">
-										Catatan : <strong v-if="c.note">
-											{{ c.note }}
-										</strong>
-										<strong v-else class="text-danger">
-											Tidak ada catatan
-										</strong>
-									</li>
+						<div v-if="loading">
+							<div class="d-flex justify-content-center">
+								<div class="col-lg-12 col-xs-12 col-sm-12">
+									<img src="https://c.tenor.com/LeSVOZJUt-oAAAAM/muuve-rider.gif" class="img-fluid">
 								</div>
 							</div>
-						</ul>
-					</div>
+						</div>
 
+						<div v-if="show_result">
+							<h4 class="text-xl pb-1" style="text-transform: uppercase;">ONGKOS KIRIM {{ results[0].code }}</h4>
+							<hr class="border-2">
+
+							<h4><strong>Courier : {{ results[0].code }}</strong></h4>
+							<h5>{{ results[0].name }}</h5>
+							<ul class="list-group">
+								<!-- <pre>
+									{{ results[0].costs }}
+								</pre> -->
+								<div v-for="cost in results[0].costs">
+									<li class="list-group-item">
+										Service : <b>{{ cost.service }}</b> <br>
+										<blockquote class="blockquote-footer text-info ml-5">
+											{{ cost.description }}
+										</blockquote>
+									</li>
+									<div v-for="c in cost.cost">
+										<li class="list-group-item">
+											Perkiraan waktu pengiriman : <strong>{{ c.etd }} Hari</strong>
+										</li>
+										<li class="list-group-item">
+											Tarif pengiriman : <strong>
+												Rp. {{ c.value }}
+											</strong>
+										</li>
+										<li class="list-group-item">
+											Catatan : <strong v-if="c.note">
+												{{ c.note }}
+											</strong>
+											<strong v-else class="text-danger">
+												Tidak ada catatan
+											</strong>
+										</li>
+									</div>
+								</div>
+							</ul>
+						</div>
+
+					</div>
 				</div>
 			</div>
 		</div>

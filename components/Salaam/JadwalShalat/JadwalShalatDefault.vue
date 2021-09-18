@@ -15,7 +15,21 @@
 						{{ timeNow }}
 					</pre> -->
 
+					<ul class="list-group mt-5 mb-5">
+						<div class="container">
+							<li class="list-group-item active">
+								Shalat selanjutnya : <strong>
+									{{ nextNameShalat }} - {{ nextShalat }}
+								</strong>
+							</li>
+						</div>
+					</ul>
+
 					<Location :lon="location.data.longitude" :lat="location.data.latitude" :city="location.data.city"/>
+
+					<pre>
+						{{ nextShalat }}
+					</pre>
 
 					<ul class="list-group mt-5 mb-5">
 						<div class="container">
@@ -131,6 +145,49 @@
 		components: {
 			Location,
 			Weather
+		},
+
+		data(){
+			return{
+				nextShalat: '',
+				nextNameShalat: ''
+			}
+		},
+
+		mounted(){
+			this.getNextShalat()
+		},
+
+		methods: {
+			getNextShalat(){
+				const now = this.timeNow.hours+':'+this.timeNow.minutes
+
+				if(now > this.results.isya){
+					this.nextShalat = this.results.subuh
+					this.nextNameShalat = "Subuh"
+				}else if(now > this.results.subuh){
+					this.nextShalat = this.results.terbit
+					this.nextNameShalat = "Syuruk"
+				}else if(now > this.results.terbit){
+					this.nextShalat = this.results.dhuha
+					this.nextNameShalat = "Dhuha"
+				}else if(now > this.results.dhuha){
+					this.nextShalat = this.results.dzuhur
+					this.nextNameShalat = "Dzuhur"
+				}else if(now > this.results.dzuhur){
+					this.nextShalat = this.results.ashar
+					this.nextNameShalat = "Ashar"
+				}else if(now > this.results.ashar){
+					this.nextShalat = this.results.maghrib
+					this.nextNameShalat = "Maghrib"
+				}else if(now > this.results.maghrib){
+					this.nextShalat = this.results.isya
+					this.nextNameShalat = "Isya"
+				}else{
+					console.log("Not Detected")
+				}
+
+			}
 		}
 	}
 </script>

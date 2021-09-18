@@ -10,7 +10,7 @@
 			<l-popup>Hello!</l-popup>
 		</l-marker>
 	</l-map> -->
-	<Map/>
+	<Map :lat="center.lat" :lon="center.lng"/>
 </template>
 
 <script>
@@ -27,8 +27,8 @@
 				'© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
 				zoom: 4.3,
 				center: {
-					lat: -6.200000,
-					lng: 106.816666,
+					lat: -2.1333328,
+					lng: 120.2833322,
 				},
 				bounds: null,
 				address: {

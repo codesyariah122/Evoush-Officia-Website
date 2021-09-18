@@ -15,6 +15,8 @@ tags:
 categories: news
 ---  
 
+### Jangan asal, ini waktu yang tepat tubuh konsumsi kolagen tambahan
+
 Seiring bertambahnya usia, penampilan bisa menurun. Salah satunya adalah tubuh secara alami mengalami penurunan produksi kolagen dan mineral tubuh lainnya yang mampu menjaga elastisitas kulit dan kecerahan kulit.
 
 Maka dari itu, penting bagi perempuan untuk mau menjaga penampilannya. Tapi, jika bicara perawatan kulit, kapan sih waktu yang tepat untuk memulai perawatan?  

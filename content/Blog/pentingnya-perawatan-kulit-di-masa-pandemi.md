@@ -15,6 +15,8 @@ tags:
 categories: news
 ---  
 
+### Pentingnya Perawatan Kulit di Masa Pandemi
+
 Dengan melakukan perawatan kulit wajah yang baik dan benar, maka kesehatan kulit akan terus beregenerasi dan terjaga, sehingga dapat meningkatkan kepercayaan diri.
 
 "Kulit yang sehat membuat kita lebih percaya diri untuk menjalani aktivitas sehari-hari,”  

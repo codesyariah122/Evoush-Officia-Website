@@ -13,6 +13,7 @@ tags:
 
 categories: news
 ---  
+### Saat Lebah Mencampur Getah Pohon Dengan Zat Alami Dari Tubuh Mereka, Lebah Akan Menghasilkan Zat Lengket Berwarna Cokelat Kehijauan Untuk Melapisi Sarang Mereka Yang Disebut Propolis.  
 <img src="https://ecs7.tokopedia.net/blog-tokopedia-com/uploads/2021/05/Kandungan-Propolis-1024x529.jpg" class="img-fluid mb-3">
 
 Lebah juga menghasilkan getah yang disebut propolis. Saat lebah mencampur getah pohon dengan zat alami dari tubuh mereka, lebah akan menghasilkan zat lengket berwarna cokelat kehijauan untuk melapisi sarang mereka. Inilah yang disebut propolis.

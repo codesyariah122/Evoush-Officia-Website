@@ -42,7 +42,8 @@
     "vue-tinymce-editor": "^1.6.2",
     "vue-toastification": "^1.7.11",
     "vue-wysiwyg": "^1.7.2",
-    "vue2-leaflet": "^2.7.1"
+    "vue2-leaflet": "^2.7.1",
+    "vue2-leaflet-markercluster": "2.0"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.0.10",

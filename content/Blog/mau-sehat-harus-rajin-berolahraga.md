@@ -15,6 +15,8 @@ tags:
 categories: news
 ---  
 
+### Mau Sehat Harus Rajin Berolahraga
+
 Di era pandemi berani sepedaan ??? Berkumpul dengan banyak orang, tidakkah itu berbahaya? “Ya” betul itu berbahaya tapi selama protokol kesehatan dan semuanya dipenuhi, maka sehat itu nikmat loh, bisa berpindah dari satu tempat, ke tempat lain, olahraga jalan kaki atau lari juga sama, beda cara menikmatinya saja. Hanya jangan menunggu sakit baru kita giat berolahraga.  
 
 Melihat banyaknya orang-orang yang menyukai olahraga, menandakan gaya hidup sudah mulai berubah, setiap orang ingin hidup sehat tidak sakit-sakitan, jadi banyak peluang yang bisa menjadi segmen untuk menghadirkan olahraga bukan saja hal sehat yang sulit, tapi dibuat mudah, meminum minuman detox kesehatan tidak perlu buat sendiri mengingat lama dan kurangnya pengetahuan dalam hal penyajiannya, atau makan makanan diet agar olah raga menjadi seimbang, semua juga sudah ada yang menyiapkannya. Bentuk kesehatan datang dalam kapsul siap minum, minuman kesehatan, makanan sehat dan tempat-tempat kesehatan.  

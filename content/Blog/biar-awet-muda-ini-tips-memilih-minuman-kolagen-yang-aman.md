@@ -14,6 +14,8 @@ tags:
 
 categories: news
 ---  
+### Biar Awet Muda Ini Tips Memilih Minuman Kolagen Yang Aman
+
 <img src="https://d3hctp6gkh4e3f.cloudfront.net/prod/vdux7v4ettq1t584pb56" class="img-fluid">
 
  Salah satu fungsi dari kolagen untuk kecantikan adalah membuat kulit wajah terlihat lebih muda, kenyal, dan tidak kusam, terutama ketika sudah menginjak usia 30-an.  

@@ -15,6 +15,8 @@ tags:
 categories: article
 ---  
 
+### 8 Kisah Inspiratif Pengusaha Sukses Indonesia
+
 Belakangan ini banyak orang mulai lebih melirik dunia usaha ketimbang menjadi karyawan suatu perusahaan. Kesuksesan finansial yang bisa diperoleh dari membangun usaha sendiri mendorong orang untuk memilih memulai usaha mereka sendiri. Banyak kisah sukses para pengusaha yang mulai dari nol dan harus melewati jalan panjang dan berliku sebelum akhirnya meraih kesuksesan yang bisa menjadi inspirasi bagi Anda yang ingin menjajal dunia wirausaha.
 
 Di sini Anda bisa menyimak kisah sukses beberapa orang pengusaha dari tanah air yang berskala menengah hingga besar, tua maupun muda, yang rata-rata memulai dari bawah dan serba sulit sebelum mencapai kesuksesan yang sekarang.  

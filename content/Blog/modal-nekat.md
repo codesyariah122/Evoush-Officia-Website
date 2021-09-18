@@ -15,6 +15,8 @@ tags:
 categories: news
 ---  
 
+### Modal Nekat
+
 Ada sebuah cerita mengenai pedagang yang sedang berkumpul. sang pedagan bercerita ke rekan pedagang lainnya dan mengatakan bagaimana sulitnya mencari uang untuk membangun usaha.  
 Lalu datang salah satu rekan pedagang lainnya dan mengutarakan bagaimana dia memulai karir bisnis terbaiknya dimulai dari ratusan ribu rupiah, "Tak lama setelah itu berakhir dengan gelak tawa para pedagang lain."  
 

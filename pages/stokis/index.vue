@@ -9,14 +9,22 @@
 
 			<div class="row justify-content-center mt-5">
 				<div class="col-lg-12 col-xs-12 col-sm-12">
-					<!-- <img :src="map" class="img-fluid img-responsive"> -->
-					<div style="height: 250px; width: 100%">
-						<Stockist/>
+					<div class="section-title">
+						<h2>Evoush Stockist</h2>
 					</div>
 				</div>
 			</div>
 
 		</div>
+
+
+		<div class="row justify-content-center mt-5">
+			<div class="col-lg-12 col-xs-12 col-sm-12">
+				<!-- <img :src="map" class="img-fluid img-responsive"> -->
+				<Stockist/>
+			</div>
+		</div>
+
 	</div>
 </template>
 

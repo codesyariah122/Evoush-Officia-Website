@@ -15,6 +15,8 @@ tags:
 categories: article
 ---  
 
+### Gagal adalah awak sebuah Kesuksesan
+
 Siapa yang tidak kenal dengan nama bapak Thomas Alva Edison,  
 <img src="https://mmc.kalteng.go.id/files/berita/11022018085443.jpg" class="img-fluid">  
 

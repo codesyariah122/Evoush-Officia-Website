@@ -73,7 +73,8 @@
 	transform: translate(-50%, -50%);
 	width: 100%;
 	height: 79.5vh;
-	background: #111845a6;
+	/*background: #111845a6;*/
+	background: linear-gradient(to right, #FFDAB9, #B0C4DE);
 	box-management-sizing: border-box-management;
 	overflow: hidden;
 	box-management-shadow: 0 20px 50px rgb(23, 32, 90);
@@ -102,12 +103,12 @@
 
 .box-management ._content-img-profile{
 	position:absolute;
-	top:11px;
+	top:30px;
 	left:15px;
 	right:15px;
-	bottom:15px;
-	border:1px solid #f0a591;
-	padding:20px;
+	bottom:25px;
+	border:3px solid #F0FFFF;
+	padding:15px;
 	text-align:center;
 	box-management-shadow: 0 5px 10px rgba(9,0,0,0.5);
 
