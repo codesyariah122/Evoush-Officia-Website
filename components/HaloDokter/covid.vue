@@ -33,6 +33,11 @@
 						Last Update : <strong>{{ formatDate(vaksin.lastUpdate)}}</strong>
 					</li>
 				</ul>
+
+				<div class="col-lg-12 col-xs-12">
+					<a href="https://www.google.com/search?q=Lokasi+Vaksin+COVID-19+terdekat&source=hp&ei=YpUaYfjRNsv6rQG_2rT4Cw&iflsig=AINFCbYAAAAAYRqjctEk-SsvLRzDr5nF1OkFoilrapbg&oq=Lokasi+Vaksin+COVID-19+terdekat&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgYIABAWEB46CAgAELEDEIMBOggIABCABBCxAzoLCAAQgAQQsQMQgwE6BQguEIAEOggILhCABBCxAzoLCAAQgAQQsQMQyQM6EAguELEDEMcBEKMCEAoQkwI6BwguEIAEEAo6BwgAEIAEEAo6BwgAELEDEAo6CggAELEDEIMBEAo6BAgAEAo6DQguEIAEEMcBEK8BEAo6CwguEIAEELEDEJMCOhEILhCABBCxAxCDARDHARCvAToLCC4QgAQQxwEQrwE6CQgAEMkDEBYQHlCrBli9a2DubWgFcAB4AYABvgKIAcgckgEJMjYuMTAuMC4xmAEAoAEBsAEA&sclient=gws-wiz&ved=0ahUKEwj4itGP_rXyAhVLfSsKHT8tDb8Q4dUDCAY&uact=5&utm_source=google&utm_medium=HPP&utm_campaign=covid_location_id_id_desktop&utm_id=covid_location_id_id_desktop" class="btn btn-info">Temukan lokasi vaksin COVID-19 dekat anda</a>
+				</div>
+
 			</div>
 
 		<!-- 	<pre>

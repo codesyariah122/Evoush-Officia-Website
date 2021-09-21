@@ -38,6 +38,7 @@
 
 						<p class="mb-5" v-html="product.description">
 						</p>
+						<nuxt-link to="/gallery" class="btn btn-success mt-5">Product Testimoni</nuxt-link>
 					</div>
 				</div>
 

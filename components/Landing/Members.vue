@@ -15,7 +15,7 @@
 					<!-- <pre>
 						{{members}}
 					</pre> -->
-					<div v-for="member in members.data" class="col-lg-6 col-md-6 d-flex align-items-stretch mb-3" data-aos="zoom-in" data-aos-delay="100">
+					<div v-for="member in members.data" class="col-lg-4 col-md-6 d-flex align-items-stretch mb-3" data-aos="zoom-in" data-aos-delay="100">
 						<div :class="(member.id % 2 == 0) ? 'icon-box iconbox-blue' : 'icon-box iconbox-red'">
 							<div class="icon">
 								<svg width="200" height="200" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">

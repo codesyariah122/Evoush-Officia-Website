@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<div class="row justify-content-center mb-5 mt-5">
+			<small class="text-success">Share to :</small>
 			<ul class="social-share" style="list-style: none; display: flex;">
-				<li class="mr-5">Share to : </li>
 				<li v-for="social in socials" class='mr-3' :key="social.id">
 					<ShareNetwork
 					:network="social.network"

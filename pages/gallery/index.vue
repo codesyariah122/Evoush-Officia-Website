@@ -106,6 +106,40 @@
 						</div>
 
 						<div class="col-lg-12 col-xs-12 col-sm-12 mt-5">
+							<h2><u>Evost SOP 5000 Collagen</u></h2>
+
+							<div
+								class="row portfolio-container"
+								data-aos="fade-up"
+								data-aos-delay="200">
+									<div v-for="third in thirds" class="col-lg-4 col-md-6 portfolio-item">
+										<div class="portfolio-wrap">
+											<img
+											:src="third.img"
+											class="img-fluid"
+											alt=""
+											/>
+											<div class="portfolio-info">
+												<p>Evost SOP 5000</p>
+												<div class="portfolio-links mt-3">
+													<a
+													:href="third.img"
+													data-gall="productGallery"
+													class="venobox btn btn-sm btn-primary text-white"
+													title="Gilcam Propolis Testimoni"
+													><i class="bx bx-plus"></i
+														>
+													</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+
+						<div class="col-lg-12 col-xs-12 col-sm-12 mt-5">
 							<h2><u>Beauty Soap</u></h2>
 
 							<div
@@ -210,7 +244,10 @@
 					{id:13, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/propolis13.jpeg'},
 					{id:14, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/propolis14.jpeg'},
 					{id:15, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/propolis15.jpeg'},
-					{id:16, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/propolis16.jpeg'}
+					{id:16, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/propolis16.jpeg'},
+					{id:17, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/WhatsApp%20Image%202021-09-20%20at%2012.23.29.jpeg'},
+					{id:18, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/WhatsApp%20Image%202021-09-21%20at%2011.25.37%20(1).jpeg'},
+					{id:19, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/WhatsApp%20Image%202021-09-21%20at%2011.25.37.jpeg'}
 				],
 
 				seconds: [
@@ -220,10 +257,11 @@
 
 				thirds: [
 					{id: 1, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/639ee5eb-264b-433a-8924-b3622c7e2390.jpg'},
-					{id: 2, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/4.jpg'},
-					{id: 3, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/WhatsApp%20Image%202021-08-02%20at%2016.48.28.jpeg'},
-					{id: 4, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/WhatsApp%20Image%202021-08-09%20at%2014.42.32%20(1).jpeg'},
-					{id: 5, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/WhatsApp%20Image%202021-08-09%20at%2014.42.32.jpeg'}
+
+					{id: 2, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/WhatsApp%20Image%202021-09-21%20at%2011.25.38.jpeg'},
+
+					{id: 3, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/new_products/WhatsApp%20Image%202021-08-02%20at%2016.48.28.jpeg'}
+
 				],
 
 				fourths: [

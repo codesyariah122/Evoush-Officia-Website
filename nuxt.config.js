@@ -379,7 +379,8 @@ export default {
     // { src: '~/plugins/vue-googlemaps'},
     { src: '~/plugins/vue-wysiwyg'},
     { src: '~/plugins/sweetalert2', ssr: false},
-    { src: '~/plugins/axios', ssr: false}
+    { src: '~/plugins/axios', ssr: false},
+    { src: '~/plugins/vue-mobile-detect'}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

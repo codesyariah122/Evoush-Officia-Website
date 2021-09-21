@@ -4,9 +4,9 @@
       <template
         slot="message"
       >
-        <div class="container mt-5">
+        <div class="container">
           <div class="row justify-content-center">
-            <div class="col-lg-12">
+            <div class="col-lg-12 mt-5 px-2 py-3">
                 Evoush Official Website menggunakan cookie untuk memberikan pengalaman browsing yang lebih baik bagi Anda, dengan perlindungan terhadap keamanan kebijakan privacy data-data anda.
                 <center>
                     <a href="https://evoush.com" class="btn btn-link mt-5">Your Eternal Future</a>

@@ -13,6 +13,11 @@
 						<h2>Evoush Stockist</h2>
 					</div>
 				</div>
+				<div class="col-lg-12 col-xs-12 col-sm-12">
+					<blockquote class="blockquote-footer">
+						Berikut list stokist yang kami sajikan dalam bentuk peta map indonesia, list stokist yang tersedia merupakan stokist yang telah resmi tergabung dan terdaftar sebagai stokist evoush
+					</blockquote>
+				</div>
 			</div>
 
 		</div>

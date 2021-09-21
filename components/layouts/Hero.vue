@@ -38,7 +38,7 @@
 							<div class="col-md-2 box-sachet">
 								<ul class="sachet" style="list-style: none;">
 									<li v-for="(image, index) in images">
-										<img id="sachet" :src="image.src" :data-id="image.id" :key="image.id" class="img-fluid" @click="ClickMe(boxes[index].src)">
+										<img id="sachet" :src="image.src" :data-id="image.id" :key="image.id" class="img-fluid" @click="ClickMe(boxes[index].src, boxes[index].name, boxes[index].description)">
 									</li>
 								</ul>
 							</div>
@@ -50,6 +50,114 @@
 		<!-- End Hero -->
 	</div>
 </template>
+
+
+
+<script>
+	import Logo from '~/components/molecules/Logo'
+
+	export default {
+		components: {
+			Logo
+		},
+		data(){
+			return {
+				ShowBox: null,
+				ShoBoxAgain: null,
+				brand: 'evoush official',
+				images: [
+					{
+						id:1,
+						src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/material/evost_material.png'
+					},
+					{
+						id:2,
+						src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/material/kileon_material.png'
+					},
+					{
+						id:3,
+						src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/material/gilcam_material.png'
+					},
+					{
+						id:4,
+						src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/material/eikana_material.png'
+					}
+				],
+				boxes: [
+					{
+						id:1,
+						name: 'Evost 5000 Collagen',
+						description: 'Mengandung 500mg Collagen per sajian, menambah produksi kolagen di dalam tubuh, menjadikan booster bagi kesehatan kulit kita.',
+						src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/sachet.png'
+					},
+					{
+						id:2,
+						name: 'Kileon',
+						description: 'Kandungan Collagen pada KILEON bermanfaat untuk membantu memelihara kesehatan kulit, meningkatkan masa otot, memperlambat penuaan dini mengurangi keriput serta meningkatkan elastisitas kulit, mencegah kerusakan tulang rawan sendi, menguatkan tulang dan gigi, serta mengatasi kerontokan rambut.',
+						src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/kileon_product.png'
+					},
+					{
+						id:3,
+						name: 'Gilcam Propolis',
+						description: 'Gilcam Propolis kami di produksi dengan kualitas yang terjaga dan tentunya kaya manfaat bagi kesehatan anda.',
+						src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/gilcam2.png'
+					},
+					{
+						id:4,
+						name: 'Eikana',
+						description: 'Fish Oil pada EIKANA bermanfaat untuk membantu meperlancar peredaran darah dan mengurangi tekanan darah tinggi, menangkal radikal bebas, menjaga kesehatan kulit, mencegah kerusakan sel hati, meningkatkan fungsi kognitif, serta membantu mengontrol berat badan.',
+						src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/eikana_box.png'
+					}
+				],
+				imgBox: ''
+			}
+		},
+		mounted(){
+			this.typedHero(),
+			this.getHeroCarousel(),
+			this.ClickMe(this.boxes[0].src, this.boxes[0].name, '')
+		},
+
+		methods:{
+			getHeroCarousel(){
+				// Testimonials carousel (uses the Owl Carousel library)
+				$(".hero-carousel").owlCarousel({
+					autoplay: true,
+					dots: true,
+					loop: true,
+					items: 1
+				});
+			},
+			typedHero(){
+				if ($('.typed').length) {
+					var typed_strings = $(".typed").data('typed-items');
+					typed_strings = typed_strings.split(',')
+					new Typed('.typed', {
+						strings: typed_strings,
+						loop: true,
+						typeSpeed: 100,
+						backSpeed: 50,
+						backDelay: 2000
+					});
+				}
+			},
+			ClickMe(imgBox, nameBox, descBox){
+				this.ShowBox = true
+				this.imgBox = imgBox
+				this.$swal({
+					title: nameBox,
+					text: descBox,
+					imageUrl: imgBox,
+					imageWidth: 500,
+					imageHeight: 400,
+					imageAlt: 'Custom image',
+				})
+				// this.$toast(nameBox)
+			}
+		}
+	}
+</script>
+
 
 <style scoped>
 	.interactive-product{
@@ -108,78 +216,3 @@
 		}
 	}
 </style>
-
-<script>
-	import Logo from '~/components/molecules/Logo'
-	import WhiteLogo from '~/components/molecules/WhiteLogo'
-
-	export default {
-		components: {
-			Logo,
-			WhiteLogo
-		},
-		data(){
-			return {
-				ShowBox: null,
-				ShoBoxAgain: null,
-				brand: 'evoush official',
-				images: [
-					{id:1, src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/material/evost_material.png'},
-					{id:2, src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/material/kileon_material.png'},
-					{id:3, src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/material/gilcam_material.png'},
-					{id:4, src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/material/eikana_material.png'}
-				],
-				boxes: [
-					{
-						id:1, src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/sachet.png'
-					},
-					{
-						id:2, src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/kileon_product.png'
-					},
-					{
-						id:3, src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/gilcam2.png'
-					},
-					{
-						id:4, src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/eikana_box.png'
-					}
-				],
-				imgBox: ''
-			}
-		},
-		mounted(){
-			this.typedHero(),
-			this.getHeroCarousel(),
-			this.ClickMe(this.boxes[0].src)
-		},
-
-		methods:{
-			getHeroCarousel(){
-				// Testimonials carousel (uses the Owl Carousel library)
-				$(".hero-carousel").owlCarousel({
-					autoplay: true,
-					dots: true,
-					loop: true,
-					items: 1
-				});
-			},
-			typedHero(){
-				if ($('.typed').length) {
-					var typed_strings = $(".typed").data('typed-items');
-					typed_strings = typed_strings.split(',')
-					new Typed('.typed', {
-						strings: typed_strings,
-						loop: true,
-						typeSpeed: 100,
-						backSpeed: 50,
-						backDelay: 2000
-					});
-				}
-			},
-			ClickMe(imgBox){
-				this.ShowBox = true
-				this.imgBox = imgBox
-				// console.log(imgBox)
-			}
-		}
-	}
-</script>

@@ -35,6 +35,7 @@
     "vue-cookieconsent-component": "^1.2.0",
     "vue-disqus": "^4.0.1",
     "vue-if-bot": "^1.2.0",
+    "vue-mobile-detection": "^1.0.0",
     "vue-social-sharing": "^3.0.8",
     "vue-sweetalert2": "^5.0.2",
     "vue-tawk": "^1.0.1",

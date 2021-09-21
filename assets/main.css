@@ -293,3 +293,7 @@ body h2{
 .collapse .card-body p{
   color: var(--color-dua);
 }
+
+.swal2-title {
+  color: var(--color-dua)!important;
+}
