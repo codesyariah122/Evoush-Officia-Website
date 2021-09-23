@@ -22,7 +22,7 @@
 				</pre> -->
 				<div class="col-md-12 mb-5">
 					<div class="card">
-						<div class="card-body">
+						<div class="card-body card-asmaulhusna">
 							<h5 class="card-title">
 								<span class="circle-number">{{ shalat.id }}</span>. {{ shalat.name }}
 							</h5>

@@ -32,7 +32,7 @@
 				<div v-if="show" class="col-md-12 col-xs-12 col-sm-12 mb-5">
 					<div class="card mb-3">
 						<img :src="prophet.image_url" class="card-img-top" :alt="prophet.name">
-						<div class="card-body">
+						<div class="card-body card-asmaulhusna">
 							<h5 class="card-title">{{ prophet.name }}</h5>
 							<p class="card-text mb-5"><small class="text-muted">Lahir : {{ prophet.thn_kelahiran }}</small></p>
 							<p class="card-text" v-html="prophet.description" style="text-align: justify;">

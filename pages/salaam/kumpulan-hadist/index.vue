@@ -37,17 +37,24 @@
 				{{ results }}
 			</pre> -->
 			<div v-if="loading">
-				<img src="https://cfr.lps.go.id/images/Animation/Progressbar.gif" class="img-fluid">
-				<small class="blockquote-footer text-info">
-					Loading ...
-				</small>
+				<center>
+					<small class="text-primary mt-5">Loading ... </small><br>
+					<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" class="img-fluid">
+				</center>
+
 			</div>
 
 			<!-- <pre>
 				{{ filter }}
 			</pre> -->
 
-			<CardHadist v-if="show_number" :results="numbers" :name="hadistName"/>
+			<CardHadist v-if="show_number" :results="numbers" :hadistToShow="hadistToShow" :totalHadist="totalHadist" :name="hadistName"/>
+
+			<div v-if="errorEmpty">
+				<div class="alert alert-warning">
+					{{ errorEmpty }}
+				</div>
+			</div>
 
 		</div>
 	</div>
@@ -64,9 +71,12 @@
 		data(){
 			return {
 				results: [],
+				hadistToShow: 3,
+				totalHadist: 1,
 				loading: null,
 				hadistName: '',
 				endpoint: '',
+				errorEmpty: '',
 				hadists: [
 					{id:1, nama: 'Bukhari', endpoint: 'bukhari'},
 					{id:2, nama: 'Abu Daud', endpoint: 'abu-daud'},
@@ -97,16 +107,22 @@
 				this.loading = true
 				const name = document.forms['select-hadist'].elements['Select'].options[document.forms['select-hadist'].elements['Select'].selectedIndex].getAttribute('data-name')
 				const endpoint = e.target.value
-				this.hadistName = name
-				this.endpoint = endpoint
-				this.$axios.get(`https://islamic-api-indonesia.herokuapp.com/api/data/json/hadith/${endpoint}`)
-				.then(res => {
-					this.show_number = true
+				if(endpoint){
+					this.errorEmpty = ''
+					this.hadistName = name
+					this.endpoint = endpoint
+					this.$axios.get(`https://islamic-api-indonesia.herokuapp.com/api/data/json/hadith/${endpoint}`)
+					.then(res => {
+						this.show_number = true
+						this.loading = false
+						this.results = res.data
+						this.numbers = res.data
+						// console.log(this.results)
+					})
+				}else{
 					this.loading = false
-					this.results = res.data
-					this.numbers = res.data
-					// console.log(this.results)
-				})
+					this.errorEmpty = "Pilih Sumber Hadist Terlebih Dahulu"
+				}
 			},
 
 			FilterNumber(e){

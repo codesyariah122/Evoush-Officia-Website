@@ -29,20 +29,24 @@
 				<div class="col-lg-12 col-xs-12 col-sm-12">
 
 					<div v-if="loading">
-						<img src="https://cfr.lps.go.id/images/Animation/Progressbar.gif" class="img-fluid">
+						<center>
+							<small class="text-primary mt-5">Loading ... </small><br>
+							<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" class="img-fluid">
+						</center>
+
 					</div>
 
 					<div v-if="success" class="card mt-5 mb-5">
-						<div class="card-body">
+						<div class="card-body card-asmaulhusna">
 							<h5 class="card-title">{{ pray.title }}</h5>
 							<div class="ayat mt-3 mb-5">
-								<h4>
+								<h2>
 									{{ pray.arabic }}
-								</h4>
+								</h2>
 							</div>
-							<small class="text-success">
+							<h5 class="text-success">
 								{{ pray.latin }}
-							</small>
+							</h5>
 							<blockquote class="blockquote-footer">
 								{{ pray.translation }}
 							</blockquote>
@@ -80,16 +84,20 @@
 
 		methods:{
 			ChangeDoa(e){
+				this.pray = ''
 				this.loading = true
 				const key = e.target.value
 				this.$axios.get('https://islamic-api-indonesia.herokuapp.com/api/data/json/doaharian')
 				.then(res => {
-					this.success = true
-					this.loading = false
-					const results = res.data.result.data
-					const find = results.find(({title}) => title === key)
-					this.pray = find
-					console.log(this.pray)
+					console.log(res)
+					if(res.status === 200){
+						this.success = true
+						this.loading = false
+						const results = res.data.result.data
+						const find = results.find(({title}) => title === key)
+						this.pray = find
+					}
+					// console.log(this.pray)
 				})
 			}
 		}

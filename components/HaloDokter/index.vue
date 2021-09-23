@@ -4,9 +4,9 @@
 
 			<div class="row justify-content-center">
 				<div class="col-lg-12 col-xs-12 col-sm-12">
-					<blockquote class="text-primary blockquote-footer">
-						Cuaca {{ location.city }}
-					</blockquote>
+					<h6 class="mt-5">
+						Cuaca : Kota {{ location.city }}
+					</h6>
 					<Weather :city="location.city" />
 
 					<!-- <pre>

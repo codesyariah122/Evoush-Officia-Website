@@ -14,24 +14,33 @@
 			</div>
 		</div>
 
+		<!-- {{ showToResults }} -->
+
 		<div class="row justify-content-center">
-			<div v-for="result in results" class="col-md-4 mb-5">
+			<div v-if="resultIndex < results.length" v-for="resultIndex in showToResults" class="col-md-4 mb-5">
 				<div class="card">
-					<div class="card-body">
+					<div class="card-body card-asmaulhusna">
 						<div class="ayat">
 							<h5 class="card-title">
-								<span class="circle-number">{{ result.index }}</span>. {{ result.arabic }}
+								<span class="circle-number">{{ results[resultIndex-1].index }}</span>. {{ results[resultIndex-1].arabic }}
 							</h5>
 						</div>
 						<h6 class="card-subtitle mb-2 text-muted">
-							{{ result.translation_en }}
+							{{ results[resultIndex-1].translation_en }}
 						</h6>
 						<p class="card-text">
-							{{ result.translation_id }}
+							{{ results[resultIndex-1].translation_id }}
 						</p>
 					</div>
 				</div>
 			</div>
+
+			<div v-if="showToResults < results.length || results.length > showToResults" class="col-lg-12 col-xs-12 col-sm-12 mt-5">
+				<div class="d-grid gap-2">
+					<button @click="showToResults += 3" class="btn btn-outline-primary btn-load-more btn-lg btn-block">Load More</button>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </template>
@@ -42,16 +51,21 @@
 		data(){
 			return{
 				title: 'asmaul husna',
-				loading: null
+				loading: null,
+
 			}
 		},
 
 		async asyncData({$axios}){
 			const fetchs = await $axios.get('https://islamic-api-indonesia.herokuapp.com/api/data/json/asmaulhusna');
 			const results = fetchs.data.result.data
+			const showToResults = 9
+			const totalResults = 1
 			console.log(results)
 			return {
-				results
+				results,
+				showToResults,
+				totalResults
 			}
 
 		}
@@ -112,4 +126,17 @@
 		cursor: not-allowed;
 	}
 
+	.btn-load-more {
+		background: linear-gradient(to right, #42A5F5, #5C6BC0);
+		border: 2px solid #fff;
+		color: #fff;
+		border-radius: 10px;
+		filter: drop-shadow(15px 13px 18px black);
+		margin-bottom: 15rem;
+		margin-top: 5rem;
+	}
+	.btn-load-more:hover{
+		background: linear-gradient(to left, salmon, lightsalmon);
+		transform: translateY(-10%);
+	}
 </style>

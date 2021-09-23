@@ -15,25 +15,33 @@
 		</div>
 
 		<div class="row justify-content-center">
-			<center>
-				<div v-for="result in results.data.result.data" class="col-md-4 col-xs-12 col-sm-12 mb-5">
-					<div class="card" style="width: 18rem;">
-						<div class="card-body">
-							<div class="ayat">
-								<h5 class="card-title">
-									<span class="circle-number">{{ result.id }}</span>. {{ result.arabic }}
-								</h5>
-							</div>
+			<!-- <pre>
+				{{ results.data.result.data.length }}
+			</pre> -->
+			<div v-if="resultIndex < results.data.result.data.length" v-for="resultIndex in showToResults" class="col-md-4 col-xs-12 col-sm-12 mb-5">
+				<div class="card" style="width: 18rem;">
+					<div class="card-body card-asmaulhusna">
+						<div class="ayat">
+							<h5 class="card-title">
+								<span class="circle-number">{{ results.data.result.data[resultIndex-1].id }}</span>. {{ results.data.result.data[resultIndex-1].arabic }}
+							</h5>
+						</div>
 	<!-- 						<h6 class="card-subtitle mb-2 text-muted">
 								{{ result.translation_en }}
 							</h6>
 							<p class="card-text">
 								{{ result.translation_id }}
 							</p> -->
-						</div>
 					</div>
 				</div>
-			</center>
+			</div>
+
+			<div v-if="showToResults < results.data.result.data.length || results.data.result.data.length > showToResults" class="col-lg-12 col-xs-12 col-sm-12 mt-5">
+				<div class="d-grid gap-2">
+					<button @click="showToResults += 3" class="btn btn-outline-primary btn-load-more btn-lg btn-block">Load More</button>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </template>
@@ -54,9 +62,13 @@
 
 		async asyncData({$axios}){
 			const results = await $axios.get('https://islamic-api-indonesia.herokuapp.com/api/data/json/wirid')
+			const showToResults = 9
+			const totalResults = 1
 
 			return {
-				results
+				results,
+				showToResults,
+				totalResults
 			}
 		}
 	}
@@ -114,6 +126,19 @@
 
 	.disabled{
 		cursor: not-allowed;
+	}
+	.btn-load-more {
+		background: linear-gradient(to right, #42A5F5, #5C6BC0);
+		border: 2px solid #fff;
+		color: #fff;
+		border-radius: 10px;
+		filter: drop-shadow(15px 13px 18px black);
+		margin-bottom: 15rem;
+		margin-top: 5rem;
+	}
+	.btn-load-more:hover{
+		background: linear-gradient(to left, salmon, lightsalmon);
+		transform: translateY(-10%);
 	}
 
 </style>

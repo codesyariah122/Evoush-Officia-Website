@@ -2,10 +2,16 @@
 	<div>
 		<div class="row justify-content-start">
 			<div class="col-md-4 weather">
+				<h6 class="mt-5">Cuaca : Kota {{ city }}</h6>
 				<img :src="`http://openweathermap.org/img/wn/${weather.icon}@2x.png`" class="img-fluid" width="100" height="100">
-				<small class="text-primary">{{ weather.description }}</small>
+				<span :class="main.temp < 28 ? 'badge badge-success' : 'badge badge-primary'">{{ weather.description }} &nbsp; {{ main.temp }}&deg;C <br>
+					<small v-if="main.temp < 28">Jaga kondisi tubuh / kesehatan Anda</small>
+					<small v-else>
+						Cuaca Sedang Baik Selamat Menikmati Hari ini
+					</small>
+				</span>
 				<h6 v-if="main" class="text-info">
-					{{ main.temp }}&deg;C
+
 				</h6>
 			</div>
 

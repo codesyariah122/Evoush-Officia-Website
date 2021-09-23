@@ -60,7 +60,7 @@
 
 				<div v-if="surahToShow < surahDatas.length || surahDatas.length > surahToShow" class="col-lg-12 col-xs-12 col-sm-12">
 					<div class="d-grid gap-2">
-						<button @click="surahToShow += 3" class="btn btn-outline-primary btn-load-more btn-lg btn-block">Show More</button>
+						<button @click="surahToShow += 3" class="btn btn-outline-primary btn-load-more btn-lg btn-block">Load More Surah</button>
 					</div>
 				</div>
 
