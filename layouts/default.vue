@@ -27,6 +27,7 @@
 		},
 
 		mounted(){
+			// $crisp.push(["set", "user:email", "pujiermanto@gmail.com"]),
 			this.getFacebookSDK(document, 'script', 'facebook-jssdk'),
 			this.getNewContentUpdate(),
 			this.$OneSignal.push(() => {

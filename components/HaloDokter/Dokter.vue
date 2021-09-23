@@ -16,12 +16,20 @@
 			{{ validation }}
 		</pre> -->
 
+
 		<form @submit.prevent="KirimPertanyaan">
 			<div class="form-group">
 				<label for="fullname">Nama Lengkap</label>
 				<input type="text" name="fullname" class="form-control" placeholder="Nama Lengkap Anda" v-model="consults.fullname">
 				<div v-if="validation.fullname" class="mt-2 alert alert-danger">
 					{{ validation.fullname[0] }}
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="fullname">Username Member Evoush</label>
+				<input type="text" name="username" class="form-control" placeholder="Username member resmi anda di evoush" v-model="consults.username">
+				<div v-if="validation.username" class="mt-2 alert alert-danger">
+					{{ validation.username[0] }}
 				</div>
 			</div>
 			<div class="form-group">
@@ -68,10 +76,10 @@
 
 			<div class="form-group mt-5">
 				<small class="text-danger">Klik tombol (kirim pertanyaan) dibawah setelah selesai mengisi seluruh kolom input pertanyaan di atas</small><br>
-				<button type="submit" class="btn btn-primary btn-lg">
+				<button type="submit" class="btn btn-primary btn-lg btn-block">
 					<div v-if="loading">
-						<small class="text-white">Loading ...</small>
-						<img src="https://i.pinimg.com/originals/a4/f2/cb/a4f2cb80ff2ae2772e80bf30e9d78d4c.gif" width="70" class="img-fluid">
+						<small class="text-white">Loading ... dulu kak !</small> <br>
+						<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" width="70" class="img-fluid">
 					</div>
 					<div v-else>
 						Kirim Pertanyaan
@@ -129,6 +137,7 @@
 				this.errors = null
 				let data = {
 					fullname: this.consults.fullname,
+					username: this.consults.username,
 					phone: this.consults.phone,
 					message: this.consults.message,
 					city: this.consults.city,
