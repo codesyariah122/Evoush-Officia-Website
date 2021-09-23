@@ -16,8 +16,8 @@
 
 			<!-- <pre>
 				{{ weather }}
-			</pre>
- -->
+			</pre> -->
+
 
 		</div>
 	</div>
@@ -38,9 +38,9 @@
 		},
 
 		mounted(){
-			console.log(this.city),
 			this.getWeather(this.city, this.apiKey)
 		},
+
 
 		methods: {
 			getWeather(city, apiKey){

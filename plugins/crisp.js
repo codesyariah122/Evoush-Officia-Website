@@ -5,7 +5,7 @@ export default () => {
 
 	// console.log(`Halo ${ask}, apa kabarnya ? `)
 
-	$crisp.push(["set", "user:nickname", ["John Doe"]]);
+	// $crisp.push(["set", "user:nickname", ["John Doe"]]);
 
   (function() {
     var d = document;

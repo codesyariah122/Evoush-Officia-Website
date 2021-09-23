@@ -27,9 +27,16 @@
 
 					<Location :lon="location.data.longitude" :lat="location.data.latitude" :city="location.data.city"/>
 
-					<pre>
+					<!-- <pre>
 						{{ nextShalat }}
 					</pre>
+
+					 -->
+
+					 <pre>
+					 	{{ shalatSaved }}
+					 </pre>
+					 <br>
 
 					<ul class="list-group mt-5 mb-5">
 						<div class="container">
@@ -150,7 +157,9 @@
 		data(){
 			return{
 				nextShalat: '',
-				nextNameShalat: ''
+				nextNameShalat: '',
+				shalat: '',
+				shalatSaved: '',
 			}
 		},
 
@@ -187,7 +196,8 @@
 					console.log("Not Detected")
 				}
 
-			}
+			},
+
 		}
 	}
 </script>
