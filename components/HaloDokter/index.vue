@@ -5,9 +5,14 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-12 col-xs-12 col-sm-12">
 					<blockquote class="text-primary blockquote-footer">
-						Cuaca {{ city }}
+						Cuaca {{ location.city }}
 					</blockquote>
-					<Weather :city="city" />
+					<Weather :city="location.city" />
+
+					<!-- <pre>
+						{{ location }}
+					</pre> -->
+
 				</div>
 			</div>
 
@@ -36,44 +41,15 @@
 	import Weather from './Weather'
 
 	export default{
-		props: ['provinces'],
+		props: ['provinces', 'location'],
 		components: {
 			Covid,
 			Dokter,
 			Weather
 		},
 
-		data(){
-			return {
-				ip: '',
-				city: ''
-			}
-		},
-
 		mounted(){
-			this.getIp(),
-			this.getLocation(this.ip)
-		},
-
-		methods: {
-			getIp(){
-				this.$axios
-				.get('http://ip-api.com/json/')
-				.then(res => {
-					this.ip = res.data.query
-    				// console.log(res)
-    			})
-    			.catch(err => console.log(err.message))
-			},
-			getLocation(ip){
-				this.$axios
-				.get(`https://ipapi.co/${ip}/json/`)
-				.then(res => {
-					this.country = res.data.country_name
-					this.city = res.data.city
-				})
-				.catch(err => console.log(err.message))
-			}
+			console.log(this.location)
 		}
 
 	}

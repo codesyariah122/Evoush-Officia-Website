@@ -13,13 +13,15 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-12 col-xs-12 col-sm-12">
-
+					<!-- <pre>
+						{{ location }}
+					</pre> -->
 				</div>
 			</div>
 
 
 			<div class="row justify-content-center">
-				<evoush-healthy :provinces="provinces"/>
+				<evoush-healthy :provinces="provinces" :location="location"/>
 			</div>
 		</div>
 
@@ -37,8 +39,14 @@
 
 		async asyncData({$axios}){
 			const provinces = await $axios.get('https://indonesia-covid-19.mathdro.id/api/provinsi/')
+			const ip = await $axios.$get('http://ip-api.com/json/')
+			// console.log(ip)
+			const location = await $axios.$get(`https://ipapi.co/${ip.query}/json/`)
+
 			return {
-				provinces
+				ip,
+				provinces,
+				location
 			}
 		},
 

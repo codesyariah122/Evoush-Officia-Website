@@ -1,16 +1,12 @@
 <template>
 	<div>
 		<div class="row justify-content-start">
-			<div v-if="main.temp < 30" class="col-md-8">
-				<small class="text-danger">Jaga kondisi tubuh</small>
-			</div>
-		</div>
-		<div class="row justify-content-start">
 			<div class="col-md-4 weather">
 				<img :src="`http://openweathermap.org/img/wn/${weather.icon}@2x.png`" class="img-fluid" width="100" height="100">
-				<span :class="main.temp < 30 ? 'badge badge-success mr-3' : 'badge badge-primary mr-3'"></span  >
+
 				<h3 v-if="main" :class="main.temp < 30 ? 'badge badge-success' : 'badge badge-primary'">{{ weather.description }}
-					&nbsp;{{ main.temp }}&deg;C
+					&nbsp;{{ main.temp }}&deg;C <br>
+					<small class="text-white mt-3">Jaga kondisi tubuh</small>
 				</h3>
 			</div>
 
