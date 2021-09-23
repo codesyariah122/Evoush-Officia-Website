@@ -8,9 +8,18 @@
 			</div>
 		</div>
 
+
+
 		<div class="container">
 			<div class="row justify-content-center">
-				<Covid :provinces="provinces"/>
+				<div class="col-lg-12 col-xs-12 col-sm-12">
+
+				</div>
+			</div>
+
+
+			<div class="row justify-content-center">
+				<evoush-healthy :provinces="provinces"/>
 			</div>
 		</div>
 
@@ -18,12 +27,12 @@
 </template>
 
 <script>
-	import Covid from '@/components/HaloDokter/covid'
+	import EvoushHealthy from '@/components/HaloDokter/index'
 
 	export default{
 		layout: 'pages',
 		components: {
-			Covid
+			EvoushHealthy
 		},
 
 		async asyncData({$axios}){

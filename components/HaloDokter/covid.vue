@@ -1,18 +1,12 @@
 <template>
-	<section id="halo-dokter" class="portfolio-details">
-		<div class="container" data-aos="fade-up">
-			<div class="col-lg-12 col-xs-12 col-sm-12">
-				<div class="section-title">
-					<h2 class="portfolio-title">Halo Dokter Evoush</h2>
-				</div>
-			</div>
+	<div class="covid-info">
+		<center>
+			<button class="btn btn-info covid-info-btn mb-5" @click="ShowDataCovid">Informasi Covid-19 Indonesia</button>
+		</center>
 
-			<!-- <pre>
-				{{ vaksin }}
-			</pre> -->
-
+		<fieldset v-if="showData">
+			<legend>Informasi Covid-19 Indonesia</legend>
 			<div class="col-lg-12 col-xs-12 col-sm-12 mb-5">
-				<h4 class="text-muted">Data Vaksinasi Indonesia</h4>
 				<ul class="list-group">
 					<li class="list-group-item">
 						Total Sasaran : <strong>{{ vaksin.totalsasaran }}</strong>
@@ -34,15 +28,11 @@
 					</li>
 				</ul>
 
-				<div class="col-lg-12 col-xs-12">
-					<a href="https://www.google.com/search?q=Lokasi+Vaksin+COVID-19+terdekat&source=hp&ei=YpUaYfjRNsv6rQG_2rT4Cw&iflsig=AINFCbYAAAAAYRqjctEk-SsvLRzDr5nF1OkFoilrapbg&oq=Lokasi+Vaksin+COVID-19+terdekat&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgYIABAWEB46CAgAELEDEIMBOggIABCABBCxAzoLCAAQgAQQsQMQgwE6BQguEIAEOggILhCABBCxAzoLCAAQgAQQsQMQyQM6EAguELEDEMcBEKMCEAoQkwI6BwguEIAEEAo6BwgAEIAEEAo6BwgAELEDEAo6CggAELEDEIMBEAo6BAgAEAo6DQguEIAEEMcBEK8BEAo6CwguEIAEELEDEJMCOhEILhCABBCxAxCDARDHARCvAToLCC4QgAQQxwEQrwE6CQgAEMkDEBYQHlCrBli9a2DubWgFcAB4AYABvgKIAcgckgEJMjYuMTAuMC4xmAEAoAEBsAEA&sclient=gws-wiz&ved=0ahUKEwj4itGP_rXyAhVLfSsKHT8tDb8Q4dUDCAY&uact=5&utm_source=google&utm_medium=HPP&utm_campaign=covid_location_id_id_desktop&utm_id=covid_location_id_id_desktop" class="btn btn-info">Temukan lokasi vaksin COVID-19 dekat anda</a>
+				<div class="col-lg-12 col-xs-12 mt-5">
+					<a href="https://www.google.com/search?q=Lokasi+Vaksin+COVID-19+terdekat&source=hp&ei=YpUaYfjRNsv6rQG_2rT4Cw&iflsig=AINFCbYAAAAAYRqjctEk-SsvLRzDr5nF1OkFoilrapbg&oq=Lokasi+Vaksin+COVID-19+terdekat&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgYIABAWEB46CAgAELEDEIMBOggIABCABBCxAzoLCAAQgAQQsQMQgwE6BQguEIAEOggILhCABBCxAzoLCAAQgAQQsQMQyQM6EAguELEDEMcBEKMCEAoQkwI6BwguEIAEEAo6BwgAEIAEEAo6BwgAELEDEAo6CggAELEDEIMBEAo6BAgAEAo6DQguEIAEEMcBEK8BEAo6CwguEIAEELEDEJMCOhEILhCABBCxAxCDARDHARCvAToLCC4QgAQQxwEQrwE6CQgAEMkDEBYQHlCrBli9a2DubWgFcAB4AYABvgKIAcgckgEJMjYuMTAuMC4xmAEAoAEBsAEA&sclient=gws-wiz&ved=0ahUKEwj4itGP_rXyAhVLfSsKHT8tDb8Q4dUDCAY&uact=5&utm_source=google&utm_medium=HPP&utm_campaign=covid_location_id_id_desktop&utm_id=covid_location_id_id_desktop" class="btn btn-info" target="_blank">Temukan lokasi vaksin COVID-19 dekat anda</a>
 				</div>
 
 			</div>
-
-		<!-- 	<pre>
-				{{ provinces }}
-			</pre> -->
 
 			<div v-if="country_name == 'Indonesia'">
 				<div class="row mt-5">
@@ -93,14 +83,14 @@
 
 				</div>
 			</div>
+		</fieldset>
+	</div>
 
-		</div>
-	</section>
 </template>
 
-<script>
 
-	export default{
+<script>
+	export default {
 		props: ['provinces'],
 		data(){
 			return{
@@ -119,7 +109,8 @@
 					value: [],
 				},
 				radio: "value",
-				vaksin: {}
+				vaksin: {},
+				showData: false
 			}
 		},
 
@@ -286,7 +277,36 @@
 				this.$nextTick(() => {
 					this.fillData();
 				});
+			},
+
+			ShowDataCovid(){
+				this.showData = !this.showData
 			}
 		}
 	}
 </script>
+
+<style>
+	.covid-info fieldset{
+		/*background: linear-gradient(to right, coral, lightcoral);*/
+		padding: 12px 10px;
+	}
+	.covid-info legend {
+		background-color: coral;
+		cursor: pointer;
+		box-shadow: 5px 10px #888888;
+	}
+
+	.covid-info-btn {
+		background: linear-gradient(to right, coral, lightcoral);
+		border: 2px solid white;
+		box-shadow: 5px 5px silver;
+	}
+
+	.covid-info-btn:hover{
+		background: linear-gradient(to left, salmon, lightsalmon);
+		border: 2px solid #FFFDD0;
+	}
+</style>
+
+

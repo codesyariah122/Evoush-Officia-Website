@@ -327,7 +327,7 @@ class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
 data-aos="zoom-in"
 data-aos-delay="200"
 >
-<div class="icon-box iconbox-teal">
+<div class="icon-box iconbox-orange">
 	<div class="icon">
 		<svg
 		width="100"
@@ -374,11 +374,11 @@ data-aos-delay="300"
 	</svg>
 	<i class='bx bxs-first-aid'></i>
 </div>
-<h4><a href="">Evoush Healthy</a></h4>
+<h4><a href="">Anda Bertanya Dokter Menjawab</a></h4>
 <p>
-	Hallo evousher  sekarang ini anda bisa berkonsultasi melalui aplikasi halo dokter ini.
+	Hallo evousher sekarang ini anda bisa berkonsultasi mengenai masalah-masalah kesehatan melalui <code>Evoush Healthy</code>. Setiap pertanyaan yang anda sampaikan atau ajukan akan di jawab oleh pakar atau dokter yang telah resmi menjadi bagian konsultan kesehatan evoush .
 </p>
-<nuxt-link to="/halo-dokter" class="btn btn-primary mt-3">Halo Dokter</nuxt-link>
+<nuxt-link to="/halo-dokter" class="btn btn-primary mt-3">Evoush Healthy</nuxt-link>
 </div>
 </div>
 

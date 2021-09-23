@@ -55,7 +55,15 @@
 					</div>
 
 					<div class="form-group">
-						<button type="submit" class="btn btn-lg btn-primary">CEK ONGKOS KIRIM</button>
+						<button type="submit" class="btn btn-lg btn-primary">
+							<div v-if="loading">
+								<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" class="img-fluid" width="80"><br>
+								<small class="text-white">Loading ...</small>
+							</div>
+							<div v-else>
+								CEK ONGKOS KIRIM
+							</div>
+						</button>
 					</div>
 				</form>
 			</div>
@@ -69,18 +77,18 @@
 					</div>
 				</div>
 
-				<div v-if="results" class="card">
-					<div class="card-body">
+				<div v-if="show_result" class="card">
+					<div class="card-body card-ongkir">
 
-						<div v-if="loading">
+						<!-- <div v-if="loading">
 							<div class="d-flex justify-content-center">
 								<div class="col-lg-12 col-xs-12 col-sm-12">
 									<img src="https://c.tenor.com/LeSVOZJUt-oAAAAM/muuve-rider.gif" class="img-fluid">
 								</div>
 							</div>
-						</div>
+						</div> -->
 
-						<div v-if="show_result">
+						<div v-if="results">
 							<h4 class="text-xl pb-1" style="text-transform: uppercase;">ONGKOS KIRIM {{ results[0].code }}</h4>
 							<hr class="border-2">
 
@@ -132,7 +140,7 @@
 		data(){
 			return {
 				error: null,
-				show_result: false,
+				show_result: null,
 				loading: null,
 				provinces: {},
 				state: {

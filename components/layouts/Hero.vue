@@ -35,13 +35,13 @@
 							</div>
 						</div>
 
-							<div class="col-md-2 box-sachet">
-								<ul class="sachet" style="list-style: none;">
-									<li v-for="(image, index) in images">
-										<img id="sachet" :src="image.src" :data-id="image.id" :key="image.id" class="img-fluid" @click="ClickMe(boxes[index].src, boxes[index].name, boxes[index].description)">
-									</li>
-								</ul>
-							</div>
+						<div class="col-md-2 box-sachet">
+							<ul class="sachet" style="list-style: none;">
+								<li v-for="(image, index) in images">
+									<img id="sachet" :src="image.src" :data-id="image.id" :key="image.id" class="img-fluid" @click="ClickMe(boxes[index].src, boxes[index].name, boxes[index].description)">
+								</li>
+							</ul>
+						</div>
 					</div>
 
 				</div>
@@ -144,14 +144,14 @@
 			ClickMe(imgBox, nameBox, descBox){
 				this.ShowBox = true
 				this.imgBox = imgBox
-				this.$swal({
-					title: nameBox,
-					text: descBox,
-					imageUrl: imgBox,
-					imageWidth: 500,
-					imageHeight: 400,
-					imageAlt: 'Custom image',
-				})
+				// this.$swal({
+				// 	title: nameBox,
+				// 	text: descBox,
+				// 	imageUrl: imgBox,
+				// 	imageWidth: 500,
+				// 	imageHeight: 400,
+				// 	imageAlt: 'Custom image',
+				// })
 				// this.$toast(nameBox)
 			}
 		}

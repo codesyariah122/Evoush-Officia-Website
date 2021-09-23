@@ -17,8 +17,6 @@
 				</div>
 			</div> -->
 
-
-
 			<div class="row justify-content-center mt-5">
 				<!-- <div class="col-lg-12 col-xs-12 col-sm-12">
 					<center>
@@ -48,10 +46,13 @@
 				</div> -->
 
 
-				<!-- <div class="col-lg-12 col-xs-12 col-sm-12">
-					<BirthdayMember/>
+				<div class="col-lg-12 col-xs-12 col-sm-12">
+					<!-- <BirthdayMember/> -->
+					<center>
+						<ScreenAnim/>
+					</center>
 				</div>
-				<h1 class="underline" style="margin-top: 5rem;"></h1> -->
+				<h1 class="underline" style="margin-top: 5rem;"></h1>
 
 			</div>
 
@@ -81,15 +82,15 @@
 
 		<Members :members="members"/>
 
-		<!-- <ScreenAnim/> -->
+
 
 		<h1 class="underline" style="margin-top: 5rem;"></h1>
 
 		<Pages/>
 
-		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
+		<!-- <h1 class="underline" style="margin-bottom: 3rem;"></h1> -->
 
-		<YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos" :playlists="playlistVideos"/>
+		<!-- <YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos" :playlists="playlistVideos"/> -->
 
 		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
 

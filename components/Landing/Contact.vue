@@ -43,9 +43,9 @@
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0 form-contact">
-            <div v-if="loading">
+            <!-- <div v-if="loading">
               <img src="https://img.pikbest.com/58pic/35/39/61/62K58PICb88i68HEwVnm5_PIC2018.gif!w340" class="img-fluid">
-            </div>
+            </div> -->
 
             <div v-if="show">
               <div v-if="!success">
@@ -219,7 +219,9 @@
                   </div>
 
                   <div class="text-center">
-                    <button type="submit" class="btn btn-primary mb-5">Send Message</button>
+                    <button type="submit" class="btn btn-primary mb-5">
+                      <img v-if="loading" src="http://www.esdairga.com/images/loading.gif" class="img-fluid" width="50"> <span v-else>Send Message</span>
+                    </button>
                   </div>
                 </form>
               </div>

@@ -297,3 +297,20 @@ body h2{
 .swal2-title {
   color: var(--color-dua)!important;
 }
+
+.card-ongkir {
+  background-color: var(--bg-card);
+}
+
+.card-ongkir h4 {
+  color: var(--color-primary);
+}
+
+.card-ongkir h5 {
+  color: var(--color);
+}
+
+.list-group li {
+  color: var(--color);
+  background-color: var(--bg);
+}
