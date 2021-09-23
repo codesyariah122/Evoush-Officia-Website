@@ -31,7 +31,8 @@
 					<div class="col-lg-4 col-xs-12 col-sm-12">
 						<div class="row justify-content-center interactive-product">
 							<div class="col-lg-4">
-								<img :src="imgBox" class="img-fluid">
+								<!-- {{ imgBox }} -->
+								<img :src="imgBox" :class="imgBox === 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/sachet.png' ? 'img-fluid rotate' : 'img-fluid'">
 							</div>
 						</div>
 
@@ -194,11 +195,16 @@
 	.sachet img:hover{
 		transform: translateY(5px);
 	}
-
+	.interactive-product .rotate{
+		transform: rotate(15deg);
+	}
 	@media (min-width: 992px) {
 		.interactive-product img{
 			max-width: 800px;
 			margin-top: -7rem;
+		}
+		.interactive-product .rotate{
+			transform: rotate(17deg);
 		}
 		.box-sachet{
 			margin-top: 10rem;

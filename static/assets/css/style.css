@@ -272,11 +272,11 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 100vh;
   /*background: url("https://raw.githubusercontent.com/evoush122/bahan_evoush/main/assets/img/bg/propolis-doktersehat2_edit.jpg") top right no-repeat;*/
   /*background: url("https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/assets/img/bg/new_bg_aja.jpg") right no-repeat;*/
-  background: linear-gradient(to right, coral, LightCoral);
+  background: linear-gradient(to right, tomato, coral);
   /*clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 100%);*/
   background-size: cover;
   position: relative;
-  padding-left: 15px;
+  padding-left:0;
   /*background-repeat:no-repeat;
   background-size:contain;
   background-position:center;*/
@@ -297,7 +297,7 @@ h1, h2, h3, h4, h5, h6 {
     background-attachment: fixed;
     position: relative;*/
     /*padding-left: 160px;*/
-    background: linear-gradient(to right, coral, LightCoral);
+    background: linear-gradient(to right, tomato, coral);
     clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 100%);
     background-position: top;
     -webkit-background-size: cover;

@@ -1,0 +1,19 @@
+<div v-else v-for="surah in surahLists.data" class="col-lg-4 col-xs-4 col-sm-4 mb-3">
+					<div class="card card-quran">
+						<div class="card-body">
+							<h5 class="card-title">{{surah.name.transliteration.id}} ({{surah.name.translation.id}})</h5>
+							<h6 class="card-subtitle mb-2 text-muted">{{surah.name.long}}</h6>
+							<p class="card-text">
+								<ul style="list-style: none;">
+									<li>Surah ke : {{surah.number}}</li>
+									<li>Jumlah Ayat : {{surah.numberOfVerses}}</li>
+								</ul>
+								<blockquote class="blockquote-footer">
+									{{surah.tafsir.id}}
+								</blockquote>
+							</p>
+							<nuxt-link :to="{name: 'salaam-quran-surah-nomor', params: {nomor: surah.number}}" class="card-link btn btn-outline-primary btn-block">Baca Surah</nuxt-link>
+							<!-- <a href="#" class="card-link">Another link</a> -->
+						</div>
+					</div>
+				</div>

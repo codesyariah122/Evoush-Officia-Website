@@ -24,7 +24,8 @@
 							<div class="row justify-content-center">
 								<div class="ayat">
 									<div class="col-12 col-xs-12 col-sm-12 text-center mb-5">
-										<h3 class="mb-5"> {{result.surah.preBismillah !== null ? result.surah.preBismillah.text.arab : ''}} </h3>
+										<h3 v-if="result.number.inSurah === 1" class="mb-5"> {{result.surah.preBismillah !== null ? result.surah.preBismillah.text.arab : ''}} </h3>
+
 										<h1 class="mt-2">
 											<span class="circle-number">{{result.number.inSurah}}</span> &nbsp;
 											{{result.text.arab}}
@@ -316,7 +317,7 @@
 					this.config.FirstData = this.config.activeData >= 1 ? (this.config.activeData + 1) - this.config.activeData : ''
 					this.config.LastData = this.config.activeData >= 1 ? (this.config.activeData - this.config.activeData) + this.config.TotalAyat : ''
 					this.elemAyat = `
-						<h3 class="mb-5"> ${this.dataAyat.surah.preBismillah !== null ? this.dataAyat.surah.preBismillah.text.arab : ''} </h3>
+						<h3 class="mb-5"> ${this.dataAyat.number.inSurah === 1 ? this.dataAyat.surah.preBismillah.text.arab : ''} </h3>
 						<h1 class="mt-2">
 						<span class="circle-number">${this.dataAyat.number.inSurah}</span> &nbsp;
 						${this.dataAyat.text.arab}
@@ -356,7 +357,7 @@
 					this.config.FirstData = this.config.activeData >= 1 ? (this.config.activeData + 1) - this.config.activeData : ''
 					this.config.LastData = this.config.activeData >= 1 ? (this.config.activeData - this.config.activeData) + this.config.TotalAyat : ''
 					this.elemAyat = `
-						<h3 class="mb-5"> ${this.dataAyat.surah.preBismillah !== null ? this.dataAyat.surah.preBismillah.text.arab : ''} </h3>
+						<h3 class="mb-5"> ${this.dataAyat.number.inSurah === 1 ? this.dataAyat.surah.preBismillah.text.arab : ''} </h3>
 						<h1 class="mt-2">
 						<span class="circle-number">${this.dataAyat.number.inSurah}</span> &nbsp;
 						${this.dataAyat.text.arab}
@@ -396,7 +397,7 @@
 					this.config.LastData = this.config.activeData >= 1 ? (this.config.activeData - this.config.activeData) + this.config.TotalAyat : ''
 
 					this.elemAyat = `
-						<h3 class="mb-5"> ${this.dataAyat.surah.preBismillah !== null ? this.dataAyat.surah.preBismillah.text.arab : ''}</h3>
+						<h3 class="mb-5"> ${this.dataAyat.number.inSurah === 1 ? this.dataAyat.surah.preBismillah.text.arab : ''}</h3>
 						<h1 class="mt-2">
 						<span class="circle-number">${this.dataAyat.number.inSurah}</span> &nbsp;
 						${this.dataAyat.text.arab}
@@ -439,7 +440,7 @@
 					this.config.LastData = this.config.activeData >= 1 ? (this.config.activeData - this.config.activeData) + this.config.TotalAyat : ''
 
 					this.elemAyat = `
-						<h3 class="mb-5"> ${this.dataAyat.surah.preBismillah !== null ? this.dataAyat.surah.preBismillah.text.arab : ''}</h3>
+						<h3 class="mb-5"> ${this.dataAyat.number.inSurah === 1 ? this.dataAyat.surah.preBismillah.text.arab : ''}</h3>
 						<h1 class="mt-2">
 						<span class="circle-number">${this.dataAyat.number.inSurah}</span> &nbsp;
 						${this.dataAyat.text.arab}
@@ -482,7 +483,7 @@
 					this.config.LastData = this.config.activeData >= 1 ? (this.config.activeData - this.config.activeData) + this.config.TotalAyat : ''
 
 					this.elemAyat = `
-						<h3 class="mb-5"> ${this.dataAyat.surah.preBismillah !== null ? this.dataAyat.surah.preBismillah.text.arab : ''}</h3>
+						<h3 class="mb-5"> ${this.dataAyat.number.inSurah === 1 ? this.dataAyat.surah.preBismillah.text.arab : ''}</h3>
 						<h1 class="mt-2">
 						<span class="circle-number">${this.dataAyat.number.inSurah}</span> &nbsp;
 						${this.dataAyat.text.arab}

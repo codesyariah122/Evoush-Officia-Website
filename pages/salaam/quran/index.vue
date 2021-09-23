@@ -30,25 +30,44 @@
 					<SurahCard :select="select"/>
 				</div>
 
-				<div v-else v-for="surah in surahLists.data" class="col-lg-4 col-xs-4 col-sm-4 mb-3">
+
+				<!-- <pre>
+					{{ surahDatas }}
+				</pre> -->
+
+
+				<div v-else v-for="surahIndex in surahToShow" class="col-lg-4 col-xs-4 col-sm-4 mb-3">
+					<!-- {{ surahLists[surahIndex].name.transliteration.id }}
+					<br> -->
+
+
 					<div class="card card-quran">
 						<div class="card-body">
-							<h5 class="card-title">{{surah.name.transliteration.id}} ({{surah.name.translation.id}})</h5>
-							<h6 class="card-subtitle mb-2 text-muted">{{surah.name.long}}</h6>
+							<h5 class="card-title">{{surahDatas[surahIndex].name.transliteration.id}} ({{surahDatas[surahIndex].name.translation.id}})</h5>
+							<h6 class="card-subtitle mb-2 text-muted">{{surahDatas[surahIndex].name.long}}</h6>
 							<p class="card-text">
 								<ul style="list-style: none;">
-									<li>Surah ke : {{surah.number}}</li>
-									<li>Jumlah Ayat : {{surah.numberOfVerses}}</li>
+									<li>Surah ke : {{surahDatas[surahIndex].number}}</li>
+									<li>Jumlah Ayat : {{surahDatas[surahIndex].numberOfVerses}}</li>
 								</ul>
 								<blockquote class="blockquote-footer">
-									{{surah.tafsir.id}}
+									{{surahDatas[surahIndex].tafsir.id}}
 								</blockquote>
 							</p>
-							<nuxt-link :to="{name: 'salaam-quran-surah-nomor', params: {nomor: surah.number}}" class="card-link btn btn-outline-primary btn-block">Baca Surah</nuxt-link>
+							<nuxt-link :to="{name: 'salaam-quran-surah-nomor', params: {nomor: surahDatas[surahIndex].number}}" class="card-link btn btn-outline-primary btn-block">Baca Surah</nuxt-link>
 							<!-- <a href="#" class="card-link">Another link</a> -->
 						</div>
 					</div>
 				</div>
+
+				<div v-if="surahToShow < surahDatas.length || surahDatas.length > surahToShow" class="col-lg-12 col-xs-12 col-sm-12">
+					<div class="d-grid gap-2">
+						<button @click="surahToShow += 3" class="btn btn-outline-primary btn-load-more btn-lg btn-block">Show More</button>
+					</div>
+				</div>
+
+
+
 			</div>
 		</div>
 	</div>
@@ -65,7 +84,10 @@
 		data(){
 			return {
 				showLists: false,
-				select: {}
+				select: {},
+				surahDatas: [],
+				surahToShow: 6,
+				totalSurah: 1
 			}
 		},
 
@@ -84,7 +106,13 @@
 		},
 
 		mounted(){
-			localStorage.removeItem('nomor-ayat')
+			localStorage.removeItem('nomor-ayat'),
+			this.axios.get('https://api.quran.sutanlab.id/surah')
+			.then(res => {
+				// console.log(res)
+				this.surahDatas = res.data.data
+			})
+			.catch(err => console.log(err.response))
 		},
 
 		methods: {
@@ -95,7 +123,7 @@
 					this.$axios.get(`https://api.quran.sutanlab.id/surah/${number}`)
 					.then(res => {
 						this.select = res.data.data
-						console.log(this.select)
+						// console.log(this.select)
 					})
 					.catch(error => {
 						console.log( (error.response || {}).data );
@@ -133,5 +161,19 @@
 	margin-right: 5px;
 	text-align: center;
 	width: 1.6em;
+}
+
+.btn-load-more {
+	background: linear-gradient(to right, #42A5F5, #5C6BC0);
+	border: 2px solid #fff;
+	color: #fff;
+	border-radius: 10px;
+	filter: drop-shadow(15px 13px 18px black);
+	margin-bottom: 15rem;
+	margin-top: 5rem;
+}
+.btn-load-more:hover{
+	background: linear-gradient(to left, salmon, lightsalmon);
+	transform: translateY(-10%);
 }
 </style>
