@@ -167,7 +167,7 @@
 
 	.interactive-product img{
 		filter: drop-shadow(25px 15px 21px black);
-		max-width: 250px;
+		max-width: 350px;
 		margin-bottom: 2rem;
 		transform: translateY(5%);
 	}
