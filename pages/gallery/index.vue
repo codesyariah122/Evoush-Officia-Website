@@ -9,55 +9,6 @@
 						</div>
 					</div>
 
-
-
-					<!-- <div class="row justify-content-center">
-						<div class="col-lg-12 col-xs-12 col-sm-12">
-							<div class="section-title">
-								<h2>New Product</h2>
-								<blockquote class="blockquote-footer">
-									our newest product which is rich in benefits
-								</blockquote>
-							</div>
-						</div>
-					</div>
-
-					<div class="row justify-content-center mb-5">
-						<div class="col-lg-12 col-xs-12">
-							<div
-								class="row portfolio-container"
-								data-aos="fade-up"
-								data-aos-delay="200">
-									<div v-for="third in thirds" class="col-lg-4 col-md-6 portfolio-item">
-										<div class="portfolio-wrap">
-											<img
-											:src="third.img"
-											class="img-fluid"
-											alt=""
-											/>
-											<div class="portfolio-info">
-												<h4>Our New Product</h4>
-												<p>Its Recomended</p>
-												<div class="portfolio-links mt-3">
-													<a
-													:href="third.img"
-													data-gall="productGallery"
-													class="venobox btn btn-sm btn-primary text-white"
-													title="Gilcam Propolis Testimoni"
-													><i class="bx bx-plus"></i
-														>
-													</a>
-											</div>
-										</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-					<h1 class="underline mt-5" style="margin-bottom: 15rem;"></h1> -->
-
 					<div class="row justify-content-center">
 						<div class="col-lg-12 col-xs-12 col-sm-12">
 							<div class="section-title">
@@ -69,143 +20,13 @@
 						</div>
 					</div>
 
-					<div class="row justify-content-center">
-						<div class="col-lg-12 col-xs-12 col-sm-12">
+					<Gilcam :reverse="reverse"/>
 
-							<h2><u>Gilcam Propolis</u></h2>
+					<Evost :thirds="thirds"/>
 
-							<div
-								class="row portfolio-container"
-								data-aos="fade-up"
-								data-aos-delay="200">
-									<div v-for="first in reverse" class="col-lg-4 col-md-6 portfolio-item">
-										<div class="portfolio-wrap">
-											<img
-											:src="first.img"
-											class="img-fluid"
-											alt=""
-											/>
-											<div class="portfolio-info">
-												<h4>Testimoni Product</h4>
-												<p>Gilcam Propolis</p>
-												<div class="portfolio-links mt-3">
-													<a
-													:href="first.img"
-													data-gall="productGallery"
-													class="venobox btn btn-sm btn-primary text-white"
-													title="Gilcam Propolis Testimoni"
-													><i class="bx bx-plus"></i
-														>
-													</a>
-											</div>
-										</div>
-									</div>
-								</div>
+					<BeautySoap :reverseSeconds="reverseSeconds"/>
 
-							</div>
-						</div>
-
-						<div class="col-lg-12 col-xs-12 col-sm-12 mt-5">
-							<h2><u>Evost SOP 5000 Collagen</u></h2>
-
-							<div
-								class="row portfolio-container"
-								data-aos="fade-up"
-								data-aos-delay="200">
-									<div v-for="third in thirds" class="col-lg-4 col-md-6 portfolio-item">
-										<div class="portfolio-wrap">
-											<img
-											:src="third.img"
-											class="img-fluid"
-											alt=""
-											/>
-											<div class="portfolio-info">
-												<p>Evost SOP 5000</p>
-												<div class="portfolio-links mt-3">
-													<a
-													:href="third.img"
-													data-gall="productGallery"
-													class="venobox btn btn-sm btn-primary text-white"
-													title="Gilcam Propolis Testimoni"
-													><i class="bx bx-plus"></i
-														>
-													</a>
-											</div>
-										</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
-
-
-						<div class="col-lg-12 col-xs-12 col-sm-12 mt-5">
-							<h2><u>Beauty Soap</u></h2>
-
-							<div
-								class="row portfolio-container"
-								data-aos="fade-up"
-								data-aos-delay="200">
-									<div v-for="second in seconds" class="col-lg-4 col-md-6 portfolio-item">
-										<div class="portfolio-wrap">
-											<img
-											:src="second.img"
-											class="img-fluid"
-											alt=""
-											/>
-											<div class="portfolio-info">
-												<p>Beauty Soap</p>
-												<div class="portfolio-links mt-3">
-													<a
-													:href="second.img"
-													data-gall="productGallery"
-													class="venobox btn btn-sm btn-primary text-white"
-													title="Gilcam Propolis Testimoni"
-													><i class="bx bx-plus"></i
-														>
-													</a>
-											</div>
-										</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
-
-						<div class="col-lg-12 col-xs-12 col-sm-12 mt-5">
-							<h2><u>Daycream evoush</u></h2>
-
-							<div
-								class="row portfolio-container"
-								data-aos="fade-up"
-								data-aos-delay="200">
-									<div v-for="fourth in fourths" class="col-lg-4 col-md-6 portfolio-item">
-										<div class="portfolio-wrap">
-											<img
-											:src="fourth.img"
-											class="img-fluid"
-											alt=""
-											/>
-											<div class="portfolio-info">
-												<p>Evoush Daycream</p>
-												<div class="portfolio-links mt-3">
-													<a
-													:href="fourth.img"
-													data-gall="productGallery"
-													class="venobox btn btn-sm btn-primary text-white"
-													title="Gilcam Propolis Testimoni"
-													><i class="bx bx-plus"></i
-														>
-													</a>
-											</div>
-										</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
-
-					</div>
+					<DayCream :fourths="fourths"/>
 
 					<h1 class="underline mt-5" style="margin-bottom: 15rem;"></h1>
 
@@ -217,9 +38,18 @@
 
 
 <script>
+	import {Gilcam, Evost, BeautySoap, DayCream} from '@/components/Testimony'
+
 
 	export default{
 		layout: 'pages',
+
+		components:{
+			Gilcam,
+			Evost,
+			BeautySoap,
+			DayCream
+		},
 
 		head(){
 			return {
@@ -252,7 +82,8 @@
 
 				seconds: [
 					{id:1, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/beautysoap/beautysoap1.jpeg'},
-					{id:2, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/beautysoap/beautysoap2.jpeg'}
+					{id:2, img: 'https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/beautysoap/beautysoap2.jpeg'},
+					{id:3, img: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/bahan_gallery/image/beautysoap/beautysoap3.jpeg'}
 				],
 
 				thirds: [
@@ -273,6 +104,9 @@
 		computed: {
 			reverse(){
 				return this.firsts.slice().reverse()
+			},
+			reverseSeconds(){
+				return this.seconds.slice().reverse()
 			}
 		},
 
