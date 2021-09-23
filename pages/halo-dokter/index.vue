@@ -39,9 +39,9 @@
 
 		async asyncData({$axios}){
 			const provinces = await $axios.get('https://indonesia-covid-19.mathdro.id/api/provinsi/')
-			const ip = await $axios.$get('http://ip-api.com/json/')
+			const ip = await $axios('https://api.ipify.org/?format=json')
 			// console.log(ip)
-			const location = await $axios.$get(`https://ipapi.co/${ip.query}/json/`)
+			const location = await $axios.$get(`https://ipapi.co/${ip.data.ip}/json/`)
 
 			return {
 				ip,
