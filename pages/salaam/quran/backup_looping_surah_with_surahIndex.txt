@@ -1,0 +1,30 @@
+
+				<div v-else v-for="surahIndex in surahToShow" class="col-lg-4 col-xs-4 col-sm-4 mb-3">
+					<!-- {{ surahLists[surahIndex].name.transliteration.id }}
+					<br> -->
+
+
+					<div class="card card-quran">
+						<div class="card-body">
+							<h5 class="card-title">{{surahDatas[surahIndex].name.transliteration.id}} ({{surahDatas[surahIndex].name.translation.id}})</h5>
+							<h6 class="card-subtitle mb-2 text-muted">{{surahDatas[surahIndex].name.long}}</h6>
+							<p class="card-text">
+								<ul style="list-style: none;">
+									<li>Surah ke : {{surahDatas[surahIndex].number}}</li>
+									<li>Jumlah Ayat : {{surahDatas[surahIndex].numberOfVerses}}</li>
+								</ul>
+								<blockquote class="blockquote-footer">
+									{{surahDatas[surahIndex].tafsir.id}}
+								</blockquote>
+							</p>
+							<nuxt-link :to="{name: 'salaam-quran-surah-nomor', params: {nomor: surahDatas[surahIndex].number}}" class="card-link btn btn-outline-primary btn-block">Baca Surah</nuxt-link>
+							<!-- <a href="#" class="card-link">Another link</a> -->
+						</div>
+					</div>
+				</div>
+
+				<div v-if="surahToShow < surahDatas.length || surahDatas.length > surahToShow" class="col-lg-12 col-xs-12 col-sm-12">
+					<div class="d-grid gap-2">
+						<button @click="surahToShow += 3" class="btn btn-outline-primary btn-load-more btn-lg btn-block">Show More</button>
+					</div>
+				</div>
