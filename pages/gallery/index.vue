@@ -40,7 +40,6 @@
 <script>
 	import {Gilcam, Evost, BeautySoap, DayCream} from '@/components/Testimony'
 
-
 	export default{
 		layout: 'pages',
 

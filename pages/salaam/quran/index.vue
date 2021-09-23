@@ -23,38 +23,36 @@
 
 			</div>
 
-			<div class="row justify-content-center">
-
-				<div v-if="showLists" class="col-lg-6 col-xs-12 col-sm-12">
+			<div v-if="showLists" class="row justify-content-center">
+				<div class="col-lg-6 col-xs-12 col-sm-12">
 					<!-- <h3 class="mt-2 mb-5">{{select.name.transliteration.id}}</h3> -->
 					<SurahCard :select="select"/>
+					<br>
+					<br>
 				</div>
+			</div>
 
+			<div v-else class="row justify-content-center">
 
-				<!-- <pre>
-					{{ surahDatas }}
-				</pre> -->
-
-
-				<div v-else v-for="surahIndex in surahToShow" class="col-lg-4 col-xs-4 col-sm-4 mb-3">
+				<div v-if="surahIndex < surahLists.data.length" v-for="surahIndex in surahToShow" class="col-lg-4 col-xs-4 col-sm-4 mb-3">
 					<!-- {{ surahLists[surahIndex].name.transliteration.id }}
 					<br> -->
-
+					<!-- {{ surahIndex }} -->
 
 					<div class="card card-quran">
 						<div class="card-body">
-							<h5 class="card-title">{{surahDatas[surahIndex].name.transliteration.id}} ({{surahDatas[surahIndex].name.translation.id}})</h5>
-							<h6 class="card-subtitle mb-2 text-muted">{{surahDatas[surahIndex].name.long}}</h6>
+							<h5 class="card-title">{{surahDatas[surahIndex-1].name.transliteration.id}} ({{surahDatas[surahIndex-1].name.translation.id}})</h5>
+							<h6 class="card-subtitle mb-2 text-muted">{{surahDatas[surahIndex-1].name.long}}</h6>
 							<p class="card-text">
 								<ul style="list-style: none;">
-									<li>Surah ke : {{surahDatas[surahIndex].number}}</li>
-									<li>Jumlah Ayat : {{surahDatas[surahIndex].numberOfVerses}}</li>
+									<li>Surah ke : {{surahDatas[surahIndex-1].number}}</li>
+									<li>Jumlah Ayat : {{surahDatas[surahIndex-1].numberOfVerses}}</li>
 								</ul>
 								<blockquote class="blockquote-footer">
-									{{surahDatas[surahIndex].tafsir.id}}
+									{{surahDatas[surahIndex-1].tafsir.id}}
 								</blockquote>
 							</p>
-							<nuxt-link :to="{name: 'salaam-quran-surah-nomor', params: {nomor: surahDatas[surahIndex].number}}" class="card-link btn btn-outline-primary btn-block">Baca Surah</nuxt-link>
+							<nuxt-link :to="{name: 'salaam-quran-surah-nomor', params: {nomor: surahDatas[surahIndex-1].number}}" class="card-link btn btn-outline-primary btn-block">Baca Surah</nuxt-link>
 							<!-- <a href="#" class="card-link">Another link</a> -->
 						</div>
 					</div>
@@ -66,9 +64,8 @@
 					</div>
 				</div>
 
-
-
 			</div>
+
 		</div>
 	</div>
 </template>
@@ -99,7 +96,6 @@
 
 		async asyncData({$axios, $config}){
 			const surahLists = await $axios.$get('https://api.quran.sutanlab.id/surah')
-
 			return {
 				surahLists
 			}
@@ -107,10 +103,10 @@
 
 		mounted(){
 			localStorage.removeItem('nomor-ayat'),
-			this.axios.get('https://api.quran.sutanlab.id/surah')
+			this.$axios.get('https://api.quran.sutanlab.id/surah')
 			.then(res => {
-				// console.log(res)
 				this.surahDatas = res.data.data
+				console.log(this.surahDatas)
 			})
 			.catch(err => console.log(err.response))
 		},
