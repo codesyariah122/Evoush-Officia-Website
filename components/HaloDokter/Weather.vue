@@ -6,7 +6,7 @@
 
 				<h3 v-if="main" :class="main.temp < 30 ? 'badge badge-success' : 'badge badge-primary'">{{ weather.description }}
 					&nbsp;{{ main.temp }}&deg;C <br>
-					<small v-if="main.temp < 28">Jaga kondisi tubuh / kesehatan Anda</small>
+					<small v-if="main.temp < 30">Jaga kondisi tubuh / kesehatan Anda</small>
 					<small v-else>
 						Cuaca Sedang Baik Selamat Menikmati Hari ini
 					</small>

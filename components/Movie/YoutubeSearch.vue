@@ -2,11 +2,10 @@
 	<div>
 		<div class="form-group">
 			<input type="search" name="keyword" id="keyword" class="form-control" placeholder="Ketikan keyword untuk mencari video youtube" v-model="keyword" @keyup="SearchYoutube">
+			<img v-if="loading" class="loading" src="https://img.pikbest.com/58pic/35/39/61/62K58PICb88i68HEwVnm5_PIC2018.gif!w340">
 		</div>
 
-		<div v-if="loading" class="mt-5">
-			<img src="https://img.pikbest.com/58pic/35/39/61/62K58PICb88i68HEwVnm5_PIC2018.gif!w340" class="img-fluid" width="200">
-		</div>
+
 
 		<div v-if="keyword">
 			<ul v-for="video in videos" class="list-video">
@@ -39,11 +38,11 @@
 				this.loading = true
 				const q = keyword.value.replace(" ", "")
 				this.$axios
-				.get(`https://app.evoush.com/api/evoush/youtube/cari/video/${q}`)
+				.get(`https://evoush-landing.herokuapp.com/api/data/youtube/search/${q}`)
 				.then(res=>{
 					// console.log(res.data.success)
 					// console.log(res.data.data)
-					if(res.data.success){
+					if(res.data.message === "Success fetch youtube video"){
 						this.loading = false
 						this.videos = res.data.data.items
 					}
@@ -66,5 +65,10 @@
 .title {
 	margin-bottom: 1.5rem;
 }
-
+.loading {
+	position: absolute;
+	left: 50rem;
+	top: -8px;
+	max-width: 50px;
+}
 </style>

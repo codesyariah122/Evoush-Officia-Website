@@ -14,6 +14,35 @@
 					<h2 class="portfolio-title"><strong>Movie Inspiration</strong></h2>
 				</div>
 
+				<div class="row justify-content-center mt-5 mb-5">
+					<div class="col-lg-12 col-xs-12 col-sm-12">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="text-secondary text-center">Cari Movie Favorite Anda Via IMDB</h4>
+								<div class="col-lg-12 col-xs-12 col-sm-12">
+									<Movie/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row justify-content-center mt-5">
+					<div class="col-lg-12 col-xs-12 col-sm-12">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="text-secondary text-center">Pencarian Youtube</h4>
+								<div class="col-lg-12 col-xs-12 col-sm-12">
+									<Youtube/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<h1 class="underline" style="margin-top: 5rem;"></h1>
+
 				<div v-for="movie in movies" :key="movie.id" class="mb-5">
 					<h3 class="text-secondary mt-5 mb-5">{{movie.title}}</h3>
 					<div class="embed-responsive embed-responsive-16by9 mt-2">
@@ -23,34 +52,7 @@
 
 				<h1 class="underline" style="margin-top: 5rem;"></h1>
 
-				<div class="container mt-5 mb-5">
-					<div class="row justify-content-center">
-						<div class="col-lg-12 col-xs-12 col-sm-12">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="text-secondary text-center">Cari Movie Favorite Anda Via IMDB</h4>
-									<div class="col-lg-12 col-xs-12 col-sm-12">
-										<Movie/>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 
-					<div class="row justify-content-center mt-5">
-						<div class="col-lg-12 col-xs-12 col-sm-12">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="text-secondary text-center">Pencarian Youtube</h4>
-									<div class="col-lg-12 col-xs-12 col-sm-12">
-										<Youtube/>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
 
 			</section>
 

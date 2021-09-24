@@ -89,7 +89,24 @@
 
 		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
 
-		<YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos" :playlists="playlistVideos"/>
+
+		<!-- <pre>
+			{{ channels }}
+		</pre> -->
+		<!-- <div v-if="channels.data.error.code"  class="col-lg-12 col-xs-12 col-sm-12">
+			<center>
+				<div class="alert alert-success">
+					<small class="text-primary mb-3">
+						{{ channels.message }}
+					</small> <br>
+					<small class="text-danger">Error {{ channels.data.error.code }}</small> {{ channels.data.error.message }}
+				</div>
+			</center>
+		</div> -->
+
+		<!-- <div v-else> -->
+			<YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos" :playlists="playlistVideos"/>
+		<!-- </div> -->
 
 		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
 
@@ -155,9 +172,9 @@
 
 			const channel_id = 'UCIzNgeNDD58z8XNppkopwzw'
 			const playlist_id = 'PLblvVtAgjh4DwLORfIHawwIVvaosP-YCA'
-			const channels = await $axios.$get(`/evoush/youtube/${channel_id}`)
-			const latestVideos = await $axios.$get(`/evoush/youtube/latest-video/${channel_id}/5/date`)
-			const playlistVideos = await $axios.$get(`/evoush/youtube/playlist-video/${channel_id}/5/${playlist_id}`)
+			const channels = await $axios.$get(`https://evoush-landing.herokuapp.com/api/data/youtube/channel/${channel_id}`)
+			const latestVideos = await $axios.$get(`https://evoush-landing.herokuapp.com/api/data/youtube/latest/${channel_id}/5/date`)
+			const playlistVideos = await $axios.$get(`https://evoush-landing.herokuapp.com/api/data/youtube/playlist/${channel_id}/5/${playlist_id}`)
 			const results = await $axios.$get('/product/all')
 			const members = await $axios.$get('/evoush/member-list')
 			const articles = await $content('Blog', params.slug)

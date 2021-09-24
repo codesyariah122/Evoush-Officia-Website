@@ -2,11 +2,13 @@
 	<div>
 		<input type="search" v-model="keyword.title" name="keyword" class="form-control" placeholder="ketikan judul film yang ingin dicari" @keyup="getMovie">
 
-		<div class="row justify-content-center">
-			<div v-if="loading" class="col-md-4 col-xs-12 col-sm-12 mt-5">
+		<img v-if="loading" class="loading" src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif"/>
+
+		<div class="row justify-content-start">
+			<!-- <div v-if="loading" class="col-md-4 col-xs-12 col-sm-12 mt-5">
 				<small class="text-info">Loading dulu kak ...</small>
 				<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" class="img-fluid" width="100">
-			</div>
+			</div> -->
 
 			<div v-if="notFound" class="col-md-4 col-xs-12 col-sm-12 mt-5">
 				<div class="alert alert-danger">
@@ -106,6 +108,14 @@
 	</div>
 </template>
 
+<style>
+.loading {
+	position: absolute;
+	left: 50rem;
+	top: 1px;
+	max-width: 30px;
+}
+</style>
 
 <script>
 	export default{

@@ -164,7 +164,8 @@
 		},
 
 		mounted(){
-			this.getNextShalat()
+			this.getNextShalat(),
+			console.log(this.nextShalat)
 		},
 
 		methods: {

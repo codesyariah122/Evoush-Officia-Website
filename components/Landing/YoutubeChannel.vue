@@ -141,7 +141,7 @@
 		height:50%;
 		border-radius:0 0 5px 5px;
 		position: relative;
-		z-index: 9999;
+		z-index: 1;
 	}
 	.profile-card-3 .card-content-yt::before {
 		content: '';
@@ -167,7 +167,7 @@
 	.profile-card-3 .profile {
 		border-radius: 50%;
 		position: absolute;
-		bottom: 71.5%;
+		bottom: 75.1%;
 		left: 50%;
 		max-width: 100px;
 		opacity: 1;
