@@ -19,6 +19,13 @@
 
 				<div class="row justify-content-center">
 					<div class="col-lg-12 col-xs-12 col-sm-12">
+						<pre>
+							{{ status }}
+						</pre>
+						<div v-if="status === 'INACTIVE'" class="alert alert-warning">
+							Hi {{ users.fullname }}, proses konsultasi anda sedang kami proses. Jika pesan ini masih ada harap refresh halaman, dengan menekan tombol refresh di bawah ini. <br>
+							<button class="btn btn-primary mt-3" @click="Reload">Refresh</button>
+						</div>
 					</div>
 				</div>
 
@@ -40,7 +47,11 @@
 	export default {
 		data(){
 			return {
-				event: ($nuxt.$router.path === '/event/anniversary' ? false : true)
+				event: ($nuxt.$router.path === '/event/anniversary' ? false : true),
+				users: {},
+				consults: [],
+				check: {},
+				status: ''
 			}
 		},
 		components: {
@@ -48,20 +59,37 @@
 		},
 
 		mounted(){
-			this.getChat()
+			// this.getChat(),
+			this.getDataConsult()
 		},
 
 		methods:{
-			getChat(){
-				const path = window.location.pathname.split('/')
-				const users = localStorage.getItem('consults') ? JSON.parse(localStorage.getItem('consults')) : ''
+			getDataConsult(){
+				this.users = localStorage.getItem('consults') ? JSON.parse(localStorage.getItem('consults')) : ''
+				this.$axios.get(`https://app.evoush.com/api/evoush/data/consult/${this.users.username}`)
+				.then(res => {
+					this.consults = res.data.data
+					this.check = this.consults.map(d => {
+						return d.username == this.users.username ? d : ''
+					})
+					// console.log(this.check[0])
+					this.status = this.check[0].status
+
+					const path = window.location.pathname.split('/')
+					console.log(this.status)
+
+					if(path[1] !== "halo-dokter" ||  this.status === "INACTIVE"){
+						$crisp.push(['do', 'chat:hide'])
+					}else{
+						$crisp.push(['do', 'chat:show'])
+					}
+				})
+
+			},
 
 
-				if(path[1] !== "halo-dokter" || !users.username){
-					$crisp.push(['do', 'chat:hide'])
-				}else{
-					$crisp.push(['do', 'chat:show'])
-				}
+			Reload(){
+				window.location.reload()
 			}
 		}
 
