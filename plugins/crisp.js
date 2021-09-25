@@ -1,4 +1,7 @@
 export default () => {
+  // const path = window.location.pathname.split('/')
+
+
 	window.$crisp = [];
 	window.CRISP_WEBSITE_ID="d14e8b60-976b-4aac-b56e-e12b6cab980e";
 	// var ask = prompt("Username anda : ")
@@ -6,6 +9,10 @@ export default () => {
 	// console.log(`Halo ${ask}, apa kabarnya ? `)
 
 	// $crisp.push(["set", "user:nickname", ["John Doe"]]);
+  // if(path[1] !== "halo-dokter"){
+  //   $crisp.push(['do', 'chat:hide']);
+  // }
+
 
   (function() {
     var d = document;

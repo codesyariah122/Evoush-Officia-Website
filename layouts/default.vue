@@ -27,7 +27,7 @@
 		},
 
 		mounted(){
-			// $crisp.push(["set", "user:email", "pujiermanto@gmail.com"]),
+			this.getChat(),
 			this.getFacebookSDK(document, 'script', 'facebook-jssdk'),
 			this.getNewContentUpdate(),
 			this.$OneSignal.push(() => {
@@ -74,6 +74,18 @@
 				js = d.createElement(s); js.id = id;
 				js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
 				fjs.parentNode.insertBefore(js, fjs);
+			},
+
+			getChat(){
+				const path = window.location.pathname.split('/')
+				const users = localStorage.getItem('consults') ? JSON.parse(localStorage.getItem('consults')) : ''
+
+
+				if(path[1] !== "halo-dokter" || !users.username){
+					$crisp.push(['do', 'chat:hide'])
+				}else{
+					$crisp.push(['do', 'chat:show'])
+				}
 			}
 		}
 

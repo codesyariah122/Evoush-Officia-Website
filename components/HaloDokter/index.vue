@@ -49,7 +49,7 @@
 		},
 
 		mounted(){
-			console.log(this.location)
+			// console.log(this.location)
 		}
 
 	}

@@ -45,6 +45,24 @@
 		},
 		components: {
 			ColorModePicker
+		},
+
+		mounted(){
+			this.getChat()
+		},
+
+		methods:{
+			getChat(){
+				const path = window.location.pathname.split('/')
+				const users = localStorage.getItem('consults') ? JSON.parse(localStorage.getItem('consults')) : ''
+
+
+				if(path[1] !== "halo-dokter" || !users.username){
+					$crisp.push(['do', 'chat:hide'])
+				}else{
+					$crisp.push(['do', 'chat:show'])
+				}
+			}
 		}
 
 	}

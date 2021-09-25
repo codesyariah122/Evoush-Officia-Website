@@ -48,11 +48,11 @@
 
 				<div class="col-lg-12 col-xs-12 col-sm-12">
 					<!-- <BirthdayMember/> -->
-					<center>
+					<!-- <center>
 						<ScreenAnim/>
-					</center>
+					</center> -->
 				</div>
-				<h1 class="underline" style="margin-top: 5rem;"></h1>
+				<!-- <h1 class="underline" style="margin-top: 5rem;"></h1> -->
 
 			</div>
 
@@ -93,7 +93,7 @@
 		<!-- <pre>
 			{{ channels }}
 		</pre> -->
-		<!-- <div v-if="channels.data.error.code"  class="col-lg-12 col-xs-12 col-sm-12">
+		<div v-if="channels.data.error"  class="col-lg-12 col-xs-12 col-sm-12">
 			<center>
 				<div class="alert alert-success">
 					<small class="text-primary mb-3">
@@ -102,11 +102,11 @@
 					<small class="text-danger">Error {{ channels.data.error.code }}</small> {{ channels.data.error.message }}
 				</div>
 			</center>
-		</div> -->
+		</div>
 
-		<!-- <div v-else> -->
+		<div v-else>
 			<YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos" :playlists="playlistVideos"/>
-		<!-- </div> -->
+		</div>
 
 		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
 

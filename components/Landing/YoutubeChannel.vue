@@ -79,7 +79,7 @@
 			}
 		},
 
-		mounted(){
+		created(){
 			this.results = this.channels.data.items[0],
 			this.videos = this.playlists.data.items
 			console.log(this.channels)
