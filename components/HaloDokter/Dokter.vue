@@ -82,7 +82,7 @@
 							<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" width="70" class="img-fluid">
 						</div>
 						<div v-else>
-							Kirim Pertanyaan
+							Mulai Konsultasi
 						</div>
 					</button>
 				</div>
