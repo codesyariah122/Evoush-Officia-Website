@@ -318,3 +318,7 @@ body h2{
 .card-asmaulhusna{
   background-color: var(--bg);
 }
+
+.card-stockist{
+  background: linear-gradient(to left, coral, lightcoral);
+}

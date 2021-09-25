@@ -11,8 +11,8 @@
 					:zoom="zoom"
 					:center="center"
 					>
-					<l-marker v-for="coordinate in coordinates" :lat-lng="coordinate" :key="coordinate.id">
-						<l-popup>{{ coordinate.prov }}</l-popup>
+					<l-marker v-for="coordinate in coordinates" :lat-lng="coordinate" :key="coordinate.id" @click="GetStockist(coordinate.prov)">
+						<l-popup>Evoush Stockist {{ coordinate.prov }}</l-popup>
 					</l-marker>
 					<l-polyline
 					:lat-lngs="coordinate"
@@ -25,15 +25,24 @@
 				</div> -->
 			</client-only>
 		</div>
+
+		<ShowStockist :showStockist="showStockist" :stockistData="stockistData"/>
+
 	</div>
 </template>
 
 <script>
+	import ShowStockist from './ShowStockist'
 	export default {
+		components: {
+			ShowStockist
+		},
 		props: ['lon', 'lat', 'city'],
 		data () {
 			return {
 				ip:'',
+				showStockist: null,
+				stockistData: {},
 				coordinates: [
 					// jawa timur
 					{
@@ -250,6 +259,11 @@
 					// console.log(d)
 					this.coordinate_data = d
 				})
+			},
+
+			GetStockist(data){
+				this.showStockist = true
+				this.stockistData = data
 			}
 		}
 	}

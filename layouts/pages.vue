@@ -91,7 +91,7 @@
 			},
 
 			getChat(status){
-				if(this.path !== "halo-dokter" ||  this.status === ""){
+				if(this.status === ""){
 					$crisp.push(['do', 'chat:hide'])
 				}else{
 					if(this.status === "ACTIVE"){

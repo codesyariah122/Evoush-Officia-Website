@@ -26,8 +26,19 @@
 			Footer
 		},
 
+		data(){
+			return {
+				users: {},
+				consults: [],
+				check: {},
+				status: '',
+				path: $nuxt.$route.name
+			}
+		},
+
 		mounted(){
-			this.getChat(),
+			this.getChat(this.status),
+			this.getDataConsult(),
 			this.getFacebookSDK(document, 'script', 'facebook-jssdk'),
 			this.getNewContentUpdate(),
 			this.$OneSignal.push(() => {
@@ -76,16 +87,44 @@
 				fjs.parentNode.insertBefore(js, fjs);
 			},
 
-			getChat(){
-				const path = window.location.pathname.split('/')
-				const users = localStorage.getItem('consults') ? JSON.parse(localStorage.getItem('consults')) : ''
+			getDataConsult(){
+
+				this.users = localStorage.getItem('consults') ? JSON.parse(localStorage.getItem('consults')) : ''
+
+				this.$axios.get(`https://app.evoush.com/api/evoush/data/consult/${this.users.username}`)
+				.then(res => {
+					this.consults = res.data.data
+					console.log(this.consults.length)
+					if(this.consults.length > 0){
+						this.check = this.consults.map(d => {
+							return d.username == this.users.username ? d : ''
+						})
+						// console.log(this.check[0])
+						this.status = this.check[0].status
+						console.log(this.status)
+						this.getChat(this.status)
+					}
+				})
+				.catch(err => {
+					console.log(err)
+				})
 
 
-				if(path[1] !== "halo-dokter" || !users.username){
+			},
+
+			getChat(status){
+				if(this.status === ""){
 					$crisp.push(['do', 'chat:hide'])
 				}else{
-					$crisp.push(['do', 'chat:show'])
+					if(this.status === "ACTIVE"){
+						$crisp.push(['do', 'chat:show'])
+					}
 				}
+			},
+
+
+			Reload(){
+				window.location.reload()
 			}
 		}
 

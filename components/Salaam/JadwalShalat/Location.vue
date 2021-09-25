@@ -8,7 +8,7 @@
 					:center="center"
 					>
 					<l-marker :lat-lng="regionCenter">
-						<l-popup>{{ city }}</l-popup>
+						<l-popup>Hallo evousher {{ city }}</l-popup>
 					</l-marker>
 					<l-polyline
 					:lat-lngs="polyline.latlngs"
