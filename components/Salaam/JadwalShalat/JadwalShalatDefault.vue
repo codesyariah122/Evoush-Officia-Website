@@ -33,9 +33,9 @@
 
 					 -->
 
-					 <pre>
+					 <!-- <pre>
 					 	{{ shalatSaved }}
-					 </pre>
+					 </pre> -->
 					 <br>
 
 					<ul class="list-group mt-5 mb-5">
@@ -164,13 +164,18 @@
 		},
 
 		mounted(){
-			this.getNextShalat(),
-			console.log(this.nextShalat)
+			this.getNextShalat()
+			// console.log(this.nextShalat)
 		},
 
 		methods: {
 			getNextShalat(){
-				const now = this.timeNow.hours+':'+this.timeNow.minutes
+				const date = new Date()
+				const now = this.timeNow.hours
+
+				const testtime = this.results.ashar.replace(':', '')
+				console.log(testtime)
+
 
 				if(now > this.results.isya){
 					this.nextShalat = this.results.subuh

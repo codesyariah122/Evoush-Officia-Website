@@ -97,6 +97,8 @@
 			const results = shalat.data.jadwal.data
 			const query = shalat.data.query
 
+
+
 			return {
 				testLocation,
 				location,

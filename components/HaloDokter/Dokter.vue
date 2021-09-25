@@ -13,8 +13,10 @@
 		</div>
 
 		<!-- <pre>
-			{{ validation }}
+			{{ users }}
 		</pre> -->
+
+
 
 		<div class="col-lg-12 col-xs-8 col-sm-8">
 			<form @submit.prevent="KirimPertanyaan">
@@ -102,14 +104,19 @@
 				errors: '',
 				consults: {},
 				validation: [],
-				ip: ''
+				ip: '',
+				users: {},
+				dataConsults:[],
+				check: {},
+				status: ''
 			}
 		},
 
 		mounted(){
 			this.getIp(),
 			this.getCity(this.ip),
-			this.consults.status = "INACTIVE"
+			this.consults.status = "INACTIVE",
+			this.checkConsultation()
 		},
 
 		methods: {
@@ -162,7 +169,7 @@
 						this.consults.gender = ''
 
 
-						this.toasts(this.success)
+						this.toasts(`${this.success}, Selanjutnya kami akan menyambungkan chat anda ke dokter kami`)
 						setTimeout(()=>{
 							location.reload()
 						}, 5000)
@@ -180,6 +187,19 @@
 
 			toasts(message){
 				this.$toast(message)
+			},
+
+			checkConsultation(){
+				this.users = localStorage.getItem('consults') ? JSON.parse(localStorage.getItem('consults')) : ''
+				this.$axios.get(`https://app.evoush.com/api/evoush/data/consult/${this.users.username}`)
+				.then(res => {
+					this.dataConsults = res.data.data
+					this.check = this.dataConsults.map(d => {
+						return d.username == this.users.username ? d : ''
+					})
+					this.status = this.check[0].status
+				})
+
 			}
 		}
 
