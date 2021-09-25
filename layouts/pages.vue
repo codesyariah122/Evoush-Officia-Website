@@ -23,7 +23,7 @@
 							{{ status }}
 						</pre> -->
 						<div v-if="status === 'INACTIVE'" class="alert alert-warning">
-							Hi {{ users.fullname }}, proses konsultasi anda sedang kami proses. Jika pesan ini masih ada harap refresh halaman, dengan menekan tombol refresh di bawah ini. <br>
+							Hi {{ users.fullname }}, proses konsultasi anda sedang kami proses. Jika pesan ini masih muncul harap refresh halaman, dengan melakukan tap/klik tombol refresh di bawah ini. <br>
 							<button class="btn btn-primary mt-3" @click="Reload">Refresh</button>
 						</div>
 					</div>
