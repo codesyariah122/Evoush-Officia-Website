@@ -48,11 +48,11 @@
 
 				<div class="col-lg-12 col-xs-12 col-sm-12">
 					<!-- <BirthdayMember/> -->
-					<!-- <center>
+					<center>
 						<ScreenAnim/>
-					</center> -->
+					</center>
 				</div>
-				<!-- <h1 class="underline" style="margin-top: 5rem;"></h1> -->
+				<h1 class="underline" style="margin-top: 5rem;"></h1>
 
 			</div>
 

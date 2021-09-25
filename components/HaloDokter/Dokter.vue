@@ -65,14 +65,13 @@
 					</div>
 				</div>
 
-				<div class="form-group">
+				<!-- <div class="form-group">
 					<label for="d1">Pertanyaan Anda</label>
-					<!-- <textarea name="message" class="form-control" placeholder="Isi dengan pertanyaan mengenai keluhan seputar masalah kesehatan" v-model="consults.message"></textarea> -->
 					<tinymce id="d1" v-model="consults.message"></tinymce>
 					<div v-if="validation.message" class="mt-2 alert alert-danger">
 						{{ validation.message[0] }}
 					</div>
-				</div>
+				</div> -->
 
 				<input type="hidden" name="status" value="INACTIVE" v-model="consults.status">
 
@@ -144,7 +143,7 @@
 					fullname: this.consults.fullname,
 					username: this.consults.username,
 					phone: this.consults.phone,
-					message: this.consults.message,
+					// message: this.consults.message,
 					city: this.consults.city,
 					age: this.consults.age,
 					gender: this.consults.gender,
@@ -161,7 +160,7 @@
 						this.success = res.data.message
 						this.consults.fullname = ''
 						this.consults.phone = ''
-						this.consults.message = ''
+						// this.consults.message = ''
 						this.consults.age = ''
 						this.consults.gender = ''
 
