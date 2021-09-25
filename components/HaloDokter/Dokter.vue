@@ -105,18 +105,14 @@
 				consults: {},
 				validation: [],
 				ip: '',
-				users: {},
-				dataConsults:[],
-				check: {},
-				status: ''
+				users: {}
 			}
 		},
 
 		mounted(){
 			this.getIp(),
 			this.getCity(this.ip),
-			this.consults.status = "INACTIVE",
-			this.checkConsultation()
+			this.consults.status = "INACTIVE"
 		},
 
 		methods: {
@@ -143,6 +139,7 @@
 				e.preventDefault()
 				this.loading = true
 				this.errors = null
+
 				let data = {
 					fullname: this.consults.fullname,
 					username: this.consults.username,
@@ -187,20 +184,8 @@
 
 			toasts(message){
 				this.$toast(message)
-			},
-
-			checkConsultation(){
-				this.users = localStorage.getItem('consults') ? JSON.parse(localStorage.getItem('consults')) : ''
-				this.$axios.get(`https://app.evoush.com/api/evoush/data/consult/${this.users.username}`)
-				.then(res => {
-					this.dataConsults = res.data.data
-					this.check = this.dataConsults.map(d => {
-						return d.username == this.users.username ? d : ''
-					})
-					this.status = this.check[0].status
-				})
-
 			}
+
 		}
 
 	}

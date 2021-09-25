@@ -19,9 +19,9 @@
 
 				<div class="row justify-content-center">
 					<div class="col-lg-12 col-xs-12 col-sm-12">
-						<!-- <pre>
+						<pre>
 							{{ status }}
-						</pre> -->
+						</pre>
 						<div v-if="status === 'INACTIVE'" class="alert alert-warning">
 							Hi {{ users.fullname }}, proses konsultasi anda sedang kami proses. Jika pesan ini masih ada harap refresh halaman, dengan menekan tombol refresh di bawah ini. <br>
 							<button class="btn btn-primary mt-3" @click="Reload">Refresh</button>
@@ -51,7 +51,8 @@
 				users: {},
 				consults: [],
 				check: {},
-				status: ''
+				status: '',
+				path: $nuxt.$route.name
 			}
 		},
 		components: {
@@ -59,32 +60,44 @@
 		},
 
 		mounted(){
-			// this.getChat(),
+			this.getChat(this.status),
 			this.getDataConsult()
 		},
 
 		methods:{
 			getDataConsult(){
+
 				this.users = localStorage.getItem('consults') ? JSON.parse(localStorage.getItem('consults')) : ''
+
 				this.$axios.get(`https://app.evoush.com/api/evoush/data/consult/${this.users.username}`)
 				.then(res => {
 					this.consults = res.data.data
-					this.check = this.consults.map(d => {
-						return d.username == this.users.username ? d : ''
-					})
-					// console.log(this.check[0])
-					this.status = this.check[0].status
-
-					const path = window.location.pathname.split('/')
-					console.log(this.status)
-
-					if(path[1] !== "halo-dokter" ||  this.status === "INACTIVE"){
-						$crisp.push(['do', 'chat:hide'])
-					}else{
-						$crisp.push(['do', 'chat:show'])
+					console.log(this.consults.length)
+					if(this.consults.length > 0){
+						this.check = this.consults.map(d => {
+							return d.username == this.users.username ? d : ''
+						})
+						// console.log(this.check[0])
+						this.status = this.check[0].status
+						console.log(this.status)
+						this.getChat(this.status)
 					}
 				})
+				.catch(err => {
+					console.log(err)
+				})
 
+
+			},
+
+			getChat(status){
+				if(this.path !== "halo-dokter" ||  this.status === ""){
+					$crisp.push(['do', 'chat:hide'])
+				}else{
+					if(this.status === "ACTIVE"){
+						$crisp.push(['do', 'chat:show'])
+					}
+				}
 			},
 
 
