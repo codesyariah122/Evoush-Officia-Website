@@ -5,7 +5,7 @@
 				<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/animated/mobile.gif" class="img-fluid anim">
 			</div>
 			<div class="col-lg-12 col-xs-12 col-sm-12 mt-5 mb-2">
-				<a href="https://evoush-official.crisp.help/id/article/berkonsultasi-dengan-dokter-evoush-1qqun5n/?bust=1632369295381" class="btn btn-info helpdesk" target="_blank"><i class='bx bx-message-dots'></i> Dokter Evoush</a>
+				<nuxt-link to="/halo-dokter" class="btn btn-info helpdesk" target="_blank"><i class='bx bx-message-dots'></i> Dokter Evoush</nuxt-link>
 			</div>
 		</div>
 	</div>
@@ -25,6 +25,7 @@
 
 .helpdesk:hover{
 	background-color: salmon;
+	transform: translateX(5%);
 }
 
 
