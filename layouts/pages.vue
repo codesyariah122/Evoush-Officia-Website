@@ -19,9 +19,9 @@
 
 				<div class="row justify-content-center">
 					<div class="col-lg-12 col-xs-12 col-sm-12">
-						<pre>
+						<!-- <pre>
 							{{ status }}
-						</pre>
+						</pre> -->
 						<div v-if="status === 'INACTIVE'" class="alert alert-warning">
 							Hi {{ users.fullname }}, proses konsultasi anda sedang kami proses. Jika pesan ini masih ada harap refresh halaman, dengan menekan tombol refresh di bawah ini. <br>
 							<button class="btn btn-primary mt-3" @click="Reload">Refresh</button>
