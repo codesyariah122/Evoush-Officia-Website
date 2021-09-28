@@ -1,6 +1,7 @@
 <template>
 	<div>
-		<svg class="NuxtLogo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve" >
+		<img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/assets/img/LOGO231.png" class="img-fluid logo-evoush">
+		<!-- <svg class="NuxtLogo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve" >
 			<image  id="image0" width="60" height="60" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 			AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACr1BMVEX/O0D/O0H9P0X/PEH7
 			RUz/Oj/7Q0r5SVH9P0T/PUL/Qkf/Njv/NDr/OD74W17pbW//Nzz9PkP6f4Tto6LItrP+PULuiI70
@@ -35,7 +36,7 @@
 			/0nLImjCxEmTp/z9N/U/aEb1ShWmljsAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjEtMDUtMDlUMDM6
 			NDc6MzgrMDM6MDC4X2MJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIxLTA1LTA5VDAzOjQ3OjM4KzAz
 			OjAwyQLbtQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" style="fill:#fff"/>
-		</svg>
+		</svg> -->
 	</div>
 </template>
 
@@ -47,5 +48,18 @@
 
 
 <style scoped>
+.logo-evoush{
+	filter: drop-shadow(25px 5px 25px black);
+	width: 50px;
+	margin-left: 2rem;
+	margin-top: 5rem;
+}
 
+@media (min-width: 992px) {
+	.logo-evoush{
+		filter: drop-shadow(25px 15px 8px black);
+		width: 70px;
+		margin-left: 1.1rem;
+	}
+}
 </style>

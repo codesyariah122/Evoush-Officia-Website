@@ -23,7 +23,7 @@
 						<h3>{{article.title}}</h3>
 						<p>by {{ article.author.name }}</p>
 						<small>{{formatDate(article.createdAt)}}</small>
-						<p>
+						<p class="text-truncate">
 							<i class="bx bxs-quote-alt-left quote-icon-left"></i>
 							{{article.description}}.
 							<i class="bx bxs-quote-alt-right quote-icon-right"></i>

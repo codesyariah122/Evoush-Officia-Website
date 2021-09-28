@@ -62,10 +62,10 @@
 		},
 
 		async asyncData({$axios}){
-			const firsts = await $axios.get('https://evoush-landing.herokuapp.com/api/data/gallery/testimony/first')
-			const seconds = await $axios.get('https://evoush-landing.herokuapp.com/api/data/gallery/testimony/second')
-			const thirds = await $axios.get('https://evoush-landing.herokuapp.com/api/data/gallery/testimony/third')
-			const fourths = await $axios.get('https://evoush-landing.herokuapp.com/api/data/gallery/testimony/fourth')
+			const firsts = await $axios.get('https://evoush-landing-api.herokuapp.com/api/data/gallery/testimony/first')
+			const seconds = await $axios.get('https://evoush-landing-api.herokuapp.com/api/data/gallery/testimony/second')
+			const thirds = await $axios.get('https://evoush-landing-api.herokuapp.com/api/data/gallery/testimony/third')
+			const fourths = await $axios.get('https://evoush-landing-api.herokuapp.com/api/data/gallery/testimony/fourth')
 
 			return {
 				firsts,

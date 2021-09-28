@@ -18,6 +18,9 @@
 			</div> -->
 
 			<div class="row justify-content-center mt-5">
+
+				<!-- <ToDo/> -->
+
 				<!-- <div class="col-lg-12 col-xs-12 col-sm-12">
 					<center>
 						<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="standard" data-action="like" data-size="small"></div>
@@ -34,7 +37,7 @@
 					<SocialSharing :socials="socials"/>
 				</div>
 
-				<div class="col-lg-12 col-xs-12 col-sm-12">
+				<div class="col-lg-12 col-xs-12 col-sm-12 mb-5">
 					<center>
 						<AddToHome/>
 					</center>
@@ -46,7 +49,7 @@
 				</div> -->
 
 
-				<div class="col-lg-12 col-xs-12 col-sm-12">
+				<div class="col-lg-12 col-xs-12 col-sm-12 mt-5">
 					<!-- <BirthdayMember/> -->
 					<center>
 						<ScreenAnim/>
@@ -93,6 +96,7 @@
 		<!-- <pre>
 			{{ channels }}
 		</pre> -->
+
 		<div v-if="channels.data.error"  class="col-lg-12 col-xs-12 col-sm-12">
 			<center>
 				<div class="alert alert-success">
@@ -142,6 +146,7 @@
 	import CheckResi from '@/components/Landing/CheckResi'
 	import SocialSharing from '@/components/global/socialsharing'
 	import BirthdayMember from '@/components/Landing/BirthdayMember'
+	import ToDo from '@/components/Landing/Todo'
 	// import RegisterEvent from '@/components/Landing/RegisterEventButton'
 	export default {
 		layout: 'default',
@@ -163,7 +168,8 @@
 			YoutubeChannel,
 			CheckResi,
 			SocialSharing,
-			BirthdayMember
+			BirthdayMember,
+			ToDo
 		},
 		async asyncData({$commerce, $content, params, $axios, $config}){
 			const {data: products} = await $commerce.products.list()
@@ -172,9 +178,9 @@
 
 			const channel_id = 'UCIzNgeNDD58z8XNppkopwzw'
 			const playlist_id = 'PLblvVtAgjh4DwLORfIHawwIVvaosP-YCA'
-			const channels = await $axios.$get(`https://evoush-landing.herokuapp.com/api/data/youtube/channel/${channel_id}`)
-			const latestVideos = await $axios.$get(`https://evoush-landing.herokuapp.com/api/data/youtube/latest/${channel_id}/5/date`)
-			const playlistVideos = await $axios.$get(`https://evoush-landing.herokuapp.com/api/data/youtube/playlist/${channel_id}/5/${playlist_id}`)
+			const channels = await $axios.$get(`https://evoush-landing-api.herokuapp.com/api/data/youtube/channel/${channel_id}`)
+			const latestVideos = await $axios.$get(`https://evoush-landing-api.herokuapp.com/api/data/youtube/latest/${channel_id}/5/date`)
+			const playlistVideos = await $axios.$get(`https://evoush-landing-api.herokuapp.com/api/data/youtube/playlist/${channel_id}/5/${playlist_id}`)
 			const results = await $axios.$get('/product/all')
 			const members = await $axios.$get('/evoush/member-list')
 			const articles = await $content('Blog', params.slug)
@@ -285,7 +291,7 @@
 		// }
 
 		mounted(){
-			// OneSignal.log.setLevel('trace')
+			OneSignal.log.setLevel('trace')
 		},
 
 

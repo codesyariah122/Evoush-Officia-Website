@@ -1,7 +1,7 @@
 <template>
 	<div class="container mt-5 mb-5">
 		<div class="row justify-content-center">
-			<div class="col-lg-8 col-xs-12 col-sm-12">
+			<div class="card card-asmaulhusna col-lg-8 col-xs-12 col-sm-12">
 				<div class="section-title">
 					<h2>Check Ongkir</h2>
 				</div>
@@ -55,9 +55,9 @@
 					</div>
 
 					<div class="form-group">
-						<button type="submit" class="btn btn-lg btn-primary">
+						<button type="submit" class="btn btn-block btn-primary">
 							<div v-if="loading">
-								<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" class="img-fluid" width="80"><br>
+								<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" class="img-fluid" width="30"><br>
 								<small class="text-white">Loading ...</small>
 							</div>
 							<div v-else>
@@ -204,7 +204,7 @@
 					courier: this.state.courier
 				}
 
-				console.log(sending)
+				// console.log(sending)
 				this.$axios.post('https://app.evoush.com/api/evoush/checkOngkir', sending)
 				.then(response => {
 					this.loading = false

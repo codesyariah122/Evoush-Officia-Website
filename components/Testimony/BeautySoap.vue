@@ -11,7 +11,7 @@
 					<div v-for="second in reverseSeconds" class="col-lg-4 col-md-6 portfolio-item">
 						<div class="portfolio-wrap">
 							<img
-							:src="second.img"
+							:src="`https://evoush-landing-api.herokuapp.com${second.img}`"
 							class="img-fluid"
 							alt=""
 							/>
@@ -19,7 +19,7 @@
 								<p>Beauty Soap</p>
 								<div class="portfolio-links mt-3">
 									<a
-									:href="second.img"
+									:href="`https://evoush-landing-api.herokuapp.com${second.img}`"
 									data-gall="productGallery"
 									class="venobox btn btn-sm btn-primary text-white"
 									title="Gilcam Propolis Testimoni"

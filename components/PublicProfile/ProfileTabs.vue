@@ -47,10 +47,14 @@
 							</div>
 
 
-							<div v-else>
+							<div v-else class="col-md-4">
 								<blockquote class="blockquote-footer mt-3">
-									<strong>{{(member.username === "fentirifqi") ? "coachrifqi" : member.username}}, <small class="text-danger">belum menambahkan quotes.</small> </strong>
+									<strong>{{(member.username === "fentirifqi") ? "coachrifqi" : member.username}}, <small class="text-danger">Belum menambahkan quotes.</small> </strong>
 								</blockquote>
+								<small class="blockquote-footer text-secondary">
+									Untuk mengedit profile anda harus login terlebih dahulu, klik / tap tombol <code class="text-primary">Login</code> diatas. Mengenai informasi login anda bisa request informasi login di link di bawah ini : <br>
+									<a :href="`https://wa.me/6288222668778?text=Request%20informasi%20login,%20Username:%20${member.username}`" class="text-link"target="_blank">Request Web Replika</a>
+								</small>
 							</div>
 						</div>
 					</center>
@@ -78,8 +82,12 @@
 						</div>
 						<div v-else>
 							<blockquote class="blockquote-footer text-center">
-								<strong>{{member.username}}, <small class="text-danger">belum menambahkan success story.</small></strong>
+								<strong>{{member.username}}, <small class="text-danger">Belum menambahkan success story.</small></strong>
 							</blockquote>
+							<small class="blockquote-footer text-secondary">
+								Untuk mengedit profile anda harus login terlebih dahulu, klik / tap tombol <code class="text-primary">Login</code> diatas. Mengenai informasi login anda bisa request informasi login di link di bawah ini : <br>
+								<a :href="`https://wa.me/6288222668778?text=Request%20informasi%20login,%20Username:%20${member.username}`" class="text-link" target="_blank">Request Web Replika</a>
+							</small>
 						</div>
 					</div>
 				</div>
@@ -121,7 +129,7 @@
 											</div>
 										</center>
 									</div>
-									<div v-else>
+									<div v-else class="col-md-4">
 										<center>
 											<!-- <div class="col-lg-12 col-xs-12 col-sm-12">
 												<blockquote class="blockquote-footer mb-2">

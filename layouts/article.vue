@@ -33,6 +33,9 @@
 	export default {
 		components: {
 			ColorModePicker
+		},
+		mounted(){
+			$crisp.push(['do', 'chat:hide'])
 		}
 	}
 </script>

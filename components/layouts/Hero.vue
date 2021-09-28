@@ -3,7 +3,7 @@
 		<!-- ======= Hero Section ======= -->
 		<section id="hero" class="d-flex flex-column justify-content-center">
 			<div class="container content-hero" data-aos="zoom-in" data-aos-delay="100">
-				<div class="row justify-content-center mt-5">
+				<div class="row justify-content-center">
 					<div class="col-lg-8 col-xs-12 col-sm-12">
 						<Logo />
 						<!-- <WhiteLogo/> -->
@@ -32,14 +32,18 @@
 						<div class="row justify-content-center interactive-product">
 							<div class="col-lg-4">
 								<!-- {{ imgBox }} -->
-								<img :src="imgBox" :class="imgBox === 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/sachet.png' ? 'img-fluid rotate' : 'img-fluid'">
+								<img :src="`https://evoush-landing-api.herokuapp.com/${imgBox}`" :class="imgBox === '/images/for-hero/boxes/sachet.png' ? 'img-fluid rotate' : 'img-fluid'">
 							</div>
 						</div>
 
-						<div class="col-md-2 box-sachet">
+						<!-- <pre>
+							{{ imgBox }}
+						</pre> -->
+
+						<div class="col-md-2 box-sachet mb-5">
 							<ul class="sachet" style="list-style: none;">
 								<li v-for="(image, index) in images">
-									<img id="sachet" :src="image.src" :data-id="image.id" :key="image.id" class="img-fluid" @click="ClickMe(boxes[index].src, boxes[index].name, boxes[index].description)">
+									<img id="sachet" :src="`https://evoush-landing-api.herokuapp.com/${image.src}`" :data-id="image.id" :key="image.id" class="img-fluid" @click="ClickMe(boxes[index].src, boxes[index].name, boxes[index].description)">
 								</li>
 							</ul>
 						</div>
@@ -66,57 +70,16 @@
 				ShowBox: null,
 				ShoBoxAgain: null,
 				brand: 'evoush official',
-				images: [
-					{
-						id:1,
-						src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/material/evost_material.png'
-					},
-					{
-						id:2,
-						src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/material/kileon_material.png'
-					},
-					{
-						id:3,
-						src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/material/gilcam_material.png'
-					},
-					{
-						id:4,
-						src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/material/eikana_material.png'
-					}
-				],
-				boxes: [
-					{
-						id:1,
-						name: 'Evost 5000 Collagen',
-						description: 'Mengandung 500mg Collagen per sajian, menambah produksi kolagen di dalam tubuh, menjadikan booster bagi kesehatan kulit kita.',
-						src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/sachet.png'
-					},
-					{
-						id:2,
-						name: 'Kileon',
-						description: 'Kandungan Collagen pada KILEON bermanfaat untuk membantu memelihara kesehatan kulit, meningkatkan masa otot, memperlambat penuaan dini mengurangi keriput serta meningkatkan elastisitas kulit, mencegah kerusakan tulang rawan sendi, menguatkan tulang dan gigi, serta mengatasi kerontokan rambut.',
-						src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/kileon_product.png'
-					},
-					{
-						id:3,
-						name: 'Gilcam Propolis',
-						description: 'Gilcam Propolis kami di produksi dengan kualitas yang terjaga dan tentunya kaya manfaat bagi kesehatan anda.',
-						src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/gilcam2.png'
-					},
-					{
-						id:4,
-						name: 'Eikana',
-						description: 'Fish Oil pada EIKANA bermanfaat untuk membantu meperlancar peredaran darah dan mengurangi tekanan darah tinggi, menangkal radikal bebas, menjaga kesehatan kulit, mencegah kerusakan sel hati, meningkatkan fungsi kognitif, serta membantu mengontrol berat badan.',
-						src: 'https://raw.githubusercontent.com/evoush-products/evoush-products.github.io/main/assets/img/products/eikana_box.png'
-					}
-				],
+				images: [],
+				boxes: [],
 				imgBox: ''
 			}
 		},
 		mounted(){
+			this.setUpBoxes(),
+			this.setUpMaterials(),
 			this.typedHero(),
-			this.getHeroCarousel(),
-			this.ClickMe(this.boxes[0].src, this.boxes[0].name, '')
+			this.getHeroCarousel()
 		},
 
 		methods:{
@@ -154,6 +117,25 @@
 				// 	imageAlt: 'Custom image',
 				// })
 				// this.$toast(nameBox)
+			},
+
+			setUpMaterials(){
+				this.$axios.get('https://evoush-landing-api.herokuapp.com/api/data/hero/images/materials')
+				.then(res => {
+					this.images = res.data.data
+					// console.log(this.images)
+				})
+				.catch(err => {
+					console.lot(err.response)
+				})
+			},
+
+			setUpBoxes(){
+				this.$axios.get('https://evoush-landing-api.herokuapp.com/api/data/hero/images/boxes')
+				.then(res => {
+					this.boxes = res.data.data
+					this.ClickMe(this.boxes[0].src, this.boxes[0].name, '')
+				})
 			}
 		}
 	}
@@ -168,7 +150,7 @@
 	.interactive-product img{
 		filter: drop-shadow(25px 15px 21px black);
 		max-width: 350px;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 		transform: translateY(5%);
 	}
 
@@ -184,7 +166,6 @@
 		list-style: none!important;
 		display: inline-block;
 		cursor: pointer;
-		margin-top: 2.5rem;
 	}
 	.sachet img{
 		filter: drop-shadow(25px 15px 21px black);
@@ -201,7 +182,8 @@
 	@media (min-width: 992px) {
 		.interactive-product img{
 			max-width: 800px;
-			margin-top: -7rem;
+			margin-top: -15rem;
+			margin-left: -12rem;
 		}
 		.interactive-product .rotate{
 			transform: rotate(17deg);
@@ -215,10 +197,11 @@
 			transform: translateX(-10%);
 		}
 		.sachet img{
-			filter: drop-shadow(15px 13px 18px black);
+			filter: drop-shadow(25px 15px 15px black);
 			margin: 0 -20px;
 			max-width: 250px;
 			cursor: pointer;
+			margin-left: -3.5rem;
 		}
 	}
 </style>

@@ -7,7 +7,7 @@ export default {
   ssr: false,
   loading: {
     color: '#ff3b40',
-    height: '11px'
+    height: '15px'
   },
   // loading: '~/components/LoadingBar.vue',
   body: true,
@@ -94,12 +94,12 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg'
+        content: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/assets/img/LOGO231.png'
       },
       {
         hid: 'og:image:secure_url',
         property: 'og:image:secure_url',
-        content: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg'
+        content: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/assets/img/LOGO231.png'
       },
       {
         hid: 'og:image:alt',

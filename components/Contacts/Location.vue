@@ -7,7 +7,13 @@
 		 		:center="center"
 		 		>
 		 		<l-marker :lat-lng="regionCenter">
-		 			<l-popup>PT. Pineleng Indah Cemerlang (Evoush Office)</l-popup>
+		 			<l-popup class="mt-5">
+		 				<center>
+			 				<span class="bd-highlight font-weight-bold">PT. Pineleng Indah Cemerlang</span><br>
+			 					<span class="badget badge-primary">Evoush Office</span><br>
+			 				<img src="https://www.freeiconspng.com/thumbs/building-icon/building-icon-3.png" width="35">
+		 				</center>
+		 			</l-popup>
 		 		</l-marker>
 		 		<l-polyline
 		 		:lat-lngs="polyline.latlngs"
@@ -26,7 +32,7 @@
 				url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
 				attribution:
 				'© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-				zoom: 15,
+				zoom: 14,
 				center: {
 					lat: -7.46097,
 					lng: 112.74037,

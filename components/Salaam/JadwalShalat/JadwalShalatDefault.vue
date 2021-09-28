@@ -142,6 +142,12 @@
 			</div>
 </template>
 
+<style>
+/*.list-group{
+	background-color: var(--bg-secondary);
+	box-shadow: 15px 10px grey;
+}*/
+</style>
 
 <script>
 	import Location from './Location'

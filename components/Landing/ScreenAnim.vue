@@ -9,7 +9,7 @@
 					Hai, evousher dimana pun anda berada... <br>
 					saat ini anda bisa berkonsultasi via chat di official website evoush, untuk memulai chat silahkan klik atau tap tombol Dokter Evoush dibawah ini, selanjutnya anda di wajibkan mengisi kolom input yang tersedia.
 				</blockquote>
-				<nuxt-link to="/halo-dokter" class="btn btn-info helpdesk" target="_blank"><i class='bx bx-message-dots'></i> Dokter Evoush</nuxt-link>
+				<nuxt-link to="/halo-dokter" class="btn btn-info helpdesk" target="_blank"><i class='bx bx-message-dots'></i> Halo Dokter</nuxt-link>
 			</div>
 		</div>
 	</div>

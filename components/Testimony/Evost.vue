@@ -11,7 +11,7 @@
 					<div v-for="third in thirds" class="col-lg-4 col-md-6 portfolio-item">
 						<div class="portfolio-wrap">
 							<img
-							:src="third.img"
+							:src="`https://evoush-landing-api.herokuapp.com${third.img}`"
 							class="img-fluid"
 							alt=""
 							/>
@@ -19,7 +19,7 @@
 								<p>Evost SOP 5000</p>
 								<div class="portfolio-links mt-3">
 									<a
-									:href="third.img"
+									:href="`https://evoush-landing-api.herokuapp.com${third.img}`"
 									data-gall="productGallery"
 									class="venobox btn btn-sm btn-primary text-white"
 									title="Gilcam Propolis Testimoni"

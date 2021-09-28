@@ -23,8 +23,11 @@
 							<input type="text" name="awb" v-model="resi.awb" class="form-control" placeholder="No awb : 031xxxxxxx">
 						</div>
 
-						<div class="form-group">
-							<button type="submit" class="btn btn-primary">Check Resi</button>
+						<div class="form-group mt-3">
+							<small class="text-danger">
+								Setelah mengisi kolom input, lalu tap atau klik tombol <code>Check Resi</code> dibawah ini.
+							</small>
+							<button type="submit" class="btn btn-block btn-primary">Check Resi</button>
 						</div>
 					</form>
 				</div>

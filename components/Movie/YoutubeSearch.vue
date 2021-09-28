@@ -36,16 +36,19 @@
 		methods:{
 			SearchYoutube(){
 				this.loading = true
-				const q = keyword.value.replace(" ", "")
+				const q = this.keyword.replace(" ", "")
 				this.$axios
 				.get(`https://evoush-landing.herokuapp.com/api/data/youtube/search/${q}`)
 				.then(res=>{
-					// console.log(res.data.success)
+					console.log(res.data)
 					// console.log(res.data.data)
 					if(res.data.message === "Success fetch youtube video"){
 						this.loading = false
 						this.videos = res.data.data.items
 					}
+				})
+				.catch(err => {
+					console.log(err.message)
 				})
 			}
 		}

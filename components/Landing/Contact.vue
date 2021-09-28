@@ -220,7 +220,13 @@
 
                   <div class="text-center">
                     <button type="submit" class="btn btn-primary mb-5">
-                      <img v-if="loading" src="http://www.esdairga.com/images/loading.gif" class="img-fluid" width="50"> <span v-else>Send Message</span>
+                      <div v-if="loading">
+                        <small class="text-white">Loading ... </small> <br>
+                        <img src="http://www.esdairga.com/images/loading.gif" class="img-fluid" width="30">
+                      </div>
+                      <div v-else>
+                        <span>Send Message</span>
+                      </div>
                     </button>
                   </div>
                 </form>

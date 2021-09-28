@@ -32,6 +32,9 @@
 			return {
 				message: 'Page not found'
 			}
+		},
+		mounted(){
+			$crisp.push(['do', 'chat:hide'])
 		}
 	}
 </script>

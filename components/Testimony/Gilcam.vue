@@ -12,7 +12,7 @@
 					<div v-for="first in reverse" class="col-lg-4 col-md-6 portfolio-item">
 						<div class="portfolio-wrap">
 							<img
-							:src="first.img"
+							:src="`https://evoush-landing-api.herokuapp.com${first.img}`"
 							class="img-fluid"
 							alt=""
 							/>
@@ -21,7 +21,7 @@
 								<p>Gilcam Propolis</p>
 								<div class="portfolio-links mt-3">
 									<a
-									:href="first.img"
+									:href="`https://evoush-landing-api.herokuapp.com${first.img}`"
 									data-gall="productGallery"
 									class="venobox btn btn-sm btn-primary text-white"
 									title="Gilcam Propolis Testimoni"

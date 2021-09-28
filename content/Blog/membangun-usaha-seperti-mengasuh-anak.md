@@ -33,7 +33,9 @@ Tapi semua perjuangan tersebut belum berakhir, karena usaha sebaik apapun akan m
 
 Selalu kedepankan pengetahuan, kegigihan dan kayakinan yang tidak mudah luntur dalam menghadapi dan melalui terpaan apapun.  
 
+<div class="embed-responsive embed-responsive-16by9">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WpYLfr7FDXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 
 

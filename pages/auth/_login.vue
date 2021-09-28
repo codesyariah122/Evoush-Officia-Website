@@ -17,8 +17,10 @@
 						{{username}}
 						</pre> -->
 
+						<!-- <h1>Pakai yang ini bor</h1> -->
+
 						<form class="box" @submit.prevent="login">
-						
+
 						<Logo/>
 						<h5 class="text-white mt-3">Login Web Replika Evoush</h5>
 						<p class="text-muted mt-3 mb-2"> Please enter your username and password!</p>
@@ -26,11 +28,11 @@
 							Username atau Password Anda salah.
 						</div>
 
-							<input type="text" name="username" v-model="user.username" placeholder="Username"> 
+							<input type="text" name="username" v-model="user.username" placeholder="Username">
 							 <small v-if="validation.username" class="mt-2 text-danger">
                                 {{ validation.username[0] }}
                             </small>
-							<input type="password" name="password" v-model="user.password" placeholder="Password"> 
+							<input type="password" name="password" v-model="user.password" placeholder="Password">
 							<small v-if="validation.password" class="mt-2 text-danger">
                                 {{ validation.password[0] }}
                             </small>
@@ -135,7 +137,7 @@
 						// 	timer: 1500
 						// })
 						return this.$router.push({
-							name:'profile-username', 
+							name:'profile-username',
 							params: {username: res.data.data.username}
 						})
 					}
@@ -344,7 +346,7 @@ a.socialIcon:hover,
 }
 
 
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
 	.box {
 		width: 600px;
 		padding: 100px;

@@ -11,7 +11,7 @@
 					<div v-for="fourth in fourths" class="col-lg-4 col-md-6 portfolio-item">
 						<div class="portfolio-wrap">
 							<img
-							:src="fourth.img"
+							:src="`https://evoush-landing-api.herokuapp.com${fourth.img}`"
 							class="img-fluid"
 							alt=""
 							/>
@@ -19,7 +19,7 @@
 								<p>Evoush Daycream</p>
 								<div class="portfolio-links mt-3">
 									<a
-									:href="fourth.img"
+									:href="`https://evoush-landing-api.herokuapp.com${fourth.img}`"
 									data-gall="productGallery"
 									class="venobox btn btn-sm btn-primary text-white"
 									title="Gilcam Propolis Testimoni"

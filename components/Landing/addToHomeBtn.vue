@@ -22,7 +22,8 @@ export default {
     message: null
   }),
   mounted() {
-    this.captureEvent()
+    this.captureEvent(),
+    console.log(this.deferredPrompt)
   },
   methods: {
     captureEvent() {
@@ -41,7 +42,7 @@ export default {
       this.deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
           // Call another function?
-          // this.captureEvent()
+          this.captureEvent()
           console.log("User accepted installation")
         }else{
           console.log("User canceled installation")

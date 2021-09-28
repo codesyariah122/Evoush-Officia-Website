@@ -322,3 +322,15 @@ body h2{
 .card-stockist{
   background: linear-gradient(to left, coral, lightcoral);
 }
+
+.card-movie{
+  background: linear-gradient(to left, coral, lightcoral);
+}
+.card-jadwal-shalat {
+  background: linear-gradient(to left, coral, lightcoral);
+}
+
+/*.list-group{
+  background-color: var(--bg-secondary);
+  box-shadow: 15px 15px var(--color-dua);
+}*/

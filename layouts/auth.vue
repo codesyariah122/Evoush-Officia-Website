@@ -9,7 +9,9 @@
 
 <script>
 	export default {
-
+		mounted(){
+			$crisp.push(['do', 'chat:hide'])
+		}
 	}
 </script>
 

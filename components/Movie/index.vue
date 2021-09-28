@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<input type="search" v-model="keyword.title" name="keyword" class="form-control" placeholder="ketikan judul film yang ingin dicari" @keyup="getMovie">
+		<input type="search" v-model="keyword.title" name="keyword" id="keyword" class="form-control" placeholder="ketikan judul film yang ingin dicari" @keyup="getMovie">
 
 		<img v-if="loading" class="loading" src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif"/>
 
@@ -17,7 +17,7 @@
 			</div>
 
 			<div v-for="movie in movies" class="col-md-4 col-xs-12 col-sm-12 mt-5">
-				<div class="card" style="width: 18rem;">
+				<div class="card card-movie" style="width: 18rem;">
 					<img class="card-img-top" :src="movie.Poster" alt="Card image cap">
 					<div class="card-body">
 						<h5 class="card-title">{{movie.Title}}</h5>

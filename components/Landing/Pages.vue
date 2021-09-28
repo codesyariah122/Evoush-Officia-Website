@@ -376,9 +376,9 @@ data-aos-delay="300"
 </div>
 <h4><a href="">Anda Bertanya Dokter Menjawab</a></h4>
 <p>
-	Hallo evousher sekarang ini anda bisa berkonsultasi mengenai masalah-masalah kesehatan melalui <code>Evoush Healthy</code>. Setiap pertanyaan yang anda sampaikan atau ajukan akan di jawab oleh pakar atau dokter yang telah resmi menjadi bagian konsultan kesehatan evoush .
+	Hallo evousher sekarang ini anda bisa berkonsultasi mengenai masalah-masalah kesehatan melalui <code>Hallo Dokter</code>. Setiap pertanyaan yang anda sampaikan atau ajukan akan di jawab oleh pakar atau dokter yang telah resmi menjadi bagian konsultan kesehatan evoush .
 </p>
-<nuxt-link to="/halo-dokter" class="btn btn-primary mt-3">Evoush Healthy</nuxt-link>
+<nuxt-link to="/halo-dokter" class="btn btn-primary mt-3">Hallo Dokter</nuxt-link>
 </div>
 </div>
 
