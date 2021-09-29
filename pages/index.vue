@@ -282,17 +282,17 @@
 		// 	  		this.deferredPrompt = null;
 		//   	});
 		// },
-		// methods: {
-		// 	async dismiss() {
-		// 		this.deferredPrompt = null;
-		// 	},
-		// 	async install() {
-		// 		this.deferredPrompt.prompt();
-		// 	}
-		// }
+		methods: {
+			async dismiss() {
+				this.deferredPrompt = null;
+			},
+			async install() {
+				this.deferredPrompt.prompt();
+			}
+		},
 
 		mounted(){
-			// OneSignal.log.setLevel('trace')
+			OneSignal.log.setLevel('trace')
 		},
 
 

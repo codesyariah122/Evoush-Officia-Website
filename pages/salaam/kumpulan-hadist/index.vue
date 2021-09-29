@@ -39,7 +39,7 @@
 			<div v-if="loading">
 				<center>
 					<small class="text-primary mt-5">Loading ... </small><br>
-					<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" class="img-fluid">
+					<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" class="img-fluid" width="50">
 				</center>
 
 			</div>

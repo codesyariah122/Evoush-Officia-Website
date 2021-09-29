@@ -38,6 +38,7 @@ export default async (context) => {
 
   workbox.addEventListener('installed', (event) => {
     if (!event.isUpdate) {
+      this.$toast('Evoush::Official is latest version');
       console.debug('The PWA is on the latest version.');
       return;
     }

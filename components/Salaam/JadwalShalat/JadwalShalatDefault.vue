@@ -38,7 +38,7 @@
 					 </pre> -->
 					 <br>
 
-					<ul class="list-group mt-5 mb-5">
+					<ul class="list-group list-group-shalat mt-5 mb-5">
 						<div class="container">
 							<li :class="`list-group-item ${timeNow == results.subuh ? 'active' : ''}`" aria-current="true">
 								<div class="row justify-content-center">

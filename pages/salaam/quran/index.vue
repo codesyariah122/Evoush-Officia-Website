@@ -12,6 +12,10 @@
 					<h5>Filter Quran berdasarkan nama surah</h5>
 				</div>
 
+				<!-- <pre>
+					{{ surahLists.data }}
+				</pre> -->
+
 				<div class="col-lg-12 col-xs-12 col-sm-12">
 					<div class="form-group">
 						<select class="form-control" id="exampleFormControlSelect1" @change="changeSurah">
@@ -34,10 +38,11 @@
 
 			<div v-else class="row justify-content-center">
 
-				<div v-if="surahIndex < surahLists.data.length" v-for="surahIndex in surahToShow" class="col-lg-4 col-xs-4 col-sm-4 mb-3">
-					<!-- {{ surahLists[surahIndex].name.transliteration.id }}
-					<br> -->
-					<!-- {{ surahIndex }} -->
+				<div v-if="surahIndex < surahLists.data.length" v-for="surahIndex in surahToShow" class="col-lg-4 col-xs-12 col-sm-12 mb-3">
+
+					<!-- <pre>
+						{{ surahDatas[surahIndex-1].name.transliteration.id }}
+					</pre> -->
 
 					<div class="card card-quran">
 						<div class="card-body">
@@ -53,7 +58,6 @@
 								</blockquote>
 							</p>
 							<nuxt-link :to="{name: 'salaam-quran-surah-nomor', params: {nomor: surahDatas[surahIndex-1].number}}" class="card-link btn btn-outline-primary btn-block">Baca Surah</nuxt-link>
-							<!-- <a href="#" class="card-link">Another link</a> -->
 						</div>
 					</div>
 				</div>
@@ -96,12 +100,13 @@
 
 		async asyncData({$axios, $config}){
 			const surahLists = await $axios.$get('https://api.quran.sutanlab.id/surah')
+			// console.log(surahLists.data)
 			return {
 				surahLists
 			}
 		},
 
-		mounted(){
+		created(){
 			localStorage.removeItem('nomor-ayat'),
 			this.$axios.get('https://api.quran.sutanlab.id/surah')
 			.then(res => {

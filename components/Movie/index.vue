@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<input type="search" v-model="keyword.title" name="keyword" id="keyword" class="form-control" placeholder="ketikan judul film yang ingin dicari" @keyup="getMovie">
+		<input type="search" v-model="keyword.title" name="keyword" id="keyword" class="form-control" placeholder="ketikan judul film yang ingin dicari" @keyup="getMovie" autocomplete="off">
 
 		<img v-if="loading" class="loading" src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif"/>
 
@@ -17,13 +17,13 @@
 			</div>
 
 			<div v-for="movie in movies" class="col-md-4 col-xs-12 col-sm-12 mt-5">
-				<div class="card card-movie" style="width: 18rem;">
+				<div class="card card-movie">
 					<img class="card-img-top" :src="movie.Poster" alt="Card image cap">
 					<div class="card-body">
 						<h5 class="card-title">{{movie.Title}}</h5>
 						<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
 					</div>
-					<ul class="list-group list-group-flush">
+					<ul class="list-group list-group-movie">
 						<li class="list-group-item">Type : {{movie.Type}}</li>
 						<li class="list-group-item">Year : {{movie.Year}}</li>
 					</ul>
@@ -46,15 +46,15 @@
 						<div class="modal-body">
 							<div class="card mb-3">
 								<div class="row no-gutters">
-									<div class="col-md-4">
-										<img :src="detail.Poster" :alt="detail.Title" width="100">
+									<div class="col-md-12">
+										<img :src="detail.Poster" :alt="detail.Title">
 									</div>
-									<div class="col-md-8">
-										<div class="card-body">
+									<div class="col-md-12">
+										<div class="card-body card-detail-movie">
 											<h5 class="card-title">{{detail.Title}}</h5>
 											<p class="card-text">{{detail.Plot}}.</p>
 											<p class="card-text"><small class="text-muted">Released : {{detail.Released}}</small></p>
-											<ul class="list-group mt-5">
+											<ul class="list-group list-group-movie mt-5">
 												<li class="list-group-item">
 													<strong>Actors : <i>{{detail.Actors}}</i></strong>
 												</li>
@@ -114,6 +114,23 @@
 	left: 50rem;
 	top: 1px;
 	max-width: 30px;
+}
+
+.modal-body .card img {
+	width: 343px;
+}
+
+.card-movie img{
+	width:290px;
+}
+
+@media (min-width: 992px) {
+	.modal-body.card img{
+		width: 400px;
+	}
+	.card-movie img{
+		width: 400px;
+	}
 }
 </style>
 

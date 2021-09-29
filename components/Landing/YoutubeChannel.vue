@@ -167,7 +167,7 @@
 	.profile-card-3 .profile {
 		border-radius: 50%;
 		position: absolute;
-		bottom: 75.1%;
+		bottom: 72.1%;
 		left: 50%;
 		max-width: 100px;
 		opacity: 1;

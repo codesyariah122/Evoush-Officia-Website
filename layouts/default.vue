@@ -40,7 +40,7 @@
 			this.getChat(this.status),
 			this.getDataConsult(),
 			this.getFacebookSDK(document, 'script', 'facebook-jssdk'),
-			// this.getNewContentUpdate()
+			this.getNewContentUpdate(),
 			this.$OneSignal.push(() => {
 				this.$OneSignal.isPushNotificationsEnabled((isEnabled) => {
 					if (isEnabled) {
@@ -60,24 +60,24 @@
 		},
 
 		methods: {
-			// async getNewContentUpdate(){
-			// 	const workbox = await window.$workbox;
-			// 	if (workbox) {
-			// 		workbox.addEventListener('installed', (event) => {
-			// 			if (event.isUpdate) {
-			// 	            // whatever you want to do to let the user know there's an update available
-			// 	            console.log("Update content ready, push reloaded browser")
-			// 	            this.$swal({
-			// 	            	position: 'top-end',
-			// 	            	icon: 'success',
-			// 	            	title: 'Evoush::Official New Updated Build',
-			// 	            	showConfirmButton: false,
-			// 	            	timer: 1500
-			// 	            })
-			// 	        }
-			// 	    });
-			// 	}
-			// },
+			async getNewContentUpdate(){
+				const workbox = await window.$workbox;
+				if (workbox) {
+					workbox.addEventListener('installed', (event) => {
+						if (event.isUpdate) {
+				            // whatever you want to do to let the user know there's an update available
+				            console.log("Update content ready, push reloaded browser")
+				            this.$swal({
+				            	position: 'top-end',
+				            	icon: 'success',
+				            	title: 'Evoush::Official New Updated Build',
+				            	showConfirmButton: false,
+				            	timer: 1500
+				            })
+				        }
+				    });
+				}
+			},
 
 			getFacebookSDK(d, s, id){
 				var js, fjs = d.getElementsByTagName(s)[0];

@@ -126,7 +126,7 @@
 					// console.log(this.images)
 				})
 				.catch(err => {
-					console.lot(err.response)
+					console.log(err.response)
 				})
 			},
 
