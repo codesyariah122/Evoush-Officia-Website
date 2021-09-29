@@ -23,7 +23,7 @@
 										<img :src="`https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 									</div>
 									<div v-else>
-										<img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg" :alt="member.name" class="rounded-circle mb-3 profile profile-overlay rounded-circle mb-3" width="100">
+										<img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg" :alt="member.name" class="rounded-circle mb-3 profile profile-overlay rounded-circle mb-3" width="80">
 									</div>
 								</div>
 								<div class="col-lg-8 col-xs-6 col-sm-6">
@@ -175,7 +175,6 @@
 
 		mounted(){
 			// console.log(this.credential)
-
 			if(this.credential.token && this.credential.username){
 				return this.$router.push({
 					name: 'profile-username',
@@ -195,7 +194,9 @@
 				console.log(error.response.data)
 			})
 
-			this.getFollowers(this.members[0].username)
+			this.getFollowers(this.members[0].username),
+
+			$crisp.push(['do', 'chat:hide'])
 		},
 		methods: {
 

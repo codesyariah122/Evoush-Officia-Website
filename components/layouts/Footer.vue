@@ -22,6 +22,9 @@
 					<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
 					Hak cipta di lindungi <a href="https://evoush.com/privacy-policy">Oleh PT. Pineleng Indah Cemerlang</a>
 				</div>
+				<div class="mt-5 col-lg-12 col-xs-12 col-sm-12">
+					<img :src="require('~/assets/qrcode/qrcode_evoush.com.png')" class="img-fluid" width="100">
+				</div>
 			</div>
 		</footer><!-- End Footer -->
 	</div>

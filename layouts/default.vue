@@ -40,7 +40,7 @@
 			this.getChat(this.status),
 			this.getDataConsult(),
 			this.getFacebookSDK(document, 'script', 'facebook-jssdk'),
-			this.getNewContentUpdate(),
+			// this.getNewContentUpdate()
 			this.$OneSignal.push(() => {
 				this.$OneSignal.isPushNotificationsEnabled((isEnabled) => {
 					if (isEnabled) {
@@ -51,33 +51,33 @@
 				})
 			})
 
-			window.OneSignal = window.OneSignal || [];
-			OneSignal.push(function() {
-				OneSignal.init({
-					appId: "15dc915b-fe30-4b1b-b635-63ab40fc8361",
-				});
-			});
+			// window.OneSignal = window.OneSignal || [];
+			// OneSignal.push(function() {
+			// 	OneSignal.init({
+			// 		appId: "15dc915b-fe30-4b1b-b635-63ab40fc8361",
+			// 	});
+			// });
 		},
 
 		methods: {
-			async getNewContentUpdate(){
-				const workbox = await window.$workbox;
-				if (workbox) {
-					workbox.addEventListener('installed', (event) => {
-						if (event.isUpdate) {
-				            // whatever you want to do to let the user know there's an update available
-				            console.log("Update content ready, push reloaded browser")
-				            this.$swal({
-				            	position: 'top-end',
-				            	icon: 'success',
-				            	title: 'Evoush::Official New Updated Build',
-				            	showConfirmButton: false,
-				            	timer: 1500
-				            })
-				        }
-				    });
-				}
-			},
+			// async getNewContentUpdate(){
+			// 	const workbox = await window.$workbox;
+			// 	if (workbox) {
+			// 		workbox.addEventListener('installed', (event) => {
+			// 			if (event.isUpdate) {
+			// 	            // whatever you want to do to let the user know there's an update available
+			// 	            console.log("Update content ready, push reloaded browser")
+			// 	            this.$swal({
+			// 	            	position: 'top-end',
+			// 	            	icon: 'success',
+			// 	            	title: 'Evoush::Official New Updated Build',
+			// 	            	showConfirmButton: false,
+			// 	            	timer: 1500
+			// 	            })
+			// 	        }
+			// 	    });
+			// 	}
+			// },
 
 			getFacebookSDK(d, s, id){
 				var js, fjs = d.getElementsByTagName(s)[0];
@@ -94,14 +94,14 @@
 				this.$axios.get(`https://app.evoush.com/api/evoush/data/consult/${this.users.username}`)
 				.then(res => {
 					this.consults = res.data.data
-					console.log(this.consults.length)
+					// console.log(this.consults.length)
 					if(this.consults.length > 0){
 						this.check = this.consults.map(d => {
 							return d.username == this.users.username ? d : ''
 						})
 						// console.log(this.check[0])
 						this.status = this.check[0].status
-						console.log(this.status)
+						// console.log(this.status)
 						this.getChat(this.status)
 					}
 				})

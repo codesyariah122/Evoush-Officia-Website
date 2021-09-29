@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- <h1>Mamam dong kaka</h1> -->
     <small v-if="message" class="blockquote-footer text-info mb-5 mt-3">
       {{message}}
     </small>
@@ -28,6 +29,7 @@ export default {
   methods: {
     captureEvent() {
       window.addEventListener('beforeinstallprompt', (e) => {
+        console.log(e)
         // ! Prevent Chrome 67 and earlier from automatically showing the prompt
         e.preventDefault()
         // Stash the event so it can be triggered later.
@@ -42,7 +44,8 @@ export default {
       this.deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
           // Call another function?
-          this.captureEvent()
+          // this.captureEvent()
+          this.$toast("Evoush::App berhasil ditambahkan")
           console.log("User accepted installation")
         }else{
           console.log("User canceled installation")

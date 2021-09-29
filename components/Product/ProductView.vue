@@ -26,7 +26,15 @@
 						<h3>Detail Product</h3>
 						<ul>
 							<li v-for="category in product.categories"><strong>Category</strong>: {{category.name}}</li>
-							<!-- <li><strong>Release</strong>: {{formatDate(product.created)}}</li> -->
+							<li v-if="product.thank_you_url">
+								<span class="badge badge-success">Landing Page : </span>
+								<a :href="product.thank_you_url" class="btn btn-link">{{ product.name }}</a>
+							</li>
+							<li v-else>
+								<span class="badge badge-danger">
+									No landing page
+								</span>
+							</li>
 						</ul>
 
 						<p class="mb-5" v-html="product.description">
@@ -46,6 +54,10 @@
 			</div>
 		</section>
 			<!-- End Portfolio Details -->
+
+		<!-- <pre>
+			{{ product }}
+		</pre> -->
 
 	</div>
 </template>

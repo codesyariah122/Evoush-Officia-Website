@@ -158,21 +158,21 @@
 				.finally(() => this.loading = false)
 			},
 			getIp(){
-				// this.$axios
-				// .get('https://api.ipify.org/?format=json')
-				// .then(res => {
-		  //       	// console.log(res)
-		  //       	this.ip = res.data.ip
-    //     		})
-    //     		.catch(err => console.log(err.message))
+				this.$axios
+				.get('https://api.ipify.org/?format=json')
+				.then(res => {
+		        	// console.log(res)
+		        	this.ip = res.data.ip
+        		})
+        		.catch(err => console.log(err.message))
 
-    			this.$axios
-    			.get('http://ip-api.com/json/')
-    			.then(res => {
-    				this.ip = res.data.query
-    				// console.log(res)
-    			})
-    			.catch(err => console.log(err.message))
+    			// this.$axios
+    			// .get('http://ip-api.com/json/')
+    			// .then(res => {
+    			// 	this.ip = res.data.query
+    			// 	// console.log(res)
+    			// })
+    			// .catch(err => console.log(err.message))
 			},
 			getLocation(ip){
 				this.$axios

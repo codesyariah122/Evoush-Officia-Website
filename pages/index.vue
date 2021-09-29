@@ -45,7 +45,7 @@
 
 				<!-- test vuex -->
 				<!-- <div class="col-lg-12">
-					{{ color }}
+					test : {{ tester }}
 				</div> -->
 
 
@@ -171,6 +171,7 @@
 			BirthdayMember,
 			ToDo
 		},
+
 		async asyncData({$commerce, $content, params, $axios, $config}){
 			const {data: products} = await $commerce.products.list()
 
@@ -291,7 +292,7 @@
 		// }
 
 		mounted(){
-			OneSignal.log.setLevel('trace')
+			// OneSignal.log.setLevel('trace')
 		},
 
 

@@ -1,6 +1,7 @@
 <template>
 	<div class="container">
 		<div class="row justify-content-center">
+
 			<!-- <img :src="require(`~/assets/blog/images/${article.slug}/${article.img}`)" class="cover img-fluid img-responsive mb-5"> -->
 			<div class="col-lg-12 col-xs-12 col-sm-12 mt-2">
 				<article>
@@ -59,8 +60,9 @@ export default {
 		formatDate(date) {
 			const options = { year: 'numeric', month: 'long', day: 'numeric' }
 			return new Date(date).toLocaleDateString('en', options)
-		},
-	}
+		}
+	},
+
 }
 </script>
 
