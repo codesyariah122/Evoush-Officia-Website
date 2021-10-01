@@ -32,7 +32,7 @@
 						<div class="row justify-content-center interactive-product">
 							<div class="col-lg-4">
 								<!-- {{ imgBox }} -->
-								<img :src="`https://evoush-landing-api.herokuapp.com/${imgBox}`" :class="imgBox === '/images/for-hero/boxes/sachet.png' ? 'img-fluid rotate' : 'img-fluid'">
+								<img v-if="showBox" :src="`https://evoush-landing-api.herokuapp.com/${imgBox}`" :class="imgBox === '/images/for-hero/boxes/sachet.png' ? 'img-fluid rotate' : 'img-fluid'">
 							</div>
 						</div>
 
@@ -42,7 +42,10 @@
 
 						<div class="col-md-2 box-sachet mb-5">
 							<ul class="sachet" style="list-style: none;">
-								<li v-for="(image, index) in images">
+								<li v-if="loading">
+									<img src="https://bppsdmp-ppid.pertanian.go.id/assets/images/loading.gif" class="img-fluid" width="250">
+								</li>
+								<li v-else v-for="(image, index) in images">
 									<img id="sachet" :src="`https://evoush-landing-api.herokuapp.com/${image.src}`" :data-id="image.id" :key="image.id" class="img-fluid" @click="ClickMe(boxes[index].src, boxes[index].name, boxes[index].description)">
 								</li>
 							</ul>
@@ -72,7 +75,8 @@
 				brand: 'evoush official',
 				images: [],
 				boxes: [],
-				imgBox: ''
+				imgBox: '',
+				loading: null
 			}
 		},
 		mounted(){
@@ -106,6 +110,7 @@
 				}
 			},
 			ClickMe(imgBox, nameBox, descBox){
+				// this.loading = true
 				this.ShowBox = true
 				this.imgBox = imgBox
 				// this.$swal({
@@ -131,10 +136,13 @@
 			},
 
 			setUpBoxes(){
+				this.showBox = true
+				this.loading = true
 				this.$axios.get('https://evoush-landing-api.herokuapp.com/api/data/hero/images/boxes')
 				.then(res => {
 					this.boxes = res.data.data
 					this.ClickMe(this.boxes[0].src, this.boxes[0].name, '')
+					this.loading = false
 				})
 			}
 		}

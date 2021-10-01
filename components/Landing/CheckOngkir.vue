@@ -75,6 +75,9 @@
 					<div class="alert alert-warning">
 						Terjadi kesalahan harap periksa kembali kolom input check ongkir diatas
 					</div>
+					<center>
+						<img src="https://media2.giphy.com/media/l2R06FEpVRk6IroNq/200.gif" class="img-fluid mt-3">
+					</center>
 				</div>
 
 				<div v-if="show_result" class="card">
@@ -195,6 +198,7 @@
 
 			getCostOngkir(e){
 				e.preventDefault()
+				this.error = false
 				this.loading = true
 				this.show_result = false
 				let sending = {
@@ -209,9 +213,14 @@
 				.then(response => {
 					this.loading = false
 					this.show_result = true
-					this.error = false
 					this.results = response.data.data
-					console.log(this.results)
+					// console.log(this.results)
+					this.state.province_origin = ''
+					this.state.province_destination = ''
+					this.state.city_origin = ''
+					this.state.city_destination = ''
+					this.state.weight = ''
+					this.state.courier = ''
 				})
 				.catch(error => {
 					this.loading = false

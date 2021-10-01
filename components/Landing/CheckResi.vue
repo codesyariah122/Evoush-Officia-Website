@@ -91,6 +91,9 @@
 							<div class="alert alert-warning">
 								{{ empty }}
 							</div>
+							<center>
+								<img src="https://i.imgur.com/KTjUFYP.gif" class="img-fluid">
+							</center>
 						</div>
 					</div>
 

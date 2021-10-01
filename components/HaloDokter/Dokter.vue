@@ -10,6 +10,9 @@
 			<div class="alert alert-warning">
 				{{ errors }}
 			</div>
+			<center>
+				<img src="https://media0.giphy.com/media/vXKDrRey28YCY/giphy.gif" class="img-fluid mt-2 mb-3">
+			</center>
 		</div>
 
 		<!-- <pre>
