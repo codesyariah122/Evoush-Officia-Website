@@ -42,6 +42,7 @@
 
 			<JadwalShalatDefault :location="location" :query="query" :timeNow="timeNow" :results="results"/>
 
+
 		</div>
 	</div>
 </template>
@@ -80,17 +81,21 @@
 			const location = await $axios.get(`https://ipapi.co/${ip.data.ip}/json/`)
 			const kodeKota = await $axios.get(`https://api.banghasan.com/sholat/format/json/kota/nama/${location.data.city}`)
 			const kode = kodeKota.data.kota[0].id
-			const date = time.getDate() > 9 ? time.getDate() : `0${time.getDate}`
-			const month = time.getMonth() > 9 ? time.getMonth()+1 : `0${time.getMonth()+1}`
+			const date = time.getDate() > 9 ? time.getDate() : `0${time.getDate()}`
+			const month = time.getMonth() > 8 ? time.getMonth()+1 : `0${time.getMonth()+1}`
 			const year = time.getFullYear()
 			const tglFormat = `${year}-${month}-${date}`
 
+			// console.log(tglFormat)
 			const shalat = await $axios.get(`https://api.banghasan.com/sholat/format/json/jadwal/kota/${kode}/tanggal/${tglFormat}`)
+			// const shalat = await $axios.get(`https://api.pray.zone/v2/times/day.json?ip=${ip.data.ip}&date=${tglFormat}`)
 
 			const timeNow = {
 				hours: time.getHours(),
 				minutes: time.getMinutes()
 			}
+
+			// console.log(shalat)
 
 			// console.log(location)
 
@@ -104,7 +109,8 @@
 				location,
 				results,
 				query,
-				timeNow
+				timeNow,
+				tglFormat
 			}
 		},
 

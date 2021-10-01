@@ -7,14 +7,15 @@
 						<div class="alert alert-danger">
 							<h4 class="text-center">{{ message }}</h4>
 						</div>
-						<nuxt-link to="/" class="btn btn-block btn-primary">Back</nuxt-link>
+						<a  @click="historyBack" class="btn btn-block btn-primary">Back</a>
 					</div>
 
 					<div v-else>
 						<div class="alert alert-warning">
 							<h5>An error occurred</h5>
+							<p>Perawatan data sumber terkait</p>
 						</div>
-						<nuxt-link to="/">Home Page</nuxt-link>
+						<a  @click="historyBack" class="btn btn-block btn-primary">Back</a>
 					</div>
 
 				</div>
@@ -35,6 +36,12 @@
 		},
 		mounted(){
 			$crisp.push(['do', 'chat:hide'])
+		},
+
+		methods: {
+			historyBack(){
+				return this.$router.back()
+			}
 		}
 	}
 </script>

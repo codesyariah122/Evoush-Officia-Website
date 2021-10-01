@@ -38,7 +38,7 @@
 				this.loading = true
 				const q = this.keyword.replace(" ", "")
 				this.$axios
-				.get(`https://evoush-landing.herokuapp.com/api/data/youtube/search/${q}`)
+				.get(`https://evoush-landing-api.herokuapp.com/api/data/youtube/search/${q}`)
 				.then(res=>{
 					console.log(res.data)
 					// console.log(res.data.data)

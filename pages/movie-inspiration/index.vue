@@ -16,7 +16,7 @@
 
 				<div class="row justify-content-center mt-5 mb-5">
 					<div class="col-lg-12 col-xs-12 col-sm-12">
-						<div class="card">
+						<div class="card card-youtube">
 							<div class="card-body">
 								<h4 class="text-secondary text-center">Cari Movie Favorite Anda Via IMDB</h4>
 								<div class="col-lg-12 col-xs-12 col-sm-12">
@@ -29,7 +29,7 @@
 
 				<div class="row justify-content-center mt-5">
 					<div class="col-lg-12 col-xs-12 col-sm-12">
-						<div class="card">
+						<div class="card card-youtube">
 							<div class="card-body">
 								<h4 class="text-secondary text-center">Pencarian Youtube</h4>
 								<div class="col-lg-12 col-xs-12 col-sm-12">

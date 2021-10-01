@@ -8,7 +8,12 @@
 					:center="center"
 					>
 					<l-marker :lat-lng="regionCenter">
-						<l-popup>Hallo evousher {{ city }}</l-popup>
+						<l-popup>
+							Jadwal Shalat <b>{{ city }}</b> <br>
+							<center>
+								<img src="https://img2.pngdownload.id/20190210/srp/kisspng-sultan-salahuddin-abdul-aziz-mosque-khanqah-5c6003e7b0d0d5.0809716515497963277243.jpg" class="img-fluid" width="50">
+							</center>
+						</l-popup>
 					</l-marker>
 					<l-polyline
 					:lat-lngs="polyline.latlngs"

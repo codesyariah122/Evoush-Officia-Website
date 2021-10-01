@@ -18,7 +18,7 @@
 
 			<div v-for="movie in movies" class="col-md-4 col-xs-12 col-sm-12 mt-5">
 				<div class="card card-movie">
-					<img class="card-img-top" :src="movie.Poster" alt="Card image cap">
+					<img class="card-img-top img-fluid img-responsive" :src="movie.Poster" alt="Card image cap">
 					<div class="card-body">
 						<h5 class="card-title">{{movie.Title}}</h5>
 						<!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
@@ -47,7 +47,7 @@
 							<div class="card mb-3">
 								<div class="row no-gutters">
 									<div class="col-md-12">
-										<img :src="detail.Poster" :alt="detail.Title">
+										<img :src="detail.Poster" :alt="detail.Title" class="img-fluid">
 									</div>
 									<div class="col-md-12">
 										<div class="card-body card-detail-movie">
@@ -117,11 +117,11 @@
 }
 
 .modal-body .card img {
-	width: 343px;
+	width: 450px;
 }
 
 .card-movie img{
-	width:290px;
+	width:400px;
 }
 
 @media (min-width: 992px) {

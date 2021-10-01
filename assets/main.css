@@ -344,6 +344,10 @@ body h2{
   /*background: linear-gradient(to right, coral, salmon);*/
   background-color: var(--bg);
 }
+.card-youtube{
+  background-color: var(--bg-secondary);
+}
+
 /*.list-group{
   background-color: var(--bg-secondary);
   box-shadow: 15px 15px var(--color-dua);

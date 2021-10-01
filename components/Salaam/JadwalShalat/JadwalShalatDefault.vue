@@ -27,11 +27,11 @@
 
 					<Location :lon="location.data.longitude" :lat="location.data.latitude" :city="location.data.city"/>
 
-					<!-- <pre>
+					<pre>
 						{{ nextShalat }}
 					</pre>
 
-					 -->
+
 
 					 <!-- <pre>
 					 	{{ shalatSaved }}
@@ -179,29 +179,46 @@
 				const date = new Date()
 				const now = this.timeNow.hours
 
-				const testtime = this.results.ashar.replace(':', '')
-				console.log(testtime)
+				const split = {
+					isya: this.results.isya.split(':'),
+					subuh: this.results.subuh.split(':'),
+					syuruk: this.results.terbit.split(':'),
+					dhuha: this.results.dhuha.split(':'),
+					dzuhur: this.results.dzuhur.split(':'),
+					ashar: this.results.ashar.split(':'),
+					maghrib: this.results.maghrib.split(':')
+				}
+				const hours = {
+					isya: parseInt(split.isya[0]),
+					subuh: parseInt(split.subuh[0]),
+					syuruk: parseInt(split.syuruk[0]),
+					dhuha: parseInt(split.dhuha[0]),
+					dzuhur: parseInt(split.dzuhur[0]),
+					ashar: parseInt(split.ashar[0]),
+					maghrib: parseInt(split.maghrib[0])
+				}
 
+				console.log(now < hours.isya)
 
-				if(now > this.results.isya){
+				if(now < hours.isya){
 					this.nextShalat = this.results.subuh
 					this.nextNameShalat = "Subuh"
-				}else if(now > this.results.subuh){
+				}else if(now > hours.subuh){
 					this.nextShalat = this.results.terbit
 					this.nextNameShalat = "Syuruk"
-				}else if(now > this.results.terbit){
+				}else if(now > hours.syuruk){
 					this.nextShalat = this.results.dhuha
 					this.nextNameShalat = "Dhuha"
-				}else if(now > this.results.dhuha){
+				}else if(now > hours.dhuha){
 					this.nextShalat = this.results.dzuhur
 					this.nextNameShalat = "Dzuhur"
-				}else if(now > this.results.dzuhur){
+				}else if(now > hours.dzuhur){
 					this.nextShalat = this.results.ashar
 					this.nextNameShalat = "Ashar"
-				}else if(now > this.results.ashar){
+				}else if(now > hours.ashar){
 					this.nextShalat = this.results.maghrib
 					this.nextNameShalat = "Maghrib"
-				}else if(now > this.results.maghrib){
+				}else if(now > hours.maghrib){
 					this.nextShalat = this.results.isya
 					this.nextNameShalat = "Isya"
 				}else{
