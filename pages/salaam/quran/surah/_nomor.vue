@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="container">
-			<div class="row justify-content-end mt-3 mb-3">
+			<div class="row justify-content-end mt-3 mb-5">
 				<div class="col-lg-2 col-xs-6 col-sm-6">
 					<nuxt-link class="btn btn-danger ml-3 mt-3" to="/salaam/quran"><i class='bx bx-arrow-back'></i>Kembali</nuxt-link>
 				</div>

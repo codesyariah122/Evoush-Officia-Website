@@ -21,7 +21,8 @@
 
 						<form class="box" @submit.prevent="login">
 
-						<Logo/>
+						<Logo class="logo"/>
+
 						<h5 class="text-white mt-3">Login Web Replika Evoush</h5>
 						<p class="text-muted mt-3 mb-2"> Please enter your username and password!</p>
 						<div v-if="loginFailed" class="alert alert-danger mb-2">

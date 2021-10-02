@@ -198,12 +198,6 @@
 					maghrib: parseInt(split.maghrib[0])
 				}
 
-				console.log(now)
-
-				if(now < hours.isya){
-					this.nextShalat = this.results.subuh
-					this.nextNameShalat = "Subuh"
-				}
 				if(now > hours.subuh){
 					this.nextShalat = this.results.terbit
 					this.nextNameShalat = "Syuruk"
@@ -228,7 +222,11 @@
 					this.nextShalat = this.results.isya
 					this.nextNameShalat = "Isya"
 				}
-				console.log("Not Detected")
+				if(now > hours.isya){
+					this.nextShalat = this.results.subuh
+					this.nextNameShalat = "Subuh"
+				}
+				// console.log("Not Detected")
 
 			},
 
