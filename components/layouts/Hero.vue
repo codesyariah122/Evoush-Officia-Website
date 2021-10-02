@@ -198,7 +198,7 @@
 		.interactive-product img{
 			max-width: 800px;
 			margin-top: -15rem;
-			margin-left: -12rem;
+			margin-left: -15rem;
 		}
 		.interactive-product .rotate{
 			transform: rotate(17deg);
@@ -216,7 +216,7 @@
 			margin: 0 -20px;
 			max-width: 250px;
 			cursor: pointer;
-			margin-left: -3.5rem;
+			margin-left: -5.5rem;
 		}
 
 	}

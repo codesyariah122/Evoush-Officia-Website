@@ -298,7 +298,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;*/
     /*padding-left: 160px;*/
     background: linear-gradient(to right, tomato, coral);
-    clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 135vh, 0 100%);
     background-position: top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
