@@ -60,6 +60,11 @@
 		filter: drop-shadow(25px 15px 8px black);
 		width: 70px;
 		margin-left: 1.1rem;
+		cursor: no-drop;
+	}
+	.logo-evoush:hover{
+		transform: translateX(7%);
+		transform: rotate(40deg);
 	}
 }
 </style>

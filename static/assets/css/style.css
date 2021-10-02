@@ -1420,8 +1420,11 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #f7f8f9;
-  color: #45505b;
+  /*background: #f7f8f9;*/
+  /*background: linear-gradient(to right, #071521, #158876);*/
+  background: #071521;
+  /*color: #45505b;*/
+  color: #fff;
   font-size: 14px;
   text-align: center;
   padding: 30px 0;

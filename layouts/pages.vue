@@ -72,14 +72,14 @@
 				this.$axios.get(`https://app.evoush.com/api/evoush/data/consult/${this.users.username}`)
 				.then(res => {
 					this.consults = res.data.data
-					console.log(this.consults.length)
+					// console.log(this.consults.length)
 					if(this.consults.length > 0){
 						this.check = this.consults.map(d => {
 							return d.username == this.users.username ? d : ''
 						})
 						// console.log(this.check[0])
 						this.status = this.check[0].status
-						console.log(this.status)
+						// console.log(this.status)
 						this.getChat(this.status)
 					}
 				})

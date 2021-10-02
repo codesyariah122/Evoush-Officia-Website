@@ -5,7 +5,7 @@
 			<div class="container content-hero" data-aos="zoom-in" data-aos-delay="100">
 				<div class="row justify-content-center">
 					<div class="col-lg-8 col-xs-12 col-sm-12">
-						<Logo />
+						<Logo class="logo"/>
 						<!-- <WhiteLogo/> -->
 					</div>
 				</div>
@@ -32,7 +32,12 @@
 						<div class="row justify-content-center interactive-product">
 							<div class="col-lg-4">
 								<!-- {{ imgBox }} -->
-								<img v-if="showBox" :src="`https://evoush-landing-api.herokuapp.com/${imgBox}`" :class="imgBox === '/images/for-hero/boxes/sachet.png' ? 'img-fluid rotate' : 'img-fluid'">
+								<div v-if="loading">
+									<img src="https://cdn.lowgif.com/full/fa958edd71a23366-.gif" class="img-fluid" width="450">
+								</div>
+								<div v-else>
+									<img v-if="showBox" :src="`https://evoush-landing-api.herokuapp.com/${imgBox}`" :class="imgBox === '/images/for-hero/boxes/sachet.png' ? 'img-fluid rotate' : 'img-fluid'">
+								</div>
 							</div>
 						</div>
 
@@ -43,7 +48,7 @@
 						<div class="col-md-2 box-sachet mb-5">
 							<ul class="sachet" style="list-style: none;">
 								<li v-if="loading">
-									<img src="https://bppsdmp-ppid.pertanian.go.id/assets/images/loading.gif" class="img-fluid" width="250">
+									<img src="https://cdn.lowgif.com/full/fa958edd71a23366-.gif" class="img-fluid" width="150">
 								</li>
 								<li v-else v-for="(image, index) in images">
 									<img id="sachet" :src="`https://evoush-landing-api.herokuapp.com/${image.src}`" :data-id="image.id" :key="image.id" class="img-fluid" @click="ClickMe(boxes[index].src, boxes[index].name, boxes[index].description)">
@@ -125,8 +130,10 @@
 			},
 
 			setUpMaterials(){
+				this.loading = true
 				this.$axios.get('https://evoush-landing-api.herokuapp.com/api/data/hero/images/materials')
 				.then(res => {
+					this.loading = false
 					this.images = res.data.data
 					// console.log(this.images)
 				})
@@ -211,5 +218,6 @@
 			cursor: pointer;
 			margin-left: -3.5rem;
 		}
+
 	}
 </style>
