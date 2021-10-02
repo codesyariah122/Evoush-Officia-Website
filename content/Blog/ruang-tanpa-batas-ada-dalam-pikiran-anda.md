@@ -26,4 +26,4 @@ Tinggal seberapa berani menindak lanjutinya menjadi sebuah kenyataan.
 Dalam sisi yang sulit, terjepit bila seseorang mampu mengatasinya dan mengubah kesulitan tersebut menjadi sebuah mimpi baru, maka sebenarnya keberhasilan itu sudah dekat. Tinggal bagaimana menemukan tempat yang tepat untuk menuangkan semua pikiran-pikiran besar tersebut. Apakah Anda bersedia menuangkan pikiran anda bersama kami ???  
 
 Ayo jangan buang waktumu lagi ...  
-<img src="https://github.com/codesyariah122/bahan-evoush/blob/main/images/banner/about/2%20kn.jpg?raw=true" class="img-fluid img-responsive mt-5 mb-5">
+<img src="https://github.com/codesyariah122/bahan-evoush/blob/main/images/banner/about/2%20kn.jpg?raw=true" class="img-fluid img-responsive mt-5 mb-5">  

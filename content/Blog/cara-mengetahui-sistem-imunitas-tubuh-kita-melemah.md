@@ -39,7 +39,6 @@ Wanita sedang hamil juga, cenderung memiliki sistem kekebalan tubuh yang lemah, 
 
 #### Cara mengetahui sistem imunitas tubuh melemah  
 Seperti penyababnya gejala melemahnya daya tahan tubuh itu juga bermacam-macam, meski ada yang cukup umum terjadi seperti **Kelelahan**.  
-
 <img src="https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/propolis/propolis11.jpeg?raw=true" class="img-fluid">  
 
 Cara mengetahui sitem imunitas tubuh kita melemah yaitu menyadari adanya hal-hal yang tidak biasa seperti, kurang bugar, mudah sakit atau cepat lelah.  
@@ -60,5 +59,4 @@ Disamping itu untuk memperkuatnya hal pertama yang harus kita lakukan adalah men
 ini bisa berarti menjalankan pola makan sehat, rutin berolahraga, cukup tidur, menghindari stress dan menjaga kebersihan.  
 
 Memang ada baiknya adalah sedia payung sebelum hujan, siap sedia menjaga pertahanan sebelum mengalami sakit, rutin konsumsi **Gilcam Propolis** yang merupakan product kecil yang besar manfaatnya bagi kesehatan tubuh kita, terlebih baik jika di gunakan untuk menjaga dan merawat imunitas tubuh kita, selagi masih dalam masa pandemi, rutinkan mengkonsumsi **Gilcam Propolisnya** yah evousher.  
-
 <img src="https://cdn.chec.io/merchants/27164/assets/sTn2t0gK9mwYeEnA%7Cgilcam%20copy.jpg" class="img-fluid">
