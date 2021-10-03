@@ -13,6 +13,7 @@
 				<div class="col-lg-12 col-xs-12 col-sm-12">
 					<div class="card">
 
+
 						<!-- <pre>
 						{{username}}
 						</pre> -->
@@ -50,10 +51,23 @@
 									<li><a href="https://www.youtube.com/channel/UCIzNgeNDD58z8XNppkopwzw" class="linkedin"><i class="bx bxl-youtube"></i></a></li>
 								</ul>
 							</div>
+
+							<div class="mt-5 col-md-12 col-xs-12 col-sm-12">
+								<blockquote>
+									Anda bisa edit profile web replika anda, terlebih dahulu melalui proses login di form login diatas. Untuk informasi mengenai login user web replika bisa, Klik/Tap tombol request login web replika di bawah. <br>
+									<br>
+									<small class="text-danger">*Ketik username resmi member evoush anda*</small>
+									<input type="text" name="request-username" v-model="request.username" placeholder="username member evoush anda">
+									<a @click="RequestLogin" class="btn btn-primary rounded-pill btn-request" target="_blank">Request Login Web Replika</a>
+								</blockquote>
+							</div>
+
 						</form>
 					</div>
+
 				</div>
 			</div>
+
 		</div>
 	</div>
 </template>
@@ -72,7 +86,10 @@
 		async asyncData({params}){
 			const username = params.username
 			return {
-				username
+				username,
+				request: {
+					username: ''
+				}
 			}
 		},
 
@@ -118,6 +135,7 @@
 		},
 
 		methods:{
+
 			login(){
 				let username = this.user.username
 				let password = this.user.password
@@ -153,7 +171,33 @@
 
 			historyBack(){
 				return this.$router.back()
-			}
+			},
+
+			RequestLogin(){
+				const username = this.request.username
+				if(username === ""){
+					this.$toast("Kolom username member evoush anda wajib di isi")
+					this.getAlert("Kolom username member evoush anda wajib di isi", 'https://c.tenor.com/ACsq1KK1S-UAAAAM/monday-work.gif', 'https://e7.pngegg.com/pngimages/906/961/png-clipart-white-bricks-and-wall-background-clean-walls.png')
+				}else{
+					this.$toast(`Ok ! ${username}, Request anda akan segera kami proses`)
+					window.open(`https://wa.me/6288222668778?text=Request%20informasi%20login,%20Username:%20${username}`)
+				}
+			},
+
+			getAlert(message, gif, bg) {
+				this.$swal({
+					title: message,
+					width: 600,
+					padding: "3em",
+					background: `#fff url(${bg})`,
+					backdrop: `
+					rgba(0,0,123,0.4)
+					url("${gif}")
+					left top
+					no-repeat
+					`
+				});
+			},
 		}
 	}
 </script>
@@ -346,7 +390,16 @@ a.socialIcon:hover,
 	transition: all 0.8s
 }
 
-
+input[name="request-username"]{
+	margin-left: -1.5rem!important;
+}
+.btn-request{
+	font-size:14px;
+	margin-left:-.7rem;
+	width:100%;
+	height:50px;
+	padding:12px;
+}
 @media (min-width: 992px) {
 	.box {
 		width: 600px;
@@ -426,6 +479,10 @@ a.socialIcon:hover,
 		width: 50px;
 		height: 50px;
 		font-size: 35px
+	}
+
+	input[name="request-username"]{
+		margin-left: .1rem!important;
 	}
 
 }

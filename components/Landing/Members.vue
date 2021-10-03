@@ -25,22 +25,22 @@
 								<img v-if="member.avatar" :src="`https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/${member.avatar}`" class="img-fluid img-responsive image--profile-member img-responsive rounded-circle center-block d-block mx-auto mt-2" width="150">
 								<img v-else src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg" :alt="member.name" class="image--profile-member img-responsive rounded-circle center-block d-block mx-auto mt-2" width="100">
 							</div>
-							<div class="mt-5">
+							<div class="mt-5 member-profile">
 								<h4>{{member.name}}</h4>
-								<ul>
+								<ul class="profile-lists">
 									<li><strong>Username : {{(member.username === "fentirifqi") ? "coachrifqi" : member.username}}</strong></li>
-									<li><strong>Status : </strong> <span class="badge badge-success">Active</span></li>
+									<li><strong>Status : </strong> <span class="badge badge-success ml-2">Active</span></li>
 									<li class="mt-3">
 										<!-- <span :class="`${member.achievements.includes('STAR SAPHIRE') ? 'badge badge-primary' : 'badge badge-success'}`"><i :class="`${member.achievements.includes('STAR SAPHIRE') ? 'bx bxs-trophy bx-lg text-white' : 'bx bxs-medal bx-lg text-white'}`"></i>
 												{{member.achievements.includes('STAR SAPHIRE') ? 'STAR SAPHIRE' : 'SAPHIRE'}}
 										</span> -->
 										<div v-if="member.achievements.includes('STAR SAPHIRE')">
-											<span class="badge badge-primary">
+											<span class="badge badge-primary ml-5 mt-2">
 												<i class="bx bxs-trophy bx-lg text-white"></i>{{"STAR SAPHIRE"}}
 											</span>
 										</div>
 										<div v-else-if="member.achievements.includes('SAPHIRE')">
-											<span class="badge badge-success">
+											<span class="badge badge-success ml-5 mt-2">
 												<i class="bx bxs-trophy bx-lg text-white"></i>{{"SAPHIRE"}}
 											</span>
 										</div>
@@ -51,8 +51,8 @@
 										</div>
 									</li>
 									<li class="mt-5 mb-5">
-										<strong>Media Social : </strong><br>
 										<div class="social-links">
+											<h5>Media Social : </h5>
 											<a :href="`https://wa.me/${member.phone}?text=Hallo%20${member.name}%20saya%20tertarik%20untuk%20join%20Evoush, %20apa%20anda%20bisa%20bantu%20saya`" target="_blank" class="whatsapp"><i class='bx bxl-whatsapp text-success'></i></a>
 											<a :href="`https://www.facebook.com/${member.facebook}`" target="_blank" class="facebook"><i class="bx bxl-facebook text-primary"></i></a>
 											<a :href="`https://www.instagram.com/${member.instagram}`" target="_blank" class="instagram"><i class="bx bxl-instagram text-danger"></i></a>
@@ -186,3 +186,26 @@
 		}
 	}
 </script>
+
+
+<style>
+	.social-links{
+		font-size:31px!important;
+		margin-left: 2rem;
+		margin-top: 3rem;
+	}
+	.member-profile .profile-lists{
+		font-size:18px;
+	}
+
+	@media (min-width: 992px) {
+		.social-links{
+			font-size:31px!important;
+			margin-left: 3rem;
+			margin-top: 3rem;
+		}
+		.member-profile .profile-lists{
+			font-size:18px;
+		}
+	}
+</style>

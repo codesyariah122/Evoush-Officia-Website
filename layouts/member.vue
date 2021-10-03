@@ -14,6 +14,9 @@
 			<Nuxt/>
 			<a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
 			<!-- <div id="preloader"></div> -->
+
+			<Footer class="mt-5"/>
+
 		</main>
 	</div>
 </template>
@@ -21,10 +24,12 @@
 
 <script>
 	import ColorModePicker from '@/components/molecules/ColorModePicker'
+	import Footer from '~/components/layouts/Footer'
 
 	export default {
 		components: {
-			ColorModePicker
+			ColorModePicker,
+			Footer
 		}
 	}
 </script>

@@ -152,14 +152,14 @@
 		data(){
 			return {
 				samples: [
-					{id:1, url: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/bahan_gallery/image/new_products/brands1.jpeg'},
-					{id:2, url: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/bahan_gallery/image/new_products/brands2.jpeg'},
-					{id:3, url: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/bahan_gallery/image/new_products/brands3.jpeg'},
-					{id:4, url: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/bahan_gallery/image/new_products/brands4.jpeg'},
-					{id:5, url: 'https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/new_brand1.jpeg?raw=true'},
-					{id:6, url: 'https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/new_brand2.jpeg?raw=true'},
-					{id:7, url: 'https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/new_brand3.jpeg?raw=true'},
-					{id:8, url: 'https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/new_brand4.jpeg?raw=true'}
+					{id:1, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/brands1.jpeg'},
+					{id:2, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/brands2.jpeg'},
+					{id:3, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/brands3.jpeg'},
+					{id:4, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/brands4.jpeg'},
+					{id:5, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/new_brand1.jpeg?raw=true'},
+					{id:6, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/new_brand2.jpeg?raw=true'},
+					{id:7, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/new_brand3.jpeg?raw=true'},
+					{id:8, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/new_brand4.jpeg?raw=true'}
 				],
 				credential: {
 					username: localStorage.getItem('username'),

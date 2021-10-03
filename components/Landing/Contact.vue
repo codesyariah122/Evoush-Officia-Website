@@ -386,7 +386,7 @@
             this.err_message = "Terjadi kesalahan saat pengiriman pesan, harap periksa kembali kolom inputan dengan lengkap dan benar."
             this.errors = err.response.data
             console.log(err.response)
-            this.getAlert(this.err_message, 'https://www.desicomments.com/user/2008/02/5418/error.gif', 'https://e7.pngegg.com/pngimages/906/961/png-clipart-white-bricks-and-wall-background-clean-walls.png')
+            this.getAlert(this.err_message, 'https://c.tenor.com/ACsq1KK1S-UAAAAM/monday-work.gif', 'https://e7.pngegg.com/pngimages/906/961/png-clipart-white-bricks-and-wall-background-clean-walls.png')
           })
           // .finally(()=>{
 

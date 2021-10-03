@@ -2,7 +2,7 @@
 	<div>
 		<ProductView :product="product"/>
 
-		<div class="row justify-content-center">
+		<!-- <div class="row justify-content-center">
 			<fieldset class="mb-5">
 				<legend>Rating</legend>
 				<ul class="rating">
@@ -12,7 +12,7 @@
 					</li>
 				</ul>
 			</fieldset>
-		</div>
+		</div> -->
 
 	</div>
 </template>

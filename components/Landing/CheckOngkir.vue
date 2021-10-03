@@ -102,22 +102,22 @@
 									{{ results[0].costs }}
 								</pre> -->
 								<div v-for="cost in results[0].costs">
-									<li class="list-group-item">
+									<li class="list-group-item list-ongkir">
 										Service : <b>{{ cost.service }}</b> <br>
 										<blockquote class="blockquote-footer text-info ml-5">
 											{{ cost.description }}
 										</blockquote>
 									</li>
 									<div v-for="c in cost.cost">
-										<li class="list-group-item">
+										<li class="list-group-item list-ongkir">
 											Perkiraan waktu pengiriman : <strong>{{ c.etd }} Hari</strong>
 										</li>
-										<li class="list-group-item">
+										<li class="list-group-item list-ongkir">
 											Tarif pengiriman : <strong>
 												Rp. {{ c.value }}
 											</strong>
 										</li>
-										<li class="list-group-item">
+										<li class="list-group-item list-ongkir">
 											Catatan : <strong v-if="c.note">
 												{{ c.note }}
 											</strong>

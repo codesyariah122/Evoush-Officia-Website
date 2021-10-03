@@ -52,7 +52,7 @@
 									<strong>{{(member.username === "fentirifqi") ? "coachrifqi" : member.username}}, <small class="text-danger">Belum menambahkan quotes.</small> </strong>
 								</blockquote>
 								<small class="blockquote-footer text-secondary">
-									Untuk mengedit profile anda harus login terlebih dahulu, klik / tap tombol <code class="text-primary">Login</code> diatas. Mengenai informasi login anda bisa request informasi login di link di bawah ini : <br>
+									Untuk mengedit profile anda harus login terlebih dahulu, klik / tap tombol <code class="text-primary">Login</code> diatas. Mengenai informasi login anda bisa request login web replika di link di bawah ini : <br>
 									<a :href="`https://wa.me/6288222668778?text=Request%20informasi%20login,%20Username:%20${member.username}`" class="text-link"target="_blank">Request Web Replika</a>
 								</small>
 							</div>

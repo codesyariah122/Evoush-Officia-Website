@@ -149,7 +149,7 @@
 		width: 120%;
 		height: 100%;
 		left: 11px;
-		bottom: 51px;
+		bottom: 7px;
 		position: absolute;
 		z-index: -1;
 		transform: rotate(-13deg);
@@ -213,7 +213,9 @@
 		color:#fff;
 		text-decoration:none;
 	}
-
+	.profile-thumb-block{
+		margin-top: 5rem;
+	}
 
 	@media (min-width: 992px) {
 
@@ -313,6 +315,8 @@
 			color:#fff;
 			text-decoration:none;
 		}
-
+		.profile-thumb-block{
+			margin-top: 1rem!important;
+		}
 	}
 </style>

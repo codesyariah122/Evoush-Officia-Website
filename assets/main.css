@@ -352,3 +352,7 @@ body h2{
   background-color: var(--bg-secondary);
   box-shadow: 15px 15px var(--color-dua);
 }*/
+
+.list-ongkir{
+  background-color: var(--bg-secondary);
+}

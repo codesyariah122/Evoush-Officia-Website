@@ -16,7 +16,7 @@
 							<!-- evoush -->
 							<span
 							class="typed"
-							data-typed-items="Agar sukses, Anda harus meletakan hati Anda pada bisnis Anda, dan Bisnis Anda, Di hati Anda"
+							data-typed-items="Keinginan Anda Untuk Sukses, Harus Lebih Besar, Dari Rasa Takut Anda Akan Kegagalan"
 							></span>
 						</p>
 						<div class="social-links">
@@ -33,9 +33,11 @@
 							<div class="col-lg-4">
 								<!-- {{ imgBox }} -->
 								<div v-if="loading">
-									<img src="https://cdn.lowgif.com/full/fa958edd71a23366-.gif" class="img-fluid" width="450">
+									<img src="https://cdn.lowgif.com/full/fa958edd71a23366-.gif" class="img-fluid" width="300">
 								</div>
 								<div v-else>
+									<div class="round-hero">
+									</div>
 									<img v-if="showBox" :src="`https://evoush-landing-api.herokuapp.com/${imgBox}`" :class="imgBox === '/images/for-hero/boxes/sachet.png' ? 'img-fluid rotate' : 'img-fluid'">
 								</div>
 							</div>
@@ -47,10 +49,10 @@
 
 						<div class="col-md-2 box-sachet mb-5">
 							<ul class="sachet" style="list-style: none;">
-								<li v-if="loading">
+								<!-- <li v-if="loading">
 									<img src="https://cdn.lowgif.com/full/fa958edd71a23366-.gif" class="img-fluid" width="150">
-								</li>
-								<li v-else v-for="(image, index) in images">
+								</li> -->
+								<li v-for="(image, index) in images">
 									<img id="sachet" :src="`https://evoush-landing-api.herokuapp.com/${image.src}`" :data-id="image.id" :key="image.id" class="img-fluid" @click="ClickMe(boxes[index].src, boxes[index].name, boxes[index].description)">
 								</li>
 							</ul>
@@ -117,6 +119,9 @@
 			ClickMe(imgBox, nameBox, descBox){
 				// this.loading = true
 				this.ShowBox = true
+				// setTimeout(function(){
+				// 	this.loading = false
+				// }, 1000)
 				this.imgBox = imgBox
 				// this.$swal({
 				// 	title: nameBox,
@@ -171,7 +176,7 @@
 
 	.sachet{
 		position: absolute;
-		left: -1rem;
+		left: -.3rem;
 		bottom: -5rem;
 		transform: translateX(-7%);
 		display: flex;
@@ -192,13 +197,29 @@
 		transform: translateY(5px);
 	}
 	.interactive-product .rotate{
-		transform: rotate(15deg);
+		transform: rotate(-15deg);
+	}
+	.interactive-product img{
+		margin-top: -13rem;
+		margin-left: -3rem;
+	}
+	.round-hero{
+		background: linear-gradient(to left, coral, #EF9A9A);
+		z-index: -1;
+		width: 300px;
+		height: 300px;
+		position: relative;
+		border-radius: 50%;
+		margin-top: -3rem;
+		margin-left: 2rem;
+		/*filter: drop-shadow(5px 10px black);*/
 	}
 	@media (min-width: 992px) {
 		.interactive-product img{
 			max-width: 800px;
-			margin-top: -15rem;
+			margin-top: -55rem;
 			margin-left: -15rem;
+			z-index:1;
 		}
 		.interactive-product .rotate{
 			transform: rotate(17deg);
@@ -216,7 +237,19 @@
 			margin: 0 -20px;
 			max-width: 250px;
 			cursor: pointer;
-			margin-left: -5.5rem;
+			margin-left: -4.5rem;
+		}
+
+		.round-hero{
+			background: linear-gradient(to right, #EF9A9A, coral);
+			z-index: -1;
+			margin-left: -6rem;
+			width: 800px;
+			height:800px;
+			position: relative;
+			margin-top:-21rem;
+			border-radius: 50%;
+			/*filter: drop-shadow(5px 10px black);*/
 		}
 
 	}
