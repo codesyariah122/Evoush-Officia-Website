@@ -84,7 +84,9 @@
 
 		<Members :members="members"/>
 
+		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
 
+		<VideoCom/>
 
 		<h1 class="underline" style="margin-top: 5rem;"></h1>
 
@@ -147,6 +149,7 @@
 	import SocialSharing from '@/components/global/socialsharing'
 	import BirthdayMember from '@/components/Landing/BirthdayMember'
 	import ToDo from '@/components/Landing/Todo'
+	import VideoCom from '@/components/Landing/VideoCom'
 	// import RegisterEvent from '@/components/Landing/RegisterEventButton'
 	export default {
 		layout: 'default',
@@ -169,7 +172,8 @@
 			CheckResi,
 			SocialSharing,
 			BirthdayMember,
-			ToDo
+			ToDo,
+			VideoCom
 		},
 
 		async asyncData({$commerce, $content, params, $axios, $config}){

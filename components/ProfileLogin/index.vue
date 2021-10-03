@@ -73,7 +73,7 @@
 									<div class="container-fluid media-body">
 										<!-- form upload -->
 										<div v-if="editForm" class="mt-2 mb-5" style="background-color: #fff;">
-											<div class="container-fluid">
+											<div class="container-fluid form-edit-profile">
 												<i @click="closeForm" class='bx bx-window-close lg mt-2' style="font-size: 30px; cursor: pointer;"></i>
 												<form width="200px" name="myForm" method="post" @submit.prevent="updateAvatar" enctype="multipart/form-data">
 													<input type="hidden" name="id" id="id_member" :value="member.id">
