@@ -356,3 +356,8 @@ body h2{
 .list-ongkir{
   background-color: var(--bg-secondary);
 }
+
+
+.form-edit-profile {
+  background-color: var(--bg-secondary);
+}

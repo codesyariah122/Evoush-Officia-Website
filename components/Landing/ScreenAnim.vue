@@ -2,7 +2,9 @@
 	<div>
 		<div class="row justify-content-center">
 			<div class="col-lg-12 col-xs-12 col-sm-12 mt-5">
-				<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/animated/mobile.gif" class="img-fluid anim">
+				<!-- <img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/animated/mobile.gif" class="img-fluid anim"> -->
+				<video autoplay="true" loop="true" playsinline="" muted="" controls="" src="https://evoush-landing-api.herokuapp.com/videos/mobile.mp4" class="SectionCareerPathComponentssc__RocketAnimation-sc-1od742d-3 kUmObu anim">
+				</video>
 			</div>
 			<div class="col-lg-12 col-xs-12 col-sm-12 mt-5 mb-2">
 				<blockquote class="blockquote-footer" style="width: 400px;">

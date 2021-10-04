@@ -33,7 +33,8 @@
 							<div class="col-lg-4">
 								<!-- {{ imgBox }} -->
 								<div v-if="loading">
-									<img src="https://cdn.lowgif.com/full/fa958edd71a23366-.gif" class="img-fluid" width="300">
+									<!-- <img src="https://cdn.lowgif.com/full/fa958edd71a23366-.gif" class="img-fluid" width="300"> -->
+									<img src="http://www.orlift.com/en/images/loader.gif" class="img-fluid" width="400">
 								</div>
 								<div v-else>
 									<div class="round-hero">
@@ -152,6 +153,7 @@
 				this.loading = true
 				this.$axios.get('https://evoush-landing-api.herokuapp.com/api/data/hero/images/boxes')
 				.then(res => {
+					this.loading = false
 					this.boxes = res.data.data
 					this.ClickMe(this.boxes[0].src, this.boxes[0].name, '')
 					this.loading = false
@@ -163,94 +165,94 @@
 
 
 <style scoped>
-	.interactive-product{
-		margin-top: 1rem;
-	}
+.interactive-product{
+	margin-top: 1rem;
+}
 
+.interactive-product img{
+	filter: drop-shadow(25px 15px 21px black);
+	max-width: 350px;
+	margin-bottom: 1rem;
+	transform: translateY(5%);
+}
+
+.sachet{
+	position: absolute;
+	left: -.3rem;
+	bottom: -5rem;
+	transform: translateX(-7%);
+	display: flex;
+}
+
+.sachet ul li{
+	list-style: none!important;
+	display: inline-block;
+	cursor: pointer;
+}
+.sachet img{
+	filter: drop-shadow(25px 15px 21px black);
+	margin: 0 -15px;
+	max-width: 100px;
+	cursor: pointer;
+}
+.sachet img:hover{
+	transform: translateY(5px);
+}
+.interactive-product .rotate{
+	transform: rotate(-15deg);
+}
+.interactive-product img{
+	margin-top: -13rem;
+	margin-left: -3rem;
+}
+.round-hero{
+	background: linear-gradient(to left, coral, #EF9A9A);
+	z-index: -1;
+	width: 300px;
+	height: 300px;
+	position: relative;
+	border-radius: 50%;
+	margin-top: -3rem;
+	margin-left: 2rem;
+	/*filter: drop-shadow(5px 10px black);*/
+}
+@media (min-width: 992px) {
 	.interactive-product img{
-		filter: drop-shadow(25px 15px 21px black);
-		max-width: 350px;
-		margin-bottom: 1rem;
-		transform: translateY(5%);
-	}
-
-	.sachet{
-		position: absolute;
-		left: -.3rem;
-		bottom: -5rem;
-		transform: translateX(-7%);
-		display: flex;
-	}
-
-	.sachet ul li{
-		list-style: none!important;
-		display: inline-block;
-		cursor: pointer;
-	}
-	.sachet img{
-		filter: drop-shadow(25px 15px 21px black);
-		margin: 0 -15px;
-		max-width: 100px;
-		cursor: pointer;
-	}
-	.sachet img:hover{
-		transform: translateY(5px);
+		max-width: 800px;
+		margin-top: -55rem;
+		margin-left: -15rem;
+		z-index:1;
 	}
 	.interactive-product .rotate{
-		transform: rotate(-15deg);
+		transform: rotate(17deg);
 	}
-	.interactive-product img{
-		margin-top: -13rem;
-		margin-left: -3rem;
+	.box-sachet{
+		margin-top: 10rem;
+		margin-bottom: 5rem;
 	}
+	.sachet{
+		margin-top: -15rem;
+		transform: translateX(-10%);
+	}
+	.sachet img{
+		filter: drop-shadow(25px 15px 15px black);
+		margin: 0 -20px;
+		max-width: 250px;
+		cursor: pointer;
+		margin-left: -4.5rem;
+	}
+
 	.round-hero{
-		background: linear-gradient(to left, coral, #EF9A9A);
+		background: linear-gradient(to right, #EF9A9A, coral);
 		z-index: -1;
-		width: 300px;
-		height: 300px;
+		margin-left: -6rem;
+		width: 800px;
+		height:800px;
 		position: relative;
+		margin-top:-21rem;
 		border-radius: 50%;
-		margin-top: -3rem;
-		margin-left: 2rem;
 		/*filter: drop-shadow(5px 10px black);*/
 	}
-	@media (min-width: 992px) {
-		.interactive-product img{
-			max-width: 800px;
-			margin-top: -55rem;
-			margin-left: -15rem;
-			z-index:1;
-		}
-		.interactive-product .rotate{
-			transform: rotate(17deg);
-		}
-		.box-sachet{
-			margin-top: 10rem;
-			margin-bottom: 5rem;
-		}
-		.sachet{
-			margin-top: -15rem;
-			transform: translateX(-10%);
-		}
-		.sachet img{
-			filter: drop-shadow(25px 15px 15px black);
-			margin: 0 -20px;
-			max-width: 250px;
-			cursor: pointer;
-			margin-left: -4.5rem;
-		}
 
-		.round-hero{
-			background: linear-gradient(to right, #EF9A9A, coral);
-			z-index: -1;
-			margin-left: -6rem;
-			width: 800px;
-			height:800px;
-			position: relative;
-			margin-top:-21rem;
-			border-radius: 50%;
-			/*filter: drop-shadow(5px 10px black);*/
-		}
-
-	}
+}
 </style>
