@@ -365,3 +365,20 @@ body h2{
 .list-group-covid{
   background-color: var(--bg-secondary);
 }
+
+.vue-tel-input{
+  background-color: var(--bg-secondary)
+}
+
+.vti__dropdown-list .below{
+  background-color: var(--bg-secondary)
+}
+.vti__dropdown-item{
+  background-color: var(--bg-secondary)
+}
+
+.vti__dropdown-item .highlighted{
+  background-color: var(--bg-secondary)!important;
+}
+
+
