@@ -40,7 +40,7 @@ Ada atau tidaknya perubahan aktivitas di masa pandem, perawatan kulit sebenarnya
 
 Jadikan perawatan kulit bagian dari kebiasaan menguntungkan kita, me time kita, bentuk apresiasi terhadap pribad kita sendiri, jangan dijadikan beban tapi dinikmati.  
 
-Beberapa langkah **perawatan kulit wajah** dasar yang tak boleh terlupakan adalah membersihkan kulit dan menggunakan pelembap. Affi juga menyarankan penggunaan masker perawatan wajah sesekali untuk memanjakan kulit.
+Beberapa langkah **perawatan kulit wajah** dasar yang tak boleh terlupakan adalah membersihkan kulit dan menggunakan pelembap. dan juga penggunaan masker perawatan wajah sesekali untuk memanjakan kulit.
 
 Penggunaan produk-produk skincare merupakan salah satu contoh perawatan kulit dari luar. Sedangkan perawatan kulit dari dalam bisa dilakuakn melalui perbaikan gaya hidup seperti olahraga teratur dan menyantap makanan yang sehat.  
 
