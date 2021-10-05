@@ -5,6 +5,7 @@ import "vue-toastification/dist/index.css";
 
 const options = {
     // You can set your default options here
+    timeout: 2000
 };
 
 Vue.use(Toast, options);

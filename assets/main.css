@@ -361,3 +361,7 @@ body h2{
 .form-edit-profile {
   background-color: var(--bg-secondary);
 }
+
+.list-group-covid{
+  background-color: var(--bg-secondary);
+}

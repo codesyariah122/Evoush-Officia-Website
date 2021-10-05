@@ -53,7 +53,7 @@
 				url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
 				attribution:
 				'© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-				zoom: 5.3,
+				zoom: 5,
 				center: {
 					lat: this.lat,
 					lng: this.lon,
@@ -82,7 +82,7 @@
 			this.GetCoordinate(),
 			this.getLocation(this.ip),
 			this.setUpMap(),
-			this.checkMobile()
+			this.checkWidth()
 		},
 
 		methods: {
@@ -93,6 +93,16 @@
 				}
 
 			},
+			checkWidth(){
+				let width = document.documentElement.clientWidth
+				// console.log(width)
+				if(width < 768){
+					this.zoom = 4.3
+				}else{
+					this.zoom = 5
+				}
+			},
+
 			getIp(){
     			this.$axios
     			.get('http://ip-api.com/json/')
@@ -120,6 +130,7 @@
 
 			GetStockist(data){
 				this.showStockist = true
+				this.$toast(data)
 				this.stockistData = data
 			},
 

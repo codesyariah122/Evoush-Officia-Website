@@ -8,22 +8,22 @@
 			<legend>Informasi Covid-19 Indonesia</legend>
 			<div class="col-lg-12 col-xs-12 col-sm-12 mb-5">
 				<ul class="list-group">
-					<li class="list-group-item">
+					<li class="list-group-item list-group-covid">
 						Total Sasaran : <strong>{{ vaksin.totalsasaran }}</strong>
 					</li>
-					<li class="list-group-item">
+					<li class="list-group-item list-group-covid">
 						Sasaran Vaksin SDMK : <strong>{{ vaksin.sasaranvaksinsdmk }}</strong>
 					</li>
-					<li class="list-group-item">
+					<li class="list-group-item list-group-covid">
 						Sasaran Vaksin Petugas Publik : <strong>{{ vaksin.sasaranvaksinpetugaspublik }}</strong>
 					</li>
-					<li class="list-group-item">
+					<li class="list-group-item list-group-covid">
 						Vaksinasi Tahap Ke 1 : <strong>{{ vaksin.vaksinasi1 }}</strong>
 					</li>
-					<li class="list-group-item">
+					<li class="list-group-item list-group-covid">
 						Vaksinasi Tahap ke 2 : <strong>{{ vaksin.vaksinasi2 }}</strong>
 					</li>
-					<li class="list-group-item">
+					<li class="list-group-item list-group-covid">
 						Last Update : <strong>{{ formatDate(vaksin.lastUpdate)}}</strong>
 					</li>
 				</ul>

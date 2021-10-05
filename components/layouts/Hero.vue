@@ -39,7 +39,7 @@
 								<div v-else>
 									<div class="round-hero">
 									</div>
-									<img v-if="showBox" :src="`https://evoush-landing-api.herokuapp.com/${imgBox}`" :class="imgBox === '/images/for-hero/boxes/sachet.png' ? 'img-fluid rotate' : 'img-fluid'">
+									<img  v-if="showBox" :src="`https://evoush-landing-api.herokuapp.com/${imgBox}`" :class="imgBox === '/images/for-hero/boxes/sachet.png' ? 'img-fluid rotate' : 'img-fluid'">
 								</div>
 							</div>
 						</div>
@@ -84,7 +84,8 @@
 				images: [],
 				boxes: [],
 				imgBox: '',
-				loading: null
+				loading: null,
+				loadingBox: null
 			}
 		},
 		mounted(){
@@ -118,21 +119,12 @@
 				}
 			},
 			ClickMe(imgBox, nameBox, descBox){
-				// this.loading = true
-				this.ShowBox = true
-				// setTimeout(function(){
-				// 	this.loading = false
-				// }, 1000)
+				this.showBox = true
 				this.imgBox = imgBox
-				// this.$swal({
-				// 	title: nameBox,
-				// 	text: descBox,
-				// 	imageUrl: imgBox,
-				// 	imageWidth: 500,
-				// 	imageHeight: 400,
-				// 	imageAlt: 'Custom image',
-				// })
-				// this.$toast(nameBox)
+				// setTimeout(() => {
+				// 	this.showBox = false
+				// 	alert('Timeout')
+				// }, 1000)
 			},
 
 			setUpMaterials(){
