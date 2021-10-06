@@ -4,6 +4,26 @@
 		<main>
 			<Header/>
 			<Nuxt/>
+
+
+			<div v-if="check[0]">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-12 col-xs-12 col-sm-12">
+							<!-- <pre>
+								{{ check }}
+							</pre> -->
+							<div class="alert alert-warning alert-dismissible fade show" role="alert">
+								<strong>Halo {{ check[0].username }}!</strong> Untuk Memulai konsultasi Bersama Dokter Winda Silahkan Memulai Chat Di Bagian Kiri, atau di chatbox yang telah aktif.
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<Footer/>
 
 			<CookieBox/>
@@ -118,6 +138,7 @@
 				}else{
 					if(this.status === "ACTIVE"){
 						$crisp.push(['do', 'chat:show'])
+						$crisp.push(['do', 'chat:open'])
 					}
 				}
 			},

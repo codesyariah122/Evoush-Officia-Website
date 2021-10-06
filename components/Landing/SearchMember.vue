@@ -24,7 +24,7 @@
 				{{ error }}
 			</div>
 			<!-- <img src="https://64.media.tumblr.com/aac2f5a3e634799d9b15fa20218efa51/tumblr_p9rgvzIBhe1wxdq3zo1_500.gifv" class="img-fluid mt-2 mb-5"> -->
-			<img src="https://cdn.dribbble.com/users/2272148/screenshots/6633933/daily008.gif" class="img-fluid mb-5 mt-2">
+			<img v-if="!loading" src="https://cdn.dribbble.com/users/2272148/screenshots/6633933/daily008.gif" class="img-fluid mb-5 mt-2">
 		</div>
 
 		<div v-if="loading">

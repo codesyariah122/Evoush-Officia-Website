@@ -35,9 +35,9 @@
 										<a :href="site.url" class="ml-3">{{ site.name }}</a>
 									</div>
 									<br>
-									<div v-if="site.name === 'Landing Product'">
+									<div style="margin-top:-1rem;" v-if="site.name === 'Landing Product'">
 										<span class="badge badge-primary" > {{ site.name }} </span>
-										<ol class="ml-4">
+										<ol class="ml-4" style="list-style: none; text-align: left;">
 											<li v-for="landing in landings">
 												<a :href="landing.url">
 													{{ landing.name }}
@@ -94,6 +94,7 @@
 
 <style>
 	.sitemap{
+		list-style: none;
 		display: flex;
 
 	}
