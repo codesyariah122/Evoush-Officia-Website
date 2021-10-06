@@ -43,12 +43,12 @@
             {{ products.reverse() }}
           </pre> -->
 
-            <div v-for="product in products" :class="`${product.categories.map(d => d.name === 'Nutrisi' ? 'col-lg-4 col-md-6 portfolio-item filter-nutrisi' : 'col-lg-4 col-md-6 portfolio-item filter-kosmetik')}`">
+            <div v-for="product in products" :class="`${product.categories.map(d => (d.name === 'Nutrisi') ? 'col-lg-4 portfolio-item filter-nutrisi' : 'col-lg-4 portfolio-item filter-kosmetik')}`">
               <div class="portfolio-wrap">
 
                 <img
                   :src="product.assets[0].url"
-                  :class="`${product.id === 'prod_ypbroE6E4358n4' ? 'img-fluid img-responsive' : 'img-fluid img-responsive'}`"
+                  :class="product.name === 'klev whitening serum' ? 'edit-height img-fluid' : 'img-fluid'"
                   :alt="product.name"
                 />
                 <div class="portfolio-info">
@@ -93,31 +93,47 @@
 	export default {
 		props: ['products'],
      mounted(){
-       // Porfolio isotope and filter
-           $(window).on('load', function() {
-            var portfolioIsotope = $('.portfolio-container').isotope({
-              itemSelector: '.portfolio-item'
+      this.getVenobox()
+    },
+
+    methods: {
+      getVenobox(){
+                 // Porfolio isotope and filter
+                 $(window).on('load', function() {
+                  var portfolioIsotope = $('.portfolio-container').isotope({
+                    itemSelector: '.portfolio-item'
+                  });
+
+                  $('#portfolio-flters li').on('click', function() {
+                    $("#portfolio-flters li").removeClass('filter-active');
+                    $(this).addClass('filter-active');
+
+                    portfolioIsotope.isotope({
+                      filter: $(this).data('filter')
+                    });
+                    aos_init();
+                  });
+
+            // Initiate venobox (lightbox feature used in portofilo)
+            $('.venobox').venobox({
+              'share': false
             });
 
-            $('#portfolio-flters li').on('click', function() {
-              $("#portfolio-flters li").removeClass('filter-active');
-              $(this).addClass('filter-active');
+            // Initiate aos_init() function
+            aos_init();
 
-              portfolioIsotope.isotope({
-                filter: $(this).data('filter')
-              });
-              aos_init();
-            });
-
-        // Initiate venobox (lightbox feature used in portofilo)
-        $('.venobox').venobox({
-          'share': false
-        });
-
-        // Initiate aos_init() function
-        aos_init();
-
-      });
+          });
+      }
     }
 	}
 </script>
+
+<style>
+@media (min-width: 992px) {
+  .edit-height{
+    max-height: 18vh;
+    align-items: center;
+    margin-left: 5rem;
+  }
+}
+</style>

@@ -9,7 +9,7 @@
 				<div class="col-md-4 col-xs-3 col-sm-3">
 					<button type="submit" class="search btn btn-primary">
 						<div v-if="loading">
-							<img src="https://d2b8lqy494c4mo.cloudfront.net/mss/images/loading.gif" class="img-fluid">
+							<img src="https://d2b8lqy494c4mo.cloudfront.net/mss/images/loading.gif" class="img-fluid  loading-img">
 						</div>
 						<div v-else>
 							<i class='bx bx-lg bx-search-alt'></i>cari
@@ -107,6 +107,9 @@
 	.bx-search-alt{
 		font-size: 27px;
 		padding:2;
+	}
+	.loading-img {
+		max-width: 80px;
 	}
 	@media (min-width: 992px) {
 		.search{
