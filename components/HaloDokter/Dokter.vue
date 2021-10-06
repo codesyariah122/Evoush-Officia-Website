@@ -79,7 +79,7 @@
 				<input type="hidden" name="status" value="INACTIVE" v-model="consults.status">
 
 				<div class="form-group mt-5">
-					<small class="text-danger">Klik tombol (kirim pertanyaan) dibawah setelah selesai mengisi seluruh kolom input pertanyaan di atas</small><br>
+					<small class="text-danger">Klik tombol (Mulai Konsultasi) dibawah setelah selesai mengisi seluruh kolom input diatas</small><br>
 					<button type="submit" class="btn btn-primary btn-lg btn-block">
 						<div v-if="loading">
 							<small class="text-white">Loading ... dulu kak !</small> <br>
