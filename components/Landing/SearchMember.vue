@@ -4,10 +4,17 @@
 		<form @submit.prevent="SearchMember">
 			<div class="row justify-content-center">
 				<div class="col-md-8 col-xs-5 col-sm-5">
-					<input type="text" name="search" v-model="search.username" class="form-control" placeholder="Cari member berdasarkan username terdaftar" autofocus autocomplete="off">
+					<input type="text" name="search" v-model="search.username" class="form-control" placeholder="Cari member berdasarkan username terdaftar"autocomplete="off">
 				</div>
 				<div class="col-md-4 col-xs-3 col-sm-3">
-					<button type="submit" class="search btn btn-primary"><i class='bx bx-lg bx-search-alt'></i>cari</button>
+					<button type="submit" class="search btn btn-primary">
+						<div v-if="loading">
+							<img src="https://d2b8lqy494c4mo.cloudfront.net/mss/images/loading.gif" class="img-fluid">
+						</div>
+						<div v-else>
+							<i class='bx bx-lg bx-search-alt'></i>cari
+						</div>
+					</button>
 				</div>
 			</div>
 		</form>
@@ -27,8 +34,6 @@
 		<div v-else>
 			<div v-if="message" :class="message === `Data username ${username} ditemukan` ? 'alert alert-success mt-5' : 'alert alert-warning mt-5'">
 				{{ message }}
-				<br>
-				<img src="https://www.socialketchup.in/wp-content/uploads/2017/09/every-content-writer.gif" class="img-fluid mt-3">
 			</div>
 
 				<CardMember :members="members"/>
@@ -66,9 +71,11 @@
 				const username = this.search.username
 				if(username === ""){
 					this.error = "Kolom input username wajib di isi"
-					this.loading = false
 					this.members = ''
 					this.message = ''
+					setTimeout(() => {
+						this.loading = false
+					}, 1500)
 				}else{
 					this.$axios(`https://app.evoush.com/api/member/search/${username}`)
 					.then(res => {
@@ -103,7 +110,8 @@
 	}
 	@media (min-width: 992px) {
 		.search{
-
+			margin-top:-.3rem;
+			width: 30%;
 		}
 	}
 </style>
