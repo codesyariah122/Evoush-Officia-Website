@@ -186,7 +186,7 @@
 
 @media (min-width: 992px) {
 	.box-management {
-		max-height: 43vh;
+		max-height: 70vh;
 	}
 	._content-img-profile{
 		height: 490px;
@@ -194,7 +194,7 @@
 	}
 
 	._content-img-profile img{
-		max-height: 467px!important;
+		max-height: 469px!important;
 
 	}
 
