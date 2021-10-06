@@ -110,6 +110,13 @@
 					</div>
 
 		</div>
+
+		<div class="row justify-content-center mt-5 mb-5">
+			<div class="col-lg-10 col-xs-10 col-sm-10">
+				<search-member/>
+			</div>
+		</div>
+
 	</div>
 </section>
 <!-- End Services Section -->
@@ -119,11 +126,13 @@
 
 <script>
 	import pagination from 'laravel-vue-pagination'
+	import SearchMember from './SearchMember'
 
 	export default {
 
 		components: {
-			pagination
+			pagination,
+			SearchMember
 		},
 
 
