@@ -28,7 +28,6 @@
 								</option>
 							</select>
 						</div> -->
-
 					</form>
 				</div>
 			</div>
@@ -41,14 +40,13 @@
 					<small class="text-primary mt-5">Loading ... </small><br>
 					<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" class="img-fluid" width="50">
 				</center>
-
 			</div>
 
 			<!-- <pre>
 				{{ filter }}
 			</pre> -->
 
-			<CardHadist v-if="show_number" :results="numbers" :hadistToShow="hadistToShow" :totalHadist="totalHadist" :name="hadistName"/>
+			<CardHadist v-if="show_number" :results="numbers" :hadistToShow="hadistToShow" :totalHadist="totalHadist" :name="hadistName" :loading="loading"/>
 
 			<div v-if="errorEmpty">
 				<div class="alert alert-warning">

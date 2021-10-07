@@ -7,7 +7,7 @@
 				</video>
 			</div>
 			<div class="col-lg-12 col-xs-12 col-sm-12 mt-5 mb-2">
-				<blockquote class="blockquote-footer" style="width: 400px;">
+				<blockquote class="blockquote-footer" style="width: 300px;">
 					Hai, evousher dimana pun anda berada... <br>
 					saat ini anda bisa berkonsultasi via chat di official website evoush, untuk memulai chat silahkan klik atau tap tombol Dokter Evoush dibawah ini, selanjutnya anda di wajibkan mengisi kolom input yang tersedia.
 				</blockquote>

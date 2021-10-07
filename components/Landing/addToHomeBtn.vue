@@ -23,8 +23,8 @@ export default {
     message: null
   }),
   mounted() {
-    this.captureEvent(),
-    console.log(this.deferredPrompt)
+    this.captureEvent()
+    // console.log(this.deferredPrompt)
   },
   methods: {
     captureEvent() {

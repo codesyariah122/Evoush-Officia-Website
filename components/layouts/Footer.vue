@@ -27,15 +27,15 @@
 				</div>
 				<div class="col-lg-12 mt-5 col-xs-12 col-sm-12">
 					<h6><u>Sitemap : </u></h6>
-					<div class="container mt-3">
+					<div class="container">
 						<div class="row justify-content-center">
 							<ul class="sitemap">
-								<li v-for="site in sites">
+								<li  v-for="site in sites">
 									<div v-if="site.name !== 'Landing Product'">
 										<a :href="site.url" class="ml-3">{{ site.name }}</a>
 									</div>
 									<br>
-									<div style="margin-top:-1rem;" v-if="site.name === 'Landing Product'">
+									<div v-if="site.name === 'Landing Product'">
 										<span class="badge badge-primary" > {{ site.name }} </span>
 										<ol class="ml-4" style="list-style: none; text-align: left;">
 											<li v-for="landing in landings">
@@ -96,6 +96,12 @@
 	.sitemap{
 		list-style: none;
 		display: flex;
-
 	}
+	@media(min-width: 992px){
+		.sitemap{
+			list-style: none;
+			display: flex;
+		}
+	}
+
 </style>

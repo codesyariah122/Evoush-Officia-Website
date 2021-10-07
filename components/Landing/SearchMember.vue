@@ -9,7 +9,8 @@
 				<div class="col-md-4 col-xs-3 col-sm-3">
 					<button type="submit" class="search btn btn-primary">
 						<div v-if="loading">
-							<img src="https://d2b8lqy494c4mo.cloudfront.net/mss/images/loading.gif" class="img-fluid  loading-img">
+							<small class="text-white">Loading ...</small><br>
+							<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" class="img-fluid  loading-img">
 						</div>
 						<div v-else>
 							<i class='bx bx-lg bx-search-alt'></i>cari
@@ -68,7 +69,9 @@
 		methods:{
 			SearchMember(){
 				this.loading = true
+				this.error = ''
 				const username = this.search.username
+
 				if(username === ""){
 					this.error = "Kolom input username wajib di isi"
 					this.members = ''
@@ -80,7 +83,7 @@
 					this.$axios(`https://app.evoush.com/api/member/search/${username}`)
 					.then(res => {
 						this.error = false
-						console.log(res.data)
+						// console.log(res.data)
 						this.search.username = ''
 						setTimeout(() => {
 							this.loading = false
@@ -109,7 +112,7 @@
 		padding:2;
 	}
 	.loading-img {
-		max-width: 80px;
+		max-width: 30px;
 	}
 	@media (min-width: 992px) {
 		.search{

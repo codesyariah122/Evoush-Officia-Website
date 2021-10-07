@@ -109,13 +109,11 @@
 						<pagination align="center" :data="members" @pagination-change-page="listMembers"></pagination>
 					</div>
 
-		</div>
-
-		<div class="row justify-content-center mt-5 mb-5">
-			<div class="col-lg-10 col-xs-10 col-sm-10">
-				<search-member/>
+			<div class="col-lg-10 col-xs-10 col-sm-10 mt-5 mb-5">
+				<SearchMember/>
 			</div>
 		</div>
+
 
 	</div>
 </section>
@@ -141,7 +139,8 @@
 				ip: '',
 				city: '',
 				country: '',
-				members: []
+				members: [],
+				data:[]
 			}
 		},
 

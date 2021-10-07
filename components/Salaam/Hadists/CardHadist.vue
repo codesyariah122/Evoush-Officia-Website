@@ -24,7 +24,14 @@
 
 		<div v-if="hadistToShow < results.length || results.length > hadistToShow" class="col-lg-12 col-xs-12 col-sm-12">
 			<div class="d-grid gap-2">
-				<button @click="hadistToShow += 4" class="btn btn-outline-primary btn-load-more btn-lg btn-block">Load More Hadist</button>
+				<button @click="hadistToShow += 4" class="btn btn-outline-primary btn-load-more btn-lg btn-block">
+					<div v-if="loading">
+						<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" class="img-fluid" width="50">
+					</div>
+					<div v-else>
+						Lihat Lebih Banyak
+					</div>
+				</button>
 			</div>
 		</div>
 
