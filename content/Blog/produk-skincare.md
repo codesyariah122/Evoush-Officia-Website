@@ -17,12 +17,14 @@ categories: news
 <center>
     <img src="https://media0.giphy.com/media/XfmwPzZCV1RSdJENzD/200.gif" class="img-fluid">
 </center>  
+
 Kehadiran produk skincare berperan besar dalam mewujudkan kulit tubuh dan wajah yang sehat menawan. Produk-produk ini bekerja dengan cara yang beragam sesuai masalah kulit, mulai dari melembapkan, memberikan nutrisi, hingga melindungi lapisan kulit.
 
 Namun, sebelum membahas lebih jauh mengenai produk skincare sesuai tipe kulit, sebenarnya apa saja produk-produk perawatan kulit dasar yang sebaiknya digunakan tiap orang?  
 
 #### Bahan-bahan aktif dalam produk skincare  
 <img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/master/blog/skincare_product.jpg" class="img-fluid">  
+
 Produk skincare adalah produk yang cara kerja dan bahan-bahan aktif di dalamnya difungsikan untuk merawat kulit. Pemilik kulit normal, kombinasi, bahkan kulit sensitif kini dapat menemukan rangkaian skincare yang diperuntukkan bagi kulitnya.  
 
 Bahan-bahan aktif yang dimaksud dalam produk skincare adalah bahan-bahan yang bekerja langsung untuk mengatasi masalah kulit penggunanya. Bahan-bahan ini telah terbukti secara ilmiah memiliki manfaat atau efek tertentu pada kulit.
@@ -30,7 +32,7 @@ Bahan-bahan aktif yang dimaksud dalam produk skincare adalah bahan-bahan yang be
 Setiap produk skincare memiliki bahan aktif yang berbeda-beda. Bahkan, produk skincare alami pun mengandung bahan aktifnya sendiri. Zat-zat tersebutlah yang membuat suatu produk perawatan kulit bisa bekerja dengan ampuh.  
 
 <center>
-    <div class="card" style="width: 21rem;">
+    <div class="card card-quran" style="width: 21rem;">
       <img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/master/DOKTER/FIXED%203.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Halo Dokter Evoush</h5>

@@ -66,7 +66,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .cover {
 	width: 100%;
 }
@@ -78,14 +78,23 @@ export default {
 
 	.nuxt-content h2 {
 		font-weight: bold;
-		font-size: 41px;
+		font-size: 45px;
 		text-align: center;
 		margin-bottom: 5rem;
 	}
+	.nuxt-content h4 {
+		font-weight: bold;
+		font-size: 37px;
+	}
+	.nuxt-content h5 {
+		font-weight: bold;
+		font-size: 30px;
+	}
 	.nuxt-content p {
 		margin-bottom: 30px;
-		font-size: 16px;
+		font-size: 21px;
 		text-align: justify;
 	}
 </style>
+
 
