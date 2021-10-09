@@ -151,7 +151,8 @@ export default {
     },
     {
       src: 'https://platform-api.sharethis.com/js/sharethis.js#property=61606506ea6eca00151d8ce7&product=inline-reaction-buttons',
-      async: 'async'
+      async: 'true',
+      type: 'text/javascript'
     },
     // {
     //   src: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js',

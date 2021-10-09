@@ -32,7 +32,7 @@
 							<div class="row justify-content-center">
 								<div class="col-lg-12 col-xs-12 col-sm-12">
 									<div v-if="member.avatar" class="container">
-										<img :src="`https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
+										<img :src="`https://raw.githubusercontent.com/evoush-products/bahan_evoush/master/migration_db/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 
 											<button class="btn btn-sm btn-primary mt-3 mb-2" @click="openUpdateAvatar"><i class='bx bxs-edit bx-lg'></i> Update Foto Profile</button>
 										<!-- <div v-if="preview">

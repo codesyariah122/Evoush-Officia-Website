@@ -47,11 +47,12 @@
 					{id:2, name: 'Landing Product', url:''}
 				)
 				this.landings.push(
-					{id:1, name: 'Gilcam Propolis', url: 'https://propolis.netlify.app/'},
-					{id:2, name: 'Brightening Beauty Soap', url: 'https://evoush-beauty-soap.netlify.app/'},
-					{id:3, name: 'Kileon', url: 'https://kileon.netlify.app/'},
-					{id:4, name: 'Perfect Lipmatte', url: 'https://evoush-perfect-lipmatte.netlify.app/'},
-					{id:5, name: 'Peeling Spray', url: 'https://peeling-spray.netlify.app/'}
+					{id:1, name: 'Evoush Github', url: 'https://evoush-products.github.io/'},
+					{id:2, name: 'Gilcam Propolis', url: 'https://propolis.netlify.app/'},
+					{id:3, name: 'Brightening Beauty Soap', url: 'https://evoush-beauty-soap.netlify.app/'},
+					{id:4, name: 'Kileon', url: 'https://kileon.netlify.app/'},
+					{id:5, name: 'Perfect Lipmatte', url: 'https://evoush-perfect-lipmatte.netlify.app/'},
+					{id:6, name: 'Peeling Spray', url: 'https://peeling-spray.netlify.app/'}
 				)
 			}
 		}
