@@ -31,7 +31,7 @@
 							</p>
 							<p>
 								Selengkapnya tentang <b>Bapak. {{management.name}}</b> <br>
-								<a :href="management.link_profile" class="btn btn-primary mt-5">Lebih Lanjut</a>
+								<a target="_blank" :href="management.link_profile" class="btn btn-primary mt-5">Lebih Lanjut</a>
 							</p>
 						</div>
 
@@ -186,10 +186,10 @@
 
 @media (min-width: 992px) {
 	.box-management {
-		max-height: 68vh;
+		max-height: 50vh;
 	}
 	._content-img-profile{
-		height: 490px;
+		height: 520px;
 		margin-top: .1rem;
 	}
 

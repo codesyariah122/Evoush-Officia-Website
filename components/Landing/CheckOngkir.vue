@@ -76,7 +76,7 @@
 						Terjadi kesalahan harap periksa kembali kolom input check ongkir diatas
 					</div>
 					<center>
-						<img src="https://media2.giphy.com/media/l2R06FEpVRk6IroNq/200.gif" class="img-fluid mt-3">
+						<img src="https://media4.giphy.com/media/ihqsreBMsumPylnZFx/giphy.gif" class="img-fluid mt-3">
 					</center>
 				</div>
 

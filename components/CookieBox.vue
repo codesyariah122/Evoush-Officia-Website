@@ -21,7 +21,7 @@
       >
         <div class="col-lg-12">
           <center>
-            <button class="btn btn-primary btn-lg">Setuju</button>
+            <button @click="Accepted" class="btn btn-primary btn-lg">Setuju</button>
           </center>
         </div>
       </template>
@@ -43,6 +43,12 @@
       // if(document.querySelector('.cookie-consent-compliance')){
       //   document.querySelector('.cookie-consent-compliance').style.visibility="hidden"
       // }
+    },
+
+    methods: {
+      Accepted(){
+        this.$toast('Ok evousher')
+      }
     }
 	}
 </script>

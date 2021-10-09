@@ -20,14 +20,6 @@
 			</div>
 		</form>
 
-		<div v-if="error">
-			<div class="alert alert-danger mt-3">
-				{{ error }}
-			</div>
-			<!-- <img src="https://64.media.tumblr.com/aac2f5a3e634799d9b15fa20218efa51/tumblr_p9rgvzIBhe1wxdq3zo1_500.gifv" class="img-fluid mt-2 mb-5"> -->
-			<img v-if="!loading" src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/a7ec8cdbaccc66257bbdc5d2d82d8a202069d8b9/assets/alert-assets/error-no-result.svg" class="img-fluid mb-5 mt-2">
-		</div>
-
 		<div v-if="loading">
 			<!-- <img src="https://media.baamboozle.com/uploads/images/61672/1613937931_188128_gif-url.gif" class="img-fluid"> -->
 			<div class="d-flex align-items-start">
@@ -36,20 +28,37 @@
 			</div>
 		</div>
 
-		<div v-else>
-			<div v-if="message === `Data username ${username} ditemukan`" class="alert alert-success mt-5">
-				{{ message }}
+		<div v-if="error">
+			<div class="alert alert-danger mt-3">
+				{{ error }}
 			</div>
-			<div v-else>
-				<center>
-					<img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/a7ec8cdbaccc66257bbdc5d2d82d8a202069d8b9/assets/alert-assets/error-no-result.svg" width="400" class="img-fluid mb-2 mt-2">
-				</center>
-				<div class="alert alert-warning">
+			<!-- <img src="https://64.media.tumblr.com/aac2f5a3e634799d9b15fa20218efa51/tumblr_p9rgvzIBhe1wxdq3zo1_500.gifv" class="img-fluid mt-2 mb-5"> -->
+			<center>
+				<img  src="https://i.pinimg.com/originals/5b/a7/5f/5ba75f2cf22105ce68ac7bae24cd5eac.gif" width="400" class="img-fluid mb-5 mt-2">
+			</center>
+		</div>
+
+
+		<div v-else>
+			<div v-if="show">
+
+				<div v-if="message === `Data username ${username} ditemukan`" class="alert alert-success mt-5">
 					{{ message }}
 				</div>
+
+				<div v-else>
+					<center>
+						<img  src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/a7ec8cdbaccc66257bbdc5d2d82d8a202069d8b9/assets/alert-assets/error-no-result.svg" width="400" class="img-fluid mb-2 mt-2">
+						<br>
+						<div class="alert alert-warning">
+							{{ message }}
+						</div>
+					</center>
+				</div>
+
 			</div>
 
-				<CardMember :members="members"/>
+			<CardMember :members="members"/>
 
 			</div>
 		</div>
@@ -70,7 +79,7 @@
 					username: ''
 				},
 				loading: null,
-
+				show: false,
 				members: [],
 				message: '',
 				error: '',
@@ -80,29 +89,31 @@
 
 		methods:{
 			SearchMember(){
+				this.show = false
 				this.loading = true
 				this.error = ''
 				const username = this.search.username
 
 				if(username === ""){
-					this.error = "Kolom input username wajib di isi"
-					this.members = ''
-					this.message = ''
 					setTimeout(() => {
+						this.error = "Kolom input username wajib di isi"
+						this.members = ''
+						this.message = ''
 						this.loading = false
 					}, 1500)
 				}else{
 					this.$axios(`https://app.evoush.com/api/member/search/${username}`)
 					.then(res => {
-						this.error = false
-						// console.log(res.data)
-						this.search.username = ''
-						setTimeout(() => {
+						this.members = res.data.data
+						console.log(this.members)
+						if(this.members != ""){
+							this.search.username = ''
 							this.loading = false
-							this.members = res.data.data
+							this.show = true
+							this.error = false
 							this.message = res.data.message
 							this.username = this.members[0].username
-						}, 1500)
+						}
 					})
 					.catch(err => {
 						console.log(err)

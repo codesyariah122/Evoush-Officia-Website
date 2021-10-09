@@ -34,7 +34,9 @@
 								<!-- {{ imgBox }} -->
 								<div v-if="loading">
 									<!-- <img src="https://cdn.lowgif.com/full/fa958edd71a23366-.gif" class="img-fluid" width="300"> -->
-									<img src="http://www.orlift.com/en/images/loader.gif" class="img-fluid" width="400">
+									<div class="round-hero">
+									</div>
+									<img src="http://www.orlift.com/en/images/loader.gif" class="img-fluid rotate loading-imgbox">
 								</div>
 								<div v-else>
 									<div class="round-hero">
@@ -119,8 +121,12 @@
 				}
 			},
 			ClickMe(imgBox, nameBox, descBox){
-				this.showBox = true
-				this.imgBox = imgBox
+				this.loading = true
+				setTimeout(() => {
+					this.loading = false
+					this.showBox = true
+					this.imgBox = imgBox
+				}, 2500)
 				// setTimeout(() => {
 				// 	this.showBox = false
 				// 	alert('Timeout')
@@ -208,7 +214,13 @@
 	margin-left: 2rem;
 	/*filter: drop-shadow(5px 10px black);*/
 }
+.loading-imgbox{
+	width: 300px;
+}
 @media (min-width: 992px) {
+	.loading-imgbox{
+		width: 500px;
+	}
 	.interactive-product img{
 		max-width: 800px;
 		margin-top: -55rem;
