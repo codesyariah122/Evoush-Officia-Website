@@ -154,6 +154,7 @@
     });
 
     $('#portfolio-flters li').on('click', function() {
+      alert("Ok")
       $("#portfolio-flters li").removeClass('filter-active');
       $(this).addClass('filter-active');
 
@@ -173,9 +174,9 @@
 
   });
 
-  
 
- 
+
+
 })(jQuery);
 
 

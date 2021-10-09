@@ -3,6 +3,9 @@
 		<nav class="nav-menu">
 			<ul>
 				<div v-if="token && username">
+					<!-- <pre>
+						{{ token }}
+					</pre> -->
 					<li>
 						<nuxt-link :to="`/profile/${user.username}`"><i class='bx bxs-user-detail'></i> <span>{{username}}</span></nuxt-link>
 					</li>
@@ -62,6 +65,7 @@
 		},
 
 		mounted(){
+			// console.log(this.token),
 			if(this.token){
 				this.$axios.defaults.headers.common.Authorization = `Bearer ${this.token}`
 				this.$axios.get('/api/user')
@@ -72,7 +76,7 @@
 					console.log(error.response.data)
 				})
 			}
-		},
 
+		}
 	}
 </script>

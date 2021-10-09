@@ -39,6 +39,12 @@
                                 {{ validation.password[0] }}
                             </small>
 							<input type="submit" name="" value="Login" href="#">
+							<div v-if="loading">
+								<div class="d-flex align-items-start">
+									<strong>Loading...</strong>
+									<div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+								</div>
+							</div>
 							<br>
 							<a @click="historyBack()" class="back">Kembali</a>
 
@@ -102,6 +108,7 @@
 				validation: {},
 				loginFailed: null,
 				token: localStorage.getItem('token'),
+				loading: null
 			}
 		},
 		head(){
@@ -137,6 +144,7 @@
 		methods:{
 
 			login(){
+				this.loading = true
 				let username = this.user.username
 				let password = this.user.password
 				this.$axios.post('/login', {
@@ -146,6 +154,7 @@
 				.then(res => {
 					// console.log(res)
 					if(res.data.success){
+						this.loading = false
 						localStorage.setItem('token', res.data.token)
 						localStorage.setItem('username', res.data.data.username)
 						// this.$swal({
@@ -162,9 +171,11 @@
 					}
 
 					this.loginFailed = true
+					this.loading = false
 				})
 				.catch(err => {
 					// console.log(err)
+					this.loading = false
 					this.validation = err.response.data
 				})
 			},

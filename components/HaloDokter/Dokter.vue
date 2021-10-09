@@ -82,8 +82,10 @@
 					<small class="text-danger">Klik tombol (Mulai Konsultasi) dibawah setelah selesai mengisi seluruh kolom input diatas</small><br>
 					<button type="submit" class="btn btn-primary btn-lg btn-block">
 						<div v-if="loading">
-							<small class="text-white">Loading ... dulu kak !</small> <br>
-							<img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" width="70" class="img-fluid">
+							<div class="d-flex align-items-start">
+								<strong>Loading...</strong>
+								<div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+							</div>
 						</div>
 						<div v-else>
 							Mulai Konsultasi

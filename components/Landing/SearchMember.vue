@@ -25,16 +25,28 @@
 				{{ error }}
 			</div>
 			<!-- <img src="https://64.media.tumblr.com/aac2f5a3e634799d9b15fa20218efa51/tumblr_p9rgvzIBhe1wxdq3zo1_500.gifv" class="img-fluid mt-2 mb-5"> -->
-			<img v-if="!loading" src="https://cdn.dribbble.com/users/2272148/screenshots/6633933/daily008.gif" class="img-fluid mb-5 mt-2">
+			<img v-if="!loading" src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/a7ec8cdbaccc66257bbdc5d2d82d8a202069d8b9/assets/alert-assets/error-no-result.svg" class="img-fluid mb-5 mt-2">
 		</div>
 
 		<div v-if="loading">
-			<img src="https://media.baamboozle.com/uploads/images/61672/1613937931_188128_gif-url.gif" class="img-fluid">
+			<!-- <img src="https://media.baamboozle.com/uploads/images/61672/1613937931_188128_gif-url.gif" class="img-fluid"> -->
+			<div class="d-flex align-items-start">
+				<strong>Loading...</strong>
+				<div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+			</div>
 		</div>
 
 		<div v-else>
-			<div v-if="message" :class="message === `Data username ${username} ditemukan` ? 'alert alert-success mt-5' : 'alert alert-warning mt-5'">
+			<div v-if="message === `Data username ${username} ditemukan`" class="alert alert-success mt-5">
 				{{ message }}
+			</div>
+			<div v-else>
+				<center>
+					<img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/a7ec8cdbaccc66257bbdc5d2d82d8a202069d8b9/assets/alert-assets/error-no-result.svg" width="400" class="img-fluid mb-2 mt-2">
+				</center>
+				<div class="alert alert-warning">
+					{{ message }}
+				</div>
 			</div>
 
 				<CardMember :members="members"/>
@@ -117,7 +129,7 @@
 	@media (min-width: 992px) {
 		.search{
 			margin-top:-.3rem;
-			width: 30%;
+			width: 50%;
 		}
 	}
 </style>

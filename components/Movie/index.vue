@@ -2,7 +2,13 @@
 	<div>
 		<input type="search" v-model="keyword.title" name="keyword" id="keyword" class="form-control" placeholder="ketikan judul film yang ingin dicari" @keyup="getMovie" autocomplete="off">
 
-		<img v-if="loading" class="loading" src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif"/>
+		<!-- <img v-if="loading" class="loading" src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif"/> -->
+		<div v-if="loading">
+			<div class="d-flex align-items-start mt-2">
+				<strong>Loading...</strong>
+				<div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+			</div>
+		</div>
 
 		<div class="row justify-content-start">
 			<!-- <div v-if="loading" class="col-md-4 col-xs-12 col-sm-12 mt-5">

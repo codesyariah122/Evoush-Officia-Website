@@ -23,8 +23,8 @@
 							<!-- <pre>
 								{{ check }}
 							</pre> -->
-							<div class="alert alert-warning alert-dismissible fade show" role="alert">
-								<strong>Halo {{ check[0].username }}!</strong> Untuk Memulai konsultasi Bersama Dokter Winda Silahkan Memulai Chat Di Bagian Kiri, atau di chatbox yang telah aktif.
+							<div class="alert alert-success alert-dismissible fade show" role="alert">
+								<strong>Halo {{ check[0].username }}!</strong> Setelah melakukan Refresh Halaman, Untuk Memulai konsultasi Bersama Dokter Winda Silahkan Memulai Chat Di Bagian Kiri, atau di chatbox yang telah aktif.
 								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>

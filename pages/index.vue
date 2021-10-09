@@ -73,7 +73,7 @@
 
 		<h1 class="underline" style="margin-top: 5rem;"></h1>
 		<!-- <Product :products="results"/> -->
-		<NewProduct :products="products"/>
+		<NewProduct :allproducts="products" :nutritions="nutritions" :cosmetics="cosmetics"/>
 
 		<hr>
 
@@ -178,8 +178,10 @@
 
 		async asyncData({$commerce, $content, params, $axios, $config}){
 			const {data: products} = await $commerce.products.list()
+			const cosmetics = products.filter(d => d.categories[0].name === "Cosmetics")
+			const nutritions = products.filter(d => d.categories[0].name === "Nutrisi")
 
-			// console.log(products)
+			// console.log(nutritions)
 
 			const channel_id = 'UCIzNgeNDD58z8XNppkopwzw'
 			const playlist_id = 'PLblvVtAgjh4DwLORfIHawwIVvaosP-YCA'
@@ -195,7 +197,7 @@
 			.fetch();
 
 
-			return { results, products, members, articles, channels, latestVideos, playlistVideos}
+			return { results, products, cosmetics, nutritions, members, articles, channels, latestVideos, playlistVideos}
 		},
 		data(){
 			return {

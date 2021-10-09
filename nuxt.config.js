@@ -9,6 +9,9 @@ export default {
     color: '#ff3b40',
     height: '15px'
   },
+  server: {
+    port: process.env.PORT
+  },
   // loading: '~/components/LoadingBar.vue',
   body: true,
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -146,6 +149,10 @@ export default {
       async: 'true',
       'custom-element': 'amp-ad'
     },
+    {
+      src: 'https://platform-api.sharethis.com/js/sharethis.js#property=61606506ea6eca00151d8ce7&product=inline-reaction-buttons',
+      async: 'async'
+    },
     // {
     //   src: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js',
     //   async: '',
@@ -173,10 +180,10 @@ export default {
       src: 'https://cdn.jsdelivr.net/npm/chart.js@2.8.0',
       type: 'text/javascript'
     },
-    {
-      src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-609818ffd946e881',
-      type: 'text/javascript'
-    },
+    // {
+    //   src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-609818ffd946e881',
+    //   type: 'text/javascript'
+    // },
     {
       src: '/assets/vendor/jquery/jquery.min.js',
       type: 'text/javascript'
@@ -382,6 +389,7 @@ export default {
     { src: '~/plugins/sweetalert2', ssr: false},
     { src: '~/plugins/axios', ssr: false},
     { src: '~/plugins/vue-mobile-detect'}
+    // { src: '~/plugins/VuexPersist', ssr: false}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -396,6 +404,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
+    // 'nuxt-vuex-localstorage',
     ['nuxt-gmaps', {
       key: 'AIzaSyBf-xwTi-Hagcxhz2T3bq1mPjUBhWXCvAU'
     }],

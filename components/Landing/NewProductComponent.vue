@@ -26,56 +26,25 @@
               data-aos-delay="100"
             >
               <ul id="portfolio-flters">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-nutrisi">Nutrisi</li>
-                <li data-filter=".filter-kosmetik">Kosmetik</li>
+                <li data-filter="*" :class="showall ? 'filter-active' : ''" @click="ShowAllProducts">All</li>
+                <li data-filter=".filter-nutrisi" :class="shownutrisi ? 'filter-active' : ''" @click="Nutrition">Nutrisi</li>
+                <li data-filter=".filter-kosmetik" :class="showkosmetik ? 'filter-active' : ''" @click="Cosmetics">Kosmetik</li>
               </ul>
             </div>
           </div>
 
-          <div
-            class="row portfolio-container"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
+          <AllProducts v-if="showall" :allproducts="allproducts"/>
+
+          <NutrisiProducts v-if="shownutrisi" :nutritions="nutritions"/>
+
+          <CosmeticProducts v-if="showkosmetik" :cosmetics="cosmetics"/>
 
           <!-- <pre>
             {{ products.reverse() }}
           </pre> -->
 
-            <div v-for="product in products" :class="`${product.categories.map(d => (d.name === 'Nutrisi') ? 'col-lg-4 portfolio-item filter-nutrisi' : 'col-lg-4 portfolio-item filter-kosmetik')}`">
-              <div class="portfolio-wrap">
 
-                <img
-                  :src="product.assets[0].url"
-                  :class="product.name === 'klev whitening serum' ? 'edit-height img-fluid' : 'img-fluid'"
-                  :alt="product.name"
-                />
-                <div class="portfolio-info">
-                  <h4>{{product.name}}</h4>
-                  <p v-for="category in product.categories">
-                  	{{category.name}}</p>
-                  <div class="portfolio-links mt-3">
-                    <a
-                      :href="product.assets[0].url"
-                      data-gall="productGallery"
-                      class="venobox btn btn-sm btn-primary text-white"
-                      :title="product.name"
-                      ><i class="bx bx-plus"></i
-                    ></a>
-                    <nuxt-link
-                      :to="{name: `product-permalink`, params: {permalink: product.permalink}}"
-                      data-gall="portfolioDetailsGallery"
-                      data-vbtype="iframe"
-                      class="venobox btn btn-sm btn-success text-white"
-                      :title="`Detail ${product.name}`"
-                      ><i class='bx bx-window-open'></i> Lihat</nuxt-link>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-          </div>
         </div>
       </section>
       <!-- End Portfolio Section -->
@@ -90,39 +59,42 @@
 </style>
 
 <script>
+  import AllProducts from './ListProducts/AllProducts'
+  import NutrisiProducts from './ListProducts/NutrisiProducts'
+  import CosmeticProducts from './ListProducts/CosmeticProducts'
+
 	export default {
-		props: ['products'],
-     mounted(){
-      this.getVenobox()
+    components:{
+      AllProducts,
+      NutrisiProducts,
+      CosmeticProducts
+    },
+
+		props: ['allproducts', 'nutritions', 'cosmetics'],
+
+    data(){
+      return {
+        showall: true,
+        shownutrisi: false,
+        showkosmetik: false
+      }
     },
 
     methods: {
-      getVenobox(){
-                 // Porfolio isotope and filter
-                 $(window).on('load', function() {
-                  var portfolioIsotope = $('.portfolio-container').isotope({
-                    itemSelector: '.portfolio-item'
-                  });
-
-                  $('#portfolio-flters li').on('click', function() {
-                    $("#portfolio-flters li").removeClass('filter-active');
-                    $(this).addClass('filter-active');
-
-                    portfolioIsotope.isotope({
-                      filter: $(this).data('filter')
-                    });
-                    aos_init();
-                  });
-
-            // Initiate venobox (lightbox feature used in portofilo)
-            $('.venobox').venobox({
-              'share': false
-            });
-
-            // Initiate aos_init() function
-            aos_init();
-
-          });
+      ShowAllProducts(){
+        this.showall = true
+        this.shownutrisi = false
+        this.showkosmetik = false
+      },
+      Nutrition(){
+        this.showall=false
+        this.showkosmetik = false
+        this.shownutrisi = true
+      },
+      Cosmetics(){
+        this.showall = false
+        this.shownutrisi = false
+        this.showkosmetik = true
       }
     }
 	}

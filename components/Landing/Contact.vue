@@ -221,8 +221,12 @@
                   <div class="text-center">
                     <button type="submit" class="btn btn-primary mb-5">
                       <div v-if="loading">
-                        <small class="text-white">Loading ... </small> <br>
-                        <img src="http://www.esdairga.com/images/loading.gif" class="img-fluid" width="30">
+                        <!-- <small class="text-white">Loading ... </small> <br>
+                        <img src="http://www.esdairga.com/images/loading.gif" class="img-fluid" width="30"> -->
+                        <div class="d-flex align-items-start">
+                          <strong>Loading...</strong>
+                          <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+                        </div>
                       </div>
                       <div v-else>
                         <span>Send Message</span>
@@ -386,7 +390,7 @@
             this.err_message = "Terjadi kesalahan saat pengiriman pesan, harap periksa kembali kolom inputan dengan lengkap dan benar."
             this.errors = err.response.data
             console.log(err.response)
-            this.getAlert(this.err_message, 'https://c.tenor.com/ACsq1KK1S-UAAAAM/monday-work.gif', 'https://e7.pngegg.com/pngimages/906/961/png-clipart-white-bricks-and-wall-background-clean-walls.png')
+            this.getAlert(this.err_message, 'https://i.gifer.com/1AT.gif', 'https://e7.pngegg.com/pngimages/906/961/png-clipart-white-bricks-and-wall-background-clean-walls.png')
           })
           // .finally(()=>{
 

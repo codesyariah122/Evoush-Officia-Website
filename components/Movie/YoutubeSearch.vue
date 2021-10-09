@@ -2,7 +2,13 @@
 	<div>
 		<div class="form-group">
 			<input type="search" name="keyword" id="keyword" class="form-control" placeholder="Ketikan keyword untuk mencari video youtube" v-model="keyword" @keyup="SearchYoutube">
-			<img v-if="loading" class="loading" src="https://img.pikbest.com/58pic/35/39/61/62K58PICb88i68HEwVnm5_PIC2018.gif!w340">
+			<!-- <img v-if="loading" class="loading" src="https://img.pikbest.com/58pic/35/39/61/62K58PICb88i68HEwVnm5_PIC2018.gif!w340"> -->
+			<div v-if="loading">
+				<div class="d-flex align-items-start mt-2">
+					<strong>Loading...</strong>
+					<div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+				</div>
+			</div>
 		</div>
 
 
