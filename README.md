@@ -6,12 +6,12 @@
 Evoush dibangun dengan Progressive Web Application, saya pujiermanto sebagai fullstack engineer dari PT. Pineleng Indah Cemerlang (Evoush) - Jawa Timur.  
 WebApps Evoush ini dibangun sebagai media support untuk member perusahaan yaitu sebuah content web replika yang bisa menjadi support branding, dimana member mendapat fasilitas untuk menambahkan profile di dalam content web replika evoush ini.  
 Setiap member yang telah terdaftar di system web replika evoush bisa menggunakan fasilitas login yang bersumber dari system backend evoush yang di bangun dengan fondasi framework Laravel8 dan menggunakan module Passport sebagai vendor untuk verifikasi keamanan pada authentication login user.  
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/data_puji/saved1.jpg">  
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/data_puji/saved2.jpg">  
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/data_puji/saved5.jpg">  
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/data_puji/saved6.jpg">  
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/data_puji/saved7.jpg">  
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/data_puji/saved8.jpg">
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/master/data_puji/saved1.jpg">  
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/master/data_puji/saved2.jpg">  
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/master/data_puji/saved5.jpg">  
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/master/data_puji/saved6.jpg">  
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/master/data_puji/saved7.jpg">  
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/master/data_puji/saved8.jpg">
 
 ### Frontend WebApps Evoush  
 Webapps evoush sendiri dibangun menggunakan framework frontend yaitu NuxtJS yang di bangun dari fondasi dasar VueJS.  
