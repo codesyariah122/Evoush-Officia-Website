@@ -1,6 +1,6 @@
 # Evoush WebApps
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/data_puji/saved3.jpg">  
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/data_puji/saved4.jpg">
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/master/data_puji/saved3.jpg">  
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/master/data_puji/saved4.jpg">
 
 
 Evoush dibangun dengan Progressive Web Application, saya pujiermanto sebagai fullstack engineer dari PT. Pineleng Indah Cemerlang (Evoush) - Jawa Timur.  
