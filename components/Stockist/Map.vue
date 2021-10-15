@@ -36,6 +36,12 @@
 	</div>
 </template>
 
+<style scoped>
+	.leaflet-marker-pane:hover{
+		transform: translateY(45deg);
+	}
+</style>
+
 <script>
 	import ShowStockist from './ShowStockist'
 	export default {

@@ -9,9 +9,9 @@
 				</article>
 			</div>
 
-			<div class="col-lg-12 col-xs-12 col-sm-12">
-				<div class="sharethis-inline-reaction-buttons mt-5 mb-5"></div>
-			</div>
+			<!-- ShareThis BEGIN -->
+			<div class="sharethis-inline-reaction-buttons"></div>
+			<!-- ShareThis END -->
 
 			<div class="col-lg-12 col-xs-12 col-sm-12 mt-2 mb-5">
 				<Disqus />

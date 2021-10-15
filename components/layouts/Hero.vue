@@ -231,7 +231,7 @@
 		transform: rotate(17deg);
 	}
 	.box-sachet{
-		margin-top: 10rem;
+		margin-top: 3rem;
 		margin-bottom: 5rem;
 	}
 	.sachet{
@@ -253,7 +253,7 @@
 		width: 800px;
 		height:800px;
 		position: relative;
-		margin-top:-21rem;
+		margin-top:-15rem;
 		border-radius: 50%;
 		/*filter: drop-shadow(5px 10px black);*/
 	}

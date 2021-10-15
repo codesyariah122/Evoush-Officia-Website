@@ -15,6 +15,11 @@
 				</div>
 
 				<div class="row justify-content-center mt-5 mb-5">
+
+					<div class="col-lg-12 col-xs-12 col-sm-12">
+						<!-- <Games/> -->
+					</div>
+
 					<div class="col-lg-12 col-xs-12 col-sm-12">
 						<div class="card card-youtube">
 							<div class="card-body">
@@ -53,7 +58,6 @@
 				<h1 class="underline" style="margin-top: 5rem;"></h1>
 
 
-
 			</section>
 
 		</div>
@@ -64,11 +68,13 @@
 <script>
 	import Movie from '@/components/Movie/index'
 	import Youtube from '@/components/Movie/YoutubeSearch'
+	import Games from '@/components/Movie/Games'
 
 	export default {
 		components:{
 			Movie,
-			Youtube
+			Youtube,
+			Games
 		},
 		layout: 'pages',
 

@@ -186,15 +186,15 @@
 
 @media (min-width: 992px) {
 	.box-management {
-		max-height: 50vh;
+		max-height: 58vh;
 	}
 	._content-img-profile{
-		height: 520px;
-		margin-top: .1rem;
+		height: 500px;
+		margin-top: .3rem;
 	}
 
 	._content-img-profile img{
-		max-height: 469px!important;
+		max-height: 475px!important;
 
 	}
 
