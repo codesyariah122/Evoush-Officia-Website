@@ -100,6 +100,8 @@ export default {
 	.nuxt-content h4 {
 		font-weight: bold;
 		font-size: 37px;
+		margin-top:2rem;
+		margin-bottom:2rem;
 	}
 	.nuxt-content h5 {
 		font-weight: bold;
@@ -107,8 +109,10 @@ export default {
 	}
 	.nuxt-content p {
 		margin-bottom: 30px;
-		font-size: 21px;
+		font-size: 18px;
 		text-align: justify;
 	}
+
+
 </style>
 

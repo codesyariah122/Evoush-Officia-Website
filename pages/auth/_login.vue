@@ -11,9 +11,6 @@
 
 			<div class="row justify-content-center">
 				<div class="col-lg-12 col-xs-12 col-sm-12">
-					<div class="card">
-
-
 						<!-- <pre>
 						{{username}}
 						</pre> -->
@@ -69,7 +66,6 @@
 							</div>
 
 						</form>
-					</div>
 
 				</div>
 			</div>
@@ -215,19 +211,8 @@
 
 
 <style scoped>
-/*body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: linear-gradient(to right, #b92b27, #1565c0)
-}*/
-.card {
-	margin-bottom: 2px;
-	border: none
-}
-
 .box {
-	width: 300px;
+	width: 310px;
 	padding: 30px;
 	position: absolute;
 	/*top: 70%!important;*/
@@ -402,11 +387,11 @@ a.socialIcon:hover,
 }
 
 input[name="request-username"]{
-	margin-left: -1.5rem!important;
+	margin-left: -.1rem!important;
 }
 .btn-request{
 	font-size:14px;
-	margin-left:-.7rem;
+	margin-left:.7rem;
 	width:100%;
 	height:50px;
 	padding:12px;
@@ -414,15 +399,16 @@ input[name="request-username"]{
 @media (min-width: 992px) {
 	.box {
 		width: 600px;
+		height: 100vh;
 		padding: 100px;
-		position: absolute;
+		/*position: absolute;*/
 		/*top: 30%;*/
 		margin-top: 3rem!important;
+		margin-bottom: 15rem!important;
 		left: 25%;
 		background: #191919;
 		text-align: center;
 		transition: 0.25s;
-		margin-top: 100px;
 	}
 
 	.box h5{

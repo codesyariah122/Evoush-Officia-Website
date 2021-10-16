@@ -9,6 +9,7 @@
 				<nuxt-content :document="article" style="text-align: justify; font-size: 18px;"/>
 
 				<div class="sharethis-inline-reaction-buttons mt-5 mb-5"></div>
+
 			</div>
 			<div class="col-lg-12 col-xs-12 col-sm-12 mt-2 mb-5">
 				<Disqus />
@@ -85,6 +86,8 @@ export default {
 	.nuxt-content h4 {
 		font-weight: bold;
 		font-size: 37px;
+		margin-top:2rem;
+		margin-bottom:2rem;
 	}
 	.nuxt-content h5 {
 		font-weight: bold;
@@ -92,7 +95,7 @@ export default {
 	}
 	.nuxt-content p {
 		margin-bottom: 30px;
-		font-size: 21px;
+		font-size: 18px;
 		text-align: justify;
 	}
 </style>
