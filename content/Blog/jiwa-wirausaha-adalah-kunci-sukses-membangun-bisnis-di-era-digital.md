@@ -2,7 +2,7 @@
 title:  Jiwa Wirausaha adalah Kunci Sukses Dalam Membangun Bisnis diera Digital
 description: Ah .. aku sih gak bakat jadi pebisnis, "Nggak usah ciba-coba memulai bisnis...emang nggak bakat bisnis, udah...
 slug: jiwa-wirausaha-adalah-kunci-sukses-membangun-bisnis-di-era-digital
-img: cover.jpg
+img: entrepreneur.png
 author:
   name: evoush
   bio: Your Eternal Future

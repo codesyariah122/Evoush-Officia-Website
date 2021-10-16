@@ -5,9 +5,12 @@
 				<h6 class="mt-5">Cuaca : Kota {{ city }}</h6>
 				<img :src="`http://openweathermap.org/img/wn/${weather.icon}@2x.png`" class="img-fluid" width="100" height="100">
 				<span :class="main.temp < 30 ? 'badge badge-success' : 'badge badge-primary'">{{ weather.description }} &nbsp; {{ main.temp }}&deg;C <br>
-					<small v-if="main.temp < 30">Jaga kondisi tubuh / kesehatan Anda</small>
+					<small v-if="main.temp < 28">Cuaca sedang nyaman selamat menikmati hari ini</small>
+					<small v-else-if="main.temp > 28">
+						Cuaca sedang panas, penuhi nutrisi tubuh dengan product nutrisi evoush.
+					</small>
 					<small v-else>
-						Cuaca Sedang Baik Selamat Menikmati Hari ini
+						Cuaca cukup hangat saatnya memanjakan diri dengan perawatan kulit <br> menggunakan product kosmetik evoush.
 					</small>
 				</span>
 				<h6 v-if="main" class="text-info">

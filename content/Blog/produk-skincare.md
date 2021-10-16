@@ -14,10 +14,6 @@ tags:
 
 categories: news
 ---  
-<center>
-    <img src="https://media0.giphy.com/media/XfmwPzZCV1RSdJENzD/200.gif" class="img-fluid">
-</center>  
-
 Kehadiran produk skincare berperan besar dalam mewujudkan kulit tubuh dan wajah yang sehat menawan. Produk-produk ini bekerja dengan cara yang beragam sesuai masalah kulit, mulai dari melembapkan, memberikan nutrisi, hingga melindungi lapisan kulit.
 
 Namun, sebelum membahas lebih jauh mengenai produk skincare sesuai tipe kulit, sebenarnya apa saja produk-produk perawatan kulit dasar yang sebaiknya digunakan tiap orang?  

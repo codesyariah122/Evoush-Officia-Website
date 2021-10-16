@@ -2,7 +2,7 @@
 title: Bisnis Skincare Menjadi Booming dan Menarik di Tahun 2021
 description: Bisnis skincare di Indonesia memberikan peluang yang sangat menjanjikan. Berdasarkan data Euromonitor International bertajuk The International Future of Skincare, Indonesia dianggap akan menjadi penyumbang terbesar kedua untuk pertumbuhan perawatan kulit di dunia.
 slug: bisnis-skincare-menjadi-booming-dan-menarik-di-tahun-2021
-img: klev.gif
+img: our_new_product.gif
 author:
   name: evoush
   bio: Your Eternal Future

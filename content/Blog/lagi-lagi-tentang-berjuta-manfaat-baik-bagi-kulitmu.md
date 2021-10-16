@@ -2,7 +2,7 @@
 title: Lagi-lagi Tentang Berjuta Manfaat Baik Bagi Kulitmu
 description: Product terbaru evoush kali ini adalah sebuah whitening serum dan evoush selalu berinovasi dengan kualitas terbaik yang memiliki sejuta manfaat bagi kesehatan dan kecantikan kulit.
 slug: lagi-lagi-tentang-berjuta-manfaat-baik-bagi-kulitmu
-img: millions_benefits.gif
+img: million_benefits.gif
 author:
   name: evoush
   bio: Your Eternal Future
@@ -18,7 +18,7 @@ categories: news
 <img src="https://thumbs.gfycat.com/ParchedRelievedCopperbutterfly-max-1mb.gif" class="img-fluid mb-5">
 </center>  
 
-Siapa yang tidak ingin sehat, semua orang pasti menginginkan dan mengejarnya tentunya. Ada berjuta rangkaian product yang memberikan manfaat untuk merawat kesehatan kulit anda.  
+Siapa yang tidak ingin mempunyai kulit sehat yang terawat, semua orang pasti menginginkan dan mengejarnya tentunya. Ada berjuta rangkaian product yang memberikan manfaat untuk merawat kesehatan kulit anda.  
 <center>
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2CW3XHXN8zZxLoTGqzEpJ3xp7II7ovvkz4i_B0seoDl2K_GWGS6Los_1WA5JXWJnshVY&usqp=CAU" class="img-fluid mb-3">
 </center>  
