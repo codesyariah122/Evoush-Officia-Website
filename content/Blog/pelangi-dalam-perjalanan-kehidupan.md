@@ -15,7 +15,7 @@ tags:
 categories: article
 ---  
 
-### Pelangi dalam perjalanan kehidupan
+#### Pelangi dalam perjalanan kehidupan
 
 Pelangi merupakan fenomena alam di langit yang diciptakan **Allah sang maha pencipta**, dengan segala macam keindahan dan keelokannya. Pelangi sendiri merupakan sebuah simbol keanekaragaman, jika boleh di analogikan dari setiap warna dan warni pelangi, mampu menembus seluk beluk perbedaan dari segala aspek.  
 <img src="https://i.pinimg.com/originals/d8/ea/1a/d8ea1a7a7be9e0e5c65168049b21ceb8.jpg" class="img-fluid">

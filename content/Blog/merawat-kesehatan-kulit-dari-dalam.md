@@ -15,9 +15,9 @@ tags:
 categories: news
 ---  
 
-### Merawat Kesehatan Kulit Dari Dalam Dengan Evost SOP 5000 Collagen
+#### Merawat Kesehatan Kulit Dari Dalam Dengan Evost SOP 5000 Collagen
 
-### Bismillah  
+#### Bismillah  
 Assalamualikum evousher semua, apa kabarnya, mudah-mudahan sehat-sehat selalu. Dalam artikel kali ini mimin ingin berbagi tips dan cerita seputar product collage **evoush** yang merupakan product terbaru dari evoush. Product yang akan mimin bahas kali ini adalah **Evost SOP 5000 Collagen**, yuk kita simak apa aja manfaat dan kelebihan dari product terbaru evoush ini.  
 
 #### Evost SOP 5000 Collagen  
@@ -28,7 +28,7 @@ Assalamualikum evousher semua, apa kabarnya, mudah-mudahan sehat-sehat selalu. D
 Kolagen juga ditemukan pada bagian tubuh lainnya, seperti pembuluh darah, kornea mata, dan gigi. Ibaratnya, kolagen adalah lem yang merekatkan keseluruhan tubuh menjadi satu kesatuan.
 
 Selain merekatkan, kolagen juga memiliki manfaat dalam memulihkan jaringan tubuh yang terluka, memperkuat tulang, serta melenturkan jaringan tendon dan kulit. Jadi, kulit yang lentur dan kencang adalah kulit yang memiliki cukup kolagen.  
-<img src="https://raw.githubusercontent.com/evoush122/bahan_evoush/main/bahan_gallery/image/new_products/5.jpeg" class="img-fluid"/>  
+<img src="https://evoush-landing-api.herokuapp.com/images/gallery/new_products/5.jpeg" class="img-fluid"/>  
 <img src="https://cdn.hellosehat.com/wp-content/uploads/2019/12/Jangan-Wajah-Saja-Kulit-Badan-Juga-Perlu-Eksofiliasi-700x467.jpg" class="img-fluid"/>  
 
 Dalam lapisan kulit, ada sejumlah sel khusus yang menghasilkan molekul mini yang disebut pro kolagen. Molekul ini dibentuk dari vitamin C dan protein yang telah diserap oleh tubuh.
@@ -46,7 +46,7 @@ Manfaat kolagen bagi tubuh begitu beragam sehingga penurunan produksinya tentu b
 Seperti semua protein, kolagen terbuat dari asam amino, yang beberapa di antaranya harus diperoleh dari makanan. Aliran darah yang lancar juga berperan dalam produksi kolagen sehingga Anda perlu rutin berolahraga untuk meningkatkan produksinya.  
 
 - Manfaat kolagen dalam tubuh  
-<img src="https://raw.githubusercontent.com/evoush122/bahan_evoush/main/bahan_gallery/image/new_products/639ee5eb-264b-433a-8924-b3622c7e2390.jpg" class="img-fluid"/>  
+<img src="https://evoush-landing-api.herokuapp.com/images/gallery/new_products/639ee5eb-264b-433a-8924-b3622c7e2390.jpg" class="img-fluid"/>  
 
 Fungsi kolagen tidak hanya terbatas untuk kulit, tapi juga berbagai bagian tubuh yang lain. Tidak banyak penelitian yang tersedia tentang suplemen kolagen, tetapi beberapa menunjukkan bahwa manfaat kolagen mungkin termasuk di bawah ini.  
 
@@ -85,7 +85,7 @@ Berkat fungsinya sebagai antioksidan, kolagen dinilai berpotensi untuk memperlam
 
 ### Makanan yang meningkatkan produksi kolagen  
 Tahukah sobat evousher produk makanan yang bisa meningkatkan produksi kolagen di dalam tubuh kita.  
-<img src="https://raw.githubusercontent.com/evoush122/bahan_evoush/main/bahan_gallery/image/new_products/4.jpg" class="img-fluid" />  
+<img src="https://evoush-landing-api.herokuapp.com/images/gallery/new_products/4.jpg" class="img-fluid" />  
 
 Didalam produk **Evost SOP 5000 Collagen** terdapat sejumlah bahan pilihan yang dapat meningkatkan kualitas kolagen dalam tubuh kita.  
 

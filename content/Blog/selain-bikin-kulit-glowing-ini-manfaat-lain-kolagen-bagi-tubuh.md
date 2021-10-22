@@ -15,7 +15,7 @@ tags:
 categories: news
 ---  
 
-### Selain Bikin Kulit Glowing, Ini Manfaat Lain Kolagen Bagi Tubuh
+#### Selain Bikin Kulit Glowing, Ini Manfaat Lain Kolagen Bagi Tubuh
 
 "Pemenuhan asupan kolagen, dapat memberikan manfaat dalam membantu mengatasi masalah kulit dan wajah. Selain itu, kolagen juga berguna untuk merawat sendi dan otot, mencegah kerontokan pada rambut, hingga membuat tidur menjadi lebih nyenyak,”  
 
@@ -28,7 +28,7 @@ Sejumlah penelitian membuktikan, dengan mengkonsumsi kolagen secara rutin, bisa 
 Untuk memenuhi kebutuhan kolagen, evoush hadir dalam memenuhi kebutuhan asupan kolagen bagi anda yaitu dengan hadirnya product **Evost SOP 5000 Collagen**, yang merupakan suplemen kecantikan **superfood** dengan kandungan sekitar **5000mg** kolagen salmon persajian dalam setiap sachetnya.  
 
 Kolagen yang berasal dari salmon diyakini bisa mengobati gejala insomnia, sehingga bisa membuat tidur menjadi lebih nyenyak dan pulas. Juga dilengkapi Vitamin C sebagai antioksidan, Asam Folat yang terkandung dalam Vitamin B9, Sumber Kalsium, Magnesium, Selenium dan Tinggi Kolin dan kandungan lainnya yang kaya manfaat bagi kecantikan kulit dan juga kesehatan tubuh.  
-<img src="https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/brands4.jpeg?raw=true" class="img-fluid">  
+<img src="https://evoush-landing-api.herokuapp.com/images/gallery/new_products/brands4.jpeg" class="img-fluid">  
 
 
 

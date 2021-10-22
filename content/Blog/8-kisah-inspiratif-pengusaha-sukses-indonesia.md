@@ -102,8 +102,9 @@ Bagaimana, sangat inspiratif bukan? Memang banyak yang mengatakan tidak semua or
 Semoga kisah-kisah inspiratif para pengusaha sukses di atas dapat Anda petik hikmahnya dan menjadi suatu motivasi bagi Anda untuk mencoba sendiri terjun di dunia usaha yang tak ada batasnya ini. Semoga Anda pun bisa menjadi pengusaha yang sukses seperti mereka!  
 
 
-
+<div class="embed-responsive embed-responsive-16by9">
 <iframe width="1200" height="700" src="https://www.youtube.com/embed/2020_7Rtpi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 
 

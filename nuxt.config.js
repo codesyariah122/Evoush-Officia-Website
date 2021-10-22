@@ -432,32 +432,32 @@ googleAnalytics: {
   oneSignal: {
     init: {
       appId: '15dc915b-fe30-4b1b-b635-63ab40fc8361',
-      allowLocalhostAsSecureOrigin: true,
-      welcomeNotification: {
-        disable: true
-      },
-      promptOptions: {
-        slidedown: {
-          prompts: [
-            {
-              type: "push", // current types are "push" & "category"
-              autoPrompt: true,
-              text: {
-                /* limited to 90 characters */
-                actionMessage: "We'd like to show you notifications for the latest news and updates.",
-                /* acceptButton limited to 15 characters */
-                acceptButton: "Allow",
-                /* cancelButton limited to 15 characters */
-                cancelButton: "Cancel"
-              },
-              delay: {
-                pageViews: 1,
-                timeDelay: 20
-              }
-            }
-          ]
-        }
-      }
+      // allowLocalhostAsSecureOrigin: true,
+      // welcomeNotification: {
+      //   disable: false
+      // },
+      // promptOptions: {
+      //   slidedown: {
+      //     prompts: [
+      //       {
+      //         type: "push", // current types are "push" & "category"
+      //         autoPrompt: true,
+      //         text: {
+      //           /* limited to 90 characters */
+      //           actionMessage: "We'd like to show you notifications for the latest news and updates.",
+      //           /* acceptButton limited to 15 characters */
+      //           acceptButton: "Allow",
+      //           /* cancelButton limited to 15 characters */
+      //           cancelButton: "Cancel"
+      //         },
+      //         delay: {
+      //           pageViews: 1,
+      //           timeDelay: 10
+      //         }
+      //       }
+      //     ]
+      //   }
+      // }
     }
   },
 

@@ -37,7 +37,7 @@ Jangan panik. Belum terlambat untuk melakukan pencegahan sebelum menjadi diabete
 Berikut ini ada 6 cara alami, yang sudah dibuktikan melalui penelitian, mampu meningkatkan sensitivitas insulin Kamu.  
 
 ### 1. Tidur cukup dan nyenyak di malam hari  
-<img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/product-sliders/dc06b899913a8375d93d7b8e45ea26b2" class="img-fluid mt-5">  
+<img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/master/migration_db/product-sliders/dc06b899913a8375d93d7b8e45ea26b2" class="img-fluid mt-5">  
 
 Kurang tidur bisa meningkatkan risiko infeksi, penyakit jantung dan diabetes tipe 2. Beberapa penelitian juga menghubungkan kualitas tidur yang buruk dengan turunnya sensitivitas insulin. Salah satu studi yang membandingkan durasi tidur pada orang sehat menemukan bahwa mereka yang hanya tidur 4 jam dalam satu malam mengalami penurunan sensitivitas insulin dibandingkan mereka yang tidur 8,5 jam sehari.  
 
@@ -74,7 +74,7 @@ Karbohidrat adalah stimulus utama yang menyebabkan kadar insulin meningkat. Meng
  Jenis karbohidrat yang Kamu pilih juga penting. Pilih yang memiliki indeks glikemik rendah, karena mereka memperlambat pelepasan gula ke dalam darah, dan memberi insulin lebih banyak waktu untuk bekerja secara efisien. Sumber karbohidrat yang memilliki indeks glikemik rendah misalnya ubi jalar, beras merah, quinoa dan oatmeal.  
 
  Demikian 6 kita meningkatkan sensitivitas insulin di tubuh kita, untuk kalian para evoush yang sudah tau tentunya evoush juga mempunyai produk nutrisi yang baik bagi kesehatan kita dengan kandungan serat yang baik tentunya untuk meningkatkan sensitivitas insulin di tubuh kita, bagi kalian inilah product evoush yang kaya manfaat bagi kesehatan kita :  
-   <img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/product-sliders/434a09ec8ca00c9129621f358bc5222d" class="img-fluid mt-5">  
+   <img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/master/migration_db/product-sliders/434a09ec8ca00c9129621f358bc5222d" class="img-fluid mt-5">  
 
  Selain menjaga kesehatan gula darah kita dan meningkatkan sensitivitas insulin, kita juga akan mendapatkan manfaat lainnya dari L'Glutathione yang mampu meningkatkan produktifitas kolagen di tubuh kita. Kandungan kolagen pada KILEON bermanfaat untuk mencerahkan kulit, meningkatkan masa otot, mencegah kerusakan tulang rawan sendi, menguatkan tulang dan gigi, serta mengatasi kerontokan rambut.  
 <div class="embed-responsive embed-responsive-16by9">

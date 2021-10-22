@@ -26,7 +26,7 @@ Artinya beberapa pebisnis mungkin mendapatkan warisan bakatkuat dari keluarganya
 Tidak juga lho. Banyak pebisnis yang berhasil membangun jiwa wirausaha dan memiliki bisnis yang sukses seperti ***Nadiem Makarim*** dengan **Gojek** dan ***Ali Muharam** dengan **Makaroni Ngehe nya**.  
 
 Jadi apa sih pengertian wirausaha dan benarkah wirausaha itu hanya tentang bakat ? Lalu adakah tipsnya menjadi wirausaha sukses bagi yang ingin mempelajarinya ?  
-<img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/blog/j_ma.jpg" class="img-fluid">  
+<img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/master/blog/j_ma.jpg" class="img-fluid">  
 
 #### Pengertian Wirausaha  
 Mari mulai dulu dengan memahami kata wirausaha. ***Antha Prena*** dianggap sebagai asal dari kata **wirausaha**, yang berarti "Motivasi diri".  

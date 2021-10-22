@@ -19,9 +19,6 @@ categories: news
 </center>  
 
 Siapa yang tidak ingin mempunyai kulit sehat yang terawat, semua orang pasti menginginkan dan mengejarnya tentunya. Ada berjuta rangkaian product yang memberikan manfaat untuk merawat kesehatan kulit anda.  
-<center>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2CW3XHXN8zZxLoTGqzEpJ3xp7II7ovvkz4i_B0seoDl2K_GWGS6Los_1WA5JXWJnshVY&usqp=CAU" class="img-fluid mb-3">
-</center>  
 
 Sejuta kandungan material yang di produksi menjadi product-product perawatan kulit, sekali lagi semua kandungan dan indikasi nya perlu kita cek and ricek selalu, supaya tidak terjadi kesalahan dalam penggunaannya.  
 

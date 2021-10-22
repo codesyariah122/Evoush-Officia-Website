@@ -15,9 +15,9 @@ tags:
 categories: article
 ---  
 
-### Kebijakan bisnis dan kode etik evoush :  
+#### Kebijakan bisnis dan kode etik evoush :  
 
 <div class="embed-responsive embed-responsive-4by3">
-<iframe src="https://drive.google.com/file/d/1NiwGRpVuzSrUWKFXWF_QaxiGiGs1MIwl/preview" width="1200" height="1200" allow="autoplay"></iframe>
+    <iframe src="https://drive.google.com/file/d/1NiwGRpVuzSrUWKFXWF_QaxiGiGs1MIwl/preview" width="1200" height="1200" allow="autoplay"></iframe>
 </div>
 

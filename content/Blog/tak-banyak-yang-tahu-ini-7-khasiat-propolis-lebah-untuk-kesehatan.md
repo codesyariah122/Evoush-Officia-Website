@@ -13,7 +13,7 @@ tags:
 
 categories: news
 ---  
-### Saat Lebah Mencampur Getah Pohon Dengan Zat Alami Dari Tubuh Mereka, Lebah Akan Menghasilkan Zat Lengket Berwarna Cokelat Kehijauan Untuk Melapisi Sarang Mereka Yang Disebut Propolis.  
+#### Saat Lebah Mencampur Getah Pohon Dengan Zat Alami Dari Tubuh Mereka, Lebah Akan Menghasilkan Zat Lengket Berwarna Cokelat Kehijauan Untuk Melapisi Sarang Mereka Yang Disebut Propolis.  
 <img src="https://ecs7.tokopedia.net/blog-tokopedia-com/uploads/2021/05/Kandungan-Propolis-1024x529.jpg" class="img-fluid mb-3">
 
 Lebah juga menghasilkan getah yang disebut propolis. Saat lebah mencampur getah pohon dengan zat alami dari tubuh mereka, lebah akan menghasilkan zat lengket berwarna cokelat kehijauan untuk melapisi sarang mereka. Inilah yang disebut propolis.
@@ -48,9 +48,9 @@ Kolagen merupakan protein dalam tubuh yang seiring bertambahnya usia maka produk
 Kandungan propolis banyak terdapat pada obat kumur, pasta gigi, maupun gel oral. Hal ini lantaran sifat anti-bakteri dan anti-inflamasi dari propolis yang telah diakui.
 
 Sifat antibakteri maupun anti-radang pada propolis mampu mencegah pertumbuhan bakteri Candida dan Streptococci yang menjadi penyebab kerusakan gigi dan mulut. Propolis juga mengandung asam caffeic yang efektif untuk memengaruhi fungsi membran epitel di dalam mulut terhadap paparan mikroba.  
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/propolis12.jpeg" class="img-fluid mb-5">  
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/propolis3.jpeg" class="img-fluid mb-5">  
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/propolis1.jpeg" class="img-fluid">
+<img src="https://evoush-landing-api.herokuapp.com/images/gallery/propolis/propolis12.jpeg" class="img-fluid mb-5">  
+<img src="https://evoush-landing-api.herokuapp.com/images/gallery/propolis/propolis3.jpeg" class="img-fluid mb-5">  
+<img src="https://evoush-landing-api.herokuapp.com/images/gallery/propolis/propolis1.jpeg" class="img-fluid">
 
 **5. Menghambat Pertumbuhan Sel Kanker**  
 <img src="https://s3.bukalapak.com/bukalapak-kontenz-production/content_attachments/45413/w-740/3_foto_kanker_shutterstock_529109200.jpg.webp" class="img-fluid">  
@@ -76,7 +76,8 @@ Propolis dalam komposisinya mampu mempercepat waktu penyembuhan dan mengurangi g
 Tak hanya itu, para peneliti juga menemukan jika kandungan di dalam propolis mampu mengurangi jumlah virus herpes dalam tubuh seseorang. Pemakaian salep propolis juga diyakini mampu melindungi tubuh dari serangan herpes mulut di masa depan.  
 
 Itulah tujuh keajaiban dari produk kecil yang kaya manfaat yang di sebut propolis, Komposisi propolis **Gilcam Propolis** dari **evoush** di gabungkan dengan kandungan bahan lainnya yang juga bermanfaat dan point lebihnya menambah cita rasa sehingga mengkonsumsi **Gilcam Propolis** dari **evoush** serasa tidak sedang mengkonsumsi obat-obatan yang selama ini cenderung orang menghindari urusan medical karena rasa obat yang tidak enak di mulut.  
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/bahan_gallery/image/propolis/propolis7.jpeg" class="img-fluid">
+<img src="https://evoush-landing-api.herokuapp.com/images/gallery/propolis/propolis7.jpeg" class="img-fluid">  
+
 **Gilcam Propolis** ini memiliki tambahan kandungan lain yang bisa anda lihat detailnya di link berikut : <a href="https://evoush.com/product/gilcam-propolis">Gilcam Propolis</a>  
 
 Banyak manfaat dari propolis ini yah evousher, menjaga imunitas kita agar terhindar dari virus dan penyakit berbahaya yang ada, selain kaya manfaatnya untuk kesehatan tubuh kita **Gilcam Propolis** milik **evoush** ini juga mendongkrak kesuksesan kita saat kita mulai join dan memulai menjalankan strategi bisnis bersama team kita di evoush.  
@@ -86,5 +87,5 @@ Banyak manfaat dari propolis ini yah evousher, menjaga imunitas kita agar terhin
 
 Evoush - Your Eternal Future  
 
-Awali langkah untuk masa depan kita dalam berbisnis
+Awali dengan langkah yang besar untuk masa depan kita dalam berbisnis
 

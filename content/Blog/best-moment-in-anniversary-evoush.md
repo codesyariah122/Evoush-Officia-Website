@@ -31,10 +31,10 @@ dan kemudian menyusul juga lomba-lomba lainnya, menambah **Keseruan** acara anni
 Seluruh lomba di ikuti oleh beberapa peserta yang telah mendaftar, dan acara anniversary kemarin tentunya berlangsung dengan menaati protokol kesehatan sesuai standart yang berlaku. Senang-senang bersama tapi juga tetap ingat kondisi kesehatan, jaga satu sama lain. Acara di liputi kebahagian, kegembiraan, berkeringat tentunya membuang toxic-toxic yang mengendap di dalam tubuh dan berlanjut sampai moment haru ketika acara tiup lilin diatas panggung yang penuh suka cita beriring doa dan harapan baik di tahun ini untuk evoush yang dipimpin langsung oleh direktur tercinta kita, seluruh rangkaian acara anniversary evoush kemarin berlangsung meriah dan kami menyimpan beberapa moment ketika acara anniversary evoush kemarin.  
 
 Berikut dokumentasi puncak acara perayaan anniversary evoush yang pertama:  
-<img src="https://raw.githubusercontent.com/evoush122/bahan_evoush/main/bahan-anniversary/Remini20210823103046784.jpg" class="img-fluid">  
-<img src="https://raw.githubusercontent.com/evoush122/bahan_evoush/main/bahan-anniversary/Remini20210823103137285.jpg" class="img-fluid mt-3">  
-<img src="https://raw.githubusercontent.com/evoush122/bahan_evoush/main/bahan-anniversary/Remini20210823103236666.jpg" class="img-fluid mt-3">  
-<img src="https://raw.githubusercontent.com/evoush122/bahan_evoush/main/bahan-anniversary/Remini20210823103344788.jpg" class="img-fluid mt-3">  
+<img src="https://raw.githubusercontent.com/evoush122/bahan_evoush/master/bahan-anniversary/Remini20210823103046784.jpg" class="img-fluid">  
+<img src="https://raw.githubusercontent.com/evoush122/bahan_evoush/master/bahan-anniversary/Remini20210823103137285.jpg" class="img-fluid mt-3">  
+<img src="https://raw.githubusercontent.com/evoush122/bahan_evoush/master/bahan-anniversary/Remini20210823103236666.jpg" class="img-fluid mt-3">  
+<img src="https://raw.githubusercontent.com/evoush122/bahan_evoush/master/bahan-anniversary/Remini20210823103344788.jpg" class="img-fluid mt-3">  
 
 Terima kasih banyak evousher semua yang telah ikut serta memeriahkan acara anniversay evoush yang pertama. Semoga kita semua selalu jaya dan mendapatkan segala kelancaran dalam mengarungi bahtera bisnis kita bersama di evoush. Dan tidak lupa juga kami ucapkan untuk para pemenang lomba yang meraih beberapa hadiah yang telah kami berikan.
 

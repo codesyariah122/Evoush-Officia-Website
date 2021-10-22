@@ -14,15 +14,17 @@ tags:
 
 categories: news
 ---  
-### Tips Memilih Skincare Tepat dan Aman untuk Kulit Wajah  
+#### Tips Memilih Skincare Tepat dan Aman untuk Kulit Wajah  
 <img src="https://assets.promediateknologi.com/crop/0x0:0x0/750x500/photo/ayosemarang/images/post/articles/2021/04/03/74560/memilih-skincare-aman-dan-tepat.jpg" class="img-fluid">  
 
 walaupun tetap di dalam rumah jangan sampai tidak menjaga kulit tubuh dan wajah. 
 
 Salah satu untuk menjaga kulit wajah yaitu dengan menggunakan skincare, bagaimana cara memilih skincare yang tepat dan aman?   
 
-**1. Pilih skincare sesuai dengan jenis kulit** 
-<iframe class="mb-5" width="1200" height="600" src="https://www.youtube.com/embed/cpe16Oe9kzY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+**1. Pilih skincare sesuai dengan jenis kulit**  
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="mb-5" width="1200" height="600" src="https://www.youtube.com/embed/cpe16Oe9kzY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+</div>
 
 Menyesuaikan jenis kulit merupakan salah satu tips untuk memilih skincare yang tepat. Setiap jenis skin care pasti sudah memiliki klaim untuk jenis kulit tertentu. Jenis kulit sendiri ada yang normal, berminyak, kering, kombinasi, dan sensitif.
 

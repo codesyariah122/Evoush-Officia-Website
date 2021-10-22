@@ -40,7 +40,7 @@ Selain itu, pastikan bahwa nomor izin edar tersebut benar-benar terdaftar pada w
 Jangan lupa untuk melihat tanggal kedaluwarsa pada label produk. Hal ini sering kali terlewatkan karena kebanyakan orang percaya bahwa setiap kosmetik yang beredar adalah produk baru. Sama seperti makanan, kosmetik yang kedaluwarsa dapat menimbulkan efek samping yang membahayakan kesehatan.  
 
 #### 2. Harga murah tidak menjamin kualitas  
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/blog/harga.jpg" class="img-responsive img-fluid">  
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/master/blog/harga.jpg" class="img-responsive img-fluid">  
 
 Sebagian besar konsumen mengeluhkan harga kosmetik yang kian mahal dan membuat kantong jebol. Karena itulah, banyak orang yang mulai melirik produk kosmetik yang sama, namun dijual dengan harga yang lebih murah, bahkan terkadang cenderung tidak masuk akal.
 
@@ -49,8 +49,7 @@ Harga kosmetik yang murah memang tidak menguras kantong, tetapi diam-diam dapat 
 Maka itu, jangan mudah tertipu dengan harga murah dan periksa lagi keaslian produk. Bukannya tidak masalah jika harga sedikit mahal, namun menjamin kesehatan Anda?  
 
 #### 3. Order melalui distributor, toko kosmetik yang terpercaya  
-
-<img src="https://app.evoush.com/storage/product-covers/sHDd5FdciecwM9mSzJS0sJHXDmAzdT55n8ay5tmh.jpg" class="img-responsive img-fluid">  
+<img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/master/migration_db/product-covers/sHDd5FdciecwM9mSzJS0sJHXDmAzdT55n8ay5tmh.jpg" class="img-responsive img-fluid">  
 <br><br>
 Agar mendapatkan produk kosmetik yang aman, pastikan Anda membelinya di toko yang terpercaya. Selain toko konvensional, kini sudah banyak toko online yang juga menjual kosmetik kesayangan Anda. Akan tetapi, pastikan bahwa toko tersebut benar-benar terpercaya dan menjual produk kosmetik yang asli.
 
@@ -59,9 +58,9 @@ Jika Anda membeli kosmetik secara langsung di toko, perhatikan lagi kemasan, tek
 Bila Anda menemukan bentuk kemasan yang tidak meyakinkan, tekstur produk yang tidak biasa, aroma menyengat, atau warna kemasan yang cenderung pekat atau lebih pudar, maka Anda patut mewaspadainya. Sebab bisa jadi produk tersebut palsu.  
 
 #### 4. Perhatikan reaksi setelah memakai kosmetik  
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/blog/alergi.jpg" class="img-responsive img-fluid">
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/master/blog/alergi.jpg" class="img-responsive img-fluid">
 <br><br>  
-<img src="https://app.evoush.com/storage/product-covers/ScyuxusiG3992wHvBJfBcegfSSD0npdOrfyxUSzc.jpg" class="img-fluid img-responsive">  
+<img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/master/migration_db/product-covers/ScyuxusiG3992wHvBJfBcegfSSD0npdOrfyxUSzc.jpg" class="img-fluid img-responsive">  
 <br><br>
 Bagi Anda yang sudah sering membeli kosmetik tentu sudah handal dalam mencoba tester kosmetik. Caranya adalah dengan mengoleskan sedikit produk ke bagian punggung tangan untuk melihat tekstur dan warna, apakah cocok dengan yang Anda cari atau tidak.
 

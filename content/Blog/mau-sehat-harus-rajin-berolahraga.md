@@ -15,7 +15,7 @@ tags:
 categories: news
 ---  
 
-### Mau Sehat Harus Rajin Berolahraga
+#### Mau Sehat Harus Rajin Berolahraga
 
 Di era pandemi berani sepedaan ??? Berkumpul dengan banyak orang, tidakkah itu berbahaya? “Ya” betul itu berbahaya tapi selama protokol kesehatan dan semuanya dipenuhi, maka sehat itu nikmat loh, bisa berpindah dari satu tempat, ke tempat lain, olahraga jalan kaki atau lari juga sama, beda cara menikmatinya saja. Hanya jangan menunggu sakit baru kita giat berolahraga.  
 
@@ -37,7 +37,7 @@ Supaya kegiatan berolahraga kita berjalan maksimal, tentunya organ tubuh jangan 
 
 Kegiatan berolahraga pun tidak bisa dilepas dari aktivitas yang terjadi diluar ruangan atau aktivitas outdoor. Dan salah satu manfaat aktivitas outdoor yang jika kita lakukan di pagi hari sekitar pukul 6 sampai pukul 9 pagi ialah Vitamin D alami yang kita peroleh dari energi alami matahari. Betapapun bermanfaatnya sinar matahari pagi tapi kita juga harus tetap memperhatikan intensitas waktu paparannya jangan sampai terlewat dari waktu pagi yang disarankan ahli kesehatan (*dokter), Simak penjelasan lengkap seputar waktu matahari pagi dan sore, sehingga Anda bisa memutuskan kapan waktu yang paling tepat untuk beraktivitas outdoor.  
 
-<img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/blog/bahaya-sinar-matahari-700x467.jpg" class="img-fluid">  
+<img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/master/blog/bahaya-sinar-matahari-700x467.jpg" class="img-fluid">  
 
 Sinar matahari termasuk sumber vitamin D terbaik bagi tubuh manusia. Meski begitu, ada beberapa faktor yang memengaruhi kadar vitamin D yang didapatkan melalui paparan matahari. Salah satu faktor tersebut yaitu waktu.
 

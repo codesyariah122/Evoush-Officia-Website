@@ -15,11 +15,10 @@ tags:
 categories: article
 ---  
 
-### Gagal adalah awak sebuah Kesuksesan
-
-Siapa yang tidak kenal dengan nama bapak Thomas Alva Edison,  
+#### Gagal adalah awak sebuah Kesuksesan  
+Siapa yang tidak kenal dengan nama bapak **Thomas Alva Edison**,  
 <img src="https://mmc.kalteng.go.id/files/berita/11022018085443.jpg" class="img-fluid">  
-
+  
 Penemu lampu pijar dan juga 1.093 hak paten lainnya, beliau meninggal pada tahun 1931, namanya melesat tinggi setelah keberhasilan dalam hidupnya yang menjadi pengalaman hidup yang patut ditiru dan diteladani oleh setiap insan manusia. Perjuangannya dalam mengatasi kegagalan yang membawa dia berhasil kepuncak keberhasilannya.
 
  

@@ -25,7 +25,7 @@ Bertemu lagi dengan artikel mimin kali ini, artikel kali ini akan sedikit mengul
 **Selain menghasilkan madu, lebah juga dapat memproduksi produk yang disebut propolis. Propolis sudah digunakan sejak lama sebagai obat herba yang diklaim dapat menyembuhkan berbagai penyakit. Itulah sebabnya, propolis banyak dikonsumsi sebagai suplemen kesehatan.**  
 
 Propolis dihasilkan dari getah tumbuh-tumbuhan yang digunakan oleh lebah untuk menutupi atau memperbaiki celah pada sarangnya. Sejak ribuan tahun lalu, propolis telah digunakan untuk mengobati luka, infeksi, serta membantu proses pemulihan di kala sakit. Selain itu, beberapa produk olahan lain dari lebah, seperti beeswax dan bee pollen juga kerap digunakan sebagai obat tradisional.  
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/blog/kenyataan-mengenai-propolis-0-alodokter.jpg" class="img-fluid">  
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/master/blog/kenyataan-mengenai-propolis-0-alodokter.jpg" class="img-fluid">  
 
 Propolis umumnya memiliki kandungan zat dan nutrisi yang mirip dengan madu, sehingga baik digunakan untuk kesehatan dan kecantikan. Berikut ini adalah beberapa zat dan nutrisi yang terkandung di dalam propolis:  
 
@@ -45,7 +45,7 @@ Propolis juga mengandung zat lain, seperti antioksidan polifenol dan flavonoid, 
 Namun, komposisi propolis bisa berbeda-beda tergantung lokasi lebah dan tumbuhan yang digunakan untuk bersarang. Propolis yang berasal dari Eropa mungkin akan mengandung nutrisi dan zat yang sedikit berbeda dengan propolis dari Asia atau Amerika.  
 
 ## Manfaat Propolis Berdasarkan Penelitian Medis  
-<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/main/assets/img/bg/propolis-doktersehat.jpg" class="img-fluid">  
+<img src="https://raw.githubusercontent.com/evoush12/bahan_evoush/master/assets/img/bg/propolis-doktersehat.jpg" class="img-fluid">  
 
 Propolis biasanya terkandung di dalam madu walau kadarnya hanya sedikit. Selain itu, propolis juga sering ditemukan dalam bentuk suplemen, salep atau losion, pasta gigi, dan obat kumur.
 

@@ -15,7 +15,7 @@ tags:
 categories: news
 ---  
 
-### Bisnis Network Marketing Prospektif Ditengah Pandemi
+#### Bisnis Network Marketing Prospektif Ditengah Pandemi
 
 Kementerian Perdagangan (Kemendag) memberikan dorongan kepada perusahaan multi level marketing (MLM), karena sudah berkontribusi langsung terhadap pemulihan ekonomi nasional. Bisnsi MLM mampu menciptakan dan membuka lapangan pekerjaan di tengah pandemi Covid-19.  
 
@@ -24,7 +24,7 @@ Koordinator Distribusi Langsung dan Waralaba Kemendag Ronny Marpaung mengatakan 
 Ketua Umum Asosiasi Perusahaan Penjualan Langsung Indonesia (AP2LI) Andrew Susanto mengatakan terlepas dari pro dan kontra yang terjadi masyarakat, industri penjualan langsung tetap tumbuh subur pada masa-masa sulit termasuk saat pandemi.  
 <img src="https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg" class="img-fluid img-responsive">  
 <br><br>  
-<img src="https://raw.githubusercontent.com/evoush122/bahan_evoush/main/legalitas/legalitas2.jpg" class="img-fluid img-responsive">  
+<img src="https://raw.githubusercontent.com/evoush122/bahan_evoush/master/legalitas/legalitas2.jpg" class="img-fluid img-responsive">  
 
 “Industri penjualan langsung adalah industri luar biasa. Kita patut bersyukur karena dari sejarahnya lahir industri ini, terbukti industri penjualan langsung masih bisa bertahan dan semakin luar biasa ketika kondisi perekonomian juga sulit, terutama dimasa pandemi ini,” ujar Andrew Susanto, dikutip Sabtu (20/2/2021).  
 

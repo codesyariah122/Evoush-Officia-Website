@@ -15,7 +15,7 @@ tags:
 categories: news
 ---  
 
-### Jangan asal, ini waktu yang tepat tubuh konsumsi kolagen tambahan
+#### Jangan asal, ini waktu yang tepat tubuh konsumsi kolagen tambahan
 
 Seiring bertambahnya usia, penampilan bisa menurun. Salah satunya adalah tubuh secara alami mengalami penurunan produksi kolagen dan mineral tubuh lainnya yang mampu menjaga elastisitas kulit dan kecerahan kulit.
 
@@ -25,7 +25,7 @@ Dokter Kulit dr Yessy Hartono menjelaskan bahwa untuk perawatan kulit, sebetulny
 "Kalau Anda ingin tahu, ketika menjemur bayi di bawah sinar matahari langsung, sudah sepatutnya si bayi dibalur sunblock. Ini menjaga kulitnya tetap sehat dan tidak membuat kontaminan dari sinar matahari yang jahat masuk ke tubuh," kata dr Yessy pada Okezone di acara Beauty Talk; Beauty Beyond Limits, di kawasan Jakarta Pusat, belum lama ini.
 
 Dr Yessy melanjutkan, nah kalau terkait dengan perawatan kulit dan tubuh yang spesifik estetika, misalnya dengan mengonsumsi kolagen dari luar tubuh, sangat disarankan bisa dimulai dari usia 25 tahun.  
-<img src="https://github.com/evoush-products/bahan_evoush/blob/main/blog/5pt95hpugh9ldkiinp23_14479.jpg?raw=true" class="img-fluid">
+<img src="https://github.com/evoush-products/bahan_evoush/blob/master/blog/5pt95hpugh9ldkiinp23_14479.jpg?raw=true" class="img-fluid">
 
 Hal ini bukan tanpa alasan. "Kolagen memang diproduksi di dalam tubuh secara alami. Tapi, bertambahnya usia, membuat produksi kolagen juga menjadi tidak maksimal, jadi Anda perlu menambahkannya dari luar," terangnya.
 
@@ -36,11 +36,10 @@ Tapi, ada hal lain yang mesti diketahui terkait dengan pengunaan kolagen tambaha
 Katalisator di sini adalah vitamin C, vitamin E, dan zink. "Kalau 3 unsur itu tidak cukup, kolagen pun tidak akan berfungsi dengan maksimal. Makanya, perlu dilengkapi juga 3 unsur tersebut," katanya.
 
 Dokter yang sekaligus founder Portico itu juga menambahkan bahwa penggunaan Gluta Spray menjadi hal penting yang bisa Anda lengkapi sebagai perawatan kulit awet muda Anda.  
-
-<img src="https://github.com/evoush-products/bahan_evoush/blob/main/bahan_gallery/image/new_products/4.jpg?raw=true" class="img-fluid">  
+<img src="https://evoush-landing-api.herokuapp.com/images/gallery/new_products/4.jpg" class="img-fluid">  
 
 **L-Glutation** itu biasanya mampu membuat kulit terlihat lebih cerah, sehatm dan berseri sepanjang hari. Tidak hanya itu, kandungan gluta yang baik juga terbukti bisa membuat kolagen dalam tubuh semakin maksimal kerjanya pada kulit," tambahnya.  
-<img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/product-sliders/dc06b899913a8375d93d7b8e45ea26b2" class="img-fluid">  
+<img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/master/migration_db/product-sliders/dc06b899913a8375d93d7b8e45ea26b2" class="img-fluid">  
 
 Semua kecemasan yang anda alami seperti diatas ... kulit butuh perawatan dari dalam dan kami punya solusinya !  
 dari product kami yang diantaranya adalah  
@@ -49,7 +48,7 @@ dari product kami yang diantaranya adalah
 
 Seperti dalam link product diatas anda dapat melihat detail komposisi **Evost SOP 5000 Collagen** yang kandungannya dapat memenuhi kebutuhan kulit anda dengan menjaganya dari dalam, cukup dengan mengkonsumsi sesuai aturan yang telah ditentukan, selain mendapatkan manfaat yang luar biasa nyata anda bisa mendapatkan bonusnya, hanya dalam berbisnis di evoush tentunya anda bisa mendapatkan kedua nya dalam bersamaan.  Jangan lupa ikut promo menarik lainnya dari evoush.  
 
-<img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/promo/promo.jpeg" class="img-fluid">  
+<img src="https://raw.githubusercontent.com/evoush-products/bahan_evoush/master/promo/promo.jpeg" class="img-fluid">  
 
 Salam Sukses Evousher.
 

@@ -16,8 +16,9 @@ categories: news
 ---  
 ### Berjalanlah Bila Berlari itu sulit
 
-Memulai usaha memang dapat melalui banyak tahap perencanaan yang harus dipikirkan, dan produk apa yang akan dijual, harga sampai hal-hal yang berhubungan untuk meningkatkan penjualan. Satu persatu harus disiapkan dengan baik, dan semua harus dipikirkan dengan matang, selain itu menentukan target dan sasaran, memang diperlukan, tetapi kesabaran jauh lebih penting, menatanya dengan sedikit-demi sedikit jauh lebih baik. 
-<img src="https://cdn.idntimes.com/content-images/post/old/97a5e-main_roadfromscratch_wordpress_600x400.jpg" class="img-fluid"> 
+Memulai usaha memang dapat melalui banyak tahap perencanaan yang harus dipikirkan, dan produk apa yang akan dijual, harga sampai hal-hal yang berhubungan untuk meningkatkan penjualan. Satu persatu harus disiapkan dengan baik, dan semua harus dipikirkan dengan matang, selain itu menentukan target dan sasaran, memang diperlukan, tetapi kesabaran jauh lebih penting, menatanya dengan sedikit-demi sedikit jauh lebih baik.  
+
+<img src="https://cdn.idntimes.com/content-images/post/old/97a5e-main_roadfromscratch_wordpress_600x400.jpg" class="img-fluid">  
 
 Ada banyak pengusaha-pengusaha kecil yang dengan fokus sampai pada tujuan, walaupun ada yang cepat dan ada yang lambat. Sekali lagi membangun usaha itu seperti berlari, tapi bila memang ada hal-hal yang tidak bisa dengan cepat diusahakan, maka berjalan adalah tahap awal yang cukup baik, ada banyak ide yang orang-orang miliki, tetapi sulit untuk direalisasikan, perlu keberanian besar untuk memulainya.  
 
