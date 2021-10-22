@@ -34,7 +34,9 @@
 									<div v-if="member.avatar" class="container">
 										<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 
-											<button class="btn btn-sm btn-primary mt-3 mb-2" @click="openUpdateAvatar"><i class='bx bxs-edit bx-lg'></i> Update Foto Profile</button>
+											<div class="middle">
+												<button class="btn btn-sm btn-primary mt-3 mb-2" @click="openUpdateAvatar"><i class='bx bxs-edit bx-lg'></i> Update Foto Profile</button>
+											</div>
 										<!-- <div v-if="preview">
 											<img :src="preview" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 										</div>
@@ -431,11 +433,11 @@
 }
 
 .media .profile{
-	width: 250px;
-	height: 250px;
+	width: 200px;
+	height: auto;
 	border-radius: 50%!important;
-	margin-top: 7rem;
-	margin-left: -5rem;
+	margin-top: 1rem;
+	margin-left: -4rem;
 }
 
 .container {
@@ -459,7 +461,7 @@
 	opacity: 0;
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: 40%;
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	text-align: center;
@@ -476,31 +478,55 @@
 	padding: 2px 3px;
 	cursor: pointer;
 }
+
 .media-body {
-	width: 100%;
-}
-.media-body h4{
-	font-size: 14px;
-}
-@media (min-width: 992px) {
-	.media .profile{
-		margin-top: 25rem;
-		/*margin-left: 2rem;*/
-	}
-	.media-body h4{
-		margin-left: 5rem;
-		font-size: 21px;
-	}
-	.media-body p{
-		margin-left: 5rem;
-		font-size: 18px;
-	}
-	.media  button{
-		margin-left: -4.5rem;
-	}
-	.media .profile{
-		margin-left: -7rem;
-	}
+	margin-left:-1rem;
+	margin-top: 1rem;
 }
 
+@media (min-width: 992px) {
+	.media .profile{
+		margin-top: 10rem;
+		margin-left: 11.5rem;
+		width: 250px;
+		height: auto;
+	}
+
+	.media-body{
+		margin-top:2rem;
+		margin-left: 3rem;
+	}
+
+	.media-body h4{
+		font-size:31px;
+	}
+
+	.media-body p{
+		font-size: 21px;
+	}
+
+	.profile-overlay{
+		opacity: 1;
+		display: block;
+		width: 100%;
+		height: auto;
+		transition: .5s ease;
+		backface-visibility: hidden;
+	}
+	.container:hover .profile-overlay{
+		opacity: 0.3;
+	}
+
+	.middle {
+		transition: .5s ease;
+		opacity: 0;
+		position: absolute;
+		top: 50%;
+		left: 68%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		text-align: center;
+	}
+
+}
 </style>

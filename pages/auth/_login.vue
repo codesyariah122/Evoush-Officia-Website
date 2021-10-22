@@ -9,6 +9,7 @@
 				</div>
 			</div>
 
+
 			<div class="row justify-content-center">
 				<div class="col-lg-12 col-xs-12 col-sm-12">
 						<!-- <pre>
@@ -16,8 +17,8 @@
 						</pre> -->
 
 						<!-- <h1>Pakai yang ini bor</h1> -->
-
-						<form class="box" @submit.prevent="login">
+					<div class="box">
+						<form @submit.prevent="login">
 
 						<Logo class="logo"/>
 
@@ -66,7 +67,13 @@
 							</div>
 
 						</form>
+					</div>
 
+				</div>
+			</div>
+
+			<div class="row justify-content-center">
+				<div class="col-lg-12 col-xs-12 col-sm-12">
 				</div>
 			</div>
 
@@ -210,19 +217,15 @@
 </script>
 
 
-<style scoped>
+<style>
 .box {
-	width: 310px;
-	padding: 30px;
-	position: absolute;
-	/*top: 70%!important;*/
-	margin-top: -.5rem!important;
-	left: 4%;
+	width: 100%;
+	height: auto;
+	margin-top: 1rem!important;
+	/*left: 25%;*/
 	background: #191919;
 	text-align: center;
 	transition: 0.25s;
-	margin-top: 100px;
-	font-size: 14px;
 }
 
 .box h5{
@@ -387,25 +390,27 @@ a.socialIcon:hover,
 }
 
 input[name="request-username"]{
+	width: 100%!important;
 	margin-left: -.1rem!important;
 }
 .btn-request{
 	font-size:14px;
-	margin-left:.7rem;
 	width:100%;
 	height:50px;
 	padding:12px;
+	margin-bottom: 5rem;
+}
+
+.logo {
+	margin-left: -2rem;
 }
 @media (min-width: 992px) {
 	.box {
-		width: 600px;
-		height: 100vh;
-		padding: 100px;
-		/*position: absolute;*/
-		/*top: 30%;*/
-		margin-top: 3rem!important;
+		width: 800px;
+		height: auto;
+		margin-top: 2rem!important;
 		margin-bottom: 15rem!important;
-		left: 25%;
+		/*left: 25%;*/
 		background: #191919;
 		text-align: center;
 		transition: 0.25s;
@@ -480,6 +485,7 @@ input[name="request-username"]{
 
 	input[name="request-username"]{
 		margin-left: .1rem!important;
+		width: 100%!important;
 	}
 
 }
