@@ -135,7 +135,7 @@
 
 			getChat(status){
 				// $crisp.push(['do', 'chat:hide'])
-
+				document.querySelector('.chatwith').style.visibility="hidden"
 				if(status === ""){
 					document.querySelector('.chatwith').style.visibility="hidden"
 					// $crisp.push(['do', 'chat:hide'])
