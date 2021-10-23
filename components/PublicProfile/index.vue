@@ -22,7 +22,9 @@
 									<div v-if="member.avatar" class="container">
 										<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..."  class="rounded-circle mb-3 profile profile-overlay">
 										<div class="middle">
-											<a :href="`https://app.evoush.com/storage/${member.avatar}`" class="btn btn-sm btn-primary mb-2" target="_blank"><i class='bx bx-zoom-in'></i> View Image </a>
+											<a :href="`https://app.evoush.com/storage/${member.avatar}`" class="btn btn-sm btn-primary mb-2" target="_blank">
+												<i class='bx bx-zoom-in'></i>
+											</a>
 										</div>
 									</div>
 									<div v-else>
@@ -38,13 +40,14 @@
 												{{member.achievements}}
 											</pre> -->
 											<div v-if="member.achievements">
-												<span :class="`${member.achievements.includes('STAR SAPHIRE') ? 'badge badge-primary mb-3' : 'badge badge-success mb-3'}`"><i class='bx bx-medal bx-lg'></i> {{(member.achievements.includes("STAR SAPHIRE")) ? "STAR SAPHIRE" : "SAPHIRE"}}</span></p>
+												<span :class="`${member.achievements.includes('STAR SAPHIRE') ? 'badge badge-primary mb-3' : 'badge badge-success mb-3'}`"><i class='bx bx-medal bx-lg'></i> {{(member.achievements.includes("STAR SAPHIRE")) ? "STAR SAPHIRE" : "SAPHIRE"}}</span>
 											</div>
 											<div v-else>
 												<span class="badge badge-danger mb-3">
 													No Achievements
 												</span>
 											</div>
+										</p>
 											<!-- <div v-if="member.achievements.includes('STAR SAPHIRE')">
 												<span class="badge badge-primary">
 													STAR SAPHIRE
@@ -134,20 +137,20 @@
 			return {
 				title: `Evoush::Member | ${this.members[0].username}`,
 				link: [
-					{rel: 'canonical', href: `https://evoush.com/member/${this.members[0].username}`}
+				{rel: 'canonical', href: `https://evoush.com/member/${this.members[0].username}`}
 				],
 				meta: [
-					{ hid: 'description', name: 'description', content: 'Evoush::Member'},
-					{ hid: 'keywords', name: 'keywords', content: 'Evoush::Member | Web::Replika'},
-					{ hid: 'author', name: 'author' , content: `${this.members[0].username} | Evoush::Member`},
-					{ hid: 'og:type', property: 'og:type', content: 'website'},
-					{ hid: 'og:url', property: 'og:url', content: `https://evoush.com/member/${this.members[0].username}`},
-					{ hid: 'og:title', property: 'og:title', content: 'Evoush Indonesia | Evoush::Member'},
-					{ hid: 'og:site_name', property: 'og:site_name', content: `${this.members[0].name} | ${this.members[0].username}`},
-					{ hid: 'og:description', property: 'og:description', content: `${this.members[0].quotes}`},
-					{ hid: 'og:image', property: 'og:image', content: `https://app.evoush.com/storage/${this.members[0].avatar}`},
-					{ hid: 'og:image:width', property: 'og:image:width', content: '600'},
-					{ hid: 'og:image:height', property: 'og:image:height', content: '598'}
+				{ hid: 'description', name: 'description', content: 'Evoush::Member'},
+				{ hid: 'keywords', name: 'keywords', content: 'Evoush::Member | Web::Replika'},
+				{ hid: 'author', name: 'author' , content: `${this.members[0].username} | Evoush::Member`},
+				{ hid: 'og:type', property: 'og:type', content: 'website'},
+				{ hid: 'og:url', property: 'og:url', content: `https://evoush.com/member/${this.members[0].username}`},
+				{ hid: 'og:title', property: 'og:title', content: 'Evoush Indonesia | Evoush::Member'},
+				{ hid: 'og:site_name', property: 'og:site_name', content: `${this.members[0].name} | ${this.members[0].username}`},
+				{ hid: 'og:description', property: 'og:description', content: `${this.members[0].quotes}`},
+				{ hid: 'og:image', property: 'og:image', content: `https://app.evoush.com/storage/${this.members[0].avatar}`},
+				{ hid: 'og:image:width', property: 'og:image:width', content: '600'},
+				{ hid: 'og:image:height', property: 'og:image:height', content: '598'}
 				]
 			}
 		},
@@ -155,14 +158,14 @@
 		data(){
 			return {
 				samples: [
-					{id:1, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/brands1.jpeg'},
-					{id:2, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/brands2.jpeg'},
-					{id:3, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/brands3.jpeg'},
-					{id:4, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/brands4.jpeg'},
-					{id:5, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/new_brand1.jpeg?raw=true'},
-					{id:6, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/new_brand2.jpeg?raw=true'},
-					{id:7, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/new_brand3.jpeg?raw=true'},
-					{id:8, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/new_brand4.jpeg?raw=true'}
+				{id:1, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/brands1.jpeg'},
+				{id:2, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/brands2.jpeg'},
+				{id:3, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/brands3.jpeg'},
+				{id:4, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/brands4.jpeg'},
+				{id:5, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/new_brand1.jpeg?raw=true'},
+				{id:6, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/new_brand2.jpeg?raw=true'},
+				{id:7, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/new_brand3.jpeg?raw=true'},
+				{id:8, url: 'https://evoush-landing-api.herokuapp.com/images/gallery/new_products/new_brand4.jpeg?raw=true'}
 				],
 				credential: {
 					username: localStorage.getItem('username'),
@@ -197,9 +200,9 @@
 				console.log(error.response.data)
 			})
 
-			this.getFollowers(this.members[0].username),
+			this.getFollowers(this.members[0].username)
 
-			$crisp.push(['do', 'chat:hide'])
+			// $crisp.push(['do', 'chat:hide'])
 		},
 		methods: {
 
@@ -309,6 +312,10 @@
 	text-align: center;
 }
 
+.middle i{
+	font-size: 35px!important;
+}
+
 .container:hover .middle{
 	opacity: 1;
 }
@@ -329,7 +336,7 @@
 @media (min-width: 992px) {
 	.media .profile{
 		margin-top: 10rem;
-		margin-left: 13rem;
+		margin-left: 10rem;
 		width: 250px;
 		height: auto;
 	}
@@ -363,11 +370,50 @@
 		opacity: 0;
 		position: absolute;
 		top: 50%;
-		left: 60%;
+		left: 85%;
 		transform: translate(-50%, -50%);
 		-ms-transform: translate(-50%, -50%);
 		text-align: center;
 	}
 
+	.middle i{
+		font-size: 37px!important;
+	}
+
+}
+
+@media (min-width: 884px) {
+	.media .profile {
+		width: 350px;
+		margin-left: 2rem;
+	}
+	.media-body {
+		margin-left: -7rem;
+	}
+	.media-body h4{
+		font-size:33px;
+	}
+	.media-body p{
+		font-size: 21px;
+	}
+	.media-body i{
+		font-size: 16px;
+	}
+	.media-body span{
+		font-size: 16px;
+	}
+	.middle {
+		transition: .5s ease;
+		opacity: 0;
+		position: absolute;
+		top: 50%;
+		left: 70%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		text-align: center;
+	}
+	.middle i{
+		font-size: 40px!important;
+	}
 }
 </style>

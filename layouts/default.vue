@@ -11,7 +11,7 @@
 					<div class="row justify-content-center">
 						<div class="col-lg-12 col-xs-12 col-sm-12">
 							<!-- <pre>
-								{{ check }}
+								{{ status }}
 							</pre> -->
 							<div class="alert alert-warning alert-dismissible fade show" role="alert">
 								<strong>Halo {{ check[0].username }}!</strong> Untuk Memulai konsultasi Bersama Dokter Winda Silahkan Memulai Chat Di Bagian Kiri, atau di chatbox yang telah aktif.
@@ -57,7 +57,7 @@
 		},
 
 		mounted(){
-			this.getChat(this.status),
+			// this.getChat(this.status),
 			this.getDataConsult(),
 			this.getFacebookSDK(document, 'script', 'facebook-jssdk'),
 			this.getNewContentUpdate(),
@@ -121,8 +121,9 @@
 						})
 						// console.log(this.check[0])
 						this.status = this.check[0].status
-						// console.log(this.status)
 						this.getChat(this.status)
+						// console.log(this.status)
+						// this.getChat(this.status)
 					}
 				})
 				.catch(err => {
@@ -133,19 +134,42 @@
 			},
 
 			getChat(status){
-				if(this.status === ""){
-					$crisp.push(['do', 'chat:hide'])
+				// $crisp.push(['do', 'chat:hide'])
+
+				if(status === ""){
+					document.querySelector('.chatwith').style.visibility="hidden"
+					// $crisp.push(['do', 'chat:hide'])
 				}else{
-					if(this.status === "ACTIVE"){
-						$crisp.push(['do', 'chat:show'])
-						$crisp.push(['do', 'chat:open'])
+					if(status === "ACTIVE"){
+						document.querySelector('.chatwith').style.visibility="visible"
+						// $crisp.push(['do', 'chat:show'])
+						// $crisp.push(['do', 'chat:open'])
+					}else{
+						document.querySelector('.chatwith').style.visibility="hidden"
 					}
 				}
 			},
 
 
 			Reload(){
-				window.location.reload()
+				// console.log(this.status)
+				let consultData = JSON.parse(localStorage.getItem('consults'))
+				console.log(consultData.fullname)
+				let data = {
+					fullname: consultData.fullname,
+					username: consultData.username,
+					age: consultData.age,
+					phone: consultData.phone,
+					city: consultData.city,
+					gender: consultData.gender,
+					status: this.status
+				}
+
+				localStorage.setItem('consults', JSON.stringify(data))
+
+				setTimeout(() => {
+					window.location.reload()
+				}, 1500)
 			}
 		}
 

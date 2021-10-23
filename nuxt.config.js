@@ -139,21 +139,29 @@ export default {
     //   crossorigin: "anonymous",
     //   body: true
     // },
+    // {
+    //   src: 'https://apps.elfsight.com/p/platform.js',
+    //   defer: 'true'
+    // },
     {
-      src: 'https://cdn.popt.in/pixel.js?id=146a60e91cb08',
-      async: 'true',
-      id: 'pixel-script-poptin'
+      src:'https://widget.tochat.be/bundle.js?key=c6cf5ff0-f90b-4621-a675-e7d8a402a9fe',
+      defer: true
     },
+    // {
+    //   src: 'https://cdn.popt.in/pixel.js?id=146a60e91cb08',
+    //   async: 'true',
+    //   id: 'pixel-script-poptin'
+    // },
     {
-      src: 'https://cdn.ampproject.org/v0/amp-ad-0.1.js',
-      async: 'true',
-      'custom-element': 'amp-ad'
+        src: 'https://cdn.ampproject.org/v0/amp-ad-0.1.js',
+        async: 'true',
+        'custom-element': 'amp-ad'
     },
-    {
-      src: 'https://platform-api.sharethis.com/js/sharethis.js#property=61606506ea6eca00151d8ce7&product=inline-reaction-buttons',
-      async: 'true',
-      type: 'text/javascript'
-    },
+    // {
+    //   src: 'https://platform-api.sharethis.com/js/sharethis.js#property=61606506ea6eca00151d8ce7&product=inline-reaction-buttons',
+    //   async: 'true',
+    //   type: 'text/javascript'
+    // },
     // {
     //   src: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js',
     //   async: '',
@@ -383,7 +391,7 @@ export default {
     {src: '~/plugins/disqus'},
     {src: '~/plugins/vue-tiny-mce', mode: 'client', ssr: false},
     // { src: '~/plugins/tawk'},
-    { src: "~/plugins/crisp.js", mode: "client" },
+    // { src: "~/plugins/crisp.js", mode: "client" },
     { src: '~/plugins/vue-geolocation' },
     // { src: '~/plugins/vue-googlemaps'},
     { src: '~/plugins/vue-wysiwyg'},

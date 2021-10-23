@@ -49,13 +49,13 @@
 				</div> -->
 
 
-				<div class="col-lg-12 col-xs-12 col-sm-12 mt-5">
-					<!-- <BirthdayMember/> -->
+				<!-- <div class="col-lg-12 col-xs-12 col-sm-12 mt-5">
+					<BirthdayMember/>
 					<center>
 						<ScreenAnim/>
 					</center>
-				</div>
-				<h1 class="underline" style="margin-top: 5rem;"></h1>
+				</div> -->
+				<!-- <h1 class="underline" style="margin-top: 5rem;"></h1> -->
 
 			</div>
 

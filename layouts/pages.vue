@@ -66,12 +66,12 @@
 	export default {
 		data(){
 			return {
-				event: ($nuxt.$router.path === '/event/anniversary' ? false : true),
+				// event: ($nuxt.$router.path === '/event/anniversary' ? false : true),
 				users: {},
 				consults: [],
 				check: {},
-				status: '',
-				path: $nuxt.$route.name
+				status: ''
+				// path: $nuxt.$route.name
 			}
 		},
 		components: {
@@ -80,7 +80,6 @@
 		},
 
 		mounted(){
-			this.getChat(this.status),
 			this.getDataConsult()
 		},
 
@@ -100,6 +99,7 @@
 						// console.log(this.check[0])
 						this.status = this.check[0].status
 						// console.log(this.status)
+						// localStorage.setItem('consults', JSON.parse(newConsults))
 						this.getChat(this.status)
 					}
 				})
@@ -111,19 +111,41 @@
 			},
 
 			getChat(status){
-				if(this.status === ""){
-					$crisp.push(['do', 'chat:hide'])
+				// $crisp.push(['do', 'chat:hide'])
+				// console.log(status)
+				if(status === ""){
+					document.querySelector('.chatwith').style.visibility="hidden"
+					// $crisp.push(['do', 'chat:hide'])
 				}else{
-					if(this.status === "ACTIVE"){
-						$crisp.push(['do', 'chat:show'])
-						$crisp.push(['do', 'chat:open'])
+					if(status === "ACTIVE"){
+						document.querySelector('.chatwith').style.visibility="visible"
+						// $crisp.push(['do', 'chat:show'])
+						// $crisp.push(['do', 'chat:open'])
+					}else{
+						document.querySelector('.chatwith').style.visibility="hidden"
 					}
 				}
 			},
 
 
 			Reload(){
-				window.location.reload()
+				let consultData = JSON.parse(localStorage.getItem('consults'))
+				console.log(consultData.fullname)
+				let data = {
+					fullname: consultData.fullname,
+					username: consultData.username,
+					age: consultData.age,
+					phone: consultData.phone,
+					city: consultData.city,
+					gender: consultData.gender,
+					status: this.status
+				}
+
+				localStorage.setItem('consults', JSON.stringify(data))
+
+				setTimeout(() => {
+					window.location.reload()
+				}, 1500)
 			}
 		}
 

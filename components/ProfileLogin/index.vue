@@ -35,7 +35,8 @@
 										<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 
 											<div class="middle">
-												<button class="btn btn-sm btn-primary mt-3 mb-2" @click="openUpdateAvatar"><i class='bx bxs-edit bx-lg'></i> Update Foto Profile</button>
+												<button class="btn btn-sm btn-primary ml-2 mb-2" @click="openUpdateAvatar"><i class='bx bxs-edit bx-lg'></i></button>
+												<a :href="`https://app.evoush.com/storage/${member.avatar}`" class="btn btn-sm btn-primary mb-2" target="_blank"><i class='bx bx-zoom-in'></i></a>
 											</div>
 										<!-- <div v-if="preview">
 											<img :src="preview" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
@@ -90,6 +91,19 @@
 										<!-- end form upload -->
 
 										<h4 style="text-transform: capitalize;">{{member.name}}</h4>
+										<p class="mt-2 mb-3">
+											<!-- <pre>
+												{{member.achievements}}
+											</pre> -->
+											<div v-if="member.achievements">
+												<span :class="`${member.achievements.includes('STAR SAPHIRE') ? 'badge badge-primary mb-3' : 'badge badge-success mb-3'}`"><i class='bx bx-medal bx-lg'></i> {{(member.achievements.includes("STAR SAPHIRE")) ? "STAR SAPHIRE" : "SAPHIRE"}}</span>
+											</div>
+											<div v-else>
+												<span class="badge badge-danger mb-3">
+													No Achievements
+												</span>
+											</div>
+										</p>
 										<p class="small text-white"> <i class='bx bx-map'></i>
 											{{member.city}} | {{member.province}}
 										</p>
@@ -528,5 +542,40 @@
 		text-align: center;
 	}
 
+}
+
+@media (min-width: 884px) {
+	.media .profile {
+		width: 350px;
+		margin-left: 1rem;
+	}
+	.media-body {
+		margin-left: -1rem;
+	}
+	.media-body h4{
+		font-size:33px;
+	}
+	.media-body p{
+		font-size: 21px;
+	}
+	.media-body i{
+		font-size: 16px;
+	}
+	.media-body span{
+		font-size: 16px;
+	}
+	.middle {
+		transition: .5s ease;
+		opacity: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		text-align: center;
+	}
+	.middle i{
+		font-size: 37px!important;
+	}
 }
 </style>

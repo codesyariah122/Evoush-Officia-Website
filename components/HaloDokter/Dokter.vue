@@ -169,7 +169,6 @@
 						this.consults.age = ''
 						this.consults.gender = ''
 
-
 						this.toasts(`${this.success}, Selanjutnya kami akan menyambungkan chat anda ke dokter kami`)
 						setTimeout(()=>{
 							location.reload()
@@ -182,7 +181,7 @@
 					this.success = null
 					this.errors = "Terjadi kesalahan saat proses mengirim data"
 					this.validation = err.response.data
-					console.log(err.response.data)
+					// console.log(err.response.data)
 				})
 			},
 

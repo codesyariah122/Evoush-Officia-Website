@@ -48,7 +48,7 @@
 		},
 
 		mounted(){
-			$crisp.push(['do', 'chat:hide'])
+			// $crisp.push(['do', 'chat:hide'])
 		}
 	}
 </script>
