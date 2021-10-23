@@ -80,6 +80,7 @@
 		},
 
 		mounted(){
+			this.getChat(this.status),
 			this.getDataConsult()
 		},
 
@@ -111,7 +112,6 @@
 			},
 
 			getChat(status){
-				document.querySelector('.chatwith').style.visibility="hidden"
 				// $crisp.push(['do', 'chat:hide'])
 				// console.log(status)
 				if(status === ""){

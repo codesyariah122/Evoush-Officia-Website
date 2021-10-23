@@ -57,7 +57,7 @@
 		},
 
 		mounted(){
-			// this.getChat(this.status),
+			this.getChat(this.status),
 			this.getDataConsult(),
 			this.getFacebookSDK(document, 'script', 'facebook-jssdk'),
 			this.getNewContentUpdate(),
@@ -135,7 +135,6 @@
 
 			getChat(status){
 				// $crisp.push(['do', 'chat:hide'])
-				document.querySelector('.chatwith').style.visibility="hidden"
 				if(status === ""){
 					document.querySelector('.chatwith').style.visibility="hidden"
 					// $crisp.push(['do', 'chat:hide'])
