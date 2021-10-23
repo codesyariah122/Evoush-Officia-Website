@@ -51,8 +51,8 @@
 				users: {},
 				consults: [],
 				check: {},
-				status: '',
-				path: $nuxt.$route.name
+				status: ''
+				// path: $nuxt.$route.name
 			}
 		},
 

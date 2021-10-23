@@ -205,10 +205,10 @@ export default {
       src: '/assets/vendor/jquery.easing/jquery.easing.min.js',
       type: 'text/javascript'
     },
-    {
-      src: '/assets/vendor/php-email-form/validate.js',
-      type: 'text/javascript'
-    },
+    // {
+    //   src: '/assets/vendor/php-email-form/validate.js',
+    //   type: 'text/javascript'
+    // },
     {
       src: '/assets/vendor/waypoints/jquery.waypoints.min.js',
       type: 'text/javascript'
@@ -440,7 +440,7 @@ googleAnalytics: {
   oneSignal: {
     init: {
       appId: '15dc915b-fe30-4b1b-b635-63ab40fc8361',
-      // allowLocalhostAsSecureOrigin: true,
+      allowLocalhostAsSecureOrigin: true,
       // welcomeNotification: {
       //   disable: false
       // },
