@@ -21,11 +21,11 @@
 						<div data-aos="fade-up" v-for="founder in founders" class="col-md-12 col-xs-12 col-sm-12 mt-3 mb-5" :key="founder.id">
 							<div class="card profile-card-2">
 								<div class="card-img-block">
-									<img class="img-responsive img-fluid" :src="founder.cover ? founder.cover : 'https://coolwallpapers.me/picsup/5605343-internet-wallpapers.jpg'" alt="Card image cap">
+									<img class="img-responsive img-fluid" :src="founder.cover ? `https://app.evoush.com/storage/${founder.cover}` : 'https://coolwallpapers.me/picsup/5605343-internet-wallpapers.jpg'" alt="Card image cap">
 								</div>
 								<div class="card-body pt-5">
 									<div class="row justify-content-center">
-										<img :src="founder.avatar ? `https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/migration_db/${founder.avatar}` : 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg'" alt="profile-image" class="profile img-fluid img-responsive image--profile-member img-responsive rounded-circle center-block d-block mx-auto mt-2"/>
+										<img :src="founder.avatar ? `https://app.evoush.com/storage/${founder.avatar}` : 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/profile/default.jpg'" alt="profile-image" class="profile img-fluid img-responsive image--profile-member img-responsive rounded-circle center-block d-block mx-auto mt-2"/>
 									</div>
 
 									<div class="row justify-content-center mt-5 media-body">
