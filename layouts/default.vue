@@ -57,6 +57,7 @@
 		},
 
 		mounted(){
+			console.log(this.status),
 			this.getChat(this.status),
 			this.getDataConsult(),
 			this.getFacebookSDK(document, 'script', 'facebook-jssdk'),
@@ -152,7 +153,7 @@
 
 			Reload(){
 				// console.log(this.status)
-				let consultData = JSON.parse(localStorage.getItem('consults'))
+				let consultData = process.client ? JSON.parse(localStorage.getItem('consults')) : ''
 				console.log(consultData.fullname)
 				let data = {
 					fullname: consultData.fullname,

@@ -12,6 +12,11 @@
 					<div class="col-lg-1 col-xs-6 col-sm-6 mb-5">
 						<nuxt-link to="/#products" class="btn btn-danger ml-3 mt-3"><i class='bx bx-arrow-back'></i> Kembali</nuxt-link>
 					</div>
+
+					<div class="col-lg-12 col-xs-12 col-sm-12 mt-5 mb-5">
+						<SocialSharing :socials="socials"/>
+					</div>
+
 				</div>
 
 				<div class="row">
@@ -63,8 +68,102 @@
 </template>
 
 <script>
+	import SocialSharing from '@/components/global/socialsharing'
+
 	export default {
 		props: ['product'],
+		components: {
+			SocialSharing
+		},
+
+		data(){
+			return {
+				socials: [
+				{
+					id: 1,
+					icon: 'bx bxl-twitter bx-lg',
+					network: 'twitter',
+					url: 'https://evoush.com/',
+					title: 'Evoush::Official',
+					description: 'Evoush Official Website.',
+					quote: 'Sukses berbisnis network marketing di era pandemi.',
+					image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
+					hashtags: 'Your Eternal Future',
+					twitterUser: 'EvoushOfficial'
+				},
+				{
+					id: 2,
+					icon: 'bx bxl-facebook-circle bx-lg',
+					network: 'facebook',
+					url: 'https://evoush.com/',
+					title: 'Evoush::Official',
+					description: 'Evoush Official Website.',
+					quote: 'Sukses berbisnis network marketing di era pandemi.',
+					image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
+					hashtags: 'Your Eternal Future'
+				},
+				{
+					id: 3,
+					icon: 'bx bxl-whatsapp bx-lg',
+					network: 'whatsapp',
+					url: 'https://evoush.com/event',
+					title: 'Evoush::Official',
+					description: 'Evoush Official Website.',
+					quote: 'Sukses berbisnis network marketing di era pandemi.',
+					image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
+					hashtags: 'Your Eternal Future'
+				}
+				]
+			}
+		},
+
+		head(){
+			return {
+				title: `Evoush::Product | ${this.product.categories[0].name} - ${this.product.name}`,
+				meta: [
+				{ property: "og:site_name", content: "Evoush::Official" },
+				{ hid: "og:type", property: "og:type", content: "website" },
+				{
+					hid: "apple-mobile-web-app-title",
+					name: "apple-mobile-web-app-title",
+					content: `Evoush::Product | ${this.product.seo.description}`
+				},
+				{
+					hid: 'description',
+					name: 'description',
+					content: `Evoush::Product | ${this.product.seo.description}`
+				},
+				{
+					hid: "og:site_name",
+					name: "og:site_name",
+					property: "og:site_name",
+					content:  `Evoush::Product | ${this.product.seo.title}`
+				},
+				{
+					hid: "og:url",
+					property: "og:url",
+					content: `https://evoush.com/product/${this.product.name}`,
+				},
+				{
+					hid: "og:title",
+					property: "og:title",
+					content:  `Evoush::Product | ${this.product.seo.title}`,
+				},
+				{
+					hid: "og:description",
+					property: "og:description",
+					content: `Evoush::Product | ${this.product.seo.description}`,
+				},
+				{
+					hid: "og:image",
+					property: "og:image",
+					content: this.product.assets[0].url,
+				},
+				{ property: "og:image:width", content: "740" },
+				{ property: "og:image:height", content: "300" },
+				]
+			}
+		},
 
 		mounted(){
 			this.getCarousel()

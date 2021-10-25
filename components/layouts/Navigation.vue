@@ -58,8 +58,8 @@
 	export default{
 		data(){
 			return {
-				token: (localStorage.getItem('token') ? localStorage.getItem('token') : ''),
-				username: (localStorage.getItem('username') ? localStorage.getItem('username') : ''),
+				token: (process.client ? localStorage.getItem('token') : ''),
+				username: (process.client ? localStorage.getItem('username') : ''),
 				user: ''
 			}
 		},

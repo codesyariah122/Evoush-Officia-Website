@@ -29,88 +29,88 @@ export default {
       lang: 'en',
       amp: true
     },
-    meta: [
-      { charset: 'utf-8' },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "apple-mobile-web-app-capable", content: "yes"},
-      { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent"},
-      { name: 'apple-mobile-web-app-title', content:"Evoush::Official"},
-      { hid: 'description', name: 'description', content: 'Your eternal future'},
-      // { name: "format-detection", content:"telephone=no"}
-      {
-        hid: 'description',
-        name: 'description',
-        content:
-          'Your Eternal Future'
-      },
+    // meta: [
+    //   { charset: 'utf-8' },
+    //   { name: "viewport", content: "width=device-width, initial-scale=1" },
+    //   { name: "apple-mobile-web-app-capable", content: "yes"},
+    //   { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent"},
+    //   { name: 'apple-mobile-web-app-title', content:"Evoush::Official"},
+    //   { hid: 'description', name: 'description', content: 'Your eternal future'},
+    //   // { name: "format-detection", content:"telephone=no"}
+    //   {
+    //     hid: 'description',
+    //     name: 'description',
+    //     content:
+    //       'Your Eternal Future'
+    //   },
 
-      // Twitter
-      // Test on: https://cards-dev.twitter.com/validator
-      {
-        hid: 'twitter:card',
-        name: 'twitter:card',
-        content: 'summary_large_image'
-      },
-      { hid: 'twitter:site', name: 'twitter:site', content: '@evoushofficial' },
-      {
-        hid: 'twitter:url',
-        name: 'twitter:url',
-        content: 'https://twitter.com/evoushofficial?lang=en'
-      },
-      {
-        hid: 'twitter:title',
-        name: 'twitter:title',
-        content: 'Evoush Official'
-      },
-      {
-        hid: 'twitter:description',
-        name: 'twitter:description',
-        content:
-          'Your Eternal Future'
-      },
-      {
-        hid: 'twitter:image',
-        name: 'twitter:image',
-        content: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg'
-      },
+    //   // Twitter
+    //   // Test on: https://cards-dev.twitter.com/validator
+    //   {
+    //     hid: 'twitter:card',
+    //     name: 'twitter:card',
+    //     content: 'summary_large_image'
+    //   },
+    //   { hid: 'twitter:site', name: 'twitter:site', content: '@evoushofficial' },
+    //   {
+    //     hid: 'twitter:url',
+    //     name: 'twitter:url',
+    //     content: 'https://twitter.com/evoushofficial?lang=en'
+    //   },
+    //   {
+    //     hid: 'twitter:title',
+    //     name: 'twitter:title',
+    //     content: 'Evoush Official'
+    //   },
+    //   {
+    //     hid: 'twitter:description',
+    //     name: 'twitter:description',
+    //     content:
+    //       'Your Eternal Future'
+    //   },
+    //   {
+    //     hid: 'twitter:image',
+    //     name: 'twitter:image',
+    //     content: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg'
+    //   },
 
-      // Open Graph
-      // Test on: https://developers.facebook.com/tools/debug/
-      { hid: 'og:site_name', property: 'og:site_name', content: 'Evoush::Official' },
-      { hid: 'og:type', property: 'og:type', content: 'website' },
-      {
-        hid: 'og:url',
-        property: 'og:url',
-        content: 'https://evoush.com'
-      },
-      {
-        hid: 'og:title',
-        property: 'og:title',
-        content: 'Evoush Official'
-      },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content:
-          'Your Eternal Future'
-      },
-      {
-        hid: 'og:image',
-        property: 'og:image',
-        content: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/assets/img/LOGO231.png'
-      },
-      {
-        hid: 'og:image:secure_url',
-        property: 'og:image:secure_url',
-        content: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/assets/img/LOGO231.png'
-      },
-      {
-        hid: 'og:image:alt',
-        property: 'og:image:alt',
-        content: 'Evoush::Success'
-      }
+    //   // Open Graph
+    //   // Test on: https://developers.facebook.com/tools/debug/
+    //   { hid: 'og:site_name', property: 'og:site_name', content: 'Evoush::Official' },
+    //   { hid: 'og:type', property: 'og:type', content: 'website' },
+    //   {
+    //     hid: 'og:url',
+    //     property: 'og:url',
+    //     content: 'https://evoush.com'
+    //   },
+    //   {
+    //     hid: 'og:title',
+    //     property: 'og:title',
+    //     content: 'Evoush Official'
+    //   },
+    //   {
+    //     hid: 'og:description',
+    //     property: 'og:description',
+    //     content:
+    //       'Your Eternal Future'
+    //   },
+    //   {
+    //     hid: 'og:image',
+    //     property: 'og:image',
+    //     content: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/assets/img/LOGO231.png'
+    //   },
+    //   {
+    //     hid: 'og:image:secure_url',
+    //     property: 'og:image:secure_url',
+    //     content: 'https://raw.githubusercontent.com/evoush-products/bahan_evoush/main/assets/img/LOGO231.png'
+    //   },
+    //   {
+    //     hid: 'og:image:alt',
+    //     property: 'og:image:alt',
+    //     content: 'Evoush::Success'
+    //   }
 
-    ],
+    // ],
     link: [
       {
         hid: "canonical",

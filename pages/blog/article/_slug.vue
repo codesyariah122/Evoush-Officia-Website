@@ -2,6 +2,9 @@
 	<div class="container">
 		<div class="row justify-content-center">
 
+			<div class="col-lg-12 col-xs-12 col-sm-12">
+				<SocialSharing :socials="socials"/>
+			</div>
 
 
 			<!-- <img :src="require(`~/assets/blog/images/${article.slug}/${article.img}`)" class="cover img-fluid img-responsive mb-5"> -->
@@ -30,11 +33,97 @@
 </template>
 
 <script>
+import SocialSharing from '@/components/global/socialsharing'
 export default {
 	layout: 'article',
+	components: {
+		SocialSharing
+	},
+	data(){
+		return {
+			socials: [
+			{
+				id: 1,
+				icon: 'bx bxl-twitter bx-lg',
+				network: 'twitter',
+				url: 'https://evoush.com/',
+				title: 'Evoush::Official',
+				description: 'Evoush Official Website.',
+				quote: 'Sukses berbisnis network marketing di era pandemi.',
+				image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
+				hashtags: 'Your Eternal Future',
+				twitterUser: 'EvoushOfficial'
+			},
+			{
+				id: 2,
+				icon: 'bx bxl-facebook-circle bx-lg',
+				network: 'facebook',
+				url: 'https://evoush.com/',
+				title: 'Evoush::Official',
+				description: 'Evoush Official Website.',
+				quote: 'Sukses berbisnis network marketing di era pandemi.',
+				image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
+				hashtags: 'Your Eternal Future'
+			},
+			{
+				id: 3,
+				icon: 'bx bxl-whatsapp bx-lg',
+				network: 'whatsapp',
+				url: 'https://evoush.com/event',
+				title: 'Evoush::Official',
+				description: 'Evoush Official Website.',
+				quote: 'Sukses berbisnis network marketing di era pandemi.',
+				image: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg',
+				hashtags: 'Your Eternal Future'
+			}
+			]
+		}
+	},
 	head(){
-		return{
-			title: `Evoush::News | ${this.article.title}`
+		return {
+			title: `Evoush::News | ${this.article.title}`,
+			meta: [
+			{ property: "og:site_name", content: `Evoush::Official - ${this.article.title}` },
+			{ hid: "og:type", property: "og:type", content: "website" },
+			{
+				hid: "apple-mobile-web-app-title",
+				name: "apple-mobile-web-app-title",
+				content: `Evoush::News | ${this.article.title}`
+			},
+			{
+				hid: 'description',
+				name: 'description',
+				content: 'Your Eternal Future'
+			},
+			{
+				hid: "og:site_name",
+				name: "og:site_name",
+				property: "og:site_name",
+				content: `Evoush::News | ${this.article.categories} - ${this.article.title}`
+			},
+			{
+				hid: "og:url",
+				property: "og:url",
+				content: `https://evoush.com/blog/${this.article.categories}/${this.article.title}`,
+			},
+			{
+				hid: "og:title",
+				property: "og:title",
+				content: `Evoush::News | ${this.article.title}`,
+			},
+			{
+				hid: "og:description",
+				property: "og:description",
+				content: "Your Eternal Future",
+			},
+			{
+				hid: "og:image",
+				property: "og:image",
+				content: require(`~/assets/blog/images/${this.article.slug}/${this.article.img}`),
+			},
+			{ property: "og:image:width", content: "740" },
+			{ property: "og:image:height", content: "300" },
+			]
 		}
 	},
 	async asyncData({ $content, params }) {
