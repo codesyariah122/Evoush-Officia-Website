@@ -34,14 +34,14 @@
 						<h4>{{article.title}}</h4>
 						<p>{{article.categories}}</p>
 						<div class="portfolio-links mt-3">
-							<a
-							:href="require(`~/assets/blog/images/${article.slug}/${article.img}`)"
+							<nuxt-link
+							:to="require(`~/assets/blog/images/${article.slug}/${article.img}`)"
 							data-gall="productGallery"
 							class="venobox btn btn-sm btn-primary text-white"
 							:title="article.title"
 							><i class="bx bx-plus"></i
 								>
-							</a>
+							</nuxt-link>
 									<nuxt-link
 										:to="{name: `blog-${article.categories}-slug`, params: {categories: article.categories, slug: article.slug}}"
 										data-gall="portfolioDetailsGallery"

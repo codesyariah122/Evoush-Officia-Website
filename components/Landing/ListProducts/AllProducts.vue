@@ -41,6 +41,9 @@
 
 <script>
 	export default {
-		props: ['allproducts']
+		props: ['allproducts', 'getVenobox'],
+		mounted(){
+			this.getVenobox()
+		}
 	}
 </script>

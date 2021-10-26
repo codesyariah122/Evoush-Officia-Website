@@ -30,6 +30,34 @@
 		components: {
 			ColorModePicker,
 			Footer
+		},
+		data(){
+			return {
+				status: localStorage.getItem('consults') ? JSON.parse(localStorage.getItem('consults')) : ''
+			}
+		},
+
+		mounted(){
+			// $crisp.push(['do', 'chat:hide'])
+			this.getChat(this.status)
+		},
+		methods: {
+			getChat(status){
+				console.log(status)
+				// $crisp.push(['do', 'chat:hide'])
+				if(status === ""){
+					document.querySelector('.chatwith').style.visibility="hidden"
+					// $crisp.push(['do', 'chat:hide'])
+				}else{
+					if(status === "ACTIVE"){
+						document.querySelector('.chatwith').style.visibility="visible"
+						// $crisp.push(['do', 'chat:show'])
+						// $crisp.push(['do', 'chat:open'])
+					}else{
+						document.querySelector('.chatwith').style.visibility="hidden"
+					}
+				}
+			},
 		}
 	}
 </script>

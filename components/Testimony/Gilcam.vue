@@ -11,7 +11,7 @@
 				data-aos-delay="200">
 					<div v-for="first in reverse" class="col-lg-4 col-md-6 portfolio-item">
 						<div class="portfolio-wrap">
-							<img
+							<img v-if="first.format === 'image'"
 							:src="`https://evoush-landing-api.herokuapp.com${first.img}`"
 							class="img-fluid"
 							alt=""

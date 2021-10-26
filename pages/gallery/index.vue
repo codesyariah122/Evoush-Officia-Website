@@ -30,8 +30,15 @@
 
 					<Evost :thirds="thirds.data.data"/>
 
-
 					<DayCream :fourths="fourths.data.data"/>
+
+					<BodySerum :fifths="fifths.data.data"/>
+
+					<Peeling :sixths="sixths.data.data"/>
+
+					<SkinCare :sevenths="sevenths.data.data"/>
+
+					<Klev :eights="eights.data.data"/>
 
 					<h1 class="underline mt-5" style="margin-bottom: 15rem;"></h1>
 
@@ -43,7 +50,7 @@
 
 
 <script>
-	import {Gilcam, Evost, BeautySoap, DayCream} from '@/components/Testimony'
+	import {Gilcam, Evost, BeautySoap, DayCream, BodySerum, Peeling, SkinCare, Klev} from '@/components/Testimony'
 
 	export default{
 		layout: 'pages',
@@ -52,7 +59,11 @@
 			Gilcam,
 			Evost,
 			BeautySoap,
-			DayCream
+			DayCream,
+			BodySerum,
+			Peeling,
+			SkinCare,
+			Klev
 		},
 
 		head(){
@@ -66,12 +77,20 @@
 			const seconds = await $axios.get('https://evoush-landing-api.herokuapp.com/api/data/gallery/testimony/second')
 			const thirds = await $axios.get('https://evoush-landing-api.herokuapp.com/api/data/gallery/testimony/third')
 			const fourths = await $axios.get('https://evoush-landing-api.herokuapp.com/api/data/gallery/testimony/fourth')
+			const fifths = await $axios.get('https://evoush-landing-api.herokuapp.com/api/data/gallery/testimony/fifth')
+			const sixths = await $axios.get('https://evoush-landing-api.herokuapp.com/api/data/gallery/testimony/sixth')
+			const sevenths = await $axios.get('https://evoush-landing-api.herokuapp.com/api/data/gallery/testimony/seventh')
+			const eights = await $axios.get('https://evoush-landing-api.herokuapp.com/api/data/gallery/testimony/eight')
 
 			return {
 				firsts,
 				seconds,
 				thirds,
-				fourths
+				fourths,
+				fifths,
+				sixths,
+				sevenths,
+				eights
 			}
 		},
 

@@ -65,9 +65,9 @@
 			<News :articles="articles"/>
 		</div>
 
-		<h1 class="underline" style="margin-top: 5rem;"></h1>
+		<!-- <h1 class="underline" style="margin-top: 5rem;"></h1>
 
-		<CheckResi/>
+		<CheckResi/> -->
 
 		<br>
 
