@@ -34,10 +34,10 @@
 									<div v-if="member.avatar" class="container">
 										<img :src="`https://app.evoush.com/storage/${member.avatar}`" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 
-											<div class="middle">
-												<button class="btn btn-sm btn-primary ml-2 mb-2" @click="openUpdateAvatar"><i class='bx bxs-edit bx-lg'></i></button>
-												<a :href="`https://app.evoush.com/storage/${member.avatar}`" class="btn btn-sm btn-primary mb-2" target="_blank"><i class='bx bx-zoom-in'></i></a>
-											</div>
+										<div class="middle">
+											<button class="btn btn-sm btn-primary ml-2 mb-2" @click="openUpdateAvatar"><i class='bx bxs-edit bx-lg'></i></button>
+											<a :href="`https://app.evoush.com/storage/${member.avatar}`" class="btn btn-sm btn-primary mb-2" target="_blank"><i class='bx bx-zoom-in'></i></a>
+										</div>
 										<!-- <div v-if="preview">
 											<img :src="preview" alt="..." width="130" class="rounded-circle mb-3 profile profile-overlay">
 										</div>
@@ -147,15 +147,15 @@
 						<div class="row justify-content-center">
 							<div class="col-lg-12 col-xs-12 col-sm-12">
 								<center>
-								<div v-if="newMembers.length > 0" class="mb-5 mt-2 alert alert-warning alert-dismissible fade show" role="alert">
-									<strong>Halo {{member.username}}!</strong> anda mempunyai <strong>{{newMembers.length}} member</strong> yang belum di aktivasi, click tombol list member di bawah untuk melanjutkan aktivasi member anda. <br>
+									<div v-if="newMembers.length > 0" class="mb-5 mt-2 alert alert-warning alert-dismissible fade show" role="alert">
+										<strong>Halo {{member.username}}!</strong> anda mempunyai <strong>{{newMembers.length}} member</strong> yang belum di aktivasi, click tombol list member di bawah untuk melanjutkan aktivasi member anda. <br>
 
-									<nuxt-link to="/profile/new-member/activated" class="btn btn-lg btn-primary">List Member</nuxt-link>
+										<nuxt-link to="/profile/new-member/activated" class="btn btn-lg btn-primary">List Member</nuxt-link>
 
-									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
 
 									<div v-if="message">
 										<div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -198,8 +198,8 @@
 		data(){
 			return {
 				samples: [
-					{id:1, url: 'https://raw.githubusercontent.com/evoush-products/evoush-express/master/public/images/gallery/branding/klev_branding1.jpeg'},
-					{id:2, url: 'https://raw.githubusercontent.com/evoush-products/evoush-express/master/public/images/gallery/branding/klev_branding2.jpeg'}
+				{id:1, url: 'https://raw.githubusercontent.com/evoush-products/evoush-express/master/public/images/gallery/branding/klev_branding1.jpeg'},
+				{id:2, url: 'https://raw.githubusercontent.com/evoush-products/evoush-express/master/public/images/gallery/branding/klev_branding2.jpeg'}
 				],
 				newMembers: [],
 				followers: null,
@@ -356,7 +356,7 @@
 						let formData = new FormData
 						formData.append("cover", this.cover)
 						this.$axios.post(`/member/update/cover/${id}`, formData, {
-									headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+							headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 						})
 						.then(res=>{
 							// console.log(res.data)
@@ -445,7 +445,7 @@
 	height: auto;
 	border-radius: 50%!important;
 	margin-top: 1rem;
-	margin-left: -4rem;
+	margin-left: -3rem;
 }
 
 .container {
@@ -538,6 +538,41 @@
 
 }
 
+@media(min-width: 820px){
+	.media .profile {
+		width: 250px;
+		margin-left: 2rem;
+	}
+	.media-body {
+		margin-left: -1rem;
+	}
+	.media-body h4{
+		font-size:33px;
+	}
+	.media-body p{
+		font-size: 21px;
+	}
+	.media-body i{
+		font-size: 16px;
+	}
+	.media-body span{
+		font-size: 16px;
+	}
+	.middle {
+		transition: .5s ease;
+		opacity: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		text-align: center;
+	}
+	.middle i{
+		font-size: 37px!important;
+	}
+}
+
 @media (min-width: 884px) {
 	.media .profile {
 		width: 350px;
@@ -570,6 +605,140 @@
 	}
 	.middle i{
 		font-size: 37px!important;
+	}
+
+
+	@media (min-width: 768px) {
+		.media .profile {
+			width: 350px;
+			margin-left: .1rem;
+		}
+		.media-body {
+			margin-left: -7rem;
+		}
+		.media-body h4{
+			font-size:33px;
+		}
+		.media-body p{
+			font-size: 21px;
+		}
+		.media-body i{
+			font-size: 16px;
+		}
+		.media-body span{
+			font-size: 16px;
+		}
+		.middle {
+			transition: .5s ease;
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			left: 70%;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			text-align: center;
+		}
+		.middle i{
+			font-size: 40px!important;
+		}
+	}
+
+	@media(min-width: 1280px){
+		.media .profile{
+			margin-top: 10rem;
+			margin-left: 3rem;
+			width: 350px;
+			height: auto;
+		}
+
+		.media-body{
+			margin-top: 5rem;
+			margin-left: 3rem;
+		}
+
+		.media-body h4{
+			font-size:31px;
+		}
+
+		.media-body p{
+			font-size: 21px;
+		}
+
+		.profile-overlay{
+			opacity: 1;
+			display: block;
+			width: 100%;
+			height: auto;
+			transition: .5s ease;
+			backface-visibility: hidden;
+		}
+		.container:hover .profile-overlay{
+			opacity: 0.3;
+		}
+
+		.middle {
+			transition: .5s ease;
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			left: 55%;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			text-align: center;
+		}
+
+		.middle i{
+			font-size: 37px!important;
+		}
+	}
+
+	@media(min-width: 2560px){
+		.media .profile{
+			margin-top: 10rem;
+			margin-left: 25rem;
+			width: 450px;
+			height: auto;
+		}
+
+		.media-body{
+			margin-top: 5rem;
+			margin-left: 3rem;
+		}
+
+		.media-body h4{
+			font-size:31px;
+		}
+
+		.media-body p{
+			font-size: 21px;
+		}
+
+		.profile-overlay{
+			opacity: 1;
+			display: block;
+			width: 100%;
+			height: auto;
+			transition: .5s ease;
+			backface-visibility: hidden;
+		}
+		.container:hover .profile-overlay{
+			opacity: 0.3;
+		}
+
+		.middle {
+			transition: .5s ease;
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			left: 98%;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			text-align: center;
+		}
+
+		.middle i{
+			font-size: 37px!important;
+		}
 	}
 }
 </style>

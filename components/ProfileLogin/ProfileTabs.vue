@@ -68,6 +68,8 @@
 										<div v-else>
 											<blockquote class="blockquote-footer text-center">
 												<strong>{{user.username}}, <small class="text-danger">belum menambahkan success story.</small></strong>
+												<br>
+												<nuxt-link :to="{name:'profile-edit-username', params: {username: user.username}}" :key="user.id" class="btn btn-link mb-0 mt-3">Edit profile</nuxt-link>
 											</blockquote>
 										</div>
 									</center>

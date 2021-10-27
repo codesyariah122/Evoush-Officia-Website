@@ -36,7 +36,8 @@
 									<!-- <img src="https://cdn.lowgif.com/full/fa958edd71a23366-.gif" class="img-fluid" width="300"> -->
 									<div class="round-hero">
 									</div>
-									<img src="http://www.orlift.com/en/images/loader.gif" class="img-fluid rotate loading-imgbox">
+									<!-- <img src="http://www.orlift.com/en/images/loader.gif" class="img-fluid rotate loading-imgbox"> -->
+									<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/913ebecf-47f8-4b46-9e56-fa13f2cfd0a4/dd673xj-8aeeaadf-14f6-4640-9eef-cba78576de3e.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzkxM2ViZWNmLTQ3ZjgtNGI0Ni05ZTU2LWZhMTNmMmNmZDBhNFwvZGQ2NzN4ai04YWVlYWFkZi0xNGY2LTQ2NDAtOWVlZi1jYmE3ODU3NmRlM2UuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.CS1l3OJEPGRmPw5aqZjVCdjmAOCRSCcLy-Nm995gGrk" class="img-fluid rotate loading-imgbox">
 								</div>
 								<div v-else>
 									<div class="round-hero">
@@ -216,7 +217,7 @@
 	/*filter: drop-shadow(5px 10px black);*/
 }
 .loading-imgbox{
-	width: 300px;
+	width: 250px;
 }
 .loading-imgbox img{
 	margin-top: -5rem;

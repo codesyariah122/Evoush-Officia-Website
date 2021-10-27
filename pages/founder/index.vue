@@ -41,7 +41,9 @@
 													<nuxt-link :to="{name:'member-username', params: {username: founder.username}}" class="btn btn-danger btn-sm">Lihat Profile</nuxt-link>
 												</div>
 
-												<blockquote v-if="founder.quotes" class="card-text blockquote-footer">{{founder.quotes}}.</blockquote>
+												<blockquote v-if="founder.quotes" class="card-text blockquote-footer">
+													<span v-html="founder.quotes"></span>
+												</blockquote>
 
 												<blockquote class="blockquote-footer" v-else>
 													<small class="text-primary">{{founder.username}}, <strong>belum menambahkan quotes</strong></small>
@@ -112,7 +114,7 @@
 .profile-card-2 .card-img-block{
 	float:left;
 	width: 100%;
-	height:400px;
+	height:450px;
 	overflow:hidden;
 	/*background: linear-gradient(to right, salmon, coral);*/
 }
@@ -136,7 +138,7 @@
 	font-size: 31px;
 	font-weight:700;
 	/*color:#000!important;*/
-	margin-top: -15rem;
+	margin-top: -17rem;
 	align-items: center!important;
 }
 .profile-card-2 .card-text{
@@ -152,13 +154,13 @@
 }
 .profile-card-2 i {
 	display: inline-block;
-	font-size: 31px;
+	font-size: 21px;
 	color: #6ab04c;
 	text-align: center;
 	border: 1px solid #6ab04c;
-	width: 40px;
-	height: 40px;
-	line-height: 37px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
 	border-radius: 50%;
 	margin:0 5px;
 }
@@ -182,6 +184,66 @@
 		float:left;
 		width: 100%;
 		height:800px;
+		overflow:hidden;
+	}
+	.profile {
+		border-radius: 50%;
+		position: absolute;
+		top: -19rem!important;
+		left: 50%!important;
+		/*max-width: 65px;*/
+		width: 250px!important;
+		border: 3px solid rgba(255, 255, 255, 1);
+		-webkit-transform: translate(-50%, 0%);
+		transform: translate(-50%, 0%);
+	}
+	.profile-card-2 h5{
+		text-transform: capitalize;
+		font-size: 31px;
+		font-weight:700;
+		/*color:#6ab04c;*/
+		/*margin-top: -10rem;*/
+	}
+	.media-body{
+		margin-top: 13rem!important;
+	}
+}
+
+@media(min-width: 820px){
+	.profile-card-2 .card-img-block{
+		float:left;
+		width: 100%;
+		/*height:800px;*/
+		overflow:hidden;
+	}
+	.profile {
+		border-radius: 50%;
+		position: absolute;
+		top: -19rem!important;
+		left: 50%!important;
+		/*max-width: 65px;*/
+		width: 250px!important;
+		border: 3px solid rgba(255, 255, 255, 1);
+		-webkit-transform: translate(-50%, 0%);
+		transform: translate(-50%, 0%);
+	}
+	.profile-card-2 h5{
+		text-transform: capitalize;
+		font-size: 31px;
+		font-weight:700;
+		/*color:#6ab04c;*/
+		/*margin-top: -10rem;*/
+	}
+	.media-body{
+		margin-top: 13rem!important;
+	}
+}
+
+@media(min-width: 768px){
+	.profile-card-2 .card-img-block{
+		float:left;
+		width: 100%;
+		/*height:800px;*/
 		overflow:hidden;
 	}
 	.profile {

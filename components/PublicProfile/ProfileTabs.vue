@@ -86,7 +86,9 @@
 							</blockquote>
 							<small class="blockquote-footer text-secondary">
 								Untuk mengedit profile anda harus login terlebih dahulu, klik / tap tombol <code class="text-primary">Login</code> diatas. Mengenai informasi login anda bisa request informasi login di link di bawah ini : <br>
-								<a :href="`https://wa.me/6288222668778?text=Request%20informasi%20login,%20Username:%20${member.username}`" class="text-link" target="_blank">Request Web Replika</a>
+								<center>
+									<a :href="`https://wa.me/6288222668778?text=Request%20informasi%20login,%20Username:%20${member.username}`" class="text-link" target="_blank">Request Web Replika</a>
+								</center>
 							</small>
 						</div>
 					</div>
