@@ -58,17 +58,12 @@
 						</div>
 					</div>
 
-					<p class="mt-3 w-100 float-left text-center mt-5"><strong>Teaser Product Video Playlist</strong></p>
+					<!-- <p class="mt-3 w-100 float-left text-center mt-5"><strong>Teaser Product Video Playlist</strong></p>
 					<div class="container">
-
-						<!-- <div v-for="playlist in playlists" class="embed-responsive embed-responsive-16by9 mb-3">
-							<iframe class="embed-responsive-item" :src="`https://www.youtube.com/embed/${playlist.snippet.resourceId.videoId}?rel=0`" allowfullscreen></iframe>
-						</div> -->
 						<div class="card card-list-yt">
 							<ul class="list-group list-group-flush">
 								<div>
 									<li v-for="video in videos" class="list-group-item">
-										<!-- <img :src="video.snippet.thumbnails.default.url"> -->
 										<div class="embed-responsive embed-responsive-16by9 mb-3">
 											<iframe class="embed-responsive-item" :src="`https://www.youtube.com/embed/${video.snippet.resourceId.videoId}?rel=0`" allowfullscreen></iframe>
 										</div>
@@ -88,7 +83,8 @@
 								</div>
 							</ul>
 						</div>
-					</div>
+					</div> -->
+
 				</div>
 			</div>
 		</div>

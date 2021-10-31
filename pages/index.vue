@@ -57,6 +57,27 @@
 				</div> -->
 				<!-- <h1 class="underline" style="margin-top: 5rem;"></h1> -->
 
+				<!-- <pre>
+					{{ channels }}
+				</pre> -->
+
+				<div v-if="channels.data.error"  class="col-lg-12 col-xs-12 col-sm-12">
+					<center>
+						<div class="alert alert-success">
+							<small class="text-primary mb-3">
+								{{ channels.message }}
+							</small> <br>
+							<small class="text-danger">Error {{ channels.data.error.code }}</small> {{ channels.data.error.message }}
+						</div>
+					</center>
+				</div>
+
+				<div v-else>
+					<YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos" :playlists="playlistVideos"/>
+				</div>
+
+				<h1 class="underline" style="margin-bottom: 3rem;"></h1>
+
 			</div>
 
 		</div>
@@ -95,26 +116,7 @@
 		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
 
 
-		<!-- <pre>
-			{{ channels }}
-		</pre> -->
 
-		<div v-if="channels.data.error"  class="col-lg-12 col-xs-12 col-sm-12">
-			<center>
-				<div class="alert alert-success">
-					<small class="text-primary mb-3">
-						{{ channels.message }}
-					</small> <br>
-					<small class="text-danger">Error {{ channels.data.error.code }}</small> {{ channels.data.error.message }}
-				</div>
-			</center>
-		</div>
-
-		<div v-else>
-			<YoutubeChannel class="mt-5 mb-5" :channels="channels" :latests="latestVideos" :playlists="playlistVideos"/>
-		</div>
-
-		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
 
 		<!-- <NewMember/> -->
 
