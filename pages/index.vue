@@ -186,7 +186,7 @@
 			const channel_id = 'UCIzNgeNDD58z8XNppkopwzw'
 			const playlist_id = 'PLblvVtAgjh4DwLORfIHawwIVvaosP-YCA'
 			const channels = await $axios.$get(`https://evoush-landing-api.herokuapp.com/api/data/youtube/channel/${channel_id}`)
-			const latestVideos = await $axios.$get(`https://evoush-landing-api.herokuapp.com/api/data/youtube/latest/${channel_id}/5/date`)
+			const latestVideos = await $axios.$get(`https://evoush-landing-api.herokuapp.com/api/data/youtube/latest/${channel_id}/7/date`)
 			const playlistVideos = await $axios.$get(`https://evoush-landing-api.herokuapp.com/api/data/youtube/playlist/${channel_id}/5/${playlist_id}`)
 			const results = await $axios.$get('/product/all')
 			const members = await $axios.$get('/evoush/member-list')

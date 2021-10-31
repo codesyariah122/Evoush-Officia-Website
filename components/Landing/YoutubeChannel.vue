@@ -23,7 +23,42 @@
 							</div>
 						</div>
 					</div>
-					<p class="mt-3 w-100 float-left text-center"><strong>Teaser Product Video Playlist</strong></p>
+
+					<p class="mt-3 w-100 float-left text-center mt-5"><strong>Latest Videos</strong></p>
+
+					<div class="container">
+						<div class="card card-list-yt">
+							<ul class="list-group list-group-flush">
+								<div>
+									<!-- <pre>
+										{{ latests }}
+									</pre> -->
+
+									<li v-for="latest in latests" class="list-group-item">
+										<div v-for="yt in latest.items">
+											<div class="embed-responsive embed-responsive-16by9 mb-3">
+												<iframe class="embed-responsive-item" :src="`https://www.youtube.com/embed/${yt.id.videoId}?rel=0`" allowfullscreen></iframe>
+											</div>
+											<br>
+											<ul style="list-style: none;">
+												<li>
+													<strong>{{yt.snippet.title}}</strong>
+												</li>
+												<li>
+													<strong>Published At : {{formatDate(yt.publishTime)}}</strong>
+												</li>
+												<li>
+													<blockquote class="blockquote-footer" v-html="yt.snippet.description" style="text-align: justify;"></blockquote>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</div>
+							</ul>
+						</div>
+					</div>
+
+					<p class="mt-3 w-100 float-left text-center mt-5"><strong>Teaser Product Video Playlist</strong></p>
 					<div class="container">
 
 						<!-- <div v-for="playlist in playlists" class="embed-responsive embed-responsive-16by9 mb-3">
@@ -82,7 +117,7 @@
 		created(){
 			this.results = this.channels.data.items[0],
 			this.videos = this.playlists.data.items
-			console.log(this.channels)
+			console.log(this.latests)
 		},
 
 		methods: {
@@ -115,7 +150,7 @@
 		overflow: hidden;
 		width: 100%;
 		text-align: center;
-		height:870px;
+		height:900px;
 		border:none;
 	}
 	.profile-card-3 .background-block {
