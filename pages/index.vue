@@ -113,9 +113,7 @@
 
 		<Pages/>
 
-		<h1 class="underline" style="margin-bottom: 3rem;"></h1>
-
-
+		<h1 class="underline" style="margin-bottom: 2rem;"></h1>
 
 
 		<!-- <NewMember/> -->
