@@ -104,7 +104,14 @@
 								<nuxt-link :to="{name:'profile-username', params: {username: user.username}}" class="btn btn-success">My Profile</nuxt-link>
 							</li>
 							<li v-else class="mb-2 mt-2">
-								<nuxt-link to="/auth/login"  class="btn btn-primary">Login</nuxt-link>
+								<ol class="button" style="list-style: none;">
+									<li>
+										<nuxt-link to="/auth/login"  class="btn btn-primary">Login</nuxt-link>
+									</li>
+									<li>
+										<nuxt-link :to="{name: 'member-join-sponsor', params:{sponsor: member.username}}" class="btn btn-outline-success mb-5 mt-5"><i class='bx bxs-user-check'></i>  Join Now</nuxt-link>
+									</li>
+								</ol>
 							</li>
 						</ul>
 					</div>

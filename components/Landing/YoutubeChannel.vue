@@ -45,7 +45,7 @@
 													<strong>{{yt.snippet.title}}</strong>
 												</li>
 												<li>
-													<strong>Published At : {{formatDate(yt.publishTime)}}</strong>
+													<strong>Published At : {{formatDate(yt.snippet.publishedAt)}}</strong>
 												</li>
 												<li>
 													<blockquote class="blockquote-footer" v-html="yt.snippet.description" style="text-align: justify;"></blockquote>
