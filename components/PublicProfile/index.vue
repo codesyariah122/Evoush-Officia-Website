@@ -214,7 +214,7 @@
 			},
 
 			getFollowers(username){
-				this.$axios.get(`http://app.evoush.com/api/member/join/active/${username}`)
+				this.$axios.get(`https://app.evoush.com/api/member/join/active/${username}`)
 				.then( res => {
 					this.followers = res.data
 					// console.log(this.followers.length)
