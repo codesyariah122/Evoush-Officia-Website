@@ -284,8 +284,14 @@
 								<!-- <a href="#" class="btn btn-primary btn-block py-2">
 									<span class="font-weight-bold">Join Member</span>
 								</a> -->
-								<button type="submit" class="btn btn-primary">
-									Join Member
+								<button type="submit" class="btn btn-primary rounded-pill btn-block">
+									<div v-if="loading">
+										<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+										Loading...
+									</div>
+									<div v-else>
+										Join Member
+									</div>
 								</button>
 							</div>
 
