@@ -36,13 +36,18 @@
 							<small v-if="validation.password" class="mt-2 text-danger">
                                 {{ validation.password[0] }}
                             </small>
-							<input type="submit" name="" value="Login" href="#">
-							<div v-if="loading">
-								<div class="d-flex align-items-start">
-									<strong>Loading...</strong>
-									<div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+							<button type="submit" name="">
+								<div v-if="loading">
+									<div class="d-flex align-items-start">
+										<strong>Loading...</strong>
+										<div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+									</div>
 								</div>
-							</div>
+
+								<span v-else>
+									Login
+								</span>
+							</button>
 							<br>
 							<a @click="historyBack()" class="back">Kembali</a>
 
@@ -264,7 +269,7 @@
 	border-color: #2ecc71
 }
 
-.box input[type="submit"] {
+.box button[type="submit"] {
 	border: 0;
 	background: none;
 	display: block;

@@ -28,6 +28,8 @@
 
 				<!-- Registeration Form -->
 
+
+
 				<div v-if="hide_form" class="col-md-7 col-lg-6 ml-auto">
 					<div class="alert alert-success" role="alert">
 						<h4 class="alert-heading">Selamat Bergabung</h4>
@@ -41,286 +43,53 @@
 
 
 				<div v-else id='form-join' class="col-md-7 col-lg-6 ml-auto">
+
+
 					<div v-if="loading">
-						<img src="https://d33wubrfki0l68.cloudfront.net/3dafc215e0dc2be7e854dc25c44c453fdaf4be87/ccccb/uploads/foodrush-loader.gif" class="img-fluid">
+						<center>
+							<img src="https://www.suchirayuhospital.com/img/rolling.gif" class="img-fluid">
+						</center>
 					</div>
-					<!-- <h1>Teu di hide anjing</h1> -->
+
 					<div v-if="err_message" class="alert alert-danger">{{err_message}}</div>
-					<form  @submit.prevent="storeNewMember">
 
-						<div class="row">
+					<div v-if="new_member_inactive === false">
+						<div v-if="has_join_status" class="alert alert-warning alert-dismissible fade show" role="alert">
+							<strong>Halo {{ activate_user.username }}!</strong> Anda merupakan member dari sponsor <nuxt-link :to="`/member/${has_join.username}`"> <strong>{{ has_join.name }}</strong></nuxt-link>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<!-- form anjing -->
+						<div v-else>
+							<FormJoin :dataSponsor="dataSponsor" :storeNewMember="storeNewMember" :validation="validation" :field="field" :provinces="provinces" :getCity="getCity" :citys="citys" :showPassword="showPassword" :showPasswordConfirm="showPasswordConfirm" :showing="showing" :showingConfirm="showingConfirm" :show="show" :hide="hide" :loading="loading"/>
+						</div>
+					</div>
 
-							<input type="hidden" name="email_sponsor" :value="dataSponsor[0].email" id="email_sponsor">
-
-							<input type="hidden" name="sponsor_id" :value="dataSponsor[0].id" id="sponsor_id">
-
-							<input type="hidden" name="roles[]" value="FOLLOWER" id="roles">
-
-							<input type="hidden" name="status" value="INACTIVE" id="status">
-
-							<input type="hidden" name="username_path" :value="dataSponsor[0].username" id="username_path">
-
-							<!-- First Name -->
-							<div class="input-group col-lg-12 mb-4">
-								<div class="input-group-prepend">
-									<span class="input-group-text bg-white px-4 border-md border-right-0">
-										<i class='bx bx-user text-muted'></i>
-									</span>
-								</div>
-								<input type="text" v-model="field.name" name="name" placeholder="Nama Lengkap Anda" class="form-control bg-white border-left-0 border-md" id="name">
-
-								<div class="col-lg-12 col-xs-12 col-sm-12">
-									<small class="text-danger">*wajib di isi</small>
-									<br />
-								</div>
-
-								<div class="col-lg-12 col-xs-12 col-sm-12">
-									<small v-if="validation.name" class="mt-2 text-danger">
-										{{validation.name[0]}}
-									</small>
-								</div>
-
-							</div>
-
-							<!-- Last Name -->
-							<!-- <div class="input-group col-lg-6 mb-4">
-								<div class="input-group-prepend">
-									<span class="input-group-text bg-white px-4 border-md border-right-0">
-										<i class='bx bx-user text-muted'></i>
-									</span>
-								</div>
-								<input type="text" name="last_name" placeholder="Last Name" class="form-control bg-white border-left-0 border-md" id="last_name">
-
-							</div> -->
-
-							<!-- Email Address -->
-							<div class="input-group col-lg-12 mb-4">
-								<div class="input-group-prepend">
-									<span class="input-group-text bg-white px-4 border-md border-right-0">
-										<i class='bx bx-envelope-open text-muted'></i>
-									</span>
-								</div>
-								<input id="email" v-model="field.email" type="email" name="email" placeholder="alamat_email_anda@email.com" class="form-control bg-white border-left-0 border-md">
-
-								<div class="col-lg-12 col-xs-12 col-sm-12">
-									<small class="text-danger">*Wajib diisi</small>
-									<br />
-								</div>
-								<div class="col-lg-12 col-xs-12 col-sm-12">
-									<small v-if="validation.email" class="mt-2 text-danger">
-										{{validation.email[0]}}
-									</small>
-								</div>
-							</div>
-
-							<!-- Phone Number -->
-							<div class="input-group col-lg-12 mb-4">
-								<div class="input-group-prepend">
-									<span class="input-group-text bg-white px-4 border-md border-right-0">
-										<i class='bx bx-phone text-muted'></i>
-									</span>
-								</div>
-								<!-- <select id="countryCode" name="countryCode" style="max-width: 80px" class="custom-select form-control bg-white border-left-0 border-md h-100 font-weight-bold text-muted">
-									<option value="">+12</option>
-									<option value="">+10</option>
-									<option value="">+15</option>
-									<option value="">+18</option>
-								</select> -->
-								<vue-tel-input type="number" v-model="field.phone" class="bg-white border-md border-left-0 pl-3" id="phone" name="phone"></vue-tel-input>
-								<!-- <input type="tel" id="phone" name="phone" placeholder="Phone Number Format:(628782xxxx)" class="form-control bg-white border-md border-left-0 pl-3"> -->
-								<div class="col-lg-12 col-xs-12 col-sm-12">
-									<small class="text-danger">*Wajib diisi</small>
-									<br />
-								</div>
-								<div class="col-lg-12 col-xs-12 col-sm-12">
-									<small v-if="validation.phone" class="mt-2 text-danger">
-										{{validation.phone[0]}}
-									</small>
-								</div>
-							</div>
+					<div v-else>
+						<!-- <pre>
+							{{ activate_user }}
+						</pre> -->
+						<div v-if="activate_user.status === 'INACTIVE'" class="alert alert-warning alert-dismissible fade show" role="alert">
+							<strong>Halo {{ activate_user.username }}!</strong> Jika pemberitahuan ini masih muncul, kemungkinan member anda belum di aktivasi pada system web replika, silahkan hubungi sponsor atau admin website official evoush. <br>
+							<a href="#" class="btn-link" @click="AktivasiAkun">Admin Evoush</a>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
 
 
-							<!-- Job -->
-							<div class="input-group col-lg-12 mb-4">
-								<div class="input-group-prepend">
-									<span class="input-group-text bg-white px-4 border-md border-right-0">
-										<i class='bx bx-globe text-muted'></i>
-									</span>
-								</div>
-								<select
-                                    name="province"
-                                    class="form-control custom-select bg-white border-left-0 border-md"
-                                    v-on:change="getCity"
-                                    id="province">
-                                    <option value="" data-id="">Pilih Provinsi</option>
-                                    <option
-                                        v-for="provins in provinces.provinsi"
-                                        v-bind:value="provins.id"
-                                        :value="provins.id"
-                                        :data-id="provins.id"
-                                        >{{ provins.nama }}</option
-                                    >
-                                </select>
-
-                                <div class="col-lg-12 col-xs-12 col-sm-12">
-	                                <small class="text-danger">*wajib di pilih salah satu</small>
-	                                <br>
-                                </div>
-
-                                <div class="col-lg-12 col-xs-12 col-sm-12">
-                                	<small v-if="validation.province" class="mt-2 text-danger">
-										{{validation.province[0]}}
-									</small>
-                                </div>
-
-							</div>
-
-							<div class="input-group col-lg-12 mb-4">
-								<div class="input-group-prepend">
-									<span class="input-group-text bg-white px-4 border-md border-right-0">
-										<i class='bx bx-globe text-muted'></i>
-									</span>
-								</div>
-								<select
-                                    name="city"
-                                    class="form-control custom-select bg-white border-left-0 border-md"
-                                    id="city"
-                                >
-                                    <option value="">Pilih Kota</option>
-                                    <option
-                                        v-for="city in citys.kota_kabupaten"
-                                        :key="city.id"
-                                        :value="city.nama"
-                                        >{{ city.nama }}</option
-                                    >
-                                </select>
-                                <div class="col-lg-12 col-xs-12 col-sm-12">
-	                                <small class="text-danger">*wajib di pilih salah satu</small >
-	                                <br>
-                                </div>
-
-                                <div class="col-lg-12 col-xs-12 col-sm-12">
-                                	<small v-if="validation.city" class="mt-2 text-danger">
-										{{validation.city[0]}}
-									</small>
-                                </div>
-
-							</div>
-
-							<!-- Password -->
-							<div class="input-group col-lg-6 mb-4">
-								<div class="input-group-prepend">
-									<span class="input-group-text bg-white px-4 border-md border-right-0">
-										<i class='bx bx-lock-alt text-muted'></i>
-									</span>
-								</div>
-								<input v-model="field.password" placeholder="password"
-                                    type="password"
-                                    name="password"
-                                    id="password" class="form-control bg-white border-left-0 border-md">
-
-                                <div class="col-lg-12 col-xs-12 col-sm-12">
-                                	<small class="text-danger">*wajib di isi</small>
-                                	<br />
-                                	<div
-                                	id="show-password"
-                                	class="show"
-                                	v-on:click="showPassword"
-                                	>
-	                                	<div v-if="showing === false">
-	                                		<span v-html="show"></span> Show Password
-	                                	</div>
-	                                	<div v-else>
-	                                		<span v-html="hide"></span> Hide Password
-	                                	</div>
-                                	</div>
-                                </div>
-                                <div class="col-lg-12 col-xs-12 col-sm-12">
-                                	<small v-if="validation.password" class="mt-2 text-danger">
-										{{validation.password[0]}}
-									</small>
-                                </div>
-
-							</div>
-
-							<!-- Password Confirmation -->
-							<div class="input-group col-lg-6 mb-4">
-								<div class="input-group-prepend">
-									<span class="input-group-text bg-white px-4 border-md border-right-0">
-										<i class='bx bx-lock-alt text-muted'></i>
-									</span>
-								</div>
-								<input v-model="field.password_confirmation" placeholder="Ketik ulang password anda"
-                                    type="password"
-                                    name="password_confirmation"
-                                    id="password_confirmation" class="form-control bg-white border-left-0 border-md">
-
-                                    <div class="col-lg-12 col-xs-12 col-sm-12">
-	                                    <small class="text-danger">*Ulangi password</small>
-	                                    <div
-	                                    id="show-password"
-	                                    class="show"
-	                                    v-on:click="showPasswordConfirm"
-	                                    >
-		                                    <div v-if="showingConfirm === false">
-		                                    	<span v-html="show"></span> Show Password
-		                                    </div>
-		                                    <div v-else>
-		                                    	<span v-html="hide"></span> Hide Password
-		                                    </div>
-	                                	</div>
-                                	</div>
-
-                                	<div class="col-lg-12 col-xs-12 col-sm-12">
-                                		<small v-if="validation.password_confirmation" class="mt-2 text-danger">
-	                                    		{{validation.password_confirmation[0]}}
-	                                    	</small>
-                                	</div>
-
-							</div>
-
-							<!-- Submit Button -->
-							<div class="form-group col-lg-12 mx-auto mb-0">
-								<!-- <a href="#" class="btn btn-primary btn-block py-2">
-									<span class="font-weight-bold">Join Member</span>
-								</a> -->
-								<button type="submit" class="btn btn-primary rounded-pill btn-block">
-									<div v-if="loading">
-										<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-										Loading...
-									</div>
-									<div v-else>
-										Join Member
-									</div>
+						<div v-else>
+							<div class="alert alert-warning alert-dismissible fade show" role="alert">
+								<strong>Halo {{ activate_user.username }}!</strong> Anda merupakan member dari sponsor <nuxt-link :to="`/member/${has_join.username}`"> <strong>{{ has_join.name }}</strong></nuxt-link>
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
-
-							<!-- Divider Text -->
-							<!-- <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
-								<div class="border-bottom w-100 ml-5"></div>
-								<span class="px-2 small text-muted font-weight-bold text-muted">OR</span>
-								<div class="border-bottom w-100 mr-5"></div>
-							</div> -->
-
-							<!-- Social Login -->
-							<!-- <div class="form-group col-lg-12 mx-auto">
-								<a href="#" class="btn btn-primary btn-block py-2 btn-facebook">
-									<i class="fa fa-facebook-f mr-2"></i>
-									<span class="font-weight-bold">Continue with Facebook</span>
-								</a>
-								<a href="#" class="btn btn-primary btn-block py-2 btn-twitter">
-									<i class="fa fa-twitter mr-2"></i>
-									<span class="font-weight-bold">Continue with Twitter</span>
-								</a>
-							</div> -->
-
-							<!-- Already Registered -->
-							<!-- <div class="text-center w-100">
-								<p class="text-muted font-weight-bold">Already Registered? <a href="#" class="text-primary ml-2">Login</a></p>
-							</div> -->
-
 						</div>
-					</form>
+
+
+					</div>
 
 				</div>
 			</div>
@@ -331,11 +100,13 @@
 
 <script>
 	import Logo from '~/components/molecules/Logo'
+	import FormJoin from '@/components/PublicProfile/FormJoin'
 
 	export default {
 		layout: 'pages',
 		components: {
-			Logo
+			Logo,
+			FormJoin
 		},
 		async asyncData({$axios, params}){
 			const sponsor = params.sponsor
@@ -359,6 +130,10 @@
 				name_join: "",
 				email_sponsor: "",
 				success: null,
+				activate_user: {},
+				has_join: {},
+				has_join_status:'',
+				new_member_inactive: false,
 
 				result: {},
 				field: {
@@ -380,19 +155,71 @@
 		},
 
 		created(){
-			this.getProvinsi()
+			this.getProvinsi(),
+			this.CheckAktivasi(),
+			this.CheckSponsor()
 		},
 
 		methods: {
 			AktivasiAkun(){
-				this.$router.back()
+				location.reload()
+			},
+			CheckSponsor(){
+				const sponsor_id = localStorage.getItem('sponsor_id')
+				const user = JSON.parse(localStorage.getItem('activation'))
+				if(user !== null){
+					this.$axios.get(`https://app.evoush.com/api/evoush/member/sponsor/check/${user.id}`)
+					.then(res => {
+						console.log(res.data)
+						if(res.data.data){
+							this.$toast(`${user.username}, anda telah join menjadi member dari sponsor : ${res.data.data.username}`)
+							this.has_join_status = true
+							this.has_join = res.data.data
+						}else{
+							this.has_join_status = false
+						}
+						// console.log(res.data)
+					})
+					.catch(err => {
+						console.log(err.message)
+					})
+				}else{
+					console.log("ANjing NU itu Anjing setan")
+				}
+			},
+			CheckAktivasi(){
+				const user = JSON.parse(localStorage.getItem('activation'))
+				console.log(user)
+				if(user !== null){
+					this.$axios.get(`https://app.evoush.com/api/evoush/user/active/${user.email}`)
+					.then(res => {
+						this.activate_user = {
+							id: res.data.data.id,
+							username: res.data.data.username,
+							email: res.data.data.email,
+							status: res.data.data.status
+						}
+						if(this.activate_user.status === "INACTIVE"){
+							this.new_member_inactive = true
+							this.$toast(`${res.data.data.username}, username anda belum di aktivasi, silahkan laporkan ke admin website official evoush`)
+						}
+						localStorage.setItem('activation', JSON.stringify(this.activate_user))
+					})
+					.catch(err => {
+						console.log(err.message)
+					})
+				}else{
+					console.log("ANJING NU IEU ANJING")
+				}
+				// this.$router.back()
 			},
 			storeNewMember(e) {
 				e.preventDefault()
 				this.loading = true
+				const roles = document.querySelector('#roles').value
 				const setData = {
 					sponsor_id: document.querySelector('#sponsor_id').value,
-					roles: document.querySelector('#roles').value,
+					roles: [roles],
 					status: document.querySelector('#status').value,
 					username_path: document.querySelector('#username_path').value,
 					name: this.field.name,
@@ -424,6 +251,12 @@
 						e.target.reset()
 						this.hide_form =true
 						this.setCookie("New Member", setData.name, 7);
+						const storage_data = {
+							status: setData.status,
+							email: setData.email
+						}
+						localStorage.setItem('sponsor_id', setData.sponsor_id)
+						localStorage.setItem('activation', JSON.stringify(storage_data))
 					}
 				})
 				.catch(err => {
@@ -518,65 +351,7 @@
 	        	document.getElementById('form-join').style.display.visibility = "visible"
 	        }
 
-		}
+	    }
 	}
 </script>
 
-<style scoped>
-.border-md {
-	border-width: 2px;
-}
-
-.btn-facebook {
-    background: #405D9D;
-    border: none;
-}
-
-.btn-facebook:hover, .btn-facebook:focus {
-    background: #314879;
-}
-
-.btn-twitter {
-    background: #42AEEC;
-    border: none;
-}
-
-.btn-twitter:hover, .btn-twitter:focus {
-    background: #1799e4;
-}
-
-.show{
-	cursor: pointer;
-}
-
-/*
-*
-* ==========================================
-* FOR DEMO PURPOSES
-* ==========================================
-*
-*/
-
-body {
-    min-height: 100vh;
-}
-
-.form-control:not(select) {
-    padding: 1.5rem 0.5rem;
-}
-
-select.form-control {
-    height: 52px;
-    padding-left: 0.5rem;
-}
-
-.form-control::placeholder {
-    color: #ccc;
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-.form-control:focus {
-    box-shadow: none;
-}
-
-</style>

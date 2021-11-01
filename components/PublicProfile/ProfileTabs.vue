@@ -182,7 +182,9 @@
 				token: localStorage.getItem('token'),
 			}
 		},
-
+		mounted(){
+			this.getMember(this.member.username)
+		},
 		methods: {
 			formatDate(date) {
 				const options = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -190,7 +192,7 @@
 			},
 			getMember(username){
 				this.loading = true
-				this.$axios.get(`/member/join/active/${username}`)
+				this.$axios.get(`https://app.evoush.com/api/member/join/active/${username}`)
 				.then( res => {
 					console.log(res.data.length)
 					this.followers = res.data
