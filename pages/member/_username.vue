@@ -46,7 +46,7 @@
 		async asyncData({$axios, params}){
 			const members = await $axios.$get(`/member/${params.username}`)
 			const length = members.length
-			// console.log(length)
+			console.log(length)
 			return {members, length}
 		},
 

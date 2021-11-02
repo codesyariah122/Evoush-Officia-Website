@@ -45,15 +45,13 @@
 
 				<!-- member inactive -->
 				<div class="col-lg-12 col-xs-12 col-sm-12 mt-5 mb-5">
-					<div v-if="activate_user.status === 'INACTIVE'" >
-						<div class="alert alert-warning alert-dismissible fade show" role="alert">
-							<strong>Halo {{ activate_user.username }}!</strong> Jika pemberitahuan ini masih muncul, kemungkinan member anda belum di aktivasi pada system web replika, silahkan hubungi sponsor atau admin website official evoush. <br>
-							<a href="mailto:admin_evoush@evoush.com" class="btn-link"  @click="AktivasiAkun">Admin Evoush</a>
-							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<div v-if="activate_user.status === 'INACTIVE'" class="alert alert-warning alert-dismissible fade show" role="alert">
+						<strong>Halo {{ activate_user.username }}!</strong> Jika pemberitahuan ini masih muncul, kemungkinan member anda belum di aktivasi pada system web replika, silahkan hubungi sponsor atau admin website official evoush. <br>
+						<a href="#" class="btn-link" @click="AktivasiAkun">Refresh Page</a>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
-							</button>
+							</button> -->
 						</div>
-					</div>
 				</div>
 
 				<!-- test vuex -->
@@ -220,6 +218,7 @@
 				activate_user: {},
 				has_join: {},
 				has_join_status:'',
+				new_member_inactive: false,
 				image: {
 					type: String,
 					default: 'https://raw.githubusercontent.com/codesyariah122/bahan-evoush/main/images/banner/about/3.jpg'
@@ -323,7 +322,8 @@
 		mounted(){
 			// OneSignal.log.setLevel('trace')
 			// this.isPushNotificationsEnabledVerbose()
-			this.CheckSponsor()
+			this.CheckSponsor(),
+			this.CheckAktivasi()
 		},
 		methods: {
 			AktivasiAkun(){
@@ -349,9 +349,36 @@
 						console.log(err.message)
 					})
 				}else{
-					console.log("ANjing NU itu Anjing setan")
+					console.log('....')
 				}
 			},
+			CheckAktivasi(){
+				const user = JSON.parse(localStorage.getItem('activation'))
+				console.log(user)
+				if(user !== null){
+					this.$axios.get(`https://app.evoush.com/api/evoush/user/active/${user.email}`)
+					.then(res => {
+						this.activate_user = {
+							id: res.data.data.id,
+							username: res.data.data.username,
+							email: res.data.data.email,
+							status: res.data.data.status
+						}
+						if(this.activate_user.status === "INACTIVE"){
+							this.new_member_inactive = true
+							this.$toast(`${res.data.data.username}, username anda belum di aktivasi, silahkan laporkan ke admin website official evoush`)
+						}
+						localStorage.setItem('activation', JSON.stringify(this.activate_user))
+					})
+					.catch(err => {
+						console.log(err.message)
+					})
+				}else{
+					console.log('....')
+				}
+				// this.$router.back()
+			},
+
 			async dismiss() {
 				this.deferredPrompt = null;
 			},

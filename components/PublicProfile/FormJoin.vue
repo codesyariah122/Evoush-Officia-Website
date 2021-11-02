@@ -118,13 +118,30 @@
 						<i class='bx bx-globe text-muted'></i>
 					</span>
 				</div>
+				<!-- <pre>
+					{{ citys.kota_kabupaten ? true : false }}
+				</pre> -->
 				<select
 				name="city"
 				class="form-control custom-select bg-white border-left-0 border-md"
 				id="city"
 				>
-				<option value="">Pilih Kota</option>
-				<option
+				<option v-if="loading_city">
+					<div class="d-flex align-items-center">
+						<strong>Loading... &#9200;</strong>
+						<div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+					</div>
+					<!-- <img src="https://www.guruumeditation.net/wp-content/uploads/2017/11/Dependent-Animation.gif" class="img-fluid" width="80"> -->
+				</option>
+				<option v-else value="">
+					<div v-if="citys.kota_kabupaten">
+						Silahkan pilih kota
+					</div>
+					<div v-else>
+						Pilih Kota (*Pilih provinsi terlebih dahulu)
+					</div>
+				</option>
+				<option v-if="citys.kota_kabupaten"
 				v-for="city in citys.kota_kabupaten"
 				:key="city.id"
 				:value="city.nama"
@@ -236,7 +253,7 @@
 
 <script>
 	export default{
-		props: ['dataSponsor', 'storeNewMember', 'validation', 'field', 'citys', 'provinces', 'getCity', 'hide', 'showPassword', 'showPasswordConfirm', 'showing', 'showingConfirm', 'show', 'hide', 'loading']
+		props: ['dataSponsor', 'storeNewMember', 'validation', 'field', 'citys', 'provinces', 'getCity', 'hide', 'showPassword', 'showPasswordConfirm', 'showing', 'showingConfirm', 'show', 'hide', 'loading', 'loading_city']
 	}
 </script>
 

@@ -15,7 +15,7 @@
 
 
 		<div class="container">
-			<div class="row py-5 mt-4 align-items-center">
+			<div class="row py-5 align-items-center">
 				<!-- For Demo Purpose -->
 				<div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
 					<img :src="`https://app.evoush.com/storage/${dataSponsor[0].avatar}`" alt="" class="img-fluid mb-3 d-none d-md-block img-responsive" width="300">
@@ -62,7 +62,7 @@
 						</div>
 						<!-- form anjing -->
 						<div v-else>
-							<FormJoin :dataSponsor="dataSponsor" :storeNewMember="storeNewMember" :validation="validation" :field="field" :provinces="provinces" :getCity="getCity" :citys="citys" :showPassword="showPassword" :showPasswordConfirm="showPasswordConfirm" :showing="showing" :showingConfirm="showingConfirm" :show="show" :hide="hide" :loading="loading"/>
+							<FormJoin :dataSponsor="dataSponsor" :storeNewMember="storeNewMember" :validation="validation" :field="field" :provinces="provinces" :getCity="getCity" :citys="citys" :showPassword="showPassword" :showPasswordConfirm="showPasswordConfirm" :showing="showing" :showingConfirm="showingConfirm" :show="show" :hide="hide" :loading="loading" :loading_city="loading_city"/>
 						</div>
 					</div>
 
@@ -72,10 +72,10 @@
 						</pre> -->
 						<div v-if="activate_user.status === 'INACTIVE'" class="alert alert-warning alert-dismissible fade show" role="alert">
 							<strong>Halo {{ activate_user.username }}!</strong> Jika pemberitahuan ini masih muncul, kemungkinan member anda belum di aktivasi pada system web replika, silahkan hubungi sponsor atau admin website official evoush. <br>
-							<a href="#" class="btn-link" @click="AktivasiAkun">Admin Evoush</a>
-							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<a href="#" class="btn-link" @click="AktivasiAkun">Refresh Page</a>
+							<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
-							</button>
+							</button> -->
 						</div>
 
 
@@ -134,6 +134,7 @@
 				has_join: {},
 				has_join_status:'',
 				new_member_inactive: false,
+				loading_city: null,
 
 				result: {},
 				field: {
@@ -178,13 +179,12 @@
 						}else{
 							this.has_join_status = false
 						}
-						// console.log(res.data)
 					})
 					.catch(err => {
 						console.log(err.message)
 					})
 				}else{
-					console.log("ANjing NU itu Anjing setan")
+					console.log('....')
 				}
 			},
 			CheckAktivasi(){
@@ -209,7 +209,7 @@
 						console.log(err.message)
 					})
 				}else{
-					console.log("ANJING NU IEU ANJING")
+					console.log('....')
 				}
 				// this.$router.back()
 			},
@@ -281,12 +281,16 @@
 			},
 
 			getCity(e) {
+				this.loading_city = true
 				const id = e.target.value;
 				this.$axios
 				.get(
 					`https://dev.farizdotid.com/api/daerahindonesia/kota?id_provinsi=${id}`
 					)
 				.then(res => {
+					setTimeout(() => {
+						this.loading_city = false
+					}, 1500)
 					this.citys = res.data;
 				});
 			},
