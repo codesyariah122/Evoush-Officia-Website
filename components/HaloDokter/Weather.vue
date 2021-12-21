@@ -47,11 +47,11 @@
 		methods: {
 			getWeather(city, apiKey){
 
-				this.$axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`)
+				this.$axios.get(`https://evoush-landing-api.herokuapp.com/api/data/check/weather/${apiKey}/${city}/EVOUSH.COM`)
 				.then(res=>{
-					// console.log(res.data)
-					this.weather = res.data.weather[0]
-					this.main.temp = this.getCelcius(res.data.main.temp)
+					console.log(res.data)
+					this.weather = res.data.data.weather[0]
+					this.main.temp = this.getCelcius(res.data.data.main.temp)
 				})
 			},
 

@@ -31,21 +31,18 @@
 
 			<h1 class="underline" style="margin-top: 15rem;"></h1>
 
-			<Covid :provinces="provinces"/>
 
 		</div>
 	</section>
 </template>
 
 <script>
-	import Covid from './Covid'
 	import Dokter from './Dokter'
 	import Weather from './Weather'
 
 	export default{
 		props: ['provinces', 'location'],
 		components: {
-			Covid,
 			Dokter,
 			Weather
 		},

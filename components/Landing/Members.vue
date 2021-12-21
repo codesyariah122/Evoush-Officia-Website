@@ -44,10 +44,13 @@
 												<i class="bx bxs-trophy bx-lg text-white"></i>{{"SAPHIRE"}}
 											</span>
 										</div>
-										<div v-else>
+										<div v-else-if="member.achievements.includes('NO ACHIEVEMENTS')">
 											<span class="badge badge-danger">
 												{{"No Achievements"}}
 											</span>
+										</div>
+										<div v-else>
+											...
 										</div>
 									</li>
 									<li class="mt-5 mb-5">
@@ -123,13 +126,11 @@
 
 
 <script>
-	import pagination from 'laravel-vue-pagination'
 	import SearchMember from './SearchMember'
 
 	export default {
 
 		components: {
-			pagination,
 			SearchMember
 		},
 

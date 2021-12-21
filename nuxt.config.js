@@ -390,6 +390,7 @@ export default {
     {src: '~/plugins/bootstrap-vue'},
     {src: '~/plugins/disqus'},
     {src: '~/plugins/vue-tiny-mce', mode: 'client', ssr: false},
+    {src: '~/plugins/laravel-vue-pagination', mode: 'client', ssr: false},
     // { src: '~/plugins/tawk'},
     // { src: "~/plugins/crisp.js", mode: "client" },
     { src: '~/plugins/vue-geolocation' },
@@ -482,7 +483,7 @@ googleAnalytics: {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // baseURL: 'https://app.evoush.com/api'
-    baseUrl: 'https://app.evoush.com/api',
+    baseUrl: process.env.BASEURL,
     proxy: false
   },
 
